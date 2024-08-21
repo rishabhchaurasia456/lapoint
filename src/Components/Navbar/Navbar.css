@@ -1,0 +1,142 @@
+/* ========================
+Navbar
+======================== */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 60px;
+    background-color: transparent;
+    /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06); */
+    position: fixed; /* Making the navbar fixed */
+    top: 0; /* Positioning it at the top of the viewport */
+    width: 100%; /* Making it span the full width */
+    z-index: 1000; /* Ensuring it's above other content */
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar li {
+    list-style: none;
+    padding: 10px 25px 0px 0px;
+    position: relative;
+    margin-left: 40%;
+}
+
+#navbar li a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 2px;
+    color: black;
+    transition: 0.3s ease-in-out;
+}
+
+#navbar li :hover,
+#navbar li .active {
+    color: blue
+}
+
+/* #navbar li :hover::after,
+#navbar li .active::after{
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: rgb(189, 18, 18);
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+} */
+
+/* #navbar li :hover,
+#navbar li .underline{
+    color: #ffa31a;
+} */
+
+/* #navbar li .underline::after{
+    background: #ffa31a;
+} */
+
+#mobile {
+    display: none;
+}
+
+#mobile i {
+    color: black;
+    align-items: center;
+}
+
+.img_size {
+    height: 100%;
+    width: 100%;
+}
+
+/* .cart:hover{
+    color: rgb(189, 18, 18);
+} */
+
+.nav-cart-count {
+    width: 22px;
+    height: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -35px;
+    margin-left: 15px;
+    border-radius: 15px;
+    font-size: 12px;
+    background-color: red;
+    color: white;
+}
+
+.nav-cart-count:hover {
+    background-color: white;
+    color: white;
+}
+
+@media screen and (max-width:769px) {
+
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 55px;
+        left: -250px;
+        width: 250px;
+        height: 100vh;
+        /* background: #ffa31a; */
+        background-color: white;
+        box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+        padding: 40px 0 0 10px;
+        transition: 0.3s ease-in-out;
+        z-index: 1;
+    }
+
+    #navbar.active {
+        left: 0px;
+    }
+
+    #navbar li {
+        margin-bottom: 20px;
+    }
+
+    #mobile {
+        display: block;
+    }
+
+    #mobile i {
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .img_size {
+        height: 100%;
+        width: 100%;
+    }
+
+}
