@@ -8,7 +8,7 @@ export const links = [
     // },
 
     {
-        name: "Course",
+        name: "Destinations",
         path: '/demo/gfastreact/course',
         submenu: [
             {
@@ -47,7 +47,7 @@ export const links = [
         ] 
     },
     {
-        name: "Colleges",
+        name: "About",
         path: '/demo/gfastreact/collges',
         submenu: [
             {
@@ -56,19 +56,19 @@ export const links = [
             },
             {
                 name: "Web Development",
-                path: '/services/web-development'
+                path: '/',
             },
             {
                 name: "SEO",
-                path: '/services/seo'
+                path: '/'
             }
         ]
 
 
     },
     {
-        name: "Abroad",
-        path: '/btchpage',
+        name: "Surf",
+        path: '/',
         submenu: [
             {
                 name: "Usa",
@@ -76,26 +76,30 @@ export const links = [
             },
             {
                 name: "France Development",
-                path: '/services'
+                path: '/'
             },
             {
                 name: "Italy",
-                path: '/services/seo'
+                path: '/'
             },
             {
                 name: "UK",
-                path: '/services/seo'
+                path: '/'
             }
         ]
 
     },
     {
-        name: "Blog",
-        path: '/demo/gfastreact/Blog'
+        name: "Groups",
+        path: '/'
     },
     {
-        name: "Conact us",
-        path: 'demo/gfastreact/contact'
+        name: "Surf Shop",
+        path: '/'
+    },
+    {
+        name: "Blog",
+        path: '/'
     },
 
 

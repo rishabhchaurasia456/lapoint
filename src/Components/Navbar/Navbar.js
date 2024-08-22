@@ -13,31 +13,16 @@ const Navbar = () => {
 
   return (
     <>
-      {/* <nav>
-        <div>
-          <img src="/images/logo-dark.png" className='img_size' alt="" />
-        </div>
-        <div>
-          <ul id="navbar" className={clicked ? "#navbar active" : "#navbar"}>
-            <li><Link className='active' to="/">Home</Link></li>
-            <li><Link to="/pricing">Pricing</Link></li>
-            <li><Link to="/feature">Feature</Link></li>
-            <li><Link to="/integration">Integration</Link></li>
-            <li><Link to="/industry">Industry</Link></li>
-            <li><Link to="/blog">Blog</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
-          </ul>
-        </div>
-        <div id="mobile" onClick={handleClick}>
-          <i id='bar' className={clicked ? 'fa fa-times' : 'fa fa-bars'}></i>
-        </div>
-      </nav> */}
-      <div className='container-fluid'>
-        <div className='row'>
-          {/* <div className='col-lg-2'>
-            <h2>lapoint</h2>
-          </div> */}
-          {/* <div className='col-lg-12'> */}
+
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col-12 col-sm-12 col-lg-5">
+          <div>
+          <h1 className='text-dark fw-bold lapointLOGO'>Lapoint</h1>
+          </div>
+
+          </div>
+          <div className="col-12 col-sm-12 col-lg-7">
             <nav class="navbar navbar-expand-lg">
               <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
                 aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -46,19 +31,20 @@ const Navbar = () => {
               {/* <!-- Offcanvas Menu --> */}
               <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                 <div class="offcanvas-header">
-                  <div className="offcanvas-header">
-                    <Link to="/demo/gfastreact/" className="">
+                  <div className="offcanvas-header ">
+                    <Link to="/" className="nav-link">
                       {/* <img src={logoimg} alt="logoimg" className="w-50" /> */}
-                      <h2>lapoint</h2>
+                      <div>
+                        <h1 className='text-dark fw-bold'>Lapoint</h1>
+                      </div>
                       {/* <p className="mt-3 text-secondary">Histudy is an education website template. You can customize all.</p> */}
                     </Link>
-                    <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    <button type="button" className="btn-close " data-bs-dismiss="offcanvas" aria-label="Close"></button>
                   </div>
                 </div>
-                <div class="offcanvas-body justify-content-between">
-                  
-                  <ul class="navbar-nav navcls" style={{ fontSize: '15px' }}>
-                    <h2>lapoint</h2>
+                <div class="offcanvas-body">
+                  <ul class="navbar-nav navcls" style={{ fontSize: '20px' }}>
+                    {/* <h2>lapoint</h2> */}
                     {links.map(({ name, path, submenu }, index) => {
                       if (submenu) {
                         return (
@@ -84,31 +70,27 @@ const Navbar = () => {
                       }
                     })}
                   </ul>
-                  <div>
-                    <ul className='navbar-nav navcls'>
-                      <li>
+                  {/* <div>
+                  <ul className='navbar-nav navcls'>
+                    <li>
                       <i class="fa fa-user"></i>Sign in
-                      </li>
-                      <li>
+                    </li>
+                    <li>
                       <i class="fa fa-dollar"></i>USD
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div className="m-0 p-0">
-                    {/* <Link to="/demo/gfastreact/finder" className='nav-link mt-2' style={{ fontSize: '15px' }}>
-                                    Course Finder
-                                </Link> */}
-                  </div>
+                    </li>
+                  </ul>
+                </div> */}
 
                 </div>
               </div>
             </nav>
-          {/* </div> */}
 
+          </div>
         </div>
       </div>
-      <HeroSection/>
+
+
+      <HeroSection />
     </>
   );
 };
