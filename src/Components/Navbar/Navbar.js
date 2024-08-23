@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { links } from '../Navbar/Navdata';
 import "./Navbar.css"
-// import HeroSection from '../HeroSection/HeroSection';
+import HeroSection from '../HeroSection/HeroSection';
 
 const Navbar = () => {
 
@@ -90,7 +90,7 @@ const Navbar = () => {
       </div>
 
 
-      {/* <HeroSection /> */}
+      <HeroSection />
     </>
   );
 };
