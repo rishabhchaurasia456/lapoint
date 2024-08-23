@@ -80,14 +80,90 @@
     text-transform: uppercase;
 }
 
+/* .slid_card_backimg{
+    height: 60vh;
+    width: 100%;
+} */
+.slid_card_backimg {
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px; /* Adjust as needed */
+    overflow: hidden;
+  }
+  
+  .slid_card_text {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: center;
+  }
+
+  .card_d_text {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0;
+  }
+
+.custom-prev,
+.custom-next {
+  position: absolute;
+  margin-top: -15%;
+  transform: translateY(-50%);
+  background-color: #000000;
+  border: none;
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+/* Adjust the left and right properties */
+.custom-prev {
+  left: 10px; /* Adjust as needed */
+}
+
+.custom-next {
+  right: 10px; /* Adjust as needed */
+}
+
+.custom-prev:hover,
+.custom-next:hover {
+  background-color: rgb(255, 21, 21);
+}
+
+/* Small devices (phones, 576px and up) */
+@media only screen and (max-width: 600px) {
+  .custom-prev,
+  .custom-next {
+    display: none;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .custom-prev {
+    left: 10px; /* Adjust as needed */
+  }
+
+  .custom-next {
+    right: 10px; /* Adjust as needed */
+  }
+}
 
 /* ----------------------------------- */
 /* Life Style component css  */
 /* -------------------------------------- */
 
 .lifestyle{
-    width: 100%;
-    border-radius: 5%;
+    width: 90%;
+    height: 95vh;
+    border-radius: 3%;
 }
 
 .lifestyle_text{
@@ -108,4 +184,13 @@
     line-height: 53px;
     font-family: sans-serif;
     text-transform: uppercase;
+}
+
+.lifestyle_para{
+    color: black;
+    font-family: sans-serif;
+    margin-top: 5%;
+    font-size: 20px;
+    line-height: 23px;
+    font-weight: 400;
 }

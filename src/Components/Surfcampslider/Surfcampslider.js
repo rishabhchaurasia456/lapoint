@@ -2,6 +2,8 @@ import React, { useRef } from 'react'
 import { NavLink } from 'react-bootstrap';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+import { Carddata } from './Carddata';
+
 
 
 const responsive = {
@@ -12,7 +14,7 @@ const responsive = {
     },
     desktop: {
         breakpoint: { max: 3000, min: 1024 },
-        items: 3
+        items: 5
     },
     tablet: {
         breakpoint: { max: 1024, min: 464 },
@@ -60,54 +62,30 @@ const Surfcampslider = () => {
             </div>
             <div className='container-fluid'>
                 <div className='row'>
-                    <Carousel ref={carouselRef} responsive={responsive} arrows={false}>
+                    <div className="col">
 
-                        {/* card data in card.js  */}
-                        {Carddata.map(({ title, img, heading, ul1, ul2, ul3, index }) => (
-                            <div className="border rounded-3 w-75 mx-5 mt-3" key={index}>
-                                <div>
-                                    <div className="p-0">
-                                        <div className="row mt-3 crdsld">
-                                            <div className="col-lg-4 m-auto">
-                                                <img src={img} alt="iconimg" className=' mx-3 iconimg' />
-                                            </div>
-                                            <div className="col-lg-8">
-                                                <h4 className="text-dark fs-5 fw-semibold mt-2">{title}</h4>
-                                                <p className="m-0 text-secondary" style={{ fontSize: '15px' }}>
-                                                    {heading}
-                                                </p>
-                                            </div>
-                                        </div>
+                        <Carousel ref={carouselRef} responsive={responsive} arrows={false}>
 
-                                        <div>
-                                            <ul className="list-group list-group-flush p-3" style={{ fontSize: '15px' }}>
-                                                <li className="list-group-item m-0 p-0">
-                                                    <NavLink className="carditem">
-                                                        {ul1}
-                                                    </NavLink>
-                                                </li>
-                                                <li className="list-group-item m-0 p-0 ">
-                                                    <NavLink className="carditem">
-                                                        {ul2}
-                                                    </NavLink>
-                                                </li>
-                                                <li className="list-group-item m-0 p-0">
-                                                    <NavLink className="carditem">
-                                                        {ul3}
-                                                    </NavLink>
-                                                </li>
-                                            </ul>
+                            {/* card data in card.js  */}
+                            {Carddata.map(({ title, img, index }) => (
+                                <div className="border w-100 px-2 my-5 border-0" key={index}>
+                                    <div>
+                                        {/* <img src={img} className="slid_card_backimg rounded-4" alt="..." /> */}
+                                        <div className="slid_card_backimg rounded-4" style={{ backgroundImage: `url(${img})`, backgroundSize: 'cover', backgroundPosition: 'center',}}>
+                                            <div class="slid_card_text">
+                                                <p class="card_d_text">{title}</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        ))}
-                    </Carousel>
+                            ))}
+                        </Carousel>
+                        <button className="fa fa-angle-left custom-prev" onClick={handlePrev} aria-label="Previous">  </button>
+                        <button className=" fa fa-angle-right custom-next" onClick={handleNext} aria-label="Next">   </button>
 
-                    <button className="fa fa-angle-left custom-prev" onClick={handlePrev} aria-label="Previous">  </button>
-                    <button className=" fa fa-angle-right custom-next" onClick={handleNext} aria-label="Next">   </button>
-
+                    </div>
                 </div>
+
             </div>
         </div>
     )
