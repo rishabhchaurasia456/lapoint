@@ -9,58 +9,58 @@ export const links = [
 
     {
         name: "Destinations",
-        path: '/demo/gfastreact/course',
+        path: '/11',
         submenu: [
             {
                 name: "B.Tech",
-                path: '/demo/gfastreact/1'
+                path: '/1'
             },
             {
                 name: "M.Tech",
-                path: '/demo/gfastreact/2'
+                path: '/2'
             },
             {
                 name: "MBBS",
-                path: '/demo/gfastreact/3'
+                path: '/3'
             },
             {
                 name: "B.Com",
-                path: '/demo/gfastreact/4'
+                path: '/4'
             },
             {
                 name: "BSc",
-                path: '/demo/gfastreact/5'
+                path: '/5'
             },
             {
                 name: "BSc (Nursing)",
-                path: '/demo/gfastreact/6'
+                path: '/6'
             },
 
             {
                 name: "BBA",
-                path: '/demo/gfastreact/7'
+                path: '/7'
             },
             {
                 name: "MBA",
-                path: '/demo/gfastreact/8'
+                path: '/8'
             },
         ] 
     },
     {
         name: "About",
-        path: '/demo/gfastreact/collges',
+        path: '/11',
         submenu: [
             {
                 name: "Web Design",
-                path: '/services/web-design'
+                path: '/1'
             },
             {
                 name: "Web Development",
-                path: '/',
+                path: '/2',
             },
             {
                 name: "SEO",
-                path: '/'
+                path: '/3'
             }
         ]
 
@@ -68,38 +68,38 @@ export const links = [
     },
     {
         name: "Surf",
-        path: '/',
+        path: '/11',
         submenu: [
             {
                 name: "Usa",
-                path: '/'
+                path: '/1'
             },
             {
                 name: "France Development",
-                path: '/'
+                path: '/2'
             },
             {
                 name: "Italy",
-                path: '/'
+                path: '/3'
             },
             {
                 name: "UK",
-                path: '/'
+                path: '/4'
             }
         ]
 
     },
     {
         name: "Groups",
-        path: '/'
+        path: '/1'
     },
     {
         name: "Surf Shop",
-        path: '/'
+        path: '/2'
     },
     {
         name: "Blog",
-        path: '/'
+        path: '/3'
     },
 
 

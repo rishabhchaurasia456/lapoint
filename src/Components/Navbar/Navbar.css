@@ -35,30 +35,7 @@ nav {
     transition: 0.3s ease-in-out;
 }
 
-#navbar li :hover,
-#navbar li .active {
-    color: blue
-}
 
-/* #navbar li :hover::after,
-#navbar li .active::after{
-    content: "";
-    width: 30%;
-    height: 2px;
-    background: rgb(189, 18, 18);
-    position: absolute;
-    bottom: -4px;
-    left: 20px;
-} */
-
-/* #navbar li :hover,
-#navbar li .underline{
-    color: #ffa31a;
-} */
-
-/* #navbar li .underline::after{
-    background: #ffa31a;
-} */
 
 #mobile {
     display: none;

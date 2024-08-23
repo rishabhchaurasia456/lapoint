@@ -1,15 +1,10 @@
-import React, { useState } from 'react';
+import React, {  } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { links } from '../Navbar/Navdata';
 import "./Navbar.css"
 import HeroSection from '../HeroSection/HeroSection';
 
 const Navbar = () => {
-  const [clicked, setClicked] = useState(false);
-
-  const handleClick = () => {
-    setClicked(!clicked);
-  }
 
   return (
     <>
@@ -18,7 +13,7 @@ const Navbar = () => {
         <div className="row">
           <div className="col-12 col-sm-12 col-lg-5">
           <div>
-          <h1 className='text-dark fw-bold lapointLOGO'>Lapoint</h1>
+          <h1 className='text-light fw-bold lapointLOGO'>Lapoint</h1>
           </div>
 
           </div>
@@ -39,10 +34,10 @@ const Navbar = () => {
                       </div>
                       {/* <p className="mt-3 text-secondary">Histudy is an education website template. You can customize all.</p> */}
                     </Link>
-                    <button type="button" className="btn-close " data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    <button type="button" className="btn-close mx-5 px-5 " data-bs-dismiss="offcanvas" aria-label="Close"></button>
                   </div>
                 </div>
-                <div class="offcanvas-body">
+                <div class="offcanvas-body navcls">
                   <ul class="navbar-nav navcls" style={{ fontSize: '20px' }}>
                     {/* <h2>lapoint</h2> */}
                     {links.map(({ name, path, submenu }, index) => {
