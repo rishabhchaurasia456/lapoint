@@ -1,59 +1,58 @@
-
 /* ----------------------------------- */
 /* Surf camp component css  */
 /* -------------------------------------- */
 
-.surf_container{
-    margin-top: 10%;
+.surf_container {
+  margin-top: 10%;
 }
 
 
-.surf_text{
-    color: black;
-    font-weight: 900;
-    font-size: 48px;
-    line-height: 53px;
-    font-family: sans-serif;
-    text-transform: uppercase;
+.surf_text {
+  color: black;
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 53px;
+  font-family: sans-serif;
+  text-transform: uppercase;
 }
 
-.surf_para{
-    color: black;
-    font-family: sans-serif;
-    margin-top: 5%;
-    font-size: 22px;
-    line-height: 23px;
-    font-weight: 400;
-    letter-spacing: 2PX;
+.surf_para {
+  color: black;
+  font-family: sans-serif;
+  margin-top: 5%;
+  font-size: 22px;
+  line-height: 23px;
+  font-weight: 400;
+  letter-spacing: 2PX;
 }
 
 
 /* Photo section css  */
 
-.surf_img1{
-    width: 100%;
-    border-radius: 5%;
+.surf_img1 {
+  width: 100%;
+  border-radius: 5%;
 
 }
 
-.surf_img2{
-    border-radius: 5%;
-    width: 100%;
-    height: 82vh;
+.surf_img2 {
+  border-radius: 5%;
+  width: 100%;
+  height: 82vh;
 
 }
 
-.surf_img3{
-    border-radius: 5%;
-    width: 100%;
+.surf_img3 {
+  border-radius: 5%;
+  width: 100%;
 
 
 }
 
-.surf_img4{
-    border-radius: 5%;
-    width: 100%;
-    height: 35vh;
+.surf_img4 {
+  border-radius: 5%;
+  width: 100%;
+  height: 35vh;
 
 }
 
@@ -61,23 +60,23 @@
 /* Surf camp slider component css  */
 /* -------------------------------------- */
 
-.surf_slider{
-    color: black;
-    font-family: sans-serif;
-    margin-top: 5%;
-    font-size: 22px;
-    line-height: 23px;
-    font-weight: 600;
-    text-transform: uppercase;
+.surf_slider {
+  color: black;
+  font-family: sans-serif;
+  margin-top: 5%;
+  font-size: 22px;
+  line-height: 23px;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
-.surf_slider_text{
-    color: black;
-    font-weight: 800;
-    font-size: 40px;
-    line-height: 53px;
-    font-family: sans-serif;
-    text-transform: uppercase;
+.surf_slider_text {
+  color: black;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 53px;
+  font-family: sans-serif;
+  text-transform: uppercase;
 }
 
 /* .slid_card_backimg{
@@ -85,27 +84,28 @@
     width: 100%;
 } */
 .slid_card_backimg {
-    height: 60vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 15px; /* Adjust as needed */
-    overflow: hidden;
-  }
-  
-  .slid_card_text {
-    position: relative;
-    z-index: 2;
-    color: white;
-    text-align: center;
-  }
+  height: 60vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  /* Adjust as needed */
+  overflow: hidden;
+}
 
-  .card_d_text {
-    font-size: 30px;
-    font-weight: bold;
-    margin: 0;
-  }
+.slid_card_text {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: center;
+}
+
+.card_d_text {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0;
+}
 
 .custom-prev,
 .custom-next {
@@ -125,11 +125,13 @@
 
 /* Adjust the left and right properties */
 .custom-prev {
-  left: 10px; /* Adjust as needed */
+  left: 10px;
+  /* Adjust as needed */
 }
 
 .custom-next {
-  right: 10px; /* Adjust as needed */
+  right: 10px;
+  /* Adjust as needed */
 }
 
 .custom-prev:hover,
@@ -139,6 +141,7 @@
 
 /* Small devices (phones, 576px and up) */
 @media only screen and (max-width: 600px) {
+
   .custom-prev,
   .custom-next {
     display: none;
@@ -148,11 +151,13 @@
 /* Medium devices (tablets, 768px and up) */
 @media (max-width: 1024px) and (min-width: 768px) {
   .custom-prev {
-    left: 10px; /* Adjust as needed */
+    left: 10px;
+    /* Adjust as needed */
   }
 
   .custom-next {
-    right: 10px; /* Adjust as needed */
+    right: 10px;
+    /* Adjust as needed */
   }
 }
 
@@ -178,37 +183,82 @@
 /* Life Style component css  */
 /* -------------------------------------- */
 
-.lifestyle{
-    width: 90%;
-    height: 95vh;
-    border-radius: 3%;
+.lifestyle {
+  width: 90%;
+  height: 95vh;
+  border-radius: 3%;
 }
 
-.lifestyle_text{
-    color: black;
-    font-family: sans-serif;
-    margin-top: 5%;
-    font-size: 22px;
-    line-height: 23px;
-    font-weight: 600;
-    text-transform: uppercase;
+.lifestyle_text {
+  color: black;
+  font-family: sans-serif;
+  margin-top: 5%;
+  font-size: 22px;
+  line-height: 23px;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
 
-.lifestyle_heading{
-    color: black;
-    font-weight: 800;
-    font-size: 40px;
-    line-height: 53px;
-    font-family: sans-serif;
-    text-transform: uppercase;
+.lifestyle_heading {
+  color: black;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 53px;
+  font-family: sans-serif;
+  text-transform: uppercase;
 }
 
-.lifestyle_para{
-    color: black;
-    font-family: sans-serif;
-    margin-top: 5%;
-    font-size: 20px;
-    line-height: 23px;
-    font-weight: 400;
+.lifestyle_para {
+  color: black;
+  font-family: sans-serif;
+  margin-top: 5%;
+  font-size: 20px;
+  line-height: 23px;
+  font-weight: 400;
+}
+
+
+
+/* European CSS here  */
+
+
+.Eurp_container {
+  margin-top: 10%;
+}
+
+.Eurp_para{
+  font-size: 22px;
+  line-height: 23px;
+  font-weight: 500;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.Eurp_text {
+  color: black;
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 53px;
+  font-family: sans-serif;
+  text-transform: uppercase;
+}
+
+
+.Eurp_img_container {
+  width: 100%;
+  height: 70vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  margin: auto;
+}
+
+.background_text {
+  padding-top: 50% !important;
+  font-size: 50px !important;
+  color: white !important;
+  font-weight: bolder !important;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
 }
