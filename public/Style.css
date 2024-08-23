@@ -14,6 +14,7 @@
     font-size: 48px;
     line-height: 53px;
     font-family: sans-serif;
+    text-transform: uppercase;
 }
 
 .surf_para{
@@ -54,4 +55,57 @@
     width: 100%;
     height: 35vh;
 
+}
+
+/* ----------------------------------- */
+/* Surf camp slider component css  */
+/* -------------------------------------- */
+
+.surf_slider{
+    color: black;
+    font-family: sans-serif;
+    margin-top: 5%;
+    font-size: 22px;
+    line-height: 23px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.surf_slider_text{
+    color: black;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 53px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+}
+
+
+/* ----------------------------------- */
+/* Life Style component css  */
+/* -------------------------------------- */
+
+.lifestyle{
+    width: 100%;
+    border-radius: 5%;
+}
+
+.lifestyle_text{
+    color: black;
+    font-family: sans-serif;
+    margin-top: 5%;
+    font-size: 22px;
+    line-height: 23px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+
+.lifestyle_heading{
+    color: black;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 53px;
+    font-family: sans-serif;
+    text-transform: uppercase;
 }
