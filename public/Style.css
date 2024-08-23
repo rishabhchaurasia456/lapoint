@@ -157,6 +157,24 @@
 }
 
 /* ----------------------------------- */
+/* Review card Style component css  */
+/* -------------------------------------- */
+
+.review_card{
+    background-color: #f3eedc !important;
+}
+
+.camp_review_text{
+    color: black;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 53px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    margin-top: 10%;
+}
+
+/* ----------------------------------- */
 /* Life Style component css  */
 /* -------------------------------------- */
 
