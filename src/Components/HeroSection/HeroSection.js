@@ -11,7 +11,8 @@ const HeroSection = () => {
                 </video>
                 {/* You can add other content here */}
                 <div className="content">
-                    <h1>Your Content Here</h1>
+                    <p className='hero-heading1'>LAPOINT - SURF CAMPS,  WORK & SURF,  YOGA & SURF</p>
+                    <p className='hero-heading'>GOOD TIMES & AMAZING <br/>EXPRIENCES</p>
                 </div>
             </div>
         </div>

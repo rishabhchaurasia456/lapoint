@@ -56,11 +56,19 @@ export const links = [
             },
             {
                 name: "Web Development",
+<<<<<<< Updated upstream
                 path: '/2',
             },
             {
                 name: "SEO",
                 path: '/3'
+=======
+                path: '/services/web-design',
+            },
+            {
+                name: "SEO",
+                path: '/services/web-design'
+>>>>>>> Stashed changes
             }
         ]
 
@@ -72,6 +80,7 @@ export const links = [
         submenu: [
             {
                 name: "Usa",
+<<<<<<< Updated upstream
                 path: '/1'
             },
             {
@@ -85,6 +94,21 @@ export const links = [
             {
                 name: "UK",
                 path: '/4'
+=======
+                path: '/services/web-design'
+            },
+            {
+                name: "France Development",
+                path: '/services/web-design'
+            },
+            {
+                name: "Italy",
+                path: '/services/web-design'
+            },
+            {
+                name: "UK",
+                path: '/services/web-design'
+>>>>>>> Stashed changes
             }
         ]
 
