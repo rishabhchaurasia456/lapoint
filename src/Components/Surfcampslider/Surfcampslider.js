@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import { NavLink } from 'react-bootstrap';
+// import { NavLink } from 'react-bootstrap';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import { Carddata } from './Carddata';

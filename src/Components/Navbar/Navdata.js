@@ -12,36 +12,36 @@ export const links = [
         path: '/11',
         submenu: [
             {
-                name: "B.Tech",
+                name: "",
                 path: '/1'
             },
             {
-                name: "M.Tech",
+                name: "",
                 path: '/2'
             },
             {
-                name: "MBBS",
+                name: "",
                 path: '/3'
             },
             {
-                name: "B.Com",
+                name: "",
                 path: '/4'
             },
             {
-                name: "BSc",
+                name: "",
                 path: '/5'
             },
             {
-                name: "BSc (Nursing)",
+                name: "",
                 path: '/6'
             },
 
             {
-                name: "BBA",
+                name: "",
                 path: '/7'
             },
             {
-                name: "MBA",
+                name: "",
                 path: '/8'
             },
         ] 
@@ -51,16 +51,16 @@ export const links = [
         path: '/11',
         submenu: [
             {
-                name: "Web Design",
+                name: "",
                 path: '/1'
             },
             {
-                name: "Web Development",
-                path: '/services/web-design',
+                name: "",
+                path: '/2',
             },
             {
-                name: "SEO",
-                path: '/services/web-design'
+                name: "",
+                path: '/3'
             }
         ]
 
@@ -71,20 +71,20 @@ export const links = [
         path: '/11',
         submenu: [
             {
-                name: "Usa",
-                path: '/services/web-design'
+                name: "",
+                path: '/1'
             },
             {
-                name: "France Development",
-                path: '/services/web-design'
+                name: "",
+                path: '/2'
             },
             {
-                name: "Italy",
-                path: '/services/web-design'
+                name: "",
+                path: '/3'
             },
             {
-                name: "UK",
-                path: '/services/web-design'
+                name: "",
+                path: '/4'
             }
         ]
 
