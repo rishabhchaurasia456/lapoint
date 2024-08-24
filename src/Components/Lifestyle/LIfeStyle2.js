@@ -8,7 +8,7 @@ const LIfeStyle2 = () => {
         <div>
             <div className='container-fluid'>
                 <div className='row mt-3'>
-                    <div className='col-md-6 p-4'>
+                    <div className='col-md-6'>
                         <div className='lifestyle' style={{ backgroundImage: `url(${lp1})` }}></div>
                     </div>
                     <div className='col-md-6 p-5'>
