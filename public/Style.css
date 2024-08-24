@@ -2,6 +2,7 @@
 /* Surf camp component css  */
 /* -------------------------------------- */
 
+
 .surf_container {
   margin-top: 10%;
 }
@@ -32,19 +33,21 @@
 .surf_img1 {
   width: 100%;
   border-radius: 5%;
+  height: 100vh;
 
 }
 
 .surf_img2 {
   border-radius: 5%;
   width: 100%;
-  height: 82vh;
+  height: 100vh;
 
 }
 
 .surf_img3 {
   border-radius: 5%;
   width: 100%;
+  height: 48vh;
 
 
 }
@@ -52,7 +55,27 @@
 .surf_img4 {
   border-radius: 5%;
   width: 100%;
-  height: 35vh;
+  height: 46vh;
+
+}
+
+
+@media only screen and (max-width: 600px) {
+  .surf_img1 {
+    width: 100%;
+    border-radius: 5%;
+    height: 40vh;
+
+  }
+
+  .surf_img2 {
+    border-radius: 5%;
+    width: 100%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    height: 40vh;
+
+  }
 
 }
 
@@ -136,7 +159,7 @@
 
 .custom-prev:hover,
 .custom-next:hover {
-  background-color: rgb(255, 21, 21);
+  background-color: #ff0000;
 }
 
 /* Small devices (phones, 576px and up) */
@@ -144,7 +167,7 @@
 
   .custom-prev,
   .custom-next {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -152,12 +175,10 @@
 @media (max-width: 1024px) and (min-width: 768px) {
   .custom-prev {
     left: 10px;
-    /* Adjust as needed */
   }
 
   .custom-next {
     right: 10px;
-    /* Adjust as needed */
   }
 }
 
@@ -165,18 +186,18 @@
 /* Review card Style component css  */
 /* -------------------------------------- */
 
-.review_card{
-    background-color: #f3eedc !important;
+.review_card {
+  background-color: #f3eedc !important;
 }
 
-.camp_review_text{
-    color: black;
-    font-weight: 800;
-    font-size: 40px;
-    line-height: 53px;
-    font-family: sans-serif;
-    text-transform: uppercase;
-    margin-top: 10%;
+.camp_review_text {
+  color: black;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 53px;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  margin-top: 10%;
 }
 
 /* ----------------------------------- */
@@ -219,15 +240,16 @@
 }
 
 
-
+/* ------------------------------------------------ */
 /* European CSS here  */
+/* ------------------------------------------------ */
 
 
 .Eurp_container {
   margin-top: 10%;
 }
 
-.Eurp_para{
+.Eurp_para {
   font-size: 22px;
   line-height: 23px;
   font-weight: 500;
@@ -261,4 +283,209 @@
   font-weight: bolder !important;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
+}
+
+/* Small devices (phones, 576px and up) */
+@media only screen and (max-width: 600px) {
+  .background_text {
+    font-size: 35px !important;
+
+
+  }
+
+  .Eurp_img_container {
+    width: 100%;
+    height: 40vh;
+  }
+
+}
+
+
+/* =---------------------------------- */
+/* FAQ css  */
+/* ------------------------------------ */
+
+
+.faq_para {
+  font-size: 22px;
+  line-height: 23px;
+  font-weight: 500;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.faq_text {
+  color: black;
+  font-weight: 900;
+  text-align: start;
+  font-size: 40px;
+  line-height: 53px;
+  font-family: sans-serif;
+  text-transform: uppercase;
+}
+
+.faq_cont {
+  position: relative;
+  z-index: 1000;
+  margin-top: 5%;
+}
+
+.faq_question {
+  cursor: pointer;
+  color: red;
+  font-size: 18px;
+  line-height: 23px;
+  font-weight: 500;
+}
+
+.popupbox {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: 15px;
+  width: 40%;
+  border-radius: 20px;
+  box-shadow: rgba(42, 42, 42, 0.35) 0px 10px 15px;
+  margin: auto;
+  bottom: 2rem;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  box-sizing: border-box;
+  opacity: 0;
+  transform: translateY(20px);
+  /* Start slightly below the viewport */
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.popupbox.visible {
+  opacity: 1;
+  transform: translateY(0);
+  /* Move to the final position */
+}
+
+.popupbox.hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  /* Reset to start position */
+}
+
+.close-btn {
+  position: relative;
+  /* left: 28rem; */
+  right: -50;
+  background: transparent;
+  border: none;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #333;
+}
+
+.close-btn:hover {
+  color: #000;
+  /* Adjust hover color as needed */
+}
+
+
+@media only screen and (max-width: 600px) {
+  .popupbox {
+    width: 100%;
+    max-height: 300px;
+    overflow-y: scroll;
+    bottom: 60%;
+  }
+
+}
+
+
+
+
+/* TEXT Container  Css  */
+
+.text_small {
+  margin-bottom: 15% !important;
+  color: black;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 53px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-transform: uppercase;
+
+}
+
+.text_head {
+  margin-top: 5%;
+  color: black;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 45px;
+  font-family: sans-serif;
+  text-transform: uppercase;
+
+}
+
+.text_para {
+  padding: 2px;
+  color: black;
+  font-family: sans-serif;
+  margin-top: 5%;
+  font-size: 18px;
+  line-height: 23px;
+  font-weight: 400;
+  letter-spacing: 1PX;
+
+
+}
+
+/* -------------------------------------- */
+/* BG- Image css  */
+/* -------------------------------------- */
+
+.bg_image2 {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+}
+
+.overlay {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  /* Black overlay with 50% opacity */
+  z-index: 1;
+  /* Ensures this overlay is on top of the image */
+  pointer-events: none;
+  /* Clicks will pass through to content beneath */
+}
+
+.bg_text {
+
+  margin-top: 20%;
+  color: white;
+  font-weight: 500;
+  font-size: 20px;
+  text-transform: uppercase;
+
+}
+
+.bg_heading {
+  margin-top: 5%;
+  color: white;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 45px;
+  font-family: sans-serif;
+  text-transform: uppercase;
+
+}
+
+.bg_para {
+  padding: 2px;
+  color: white;
+  font-family: sans-serif;
+  margin-top: 5%;
+  font-size: 18px;
+  line-height: 23px;
+  font-weight: 400;
+  letter-spacing: 1PX;
 }

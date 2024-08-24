@@ -33,9 +33,9 @@ const European = () => {
             {/* // card container  */}
 
             <div className="container-fluid">
-                <div className="row mt-5 pt-5 p-5">
+                <div className="row mt-5 pt-5 p-3">
                     {Card.map((item, index) => (
-                        <div key={index} className="col-md-3 mb-4">
+                        <div key={index} className="col-md-3 mb-4 ">
                             <div>
                                 <div className="text-center m-1 border-0 Eurp_img_container" style={{ backgroundImage: `url(${item.img})` }}>
                                     {/* Background data */}
@@ -46,9 +46,8 @@ const European = () => {
                             </div>
                         </div>
                     ))}
-                </div>
+                </div>        
             </div>
-
         </div>
 
 

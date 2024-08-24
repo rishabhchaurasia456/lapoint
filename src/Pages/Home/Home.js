@@ -4,6 +4,9 @@ import LIfeStyle from '../../Components/Lifestyle/LIfeStyle'
 import Surfcampslider from '../../Components/Surfcampslider/Surfcampslider'
 import CampReview from '../../Components/CampReview/CampReview'
 import European from '../../Components/European/European'
+import Faq from '../../Components/Faq/Faq'
+import Textcontainer from '../../Components/Textcontainer/Textcontainer'
+import Bgimage from '../../Components/Bgimage/Bgimage'
 
 const Home = () => {
   return (
@@ -14,7 +17,11 @@ const Home = () => {
     <CampReview/>
     <LIfeStyle/>
     <European/>
-      
+    <Faq/>
+    <Textcontainer/>   
+    <Bgimage/>
+
+
     </div>
   )
 }
