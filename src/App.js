@@ -10,7 +10,7 @@ function App() {
         <Navbar />
         <Routes>
           {/* Home page import  */}
-          <Route path='/' element={<Home />}></Route>
+          <Route path='/kiteactive' element={<Home />}></Route>
 
 
         </Routes>

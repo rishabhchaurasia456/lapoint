@@ -6,12 +6,12 @@ import lp2 from '../../Images/F_L_Maldives_lp_2.jpg'
 const LIfeStyle = () => {
     return (
         <div>
-            <div className='container'>
+            <div className='container-fluid'>
                 <div className='row mt-3'>
-                    <div className='col-md-6'>
-                        <img src={lp2} alt="" className='lifestyle' />
+                    <div className='col-md-6 p-4'>
+                        <div className='lifestyle' style={{ backgroundImage: `url(${lp2})`}}></div>
                     </div>
-                    <div className='col-md-6'>
+                    <div className='col-md-6 p-5'>
                         <div className="col ">
                             <p className='lifestyle_text'>
                                 Lifestyle
@@ -32,7 +32,7 @@ const LIfeStyle = () => {
                     </div>
                 </div>
                 <div className='row mt-3'>
-                    <div className='col-md-6'>
+                    <div className='col-md-6 p-5'>
                         <div className="col ">
                             <p className='lifestyle_text'>
                                 Surfing
@@ -51,8 +51,8 @@ const LIfeStyle = () => {
                         </div>
 
                     </div>
-                    <div className='col-md-6'>
-                        <img src={lp1} alt="" className='lifestyle' />
+                    <div className='col-md-6 p-4'>
+                        <div className='lifestyle'style={{ backgroundImage: `url(${lp1})`}}></div>
                     </div>
                 </div>
             </div>
