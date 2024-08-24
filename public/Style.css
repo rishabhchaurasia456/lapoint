@@ -205,9 +205,12 @@
 /* -------------------------------------- */
 
 .lifestyle {
-  width: 90%;
+  width: 100%;
   height: 95vh;
+  background-position: center;
   border-radius: 3%;
+  justify-content: center;
+  margin-top: 5%;
 }
 
 .lifestyle_text {
@@ -239,8 +242,28 @@
   font-weight: 400;
 }
 
+@media only screen and (max-width: 600px) {
 
 /* ------------------------------------------------ */
+  .lifestyle_heading {
+    color: black;
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 53px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+  }
+
+  .lifestyle {
+    width: 100%;
+    height: 50vh;
+    background-position: center;
+    font-size: 15px !important;
+    border-radius: 3%;
+    justify-content: center;
+  }
+}
+
 /* European CSS here  */
 /* ------------------------------------------------ */
 
@@ -317,6 +340,23 @@
   color: black;
   font-weight: 900;
   text-align: start;
+/* ----------------------------------- */
+/* Activity component css  */
+/* -------------------------------------- */
+
+.Activity_head {
+  color: black;
+  font-family: sans-serif;
+  margin-top: 7%;
+  font-size: 22px;
+  line-height: 23px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.Activity_head_text {
+  color: black;
+  font-weight: 800;
   font-size: 40px;
   line-height: 53px;
   font-family: sans-serif;
@@ -488,4 +528,159 @@
   line-height: 23px;
   font-weight: 400;
   letter-spacing: 1PX;
+.activity_backimg {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  /* Adjust as needed */
+  overflow: hidden;
+  filter: brightness(150%);
+}
+
+.activity_backimg:hover {
+  filter: brightness(200%);
+  transition: 0.5 ease;
+}
+
+.activity_text {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: center;
+  margin-top: 120%;
+}
+
+@media only screen and (max-width: 600px) {
+  
+  .Activity_head_text {
+    color: black;
+    font-weight: 800;
+    font-size: 25px;
+    line-height: 53px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+  }
+
+  .activity_backimg:hover {
+    height: 65vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    /* Adjust as needed */
+    overflow: hidden;
+  }
+}
+
+/* ----------------------------------- */
+/* Surf camp slider component css  */
+/* -------------------------------------- */
+
+.adventure_slider {
+  color: black;
+  font-family: sans-serif;
+  margin-top: 5%;
+  font-size: 22px;
+  line-height: 23px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.adventure_slider_text {
+  color: black;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 53px;
+  font-family: sans-serif;
+  text-transform: uppercase;
+}
+
+@media only screen and (max-width: 600px) {
+  .adventure_slider_text {
+    color: black;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 53px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+  }
+}
+/* ----------------------------------- */
+/* Surf camp slider component css  */
+/* -------------------------------------- */
+
+
+.footer_headcontainer {
+  background-color: red;
+}
+
+.footer_headcontainer_text {
+  /* text-align: center; */
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  line-height: 50px;
+}
+
+.email_input {
+  background: #fffae7;
+  border: none;
+  border-radius: 0;
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  outline: none;
+  margin-top: 23%;
+
+}
+
+.email_button {
+  width: 70%;
+  background: #fffae7 !important;
+  margin-top: 8px;
+  padding: 1rem 1.5rem;
+  border: 0;
+  border-radius: 1.25rem;
+  background-color: rgba(255, 0, 0, .1);
+  font-weight: 500 !important;
+  font-family: Lapoint Repro Mono, Lapoint Repro, sans-serif;
+  color: red;
+  line-height: 1;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color .2s ease-in-out, color .2s ease-in-out;
+  margin-top: 25%;
+}
+
+@media screen and (max-width:769px) {
+  .footer_headcontainer_text {
+    text-align: center;
+    font-size: 42px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    line-height: 50px;
+  }
+
+  .email_button {
+    width: 100%;
+    background: #fffae7 !important;
+    margin-top: 8px;
+    padding: 1rem 1.5rem;
+    border: 0;
+    border-radius: 1.25rem;
+    background-color: rgba(255, 0, 0, .1);
+    font-weight: 500 !important;
+    font-family: Lapoint Repro Mono, Lapoint Repro, sans-serif;
+    color: red;
+    line-height: 1;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color .2s ease-in-out, color .2s ease-in-out;
+  }
 }

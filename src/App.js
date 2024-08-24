@@ -11,6 +11,9 @@ function App() {
         <Routes>
           {/* Home page import  */}
           <Route path='/kiteactive' element={<Home />}></Route> 
+          <Route path='/kiteactive' element={<Home />}></Route>
+
+
         </Routes>
       </BrowserRouter>
     </div>
