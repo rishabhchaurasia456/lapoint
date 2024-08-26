@@ -6,7 +6,7 @@ const Textcontainer = () => {
 
 
 
-            <div className="container d-flex flex-column align-items-center justify-content-center surf_container">
+            <div className="container d-flex flex-column align-items-center justify-content-center text_container">
                 <div className="row">
                     <div className="col text-center">
                         <small className='text_small '>Lapoint</small>
@@ -15,7 +15,7 @@ const Textcontainer = () => {
                 </div>
                 <div className="row">
                     <div className="col text-center">
-                        <p className='surf_para'>
+                        <p className='text_para'>
                             A passion for surfing is the true heartbeat of Lapoint, and it was on a <br /> surf adventure it all started. And now, since 2008, after 15 years, <br /> 100.000 something thrilled guests at the surf camps and maybe <br /> about one million ridden waves around the globe, we can say for <br /> sure that we know what real stoke looks like. We have a wide range <br /> of courses, so no matter if you’re a beginner or a more advanced <br />surfer you’ll get customized surf sessions with us during <br /> your surf holiday.
                         </p>
                     </div>

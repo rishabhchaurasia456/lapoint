@@ -61,7 +61,7 @@ const Faq = () => {
     };
 
     return (
-        <div className="container mt-5">
+        <div className="container faq_container mt-5">
             <div className="row">
                 <div className="col">
                     <p className='faq_para'>FAQ</p>

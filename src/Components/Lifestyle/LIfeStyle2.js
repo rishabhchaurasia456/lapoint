@@ -6,12 +6,12 @@ import lp2 from '../../Images/lapoint-free-rebookingcancellation-m.jpg'
 const LIfeStyle2 = () => {
     return (
         <div>
-            <div className='container-fluid'>
+            <div className='container mt-5 pt-5'>
                 <div className='row mt-3'>
                     <div className='col-md-6'>
                         <div className='lifestyle' style={{ backgroundImage: `url(${lp1})` }}></div>
                     </div>
-                    <div className='col-md-6 p-5'>
+                    <div className='col-md-6'>
                         <div className="col ">
                             <p className='lifestyle_text'>
                                 Travelling
@@ -32,7 +32,7 @@ const LIfeStyle2 = () => {
                     </div>
                 </div>
                 <div className='row mt-3'>
-                    <div className='col-md-6 p-5'>
+                    <div className='col-md-6'>
                         <div className="col ">
                             <p className='lifestyle_text'>
                             </p><br />
@@ -54,7 +54,7 @@ const LIfeStyle2 = () => {
 
                     </div>
                     <div className='col-md-6 p-4'>
-                        <div className='lifestyle' style={{ backgroundImage: `url(${lp2})` }}></div>
+                        <div className='lifestyle'  style={{ backgroundImage: `url(${lp2})` }}></div>
                     </div>
                 </div>
             </div>

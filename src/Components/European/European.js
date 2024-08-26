@@ -24,8 +24,10 @@ const European = () => {
             <div className="container d-flex flex-column align-items-center justify-content-center Eurp_container">
                 <div className="row">
                     <div className="col text-center">
-                        <p className='Eurp_para'>Find your surf camp for an epic summer in Europe!</p>
-                        <h3 className=" Eurp_text">European get away - top picks  <br />for surf camps 2024!</h3>
+                      <div className="Eurp_text_div">
+                      <p className='Eurp_para'>Find your surf camp for an epic summer in Europe!</p>
+                      <h3 className=" Eurp_text">European get away - top picks for surf camps 2024!</h3>
+                      </div>
                     </div>
                 </div>
             </div>

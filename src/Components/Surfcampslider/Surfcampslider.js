@@ -52,11 +52,13 @@ const Surfcampslider = () => {
                         </p><br />
                     </div>
                 </div>
-                <div className="row">
+                <div className="row ">
                     <div className="col text-center">
+                    <div className='Surf_slider_div'>
                         <h1 className="surf_slider_text">
-                            Surf camps - our most popular <br />camps 2024!
+                        <span className='text_span'> Kiteactive camps </span> - our most popular camps 2024!
                         </h1>
+                    </div>
                     </div>
                 </div>
             </div>

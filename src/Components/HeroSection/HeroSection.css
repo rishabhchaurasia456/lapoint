@@ -23,21 +23,21 @@
     z-index: 1;
     color: white;
     text-align: center;
-    margin-top: 20%;
+    margin-top: 25%;
     /* Additional styling */
   }
 
-  .hero-heading{
+  .hero_heading1{
     font-family: sans-serif;
-    font-weight: 900;
+    font-weight: bold;
     font-size: 60px;
+    font-weight: 900;
+    line-height: 53px;
+    font-family: sans-serif;
+    text-transform: uppercase;
   }
   
-  .hero-heading1{
-    font-family: sans-serif;
-    font-weight: 600;
-    font-size: 20px;
-  }
+
 
   @media screen and (max-width:769px) {
     .video-container {
@@ -48,17 +48,15 @@
       margin-top: -15%;
     }
 
-    .hero-heading{
-      font-family: sans-serif;
-      font-weight: 900;
-      font-size: 45px;
-      padding: 5%;
-    }
-    
-    .hero-heading1{
-      font-family: sans-serif;
-      font-weight: 600;
-      font-size: 20px;
-      padding: 5%;      
-    }
+   
   }
+
+  
+@media only screen and (max-width: 600px) {
+  .hero_heading1{
+    font-family: sans-serif;
+    margin-top: 65% ;
+    font-weight: 900;
+    font-size: 45px;
+  }
+}

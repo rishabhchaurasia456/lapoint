@@ -67,18 +67,17 @@ const Adventure = () => {
             <div className='container-fluid'>
                 <div className='row'>
                     <div className="col text-center">
-                        <p className='adventure_slider'>
+                       <div className="adventure_slider_div">
+                       <p className='adventure_slider'>
                             Great surf, sunny beaches, palm trees and warm weather?
-                        </p><br />
-                    </div>
-                </div>
-                <div className="row">
-                    <div className="col text-center">
+                        </p>
                         <h1 className="adventure_slider_text">
-                            Find your unforgettable <br /> tropical adventure of 2024!
+                            Find your unforgettable tropical adventure of 2024!
                         </h1>
+                       </div>
                     </div>
                 </div>
+                
             </div>
             <div className='container-fluid'>
                 <div className='row'>

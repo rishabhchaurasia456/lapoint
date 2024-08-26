@@ -2,9 +2,6 @@
 Navbar
 ======================== */
 
-.lapointLOGO{
-    color: white;
-}
 
 nav {
     display: flex;
@@ -12,11 +9,11 @@ nav {
     justify-content: space-between;
     padding: 5px 60px;
     background-color: transparent;
-    /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06); */
-    position: fixed; /* Making the navbar fixed */
-    top: 0; /* Positioning it at the top of the viewport */
-    width: 100%; /* Making it span the full width */
-    z-index: 1000; /* Ensuring it's above other content */
+    
+    position: fixed; 
+    top: 0;
+    width: 100%;
+    z-index: 1000; 
 }
 
 #navbar {
@@ -25,20 +22,13 @@ nav {
     justify-content: center;
 }
 
-#navbar li {
-    list-style: none;
-    padding: 10px 25px 0px 0px;
-    position: relative;
-    margin-left: 40%;
+.top-nav-desktopli{
+    color: white !important; 
+}
+.TND_LI{
+    color: white !important;
 }
 
-#navbar li a {
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: 2px;
-    color: white !important;
-    transition: 0.3s ease-in-out;
-}
 
 
 
@@ -47,7 +37,7 @@ nav {
 }
 
 #mobile i {
-    color: black;
+    color: black !important;
     align-items: center;
 }
 
@@ -56,23 +46,13 @@ nav {
     width: 100%;
 }
 
-/* .cart:hover{
-    color: rgb(189, 18, 18);
-} */
 
-.nav-cart-count {
-    width: 22px;
-    height: 22px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: -35px;
-    margin-left: 15px;
-    border-radius: 15px;
-    font-size: 12px;
-    background-color: red;
-    color: white;
+.nav_drop_menu{
+    margin: 2%;
+    font-weight: 400 !important;
+    font-size: 18px;
 }
+
 
 .nav-cart-count:hover {
     background-color: white;
@@ -103,11 +83,36 @@ nav {
     display: none;
 }
 
+.navdroptext{
+    color: white !important;
+    font-weight: 600 !important;
+    font-size: 18px;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    .navcls{
+        margin-top: 15% !important;
+        margin-left: 8%;
+
+    }
+
+}
 @media screen and (max-width:769px) {
+
+    .navcls{
+        margin-top: 5%;
+    }
     .lapointLOGO{
         display: none;
     }
 
+    .navdroptext{
+        color: black !important;
+        font-weight: 500 !important;
+    
+    }
     #navbar {
         display: flex;
         flex-direction: column;
@@ -120,6 +125,7 @@ nav {
         height: 100vh;
         /* background: #ffa31a; */
         background-color: white;
+        color: black !important;
         box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
         padding: 40px 0 0 10px;
         transition: 0.3s ease-in-out;

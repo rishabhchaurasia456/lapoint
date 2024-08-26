@@ -2,47 +2,51 @@
 
 
 export const links = [
-    // {
-    //     name: "Home",
-    //     path: '/'
-    // },
-
+ 
     {
-        name: "Destinations",
-        path: '/11',
+        name: "Kite Camps",
+        path: '/a',
         submenu: [
             {
-                name: "",
-                path: '/1'
+                name: "Surf Camp Nicaragua, Los Clavos",
+                path: 'kiteactive/1'
             },
             {
-                name: "",
-                path: '/2'
+                name: "Surf Camp Portugal, Ericeira",
+                path: 'kiteactive/2'
             },
             {
-                name: "",
-                path: '/3'
+                name: "Surf Camp Sri Lanka, Ahangama",
+                path: 'kiteactive/3'
             },
             {
-                name: "",
-                path: '/4'
+                name: "Surf Camp Costa Rica, Santa Teresa",
+                path: 'kiteactive/4'
             },
             {
-                name: "",
-                path: '/5'
+                name: "Surf Camp Bali, Canggu",
+                path: 'kiteactive/5'
             },
             {
-                name: "",
-                path: '/6'
+                name: "Surf Camp Norway, Hoddevik",
+                path: 'kiteactive/6'
             },
 
             {
-                name: "",
-                path: '/7'
+                name: "Surf Camp Spain, Fuerteventura",
+                path: 'kiteactive/7'
             },
             {
-                name: "",
-                path: '/8'
+                name: "Surf Camp Portugal, Alentejo",
+                path: 'kiteactive/8'
+            },
+            {
+                name: "Surf Camp El Salvador, El Sunzal",
+                path: 'kiteactive/9'
+            },
+            {
+                name: "Surf Cruise, Maldives",
+                path: 'kiteactive/10'
             },
         ] 
     },
@@ -51,55 +55,41 @@ export const links = [
         path: '/11',
         submenu: [
             {
-                name: "",
-                path: '/1'
+                name: "About Lapoint",
+                path: 'kiteactive/1'
             },
             {
-                name: "",
-                path: '/2',
+                name: "Sustainability",
+                path: 'kiteactive/2',
             },
             {
-                name: "",
-                path: '/3'
-            }
+                name: "Membership Community",
+                path: 'kiteactive/3'
+            },
+            {
+                name: "Careers",
+                path: 'kiteactive/4'
+            },
+            {
+                name: "Contact Us",
+                path: 'kiteactive/5'
+            },
         ]
 
 
     },
-    {
-        name: "Surf",
-        path: '/11',
-        submenu: [
-            {
-                name: "",
-                path: '/1'
-            },
-            {
-                name: "",
-                path: '/2'
-            },
-            {
-                name: "",
-                path: '/3'
-            },
-            {
-                name: "",
-                path: '/4'
-            }
-        ]
 
+    {
+        name: "School",
+        path: 'kiteactive/'
     },
     {
-        name: "Groups",
-        path: '/1'
+        name: "Our Shop",
+        path: 'kiteactive/'
     },
     {
-        name: "Surf Shop",
-        path: '/2'
-    },
-    {
-        name: "Blog",
-        path: '/3'
+        name: "Stories",
+        path: 'kiteactive/Blog'
     },
 
 

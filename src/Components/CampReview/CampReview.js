@@ -85,7 +85,7 @@ const CampReview = () => {
                 <div className="row">
                     <div className="col text-center">
                         <h1 className="camp_review_text">
-                            Camp reviews from guests
+                            Camp <span className="text_span">reviews</span> from guests
                         </h1>
                     </div>
                 </div>
