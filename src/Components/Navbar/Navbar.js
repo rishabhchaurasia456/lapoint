@@ -19,31 +19,30 @@ const Navbar = () => {
           </div>
 
           <div className="col-12 col-sm-12 col-lg-6">
-            <nav class="navbar navbar-expand-lg " >
-              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-                aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="Toggle navigation">
-                <i class='fa fa-bars'></i>
+            <nav class="navbar navbar-expand-lg pt-4" >
+              <button class=" Togglebtn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-label="Toggle navigation">
+                <i class='fa fa-bars Togglebtn'></i>
               </button>
               {/* <!-- Offcanvas Menu --> */}
               <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-                <div class="offcanvas-header">
+                <div class="offcanvas-header side_nav_bg">
                   <div className="offcanvas-header ">
+                    {/* logo for mobile mode only show in side bar inside  */}
                     <div>
                       <Link to="kiteactive/" className=''> <img src={img} className='img-fluid' alt="logoimg" style={{ maxWidth: '150px' }} /></Link>
                     </div>
                     <button type="button" className="btn-close" style={{ marginLeft: '50%' }} data-bs-dismiss="offcanvas" aria-label="Close"></button>
                   </div>
                 </div>
-                <div class="offcanvas-body">
+                <div class="offcanvas-body side_nav_bg">
                   <div className='row m-0 p-0'>
                     <div className="navbar-nav  top-nav-desktop">
                       <div className="dropdown">
                         <Link className="nav-link text-light dropdown-toggle" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
-
-
-
                           <i className="fa fa-globe my-3" />&nbsp;<b>Select Language</b>
                         </Link>
+
                         <ul className="dropdown-menu" aria-labelledby="languageDropdown">
                           <li className='nav_drop_menu'>
                             English
@@ -56,6 +55,7 @@ const Navbar = () => {
                           </li>
                           {/* Add more languages as needed */}
                         </ul>
+                        
                       </div>
                     </div>
                   </div>
@@ -88,11 +88,31 @@ const Navbar = () => {
                       })}
                     </ul>
 
+
+
+                    {/* only for phone mode side bar   */}
                     <div className='top-nav-mobile'>
                       <div className="navbar-nav TNB">
-                        <Link to="" className="nav-link">
-                          <b className='TNB'>Select Language</b>
+                        <Link to="" className="nav-link border-bottom border-2">
+                          <p className='TNB'> <i className='fa fa-user-o me-3 text_span'></i>Sign in</p>
                         </Link>
+                      </div>
+
+                      <div className="navbar-nav TNB">
+                        <Link to="" className="nav-link border-bottom border-2">
+                          <p className='TNB'> <i className='fa fa-globe text_span me-3'></i>Select Language</p>
+                        </Link>
+                      </div>
+
+                      {/* social media icon  */}
+                      <div className="navbar-nav TNB mt-3">
+                        <div className='d-flex'>
+                          <Link to="/" className="nav-link me-5"> <i className='fa fa-facebook fa_icon_sidebar'></i></Link>
+                          <Link to="/" className="nav-link me-5"> <i className='fa fa-instagram  fa_icon_sidebar'></i></Link>
+                          <Link to="/" className="nav-link me-5"> <i className='fa fa-youtube fa_icon_sidebar '></i></Link>
+                          <Link to="/" className="nav-link me-5"> <i className='fa fa-twitter fa_icon_sidebar '></i></Link>
+                        </div>
+
 
                       </div>
                     </div>

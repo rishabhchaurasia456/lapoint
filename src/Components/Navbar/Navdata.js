@@ -5,7 +5,7 @@ export const links = [
  
     {
         name: "Kite Camps",
-        path: '/a',
+        // path: '/',
         submenu: [
             {
                 name: "Surf Camp Nicaragua",

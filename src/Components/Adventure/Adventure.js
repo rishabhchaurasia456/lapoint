@@ -3,18 +3,18 @@ import React, { useRef } from 'react'
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
-import img1 from '../../Images/slider/slider1.jpg'; 
-import img2 from '../../Images/slider/slider2.jpg'; 
-import img3 from '../../Images/slider/slider3.jpg'; 
-import img4 from '../../Images/slider/slider4.jpeg'; 
-import img5 from '../../Images/slider/slider5.jpg';
+import img1 from '../../Images/slider/2.webp'; 
+import img2 from '../../Images/slider/4.webp'; 
+import img3 from '../../Images/slider/3.webp'; 
+import img4 from '../../Images/slider/5.webp'; 
+import img5 from '../../Images/slider/8.webp';
 
 const Adventuredata = [
     {
         id: "1",
         img: img1,
         title: 'Ericeira',
-        ul2: 'Santa Teresa',
+        // ul2: 'Santa Teresa',
 
     },
     {

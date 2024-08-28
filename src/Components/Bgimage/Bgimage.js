@@ -1,6 +1,6 @@
 import React from 'react'
 
-import bgimg from '../../Images/RaptorKit_1724758279-1724758281.webp';
+import bgimg from '../../Images/bg_img.jpg';
 
 const Bgimage = () => {
     return (
@@ -17,10 +17,10 @@ const Bgimage = () => {
                                     <div className="col-lg-6">
                                     <p className='bg_text'>Sustainability</p>
                                         <h1 className='bg_heading'>
-                                            The beach is our home. We are leaving it better than we found it.
+                                        2011, KiteActive wass born
                                         </h1>
                                         <p className="bg_para">
-                                            We have made a commitment to our ocean, beaches and community. They are our playground, our home and our livelihood. We are going to leave them better than we found them. That means that all our employees, friends and guests helps out with recycling and taking other actions for the environment. Each week there are beach cleaning and recycling activities to ensure that our home stays the way it was supposed to be.
+                                        KiteActive has started organizing kite & sailing trips along the Wadden Islands. The combination of a week of intensive kitesurfing (lessons) and a week’s holiday in a place with the ingredients: wind, beach, water and a chill atmosphere turned out to be a good concept. Our passion for traveling and kitesurfing has ensured that we have visited many kitespots in the world and are still looking for the best destinations to (learn to) kitesurf. Thanks to the experiences and enthusiasm of our instructors, KiteActive has continued to grow.
                                         </p>
                                     </div>
                                     <div className="col-lg-6">

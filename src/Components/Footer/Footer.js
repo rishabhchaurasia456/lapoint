@@ -17,7 +17,7 @@ const Footer = () => {
                         <div class="input-group mb-3 w-75">
                             <input type="text" class="form-control p-2" placeholder="Your Email" aria-label="Recipient's username" aria-describedby="basic-addon2" />
                             <div class="input-group-append">
-                                <button class="btn btn-outline-secondary emailbtn" type="button">Button</button>
+                                <button class="btn btn-outline-secondary emailbtn" type="button">subscribe</button>
                             </div>
                         </div>
                     </div>
@@ -97,17 +97,20 @@ const Footer = () => {
                                     {/* col three  */}
                                     <div class="col-12 col-md-4 col-lg-4 col-xl-3 text-light m-0 p-0">
                                         <div class="">
-                                            <h4 class="fw-bold mb-4 mx-3">Get Contact</h4>
-                                            <p>For kitesurfing trips and inquiries, reach out to us! Contact our team today for the ride of your life!</p>
-                                            <ul class="list-unstyled m-0 p-0">
-                                                <li class="mb-3" >
+                                            <h4 class="fw-bold">Get Contact</h4>
+                                            <p className='mt-4'>For kitesurfing trips and inquiries, reach out to us! Contact our team today for the ride of your life!</p>
 
-                                                </li>
-                                                <li class="mb-3">
+                                        </div>
 
-                                                </li>
+                                        <div className="navbar-nav TNB mt-3">
+                                            <div className='d-flex'>
+                                                <Link to="/" className="nav-link me-5"> <i className='fa fa-facebook fa_icon_footer'></i></Link>
+                                                <Link to="/" className="nav-link me-5"> <i className='fa fa-instagram  fa_icon_footer'></i></Link>
+                                                <Link to="/" className="nav-link me-5"> <i className='fa fa-youtube fa_icon_footer '></i></Link>
+                                                <Link to="/" className="nav-link me-5"> <i className='fa fa-twitter fa_icon_footer '></i></Link>
+                                            </div>
 
-                                            </ul>
+
                                         </div>
                                     </div>
 

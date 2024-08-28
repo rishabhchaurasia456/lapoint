@@ -553,9 +553,7 @@
     line-height: 40px;
   }
 
-  .Eurp_text_div {
-    /* max-width: 400px; */
-  }
+
 
 }
 
@@ -663,17 +661,6 @@ details>summary::-webkit-details-marker {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 /* TEXT Container  Css  */
 
 .text_small {
@@ -691,9 +678,10 @@ details>summary::-webkit-details-marker {
   margin-top: 5%;
   color: black;
   font-weight: 800;
-  font-size: 40px;
+  font-size: 60px;
   line-height: 45px;
-  font-family: sans-serif;
+  font-weight: 800;
+    font-family: "Amatic SC", sans-serif;
   text-transform: uppercase;
 
 }
@@ -720,11 +708,13 @@ details>summary::-webkit-details-marker {
   .text_para {
     font-size: 15px;
     line-height: 18px;
+   
   }
 
   .text_head {
     font-size: 28px;
     text-align: center;
+    
   }
 }
 
@@ -866,15 +856,6 @@ details>summary::-webkit-details-marker {
   height: 100vh;
 }
 
-.overlay {
-  position: absolute;
-  background: rgba(0, 0, 0, 0.5);
-  /* Black overlay with 50% opacity */
-  z-index: 1;
-  /* Ensures this overlay is on top of the image */
-  pointer-events: none;
-  /* Clicks will pass through to content beneath */
-}
 
 .bg_text {
 
@@ -888,11 +869,11 @@ details>summary::-webkit-details-marker {
 
 .bg_heading {
   margin-top: 5%;
-  color: white;
+  color: #fcc116;
+  font-family: "Amatic SC", sans-serif;
   font-weight: 800;
-  font-size: 40px;
+  font-size: 60px;
   line-height: 45px;
-  font-family: sans-serif;
   text-transform: uppercase;
 
 }
@@ -924,7 +905,8 @@ details>summary::-webkit-details-marker {
   }
 
   .bg_para {
-    font-size: 12px;
+    font-size: 15px;
+    line-height: 20px;
   }
 }
 
@@ -991,6 +973,12 @@ details>summary::-webkit-details-marker {
   color: white;
 }
 
+
+.fa_icon_footer{
+  color: #ffc800;
+  font-size: 30px !important;
+
+}
 
 
 

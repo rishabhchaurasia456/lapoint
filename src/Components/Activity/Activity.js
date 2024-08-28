@@ -2,28 +2,28 @@ import React, { useRef } from 'react'
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
-import img1 from "../../Images/Girl_surfing_in_the_Maldives.jpg"
-import img2 from "../../Images/PMA_7862.jpg"
-import img3 from "../../Images/PMA_7754.jpg"
+import img1 from "../../Images/1.webp"
+import img2 from "../../Images/2.webp"
+import img3 from "../../Images/3.webp"
 
 const Activitydata = [
     {
         id: "1",
         img: img1,
-        title: 'Surf Camp',
+        title: 'Old town erice',
         text: 'All over the world',
 
     },
     {
         id: "2",
         img: img2,
-        title: 'Yoga & Surf',
+        title: 'Wine Testing',
         text: 'Ericeira & Sri lanka',
     },
     {
         id: "3",
         img: img3,
-        title: 'Ericeira',
+        title: 'To Climb',
         text: 'Work & Surf',
     },
 ]
