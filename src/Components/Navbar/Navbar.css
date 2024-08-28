@@ -30,6 +30,11 @@ nav {
 }
 
 
+.navcls{
+    margin-left: 9%;
+}
+
+
 
 
 #mobile {
@@ -61,6 +66,7 @@ nav {
 
 .main-nav{
     margin-top: 8% !important;
+   
 }
 
 .top-nav-desktop {
@@ -93,9 +99,24 @@ nav {
 
 @media only screen and (max-width: 600px) {
     .navcls{
-        margin-top: 15% !important;
-        margin-left: 8%;
+        margin-top: 20% !important;
+        padding: 0 !important;
+        margin: 0;
 
+    }
+
+    .TNB{
+        color: black;
+        
+    }
+    .nav-text{
+        color: black;
+        width: 90%;
+    }
+
+   .main-nav{
+        margin: 0 !important;
+        padding: 0 !important;
     }
 
 }

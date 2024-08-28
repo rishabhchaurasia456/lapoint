@@ -13,7 +13,8 @@ const HeroSection = () => {
                 </video>
                 {/* You can add other content here */}
                 <div className="content">
-                    <p className='hero_heading1'>EXPLORE THE WORLD</p>
+                    <p className='hero_heading1'>Kiteactive - surf camps, work & surf, yogo & surf</p>
+                    <p className='hero_heading2'>EXPLORE THE WORLD</p>
                 </div>
             </div>
         </div>

@@ -65,12 +65,12 @@ const Activity = () => {
     return (
         <div>
             <div className='container-fluid'>
-                <div className='row ps-3'>
+                <div className='row ps-3 text-center'>
                     <p className='Activity_head'>
                         Activity
                     </p>
                     <h1 className="Activity_head_text">
-                        Discover our experiences
+                      <span className='text_span'>  Discover our experiences</span>
                     </h1>
                 </div>
                 <div className='row'>

@@ -14,54 +14,54 @@ export const Carddata = [
     {
         id: "1",
         img: img1,
-        title: 'Ericeira',
+        title: 'Dhakla',
         ul2: 'Santa Teresa',
 
     },
     {
         id: "2",
         img: img2,
-        title: 'Alentejo',
+        title: 'Vanlife',
     },
     {
         id: "3",
         img: img3,
-        title: 'Hoddevika',
+        title: 'tv-tas downwinder',
     },
     {
         id: "4",
         img: img4,
-        title: 'Fuerte Ventura',
+        title: 'Sky high cape Town',
     },
     {
         id: "5",
         img: img5,
-        title: 'Ahangama',
+        title: 'sail & Kite',
     },
     {
         id: "6",
         img: img6,
-        title: 'Elsunzal',
+        title: 'kite Mega trifa',
     },
     {
         id: "7",
         img: img7,
-        title: 'Canggu',
+        title: 'Brazil',
     },
     {
         id: "8",
         img: img8,
-        title: 'Maldives',
+        title: 'Zanzibar',
     },
     {
         id: "9",
         img: img9,
-        title: 'Los Calvos',
+        title: 'Sicily',
     },
     {
         id: "10",
         img: img10,
-        title: 'Santa Teresa',
+        title: '',
     },
 
 ]

@@ -8,40 +8,40 @@ export const links = [
         path: '/a',
         submenu: [
             {
-                name: "Surf Camp Nicaragua, Los Clavos",
+                name: "Surf Camp Nicaragua",
                 path: 'kiteactive/1'
             },
             {
-                name: "Surf Camp Portugal, Ericeira",
+                name: "Surf Camp Portugal",
                 path: 'kiteactive/2'
             },
             {
-                name: "Surf Camp Sri Lanka, Ahangama",
+                name: "Surf Camp Sri Lanka",
                 path: 'kiteactive/3'
             },
             {
-                name: "Surf Camp Costa Rica, Santa Teresa",
+                name: "Surf Camp Costa Rica",
                 path: 'kiteactive/4'
             },
             {
-                name: "Surf Camp Bali, Canggu",
+                name: "Surf Camp Bali",
                 path: 'kiteactive/5'
             },
             {
-                name: "Surf Camp Norway, Hoddevik",
+                name: "Surf Camp Norway",
                 path: 'kiteactive/6'
             },
 
             {
-                name: "Surf Camp Spain, Fuerteventura",
+                name: "Surf Camp Spain",
                 path: 'kiteactive/7'
             },
             {
-                name: "Surf Camp Portugal, Alentejo",
+                name: "Surf Camp Portugal",
                 path: 'kiteactive/8'
             },
             {
-                name: "Surf Camp El Salvador, El Sunzal",
+                name: "Surf Camp El Salvador",
                 path: 'kiteactive/9'
             },
             {

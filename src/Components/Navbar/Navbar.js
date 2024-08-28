@@ -28,35 +28,31 @@ const Navbar = () => {
               <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                 <div class="offcanvas-header">
                   <div className="offcanvas-header ">
-                    <Link to="kiteactive/" className="nav-link">
-                      {/* <img src={logoimg} alt="logoimg" className="w-50" /> */}
-                      <div>
-                        <h1 className='text-dark fw-bold'>Lapoint</h1>
-                      </div>
-                      {/* <p className="mt-3 text-secondary">Histudy is an education website template. You can customize all.</p> */}
-                    </Link>
-                    <button type="button" className="btn-close" style={{ marginLeft: '100%' }} data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    <div>
+                      <Link to="kiteactive/" className=''> <img src={img} className='img-fluid' alt="logoimg" style={{ maxWidth: '150px' }} /></Link>
+                    </div>
+                    <button type="button" className="btn-close" style={{ marginLeft: '50%' }} data-bs-dismiss="offcanvas" aria-label="Close"></button>
                   </div>
                 </div>
-                <div class="">
+                <div class="offcanvas-body">
                   <div className='row m-0 p-0'>
                     <div className="navbar-nav  top-nav-desktop">
                       <div className="dropdown">
-                        <Link className="nav-link text-light dropdown-toggle"  id="languageDropdown"   role="button"    data-bs-toggle="dropdown" aria-expanded="false" >  
-                                                   
-                
-                         
+                        <Link className="nav-link text-light dropdown-toggle" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
+
+
+
                           <i className="fa fa-globe my-3" />&nbsp;<b>Select Language</b>
                         </Link>
                         <ul className="dropdown-menu" aria-labelledby="languageDropdown">
                           <li className='nav_drop_menu'>
-                              English
+                            English
                           </li>
                           <li className='nav_drop_menu'>
-                              Spanish
+                            Spanish
                           </li>
                           <li className='nav_drop_menu'>
-                              French
+                            French
                           </li>
                           {/* Add more languages as needed */}
                         </ul>
@@ -66,7 +62,6 @@ const Navbar = () => {
 
                   <div className='row main-nav'>
                     <ul class="navbar-nav navcls" style={{ fontSize: '20px' }}>
-                      {/* <h2>lapoint</h2> */}
                       {links.map(({ name, path, submenu }, index) => {
                         if (submenu) {
                           return (
@@ -74,7 +69,7 @@ const Navbar = () => {
                               <a className="nav-link dropdown-toggle navdroptext m-2" href={path} id={`navbarDropdown${index}`} role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 {name}
                               </a>
-                              <ul className="dropdown-menu nav-text" aria-labelledby={`navbarDropdown${index}`}>
+                              <ul className="dropdown-menu nav-text " aria-labelledby={`navbarDropdown${index}`}>
                                 {submenu.map((subItem, subIndex) => (
                                   <li key={subIndex}>
                                     <NavLink className="dropdown-item nav_drop_menu" to={subItem.path}>{subItem.name}</NavLink>
@@ -94,9 +89,9 @@ const Navbar = () => {
                     </ul>
 
                     <div className='top-nav-mobile'>
-                      <div className="navbar-nav navcls">
+                      <div className="navbar-nav TNB">
                         <Link to="" className="nav-link">
-                          <i className='fa fa-globe my-3' />&nbsp;<b>Select Language</b>
+                          <b className='TNB'>Select Language</b>
                         </Link>
 
                       </div>

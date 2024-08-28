@@ -7,74 +7,74 @@ const Reviewdata = [
     {
         id: "1",
         img: img1,
-        name: "Johan.h",
-        date: "July 6",
+        name: "Emma Rietveld",
+        date: "April 17",
         start: "5",
         title: "WE had the best time!",
-        para: "Lapoint Ericeria blew our minds. The Camp was so nice and it has everything you could wish for.",
+        para: "It was Wad N Party again last weekend! Well organised, good food, fun evenings and of course kiting!",
     },
     {
         id: "2",
         img: img1,
-        name: "Johan.h",
-        date: "July 6",
+        name: "FirstMate Appie",
+        date: "July 21",
         start: "5",
         title: "WE had the best time!",
-        para: "Lapoint Ericeria blew our minds. The Camp was so nice and it has everything you could wish for.",
+        para:" Last weekend I went to the Wadden with Kite Active for the Sail & Kite trip. It was a wonderful weekend away. ",
     },
     {
         id: "3",
         img: img1,
-        name: "Johan.h",
-        date: "July 6",
+        name: "Sietse",
+        date: "March 6",
         start: "5",
         title: "WE had the best time!",
-        para: "Lapoint Ericeria blew our minds. The Camp was so nice and it has everything you could wish for.",
+        para: "We went on a trip with KiteActive. It was fun. The boat left Franeker on Friday, but we were allowed to come and spend the night on Thursday. .",
     },
     {
         id: "4",
         img: img1,
-        name: "Johan.h",
-        date: "July 6",
+        name: "marc van der drift",
+        date: "June 5",
         start: "5",
         title: "WE had the best time!",
-        para: "Lapoint Ericeria blew our minds. The Camp was so nice and it has everything you could wish for.",
+        para: "Amazing weekend, awesome crew, wicked people!!!",
     },
     {
         id: "5",
         img: img1,
-        name: "Johan.h",
-        date: "July 6",
+        name: "Willem Schinkelshoek",
+        date: "July 19",
         start: "5",
         title: "WE had the best time!",
-        para: "Lapoint Ericeria blew our minds. The Camp was so nice and it has everything you could wish for.",
+        para: "Had a great time in brasiel good organised super nice guids.see you next time.",
     },
     {
         id: "6",
         img: img1,
-        name: "Johan.h",
-        date: "July 6",
+        name: "Cobie Harkema",
+        date: "August 20",
         start: "5",
         title: "WE had the best time!",
-        para: "Lapoint Ericeria blew our minds. The Camp was so nice and it has everything you could wish for.",
+        para: "Great travel experiences with Kiteactive!Learn big tricks in Tarifa, sail and kite during the Wadden weekend and downwind twice in ",
     },
     {
         id: "7",
         img: img1,
-        name: "Johan.h",
-        date: "July 6",
+        name: "ilse de vries",
+        date: "July 5",
         start: "5",
         title: "WE had the best time!",
-        para: "Lapoint Ericeria blew our minds. The Camp was so nice and it has everything you could wish for.",
+        para: "Our first trip with KiteActive was an immediate success. Well organized and an unforgettable experience. ",
     },
     {
         id: "8",
         img: img1,
-        name: "Johan.h",
-        date: "July 6",
+        name: "Ann DS",
+        date: "August 3",
         start: "5",
         title: "WE had the best time!",
-        para: "Lapoint Ericeria blew our minds. The Camp was so nice and it has everything you could wish for.",
+        para: "Just got back from a week in Tarifa with the KiteActive gang - what a brilliant week, we had wind pretty much every day, stayed.",
     },
 ]
 
@@ -85,7 +85,7 @@ const CampReview = () => {
                 <div className="row">
                     <div className="col text-center">
                         <h1 className="camp_review_text">
-                            Camp <span className="text_span">reviews</span> from guests
+                        What do Our <span className='text_span'>Travelers say?</span>
                         </h1>
                     </div>
                 </div>
@@ -123,7 +123,7 @@ const CampReview = () => {
                                         <i className='fa fa-star mt-3 ms-1 mb-2 text-warning'></i>
                                         <i className='fa fa-star mt-3 ms-1 mb-2 text-warning'></i>
                                     </div>
-                                    <p><b>{title}</b></p>
+                                    {/* <p><b>{title}</b></p> */}
                                     <p>{para}</p>
                                 </div>
                             </div>

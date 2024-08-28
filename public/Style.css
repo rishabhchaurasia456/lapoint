@@ -2,7 +2,7 @@
 /* Surf camp component css  */
 /* -------------------------------------- */
 
-.text_span{
+.text_span {
   color: #fcc116;
 }
 
@@ -14,7 +14,7 @@
 .surf_text {
   color: black;
   font-weight: 900;
-  font-size: 45px;
+  font-size: 60px;
   line-height: 53px;
   font-family: "Amatic SC", sans-serif;
   text-transform: uppercase;
@@ -67,7 +67,7 @@
 @media (max-width: 1024px) and (min-width: 768px) {
   .surf_text {
     font-weight: 800;
-    font-size: 45px;
+    font-size: 50px;
     line-height: 40px;
   }
 
@@ -81,16 +81,18 @@
 /* Small devices (phones, 576px and up)------------------ */
 
 @media only screen and (max-width: 600px) {
+  .surf_container {
+    max-width: 350px;
+  }
+
   .surf_text {
-
-
     font-weight: 800;
-    font-size: 30px;
+    font-size: 40px;
     line-height: 40px;
   }
 
   .surf_para {
-    font-size: 18px;
+    font-size: 15px;
     margin-top: 5%;
     font-weight: bold;
   }
@@ -115,7 +117,7 @@
 }
 
 /* ----------------------------------- */
-/* Surf camp slider component css  */
+/* Surf camp slider component css ************************************************************ */
 /* -------------------------------------- */
 .Surf_slider_div {
   max-width: 900px;
@@ -136,16 +138,13 @@
 .surf_slider_text {
   color: black;
   font-weight: 800;
-  font-size: 40px;
-  line-height: 53px;
+  font-size: 60px;
+  line-height: 70px;
   font-family: "Amatic SC", sans-serif;
   text-transform: uppercase;
 }
 
-/* .slid_card_backimg{
-    height: 60vh;
-    width: 100%;
-} */
+
 .slid_card_backimg {
   height: 60vh;
   width: 100%;
@@ -165,9 +164,13 @@
 }
 
 .card_d_text {
-  font-size: 30px;
-  font-weight: bold;
-  margin: 0;
+  /* color: #ffc800; */
+  color: white;
+  font-weight: bolder;
+  font-size: 50px;
+  line-height: 70px;
+  font-family: "Amatic SC", sans-serif;
+  text-transform: uppercase;
 }
 
 .custom-prev,
@@ -186,20 +189,17 @@
   z-index: 1001;
 }
 
-/* Adjust the left and right properties */
 .custom-prev {
   left: 10px;
-  /* Adjust as needed */
 }
 
 .custom-next {
   right: 10px;
-  /* Adjust as needed */
 }
 
 .custom-prev:hover,
 .custom-next:hover {
-  background-color: #ff0000;
+  background-color: #ffc800;
 }
 
 /* Small devices (phones, 576px and up) */
@@ -255,7 +255,7 @@
   color: black;
   margin: 2%;
   font-weight: 800;
-  font-size: 40px;
+  font-size: 60px;
   line-height: 53px;
   font-family: "Amatic SC", sans-serif;
   text-transform: uppercase;
@@ -279,6 +279,72 @@
 
 
 
+/* --------------------------------- */
+/* Element css here  */
+/* -------------------------------------/- */
+.element_row {
+  background-color: #f9ca1e;
+}
+
+.element_text {
+  color: black;
+  margin-top: 3%;
+  font-family: "Amatic SC", sans-serif;
+  font-size: 50px;
+  line-height: 55px;
+  font-weight: 900;
+  letter-spacing: 2PX;
+
+}
+
+.element_para {
+  color: black;
+  font-family: sans-serif;
+  margin-top: 5%;
+  font-size: 15px;
+  line-height: 23px;
+  font-weight: 400;
+  letter-spacing: 2PX;
+
+}
+
+.element_btn {
+  margin: auto;
+  margin-top: 30%;
+  margin-left: 30%;
+  width: 50%;
+  background-color: #000;
+  color: white;
+  font-size: 25px;
+  padding: 4%;
+  border: 0;
+  font-family: "Amatic SC", sans-serif;
+
+}
+
+/* Small devices (phones, 576px and up) */
+@media only screen and (max-width: 600px) {
+
+  .element_btn {
+    margin: 5%;
+    margin-top: 20%;
+    margin-left: 25%;
+
+
+  }
+
+  .element_text {
+    color: black;
+    margin-top: 5%;
+    font-family: "Amatic SC", sans-serif;
+    font-size: 30px;
+    line-height: 40px;
+    font-weight: 900;
+    letter-spacing: 2PX;
+
+  }
+
+}
 
 
 
@@ -291,6 +357,57 @@
 
 
 
+/* LEVEl Comp CSS 
+ */
+
+
+.Level_cont_head {
+  color: #ffc800;
+  margin-top: 5%;
+  font-family: "Amatic SC", sans-serif;
+  font-size: 60px;
+  line-height: 50px;
+  font-weight: 900;
+  letter-spacing: 2PX;
+
+}
+
+.Level_cont_para {
+  color: black;
+  font-family: sans-serif;
+  margin-top: 2%;
+  font-size: 20px;
+  line-height: 23px;
+  font-weight: bold;
+  letter-spacing: 2PX;
+}
+
+.level_card {
+  border: 1px solid rgb(75, 75, 75);
+  border-radius: 5%;
+  transition: transform 0.3s ease-in-out
+}
+
+.level_card:hover {
+  cursor: pointer;
+  border: 1px solid #ffc800;
+  border-radius: 5%;
+  transform: translateY(-10px);
+
+}
+
+.level_card_text {
+  color: black;
+  font-weight: 500 !important;
+  font-size: 30px !important;
+  line-height: 53px;
+  /* font-family: "Amatic SC", sans-serif; */
+
+}
+
+.level_card_text:hover {
+  color: #ffc800 !important;
+}
 
 
 
@@ -303,17 +420,16 @@
 
 
 .lifestyle {
-  width: 90%;
-  height: 95vh;
-  border-radius: 3%;
-  background-size: cover;
-
+  width: 100%;
+  height: 90%;
+  border-radius: 5%;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 
 .lifestyle_text {
   color: black;
-  font-family: sans-serif;
   margin-top: 5%;
   font-size: 22px;
   line-height: 23px;
@@ -323,11 +439,11 @@
 
 
 .lifestyle_heading {
-  color: black;
-  font-weight: 800;
-  font-size: 40px;
+  color: #fcc116;
+  font-weight: bold;
+  font-size: 65px;
   line-height: 53px;
-  font-family: sans-serif;
+  font-family: "Amatic SC", sans-serif;
   text-transform: uppercase;
 }
 
@@ -383,11 +499,12 @@
 
 .Eurp_text {
   color: black;
-  font-weight: 900;
-  font-size: 40px;
-  line-height: 53px;
-  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 60px;
+  line-height: 55px;
+  font-family: "Amatic SC", sans-serif;
   text-transform: uppercase;
+
 }
 
 
@@ -427,6 +544,7 @@
     font-size: 18px;
     margin-top: 5%;
     font-weight: bold;
+
   }
 
   .Eurp_text {
@@ -447,107 +565,111 @@
 /* =---------------------------------- */
 /* FAQ css  */
 /* ------------------------------------ */
-
+.faq_container {
+  background-color: black;
+  margin-bottom: 5%;
+}
 
 .faq_para {
+  color: white;
   font-size: 22px;
+  margin: 50px 0 30px 0;
   line-height: 23px;
   font-weight: 500;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .faq_text {
-  color: black;
+  color: white;
   font-weight: 900;
-  text-align: start;
-  font-size: 40px;
+  font-size: 60px;
   line-height: 53px;
-  font-family: sans-serif;
+  font-family: "Amatic SC", sans-serif;
   text-transform: uppercase;
 }
 
-
-
-.faq_cont {
-  position: relative;
-  z-index: 1000;
-  margin-top: 5%;
+.faq_img {
+  width: 90%;
+  /* background-size: cover; */
 }
 
-.faq_question {
+
+
+summary {
+  font-size: 1.25rem;
+  font-weight: 600;
+  background-color: black;
+  color: #fcc116;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  outline: none;
+  border-radius: 0.25rem;
+  text-align: left;
   cursor: pointer;
-  color: red;
-  font-size: 18px;
-  line-height: 23px;
-  font-weight: 500;
+  position: relative;
 }
 
-.popupbox {
+details>summary::after {
   position: absolute;
-  left: 0;
-  right: 0;
-  padding: 15px;
-  width: 40%;
-  border-radius: 20px;
-  box-shadow: rgba(42, 42, 42, 0.35) 0px 10px 15px;
-  margin: auto;
-  bottom: 2rem;
-  border: 1px solid #ccc;
-  background-color: #f9f9f9;
-  box-sizing: border-box;
-  opacity: 0;
-  transform: translateY(20px);
-  /* Start slightly below the viewport */
-  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  content: "+";
+  right: 10px;
+
 }
 
-.popupbox.visible {
-  opacity: 1;
-  transform: translateY(0);
-  /* Move to the final position */
+details[open]>summary::after {
+  position: absolute;
+  content: "-";
+  right: 10px;
+
 }
 
-.popupbox.hidden {
-  opacity: 0;
-  transform: translateY(20px);
-  /* Reset to start position */
+details>summary::-webkit-details-marker {
+  display: none;
 }
 
-.close-btn {
-  position: relative;
-  /* left: 28rem; */
-  right: -50;
-  background: transparent;
-  border: none;
-  font-size: 35px;
-  font-weight: bold;
-  cursor: pointer;
-  color: #333;
-}
-
-.close-btn:hover {
-  color: #000;
-  /* Adjust hover color as needed */
+.faq__content {
+  margin-top: -20px;
+  padding: 0px 20px 0px 30px;
+  background-color: black;
+  color: white;
 }
 
 
-@media only screen and (max-width: 600px) {
-  .popupbox {
-    width: 100%;
-    max-height: 300px;
-    overflow-y: scroll;
-    bottom: 60%;
+@media (max-width: 576px) {
+
+  summary {
+    font-size: 15px;
+    font-weight: 600;
+    background-color: black;
+    color: #fcc116;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    outline: none;
+    border-radius: 0.25rem;
+    text-align: left;
+    cursor: pointer;
+    position: relative;
   }
 
-  .faq_text {
-    font-size: 25px;
-    line-height: 32px;
+
+  .faq__content,
+  .faq_ul {
+    font-size: 14px !important;
+
   }
 
-  .faq_container {
-    display: none;
-  }
+
 }
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -591,94 +713,20 @@
 
 
 @media only screen and (max-width: 600px) {
-  .text_container{
+  .text_container {
     max-width: 500px;
   }
-  .text_para{
+
+  .text_para {
     font-size: 15px;
     line-height: 18px;
   }
 
-  .text_head{
+  .text_head {
     font-size: 28px;
     text-align: center;
   }
 }
-
-/* -------------------------------------- */
-/* BG- Image css  */
-/* -------------------------------------- */
-
-.bg_image2 {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100vh;
-}
-
-.overlay {
-  position: absolute;
-  background: rgba(0, 0, 0, 0.5);
-  /* Black overlay with 50% opacity */
-  z-index: 1;
-  /* Ensures this overlay is on top of the image */
-  pointer-events: none;
-  /* Clicks will pass through to content beneath */
-}
-
-.bg_text {
-
-  margin-top: 20%;
-  color: white;
-  font-weight: 500;
-  font-size: 20px;
-  text-transform: uppercase;
-
-}
-
-.bg_heading {
-  margin-top: 5%;
-  color: white;
-  font-weight: 800;
-  font-size: 40px;
-  line-height: 45px;
-  font-family: sans-serif;
-  text-transform: uppercase;
-
-}
-
-.bg_para {
-  padding: 2px;
-  color: white;
-  font-family: sans-serif;
-  margin-top: 5%;
-  font-size: 18px;
-  line-height: 23px;
-  font-weight: 400;
-  letter-spacing: 1PX;
-}
-
-
-@media only screen and (max-width: 600px) {
-  .bg_image2 {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100vh;
-  }
-  .bg_heading{
-    font-size: 30px;
-    line-height: 32px;
-  }
-
-  .bg_para{
-    font-size: 12px;
-  }
-}
-
-
 
 
 /* ----------------------------------- */
@@ -697,10 +745,10 @@
 
 .Activity_head_text {
   color: black;
-  font-weight: 800;
-  font-size: 40px;
+  font-weight: 900;
+  font-size: 60px;
   line-height: 53px;
-  font-family: sans-serif;
+  font-family: "Amatic SC", sans-serif;
   text-transform: uppercase;
 }
 
@@ -773,14 +821,14 @@
 .adventure_slider_text {
   color: black;
   font-weight: 800;
-  font-size: 40px;
-  line-height: 53px;
-  font-family: sans-serif;
+  font-size: 60px;
+  line-height: 65px;
+  font-family: "Amatic SC", sans-serif;
   text-transform: uppercase;
 }
 
 .adventure_slider_div {
-  max-width: 900px;
+  max-width: 700px;
 
   margin: auto;
 }
@@ -799,4 +847,184 @@
   .adventure_slider_div {
     max-width: 500px;
   }
+}
+
+
+
+
+
+
+/* -------------------------------------- */
+/* BG- Image css  */
+/* -------------------------------------- */
+
+.bg_image2 {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+}
+
+.overlay {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  /* Black overlay with 50% opacity */
+  z-index: 1;
+  /* Ensures this overlay is on top of the image */
+  pointer-events: none;
+  /* Clicks will pass through to content beneath */
+}
+
+.bg_text {
+
+  margin-top: 20%;
+  color: white;
+  font-weight: 500;
+  font-size: 20px;
+  text-transform: uppercase;
+
+}
+
+.bg_heading {
+  margin-top: 5%;
+  color: white;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 45px;
+  font-family: sans-serif;
+  text-transform: uppercase;
+
+}
+
+.bg_para {
+  padding: 2px;
+  color: white;
+  font-family: sans-serif;
+  margin-top: 5%;
+  font-size: 18px;
+  line-height: 23px;
+  font-weight: 400;
+  letter-spacing: 1PX;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .bg_image2 {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+  }
+
+  .bg_heading {
+    font-size: 30px;
+    line-height: 32px;
+  }
+
+  .bg_para {
+    font-size: 12px;
+  }
+}
+
+
+
+/* footer CSS ------------------------ */
+/* footer CSS ------------------------ */
+
+.footer_headcontainer {
+  background-color: #ffc800;
+}
+
+.footer_headcontainer_text {
+  color: white;
+  margin-top: 5%;
+  font-family: "Amatic SC", sans-serif;
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: 900;
+  letter-spacing: 2PX;
+}
+
+.email_input {
+  background: #fffae7;
+  border: none;
+  border-radius: 0;
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  outline: none;
+  margin-top: 23%;
+
+}
+
+.emailbtn {
+  background-color: black !important;
+  color: #fcc116 !important;
+  padding: 10px !important;
+  width: 150%;
+}
+
+.footerlogo {
+  width: 80%;
+}
+
+.footer_bg {
+  background-color: #000;
+}
+
+.footer_link {
+  text-decoration: none;
+  color: white;
+
+
+}
+
+.footer_link:hover {
+  text-decoration: none;
+  color: #ffc800;
+
+}
+
+.copyright {
+  color: white;
+}
+
+
+
+
+@media only screen and (max-width:600px) {
+  .footer_headcontainer_text {
+    text-align: center;
+    font-size: 42px;
+    font-weight: bold;
+    color: white;
+    font-family: "Amatic SC", sans-serif;
+    line-height: 50px;
+  }
+
+  .email_button {
+    width: 100%;
+    background: #fffae7 !important;
+    margin-top: 8px;
+    padding: 1rem 1.5rem;
+    border: 0;
+    border-radius: 1.25rem;
+    background-color: rgba(255, 0, 0, .1);
+    font-weight: 500 !important;
+    font-family: Lapoint Repro Mono, Lapoint Repro, sans-serif;
+    color: red;
+    line-height: 1;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color .2s ease-in-out, color .2s ease-in-out;
+  }
+
+  .footerlogo {
+    margin-top: 10%;
+    width: 80%;
+  }
+
+
 }

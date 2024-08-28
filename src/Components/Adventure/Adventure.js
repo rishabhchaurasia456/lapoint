@@ -72,7 +72,7 @@ const Adventure = () => {
                             Great surf, sunny beaches, palm trees and warm weather?
                         </p>
                         <h1 className="adventure_slider_text">
-                            Find your unforgettable tropical adventure of 2024!
+                            Find your unforgettable <span className='text_span'>tropical adventure of 2024!</span>
                         </h1>
                        </div>
                     </div>

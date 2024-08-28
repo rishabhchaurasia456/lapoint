@@ -9,8 +9,8 @@ const Textcontainer = () => {
             <div className="container d-flex flex-column align-items-center justify-content-center text_container">
                 <div className="row">
                     <div className="col text-center">
-                        <small className='text_small '>Lapoint</small>
-                        <h1 className=" surf_text">What it’s all about</h1>
+                        <small className='text_small '>Kiteactive</small>
+                        <h1 className=" surf_text"><span className='text_span'>What it’s all about</span></h1>
                     </div>
                 </div>
                 <div className="row">

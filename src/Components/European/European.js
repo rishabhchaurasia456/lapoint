@@ -26,7 +26,7 @@ const European = () => {
                     <div className="col text-center">
                       <div className="Eurp_text_div">
                       <p className='Eurp_para'>Find your surf camp for an epic summer in Europe!</p>
-                      <h3 className=" Eurp_text">European get away - top picks for surf camps 2024!</h3>
+                      <h3 className=" Eurp_text"><span className='text_span'>European get away -</span> top picks for Kite camps 2024!</h3>
                       </div>
                     </div>
                 </div>
