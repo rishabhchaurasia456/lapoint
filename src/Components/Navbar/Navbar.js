@@ -4,7 +4,20 @@ import { links } from '../Navbar/Navdata';
 import "./Navbar.css"
 import img from '../../Images/logo-zwart-geel-geel.png'
 
-const Navbar = () => {
+const Navbar = ({selectedLanguage, setSelectedLanguage}) => {
+
+  const languages = [
+    // { value: "en", text: "Select Language" },
+    { value: "en", text: "English" },
+    { value: "nl", text: "Dutch" },
+    { value: "hi", text: "Hindi" },
+  ];
+
+  const handleChange = (event) => {
+    setSelectedLanguage(event.target.value);
+  };
+
+  const languageToUse = links[selectedLanguage] || links["en"];
 
   return (
     <>
@@ -39,11 +52,19 @@ const Navbar = () => {
                   <div className='row m-0 p-0'>
                     <div className="navbar-nav  top-nav-desktop">
                       <div className="dropdown">
-                        <Link className="nav-link text-light dropdown-toggle" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
-                          <i className="fa fa-globe my-3" />&nbsp;<b>Select Language</b>
-                        </Link>
+                        {/* <Link className="nav-link text-light dropdown-toggle" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
+                        </Link> */}
+                        <i className="fa fa-globe text-light my-3" />&nbsp;<b>Select Language
+                          <select className='btn' value={selectedLanguage} onChange={handleChange}>
+                          
+                            {languages.map((item) => (
+                                <option className='text-dark' key={item.value} value={item.value}>
+                                    {item.text}
+                                </option>
+                            ))}
+                        </select> </b>
 
-                        <ul className="dropdown-menu" aria-labelledby="languageDropdown">
+                        {/* <ul className="dropdown-menu" aria-labelledby="languageDropdown">
                           <li className='nav_drop_menu'>
                             English
                           </li>
@@ -53,16 +74,15 @@ const Navbar = () => {
                           <li className='nav_drop_menu'>
                             French
                           </li>
-                          {/* Add more languages as needed */}
-                        </ul>
-                        
+                        </ul> */}
+
                       </div>
                     </div>
                   </div>
 
                   <div className='row main-nav'>
                     <ul class="navbar-nav navcls" style={{ fontSize: '20px' }}>
-                      {links.map(({ name, path, submenu }, index) => {
+                      {languageToUse.map(({ name, path, submenu }, index) => {
                         if (submenu) {
                           return (
                             <li className="nav-item dropdown " key={index}>

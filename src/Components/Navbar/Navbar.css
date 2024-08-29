@@ -103,6 +103,7 @@ nav {
     .side_nav_bg{
         background-color: #fdfaec !important;
     }
+
     .navcls {
         margin-top: 20% !important;
         padding: 0 !important;
@@ -194,6 +195,23 @@ nav {
     .top-nav-mobile {
         display: block;
         color: black;
+    }
+
+}
+
+
+
+/* Medium devices (tablets, 768px and up)---------------- */
+@media (max-width: 1024px) and (min-width: 768px) {
+    .Togglebtn{
+        /* margin-left: 85%;     */
+        border: 0 !important;
+        outline: none;
+        background-color: transparent;
+        font-size: 26px;
+        padding: 0;
+        display: block;
+        color: white;
     }
 
 }

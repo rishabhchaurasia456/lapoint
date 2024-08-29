@@ -767,8 +767,11 @@ details>summary::-webkit-details-marker {
   margin-top: 120%;
 }
 
-@media screen and (max-width:769px) {
-  .activity_backimg:hover {
+
+
+
+@media only screen and (max-width: 600px) {
+  .activity_backimg {
     height: 65vh;
     width: 100%;
     display: flex;
@@ -777,18 +780,19 @@ details>summary::-webkit-details-marker {
     border-radius: 15px;
     /* Adjust as needed */
     overflow: hidden;
-  }
-}
-
-
-@media only screen and (max-width: 600px) {
+    filter: brightness(150%);
+  } 
+  
   .Activity_head {
     font-size: 18px;
   }
 
   .Activity_head_text {
-    font-size: 25px;
-    line-height: 32px;
+    font-size: 30px;
+    line-height: 30px;
+  }
+  .card_d_text{
+    margin-bottom: 100px;
   }
 }
 

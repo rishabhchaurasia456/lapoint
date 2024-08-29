@@ -15,13 +15,13 @@ import Footer from '../../Components/Footer/Footer'
 import Elementcomp from '../../Components/Elementcomp/Elementcomp'
 import Level from '../../Components/Level/Level'
 
-const Home = () => {
+const Home = ({selectedLanguage}) => {
   return (
     <div>
 
 
       {/* all Home page Component import here  */}
-      <HeroSection />
+      <HeroSection selectedLanguage={ selectedLanguage }/>
       <Surfcamp />
       <Surfcampslider />
       <CampReview />

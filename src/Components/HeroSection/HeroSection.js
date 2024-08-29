@@ -7,7 +7,23 @@ import { Link } from 'react-router-dom'
 
 
 
-const HeroSection = () => {
+const HeroSection = ({ selectedLanguage }) => {
+
+    const content = {
+        en: {
+            title: "Kiteactive - surf camps, work & surf, yogo & surf",
+            subtitle: "EXPLORE THE WORLD",
+        },
+        nl: {
+            title: "Kiteactive - surfkampen, werk & surf, yogo & surf",
+            subtitle: "ONTDEK DE WERELD",
+        },
+
+        hi: {
+            title: "काइटएक्टिव - सर्फ कैंप, काम और सर्फ, योगो और सर्फ",
+            subtitle: "दुनिया का अन्वेषण करें",
+        },
+    };
     return (
         <div>
 
@@ -26,8 +42,8 @@ const HeroSection = () => {
                 <div className="content">
                     {/* logo for mobile mode only show  */}
 
-                    <p className='hero_heading1'>Kiteactive - surf camps, work & surf, yogo & surf</p>
-                    <p className='hero_heading2'>EXPLORE THE WORLD</p>
+                    <p className='hero_heading1'>{content[selectedLanguage].title}</p>
+                    <p className='hero_heading2'>{content[selectedLanguage].subtitle}</p>
                 </div>
             </div>
         </div>
