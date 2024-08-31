@@ -1,4 +1,5 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
 import Surfcamp from '../../Components/Surfcamp/Surfcamp'
 import LIfeStyle from '../../Components/Lifestyle/LIfeStyle'
 import Surfcampslider from '../../Components/Surfcampslider/Surfcampslider'
@@ -18,24 +19,28 @@ import Level from '../../Components/Level/Level'
 const Home = ({selectedLanguage}) => {
   return (
     <div>
+      <Helmet>
+        <title>KiteActive</title>
+        <meta name="description" content="This is the home page of your website where you can find information about surfcamps, lifestyle, and more." />
+        <meta name="keywords" content="surfcamp, lifestyle, adventure, activities, reviews" />
+        <link rel="canonical" href="https://danstring.co.in/kiteactive/" />
+      </Helmet>
 
-
-      {/* all Home page Component import here  */}
       <HeroSection selectedLanguage={ selectedLanguage }/>
-      <Surfcamp />
-      <Surfcampslider />
-      <CampReview />
-      <Level/>
-      <LIfeStyle />
-      <Elementcomp/>
+      <Surfcamp selectedLanguage={ selectedLanguage }/>
+      <Surfcampslider selectedLanguage={ selectedLanguage }/>
+      <CampReview selectedLanguage={ selectedLanguage }/>
+      <Level selectedLanguage={ selectedLanguage }/>
+      <LIfeStyle selectedLanguage={ selectedLanguage }/>
+      <Elementcomp selectedLanguage={ selectedLanguage }/>
       {/* <European /> */}
       {/* <LIfeStyle2 /> */}
-      <Faq />
-      <Activity />
-      <Adventure />
-      <Textcontainer />
-      <Bgimage />
-      <Footer/>
+      <Faq selectedLanguage={ selectedLanguage }/>
+      <Activity selectedLanguage={ selectedLanguage }/>
+      <Adventure selectedLanguage={ selectedLanguage }/>
+      <Textcontainer selectedLanguage={ selectedLanguage }/>
+      <Bgimage selectedLanguage={ selectedLanguage }/>
+      <Footer selectedLanguage={ selectedLanguage }/>
     </div>
   )
 }

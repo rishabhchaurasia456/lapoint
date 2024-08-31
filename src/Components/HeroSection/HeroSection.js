@@ -1,7 +1,7 @@
 import React from 'react'
 import "./HeroSection.css"
 
-import vedio from "../../Images/Kiteactive-video1-1.webm"
+import vedio from "../../Images/Kiteactive-video1-1.mp4"
 import img from '../../Images/logo-zwart-geel-geel.png'
 import { Link } from 'react-router-dom'
 

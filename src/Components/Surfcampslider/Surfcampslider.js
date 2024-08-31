@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 // import { NavLink } from 'react-bootstrap';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import { Carddata } from './Carddata';
+import { Carddata, Carddata_head_section } from './Carddata';
 
 const responsive = {
     superLargeDesktop: {
@@ -25,7 +25,7 @@ const responsive = {
 };
 
 
-const Surfcampslider = () => {
+const Surfcampslider = ({selectedLanguage}) => {
 
     const carouselRef = useRef(null);
     const handleNext = () => {
@@ -46,7 +46,7 @@ const Surfcampslider = () => {
                 <div className='row'>
                     <div className="col text-center">
                         <p className='surf_slider'>
-                            Your choice - which camp is your flavour?
+                            {Carddata_head_section[0].title[selectedLanguage]}
                         </p><br />
                     </div>
                 </div>
@@ -54,7 +54,7 @@ const Surfcampslider = () => {
                     <div className="col text-center">
                     <div className='Surf_slider_div'>
                         <h1 className="surf_slider_text">
-                        <span className='text_span'> Kiteactive camps </span> - our most popular camps 2024!
+                        <span className='text_span'> {Carddata_head_section[0].subtitle[selectedLanguage]} </span> {Carddata_head_section[0].subtitle1[selectedLanguage]}
                         </h1>
                     </div>
                     </div>
@@ -73,7 +73,7 @@ const Surfcampslider = () => {
                                         {/* <img src={img} className="slid_card_backimg rounded-4" alt="..." /> */}
                                         <div className="slid_card_backimg rounded-4" style={{ backgroundImage: `url(${img})`, backgroundSize: 'cover', backgroundPosition: 'center',}}>
                                             <div class="slid_card_text">
-                                                <p class="card_d_text">{title}</p>
+                                                <p class="card_d_text">{title[selectedLanguage]}</p>
                                             </div>
                                         </div>
                                     </div>

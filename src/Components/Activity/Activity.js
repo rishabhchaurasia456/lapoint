@@ -6,25 +6,64 @@ import img1 from "../../Images/1.webp"
 import img2 from "../../Images/2.webp"
 import img3 from "../../Images/3.webp"
 
+const content = {
+    en: {
+        title: "Activity",
+        title1: "Discover our experiences",
+    },
+    nl: {
+        title: "Activiteit",
+        title1: "Ontdek onze ervaringen",
+    },
+
+    hi: {
+        title: "गतिविधि",
+        title1: "हमारे अनुभव जानें",
+    },
+};
+
 const Activitydata = [
     {
         id: "1",
         img: img1,
-        title: 'Old town erice',
-        text: 'All over the world',
-
+        title: {
+            en: 'Old town erice',
+            hi: 'पुराना टाउन एरिसे', // Hindi translation
+            nl: 'Oude stad Erice' // Dutch translation
+        },
+        text: {
+            en: 'All over the world',
+            hi: 'दुनिया भर में', // Hindi translation
+            nl: 'Overal ter wereld' // Dutch translation
+        }
     },
     {
         id: "2",
         img: img2,
-        title: 'Wine Testing',
-        text: 'Ericeira & Sri lanka',
+        title: {
+            en: 'Wine Testing',
+            hi: 'वाइन टेस्टिंग', // Hindi translation
+            nl: 'Wijnproeverij' // Dutch translation
+        },
+        text: {
+            en: 'Ericeira & Sri lanka',
+            hi: 'एरिसेरा और श्री लंका', // Hindi translation
+            nl: 'Ericeira en Sri Lanka' // Dutch translation
+        }
     },
     {
         id: "3",
         img: img3,
-        title: 'To Climb',
-        text: 'Work & Surf',
+        title: {
+            en: 'To Climb',
+            hi: 'चढ़ने के लिए', // Hindi translation
+            nl: 'Om te klimmen' // Dutch translation
+        },
+        text: {
+            en: 'Work & Surf',
+            hi: 'काम और सर्फ', // Hindi translation
+            nl: 'Werk en surfen' // Dutch translation
+        }
     },
 ]
 
@@ -49,28 +88,19 @@ const responsive = {
 };
 
 
-const Activity = () => {
+const Activity = ({selectedLanguage}) => {
     const carouselRef = useRef(null);
-    // const handleNext = () => {
-    //     if (carouselRef.current) {
-    //         carouselRef.current.next();
-    //     }
-    // };
-
-    // const handlePrev = () => {
-    //     if (carouselRef.current) {
-    //         carouselRef.current.previous();
-    //     }
-    // };
+    
     return (
         <div>
             <div className='container-fluid'>
                 <div className='row ps-3 text-center'>
                     <p className='Activity_head'>
-                        Activity
+                        {/* Activity */}
+                        {content[selectedLanguage].title}
                     </p>
                     <h1 className="Activity_head_text">
-                      <span className='text_span'>  Discover our experiences</span>
+                      <span className='text_span'>{content[selectedLanguage].title1}</span>
                     </h1>
                 </div>
                 <div className='row'>
@@ -81,8 +111,8 @@ const Activity = () => {
                                     <div>
                                         <div className="activity_backimg rounded-4 shadow" style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(${img})`, backgroundSize: 'cover', backgroundPosition: 'center', }}>
                                             <div class="activity_text">
-                                                <p class="fs-3">{text}</p>
-                                                <p class="card_d_text">{title}</p>
+                                                <p class="fs-3">{text[selectedLanguage]}</p>
+                                                <p class="card_d_text">{title[selectedLanguage]}</p>
                                             </div>
                                         </div>
                                     </div>

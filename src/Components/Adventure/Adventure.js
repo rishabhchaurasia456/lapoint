@@ -9,33 +9,69 @@ import img3 from '../../Images/slider/3.webp';
 import img4 from '../../Images/slider/5.webp'; 
 import img5 from '../../Images/slider/8.webp';
 
+const content = {
+    en: {
+        title: "Great surf, sunny beaches, palm trees and warm weather?",
+        subtitle: "Find your unforgettable",
+        subtitle1: "tropical adventure of 2024!",
+    },
+    hi: {
+        title: "महान सर्फ, सूरज की रोशनी वाले समुद्र तट, पाम के पेड़ और गर्म मौसम?",
+        subtitle: "अपना अविस्मरणीय खोजें",
+        subtitle1: "2024 का उष्णकटिबंधीय साहसिक कार्य!",
+    },
+    nl: {
+        title: "Grote surf, zonnige stranden, palmbomen en warm weer?",
+        subtitle: "Vind uw onvergetelijke",
+        subtitle1: "tropische avontuur van 2024!",
+    }
+}
+
 const Adventuredata = [
     {
         id: "1",
         img: img1,
-        title: 'Ericeira',
-        // ul2: 'Santa Teresa',
-
+        title: {
+            en: 'Ericeira',
+            hi: 'एरिसेरा',
+            nl: 'Ericeira'
+        }
     },
     {
         id: "2",
         img: img2,
-        title: 'Alentejo',
+        title: {
+            en: 'Alentejo',
+            hi: 'अलेंटेजो',
+            nl: 'Alentejo'
+        }
     },
     {
         id: "3",
         img: img3,
-        title: 'Hoddevika',
+        title: {
+            en: 'Hoddevika',
+            hi: 'होडेविका',
+            nl: 'Hoddevika'
+        }
     },
     {
         id: "4",
         img: img4,
-        title: 'Fuerte Ventura',
+        title: {
+            en: 'Fuerte Ventura',
+            hi: 'फुएर्टे वेंचुरा',
+            nl: 'Fuerte Ventura'
+        }
     },
     {
         id: "5",
         img: img5,
-        title: 'Ahangama',
+        title: {
+            en: 'Ahangama',
+            hi: 'अहंगामा',
+            nl: 'Ahangama'
+        }
     },
 ]
 
@@ -59,7 +95,7 @@ const responsive = {
     }
 };
 
-const Adventure = () => {
+const Adventure = ({selectedLanguage}) => {
     const carouselRef = useRef(null);
 
     return (
@@ -69,10 +105,10 @@ const Adventure = () => {
                     <div className="col text-center">
                        <div className="adventure_slider_div">
                        <p className='adventure_slider'>
-                            Great surf, sunny beaches, palm trees and warm weather?
+                            {content[selectedLanguage].title}
                         </p>
                         <h1 className="adventure_slider_text">
-                            Find your unforgettable <span className='text_span'>tropical adventure of 2024!</span>
+                            {content[selectedLanguage].subtitle} <span className='text_span'>{content[selectedLanguage].subtitle1}</span>
                         </h1>
                        </div>
                     </div>
@@ -90,7 +126,7 @@ const Adventure = () => {
                                         {/* <img src={img} className="slid_card_backimg rounded-4" alt="..." /> */}
                                         <div className="slid_card_backimg rounded-4" style={{ backgroundImage: `url(${img})`, backgroundSize: 'cover', backgroundPosition: 'center', }}>
                                             <div class="slid_card_text">
-                                                <p class="card_d_text">{title}</p>
+                                                <p class="card_d_text">{title[selectedLanguage]}</p>
                                             </div>
                                         </div>
                                     </div>
