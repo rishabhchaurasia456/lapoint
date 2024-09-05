@@ -12,7 +12,7 @@ import Bgimage from '../../Components/Bgimage/Bgimage'
 import Activity from '../../Components/Activity/Activity'
 import Adventure from '../../Components/Adventure/Adventure'
 import HeroSection from '../../Components/HeroSection/HeroSection'
-import Footer from '../../Components/Footer/Footer'
+// import Footer from '../../Components/Footer/Footer'
 import Elementcomp from '../../Components/Elementcomp/Elementcomp'
 import Level from '../../Components/Level/Level'
 
@@ -40,7 +40,7 @@ const Home = ({selectedLanguage}) => {
       <Adventure selectedLanguage={ selectedLanguage }/>
       <Textcontainer selectedLanguage={ selectedLanguage }/>
       <Bgimage selectedLanguage={ selectedLanguage }/>
-      <Footer selectedLanguage={ selectedLanguage }/>
+      {/* <Footer selectedLanguage={ selectedLanguage }/> */}
     </div>
   )
 }
