@@ -414,13 +414,13 @@ const Packages = () => {
           </div>
           <div className="container-fluid">
             <div className="row">
-              <p className='faq_heading'>{data[activeTab].acordation_head}</p>
+              <p className='p_faq_heading'>{data[activeTab].acordation_head}</p>
             </div>
-            <div className="row faq_container">
+            <div className="row p_faq_container">
               {data[activeTab].faq_data.map((item, index) => (
                   <details className='' key={index}>
-                      <summary className='faq'>{item.title}</summary>
-                      <div className="faq__content fs-5 mb-2">
+                      <summary className='p_faq'>{item.title}</summary>
+                      <div className="p_faq__content fs-5 mb-2">
                           <p>{item.info}</p>
                       </div>
                   </details>

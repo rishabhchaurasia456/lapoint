@@ -26,7 +26,7 @@ const Navbar = ({selectedLanguage, setSelectedLanguage}) => {
         <div className="row">
           <div className="col-12 col-sm-12 col-lg-6">
             <div>
-              <Link to="kiteactive/" className='lapointLOGO'> <img src={img} className='img-fluid p-4 mx-3 mt-3' alt="logoimg" style={{ maxWidth: '280px' }} /></Link>
+              <Link to="/" className='lapointLOGO'> <img src={img} className='img-fluid p-4 mx-3 mt-3' alt="logoimg" style={{ maxWidth: '280px' }} /></Link>
             </div>
 
           </div>

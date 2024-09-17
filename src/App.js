@@ -15,10 +15,10 @@ function App() {
       <Navbar selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage} />
         <Routes>
           {/* Home page import  */}
-          <Route path='kiteactive/' element={<Home selectedLanguage={selectedLanguage} />}></Route>
+          <Route path='/' element={<Home selectedLanguage={selectedLanguage} />}></Route>
           
-          <Route path='kiteactive/Blog' element={<Blog />}></Route>
-          <Route path='kiteactive/trip' element={<Trip/>}></Route>
+          <Route path='/Blog' element={<Blog />}></Route>
+          <Route path='/trip' element={<Trip/>}></Route>
 
         </Routes>
         <Footer selectedLanguage={ selectedLanguage }/>

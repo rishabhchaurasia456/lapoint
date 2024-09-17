@@ -1226,19 +1226,19 @@ details>.sum2::-webkit-details-marker {
 }
 
 
-.faq_heading{
+.p_faq_heading{
   font-family: "Amatic SC", sans-serif;
   font-size: 40px;
   font-weight: bold;
 }
 
-.faq_container {
+.p_faq_container {
   background-color: transparent;
   margin-bottom: 5%;
   border-radius: 5px;
 }
 
-.faq {
+.p_faq {
   font-family: "Amatic SC", sans-serif;
   font-size: 22px;
   font-weight: bold;
@@ -1253,14 +1253,14 @@ details>.sum2::-webkit-details-marker {
   position: relative;
 }
 
-details>.faq::after {
+details>.p_faq::after {
   position: absolute;
   content: "+";
   right: 10px;
 
 }
 
-details[open]>.faq::after {
+details[open]>.p_faq::after {
   position: absolute;
   content: "-";
   right: 10px;
@@ -1271,7 +1271,7 @@ details>.sum2::-webkit-details-marker {
   display: none;
 }
 
-.faq__content {
+.p_faq__content {
   font-family: Roboto, arial, sans-serif;
   font-size: 10px;
   margin-top: -20px;
@@ -1390,4 +1390,86 @@ Included
 .included_card{
   border: 2px solid;
   height: 100%;
+}
+
+/* -----------------------------
+Review Card 
+----------------------------- */
+
+.review_carousel-container {
+  margin: auto;
+  padding: 0 15px;
+}
+
+.review_carousel-item-padding-40-px {
+  padding: 10px;
+}
+
+.review_review-card {
+  background-color: #f3eedc;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.review_image-container {
+  display: flex;
+  align-items: center;
+}
+
+.review_rounded-circle {
+  width: 60px;
+  height: 60px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.review_card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.review_name {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.review_date {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.review_para {
+  font-size: 14px;
+}
+
+/* -----------------------
+Hosted css
+----------------------- */
+
+.hosted_card{
+  border-radius: 15px;
+}
+
+.hosted_card_title{
+  margin-top: 20px;
+  font-family: "Amatic SC", sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: #dbb837;
+}
+
+.hosted_card_year{
+  color: #dbb837;
+}
+
+.hosted_card_last{
+  font-size: 13px;
+}
+
+.hosted_card_last2{
+  margin-top: -10px;
+  font-size: 13px;
 }

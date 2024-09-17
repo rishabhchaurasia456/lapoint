@@ -9,44 +9,44 @@
 //         submenu: [
 //             {
 //                 name: "Surf Camp Nicaragua",
-//                 path: 'kiteactive/1'
+//                 path: '/1'
 //             },
 //             {
 //                 name: "Surf Camp Portugal",
-//                 path: 'kiteactive/2'
+//                 path: '/2'
 //             },
 //             {
 //                 name: "Surf Camp Sri Lanka",
-//                 path: 'kiteactive/3'
+//                 path: '/3'
 //             },
 //             {
 //                 name: "Surf Camp Costa Rica",
-//                 path: 'kiteactive/4'
+//                 path: '/4'
 //             },
 //             {
 //                 name: "Surf Camp Bali",
-//                 path: 'kiteactive/5'
+//                 path: '/5'
 //             },
 //             {
 //                 name: "Surf Camp Norway",
-//                 path: 'kiteactive/6'
+//                 path: '/6'
 //             },
 
 //             {
 //                 name: "Surf Camp Spain",
-//                 path: 'kiteactive/7'
+//                 path: '/7'
 //             },
 //             {
 //                 name: "Surf Camp Portugal",
-//                 path: 'kiteactive/8'
+//                 path: '/8'
 //             },
 //             {
 //                 name: "Surf Camp El Salvador",
-//                 path: 'kiteactive/9'
+//                 path: '/9'
 //             },
 //             {
 //                 name: "Surf Cruise, Maldives",
-//                 path: 'kiteactive/10'
+//                 path: '/10'
 //             },
 //         ] 
 //     },
@@ -56,23 +56,23 @@
 //         submenu: [
 //             {
 //                 name: "About Lapoint",
-//                 path: 'kiteactive/1'
+//                 path: '/1'
 //             },
 //             {
 //                 name: "Sustainability",
-//                 path: 'kiteactive/2',
+//                 path: '/2',
 //             },
 //             {
 //                 name: "Membership Community",
-//                 path: 'kiteactive/3'
+//                 path: '/3'
 //             },
 //             {
 //                 name: "Careers",
-//                 path: 'kiteactive/4'
+//                 path: '/4'
 //             },
 //             {
 //                 name: "Contact Us",
-//                 path: 'kiteactive/5'
+//                 path: '/5'
 //             },
 //         ]
 
@@ -81,15 +81,15 @@
 
 //     {
 //         name: "School",
-//         path: 'kiteactive/'
+//         path: '/'
 //     },
 //     {
 //         name: "Our Shop",
-//         path: 'kiteactive/'
+//         path: '/'
 //     },
 //     {
 //         name: "Stories",
-//         path: 'kiteactive/Blog'
+//         path: '/Blog'
 //     },
 
 
@@ -103,16 +103,16 @@ export const links = {
             name: "Kite Camps",
             path: '/a',
             submenu: [
-                { id: "1-1", name: "Surf Camp Nicaragua", path: 'kiteactive/1' },
-                { id: "1-2", name: "Surf Camp Portugal", path: 'kiteactive/2' },
-                { id: "1-3", name: "Surf Camp Sri Lanka", path: 'kiteactive/3' },
-                { id: "1-4", name: "Surf Camp Costa Rica", path: 'kiteactive/4' },
-                { id: "1-5", name: "Surf Camp Bali", path: 'kiteactive/5' },
-                { id: "1-6", name: "Surf Camp Norway", path: 'kiteactive/6' },
-                { id: "1-7", name: "Surf Camp Spain", path: 'kiteactive/7' },
-                { id: "1-8", name: "Surf Camp Portugal", path: 'kiteactive/8' },
-                { id: "1-9", name: "Surf Camp El Salvador", path: 'kiteactive/9' },
-                { id: "1-10", name: "Surf Cruise, Maldives", path: 'kiteactive/10' },
+                { id: "1-1", name: "Surf Camp Nicaragua", path: '/1' },
+                { id: "1-2", name: "Surf Camp Portugal", path: '/2' },
+                { id: "1-3", name: "Surf Camp Sri Lanka", path: '/3' },
+                { id: "1-4", name: "Surf Camp Costa Rica", path: '/4' },
+                { id: "1-5", name: "Surf Camp Bali", path: '/5' },
+                { id: "1-6", name: "Surf Camp Norway", path: '/6' },
+                { id: "1-7", name: "Surf Camp Spain", path: '/7' },
+                { id: "1-8", name: "Surf Camp Portugal", path: '/8' },
+                { id: "1-9", name: "Surf Camp El Salvador", path: '/9' },
+                { id: "1-10", name: "Surf Cruise, Maldives", path: '/10' },
             ]
         },
         {
@@ -120,16 +120,16 @@ export const links = {
             name: "About",
             path: '/11',
             submenu: [
-                { id: "2-1", name: "About Lapoint", path: 'kiteactive/1' },
-                { id: "2-2", name: "Sustainability", path: 'kiteactive/2' },
-                { id: "2-3", name: "Membership Community", path: 'kiteactive/3' },
-                { id: "2-4", name: "Careers", path: 'kiteactive/4' },
-                { id: "2-5", name: "Contact Us", path: 'kiteactive/5' },
+                { id: "2-1", name: "About Lapoint", path: '/1' },
+                { id: "2-2", name: "Sustainability", path: '/2' },
+                { id: "2-3", name: "Membership Community", path: '/3' },
+                { id: "2-4", name: "Careers", path: '/4' },
+                { id: "2-5", name: "Contact Us", path: '/5' },
             ]
         },
-        { id: "3", name: "School", path: 'kiteactive/' },
-        { id: "4", name: "Our Shop", path: 'kiteactive/' },
-        { id: "5", name: "Stories", path: 'kiteactive/Blog' },
+        { id: "3", name: "School", path: '/' },
+        { id: "4", name: "Our Shop", path: '/' },
+        { id: "5", name: "Stories", path: '/Blog' },
     ],
     nl: [
         {
@@ -137,16 +137,16 @@ export const links = {
             name: "Kite Camps",
             path: '/a',
             submenu: [
-                { id: "1-1", name: "Surfkamp Nicaragua", path: 'kiteactive/1' },
-                { id: "1-2", name: "Surfkamp Portugal", path: 'kiteactive/2' },
-                { id: "1-3", name: "Surfkamp Sri Lanka", path: 'kiteactive/3' },
-                { id: "1-4", name: "Surfkamp Costa Rica", path: 'kiteactive/4' },
-                { id: "1-5", name: "Surfkamp Bali", path: 'kiteactive/5' },
-                { id: "1-6", name: "Surfkamp Noorwegen", path: 'kiteactive/6' },
-                { id: "1-7", name: "Surfkamp Spanje", path: 'kiteactive/7' },
-                { id: "1-8", name: "Surfkamp Portugal", path: 'kiteactive/8' },
-                { id: "1-9", name: "Surfkamp El Salvador", path: 'kiteactive/9' },
-                { id: "1-10", name: "Surf Cruise, Malediven", path: 'kiteactive/10' },
+                { id: "1-1", name: "Surfkamp Nicaragua", path: '/1' },
+                { id: "1-2", name: "Surfkamp Portugal", path: '/2' },
+                { id: "1-3", name: "Surfkamp Sri Lanka", path: '/3' },
+                { id: "1-4", name: "Surfkamp Costa Rica", path: '/4' },
+                { id: "1-5", name: "Surfkamp Bali", path: '/5' },
+                { id: "1-6", name: "Surfkamp Noorwegen", path: '/6' },
+                { id: "1-7", name: "Surfkamp Spanje", path: '/7' },
+                { id: "1-8", name: "Surfkamp Portugal", path: '/8' },
+                { id: "1-9", name: "Surfkamp El Salvador", path: '/9' },
+                { id: "1-10", name: "Surf Cruise, Malediven", path: '/10' },
             ]
         },
         {
@@ -154,16 +154,16 @@ export const links = {
             name: "Over",
             path: '/11',
             submenu: [
-                { id: "2-1", name: "Over Lapoint", path: 'kiteactive/1' },
-                { id: "2-2", name: "Duurzaamheid", path: 'kiteactive/2' },
-                { id: "2-3", name: "Lidmaatschapsgemeenschap", path: 'kiteactive/3' },
-                { id: "2-4", name: "Carrières", path: 'kiteactive/4' },
-                { id: "2-5", name: "Neem contact met ons op", path: 'kiteactive/5' },
+                { id: "2-1", name: "Over Lapoint", path: '/1' },
+                { id: "2-2", name: "Duurzaamheid", path: '/2' },
+                { id: "2-3", name: "Lidmaatschapsgemeenschap", path: '/3' },
+                { id: "2-4", name: "Carrières", path: '/4' },
+                { id: "2-5", name: "Neem contact met ons op", path: '/5' },
             ]
         },
-        { id: "3", name: "School", path: 'kiteactive/' },
-        { id: "4", name: "Onze Winkel", path: 'kiteactive/' },
-        { id: "5", name: "Verhalen", path: 'kiteactive/Blog' },
+        { id: "3", name: "School", path: '/' },
+        { id: "4", name: "Onze Winkel", path: '/' },
+        { id: "5", name: "Verhalen", path: '/Blog' },
     ],
     hi: [
         {
@@ -171,16 +171,16 @@ export const links = {
             name: "काइट कैंप्स",
             path: '/a',
             submenu: [
-                { id: "1-1", name: "सर्फ कैंप निकारागुआ", path: 'kiteactive/1' },
-                { id: "1-2", name: "सर्फ कैंप पुर्तगाल", path: 'kiteactive/2' },
-                { id: "1-3", name: "सर्फ कैंप श्रीलंका", path: 'kiteactive/3' },
-                { id: "1-4", name: "सर्फ कैंप कोस्टा रिका", path: 'kiteactive/4' },
-                { id: "1-5", name: "सर्फ कैंप बाली", path: 'kiteactive/5' },
-                { id: "1-6", name: "सर्फ कैंप नॉर्वे", path: 'kiteactive/6' },
-                { id: "1-7", name: "सर्फ कैंप स्पेन", path: 'kiteactive/7' },
-                { id: "1-8", name: "सर्फ कैंप पुर्तगाल", path: 'kiteactive/8' },
-                { id: "1-9", name: "सर्फ कैंप एल साल्वाडोर", path: 'kiteactive/9' },
-                { id: "1-10", name: "सर्फ क्रूज़, मालदीव", path: 'kiteactive/10' },
+                { id: "1-1", name: "सर्फ कैंप निकारागुआ", path: '/1' },
+                { id: "1-2", name: "सर्फ कैंप पुर्तगाल", path: '/2' },
+                { id: "1-3", name: "सर्फ कैंप श्रीलंका", path: '/3' },
+                { id: "1-4", name: "सर्फ कैंप कोस्टा रिका", path: '/4' },
+                { id: "1-5", name: "सर्फ कैंप बाली", path: '/5' },
+                { id: "1-6", name: "सर्फ कैंप नॉर्वे", path: '/6' },
+                { id: "1-7", name: "सर्फ कैंप स्पेन", path: '/7' },
+                { id: "1-8", name: "सर्फ कैंप पुर्तगाल", path: '/8' },
+                { id: "1-9", name: "सर्फ कैंप एल साल्वाडोर", path: '/9' },
+                { id: "1-10", name: "सर्फ क्रूज़, मालदीव", path: '/10' },
             ]
         },
         {
@@ -188,15 +188,15 @@ export const links = {
             name: "हमारे बारे में",
             path: '/11',
             submenu: [
-                { id: "2-1", name: "लैपॉइंट के बारे में", path: 'kiteactive/1' },
-                { id: "2-2", name: "सस्टेनेबिलिटी", path: 'kiteactive/2' },
-                { id: "2-3", name: "सदस्यता समुदाय", path: 'kiteactive/3' },
-                { id: "2-4", name: "करियर", path: 'kiteactive/4' },
-                { id: "2-5", name: "हमसे संपर्क करें", path: 'kiteactive/5' },
+                { id: "2-1", name: "लैपॉइंट के बारे में", path: '/1' },
+                { id: "2-2", name: "सस्टेनेबिलिटी", path: '/2' },
+                { id: "2-3", name: "सदस्यता समुदाय", path: '/3' },
+                { id: "2-4", name: "करियर", path: '/4' },
+                { id: "2-5", name: "हमसे संपर्क करें", path: '/5' },
             ]
         },
-        { id: "3", name: "स्कूल", path: 'kiteactive/' },
-        { id: "4", name: "हमारी दुकान", path: 'kiteactive/' },
-        { id: "5", name: "कहानियाँ", path: 'kiteactive/Blog' },
+        { id: "3", name: "स्कूल", path: '/' },
+        { id: "4", name: "हमारी दुकान", path: '/' },
+        { id: "5", name: "कहानियाँ", path: '/Blog' },
     ],
 };

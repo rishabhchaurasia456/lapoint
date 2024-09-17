@@ -324,7 +324,7 @@ const Included = () => {
 
   return (
     <div>
-      {/* <div className="container">
+      <div className="container">
         <div className="row">
           <p className='included_desc py-4'>
             We organize the perfect kitesurfing holiday according to the Hakuna Matata principle,
@@ -332,10 +332,10 @@ const Included = () => {
             you can add to optimally tailor your trip to what you want to achieve!
           </p>
         </div>
-      </div> */}
+      </div>
 
       <div className="container">
-        <div className="row">
+        <div className="row h-100">
           {/* Level 1 */}
           <div className="col-md-4">
             <div className="level_heading_card">
