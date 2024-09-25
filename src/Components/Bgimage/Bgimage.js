@@ -5,8 +5,8 @@ import bgimg from '../../Images/bg_img.jpg';
 const content = {
     en: {
         title: "Sustainability",
-        subtitle: "2011, KiteActive wass born",
-        para: "KiteActive has started organizing kite & sailing trips along the Wadden Islands. The combination of a week of intensive kitesurfing (lessons) and a week’s holiday in a place with the ingredients: wind, beach, water and a chill atmosphere turned out to be a good concept. Our passion for traveling and kitesurfing has ensured that we have visited many kitespots in the world and are still looking for the best destinations to (learn to) kitesurf. Thanks to the experiences and enthusiasm of our instructors, KiteActive has continued to grow.",
+        subtitle: "Thrills and Chills: Your Kiteactive Adventure Awaits",
+        para: "Get ready to embark on an unforgettable journey filled with thrills and chills with Kiteactive! From the exhilarating rush of kitesurfing over breathtaking waves to the serene moments spent soaking in stunning coastal views, our adventures cater to all levels of experience. Feel the adrenaline surge as you harness the power of the wind, and enjoy the thrill of mastering new skills alongside our expert instructors. Whether you're seeking the excitement of high-flying tricks or the tranquility of gliding across calm waters, Kiteactive promises a unique experience that will leave you invigorated and inspired. Your adventure starts here—join us and embrace the excitement that awaits!",
     },
     hi: {
         title: "सस्टेनेबिलिटी",

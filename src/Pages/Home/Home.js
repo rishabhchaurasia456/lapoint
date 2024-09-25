@@ -10,36 +10,51 @@ import Textcontainer from '../../Components/Textcontainer/Textcontainer'
 import Bgimage from '../../Components/Bgimage/Bgimage'
 // import LIfeStyle2 from '../../Components/Lifestyle/LIfeStyle2'
 import Activity from '../../Components/Activity/Activity'
-import Adventure from '../../Components/Adventure/Adventure'
+// import Adventure from '../../Components/Adventure/Adventure'
 import HeroSection from '../../Components/HeroSection/HeroSection'
 // import Footer from '../../Components/Footer/Footer'
 import Elementcomp from '../../Components/Elementcomp/Elementcomp'
 import Level from '../../Components/Level/Level'
 
-const Home = ({selectedLanguage}) => {
+const Home = ({ selectedLanguage }) => {
   return (
     <div>
+
+ {/* for home page seo  */}
+ 
       <Helmet>
-        <title>KiteActive</title>
-        <meta name="description" content="This is the home page of your website where you can find information about surfcamps, lifestyle, and more." />
-        <meta name="keywords" content="surfcamp, lifestyle, adventure, activities, reviews" />
-        <link rel="canonical" href="https://danstring.co.in/kiteactive/" />
+        <title>Kitesurf Holidays - Adventurous Kitesurf Trips | KiteActive </title>
+
+        <meta name="description" content="Discover the perfect kitesurf holiday with KiteActive! Enjoy top destinations worldwide, with kite surfing lessons & coaching. Book your adventurous kite trip." />
+
+        <meta name="keywords" content="kite surfing, kitesurfing trips, kitesurf spots, kite surfing lessons, kitesurfing lessons worldwide, kitesurf vacation, kite travel, kitesurf holiday" />
+
+        <link rel="canonical" href="https://kiteactiveventures.com/" />
       </Helmet>
 
-      <HeroSection selectedLanguage={ selectedLanguage }/>
-      <Surfcamp selectedLanguage={ selectedLanguage }/>
-      <Surfcampslider selectedLanguage={ selectedLanguage }/>
-      <CampReview selectedLanguage={ selectedLanguage }/>
-      <Level selectedLanguage={ selectedLanguage }/>
-      <LIfeStyle selectedLanguage={ selectedLanguage }/>
-      <Elementcomp selectedLanguage={ selectedLanguage }/>
+
+
+
+
+
+      {/* all home page Components section import here  */}
+
+
+
+      <HeroSection selectedLanguage={selectedLanguage} />
+      <Surfcamp selectedLanguage={selectedLanguage} />
+      <Surfcampslider selectedLanguage={selectedLanguage} />
+      <CampReview selectedLanguage={selectedLanguage} />
+      <Level selectedLanguage={selectedLanguage} />
+      <LIfeStyle selectedLanguage={selectedLanguage} />
+      <Elementcomp selectedLanguage={selectedLanguage} />
       {/* <European /> */}
       {/* <LIfeStyle2 /> */}
-      <Faq selectedLanguage={ selectedLanguage }/>
-      <Activity selectedLanguage={ selectedLanguage }/>
-      <Adventure selectedLanguage={ selectedLanguage }/>
-      <Textcontainer selectedLanguage={ selectedLanguage }/>
-      <Bgimage selectedLanguage={ selectedLanguage }/>
+      <Faq selectedLanguage={selectedLanguage} />
+      <Activity selectedLanguage={selectedLanguage} />
+      {/* <Adventure selectedLanguage={ selectedLanguage }/> */}
+      <Textcontainer selectedLanguage={selectedLanguage} />
+      <Bgimage selectedLanguage={selectedLanguage} />
       {/* <Footer selectedLanguage={ selectedLanguage }/> */}
     </div>
   )

@@ -1,136 +1,81 @@
-// Nav Links here all pages 
 
 
-// export const links = [
- 
+
+// export const navItems = [
 //     {
-//         name: "Kite Camps",
-//         // path: '/',
+//         name: "Kitecamp",
+//         path: "/kitecamp",
 //         submenu: [
-//             {
-//                 name: "Surf Camp Nicaragua",
-//                 path: '/1'
-//             },
-//             {
-//                 name: "Surf Camp Portugal",
-//                 path: '/2'
-//             },
-//             {
-//                 name: "Surf Camp Sri Lanka",
-//                 path: '/3'
-//             },
-//             {
-//                 name: "Surf Camp Costa Rica",
-//                 path: '/4'
-//             },
-//             {
-//                 name: "Surf Camp Bali",
-//                 path: '/5'
-//             },
-//             {
-//                 name: "Surf Camp Norway",
-//                 path: '/6'
-//             },
-
-//             {
-//                 name: "Surf Camp Spain",
-//                 path: '/7'
-//             },
-//             {
-//                 name: "Surf Camp Portugal",
-//                 path: '/8'
-//             },
-//             {
-//                 name: "Surf Camp El Salvador",
-//                 path: '/9'
-//             },
-//             {
-//                 name: "Surf Cruise, Maldives",
-//                 path: '/10'
-//             },
-//         ] 
+//             { id: "1-2", name: "Vanlife", path: "/trip/vanlife", },
+//             { id: "1-3", name: "Zanzibar", path: "/trip/zanzibar", },
+//             { id: "1-4", name: "Brazil", path: "/trip/Brazil", },
+//             { id: "1-5", name: "Dakhla", path: "/trip/Dakhla", },
+//             { id: "1-6", name: "Sicily", path: "/trip/Sicily", },
+//             { id: "1-7", name: "Sail & Kite", path: "/trip/Sail&kite", },
+//             { id: "1-8", name: "Sky High Cape Town", path: "/trip/skyCapTown" },
+//             { id: "1-9", name: "Kite Mecca Tarifa", path: "/trip/KitemeccaTraifa" },
+//             { id: "1-10", name: "Endless Summer Party", path: "/trip/EndlessSummerParty", },
+//         ]
 //     },
 //     {
 //         name: "About",
-//         path: '/11',
-//         submenu: [
-//             {
-//                 name: "About Lapoint",
-//                 path: '/1'
-//             },
-//             {
-//                 name: "Sustainability",
-//                 path: '/2',
-//             },
-//             {
-//                 name: "Membership Community",
-//                 path: '/3'
-//             },
-//             {
-//                 name: "Careers",
-//                 path: '/4'
-//             },
-//             {
-//                 name: "Contact Us",
-//                 path: '/5'
-//             },
-//         ]
-
-
-//     },
-
-//     {
-//         name: "School",
-//         path: '/'
+//         path: "/about"
 //     },
 //     {
 //         name: "Our Shop",
-//         path: '/'
+//         path: "/"
 //     },
 //     {
 //         name: "Stories",
-//         path: '/Blog'
+//         path: "/"
 //     },
+//     {
+//         name: "Contact Us",
+//         path: "/contact"
+//     }
+// ];
 
 
-// ]
 
 
-export const links = {
+import vedio from '../../Images/website.filmpje.tarifa.mp4';
+
+
+
+export const navItems = {
     en: [
         {
             id: "1",
             name: "Kite Camps",
-            path: '/a',
+            path: '/kitecamp',
             submenu: [
-                { id: "1-1", name: "Surf Camp Nicaragua", path: '/1' },
-                { id: "1-2", name: "Surf Camp Portugal", path: '/2' },
-                { id: "1-3", name: "Surf Camp Sri Lanka", path: '/3' },
-                { id: "1-4", name: "Surf Camp Costa Rica", path: '/4' },
-                { id: "1-5", name: "Surf Camp Bali", path: '/5' },
-                { id: "1-6", name: "Surf Camp Norway", path: '/6' },
-                { id: "1-7", name: "Surf Camp Spain", path: '/7' },
-                { id: "1-8", name: "Surf Camp Portugal", path: '/8' },
-                { id: "1-9", name: "Surf Camp El Salvador", path: '/9' },
-                { id: "1-10", name: "Surf Cruise, Maldives", path: '/10' },
+                // { id: "1-1", name: "KITECAMPS", path: '/kitecamp' },
+                { id: "1-2", name: "Vanlife", path: "/trip/vanlife", vedio: vedio},
+                { id: "1-3", name: "Zanzibar", path: "/trip/zanzibar", },
+                { id: "1-4", name: "Brazil", path: "/trip/Brazil", },
+                { id: "1-5", name: "Dakhla", path: "/trip/Dakhla", },
+                { id: "1-6", name: "Sicily", path: "/trip/Sicily", },
+                { id: "1-7", name: "Sail & Kite", path: "/trip/Sail&kite", },
+                { id: "1-8", name: "Sky High Cape Town", path: "/trip/skyCapTown" },
+                { id: "1-9", name: "Kite Mecca Tarifa", path: "/trip/KitemeccaTraifa" },
+                { id: "1-10", name: "Endless Summer Party", path: "/trip/EndlessSummerParty", },
+
+
             ]
         },
         {
             id: "2",
             name: "About",
-            path: '/11',
-            submenu: [
-                { id: "2-1", name: "About Lapoint", path: '/1' },
-                { id: "2-2", name: "Sustainability", path: '/2' },
-                { id: "2-3", name: "Membership Community", path: '/3' },
-                { id: "2-4", name: "Careers", path: '/4' },
-                { id: "2-5", name: "Contact Us", path: '/5' },
-            ]
+            path: '/about',
         },
-        { id: "3", name: "School", path: '/' },
-        { id: "4", name: "Our Shop", path: '/' },
-        { id: "5", name: "Stories", path: '/Blog' },
+
+        { id: "2", name: "School", path: '/' },
+        { id: "4", name: "Stories", path: '/Blog' },
+        { id: "5", name: "Contact ", path: '/contact' },
     ],
+
+
+
     nl: [
         {
             id: "1",
@@ -200,3 +145,14 @@ export const links = {
         { id: "5", name: "कहानियाँ", path: '/Blog' },
     ],
 };
+
+
+
+
+
+
+
+
+
+
+

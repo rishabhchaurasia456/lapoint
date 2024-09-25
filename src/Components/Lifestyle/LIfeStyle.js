@@ -17,9 +17,8 @@ const lifestyleData = [
         nl: 'De KiteActive levensstijl',
       },
       para: {
-        en: `A professional kite team, on the beach and behind the computer. We organize your kitesurfing trip down to the last detail. We look forward to meeting you and having a great time together!
-              Whether you're a beginner looking to learn the basics or an experienced kitesurfer seeking the thrill of new adventures, our team is here to support you every step of the way.
-              From selecting the best locations with optimal wind conditions to arranging accommodations and equipment, we handle it all.`,
+        en: `Kiteactive for Veventures! Immerse yourself in a realm of excitement and discovery with Kiteactive. Whether you're looking for exhilarating surf camps, peaceful yoga retreats, or unforgettable travel experiences, we provide the ideal mix of adventure and tranquility. Our thoughtfully designed itineraries enable you to connect with nature, tackle new challenges, and forge lasting memories. Join us to uncover the extraordinary adventures that await, as you ride the waves and explore stunning landscapes. Your next unforgettable journey starts here!`,
+
         hi: `समुद्र तट पर और कंप्यूटर के पीछे एक पेशेवर काइट टीम। हम आपकी काइटसर्फिंग यात्रा का हर विवरण व्यवस्थित करते हैं। हम आपसे मिलने और एक साथ अच्छा समय बिताने के लिए उत्सुक हैं!
               चाहे आप एक शुरुआती हों जो मूल बातें सीखना चाहते हैं या एक अनुभवी काइटसर्फर जो नए रोमांच की खोज में है, हमारी टीम हर कदम पर आपका समर्थन करने के लिए यहां है।
               सर्वोत्तम स्थानों का चयन करने से लेकर अनुकूलतम पवन स्थितियों तक, और आवास और उपकरणों की व्यवस्था करने तक, हम सब कुछ संभालते हैं।`,
@@ -37,14 +36,12 @@ const lifestyleData = [
         nl: 'Waarom KiteActive?',
       },
       heading: {
-        en: 'The best sport in the world',
+        en: 'The Greatest Sport of All Time',
         hi: 'दुनिया का सबसे अच्छा खेल',
         nl: 'De beste sport ter wereld',
       },
       para: {
-        en: `Because it's the best choice! With KiteActive you travel with a group of like-minded people. During all our kitesurfing camps & events we focus on progression and fun!
-              Connecting with the ocean, being immersed in the moment and embracing outdoor living are other things we just love about it. We teach you how to surf the Lapoint way,
-              together with local, experienced instructors who know just which breaks to head out to. You will be surfing in either levels 1, 2, 3 or with guiding. We got you covered for the ultimate surf holiday!`,
+        en: `Kite surfing stands as a testament to the exhilarating fusion of skill, adrenaline, and the beauty of nature, earning its title as the greatest sport of all time. At Kiteactive, we celebrate this extraordinary adventure by offering unparalleled experiences that allow you to harness the wind and ride the waves like never before. Whether you're a beginner eager to learn or an experienced rider looking to refine your skills, our expert instructors are dedicated to helping you reach your goals in a supportive and thrilling environment. Embrace the rush of freedom as you soar through the air, feel the spray of the ocean, and connect with a vibrant community of fellow enthusiasts. `,
         hi: `क्योंकि यह सबसे अच्छा विकल्प है! काइटएक्टिव के साथ आप समान विचारधारा वाले लोगों के समूह के साथ यात्रा करते हैं। हमारे सभी काइटसर्फिंग शिविरों और आयोजनों के दौरान हम प्रगति और मस्ती पर ध्यान केंद्रित करते हैं!
               महासागर से जुड़ना, उस क्षण में पूरी तरह डूब जाना और बाहरी जीवन का आनंद लेना ऐसी चीजें हैं जो हमें बहुत पसंद हैं। हम आपको लैपॉइंट तरीके से सर्फ करना सिखाते हैं,
               स्थानीय, अनुभवी प्रशिक्षकों के साथ जो जानते हैं कि किन लहरों पर जाना है। आप या तो स्तर 1, 2, 3 में या गाइडिंग के साथ सर्फिंग करेंगे। आपके लिए परम सर्फ छुट्टी की व्यवस्था कर ली गई है!`,

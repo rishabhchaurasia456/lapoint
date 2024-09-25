@@ -877,7 +877,7 @@ details>summary::-webkit-details-marker {
   font-family: "Amatic SC", sans-serif;
   font-weight: 800;
   font-size: 60px;
-  line-height: 45px;
+  line-height: 55px;
   text-transform: uppercase;
 
 }
@@ -887,6 +887,7 @@ details>summary::-webkit-details-marker {
   color: white;
   font-family: sans-serif;
   margin-top: 5%;
+  text-align: justify;
   font-size: 18px;
   line-height: 23px;
   font-weight: 400;

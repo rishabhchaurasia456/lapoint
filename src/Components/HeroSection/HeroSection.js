@@ -2,8 +2,8 @@ import React from 'react'
 import "./HeroSection.css"
 
 import vedio from "../../Images/Kiteactive-video1-1.mp4"
-import img from '../../Images/logo-zwart-geel-geel.png'
-import { Link } from 'react-router-dom'
+// import img from '../../Images/logo-zwart-geel-geel.png'
+// import { Link } from 'react-router-dom'
 
 
 
@@ -11,8 +11,8 @@ const HeroSection = ({ selectedLanguage }) => {
 
     const content = {
         en: {
-            title: "Kiteactive - surf camps, work & surf, yogo & surf",
-            subtitle: "EXPLORE THE WORLD",
+            title: "Kiteactive - Surf Camps, Work & Surf, Yoga & Waves",
+            subtitle: "ADVENTURE AWAITS: DISCOVER THE WORLD",
         },
         nl: {
             title: "Kiteactive - surfkampen, werk & surf, yogo & surf",
@@ -35,15 +35,15 @@ const HeroSection = ({ selectedLanguage }) => {
                 {/* You can add other content here */}
 
 
-                <div className=''>
-                    <Link to="kiteactive/" className='logo_for_phone_mode'> <img src={img} className='img-fluid p-4 mx-3 mt-3' alt="logoimg" style={{ maxWidth: '220px' }} /></Link>
-                </div>
+                {/* <div className=''>
+                    <Link to="/" className=''> <img src={img} className='img-fluid p-4 mx-3 mt-3' alt="logoimg" style={{ maxWidth: '220px' }} /></Link>
+                </div> */}
 
                 <div className="content">
                     {/* logo for mobile mode only show  */}
 
                     <p className='hero_heading1'>{content[selectedLanguage].title}</p>
-                    <p className='hero_heading2'>{content[selectedLanguage].subtitle}</p>
+                    <h1 className='hero_heading2'>{content[selectedLanguage].subtitle}</h1>
                 </div>
             </div>
         </div>

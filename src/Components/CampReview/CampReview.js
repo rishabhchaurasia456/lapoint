@@ -17,86 +17,13 @@ const Carddata_head_section = [
     }
 ];
 
-// const Reviewdata = [
-//     {
-//         id: "1",
-//         img: img1,
-//         name: "Emma Rietveld",
-//         date: "April 17",
-//         start: "5",
-//         title: "WE had the best time!",
-//         para: "It was Wad N Party again last weekend! Well organised, good food, fun evenings and of course kiting!",
-//     },
-//     {
-//         id: "2",
-//         img: img1,
-//         name: "FirstMate Appie",
-//         date: "July 21",
-//         start: "5",
-//         title: "WE had the best time!",
-//         para:" Last weekend I went to the Wadden with Kite Active for the Sail & Kite trip. It was a wonderful weekend away. ",
-//     },
-//     {
-//         id: "3",
-//         img: img1,
-//         name: "Sietse",
-//         date: "March 6",
-//         start: "5",
-//         title: "WE had the best time!",
-//         para: "We went on a trip with KiteActive. It was fun. The boat left Franeker on Friday, but we were allowed to come and spend the night on Thursday. .",
-//     },
-//     {
-//         id: "4",
-//         img: img1,
-//         name: "marc van der drift",
-//         date: "June 5",
-//         start: "5",
-//         title: "WE had the best time!",
-//         para: "Amazing weekend, awesome crew, wicked people!!!",
-//     },
-//     {
-//         id: "5",
-//         img: img1,
-//         name: "Willem Schinkelshoek",
-//         date: "July 19",
-//         start: "5",
-//         title: "WE had the best time!",
-//         para: "Had a great time in brasiel good organised super nice guids.see you next time.",
-//     },
-//     {
-//         id: "6",
-//         img: img1,
-//         name: "Cobie Harkema",
-//         date: "August 20",
-//         start: "5",
-//         title: "WE had the best time!",
-//         para: "Great travel experiences with Kiteactive!Learn big tricks in Tarifa, sail and kite during the Wadden weekend and downwind twice in ",
-//     },
-//     {
-//         id: "7",
-//         img: img1,
-//         name: "ilse de vries",
-//         date: "July 5",
-//         start: "5",
-//         title: "WE had the best time!",
-//         para: "Our first trip with KiteActive was an immediate success. Well organized and an unforgettable experience. ",
-//     },
-//     {
-//         id: "8",
-//         img: img1,
-//         name: "Ann DS",
-//         date: "August 3",
-//         start: "5",
-//         title: "WE had the best time!",
-//         para: "Just got back from a week in Tarifa with the KiteActive gang - what a brilliant week, we had wind pretty much every day, stayed.",
-//     },
-// ]
+
 const Reviewdata = [
     {
         id: "1",
         img: img1,
         start: "5",
-        name: "Emma Rietveld",
+        name: "Michael Thompson",
         date: "April 17",
         title: {
             en: "WE had the best time!",
@@ -104,7 +31,7 @@ const Reviewdata = [
             hi: "हमने सबसे अच्छा समय बिताया!", // Hindi
         },
         para: {
-            en: "It was Wad N Party again last weekend! Well organised, good food, fun evenings and of course kiting!",
+            en: "I can’t thank Kiteactive enough for the amazing memories I've made! The lessons are thorough, and the locations are breathtaking. A must-try for anyone!",
             nl: "Het was weer Wad N Party afgelopen weekend! Goed georganiseerd, lekker eten, gezellige avonden en natuurlijk kiten!", // Dutch
             hi: "पिछले सप्ताहांत फिर से वाड एन पार्टी थी! अच्छी तरह से संगठित, अच्छा खाना, मजेदार शामें और निश्चित रूप से काइटिंग!", // Hindi
         }
@@ -113,7 +40,7 @@ const Reviewdata = [
         id: "2",
         img: img1,
         start: "5",
-        name: "FirstMate Appie",
+        name: "Jessica Parker",
         date: "July 21",
         title: {
             en: "WE had the best time!",
@@ -121,7 +48,7 @@ const Reviewdata = [
             hi: "हमने सबसे अच्छा समय बिताया!", // Hindi
         },
         para: {
-            en: "Last weekend I went to the Wadden with Kite Active for the Sail & Kite trip. It was a wonderful weekend away.",
+            en: "Kiteactive changed my perspective on outdoor sports. The thrill of kitesurfing is incredible, and the support from the team made it an unforgettable experience",
             nl: "Afgelopen weekend ben ik met Kite Active naar de Wadden gegaan voor de Sail & Kite trip. Het was een heerlijk weekend weg.", // Dutch
             hi: "पिछले सप्ताहांत, मैं सेल एंड काइट ट्रिप के लिए काइट एक्टिव के साथ वाडेन गया था। यह एक अद्भुत सप्ताहांत था।", // Hindi
         }
@@ -130,7 +57,7 @@ const Reviewdata = [
         id: "3",
         img: img1,
         start: "5",
-        name: "Sietse",
+        name: "Daniel Ramirez",
         date: "March 6",
         title: {
             en: "WE had the best time!",
@@ -138,7 +65,7 @@ const Reviewdata = [
             hi: "हमने सबसे अच्छा समय बिताया!", // Hindi
         },
         para: {
-            en: "We went on a trip with KiteActive. It was fun. The boat left Franeker on Friday, but we were allowed to come and spend the night on Thursday.",
+            en: "If you're looking for an adventure, look no further! Kiteactive's trips are well-planned and full of excitement. I've never had more fun on the water!",
             nl: "We gingen op reis met KiteActive. Het was leuk. De boot vertrok vrijdag uit Franeker, maar we mochten donderdag al komen overnachten.", // Dutch
             hi: "हम काइटएक्टिव के साथ यात्रा पर गए। यह मजेदार था। नाव शुक्रवार को फ्रानेकर से रवाना हुई, लेकिन हमें गुरुवार को आने और रात बिताने की अनुमति थी।", // Hindi
         }
@@ -147,7 +74,7 @@ const Reviewdata = [
         id: "4",
         img: img1,
         start: "5",
-        name: "marc van der drift",
+        name: "Sophia Chen",
         date: "June 5",
         title: {
             en: "WE had the best time!",
@@ -155,7 +82,7 @@ const Reviewdata = [
             hi: "हमने सबसे अच्छा समय बिताया!", // Hindi
         },
         para: {
-            en: "Amazing weekend, awesome crew, wicked people!!!",
+            en: "The instructors at Kiteactive are amazing! They provide personalized tips that really helped me improve my skills. I can't wait to go back for more lessons!",
             nl: "Geweldig weekend, geweldig team, geweldige mensen!!!", // Dutch
             hi: "अद्भुत सप्ताहांत, शानदार टीम, अद्भुत लोग!!!", // Hindi
         }
@@ -164,7 +91,7 @@ const Reviewdata = [
         id: "5",
         img: img1,
         start: "5",
-        name: "Willem Schinkelshoek",
+        name: "James Patel",
         date: "July 19",
         title: {
             en: "WE had the best time!",
@@ -172,7 +99,7 @@ const Reviewdata = [
             hi: "हमने सबसे अच्छा समय बिताया!", // Hindi
         },
         para: {
-            en: "Had a great time in Brazil, well organized, super nice guides. See you next time.",
+            en: "Joining Kiteactive was the best decision I made this year. I learned so much and made incredible friends. Plus, the thrill of kitesurfing is unmatched!",
             nl: "Een geweldige tijd gehad in Brazilië, goed georganiseerd, super aardige gidsen. Tot de volgende keer.", // Dutch
             hi: "ब्राजील में बहुत अच्छा समय बिताया, अच्छी तरह से संगठित, सुपर अच्छे गाइड। अगली बार मिलते हैं।", // Hindi
         }
@@ -181,7 +108,7 @@ const Reviewdata = [
         id: "6",
         img: img1,
         start: "5",
-        name: "Cobie Harkema",
+        name: "Emma Wilson",
         date: "August 20",
         title: {
             en: "WE had the best time!",
@@ -189,7 +116,7 @@ const Reviewdata = [
             hi: "हमने सबसे अच्छा समय बिताया!", // Hindi
         },
         para: {
-            en: "Great travel experiences with Kiteactive! Learn big tricks in Tarifa, sail and kite during the Wadden weekend and downwind twice.",
+            en: "kiteactive offers the ultimate kitesurfing experience! The equipment is top-notch, and the stunning locations make every session unforgettable. It truly is the greatest sport of all time!",
             nl: "Geweldige reiservaringen met Kiteactive! Leer grote trucs in Tarifa, zeil en kite tijdens het Waddenweekend en tweemaal downwind.", // Dutch
             hi: "काइटएक्टिव के साथ शानदार यात्रा अनुभव! तारिफा में बड़े ट्रिक्स सीखें, वाडेन सप्ताहांत के दौरान पाल और काइट और दो बार डाउनविंड।", // Hindi
         }
@@ -198,7 +125,7 @@ const Reviewdata = [
         id: "7",
         img: img1,
         start: "5",
-        name: "ilse de vries",
+        name: "David Lee",
         date: "July 5",
         title: {
             en: "WE had the best time!",
@@ -206,7 +133,7 @@ const Reviewdata = [
             hi: "हमने सबसे अच्छा समय बिताया!", // Hindi
         },
         para: {
-            en: "Our first trip with KiteActive was an immediate success. Well organized and an unforgettable experience.",
+            en: " had the best time with Kiteactive! The community is welcoming, and the trips are well-organized. I can't wait to book my next adventure!",
             nl: "Onze eerste reis met KiteActive was direct een succes. Goed georganiseerd en een onvergetelijke ervaring.", // Dutch
             hi: "काइटएक्टिव के साथ हमारी पहली यात्रा तुरंत ही सफल रही। अच्छी तरह से संगठित और एक अविस्मरणीय अनुभव।", // Hindi
         }
@@ -215,7 +142,7 @@ const Reviewdata = [
         id: "8",
         img: img1,
         start: "5",
-        name: "Ann DS",
+        name: "Olivia Johnson",
         date: "August 3",
         title: {
             en: "WE had the best time!",
@@ -223,7 +150,7 @@ const Reviewdata = [
             hi: "हमने सबसे अच्छा समय बिताया!", // Hindi
         },
         para: {
-            en: "Just got back from a week in Tarifa with the KiteActive gang - what a brilliant week, we had wind pretty much every day, stayed.",
+            en: "Kiteactive has completely transformed my experience with kitesurfing! The instructors are incredibly knowledgeable and supportive. I felt safe and empowered every step of the way. Highly recommend!.",
             nl: "Net terug van een week in Tarifa met de KiteActive-bende - wat een geweldige week, we hadden vrijwel elke dag wind.", // Dutch
             hi: "अभी-अभी काइटएक्टिव गैंग के साथ तारिफा में एक सप्ताह बिताकर लौटा हूं - क्या शानदार सप्ताह था, हमारे पास लगभग हर दिन हवा थी।", // Hindi
         }

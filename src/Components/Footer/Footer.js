@@ -5,7 +5,7 @@ import footerlogo from '../../Images/logo-kiteactive.svg'
 
   const footerhead = {
     headtitle : {
-      en: "Join our Membership Community and get 30€ off on your next surf trip!",
+      en: "Unlock Your Surfing Adventure: Join Our Membership for 30€ Off",
       hi: "हमारे सदस्यता समुदाय में शामिल हों और अपनी अगली सर्फ यात्रा पर 30€ की छूट पाएं!",
       nl: "Word lid van onze ledencommunity en ontvang 30€ korting op je volgende surftrip!"
     }
@@ -173,54 +173,6 @@ const Footer = ({selectedLanguage}) => {
 
                                     </div>
 
-                                    {/* Col two  */}
-                                    {/* <div class="col-12 col-md-4 col-lg-2 col-xl-2 text-light p-0 m-0">
-                                        <div class="">
-                                            <h4 class="fw-bold mb-4">KiteActive World</h4>
-                                            <ul class="list-unstyled">
-                                                <li class="mb-3">
-                                                    <Link to='/' class="footer_link"> <i className='fa fa-angle-double-right me-2'></i>Kite Camps</Link>
-                                                </li>
-                                                <li class="mb-3">
-                                                    <Link to='/' class="footer_link">  <i className='fa fa-angle-double-right me-2'></i>Discover KiteActive</Link>
-                                                </li>
-                                                <li class="mb-3">
-                                                    <Link to='/' class="footer_link">  <i className='fa fa-angle-double-right me-2'></i>KiteActive Team</Link>
-                                                </li>
-                                                <li class="mb-3">
-                                                    <Link to='/' class="footer_link">  <i className='fa fa-angle-double-right me-2'></i>Kitesurfing Packages</Link>
-                                                </li>
-                                                <li class="mb-3">
-                                                    <Link to='/' class="footer_link">  <i className='fa fa-angle-double-right me-2'></i>Become Teamrider</Link>
-                                                </li>
-
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-12 col-md-4 col-lg-2 col-xl-2 text-light p-0 m-0">
-                                        <div class="">
-                                            <h4 class="fw-bold mb-4">Important Links</h4>
-                                            <ul class="list-unstyled">
-                                                <li class="mb-3">
-                                                    <Link to='/' class="footer_link"> <i className='fa fa-angle-double-right me-2'></i>About Us</Link>
-                                                </li>
-                                                <li class="mb-3">
-                                                    <Link to='/' class="footer_link">  <i className='fa fa-angle-double-right me-2'></i>Booking & Payment</Link>
-                                                </li>
-                                                <li class="mb-3">
-                                                    <Link to='/' class="footer_link">  <i className='fa fa-angle-double-right me-2'></i>Privacy Policy</Link>
-                                                </li>
-                                                <li class="mb-3">
-                                                    <Link to='/' class="footer_link">  <i className='fa fa-angle-double-right me-2'></i>Terms & Condition</Link>
-                                                </li>
-                                                <li class="mb-3">
-                                                    <Link to='/' class="footer_link">  <i className='fa fa-angle-double-right me-2'></i>Cookies Policy</Link>
-                                                </li>
-
-                                            </ul>
-                                        </div>
-                                    </div> */}
                                     {sections.map((section, index) => (
                                       <div class="col-12 col-md-4 col-lg-2 col-xl-2 text-light p-0 m-0">
                                       <div>
@@ -248,14 +200,13 @@ const Footer = ({selectedLanguage}) => {
                                         </div>
 
                                         <div className="navbar-nav TNB mt-3">
-                                            <div className='d-flex'>
+                                        {/* socila icons  */}
+                                            {/* <div className='d-flex'>
                                                 <Link to="/" className="nav-link me-5"> <i className='fa fa-facebook fa_icon_footer'></i></Link>
                                                 <Link to="/" className="nav-link me-5"> <i className='fa fa-instagram  fa_icon_footer'></i></Link>
                                                 <Link to="/" className="nav-link me-5"> <i className='fa fa-youtube fa_icon_footer '></i></Link>
                                                 <Link to="/" className="nav-link me-5"> <i className='fa fa-twitter fa_icon_footer '></i></Link>
-                                            </div>
-
-
+                                            </div> */}
                                         </div>
                                     </div>
 

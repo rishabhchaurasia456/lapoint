@@ -2,8 +2,9 @@ import React, { useRef } from 'react'
 // import { NavLink } from 'react-bootstrap';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import { Carddata, Carddata_head_section } from './Carddata';
+import {Carddata_head_section } from './Carddata';
 import { Link } from 'react-router-dom';
+import {cardData} from '../../Pages/Kitecamps/Kitecampdata'
 
 const responsive = {
     superLargeDesktop: {
@@ -68,15 +69,15 @@ const Surfcampslider = ({selectedLanguage}) => {
                         <Carousel ref={carouselRef} responsive={responsive} arrows={false}>
 
                             {/* card data in card.js  */}
-                            {Carddata.map(({ title, img, index }) => (
-                                <div className="border w-100 px-2 my-5 border-0" key={index}>
+                            {cardData.map(({ img, path, vedio, trip_name }) => (
+                                <div className="border w-100 px-2 my-5 border-0">
                                     <div>
                                         {/* <img src={img} className="slid_card_backimg rounded-4" alt="..." /> */}
-                                        <Link to="/trip" className='nav-link'>
+                                        <Link to={path} state={{ trip_name: trip_name, vedio: vedio }} className='nav-link'>
                                         <div className="slid_card_backimg rounded-4" style={{ backgroundImage: `url(${img})`, backgroundSize: 'cover', backgroundPosition: 'center',}}>
-                                            <div class="slid_card_text">
+                                            {/* <div class="slid_card_text">
                                                 <p class="card_d_text">{title[selectedLanguage]}</p>
-                                            </div>
+                                            </div> */}
                                         </div>
                                         </Link>
                                     </div>

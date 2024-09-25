@@ -53,7 +53,7 @@ const textdata = [
             nl: "Leven volgens de KiteActieve levensstijl"
         },
         para: {
-            en: "A professional and passionate team, on the beach and behind the computer. We organize your kitesurfing trip down to the last detail! We look forward to meet you and to have a great holiday together!. Learn to read the ocean better, get more comfortable in the line-up and get individual feedback on the areas you need to improve in your surfing.",
+            en: "Embrace the freedom and excitement that comes with the KiteActive lifestyle! Whether you're soaring through the skies on a kite or enjoying the sun on pristine beaches, every moment is an opportunity for adventure and connection with nature. Our community thrives on passion, camaraderie, and the thrill of exploration, bringing together kitesurfing enthusiasts and outdoor lovers alike.",
             hi: "एक पेशेवर और जुनूनी टीम, समुद्र तट और कंप्यूटर के पीछे. हम आपके काइटसर्फिंग ट्रिप का आयोजन करते हैं आखिरी विवरण तक! हम आपके साथ मिलने और एक महान हॉलिडे साथ में होने की उम्मीद करते हैं. समुद्र को बेहतर पढ़ना सीखें, लाइन-अप में अधिक आरामदायक हो जाएं और अपने सर्फिंग में सुधार के लिए व्यक्तिगत प्रतिक्रिया प्राप्त करें.",
             nl: "Een professioneel en gepassioneerd team, op het strand en achter de computer. Wij organiseren jouw kitesurftrip tot in de puntjes! Wij kijken ernaar uit om je te ontmoeten en samen een geweldige vakantie te beleven!. Leer de oceaan beter te lezen, word comfortabeler in de line-up en krijg individuele feedback over de gebieden waarop je je surfvaardigheden moet verbeteren."
             
@@ -67,7 +67,7 @@ const textdata = [
             nl: "De KiteActive-ervaring"
         },
         para: {
-            en: "Let’s unite our powers and be partners! We have partner programs for everyone. Do you have a kiteschool? A travel agency? Or are you just a kiter who thinks he can sell kitesurf trips? Together we can move mountains, create a synergy and build a stronger brand.",
+            en: "Dive into the KiteActive experience, where adventure meets community! From the moment you join us, you’ll be immersed in a world of exhilarating kitesurfing, stunning landscapes, and like-minded enthusiasts who share your passion for the outdoors. Our carefully curated experiences cater to all skill levels, ensuring everyone can enjoy the thrill of riding the waves and harnessing the wind.",
             hi: "आइए अपनी शक्तियों को एकजुट करें और भागीदार बनें! हमारे पास सभी के लिए भागीदार कार्यक्रम हैं। क्या आपके पास काइटस्कूल है? ट्रैवल एजेंसी है? या आप सिर्फ़ एक पतंगबाज़ हैं जो सोचता है कि वह काइटसर्फ ट्रिप बेच सकता है? हम साथ मिलकर पहाड़ों को हिला सकते हैं, तालमेल बना सकते हैं और एक मज़बूत ब्रांड बना सकते हैं।",
             nl: "Laten we onze krachten bundelen en partners worden! We hebben partnerprogramma's voor iedereen. Heb je een kiteschool? Een reisbureau? Of ben je gewoon een kiter die denkt dat hij kitesurftrips kan verkopen? Samen kunnen we bergen verzetten, een synergie creëren en een sterker merk opbouwen.",
         }

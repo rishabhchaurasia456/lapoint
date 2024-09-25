@@ -11,8 +11,8 @@ const Surfcamp = ({selectedLanguage}) => {
   const content = {
     en: {
         title: "Kiteactive",
-        title1: "for life!",
-        subtitle: "KiteActive, a kitesurf travel brand out of the ordinary. We create unforgettable adventures that connect a community of passionate kitesurfers. Whether you’re chasing wind or meeting new friends, KiteActive is all about living the kite life to the fullest. Join us on the kitetrip of your life!",
+        title1: " for Veventures!",
+        subtitle: "Kiteactive for Veventures offers an unparalleled experience for adventure seekers and kite surfing enthusiasts. With our expertly curated trips, you can explore breathtaking destinations while enjoying world-class kite surfing conditions. We prioritize your comfort and safety, providing you with top-notch equipment and personalized guidance from our skilled instructors.",
     },
     nl: {
         title: "Kiteactive",
