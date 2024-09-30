@@ -1,7 +1,7 @@
 import React from 'react'
 
 import logo from '../../Images/logo-kiteactive.svg'
-import { useLocation } from 'react-router-dom'
+import { NavLink, useLocation } from 'react-router-dom'
 
 const Booking = () => {
 
@@ -39,9 +39,9 @@ const Booking = () => {
                                 / Week
                             </span>
                             <span className=''>
-                                <button className='Booking_btn'>
+                                <NavLink to="/form" className='Booking_btn'>
                                     Book
-                                </button>
+                                </NavLink>
                             </span>
 
                             {/* whatsapp icon  */}
