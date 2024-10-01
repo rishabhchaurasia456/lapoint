@@ -71,3 +71,183 @@
     text-decoration: none;
     border-radius: 25px;
 }
+
+
+
+
+
+/* checkout component css  */
+
+
+.checkout_heading{
+
+    color: #ffc800;
+    font-size: 30px;
+}
+
+
+.checkout_data{
+    font-size: 17px;
+    margin: 5px;
+    color: #fff;
+}
+
+
+
+
+/* userinfo  */
+
+.form_head{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+
+/* From input field css */ 
+.mat-input {
+    position: relative;
+    font-size: inherit;
+  }
+  
+  .mat-input input {
+    border-width: 0 0 1px;
+    outline: none;
+    background-color: #0000000a;
+    border-radius: 4px 4px 0 0;
+    padding: 1.5em 0.70em 0.70em;
+    border-color: #393838;
+    border-style: solid;
+    font-size: inherit;
+    transition: 0.1s;
+  }
+  
+  .mat-input input:hover,
+  .mat-input input:focus {
+    border-bottom-width: 2px;
+    padding-bottom: calc(0.75em - 1px);
+  }
+  
+  .mat-input input:hover {
+    border-color: #ffc800;
+  }
+  
+  .mat-input input:focus {
+    border-color: #ffc800;
+  }
+  
+  .mat-input label {
+    position: absolute;
+    top: 1.4em;
+    left: 1em;
+    pointer-events: none;
+    transition: 0.2s;
+    color: #0009;
+  }
+  
+  .mat-input:has(input:focus) label {
+    color: #ffc800;
+  }
+  
+  .mat-input:has(input:focus) label,
+  .mat-input:not(:has(input:placeholder-shown)) label {
+    top: 0.75em;
+    font-size: 0.8em;
+  }
+  
+  .mat-input input::placeholder {
+    opacity: 0;
+    transition: 0.2s;
+    color: #2c2c2c;
+  }
+  
+  .mat-input input:focus::placeholder {
+    opacity: 1;
+  }
+  
+
+
+
+
+  /* for select box css  */
+
+
+  /* From input field css */ 
+  .mat-input {
+    position: relative;
+    font-size: inherit;
+}
+
+.mat-input input {
+    border-width: 0 0 1px;
+    outline: none;
+    background-color: #0000000a;
+    border-radius: 4px 4px 0 0;
+    padding: 1.5em 0.70em 0.70em;
+    border-color: #8c8c8c;
+    border-style: solid;
+    font-size: inherit;
+    transition: 0.1s;
+}
+
+.mat-input input:hover,
+.mat-input input:focus {
+    border-bottom-width: 2px;
+    padding-bottom: calc(0.75em - 1px);
+}
+
+.mat-input input:hover {
+    border-color: #ffc800;
+}
+
+.mat-input input:focus {
+    border-color: #ffc800;
+}
+
+.mat-input label {
+    position: absolute;
+    top: 1.4em;
+    left: 1em;
+    pointer-events: none;
+    transition: 0.2s;
+    color: #0009;
+}
+
+.mat-input:has(input:focus) label {
+    color: #ffc800;
+}
+
+.mat-input:has(input:focus) label,
+.mat-input:not(:has(input:placeholder-shown)) label {
+    top: 0.75em;
+    font-size: 0.8em;
+}
+
+.mat-input input::placeholder {
+    opacity: 0;
+    transition: 0.2s;
+    color: #2c2c2c;
+}
+
+.mat-input input:focus::placeholder {
+    opacity: 1;
+}
+
+.mat-input select {
+    width: 100% !important;
+    border: 1px solid #8c8c8c !important;
+    border-radius: 4px !important;
+    padding: 1em !important;
+    font-size: inherit !important;
+    background-color: #0000000a !important;
+    transition: border-color 0.2s !important;
+}
+
+.mat-input select:hover,
+.mat-input select:focus {
+    border-color: #ffc800 !important;
+    outline: none !important;
+}
+
+
+  

@@ -19,7 +19,9 @@ const Datepicker = () => {
     "1 week": [
       { range: "2024/09/15 - 2024/09/21", status: 0 }, // Available
       { range: "2024/09/22 - 2024/09/28", status: 1 }, // Unavailable
-      { range: "2024/09/29 - 2024/10/05", status: 0 }  // Available
+      { range: "2024/09/29 - 2024/10/05", status: 0 },  // Available
+      { range: "2024/10/01 - 2024/10/7", status: 0 },  // Available
+      { range: "2024/10/13 - 2024/10/19", status: 0 },  // Available
     ],
     "10 Days": [
       { range: "2024/09/17 - 2024/09/26", status: 1 }, // Unavailable
@@ -53,6 +55,7 @@ const Datepicker = () => {
       setValidDates(validStartDatesArray);
     }
   }, [selectedDuration]);
+  
 
   // Handle start date selection (only for available dates)
   const handleDateChange = (date) => {
@@ -111,7 +114,27 @@ const Datepicker = () => {
       return 'available-date';
     }
     return '';
+    
   };
+
+
+  
+    // // Function to highlight the date range
+    // const highlightStartDatea = (date) => {
+    //   if (!startDate) return ""; // No highlight if no date selected
+  
+    //   const endDate = new Date(startDate);
+    //   endDate.setDate(startDate.getDate() + 6); // Set end date to 6 days after the start date
+  
+    //   // Check if the current date falls within the range
+    //   if (date >= startDate && date <= endDate) {
+    //     return 'highlight-range'; // Add custom class if date is in range
+    //   }
+    //   return ''; // No class if date is outside the range
+    // };
+
+
+
 
   return (
     <div>
@@ -119,12 +142,7 @@ const Datepicker = () => {
         <div className="row">
           <div className="col-lg-2"></div>
           <div className="col-lg-8">
-            <div className='m-auto text-center'>
-
-
-
-
-
+            <div className='m-auto text-center  '>
               <p className='text-center person_week'>
                 <span>{totalCount} Person, {selectedDuration}</span>
 
@@ -140,13 +158,12 @@ const Datepicker = () => {
                   )
                 ))}
               </p>
+
               <div className='datepick_border'> </div>
-
               {/* <h3>Total Price: € {totalPrice}</h3> */}
-
               {/* Date Range Picker */}
-              <div className=''>
-                <h2 className='cal_head'>Select Start Date</h2>
+              <div className='custom-datepicker'>
+                <h2 className='cal_head mb-4'>Select Start Date</h2>
                 <DatePicker
                   selected={startDate}
                   onChange={handleDateChange}
@@ -159,22 +176,32 @@ const Datepicker = () => {
               </div>
 
               {/* date visiblity  */}
+              <div className='date_visible'>
+                <i class="fa fa-circle cir1" aria-hidden="true"></i>
+                <span className='date_visible_span'> Available Date</span>
 
-
-              <div className=''>         
+                <i class="fa fa-circle cir2" aria-hidden="true"></i>
+                <span className=''> Booked Date</span>
               </div>
 
 
               {/* Display the selected start and end dates */}
               {startDate && endDate && (
-                <div className='fw-bold'>
+                <div className='fw-bold cal_head '>
                   <span> {startDate.toLocaleDateString()} - </span>
                   <span> {endDate.toLocaleDateString()}</span>
                 </div>
               )}
 
               {/* Button to navigate to the final page */}
-              <button onClick={handleNextPage} className="Booking_btn">Next</button>
+              {/* <button  className=""></button> */}
+
+               <div className='btn_container'>
+                  <button className="level_btn mb-5 " onClick={handleNextPage}>
+                  Next 
+                  </button>
+                </div>
+
             </div>
           </div>
 
