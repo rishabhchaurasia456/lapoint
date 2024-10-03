@@ -144,6 +144,17 @@ const Userinfo = () => {
         }
     };
 
+
+
+    // banck btn js 
+
+    // const navigate = useNavigate();
+
+    // const goBack = () => {
+    //     navigate(-1); // This navigates to the previous page in history
+    // };
+
+
     // Handle toggling to use same details for Traveller 1
     const handleToggle = () => {
         setUseSameDetails(!useSameDetails);
@@ -155,6 +166,11 @@ const Userinfo = () => {
         }
     };
 
+
+
+
+
+
     // Function to submit and log traveler and user data
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -164,19 +180,34 @@ const Userinfo = () => {
 
     const renderTravellerForms = () => {
         return travellers.map((traveller, index) => (
-
             <div className="container-fluid level_container">
                 <div className="row">
                     <div className="col-lg-2"></div>
                     <div className="col-lg-8 card mb-3 p-4">
                         <h5 className="form_head">Traveller #{index + 1} Information</h5>
 
-                        <div className='form-check my-3'>
+                        {/* <div className='form-check my-3'>
                             <input type='checkbox' className='form-check-input' id='useSameDetails' checked={useSameDetails} onChange={handleToggle} />
+
                             <label className='form-check-label' htmlFor='useSameDetails'>
                                 Use the same information for Traveller 1
                             </label>
+                        </div> */}
+
+                        <div className='d-flex mt-2'>
+                            <div>
+                                <label class="switch">
+                                    <input type='checkbox' className='form-check-input' id='useSameDetails' checked={useSameDetails} onChange={handleToggle} />
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            <div className='mx-2'>
+                                <p>  Use the same information for Traveller 1</p>
+                            </div>
+
                         </div>
+                        {/* <span>hdkjf</span> */}
+
 
                         <div className='' key={index}>
                             <div className='row my-2'>
@@ -223,10 +254,7 @@ const Userinfo = () => {
                             </div>
 
                             <hr className='mt-4' />
-
-
                             <div className='row mt-2'>
-
                                 <div className="col-6 mat-input">
                                     <h5 className='form_head'>Gender</h5>
                                     <select
@@ -237,17 +265,17 @@ const Userinfo = () => {
                                         <option value='Female'>Female</option>
                                         <option value='Male'>Male</option>
                                     </select>
-                                </div>                      
+                                </div>
                             </div>
 
                             <div className="row mt-2">
                                 <div className="col-6 mat-input">
-                                    <h5 className='form_head'>Size</h5>     
+                                    <h5 className='form_head'>Size</h5>
                                     <select
                                         className='w-100'
                                         value={travellers[index].size}
                                         onChange={(e) => handleChange(index, 'size', e.target.value)}>
-                                            <option value='S'>S</option>
+                                        <option value='S'>S</option>
                                         <option value='M'>M</option>
                                         <option value='L'>L</option>
                                         <option value='XL'>XL</option>
@@ -308,9 +336,14 @@ const Userinfo = () => {
 
     return (
         <div>
+
+            {/* show selected trip data by user   */}
+
+
             <div className="container-fluid level_container">
                 <div className="row">
                     <div className="col text-center">
+
                         <div className=" person_week">
                             {/* <p><b>Selected Duration:</b> {selectedDuration}</p> */}
                             {startDate && endDate && (
@@ -334,83 +367,83 @@ const Userinfo = () => {
                                     )
                                 ))}
                             </p>
+                            <div className="datepick_border"> </div>
+
                         </div>
-                        <div className="datepick_border"> </div>
                     </div>
                 </div>
-
             </div>
 
 
-            <div className="row level_container">
-                <div className="col-lg-2"></div>
-                <div className="col-lg-8">
-                    <form className='card mb-3 p-4'>
-                        <h5 className="form_head">User Information for Payment</h5>
-                        <div className='row'>
 
-                            <div class="col mat-input">
-                                <label for="">First Name</label>
-                                <input id="" type="text" className='w-100' value={userDetails.firstName} placeholder="First name" onChange={(e) => handleUserChange('firstName', e.target.value)} />
+
+            {/* user information form  */}
+            <div className="container-fluid level_container">
+                <div className="row">
+                    <div className="col-lg-2"></div>
+                    <div className="col-lg-8 card mb-3 p-4">
+                        <form className=''>
+                            <h5 className="form_head">User Information for Payment</h5>
+                            <div className='row'>
+                                <div class="col mat-input">
+                                    <label for="">First Name</label>
+                                    <input id="" type="text" className='w-100' value={userDetails.firstName} placeholder="First name" onChange={(e) => handleUserChange('firstName', e.target.value)} />
+                                </div>
+
+                                <div class="col mat-input">
+                                    <label for="">Last Name</label>
+                                    <input id="" type="text" className='w-100' value={userDetails.lastName} placeholder="Last name" onChange={(e) => handleUserChange('lastName', e.target.value)} />
+                                </div>
+
+
                             </div>
+                            <div className='row mt-2'>
+                                <div class="col mat-input">
+                                    <label for="">Email</label>
+                                    <input id="" type="text" className='w-100' value={userDetails.email} placeholder='Email' onChange={(e) => handleUserChange('email', e.target.value)} />
+                                </div>
 
-                            <div class="col mat-input">
-                                <label for="">Last Name</label>
-                                <input id="" type="text" className='w-100' value={userDetails.lastName} placeholder="Last name" onChange={(e) => handleUserChange('lastName', e.target.value)} />
+
+                                <div class="col mat-input">
+                                    <label for="">Phone</label>
+                                    <input id="" type="text" className='w-100' value={userDetails.phone} placeholder='Phone Number' onChange={(e) => handleUserChange('phone', e.target.value)} />
+                                </div>
+
                             </div>
+                            <div className='row mt-2'>
+
+                                <div className="col mat-input">
+                                    <select className='w-100'>
+                                        <option>Select Country</option>
+                                        <option>India</option>
+                                        <option>UK</option>
+                                        <option>USA</option>
+                                    </select>
+                                </div>
 
 
-                        </div>
-                        <div className='row mt-2'>
+                                <div className="col mat-input">
+                                    <select className='w-100'>
+                                        <option>How did you find us</option>
+                                        <option>Kiteschool</option>
+                                        <option>Advertisement</option>
+                                        <option>Socials</option>
+                                        <option>From a friend</option>
+                                    </select>
+                                </div>
 
-                            <div class="col mat-input">
-                                <label for="">Email</label>
-                                <input id="" type="text" className='w-100' value={userDetails.email} placeholder='Email' onChange={(e) => handleUserChange('email', e.target.value)} />
+
                             </div>
-
-
-                            <div class="col mat-input">
-                                <label for="">Phone</label>
-                                <input id="" type="text" className='w-100' value={userDetails.phone} placeholder='Phone Number' onChange={(e) => handleUserChange('phone', e.target.value)} />
-                            </div>
-
-                        </div>
-                        <div className='row mt-2'>
-
-                            <div className="col mat-input">
-                                <select className='w-100'>
-                                    <option>Select Country</option>
-                                    <option>India</option>
-                                    <option>UK</option>
-                                    <option>USA</option>
-                                </select>
-                            </div>
-
-
-                            <div className="col mat-input">
-                                <select className='w-100'>
-                                    <option>How did you find us</option>
-                                    <option>Kiteschool</option>
-                                    <option>Advertisement</option>
-                                    <option>Socials</option>
-                                    <option>From a friend</option>
-                                </select>
-                            </div>
-
-
-                        </div>
-                    </form>
-
-
+                        </form>
+                    </div>
+                    <div className="col-lg-2"></div>
                 </div>
-                <div className="col-lg-2"></div>
             </div>
-
-
             {/* Render Traveller Forms */}
             {renderTravellerForms()}
 
 
+            {/* Checkout btn  */}
             <div className="container-fluid level_container">
                 <div className="row">
                     <div className="col-lg-2"></div>

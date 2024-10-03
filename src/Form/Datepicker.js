@@ -140,6 +140,7 @@ const Datepicker = () => {
     <div>
       <div className="container-fluid level_container">
         <div className="row">
+
           <div className="col-lg-2"></div>
           <div className="col-lg-8">
             <div className='m-auto text-center  '>

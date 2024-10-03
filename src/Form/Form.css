@@ -1,6 +1,6 @@
 /* level css here  */
 
-.level_container{
+.level_container {
     background-color: black;
 }
 
@@ -32,7 +32,7 @@
 }
 
 
-.moreinfo_btn{
+.moreinfo_btn {
     color: #ffc800;
     text-decoration: none;
     font-weight: bold;
@@ -59,7 +59,7 @@
 }
 
 .level_btn {
-    background-color:  #ffc800;
+    background-color: #ffc800;
     color: black;
     font-size: 25px;
     /* font-weight: bold; */
@@ -79,14 +79,12 @@
 /* checkout component css  */
 
 
-.checkout_heading{
-
+.checkout_heading {
     color: #ffc800;
     font-size: 30px;
 }
 
-
-.checkout_data{
+.checkout_data {
     font-size: 17px;
     margin: 5px;
     color: #fff;
@@ -94,23 +92,22 @@
 
 
 
+/* --------------------------------  */
+/* userinfo  component css  */
+/* --------------------------------  */
 
-/* userinfo  */
-
-.form_head{
+.form_head {
     font-size: 18px;
     font-weight: bold;
 }
 
-
-
-/* From input field css */ 
+/* From input field css */
 .mat-input {
     position: relative;
     font-size: inherit;
-  }
-  
-  .mat-input input {
+}
+
+.mat-input input {
     border-width: 0 0 1px;
     outline: none;
     background-color: #0000000a;
@@ -120,60 +117,58 @@
     border-style: solid;
     font-size: inherit;
     transition: 0.1s;
-  }
-  
-  .mat-input input:hover,
-  .mat-input input:focus {
+}
+
+.mat-input input:hover,
+.mat-input input:focus {
     border-bottom-width: 2px;
     padding-bottom: calc(0.75em - 1px);
-  }
-  
-  .mat-input input:hover {
+}
+
+.mat-input input:hover {
     border-color: #ffc800;
-  }
-  
-  .mat-input input:focus {
+}
+
+.mat-input input:focus {
     border-color: #ffc800;
-  }
-  
-  .mat-input label {
+}
+
+.mat-input label {
     position: absolute;
     top: 1.4em;
     left: 1em;
     pointer-events: none;
     transition: 0.2s;
     color: #0009;
-  }
-  
-  .mat-input:has(input:focus) label {
+}
+
+.mat-input:has(input:focus) label {
     color: #ffc800;
-  }
-  
-  .mat-input:has(input:focus) label,
-  .mat-input:not(:has(input:placeholder-shown)) label {
+}
+
+.mat-input:has(input:focus) label,
+.mat-input:not(:has(input:placeholder-shown)) label {
     top: 0.75em;
     font-size: 0.8em;
-  }
-  
-  .mat-input input::placeholder {
+}
+
+.mat-input input::placeholder {
     opacity: 0;
     transition: 0.2s;
     color: #2c2c2c;
-  }
-  
-  .mat-input input:focus::placeholder {
+}
+
+.mat-input input:focus::placeholder {
     opacity: 1;
-  }
-  
+}
 
 
 
+/* in form  select box css  */
 
-  /* for select box css  */
 
-
-  /* From input field css */ 
-  .mat-input {
+/* From input field css */
+.mat-input {
     position: relative;
     font-size: inherit;
 }
@@ -250,4 +245,64 @@
 }
 
 
-  
+
+
+/* toggel btn for same information for Traveller 1 */
+
+/* From Uiverse.io by TimTrayler */ 
+.switch {
+    --secondary-container: #dbd0ac;
+    --primary: #ffc800;
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 3.4em;
+    height: 1.5em;
+   }
+   
+   .switch input {
+    display: none;
+    opacity: 0;
+    width: 0;
+    height: 0;
+   }
+   
+   .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #b4b4b4;
+    transition: .2s;
+    border-radius: 30px;
+   }
+   
+   .slider:before {
+    position: absolute;
+    content: "";
+    height: 1.2em;
+    width: 1.2em;
+    border-radius: 20px;
+    left: 0.2em;
+    bottom: 0.2em;
+    background-color: #393939;
+    transition: .4s;
+   }
+   
+   input:checked + .slider::before {
+    background-color: var(--primary);
+   }
+   
+   input:checked + .slider {
+    background-color: var(--secondary-container);
+   }
+   
+   input:focus + .slider {
+    box-shadow: 0 0 1px var(--secondary-container);
+   }
+   
+   input:checked + .slider:before {
+    transform: translateX(1.9em);
+   }
