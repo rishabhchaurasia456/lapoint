@@ -1,9 +1,7 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Navbar from './Components/Navbar/Navbar';
 import Home from './Pages/Home/Home';
 import Blog from './Pages/Home/Blog';
-import Footer from './Components/Footer/Footer';
 import { useState } from 'react';
 import Trip from './Pages/Trip/Trip';
 import Aboutus from './Pages/About/Aboutus';
@@ -16,43 +14,112 @@ import Room from './Form/Room';
 import Activity from './Form/Activity';
 import Checkout from './Form/Checkout';
 import Userinfo from './Form/Userinfo';
+import KiteLayout from './Pages/kiteLayout';
+import Aff_Layout from './Affiliate/Aff_Layout';
+import Aff_Dashboard from './Affiliate/Aff_Dashboard';
+import NewAffiliate from './Affiliate/NewAffiliate';
+import MyCreative from './Affiliate/MyCreative';
 
 
 function App() {
   const [selectedLanguage, setSelectedLanguage] = useState('en');
+
   return (
     <div>
-      <BrowserRouter >
-      <ScrollToTop/>
-      <Navbar selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage} />
+      <BrowserRouter>
+        <ScrollToTop />
         <Routes>
-          {/* Home page import  */}
-          <Route path='/' element={<Home selectedLanguage={selectedLanguage} />}></Route>
-          
-          <Route path='/Blog' element={<Blog />}></Route>
-          <Route path='/about' element={<Aboutus selectedLanguage={selectedLanguage}/>}></Route>
-          <Route exact path="/trip/:trip_name" element={<Trip/>} />
-          <Route path='/contact' element={<Contactus/>}></Route>
+          <Route path='/' element={
+            <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
+              <Home selectedLanguage={selectedLanguage} />
+            </KiteLayout>
+          } />
 
+          <Route path='/blog' element={
+            <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
+              <Blog />
+            </KiteLayout>
+          } />
 
-          <Route path='/form' element={<Levels />} />
-          <Route path="/datepicker" element={<Datepicker/>} />
-          <Route path="/room" element={<Room/>} />
-          <Route path="/activity" element={<Activity/>} />
-          <Route path="/checkout" element={<Checkout />} />
-          <Route path="/userinfo" element={<Userinfo />} />
+          <Route path='/about' element={
+            <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
+              <Aboutus selectedLanguage={selectedLanguage} />
+            </KiteLayout>
+          } />
 
+          <Route exact path="/trip/:trip_name" element={
+            <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
+              <Trip />
+            </KiteLayout>
+          } />
 
+          <Route path='/contact' element={
+            <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
+              <Contactus />
+            </KiteLayout>
+          } />
 
           {/* kite camp  all pages routes here  */}
-          <Route path='/kitecamp' element={<Kitecamp/>}></Route>
+          <Route path='/kitecamp' element={
+            <KiteLayout>
+              <Kitecamp />
+            </KiteLayout>
+          }>
+
+          </Route>
+
+          <Route path='/form' element={
+            <>
+              <Levels />
+            </>
+          } />
+          <Route path="/datepicker" element={
+            <>
+              <Datepicker />
+            </>
+          } />
+          <Route path="/room" element={
+            <>
+              <Room />
+            </>
+          } />
+          <Route path="/activity" element={
+            <>
+              <Activity />
+            </>
+          } />
+          <Route path="/checkout" element={
+            <>
+              <Checkout />
+            </>
+          } />
+          <Route path="/userinfo" element={
+            <>
+              <Userinfo />
+            </>
+          } />
+
+          <Route path="/affiliate_admin" element={
+            <Aff_Layout>
+              <Aff_Dashboard />
+            </Aff_Layout>
+          } />
+
+          <Route path="/new_affiliate" element={
+            <Aff_Layout>
+              <NewAffiliate />
+            </Aff_Layout>
+          } />
+
+          <Route path="/myCreative" element={
+            <Aff_Layout>
+              <MyCreative />
+            </Aff_Layout>
+          } />
+
 
         </Routes>
-        <Footer selectedLanguage={ selectedLanguage }/>
       </BrowserRouter>
-
-
-     
     </div>
   );
 }
