@@ -87,76 +87,92 @@ const Room = () => {
   };
 
   return (
-    <div>
-      <h1>NextActivity Confirmation</h1>
+    <>
 
-      {/* <p><b>Selected Duration:</b> {selectedDuration}</p> */}
-      {startDate && endDate && (
-        <div>
-          <span> {startDate.toLocaleDateString()} - </span>
-          <span> {endDate.toLocaleDateString()}</span>
-        </div>
-      )}
-      <p>
-        <span>{totalCount} Person, {selectedDuration}</span>
+      <div className="container-fluid level_container pb-5">
+        <div className="row">
+          <div className="col-lg-2"></div>
+          <div className="col-lg-8">
+            <div>
+              <div className="container">
+                <div className="row">
+                  <div className="col text-center">
+                    <div className=" person_week">
+                      {/* <p><b>Selected Duration:</b> {selectedDuration}</p> */}
+                      {startDate && endDate && (
+                        <div>
+                          <span> {startDate.toLocaleDateString()} - </span>
+                          <span> {endDate.toLocaleDateString()}</span>
+                        </div>
+                      )}
+                      <p>
+                        <span>{totalCount} Person, {selectedDuration}</span>
 
-        {/* Show details for each level where count is > 0 */}
-        {levels.map((item, index) => (
-          counts[index] > 0 && (
-            <span key={index}>
-              <span>
-                <b>{item.level}</b>
-                 {/* | Count: {counts[index]} | Price: € {counts[index] * item.price} */}
-              </span>
-            </span>
-          )
-        ))}
-      </p>
-      {/* <h3><b>Base Price:</b> € {totalPrice}</h3> */}
+                        {/* Show details for each level where count is > 0 */}
+                        {levels.map((item, index) => (
+                          counts[index] > 0 && (
+                            <span key={index}>
+                              <span>
+                                <b>{item.level}</b>
+                                {/* | Count: {counts[index]} | Price: € {counts[index] * item.price} */}
+                              </span>
+                            </span>
+                          )
+                        ))}
+                      </p>
+                    </div>
+                    <div className="datepick_border"> </div>
+                  </div>
+                </div>
+              </div>
+              {/* <h3><b>Base Price:</b> € {totalPrice}</h3> */}
 
-      {/* Room type selection */}
-      <div className='container-fluid'>
-        {roomtype.map((item, index) => (
-          <div className="row" key={index}>
-            <div className="col-md-6">
-              <p><span><b>{item.room}</b></span> | <span>+ € {item.price} + / per night</span></p>
-            </div>
-            <div className="col-md-6">
-              <button
-                className='btn btn-warning'
-                onClick={(e) => {
-                  e.preventDefault();
-                  decrement(index);
-                }}
-              >
-                -
-              </button>
-              <span>{countsbed[index]}</span>
-              <button
-                className='btn btn-warning'
-                onClick={(e) => {
-                  e.preventDefault();
-                  increment(index);
-                }}
-              >
-                +
-              </button>
+              {/* Room type selection */}
+              <div className='container-fluid'>
+                <p className='level_heading fs-5'>Choose your room type | Price add-on per room for the duration</p>
+
+                {roomtype.map((item, index) => (
+                  <div className="row form_crd_row mt-4" key={index}>
+                    <div className="col-md-9">
+                      <div className='level_crd_text'>
+                        <p className='level_crd_para'>
+
+                          <span><b>{item.room}</b></span> | <span>+ € {item.price} + / per night</span>
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="col-md-3">
+                      <i className="fa fa-minus-circle P_M_icon " onClick={(e) => { e.preventDefault(); decrement(index); }}></i>
+
+                      <span>{countsbed[index]}</span>
+                      <i className="fa fa-plus-circle P_M_icon" onClick={(e) => { e.preventDefault(); increment(index); }} ></i>
+                    </div>
+
+
+
+                  </div>
+
+
+                ))}
+              </div>
+
+              {/* <h3><b>Updated Total Price:</b> € {updatedTotalPrice}</h3> */}
+
+              {/* Conditionally show the "Next" button */}
+              {canProceed && (
+                <div className='btn_container'>
+                  <button className="level_btn " onClick={handleNext}>
+                    Next
+                  </button>
+                </div>
+              )}
             </div>
           </div>
-        ))}
-      </div>
-
-      {/* <h3><b>Updated Total Price:</b> € {updatedTotalPrice}</h3> */}
-
-      {/* Conditionally show the "Next" button */}
-      {canProceed && (
-        <div>
-          <button className='btn btn-primary' onClick={handleNext}>
-            Next
-          </button>
+          <div className="col-lg-2"></div>
         </div>
-      )}
-    </div>
+      </div>
+    </>
   );
 };
 
