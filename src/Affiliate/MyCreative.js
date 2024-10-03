@@ -4,7 +4,13 @@ const MyCreative = () => {
     const[ outputbox, setOutputbox ] = useState("")
 
     var selectBox = document.getElementById("selectOption");
-    
+    const changebox = () => {
+        // if (value == "image"){
+        //     document.getElementById("image_container").style.display=block;
+        // }else if{
+
+        // }
+    }
     return (
         <div>
             <div class="container">
