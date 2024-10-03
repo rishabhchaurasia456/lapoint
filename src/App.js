@@ -20,7 +20,6 @@ import Aff_Dashboard from './Affiliate/Aff_Dashboard';
 import NewAffiliate from './Affiliate/NewAffiliate';
 import MyCreative from './Affiliate/MyCreative';
 
-
 function App() {
   const [selectedLanguage, setSelectedLanguage] = useState('en');
 

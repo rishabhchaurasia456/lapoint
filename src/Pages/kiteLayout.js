@@ -6,7 +6,7 @@ const KiteLayout = ({ children, selectedLanguage, setSelectedLanguage }) => {
     return (
         <div>
             <Navbar selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage} />
-            <div>{children}</div>
+                <div>{children}</div>
             <Footer selectedLanguage={selectedLanguage} />
         </div>
     );
