@@ -1,6 +1,6 @@
 import React from 'react';
 
-import faqimage from "../../Images/faw.png"
+import faqimage from "../../Images/faw.webp"
 const Faq = ({selectedLanguage}) => {
     
     const Carddata_head_section = [

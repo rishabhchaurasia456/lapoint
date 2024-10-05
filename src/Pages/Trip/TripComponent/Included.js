@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import questionIcon from "../../../Images/question-mark-outline-in-a-circle-hand-drawn-button.png";
-import carIcon from "../../../Images/car.png";
-import wineIcon from "../../../Images/glass-with-wine.png";
-import homeIcon from "../../../Images/home.png";
-import checkIcon from "../../../Images/check-mark.png";
-import waterIcon from "../../../Images/water-waves.png";
+import carIcon from "../../../Images/car.webp";
+import wineIcon from "../../../Images/glass-with-wine.webp";
+import homeIcon from "../../../Images/home.webp";
+import checkIcon from "../../../Images/check-mark.webp";
+import waterIcon from "../../../Images/water-waves.webp";
 
 const Included = () => {
   // Set initial state to "1 week" for all levels

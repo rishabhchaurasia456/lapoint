@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
+
 
 const Room = () => {
   const [countsbed, setCountsbed] = useState([0, 0, 0]); // Separate counts for each level
@@ -12,11 +13,11 @@ const Room = () => {
   const { selectedDuration, counts, totalPrice, totalCount, levels, startDate, endDate } = location.state;
 
   // Room type array
-  const roomtype = [
+  const roomtype = useMemo(() => [
     { room: "Shared Room", price: 0 },
     { room: "Private Room", price: 35 },
     { room: "Double Room For Couples", price: 10 }
-  ];
+  ], []);
 
   // Calculate the total count for the current page
   const currentTotalCount = countsbed.reduce((acc, count) => acc + count, 0);

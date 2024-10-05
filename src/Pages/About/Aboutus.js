@@ -5,30 +5,31 @@ import '../../Pages/Pages.css';
 
 
 //  import bigimg from '../../Images/abimg.png'
-import img1 from '../../Images/ab1.png'
-import img2 from '../../Images/ab3.png'
-import img3 from '../../Images/ab2.png'
+import img1 from '../../Images/ab1.webp'
+import img2 from '../../Images/ab2.webp'
+import img3 from '../../Images/ab3.webp'
 
 
 
-import imga1 from '../../Images/ab2_1.png'
-import imga2 from '../../Images/ab2_2.png'
-import imga3 from '../../Images/ab2_3.png'
+import imga1 from '../../Images/ab2_1.webp'
+import imga2 from '../../Images/ab2_2.webp'
+import imga3 from '../../Images/ab2_3.webp'
+
+
 import Bgimage from '../../Components/Bgimage/Bgimage';
+
 import { Helmet } from 'react-helmet'
 
 const Aboutus = ({ selectedLanguage }) => {
     return (
         <div>
 
+
             {/* for seo  */}
             <Helmet>
                 <title>KiteActive: Exciting Kite & Sailing Trips Along West Frisian Islands</title>
-
                 <meta name="description" content="Discover KiteActive's thrilling kitesurfing holidays with expert instructors at stunning destinations worldwide. Join us for an unforgettable adventure!" />
-
                 <meta name="keywords" content="kite surfing, kitesurfing trips, kitesurf spots, kite surfing lessons, kitesurfing lessons worldwide, kitesurf vacation, kite travel, kitesurf holiday" />
-
                 <link rel="canonical" href="https://www.kiteactiveventures.com/about" />
 
             </Helmet>

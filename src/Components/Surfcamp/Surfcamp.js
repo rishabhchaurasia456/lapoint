@@ -1,10 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import img1 from '../../Images/JordyBrouns-KiteActive-Sicily2022-239-800x600-1.jpg'
-import img2 from '../../Images/2S1A1600-scaled-e1724058576388.jpg'
-import img3 from '../../Images/kitecenter-zanzibar-edited-2046x2048-1-1200x900-1.webp'
-import img4 from '../../Images/img3.png'
+import img1 from '../../Images/img1.webp'
+import img2 from '../../Images/img2.webp'
+import img3 from '../../Images/img3.webp'
+import img4 from '../../Images/img4.webp'
 
 const Surfcamp = ({selectedLanguage}) => {
 

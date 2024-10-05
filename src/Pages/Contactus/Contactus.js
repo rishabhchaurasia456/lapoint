@@ -1,20 +1,18 @@
 import React from 'react'
 import '../../Pages/Pages.css';
 
-import headerbackimg from '../../Images/con_img.png'
-import lifeimg from '../../Images/kitecenter-zanzibar-edited-2046x2048-1-1200x900-1.webp'
 import { Helmet } from 'react-helmet'
-import icon1 from '../../Images/mail.png'
-import icon2 from '../../Images/whatsapp.png'
-import icon3 from '../../Images/phone-call.png'
+
+import headerbackimg from '../../Images/con_img.webp'
+import lifeimg from '../../Images/img4.webp'
+import icon1 from '../../Images/mail.webp'
+import icon2 from '../../Images/whatsapp.webp'
+import icon3 from '../../Images/phone-call.webp'
 
 const Contactus = () => {
     return (
         <div>
             {/* For seo  */}
-
-
-
             <Helmet>
                 <title>Contact Us - KiteActive: Your Kitesurfing Experts </title>
 

@@ -31,21 +31,10 @@ const Trip = () => {
                 <title>KiteActive</title>
                 <meta name="description" content="This is the home page of your website where you can find information about surfcamps, lifestyle, and more." />
                 <meta name="keywords" content="surfcamp, lifestyle, adventure, activities, reviews" />
-                <link rel="canonical" href="https://danstring.co.in/kiteactive/" />
+                <link rel="canonical" href="https://kiteactiveventures.com/kitecamp" />
             </Helmet>
             <div>
-                {/* <div className="video-container">
-                    <video autoPlay loop muted className="background-video">
-                        <source src={vedio} type="video/mp4" />
-                        Your browser does not support the video tag.
-                    </video>
-                </div> */}
-
-
-                {/* <Helmet>
-                <title>{trip_name}</title>
-                <meta name="description" content={`Details about ${trip_name}`} />
-            </Helmet> */}
+               
 
                 <div className="video-container">
                     <video autoPlay loop muted className="background-video">

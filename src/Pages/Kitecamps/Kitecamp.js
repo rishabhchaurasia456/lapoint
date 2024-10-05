@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import headerbackimg from '../../Images/kitecampbg.png';
+import headerbackimg from '../../Images/kitecampbg.webp';
 import map from '../../Images/map.webp';
 import { cardData } from './Kitecampdata'; // Importing card data
 

@@ -1,10 +1,11 @@
 import React from 'react'
-import hotel1 from "../../../Images/hotel1.png";
-import hotel2 from "../../../Images/hotel2.png";
-import hotel3 from "../../../Images/hotel3.png";
-import service1 from "../../../Images/service1.png";
-import service2 from "../../../Images/service2.png";
-import service3 from "../../../Images/service3.png";
+import hotel1 from "../../../Images/hotel1.webp";
+import hotel2 from "../../../Images/hotel2.webp";
+import hotel3 from "../../../Images/hotel3.webp";
+
+import service1 from "../../../Images/service1.webp";
+import service2 from "../../../Images/service2.webp";
+import service3 from "../../../Images/service3.webp";
 
 const accomodationData = [
   {

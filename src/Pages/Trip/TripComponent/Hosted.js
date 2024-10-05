@@ -1,9 +1,10 @@
 import React from 'react'
-import img1 from "../../../Images/Hosted1.png"
+import img1 from "../../../Images/Hosted1.webp"
 import img2 from "../../../Images/hosted2.jpg"
-import img3 from "../../../Images/hosted3.png"
-import img4 from "../../../Images/hosted4.png"
+import img3 from "../../../Images/hosted3.webp"
+import img4 from "../../../Images/hosted4.webp"
 import earth from "../../../Images/earth.webp"
+
 import at from "../../../Images/at.webp"
 
 const Hosted = () => {

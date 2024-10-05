@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import tab1_1 from "../../../Images/tab1_1.webp";
 import tab1_2 from "../../../Images/tab1_2.webp";
-import tab1_card1 from "../../../Images/logo1.png";
-import tab1_card2 from "../../../Images/logo2.png";
-import tab1_card3 from "../../../Images/logo4.png";
-import tab1_card4 from "../../../Images/logo1.png";
+import tab1_card1 from "../../../Images/logo1.webp";
+import tab1_card2 from "../../../Images/logo2.webp";
+import tab1_card3 from "../../../Images/logo4.webp";
+import tab1_card4 from "../../../Images/logo1.webp";
 import tab2_1 from "../../../Images/DSC09834-1536x1024-1.webp";
 import tab2_2 from "../../../Images/E0105612-scaled.jpg";
 import tab3_1 from "../../../Images/tab1_2.webp";

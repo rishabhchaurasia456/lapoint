@@ -1,43 +1,5 @@
 
 
-
-// export const navItems = [
-//     {
-//         name: "Kitecamp",
-//         path: "/kitecamp",
-//         submenu: [
-//             { id: "1-2", name: "Vanlife", path: "/trip/vanlife", },
-//             { id: "1-3", name: "Zanzibar", path: "/trip/zanzibar", },
-//             { id: "1-4", name: "Brazil", path: "/trip/Brazil", },
-//             { id: "1-5", name: "Dakhla", path: "/trip/Dakhla", },
-//             { id: "1-6", name: "Sicily", path: "/trip/Sicily", },
-//             { id: "1-7", name: "Sail & Kite", path: "/trip/Sail&kite", },
-//             { id: "1-8", name: "Sky High Cape Town", path: "/trip/skyCapTown" },
-//             { id: "1-9", name: "Kite Mecca Tarifa", path: "/trip/KitemeccaTraifa" },
-//             { id: "1-10", name: "Endless Summer Party", path: "/trip/EndlessSummerParty", },
-//         ]
-//     },
-//     {
-//         name: "About",
-//         path: "/about"
-//     },
-//     {
-//         name: "Our Shop",
-//         path: "/"
-//     },
-//     {
-//         name: "Stories",
-//         path: "/"
-//     },
-//     {
-//         name: "Contact Us",
-//         path: "/contact"
-//     }
-// ];
-
-
-
-
 import vedio from '../../Images/website.filmpje.tarifa.mp4';
 
 
@@ -49,18 +11,15 @@ export const navItems = {
             name: "Kite Camps",
             path: '/kitecamp',
             submenu: [
-                // { id: "1-1", name: "KITECAMPS", path: '/kitecamp' },
-                { id: "1-2", name: "Vanlife", path: "/trip/vanlife", vedio: vedio},
-                { id: "1-3", name: "Zanzibar", path: "/trip/zanzibar", },
-                { id: "1-4", name: "Brazil", path: "/trip/Brazil", },
-                { id: "1-5", name: "Dakhla", path: "/trip/Dakhla", },
-                { id: "1-6", name: "Sicily", path: "/trip/Sicily", },
-                { id: "1-7", name: "Sail & Kite", path: "/trip/Sail&kite", },
-                { id: "1-8", name: "Sky High Cape Town", path: "/trip/skyCapTown" },
-                { id: "1-9", name: "Kite Mecca Tarifa", path: "/trip/KitemeccaTraifa" },
-                { id: "1-10", name: "Endless Summer Party", path: "/trip/EndlessSummerParty", },
-
-
+                { id: "1-2", path: "/trip/vanlife", trip_name: "Vanlife", vedio: vedio },
+                { id: "1-3", path: "/trip/zanzibar", trip_name: "zanzibar", vedio: vedio },
+                { id: "1-4", path: "/trip/Snowkite", trip_name: "Snowkite", vedio: vedio },
+                { id: "1-5", path: "/trip/skyCapTown", trip_name: "skyCapTown", vedio: vedio },
+                { id: "1-6", path: "/trip/KitemeccaTraifa", trip_name: "KitemeccaTraifa", vedio: vedio },
+                { id: "1-7", path: "/trip/EndlessSummerParty", trip_name: "EndlessSummerParty", vedio: vedio },
+                { id: "1-8", path: "/trip/Brazil", trip_name: "Brazil", vedio: vedio },
+                { id: "1-9", path: "/trip/Dakhla", trip_name: "Dakhla", vedio: vedio },
+                { id: "1-10", path: "/trip/Sail&kite", trip_name: "Sail&kite", vedio: vedio },
             ]
         },
         {
@@ -70,7 +29,7 @@ export const navItems = {
         },
 
         { id: "2", name: "School", path: '/' },
-        { id: "4", name: "Stories", path: '/Blog' },
+        { id: "4", name: "Stories", path: '/' },
         { id: "5", name: "Contact ", path: '/contact' },
     ],
 

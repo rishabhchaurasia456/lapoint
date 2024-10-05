@@ -1,6 +1,6 @@
 import React from 'react'
 
-import bgimg from '../../Images/bg_img.jpg';
+import bgimg from '../../Images/bg_img.webp';
 
 const content = {
     en: {

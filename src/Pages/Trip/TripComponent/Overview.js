@@ -1,12 +1,13 @@
 import React from 'react'
-import img1 from "../../../Images/level-icon-6.png"
-import img2 from "../../../Images/community-icon.png"
-import img3 from "../../../Images/level-icon-4.png"
-import img4 from "../../../Images/review-real-icon-2.png"
-import gall_img1 from '../../../Images/JordyBrouns-KiteActive-Sicily2022-239-800x600-1.jpg'
-import gall_img2 from '../../../Images/2S1A1600-scaled-e1724058576388.jpg'
-import gall_img3 from '../../../Images/kitecenter-zanzibar-edited-2046x2048-1-1200x900-1.webp'
-import gall_img4 from '../../../Images/img3.png'
+import img1 from "../../../Images/level-icon-6.webp"
+import img2 from "../../../Images/level-icon-3.webp"
+import img3 from "../../../Images/level-icon-4.webp"
+import img4 from "../../../Images/level-icon-2.webp"
+
+import gall_img1 from '../../../Images/img1.webp'
+import gall_img2 from '../../../Images/img2.webp'
+import gall_img3 from '../../../Images/img3.webp' 
+import gall_img4 from '../../../Images/img4.webp'
 
 const Overview = () => {
     return (

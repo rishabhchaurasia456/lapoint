@@ -74,12 +74,13 @@ const Navbar = ({ selectedLanguage, setSelectedLanguage }) => {
                   <ul className="Dp_dW">
                     {item.submenu.map((submenuItem, subIndex) => (
                       <li key={subIndex} className="submenu-item">
-                        <NavLink
-                          exact to={submenuItem.path} activeClassName="active" className="nav-links" onClick={handleClick} state={item.submenu.vedio}
-                        >
-                          {submenuItem.name}
-                        </NavLink>
 
+                       <NavLink
+                          exact to={submenuItem.path} activeClassName="active" className="nav-links" onClick={handleClick} state={{ trip_name: submenuItem.trip_name, vedio: submenuItem.vedio }}
+                        >
+                          {submenuItem.trip_name}
+                        </NavLink>
+                        
                         {submenuItem.video && (
                           <div className="video-container">
                             <video width="320" height="240" controls>
