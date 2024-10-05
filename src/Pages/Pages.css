@@ -92,7 +92,8 @@
   .bg-image {
     height: 500px;
   }
-  .bg_img_text{
+
+  .bg_img_text {
     font-size: 40px;
   }
 }
@@ -103,9 +104,6 @@
 /* ------------------------------------------- */
 /* kitecamp page css here  */
 /* --------------------------------------------- */
-
-
-
 
 
 /* this css only for herosec all pages */
@@ -150,6 +148,13 @@
   border-radius: 10px;
 }
 
+
+.trip_main_card {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 630px;
+}
+
 .kite_text {
   color: black;
   font-weight: 900;
@@ -179,6 +184,17 @@
 }
 
 
+@media only screen and (max-width: 600px) {
+  .map {
+    width: 100%;
+    height: 80%;
+    margin-top: 30%;
+    border-radius: 10px;
+  }
+
+}
+
+
 
 /* --------------------------------- */
 /* contact us pages css here  */
@@ -188,8 +204,8 @@
 .main_container {
   max-width: 800px;
   margin: auto;
-
 }
+
 
 .contact_text {
   color: #fcc116;
@@ -248,19 +264,80 @@
   background: #000;
 }
 
+.booking_logo {
+  width: 30%;
+  margin: 5px;
+}
+
+.show_trip_name {
+  font-size: 35px;
+  margin-left: 80px;
+  font-weight: bold;
+  font-family: "Amatic SC", sans-serif;
+  /* padding-top: 15px; */
+}
+
 
 .Booking_btn {
   background-color: #fcc116;
   color: white;
   font-size: 16px;
-  padding: 8px 20px;
-  margin: 10px;
+  padding: 9px 25px;
+  margin: 18px !important;
   border: 0;
   border-radius: 5px;
   text-decoration: none;
 }
 
-.right_div{
+.right_div {
+  margin-top: 10px;
   float: right;
-  font-weight: bold;
+}
+
+.right_div span {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .booking_cont {
+    margin: 0;
+    padding: 5px !important;
+  }
+
+  .Booking_btn {
+    margin: 0px !important;
+    margin-left: 80px !important;
+    font-size: 18px !important;
+    padding: 5px 20px;
+  }
+
+  .booking_logo {
+    width: 45%;
+    float: left;
+    margin-right: 15%;
+    margin: 0;
+
+  }
+
+  .right_div {
+    margin: 0;
+    padding: 0 !important;
+    float: none !important;
+  }
+
+  .show_trip_name {
+    font-size: 24px;
+    margin-left: 10%;
+    padding: 0;
+  }
+
+  .right_div span {
+    padding: 0px;
+    font-size: 18px !important  ;
+    display: inline-block;
+    margin-left: 18px !important;
+  }
+
 }

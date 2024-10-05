@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { NavLink, useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate, useLocation } from 'react-router-dom';
 import "./Form.css"
 
 
@@ -89,100 +89,104 @@ const Levels = () => {
     });
   };
 
-
-
-
-
-
+  const location = useLocation();
+  const { tripName } = location.state || {};
 
   return (
     <div>
+
       <div className="container-fluid level_container ">
-        <div className="row">
+        <div className="row pb-3">
           <div className="col-md-2"></div>
           <div className="col-md-8">
-            <form onSubmit={handleNext} >
+
+            <div class="mt-4 pt-5 mb-5">
               {/* show the trip name  */}
-              <h1 className=' mx-2 level_heading fs-1'>Trip name </h1>
-              <div class="container-fluid mt-5 pt-5 mb-5">
-                <h5 className='level_heading'>Choose duration</h5>
-                {/* Dropdown for selecting the duration */}
-                <select className="form-control w-100 p-3" id="duration" onChange={handleDurationChange} value={selectedDuration} required>
-                  <option>1 week</option>
-                  <option>10 Days</option>
-                  <option>2 weeks</option>
-                </select>
-                <h5 className='level_heading'>Choose one package per traveller</h5>
-                <div className="container-fluid">
-                  {/* Dynamically render rows for each level with updated prices */}
-                  {levels.map((item, index) => (
-                    <div className="row form_crd_row mt-4" key={index}>
-                      <div className="col-md-9">
-                        <div className='level_crd_text'>
-                          <p className='level_crd_para'>
-                            <span>
-                              <b>{item.level}</b>
+              <h1 className='tripName' >
+                {/* <p>{tripName ? `${tripName}` : 'No trip selected'}</p> */}
+                {tripName}
+              </h1>
+            </div>
 
-                            </span>{' '}
-                            | <span>From € {item.price}</span>
-                          </p>
-                        </div>
+            <form onSubmit={handleNext} >
+              <h5 className='level_heading'>Choose duration</h5>
+              {/* Dropdown for selecting the duration */}
+              <select className="form-control w-100 p-3" id="duration" onChange={handleDurationChange} value={selectedDuration} required>
+                <option>1 week</option>
+                <option>10 Days</option>
+                <option>2 weeks</option>
+              </select>
+              <h5 className='level_heading'>Choose one package per traveller</h5>
+              <div className="container-fluid">
+                {/* Dynamically render rows for each level with updated prices */}
+                {levels.map((item, index) => (
+                  <div className="row form_crd_row mt-4" key={index}>
+                    <div className="col-md-9">
+                      <div className='level_crd_text'>
+                        <p className='level_crd_para'>
+                          <span>
+                            <b>{item.level}</b>
 
-                        {/* Car Rental Option for each level */}
-                        <div className="mx-3 my-3 ">
-                          <div className="form-check ">
-                            <input type="checkbox"
-                              className="form-check-input"
-                              id={`carRental-${index}`}
-                              checked={carRentalSelections[index]}
-                              onChange={() => {
-                                toggleCarRental(index);
-                                // handleLevelChange(item.level); // Set level when checkbox is checked
-                              }}
-                              disabled={index === 0} // Disable for Level 1
-                              required
-                            />
-                            <label className="form-check-label " htmlFor={`carRental-${index}`}>
-                              {index === 0
-                                ? 'Car Rental for Level 1 – Always Included (€100 per person)'
-                                : `Add Car Rental for ${item.level} (€100 per person)`}
-                            </label>
-                          </div>
-                        </div>
-
-                        {/* div for more info  btn  */}
-
-                        <div className='mx-3 mb-2'>
-                          <NavLink to="/form" className='moreinfo_btn'>
-                            More info
-                          </NavLink>
-                        </div>
-
-
+                          </span>{' '}
+                          | <span>From € {item.price}</span>
+                        </p>
                       </div>
 
-                      <div className="col-md-3">
-                        <i className="fa fa-minus-circle P_M_icon " onClick={(e) => { e.preventDefault(); decrement(index); }}></i>
-                        <span className='add_num'>{counts[index]}</span>
-                        <i className="fa fa-plus-circle P_M_icon" onClick={(e) => { e.preventDefault(); increment(index); }} ></i>
+                      {/* Car Rental Option for each level */}
+                      <div className="mx-3 my-3 ">
+                        <div className="form-check ">
+                          <input type="checkbox"
+                            className="form-check-input"
+                            id={`carRental-${index}`}
+                            checked={carRentalSelections[index]}
+                            onChange={() => {
+                              toggleCarRental(index);
+                              // handleLevelChange(item.level); // Set level when checkbox is checked
+                            }}
+                            disabled={index === 0} // Disable for Level 1
+                            required
+                          />
+                          <label className="form-check-label " htmlFor={`carRental-${index}`}>
+                            {index === 0
+                              ? 'Car Rental for Level 1 – Always Included (€100 per person)'
+                              : `Add Car Rental for ${item.level} (€100 per person)`}
+                          </label>
+                        </div>
+                      </div>
+
+                      {/* div for more info  btn  */}
+
+                      <div className='mx-3 mb-2'>
+                        <NavLink to="/form" className='moreinfo_btn'>
+                          More info
+                        </NavLink>
                       </div>
 
 
                     </div>
-                  ))}
-                </div>
+
+                    <div className="col-md-3">
+                      <i className="fa fa-minus-circle P_M_icon " onClick={(e) => { e.preventDefault(); decrement(index); }}></i>
+                      <span className='add_num'>{counts[index]}</span>
+                      <i className="fa fa-plus-circle P_M_icon" onClick={(e) => { e.preventDefault(); increment(index); }} ></i>
+                    </div>
 
 
-                <div className='btn_container'>
-                  <button className="level_btn " onClick={handleNext}>
-                    Continue <i className='fa fa-arrow-right'></i>
-                  </button>
-                </div>
-
-                {/* Button to navigate to the next page and pass data */}
-
-
+                  </div>
+                ))}
               </div>
+
+
+              <div className='btn_container'>
+                <button className="level_btn " onClick={handleNext}>
+                  Continue <i className='fa fa-arrow-right'></i>
+                </button>
+              </div>
+
+              {/* Button to navigate to the next page and pass data */}
+
+
+
             </form>
           </div>
           <div className="col-md-2"></div>

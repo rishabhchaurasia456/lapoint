@@ -1,7 +1,6 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './Pages/Home/Home';
-import Blog from './Pages/Home/Blog';
 import { useState } from 'react';
 import Trip from './Pages/Trip/Trip';
 import Aboutus from './Pages/About/Aboutus';
@@ -15,10 +14,11 @@ import Activity from './Form/Activity';
 import Checkout from './Form/Checkout';
 import Userinfo from './Form/Userinfo';
 import KiteLayout from './Pages/kiteLayout';
-import Aff_Layout from './Affiliate/Aff_Layout';
-import Aff_Dashboard from './Affiliate/Aff_Dashboard';
-import NewAffiliate from './Affiliate/NewAffiliate';
-import MyCreative from './Affiliate/MyCreative';
+// import Aff_Layout from './Affiliate/Aff_Layout';
+// import Aff_Dashboard from './Affiliate/Aff_Dashboard';
+// import NewAffiliate from './Affiliate/NewAffiliate';
+// import MyCreative from './Affiliate/MyCreative';
+import Formlayout from './Form/Formlayout';
 
 function App() {
   const [selectedLanguage, setSelectedLanguage] = useState('en');
@@ -33,12 +33,7 @@ function App() {
               <Home selectedLanguage={selectedLanguage} />
             </KiteLayout>
           } />
-
-          <Route path='/blog' element={
-            <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
-              <Blog />
-            </KiteLayout>
-          } />
+       
 
           <Route path='/about' element={
             <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
@@ -60,7 +55,7 @@ function App() {
 
           {/* kite camp  all pages routes here  */}
           <Route path='/kitecamp' element={
-            <KiteLayout>
+            <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
               <Kitecamp />
             </KiteLayout>
           }>
@@ -68,53 +63,61 @@ function App() {
           </Route>
 
           <Route path='/form' element={
-            <>
+            <Formlayout>
               <Levels />
-            </>
+            </Formlayout>
           } />
           <Route path="/datepicker" element={
-            <>
+            <Formlayout>
               <Datepicker />
-            </>
+            </Formlayout>
           } />
           <Route path="/room" element={
             <>
-              <Room />
+              <Formlayout>
+                <Room />
+              </Formlayout>
             </>
           } />
           <Route path="/activity" element={
             <>
-              <Activity />
+              <Formlayout>
+                <Activity />
+              </Formlayout>
             </>
           } />
           <Route path="/checkout" element={
             <>
-              <Checkout />
+              <Formlayout>
+                <Checkout />
+              </Formlayout>
             </>
           } />
           <Route path="/userinfo" element={
             <>
-              <Userinfo />
+              <Formlayout>
+                <Userinfo />
+              </Formlayout>
             </>
           } />
 
-          <Route path="/affiliate_admin" element={
+          {/* <Route path="/affiliate_admin" element={
             <Aff_Layout>
               <Aff_Dashboard />
             </Aff_Layout>
-          } />
+          } /> */}
 
-          <Route path="/new_affiliate" element={
+          {/* <Route path="/new_affiliate" element={
             <Aff_Layout>
               <NewAffiliate />
             </Aff_Layout>
-          } />
+          } /> */}
 
-          <Route path="/myCreative" element={
+          {/* <Route path="/myCreative" element={
             <Aff_Layout>
               <MyCreative />
             </Aff_Layout>
-          } />
+          } /> */}
 
 
         </Routes>

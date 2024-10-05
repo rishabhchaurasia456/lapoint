@@ -57,7 +57,7 @@ const Checkout = () => {
                     </div>
                 </div>
 
-                <div className="container">
+                {/* <div className="container"> */}
                     <div className="row">
                         <div className="col-lg-2"></div>
                         <div className="col-lg-8">
@@ -152,12 +152,13 @@ const Checkout = () => {
                                         Confirm and Pay
                                     </button>
                                 </div>
+                                
 
                             </div>
                         </div>
                         <div className="col-lg-2"></div>
                     </div>
-                </div>
+                {/* </div> */}
             </div>
         </>
     );

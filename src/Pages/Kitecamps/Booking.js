@@ -1,57 +1,54 @@
 import React from 'react'
 
 import logo from '../../Images/logo-kiteactive.svg'
-import { NavLink, useLocation } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
-const Booking = () => {
+const Booking = ({ tripName }) => {
 
-    const location = useLocation();
-    const { trip_name } = location.state || {}; 
+    // const location = useLocation();
+    // const { trip_name } = location.state || {}; 
     return (
         <div>
 
-            <div className=" container-fluid booking_cont">
-                <div className="row m-0 p-0">
-                    {/* logo  */}
-                    <div className="col-6">
-                    <span>
-                        <img src={logo} alt="" className='img-fluid w-25 m-auto mt-2' />
-                    </span>
-
-
-                      {/* when i clik the any trip then show here trip name  */}
-                        <span className='mx-5 fs-4 fw-bold' >                           
-                            {/* {trip_name ? `Welcome to ${trip_name}` : 'No trip selected'} */}
-                            {trip_name} 
+            <div className="container-fluid booking_cont">
+                <div className="row ">
+                    {/* Logo and Trip Name */}
+                    <div className="col-lg-6">
+                      <div className="d-flex ">
+                      <img src={logo} alt="" className="booking_logo" />
+                        <span className="show_trip_name">
+                            {tripName}
                         </span>
+                      </div>
                     </div>
 
-                    {/* booking button  */}
-                    <div className="col-6">
-                        <div className="right_div">
-                            <span className='mx-3'>
+                    {/* Booking button and Pricing */}
+                    <div className="col-lg-6 ">
+                        <div className='right_div'>
+                            <span className="mx-2">
                                 From
                             </span>
-                            <span className='mx-3'>
+                            <span className="mx-2">
                                 $420.54
                             </span>
-                            <span className='mx-3'>
+                            <span className="mx-2">
                                 / Week
                             </span>
-                            <span className=''>
-                                <NavLink to="/form" className='Booking_btn'>
+                            <span className="mx-2">
+                                <NavLink to="/form" state={{ tripName }} className="Booking_btn">
                                     Book
                                 </NavLink>
                             </span>
 
-                            {/* whatsapp icon  */}
-                            <span>
-                                <i className='fa fa-whatsapp fs-3 text-warning me-3 px-3'></i>
+                            {/* WhatsApp Icon */}
+                            <span className="mx-2">
+                                <i className="fa fa-whatsapp fs-3 text-warning"></i>
                             </span>
                         </div>
                     </div>
                 </div>
             </div>
+
 
         </div>
     )

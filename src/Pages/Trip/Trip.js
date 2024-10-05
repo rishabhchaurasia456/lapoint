@@ -106,7 +106,7 @@ const Trip = () => {
                 </div>
 
                 {/* booking component import here   and this css pages.css */}
-                <Booking />
+                <Booking tripName={trip_name}/>
             </div>
         </div>
     )

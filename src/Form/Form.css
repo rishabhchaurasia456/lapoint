@@ -2,6 +2,7 @@
 
 .level_container {
     background-color: black;
+    height: 100%;
 }
 
 .level_heading {
@@ -11,6 +12,36 @@
     font-size: 22px;
     margin-top: 15px;
 }
+
+.tripName {
+    max-width: 900px;
+    color: white;
+    text-transform: uppercase;
+    font-family: "Amatic SC", sans-serif;
+    letter-spacing: 3px;
+    text-align: center;
+    font-size: 60px !important;
+    font-weight: bolder;
+    margin-bottom: 5%;
+}
+
+
+@media (max-width: 768px) {
+
+    .tripName {
+        font-size: 30px !important;
+    }
+}
+
+.person_week {
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 35px;
+}
+
+
 
 .form_crd_row {
     border-radius: 10px;
@@ -249,7 +280,7 @@
 
 /* toggel btn for same information for Traveller 1 */
 
-/* From Uiverse.io by TimTrayler */ 
+/* From Uiverse.io by TimTrayler */
 .switch {
     --secondary-container: #dbd0ac;
     --primary: #ffc800;
@@ -258,16 +289,16 @@
     display: inline-block;
     width: 3.4em;
     height: 1.5em;
-   }
-   
-   .switch input {
+}
+
+.switch input {
     display: none;
     opacity: 0;
     width: 0;
     height: 0;
-   }
-   
-   .slider {
+}
+
+.slider {
     position: absolute;
     cursor: pointer;
     top: 0;
@@ -277,9 +308,9 @@
     background-color: #b4b4b4;
     transition: .2s;
     border-radius: 30px;
-   }
-   
-   .slider:before {
+}
+
+.slider:before {
     position: absolute;
     content: "";
     height: 1.2em;
@@ -289,20 +320,74 @@
     bottom: 0.2em;
     background-color: #393939;
     transition: .4s;
-   }
-   
-   input:checked + .slider::before {
+}
+
+input:checked+.slider::before {
     background-color: var(--primary);
-   }
-   
-   input:checked + .slider {
+}
+
+input:checked+.slider {
     background-color: var(--secondary-container);
-   }
-   
-   input:focus + .slider {
+}
+
+input:focus+.slider {
     box-shadow: 0 0 1px var(--secondary-container);
-   }
-   
-   input:checked + .slider:before {
+}
+
+input:checked+.slider:before {
     transform: translateX(1.9em);
-   }
+}
+
+
+
+
+/* ------------------------------------- */
+/* Form header css here  */
+/* ------------------------------------- */
+.left_icon {
+    font-size: 35px;
+    color: #ffc800;
+    font-weight: 800;
+    margin-top: 5%;
+    cursor: pointer;
+}
+
+.que_mark {
+    margin-top: 10px;
+    color: #ffc800;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.close_btn {
+    cursor: pointer;
+}
+
+.popup-box {
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    width: 350px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.popup-box p {
+    text-align: justify;
+    color: black;
+
+}
+
+
+
+
+
+
+
+
