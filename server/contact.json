@@ -1,0 +1,30 @@
+{
+  "contact": [
+    {
+      "id": "b8d3",
+      "first_name": "Rishabh",
+      "last_name": "Chaurasia",
+      "phone": "8882778976",
+      "email": "rishabhchaurasia456@gmail.com",
+      "address": "Laxmi vihar, Burari, Delhi",
+      "city": "New Delhi",
+      "zip": "110084",
+      "country": "India",
+      "company": "techmet",
+      "website": "https://64d377c48b916e55f1ec7525--cute-cajeta-597d5c.netlify.app/"
+    },
+    {
+      "id": "000d",
+      "first_name": "Mohit",
+      "last_name": "verma",
+      "phone": "9878461531",
+      "email": "maaprakriti6@gmail.com",
+      "address": "KH No.- 443",
+      "city": "New Delhi",
+      "zip": "110084",
+      "country": "India",
+      "company": "Maa Prakriti",
+      "website": "betyphon"
+    }
+  ]
+}

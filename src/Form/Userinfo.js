@@ -1,7 +1,6 @@
-
-
 import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
+import axios from 'axios';
 
 const Userinfo = () => {
     const location = useLocation();
@@ -172,10 +171,99 @@ const Userinfo = () => {
 
 
     // Function to submit and log traveler and user data
-    const handleSubmit = (e) => {
+    // const handleSubmit = (e) => {
+    //     e.preventDefault();
+    //     console.log('User Info for Payment:', userDetails);
+    //     console.log('Travellers Info:', travellers);
+
+    //     const accessToken = '1000.0d3efdb67f8152d5a7888948d59f268f.ac1cc8aa667d89eddc3f1aabfa267235'; // Your access token
+
+    //     const config = {
+    //         headers: {
+    //         Authorization: Zoho-oauthtoken ${accessToken},
+    //         'Content-Type': 'application/json',
+    //         },
+    //     };
+    // };
+    // const handleSubmit = async (e) => {
+    //     e.preventDefault();
+    
+    //     // Zoho Books API Access Token (replace with your token)
+    //     const accessToken = '1000.0d3efdb67f8152d5a7888948d59f268f.ac1cc8aa667d89eddc3f1aabfa267235'; // Replace with your actual access token
+    
+    //     const config = {
+    //         headers: {
+    //             Authorization: Zoho-oauthtoken ${accessToken},
+    //             'Content-Type': 'application/json',
+    //         },
+    //     };
+    
+    //     // Prepare user data for Zoho Books
+    //     const customerData = {
+    //         contact_name: ${userDetails.firstName} ${userDetails.lastName},  // Full name
+    //         email: userDetails.email,                                          // Email
+    //         phone: userDetails.phone,                                          // Phone number
+    //         billing_address: {
+    //             attention: userDetails.firstName,
+    //             address: "Not provided",                                       // You can add a placeholder or actual address
+    //             city: "Not provided",
+    //             state: "Not provided",
+    //             zip: "000000",
+    //             country: "Not provided",
+    //         },
+    //     };
+    
+    //     try {
+    //         // Make the API request to Zoho Books
+    //         const response = await axios.post(
+    //             'https://books.zoho.com/api/v3/contacts',{  // Endpoint to create contact
+    //             customerData,                             // User details payload
+    //             config                                    // Auth headers
+    //             }
+    //         );
+    //         console.log('Customer created:', response.data);  // Successful response
+    //     } catch (error) {
+    //         console.error('Error creating customer:', error.response?.data || error.message);  // Handle errors
+    //     }
+    // };
+
+    
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log('User Info for Payment:', userDetails);
-        console.log('Travellers Info:', travellers);
+        
+        const customerData = {
+            contact_name: `${userDetails.firstName} ${userDetails.lastName}`,
+            company_name: 'Your Company Name',  // Replace with actual company name
+            contact_persons: [
+                {
+                    first_name: userDetails.firstName,
+                    last_name: userDetails.lastName,
+                    email: userDetails.email,
+                    phone: userDetails.phone
+                }
+            ]
+        };
+        
+        try {
+            const accessToken = '1000.0d3efdb67f8152d5a7888948d59f268f.ac1cc8aa667d89eddc3f1aabfa267235'; // Replace with your actual access token
+            const response = await axios.post(
+                'https://cors-anywhere.herokuapp.com/https://books.zoho.com/api/v3/contacts',
+                customerData,
+                {
+                    headers: {
+                        Authorization: `Zoho-oauthtoken ${accessToken}`,
+                        'Content-Type': 'application/json',
+                    },
+                }
+            );
+            console.log('Customer created:', response.data);
+        } catch (error) {
+            if (error.response) {
+                console.error('Error response:', error.response.data);
+            } else {
+                console.error('Error creating customer:', error.message);
+            }
+        }
     };
 
     const renderTravellerForms = () => {

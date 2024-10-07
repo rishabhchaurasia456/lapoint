@@ -18,10 +18,10 @@ import Activity from './Form/Activity';
 import Checkout from './Form/Checkout';
 import Userinfo from './Form/Userinfo';
 import KiteLayout from './Pages/kiteLayout';
-// import Aff_Layout from './Affiliate/Aff_Layout';
-// import Aff_Dashboard from './Affiliate/Aff_Dashboard';
-// import NewAffiliate from './Affiliate/NewAffiliate';
-// import MyCreative from './Affiliate/MyCreative';
+import Aff_Layout from './Affiliate/Aff_Layout';
+import Aff_Dashboard from './Affiliate/Aff_Dashboard';
+import NewAffiliate from './Affiliate/NewAffiliate';
+import MyCreative from './Affiliate/MyCreative';
 import Formlayout from './Form/Formlayout';
 
 function App() {
@@ -108,23 +108,23 @@ function App() {
             </>
           } />
 
-          {/* <Route path="/affiliate_admin" element={
+          <Route path="/affiliate_admin" element={
             <Aff_Layout>
               <Aff_Dashboard />
             </Aff_Layout>
-          } /> */}
+          } />
 
-          {/* <Route path="/new_affiliate" element={
+          <Route path="/new_affiliate" element={
             <Aff_Layout>
               <NewAffiliate />
             </Aff_Layout>
-          } /> */}
+          } />
 
-          {/* <Route path="/myCreative" element={
+          <Route path="/myCreative" element={
             <Aff_Layout>
               <MyCreative />
             </Aff_Layout>
-          } /> */}
+          } />
 
 
         </Routes>
