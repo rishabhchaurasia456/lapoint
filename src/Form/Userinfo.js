@@ -145,15 +145,6 @@ const Userinfo = () => {
 
 
 
-    // banck btn js 
-
-    // const navigate = useNavigate();
-
-    // const goBack = () => {
-    //     navigate(-1); // This navigates to the previous page in history
-    // };
-
-
     // Handle toggling to use same details for Traveller 1
     const handleToggle = () => {
         setUseSameDetails(!useSameDetails);
@@ -167,67 +158,103 @@ const Userinfo = () => {
 
 
 
-
-
-
     // Function to submit and log traveler and user data
-    // const handleSubmit = (e) => {
-    //     e.preventDefault();
-    //     console.log('User Info for Payment:', userDetails);
-    //     console.log('Travellers Info:', travellers);
-
-    //     const accessToken = '1000.0d3efdb67f8152d5a7888948d59f268f.ac1cc8aa667d89eddc3f1aabfa267235'; // Your access token
-
-    //     const config = {
-    //         headers: {
-    //         Authorization: Zoho-oauthtoken ${accessToken},
-    //         'Content-Type': 'application/json',
-    //         },
-    //     };
-    // };
     // const handleSubmit = async (e) => {
     //     e.preventDefault();
-    
-    //     // Zoho Books API Access Token (replace with your token)
-    //     const accessToken = '1000.0d3efdb67f8152d5a7888948d59f268f.ac1cc8aa667d89eddc3f1aabfa267235'; // Replace with your actual access token
-    
-    //     const config = {
-    //         headers: {
-    //             Authorization: Zoho-oauthtoken ${accessToken},
-    //             'Content-Type': 'application/json',
-    //         },
-    //     };
-    
-    //     // Prepare user data for Zoho Books
+        
+    //     const ZOHO_REFRESH_TOKEN = "1000.ba8df45b4690b9167193757e117297ae.d41191118c1efc83f10383c1f82d2e9f"; 
+    //     const ZOHO_CLIENT_ID = "1000.RP27OLBHIZMFTQNPC9F5H8E0WYW1XO";
+    //     const ZOHO_CLIENT_SECRET = "a6aa0e9c2cc5aeebbbe2a20f056cda5b2f8d617d02";
+        
     //     const customerData = {
-    //         contact_name: ${userDetails.firstName} ${userDetails.lastName},  // Full name
-    //         email: userDetails.email,                                          // Email
-    //         phone: userDetails.phone,                                          // Phone number
-    //         billing_address: {
-    //             attention: userDetails.firstName,
-    //             address: "Not provided",                                       // You can add a placeholder or actual address
-    //             city: "Not provided",
-    //             state: "Not provided",
-    //             zip: "000000",
-    //             country: "Not provided",
-    //         },
+    //         contact_name: `${userDetails.firstName} ${userDetails.lastName}`,
+    //         company_name: 'Your Company Name',  // Replace with actual company name
+    //         contact_persons: [
+    //             {
+    //                 first_name: userDetails.firstName,
+    //                 last_name: userDetails.lastName,
+    //                 email: userDetails.email,
+    //                 phone: userDetails.phone
+    //             }
+    //         ]
     //     };
-    
+
+        
     //     try {
-    //         // Make the API request to Zoho Books
+
+    //         const tokenResponse = await axios.post(
+    //             "https://accounts.zoho.com/oauth/v2/token",
+    //             new URLSearchParams({
+    //               grant_type: "refresh_token",
+    //               refresh_token: ZOHO_REFRESH_TOKEN,
+    //               client_id: ZOHO_CLIENT_ID,
+    //               client_secret: ZOHO_CLIENT_SECRET
+    //             })
+    //           );
+
+    //         // const accessToken = '1000.ca49faa89995a5cc3d5ce6d8aa3e7619.c90c20d332ca7de8f56821d9a2f30c59'; // Replace with your actual access token
     //         const response = await axios.post(
-    //             'https://books.zoho.com/api/v3/contacts',{  // Endpoint to create contact
-    //             customerData,                             // User details payload
-    //             config                                    // Auth headers
+    //             'https://books.zoho.com/api/v3/contacts?organization_id=848230206',
+    //             customerData,
+    //             {
+    //                 headers: {
+    //                     Authorization: `Zoho-oauthtoken ${tokenResponse}`,
+    //                     'Content-Type': 'application/json',
+    //                 },
     //             }
     //         );
-    //         console.log('Customer created:', response.data);  // Successful response
+    //         console.log('Customer created:', response.data);
     //     } catch (error) {
-    //         console.error('Error creating customer:', error.response?.data || error.message);  // Handle errors
+    //         if (error.response) {
+    //             console.error('Error response:', error.response.data);
+    //         } else {
+    //             console.error('Error creating customer:', error.message);
+    //         }
     //     }
     // };
 
-    
+    // let data = {
+    //         userDetails: userDetails,
+    //         travellers: travellers
+    //       };
+        
+
+    // fetch('https://script.google.com/macros/s/AKfycbxlnXUi787wwwZEh5ZWRn18AUWJM7C_nI3gHz-mISxqdZjYCVqYyDs_PoO4sIgKk2-6Pw/exec', {
+    //     method: 'POST',
+    //     headers: {
+    //         'Content-Type': 'application/json'
+    //     },
+    //     body: JSON.stringify(data)
+    // }).then(response => {
+    //     return response.text();
+    // }).then(data => {
+    //     console.log("ADD in google sheet", data); // 'Data Saved Successfully' message from the web app
+    // }).catch(error => {
+    //     console.error('Error:', error);
+    // });
+    // console.log("userDetails",userDetails)
+    // console.log("travellers",travellers)
+
+    // working code 
+
+    const googleSubmit = async () => {
+      
+        // Bundle them into one object
+        let data = {
+          userDetails: userDetails,
+          travellers: travellers
+        };
+        console.log("ddddddddddddddd", data)
+        try {
+          // Send the data to the backend
+          const gresponse = await axios.post("http://localhost:5000/api/send-to-sheet", data);
+          console.log("Data sent to sheet successfully", gresponse.data);
+        } catch (error) {
+          // Log any errors for debugging
+          console.error("Error sending data to sheet:", error.response?.data || error.message);
+        }
+      };
+      
     const handleSubmit = async (e) => {
         e.preventDefault();
         
@@ -243,26 +270,13 @@ const Userinfo = () => {
                 }
             ]
         };
-        
+    
         try {
-            const accessToken = '1000.0d3efdb67f8152d5a7888948d59f268f.ac1cc8aa667d89eddc3f1aabfa267235'; // Replace with your actual access token
-            const response = await axios.post(
-                'https://cors-anywhere.herokuapp.com/https://books.zoho.com/api/v3/contacts',
-                customerData,
-                {
-                    headers: {
-                        Authorization: `Zoho-oauthtoken ${accessToken}`,
-                        'Content-Type': 'application/json',
-                    },
-                }
-            );
-            console.log('Customer created:', response.data);
+          const response = await axios.post("http://localhost:5000/api/send-to-zoho", customerData);
+          console.log("Data sent to Zoho successfully", response.data);
         } catch (error) {
-            if (error.response) {
-                console.error('Error response:', error.response.data);
-            } else {
-                console.error('Error creating customer:', error.message);
-            }
+            console.error("Error sending data to Zoho:", error);
+            googleSubmit();
         }
     };
 

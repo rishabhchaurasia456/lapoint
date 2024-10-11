@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { NavLink, useNavigate, useLocation } from 'react-router-dom';
 import "./Form.css"
+import axios from 'axios';
 
 
 const Levels = () => {
@@ -8,6 +9,11 @@ const Levels = () => {
   const [counts, setCounts] = useState([0, 0, 0]); // Separate counts for each level
   const [carRentalSelections, setCarRentalSelections] = useState([true, false, false]); // Car rental for Level 1 is always true
 
+
+  useEffect(() => {
+    const itemsResponse = axios.get("http://localhost:5000/api/get-data-to-zoho")
+    console.log("iiiiiiiiiiiiiiiiii", itemsResponse)
+  }, []);
 
   const navigate = useNavigate(); // useNavigate for navigation
 
