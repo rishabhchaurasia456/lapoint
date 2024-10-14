@@ -11,21 +11,22 @@ const Surfcamp = ({selectedLanguage}) => {
   const content = {
     en: {
         title: "Kiteactive",
-        title1: " for Veventures!",
-        subtitle: "Kiteactive for Veventures offers an unparalleled experience for adventure seekers and kite surfing enthusiasts. With our expertly curated trips, you can explore breathtaking destinations while enjoying world-class kite surfing conditions. We prioritize your comfort and safety, providing you with top-notch equipment and personalized guidance from our skilled instructors.",
+        title1: "for Veventures!",
+        subtitle: "Kiteactive for Veventures offers an unparalleled experience for adventure seekers and kite surfing enthusiasts. With our expertly curated trips, you can explore breathtaking destinations while enjoying world-class kite surfing conditions. We prioritize your comfort and safety, providing you with top-notch equipment and personalized guidance from our skilled instructors."
     },
     nl: {
         title: "Kiteactive",
         title1: "voor het leven!",
-        subtitle: "KiteActive, een kitesurfreismerk dat anders is dan anders. Wij creëren onvergetelijke avonturen die een community van gepassioneerde kitesurfers met elkaar verbinden. Of je nu op jacht bent naar wind of nieuwe vrienden ontmoet, KiteActive draait om het ten volle leven van het kitesurfen. Ga met ons mee op de kitetrip van je leven!",
+        subtitle: "KiteActive, een kitesurfreismerk dat anders is dan anders. Wij creëren onvergetelijke avonturen die een community van gepassioneerde kitesurfers met elkaar verbinden. Of je nu op jacht bent naar wind of nieuwe vrienden ontmoet, KiteActive draait om het ten volle leven van het kitesurfen. Ga met ons mee op de kitetrip van je leven!"
     },
-
-    hi: {
-        title: "काइटएक्टिव",
-        title1: "जीवन के लिए!",
-        subtitle: "काइटएक्टिव, एक असाधारण काइटसर्फ ट्रैवल ब्रांड। हम अविस्मरणीय रोमांच बनाते हैं जो भावुक काइटसर्फर्स के समुदाय को जोड़ते हैं। चाहे आप हवा का पीछा कर रहे हों या नए दोस्तों से मिल रहे हों, काइटएक्टिव का उद्देश्य पतंगबाजी के जीवन को पूरी तरह से जीना है। अपने जीवन की सबसे बेहतरीन पतंग यात्रा पर हमारे साथ जुड़ें!",
-    },
+    du: {
+        title: "Kiteactive",
+        title1: "voor het avontuur!",
+        subtitle: "KiteActive voor avonturiers biedt een ongeëvenaarde ervaring voor avonturiers en kitesurf-enthousiastelingen. Met onze zorgvuldig samengestelde reizen kun je adembenemende bestemmingen verkennen terwijl je geniet van kitesurfomstandigheden van wereldklasse. Wij geven prioriteit aan jouw comfort en veiligheid, met topkwaliteit uitrusting en persoonlijke begeleiding door onze ervaren instructeurs."
+    }
 };
+
+
 
   return (
     <div>

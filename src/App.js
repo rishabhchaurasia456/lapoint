@@ -2,7 +2,6 @@ import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import React from 'react';
 
-
 import Home from './Pages/Home/Home';
 
 import { useState } from 'react';
@@ -26,21 +25,19 @@ import Formlayout from './Form/Formlayout';
 
 function App() {
 
-
   const [selectedLanguage, setSelectedLanguage] = useState('en');
-  
+
   return (
     <div>
       <BrowserRouter>
         <ScrollToTop />
         <Routes>
-        
+
           <Route path='/' element={
             <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
               <Home selectedLanguage={selectedLanguage} />
             </KiteLayout>
-          } />        
-       
+          } />
 
           <Route path='/about' element={
             <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
@@ -56,7 +53,7 @@ function App() {
 
           <Route path='/contact' element={
             <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
-              <Contactus />
+              <Contactus selectedLanguage={selectedLanguage} />
             </KiteLayout>
           } />
 

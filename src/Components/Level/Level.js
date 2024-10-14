@@ -10,74 +10,75 @@ const Carddata_head_section = [
     {
         title: {
             en: "All levels are welcome!!",
-            nl: "Alle niveaus zijn welkom!", // Dutch
-            hi: "सभी स्तरों का स्वागत है!!", // Hindi
+            nl: "Alle niveaus zijn welkom!", // Netherlands
+            du: "Alle niveaus zijn welkom!!", // Dutch
         },
         subtitle: {
             en: "From beginner to pro",
-            nl: "Van beginner tot pro", // Dutch
-            hi: "शुरुआती से पेशेवर तक", // Hindi
+            nl: "Van beginner tot pro", // Netherlands
+            du: "Van beginner tot pro", // Dutch
         }
-    }
+    },
 ];
 
 const Card = [
     {
         link: {
             en: 'Beginner',
-            nl: 'Beginner', // Dutch
-            hi: 'शुरुआती', // Hindi
+            nl: 'Beginner', // Netherlands
+            du: 'Beginner', // Dutch
         },
         iconimg: img1,
         small: {
             en: "Learn the basics of kitesurfing",
-            nl: "Leer de basis van kitesurfen", // Dutch
-            hi: "काइटसर्फिंग की मूल बातें सीखें", // Hindi
+            nl: "Leer de basis van kitesurfen", // Netherlands
+            du: "Leer de basis van kitesurfen", // Dutch
         }
     },
     {
         link: {
             en: 'Water start',
-            nl: 'Waterstart', // Dutch
-            hi: 'वाटर स्टार्ट', // Hindi
+            nl: 'Waterstart', // Netherlands
+            du: 'Waterstart', // Dutch
         },
         iconimg: img2,
         small: {
             en: "Together we take the first steps!",
-            nl: "Samen zetten we de eerste stappen!", // Dutch
-            hi: "हम एक साथ पहले कदम उठाते हैं!", // Hindi
+            nl: "Samen zetten we de eerste stappen!", // Netherlands
+            du: "Samen zetten we de eerste stappen!", // Dutch
         }
     },
     {
         link: {
             en: 'Independent',
-            nl: 'Onafhankelijk', // Dutch
-            hi: 'स्वतंत्र', // Hindi
+            nl: 'Onafhankelijk', // Netherlands
+            du: 'Onafhankelijk', // Dutch
         },
         iconimg: img3,
         small: {
             en: "Learn new tricks",
-            nl: "Leer nieuwe trucs", // Dutch
-            hi: "नई तरकीबें सीखें", // Hindi
+            nl: "Leer nieuwe trucs", // Netherlands
+            du: "Leer nieuwe trucs", // Dutch
         }
     },
     {
         link: {
             en: 'Expert',
-            nl: 'Expert', // Dutch
-            hi: 'विशेषज्ञ', // Hindi
+            nl: 'Expert', // Netherlands
+            du: 'Expert', // Dutch
         },
         iconimg: img4,
         small: {
             en: "Train together for that one trick",
-            nl: "Train samen voor die ene truc", // Dutch
-            hi: "उस एक तरकीब के लिए एक साथ प्रशिक्षण लें", // Hindi
+            nl: "Train samen voor die ene truc", // Netherlands
+            du: "Train samen voor die ene truc", // Dutch
         }
     }
 ];
 
 
-const Level = ({selectedLanguage}) => {
+
+const Level = ({ selectedLanguage }) => {
     return (
         <div>
             <div className="container-fluid">

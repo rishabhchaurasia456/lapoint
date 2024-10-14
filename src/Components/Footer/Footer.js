@@ -6,7 +6,7 @@ import footerlogo from '../../Images/logo-kiteactive.svg'
   const footerhead = {
     headtitle : {
       en: "Unlock Your Surfing Adventure: Join Our Membership for 30€ Off",
-      hi: "हमारे सदस्यता समुदाय में शामिल हों और अपनी अगली सर्फ यात्रा पर 30€ की छूट पाएं!",
+      du: "Ontgrendel je surfavontuur: Word lid van onze community en ontvang 30€ korting op je volgende surftrip!",
       nl: "Word lid van onze ledencommunity en ontvang 30€ korting op je volgende surftrip!"
     }
 
@@ -14,123 +14,124 @@ import footerlogo from '../../Images/logo-kiteactive.svg'
 
   const sections = [
     {
-      heading: {
-        en: 'KiteActive World',
-        hi: 'काइटएक्टिव वर्ल्ड',
-        nl: 'KiteActive Wereld',
-      },
-      links: [
-        {
-          to: '/',
-          text: {
-            en: 'Kite Camps',
-            hi: 'काइट कैंप्स',
-            nl: 'Kitekampen',
-          },
+        heading: {
+            en: 'KiteActive World',
+            du: 'KiteActive Wereld', // Dutch translation
+            nl: 'KiteActive Wereld', // Netherlands translation
         },
-        {
-          to: '/',
-          text: {
-            en: 'Discover KiteActive',
-            hi: 'काइटएक्टिव के बारे में जानें',
-            nl: 'Ontdek KiteActive',
-          },
-        },
-        {
-          to: '/',
-          text: {
-            en: 'KiteActive Team',
-            hi: 'काइटएक्टिव टीम',
-            nl: 'KiteActive Team',
-          },
-        },
-        {
-          to: '/',
-          text: {
-            en: 'Kitesurfing Packages',
-            hi: 'काइटसर्फिंग पैकेज',
-            nl: 'Kitesurf Pakketten',
-          },
-        },
-        {
-          to: '/',
-          text: {
-            en: 'Become Teamrider',
-            hi: 'टीम राइडर बनें',
-            nl: 'Word Teamrijder',
-          },
-        },
-      ],
+        links: [
+            {
+                to: '/',
+                text: {
+                    en: 'Kite Camps',
+                    du: 'Kite Camps', // Dutch translation
+                    nl: 'Kitekampen', // Netherlands translation
+                },
+            },
+            {
+                to: '/',
+                text: {
+                    en: 'Discover KiteActive',
+                    du: 'Ontdek KiteActive', // Dutch translation
+                    nl: 'Ontdek KiteActive', // Netherlands translation
+                },
+            },
+            {
+                to: '/',
+                text: {
+                    en: 'KiteActive Team',
+                    du: 'KiteActive Team', // Dutch translation
+                    nl: 'KiteActive Team', // Netherlands translation
+                },
+            },
+            {
+                to: '/',
+                text: {
+                    en: 'Kitesurfing Packages',
+                    du: 'Kitesurfpakketten', // Dutch translation
+                    nl: 'Kitesurf Pakketten', // Netherlands translation
+                },
+            },
+            {
+                to: '/',
+                text: {
+                    en: 'Become Teamrider',
+                    du: 'Word Teamrijder', // Dutch translation
+                    nl: 'Word Teamrijder', // Netherlands translation
+                },
+            },
+        ],
     },
     {
-      heading: {
-        en: 'KiteActive World',
-        hi: 'काइटएक्टिव वर्ल्ड',
-        nl: 'KiteActive Wereld',
-      },
-      links: [
-        {
-          to: '/',
-          text: {
-            en: 'About Us',
-            hi: 'हमारे बारे में',
-            nl: 'Over ons',
-          },
+        heading: {
+            en: 'KiteActive World',
+            du: 'KiteActive Wereld', // Dutch translation
+            nl: 'KiteActive Wereld', // Netherlands translation
         },
-        {
-          to: '/',
-          text: {
-            en: 'Booking & Payment',
-            hi: 'बुकिंग और भुगतान',
-            nl: 'Boeking & Betaling',
-          },
-        },
-        {
-          to: '/',
-          text: {
-            en: 'Privacy Policy',
-            hi: 'गोपनीयता नीति',
-            nl: 'Privacybeleid',
-          },
-        },
-        {
-          to: '/',
-          text: {
-            en: 'Terms & Condition',
-            hi: 'नियम और शर्तें',
-            nl: 'Algemene Voorwaarden',
-          },
-        },
-        {
-          to: '/',
-          text: {
-            en: 'Cookies Policy',
-            hi: 'कुकीज नीति',
-            nl: 'Cookiebeleid',
-          },
-        },
-      ],
+        links: [
+            {
+                to: '/',
+                text: {
+                    en: 'About Us',
+                    du: 'Over ons', // Dutch translation
+                    nl: 'Over ons', // Netherlands translation
+                },
+            },
+            {
+                to: '/',
+                text: {
+                    en: 'Booking & Payment',
+                    du: 'Boeking en Betaling', // Dutch translation
+                    nl: 'Boeking & Betaling', // Netherlands translation
+                },
+            },
+            {
+                to: '/',
+                text: {
+                    en: 'Privacy Policy',
+                    du: 'Privacybeleid', // Dutch translation
+                    nl: 'Privacybeleid', // Netherlands translation
+                },
+            },
+            {
+                to: '/',
+                text: {
+                    en: 'Terms & Conditions',
+                    du: 'Algemene Voorwaarden', // Dutch translation
+                    nl: 'Algemene Voorwaarden', // Netherlands translation
+                },
+            },
+            {
+                to: '/',
+                text: {
+                    en: 'Cookies Policy',
+                    du: 'Cookiebeleid', // Dutch translation
+                    nl: 'Cookiebeleid', // Netherlands translation
+                },
+            },
+        ],
     },
-  ];
+];
 
-  const footerdata = {
-    maindesc: {
+
+const footerdata = {
+  maindesc: {
       en: "Join the KiteActive community! Discover the best kitespots in the world and make new friends! Together with our team we will make sure you will have the adventure of a lifetime!",
-      hi: "काइटएक्टिव समुदाय से जुड़ें! दुनिया के बेहतरीन काइटस्पॉट्स की खोज करें और नए दोस्तों से मिलें! हमारी टीम के साथ मिलकर हम यह सुनिश्चित करेंगे कि आपके पास जीवनभर का रोमांच हो!",
-      nl: "Sluit je aan bij de KiteActive-gemeenschap! Ontdek de beste kitespots ter wereld en maak nieuwe vrienden! Samen met ons team zorgen we ervoor dat je het avontuur van je leven beleeft!",
-    },
-    heading: {
+      du: "Sluit je aan bij de KiteActive-gemeenschap! Ontdek de beste kitespots ter wereld en maak nieuwe vrienden! Samen met ons team zorgen we ervoor dat je het avontuur van je leven beleeft!", // Dutch translation
+      nl: "Sluit je aan bij de KiteActive-gemeenschap! Ontdek de beste kitespots ter wereld en maak nieuwe vrienden! Samen met ons team zorgen we ervoor dat je het avontuur van je leven beleeft!", // Netherlands translation
+  },
+  heading: {
       en: "Contact Us",
-      hi: "हमसे संपर्क करें",
-      nl: "Neem contact met ons op",
-    },
-    para: {
+      du: "Neem contact met ons op", // Dutch translation
+      nl: "Neem contact met ons op", // Netherlands translation
+  },
+  para: {
       en: "For kitesurfing trips and inquiries, reach out to us! Contact our team today for the ride of your life!",
-      hi: "काइटसर्फिंग यात्राओं और पूछताछ के लिए, हमसे संपर्क करें! अपने जीवन की सवारी के लिए आज ही हमारी टीम से संपर्क करें!",
-      nl: "Voor kitesurfreizen en vragen kunt u contact met ons opnemen! Neem vandaag nog contact op met ons team voor de rit van je leven!",
-    },
-  };
-  
+      du: "Voor kitesurfreizen en vragen kunt u contact met ons opnemen! Neem vandaag nog contact op met ons team voor de rit van je leven!", // Dutch translation
+      nl: "Voor kitesurfreizen en vragen kunt u contact met ons opnemen! Neem vandaag nog contact op met ons team voor de rit van je leven!", // Netherlands translation
+  },
+};
+
 
 const Footer = ({selectedLanguage}) => {
     return (
@@ -161,7 +162,7 @@ const Footer = ({selectedLanguage}) => {
                                     {/* col one  */}
                                     <div class="col-12 col-md-4 col-lg-4 col-xl-3 p-0 m-0 mx-2">
                                         <div class="widget">
-                                            <Link to="/demo/gfastreact/">
+                                            <Link to="/">
                                                 <img src={footerlogo} alt="Logo" className='footerlogo' />
                                             </Link>
                                         </div>

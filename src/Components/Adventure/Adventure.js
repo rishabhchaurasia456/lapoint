@@ -15,7 +15,7 @@ const content = {
         subtitle: "Find your unforgettable",
         subtitle1: "tropical adventure of 2024!",
     },
-    hi: {
+    du: {
         title: "महान सर्फ, सूरज की रोशनी वाले समुद्र तट, पाम के पेड़ और गर्म मौसम?",
         subtitle: "अपना अविस्मरणीय खोजें",
         subtitle1: "2024 का उष्णकटिबंधीय साहसिक कार्य!",
@@ -33,7 +33,7 @@ const Adventuredata = [
         img: img1,
         title: {
             en: 'Ericeira',
-            hi: 'एरिसेरा',
+            du: 'एरिसेरा',
             nl: 'Ericeira'
         }
     },
@@ -42,7 +42,7 @@ const Adventuredata = [
         img: img2,
         title: {
             en: 'Alentejo',
-            hi: 'अलेंटेजो',
+            du: 'अलेंटेजो',
             nl: 'Alentejo'
         }
     },
@@ -51,7 +51,7 @@ const Adventuredata = [
         img: img3,
         title: {
             en: 'Hoddevika',
-            hi: 'होडेविका',
+            du: 'होडेविका',
             nl: 'Hoddevika'
         }
     },
@@ -60,7 +60,7 @@ const Adventuredata = [
         img: img4,
         title: {
             en: 'Fuerte Ventura',
-            hi: 'फुएर्टे वेंचुरा',
+            du: 'फुएर्टे वेंचुरा',
             nl: 'Fuerte Ventura'
         }
     },
@@ -69,7 +69,7 @@ const Adventuredata = [
         img: img5,
         title: {
             en: 'Ahangama',
-            hi: 'अहंगामा',
+            du: 'अहंगामा',
             nl: 'Ahangama'
         }
     },

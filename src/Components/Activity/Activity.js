@@ -15,11 +15,10 @@ const content = {
         title: "Activiteit",
         title1: "Ontdek onze ervaringen",
     },
-
-    hi: {
-        title: "गतिविधि",
-        title1: "हमारे अनुभव जानें",
-    },
+    du: {
+        title: "Activiteit", // Keeping it consistent with Dutch
+        title1: "Ontdek onze ervaringen", // Keeping it consistent with Dutch
+    }
 };
 
 const Activitydata = [
@@ -27,13 +26,13 @@ const Activitydata = [
         id: "1",
         img: img1,
         title: {
-            en: 'Old town erice',
-            hi: 'पुराना टाउन एरिसे', // Hindi translation
+            en: 'Old town Erice',
+            du: 'Oude stad Erice', // Dutch translation
             nl: 'Oude stad Erice' // Dutch translation
         },
         text: {
             en: 'All over the world',
-            hi: 'दुनिया भर में', // Hindi translation
+            du: 'Overal ter wereld', // Dutch translation
             nl: 'Overal ter wereld' // Dutch translation
         }
     },
@@ -41,13 +40,13 @@ const Activitydata = [
         id: "2",
         img: img2,
         title: {
-            en: 'Wine Testing',
-            hi: 'वाइन टेस्टिंग', // Hindi translation
+            en: 'Wine Tasting',
+            du: 'Wijnproeverij', // Dutch translation
             nl: 'Wijnproeverij' // Dutch translation
         },
         text: {
-            en: 'Ericeira & Sri lanka',
-            hi: 'एरिसेरा और श्री लंका', // Hindi translation
+            en: 'Ericeira & Sri Lanka',
+            du: 'Ericeira en Sri Lanka', // Dutch translation
             nl: 'Ericeira en Sri Lanka' // Dutch translation
         }
     },
@@ -56,16 +55,17 @@ const Activitydata = [
         img: img3,
         title: {
             en: 'To Climb',
-            hi: 'चढ़ने के लिए', // Hindi translation
+            du: 'Om te klimmen', // Dutch translation
             nl: 'Om te klimmen' // Dutch translation
         },
         text: {
             en: 'Work & Surf',
-            hi: 'काम और सर्फ', // Hindi translation
+            du: 'Werk en surfen', // Dutch translation
             nl: 'Werk en surfen' // Dutch translation
         }
     },
-]
+];
+
 
 const responsive = {
     superLargeDesktop: {

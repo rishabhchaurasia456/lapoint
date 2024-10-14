@@ -6,18 +6,18 @@ const content = {
     en: {
         title: "Sustainability",
         subtitle: "Thrills and Chills: Your Kiteactive Adventure Awaits",
-        para: "Get ready to embark on an unforgettable journey filled with thrills and chills with Kiteactive! From the exhilarating rush of kitesurfing over breathtaking waves to the serene moments spent soaking in stunning coastal views, our adventures cater to all levels of experience. Feel the adrenaline surge as you harness the power of the wind, and enjoy the thrill of mastering new skills alongside our expert instructors. Whether you're seeking the excitement of high-flying tricks or the tranquility of gliding across calm waters, Kiteactive promises a unique experience that will leave you invigorated and inspired. Your adventure starts here—join us and embrace the excitement that awaits!",
+        para: "Get ready to embark on an unforgettable journey filled with thrills and chills with Kiteactive! From the exhilarating rush of kitesurfing over breathtaking waves to the serene moments spent soaking in stunning coastal views, our adventures cater to all levels of experience. Feel the adrenaline surge as you harness the power of the wind, and enjoy the thrill of mastering new skills alongside our expert instructors. Whether you're seeking the excitement of high-flying tricks or the tranquility of gliding across calm waters, Kiteactive promises a unique experience that will leave you invigorated and inspired. Your adventure starts here—join us and embrace the excitement that awaits!"
     },
-    hi: {
-        title: "सस्टेनेबिलिटी",
-        subtitle: "2011, काइटएक्टिव पैदा हुआ",
-        para: "काइटएक्टिव ने वाड्डन द्वीपसमूह के साथ काइट और सेलिंग ट्रिप्स का आयोजन शुरू कर दिया. एक सप्ताह के इंटेंसिव काइटसर्फिंग (पाठ) और एक सप्ताह की छुट्टी के संयोजन ने एक अच्छा कॉन्सेप्ट साबित किया. हमारे यात्रा और काइटसर्फिंग के लिए जुनून ने सुनिश्चित किया है कि हमने दुनिया में कई काइटस्पॉट्स का दौरा किया है और अभी भी (सीखने के लिए) काइटसर्फ करने के लिए सर्वश्रेष्ठ गंतव्यों की तलाश कर रहे हैं. हमारे प्रशिक्षकों के अनुभव और उत्साह के लिए धन्यवाद, काइटएक्टिव ने निरंतर वृद्धि की है.",
+    du: {
+        title: "Duurzaamheid",
+        subtitle: "2011, KiteActive werd geboren",
+        para: "KiteActive heeft begonnen met het organiseren van kite- en zeilreizen langs de Waddeneilanden. De combinatie van een week intensief kitesurfen (lessen) en een week vakantie op een plek met de ingrediënten: wind, strand, water en een relaxte sfeer bleek een goed concept te zijn. Onze passie voor reizen en kitesurfen heeft ervoor gezorgd dat we veel kitespots in de wereld hebben bezocht en nog steeds op zoek zijn naar de beste bestemmingen om (leren) kitesurfen. Dankzij de ervaringen en enthousiasme van onze instructeurs, is KiteActive blijven groeien."
     },
     nl: {
         title: "Duurzaamheid",
-        subtitle: "2011, KiteActive werd geboren",
-        para: "KiteActive heeft begonnen met het organiseren van kite- en zeilreizen langs de Waddeneilanden. De combinatie van een week intensief kitesurfen (lessen) en een week vakantie op een plek met de ingrediënten: wind, strand, water en een relaxte sfeer bleek een goed concept te zijn. Onze passie voor reizen en kitesurfen heeft ervoor gezorgd dat we veel kitespots in de wereld hebben bezocht en nog steeds op zoek zijn naar de beste bestemmingen om (leren) kitesurfen. Dankzij de ervaringen en enthousiasme van onze instructeurs, is KiteActive blijven groeien.",
-    },
+        subtitle: "Thrills and Chills: Uw Kiteactive Avontuur Verwacht",
+        para: "Maak je klaar om een onvergetelijke reis te beginnen vol spanning en sensatie met Kiteactive! Van de opwindende rush van kitesurfen over adembenemende golven tot de serene momenten die je doorbrengt met het in je opnemen van prachtige kustgezichten, onze avonturen zijn geschikt voor alle ervaringsniveaus. Voel de adrenaline stijgen terwijl je de kracht van de wind benut, en geniet van de opwinding van het beheersen van nieuwe vaardigheden naast onze deskundige instructeurs. Of je nu op zoek bent naar de opwinding van hoge sprongen of de rust van het glijden over kalme wateren, Kiteactive belooft een unieke ervaring die je verkwikt en inspireert. Jouw avontuur begint hier—sluit je bij ons aan en omarm de opwinding die je te wachten staat!"
+    }
 }
 
 const Bgimage = ({selectedLanguage}) => {

@@ -4,17 +4,17 @@ const content = {
     en: {
         title: "Kiteactive",
         subtitle: "What it’s all about",
-        para: "In 2011 we expanded our destinations to include Tarifa, Brazil and in 2012 Zanzibar.This was followed by many other unique destinations. Each location has its own advantages from low-budget to ultimate experience. But what is always the same with every holiday is the unique location, good kite spot, relaxed atmosphere, active no-wind options and our experienced instructors.",
-    },
-    hi: {
-        title: "काइटएक्टिव",
-        subtitle: "यह सब क्या है",
-        para: "2011 में हमने टारिफा, ब्राजील और 2012 में ज़ांज़ीबार में अपने गंतव्यों का विस्तार किया. इसके बाद कई अन्य अनोखे गंतव्यों का पालन किया. प्रत्येक स्थान के अपने फायदे हैं निम्न- बजट से लेकर अल्टीमेट एक्सपीरियंस तक. लेकिन जो हर छुट्टी के साथ हमेशा समान है वह है अनोखा स्थान, अच्छा काइट स्पॉट, आरामदायक वातावरण, सक्रिय नो-विंड विकल्प और हमारे अनुभवी प्रशिक्षक.",
+        para: "In 2011 we expanded our destinations to include Tarifa, Brazil and in 2012 Zanzibar. This was followed by many other unique destinations. Each location has its own advantages from low-budget to ultimate experience. But what is always the same with every holiday is the unique location, good kite spot, relaxed atmosphere, active no-wind options, and our experienced instructors.",
     },
     nl: {
         title: "Kiteactive",
         subtitle: "Wat het allemaal om gaat",
-        para: "In 2011 hebben we onze bestemmingen uitgebreid om Tarifa, Brazilië en in 2012 Zanzibar te includeren. Dit werd gevolgd door veel andere unieke bestemmingen. Elk locatie heeft zijn eigen voordelen van laagbudget tot ultieme ervaring. Maar wat altijd hetzelfde is met elke vakantie is de unieke locatie, goede kite spot, ontspannen sfeer, actieve no-wind opties en onze ervaren instructeurs.",
+        para: "In 2011 hebben we onze bestemmingen uitgebreid om Tarifa, Brazilië en in 2012 Zanzibar op te nemen. Dit werd gevolgd door veel andere unieke bestemmingen. Elke locatie heeft zijn eigen voordelen, van laagbudget tot ultieme ervaring. Maar wat altijd hetzelfde is met elke vakantie is de unieke locatie, goede kite spot, ontspannen sfeer, actieve no-wind opties en onze ervaren instructeurs.",
+    },
+    du: {
+        title: "Kiteactive",
+        subtitle: "Wat het allemaal om gaat",
+        para: "In 2011 hebben we onze bestemmingen uitgebreid om Tarifa, Brazilië en in 2012 Zanzibar op te nemen. Dit werd gevolgd door veel andere unieke bestemmingen. Elke locatie heeft zijn eigen voordelen, van laagbudget tot ultieme ervaring. Maar wat altijd hetzelfde is met elke vakantie is de unieke locatie, goede kite spot, ontspannen sfeer, actieve no-wind opties en onze ervaren instructeurs.",
     },
 }
 
@@ -23,62 +23,61 @@ const textdata = [
         id: "1",
         title: {
             en: "The Heartbeat of KiteActive",
-            hi: "काइटएक्टिव की धड़कन",
-            nl: "Het Hart van KiteActive"
+            nl: "Het Hart van KiteActive",
+            du: "De Hartslag van KiteActive"
         },
         para: {
             en: "KiteActive’s mission is to give you the best kite/holiday. We offer kitesurfing lessons and clinics in the most beautiful places in the world. Thanks to our professional team of instructors, many locations have already been discovered and KiteActive has made a selection of the best destinations for you. By making competitive deals with accommodations at an early stage, you can always stay cheaply through us at the most beautiful locations directly or close to the beach.",
-            hi: "काइटएक्टिव का मिशन आपको सबसे अच्छा काइट/हॉलिडे देना है. हम दुनिया के सबसे सुंदर स्थानों में काइटसर्फिंग पाठ और क्लिनिक प्रदान करते हैं. हमारी पेशेवर टीम ऑफ इंस्ट्रक्टर्स के लिए, कई स्थानों की खोज की जा चुकी है और काइटएक्टिव ने आपके लिए सबसे अच्छे गंतव्यों का चयन किया है. प्रारंभिक चरण में आवास के साथ प्रतिस्पर्धी सौदे करने से, आप हमारे माध्यम से सबसे सुंदर स्थानों पर सस्ते में रह सकते हैं या समुद्र तट के पास.",
-            nl: "De missie van KiteActive is om u de beste kite/vakantie te geven. We bieden kitesurflessen en klinieken aan in de mooiste plaatsen ter wereld. Dankzij ons professionele team van instructeurs hebben we veel locaties al ontdekt en heeft KiteActive een selectie gemaakt van de beste bestemmingen voor u. Door concurrerende deals te maken met accommodaties op een vroeg stadium, kunt u altijd goedkoop verblijven via ons op de mooiste locaties rechtstreeks of dicht bij het strand."
+            nl: "De missie van KiteActive is om u de beste kite/vakantie te geven. We bieden kitesurflessen en klinieken aan in de mooiste plaatsen ter wereld. Dankzij ons professionele team van instructeurs hebben we veel locaties al ontdekt en heeft KiteActive een selectie gemaakt van de beste bestemmingen voor u. Door concurrerende deals te maken met accommodaties op een vroeg stadium, kunt u altijd goedkoop verblijven via ons op de mooiste locaties rechtstreeks of dicht bij het strand.",
+            du: "De missie van KiteActive is om je de beste kite/vakantie te geven. We bieden kitesurflessen en clinics aan op de mooiste plekken ter wereld. Dankzij ons professionele team van instructeurs zijn veel locaties al ontdekt en heeft KiteActive een selectie gemaakt van de beste bestemmingen voor jou. Door concurrerende deals met accommodaties in een vroeg stadium te maken, kun je altijd goedkoop bij ons verblijven op de mooiste locaties, direct of dichtbij het strand."
         }
     },
     {
         id: "2",
         title: {
             en: "The KiteActive Path to Wellness",
-            hi: "काइटएक्टिव का वेलनेस पथ",
-            nl: "De KiteActive Weg naar Welzijn"
+            nl: "De KiteActive Weg naar Welzijn",
+            du: "Het KiteActive Pad naar Welzijn"
         },
         para: {
             en: "From 2015 onwards we started to focus on every kitesurfer, from beginner to advanced, from the adventurous kiter who wants to travel alone to someone who wants to join a fun group. KiteActive – By kitesurfers, for kitesurfers. both on the surfboard and on the yoga mat and be more aware of your mind and body connection. Immersed in nature, the ocean and good vibes, we have the perfect setup for a feelgood week that definitely will give you a positive boost.",
-            hi: "2015 से हमने हर काइटसर्फर पर ध्यान देना शुरू कर दिया, शुरुआत से लेकर एडवांस्ड तक, साहसिक काइटर जो अकेले यात्रा करना चाहता है से लेकर किसी के साथ मज़ेदार समूह में शामिल होना चाहता है. काइटएक्टिव - काइटसर्फर्स द्वारा, काइटसर्फर्स के लिए. सर्फबोर्ड और योग मैट पर दोनों और अपने मन और शरीर के संबंध के बारे में अधिक जागरूक हैं. प्रकृति में, महासागर और अच्छे वाइब्स में, हमारे पास एक फीलगुड वीक के लिए परफेक्ट सेटअप है जो निश्चित रूप से आपको एक सकारात्मक बूस्ट देगा.",
-            nl: "Vanaf 2015 hebben we ons gefocust op elke kitesurfer, van beginner tot gevorderd, van de avontuurlijke kiter die alleen wil reizen tot iemand die een leuke groep wil joinen. KiteActive – Door kitesurfers, voor kitesurf",
+            nl: "Vanaf 2015 hebben we ons gefocust op elke kitesurfer, van beginner tot gevorderd, van de avontuurlijke kiter die alleen wil reizen tot iemand die een leuke groep wil joinen. KiteActive – Door kitesurfers, voor kitesurfers. Zowel op het surfboard als op de yogamat en meer bewust worden van je geest en lichaam. Ondergedompeld in de natuur, de oceaan en goede vibes, hebben we de perfecte opzet voor een feelgood week die je zeker een positieve boost zal geven.",
+            du: "Vanaf 2015 zijn we begonnen met focussen op elke kitesurfer, van beginner tot gevorderd, van de avontuurlijke kiter die alleen wil reizen tot iemand die zich bij een leuke groep wil voegen. KiteActive – Door kitesurfers, voor kitesurfers. Zowel op het surfboard als op de yogamat en bewuster worden van de verbinding tussen geest en lichaam. Ondergedompeld in de natuur, de oceaan en goede vibes, hebben we de perfecte opstelling voor een feelgood week die je zeker een positieve boost zal geven."
         }
     },
     {
         id: "3",
         title: {
             en: "Living the KiteActive Lifestyle",
-            hi: "काइटएक्टिव लाइफस्टाइल जीना",
-            nl: "Leven volgens de KiteActieve levensstijl"
+            nl: "Leven volgens de KiteActive levensstijl",
+            du: "Leven volgens de KiteActive levensstijl"
         },
         para: {
             en: "Embrace the freedom and excitement that comes with the KiteActive lifestyle! Whether you're soaring through the skies on a kite or enjoying the sun on pristine beaches, every moment is an opportunity for adventure and connection with nature. Our community thrives on passion, camaraderie, and the thrill of exploration, bringing together kitesurfing enthusiasts and outdoor lovers alike.",
-            hi: "एक पेशेवर और जुनूनी टीम, समुद्र तट और कंप्यूटर के पीछे. हम आपके काइटसर्फिंग ट्रिप का आयोजन करते हैं आखिरी विवरण तक! हम आपके साथ मिलने और एक महान हॉलिडे साथ में होने की उम्मीद करते हैं. समुद्र को बेहतर पढ़ना सीखें, लाइन-अप में अधिक आरामदायक हो जाएं और अपने सर्फिंग में सुधार के लिए व्यक्तिगत प्रतिक्रिया प्राप्त करें.",
-            nl: "Een professioneel en gepassioneerd team, op het strand en achter de computer. Wij organiseren jouw kitesurftrip tot in de puntjes! Wij kijken ernaar uit om je te ontmoeten en samen een geweldige vakantie te beleven!. Leer de oceaan beter te lezen, word comfortabeler in de line-up en krijg individuele feedback over de gebieden waarop je je surfvaardigheden moet verbeteren."
-            
+            nl: "Omarm de vrijheid en opwinding die de KiteActive levensstijl met zich meebrengt! Of je nu door de lucht zweeft op een kite of geniet van de zon op ongerepte stranden, elk moment is een kans voor avontuur en verbinding met de natuur. Onze gemeenschap bloeit op passie, kameraadschap en de opwinding van verkenning, die kitesurfenthousiasten en liefhebbers van de buitenlucht samenbrengt.",
+            du: "Omarm de vrijheid en opwinding die de KiteActive levensstijl met zich meebrengt! Of je nu door de lucht zweeft op een kite of geniet van de zon op ongerepte stranden, elk moment is een kans voor avontuur en verbinding met de natuur. Onze gemeenschap bloeit op passie, kameraadschap en de opwinding van verkenning, die kitesurfenthousiasten en liefhebbers van de buitenlucht samenbrengt."
         }
     },
     {
         id: "4",
         title: {
             en: "The KiteActive Experience",
-            hi: "काइटएक्टिव अनुभव",
-            nl: "De KiteActive-ervaring"
+            nl: "De KiteActive-ervaring",
+            du: "De KiteActive Ervaring"
         },
         para: {
             en: "Dive into the KiteActive experience, where adventure meets community! From the moment you join us, you’ll be immersed in a world of exhilarating kitesurfing, stunning landscapes, and like-minded enthusiasts who share your passion for the outdoors. Our carefully curated experiences cater to all skill levels, ensuring everyone can enjoy the thrill of riding the waves and harnessing the wind.",
-            hi: "आइए अपनी शक्तियों को एकजुट करें और भागीदार बनें! हमारे पास सभी के लिए भागीदार कार्यक्रम हैं। क्या आपके पास काइटस्कूल है? ट्रैवल एजेंसी है? या आप सिर्फ़ एक पतंगबाज़ हैं जो सोचता है कि वह काइटसर्फ ट्रिप बेच सकता है? हम साथ मिलकर पहाड़ों को हिला सकते हैं, तालमेल बना सकते हैं और एक मज़बूत ब्रांड बना सकते हैं।",
-            nl: "Laten we onze krachten bundelen en partners worden! We hebben partnerprogramma's voor iedereen. Heb je een kiteschool? Een reisbureau? Of ben je gewoon een kiter die denkt dat hij kitesurftrips kan verkopen? Samen kunnen we bergen verzetten, een synergie creëren en een sterker merk opbouwen.",
+            nl: "Duik in de KiteActive ervaring, waar avontuur de gemeenschap ontmoet! Vanaf het moment dat je bij ons komt, word je ondergedompeld in een wereld van opwindend kitesurfen, prachtige landschappen en gelijkgestemde enthousiastelingen die jouw passie voor de buitenlucht delen. Onze zorgvuldig samengestelde ervaringen zijn gericht op alle vaardigheidsniveaus, zodat iedereen kan genieten van de opwinding van het rijden op de golven en het benutten van de wind.",
+            du: "Duik in de KiteActive ervaring, waar avontuur de gemeenschap ontmoet! Vanaf het moment dat je bij ons komt, word je ondergedompeld in een wereld van opwindend kitesurfen, prachtige landschappen en gelijkgestemde enthousiastelingen die jouw passie voor de buitenlucht delen. Onze zorgvuldig samengestelde ervaringen zijn gericht op alle vaardigheidsniveaus, zodat iedereen kan genieten van de opwinding van het rijden op de golven en het benutten van de wind."
         }
     }
-]
+];
+
 
 
 const Textcontainer = ({selectedLanguage}) => {
     return (
         <div>
-
             <div className="container d-flex flex-column align-items-center justify-content-center text_container">
                 <div className="row">
                     <div className="col text-center">

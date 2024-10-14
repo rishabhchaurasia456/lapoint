@@ -19,9 +19,9 @@ const HeroSection = ({ selectedLanguage }) => {
             subtitle: "ONTDEK DE WERELD",
         },
 
-        hi: {
-            title: "काइटएक्टिव - सर्फ कैंप, काम और सर्फ, योगो और सर्फ",
-            subtitle: "दुनिया का अन्वेषण करें",
+        du: {
+            title: "Kiteactive - Surfkampen, Werk & Surf, Yoga & Golven",
+            subtitle: "HET AVONTUUR WACHT: ONTDEK DE WERELD",
         },
     };
     return (

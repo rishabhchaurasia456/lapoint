@@ -15,8 +15,8 @@ const Navbar = ({ selectedLanguage, setSelectedLanguage }) => {
   const languages = [
     // { value: "en", text: "Select Language" },
     { value: "en", text: "English" },
-    { value: "nl", text: "Dutch" },
-    { value: "hi", text: "Hindi" },
+    { value: "du", text: "Dutch" },
+    { value: "nl", text: "Netherlands" },
   ];
 
   const handleChange = (event) => {
@@ -24,7 +24,7 @@ const Navbar = ({ selectedLanguage, setSelectedLanguage }) => {
   };
   const languageToUse = navItems[selectedLanguage] || navItems["en"];
 
-  return (
+  return (  
     <>
 
 
