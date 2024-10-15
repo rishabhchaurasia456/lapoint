@@ -8,12 +8,67 @@ const Levels = () => {
   const [selectedDuration, setSelectedDuration] = useState('1 week'); // Track selected duration
   const [counts, setCounts] = useState([0, 0, 0]); // Separate counts for each level
   const [carRentalSelections, setCarRentalSelections] = useState([true, false, false]); // Car rental for Level 1 is always true
+  const [zanzibarItems, setZanzibarItems] = useState([]);
 
 
-  useEffect(() => {
-    const itemsResponse = axios.get("http://localhost:5000/api/get-data-to-zoho")
-    console.log("iiiiiiiiiiiiiiiiii", itemsResponse)
-  }, []);
+  // useEffect(() => {
+  //   const itemsResponse = axios.get("http://localhost:5000/api/get-data-to-zoho")
+  //   console.log("iiiiiiiiiiiiiiiiii", itemsResponse)
+  // }, []);
+
+  // useEffect(() => {
+  //   const fetchItems = async () => {
+  //     try {
+  //       const response = await axios.get("http://localhost:5000/api/get-data-to-zoho");
+
+
+  //       // Check if the request was successful and the data exists
+  //       if (response.data && response.data) {
+  //         const itemsResponse = response.data;
+  //         console.log("rrrrrrrrrrrrrrrrrrrrrrrrrrrrr", itemsResponse.data.items)
+
+  //         // Filter items containing "Zanzibar" in the name field
+  //         const zanzibarItems = itemsResponse.data.items.filter(item => item.name && item.name.includes("Zanzibar"));
+
+  //         // Log the filtered items
+  //         console.log("Filtered Zanzibar Items:", zanzibarItems);
+  //       } else {
+  //         console.log("No items found in the response.");
+  //       }
+  //     } catch (error) {
+  //       console.error("Error fetching items:", error);
+  //     }
+  //   };
+
+  //   fetchItems();
+  // }, []);
+
+  useEffect(() => { 
+    const fetchItems = async () => {
+      try {
+        const response = await axios.get("http://localhost:5000/api/get-data-to-zoho");
+
+        // Check if the request was successful and the data exists
+        if (response.data && response.data) {
+          const itemsResponse = response.data;
+          console.log("API Response:", itemsResponse.data.items);
+
+          // Filter items containing "Zanzibar" in the name field
+          const zanzibarItems = itemsResponse.data.items.filter(item => item.name && item.name.includes("Zanzibar"));
+
+          // Update the state with the filtered items
+          setZanzibarItems(zanzibarItems);
+        } else {
+          console.log("No items found in the response.");
+        }
+      } catch (error) {
+        console.error("Error fetching items:", error);
+      }
+    };
+
+    fetchItems();
+}, []);
+
 
   const navigate = useNavigate(); // useNavigate for navigation
 
@@ -66,6 +121,7 @@ const Levels = () => {
     { level: 'Level 2 – Waterstart', price: prices.waterstart, link: '/4' },
     { level: 'Level 3 – Zelfstandig', price: prices.zelfstandig, link: '/3' },
   ];
+
 
   // Calculate total count (sum of all counts)
   const totalCount = counts.reduce((acc, count) => acc + count, 0);
@@ -123,8 +179,7 @@ const Levels = () => {
                 <option>2 weeks</option>
               </select>
               <h5 className='level_heading'>Choose one package per traveller</h5>
-              <div className="container-fluid">
-                {/* Dynamically render rows for each level with updated prices */}
+              {/* <div className="container-fluid">
                 {levels.map((item, index) => (
                   <div className="row form_crd_row mt-4" key={index}>
                     <div className="col-md-9">
@@ -138,7 +193,6 @@ const Levels = () => {
                         </p>
                       </div>
 
-                      {/* Car Rental Option for each level */}
                       <div className="mx-3 my-3 ">
                         <div className="form-check ">
                           <input type="checkbox"
@@ -147,9 +201,8 @@ const Levels = () => {
                             checked={carRentalSelections[index]}
                             onChange={() => {
                               toggleCarRental(index);
-                              // handleLevelChange(item.level); // Set level when checkbox is checked
                             }}
-                            disabled={index === 0} // Disable for Level 1
+                            disabled={index === 0}
                             required
                           />
                           <label className="form-check-label " htmlFor={`carRental-${index}`}>
@@ -160,7 +213,7 @@ const Levels = () => {
                         </div>
                       </div>
 
-                      {/* div for more info  btn  */}
+                     
 
                       <div className='mx-3 mb-2'>
                         <NavLink to="/form" className='moreinfo_btn'>
@@ -180,7 +233,42 @@ const Levels = () => {
 
                   </div>
                 ))}
-              </div>
+              </div> */}
+
+              <div className="container-fluid">
+  {zanzibarItems.length > 0 ? (
+    zanzibarItems.map((item, index) => (
+      <div className="row form_crd_row mt-4" key={item.item_id}>
+        <div className="col-md-9">
+          <div className='level_crd_text'>
+            <p className='level_crd_para'>
+              <span>
+                <b>{item.name}</b> {/* Display the item name */}
+              </span>{' '}
+              | <span>Price: €{item.rate}</span> {/* Display the price */}
+            </p>
+          </div>
+
+          {/* You can add additional fields from the API response here */}
+          <div className="mx-3 mb-2">
+            <NavLink to="/form" className='moreinfo_btn'>
+              More info
+            </NavLink>
+          </div>
+        </div>
+
+        <div className="col-md-3">
+          <i className="fa fa-minus-circle P_M_icon" onClick={(e) => { e.preventDefault(); decrement(index); }}></i>
+          <span className='add_num'>{counts[index]}</span>
+          <i className="fa fa-plus-circle P_M_icon" onClick={(e) => { e.preventDefault(); increment(index); }}></i>
+        </div>
+      </div>
+    ))
+  ) : (
+    <p>No Zanzibar items available.</p>
+  )}
+</div>
+
 
 
               <div className='btn_container'>

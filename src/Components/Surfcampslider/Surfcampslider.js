@@ -73,7 +73,7 @@ const Surfcampslider = ({selectedLanguage}) => {
                                 <div className="border w-100 px-2 my-5 border-0">
                                     <div>
                                         {/* <img src={img} className="slid_card_backimg rounded-4" alt="..." /> */}
-                                        <Link to={card.path} state={{ trip_data: card.data,}} className='nav-link'>
+                                        <Link to={card.path} state={{ trip_data: card.data }} className='nav-link'>
                                         <div className="slid_card_backimg rounded-4" style={{ backgroundImage: `url(${card.img})`, backgroundSize: 'cover', backgroundPosition: 'center',}}>
                                             {/* <div class="slid_card_text">
                                                 <p class="card_d_text">{title[selectedLanguage]}</p>

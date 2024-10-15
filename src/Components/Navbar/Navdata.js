@@ -1,4 +1,4 @@
-
+import { cardData } from '../../Pages/Kitecamps/Kitecampdata';
 
 // import vedio from '../../Images/website.filmpje.tarifa.mp4';
 

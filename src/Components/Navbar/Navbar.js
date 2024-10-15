@@ -23,7 +23,7 @@ const Navbar = ({ selectedLanguage, setSelectedLanguage }) => {
 
   return (
     <>
-      {/* {/ Language Selection Dropdown /} */}
+      {/* Language Selection Dropdown */}
       <div className="language_div">
         <div className="dropdown ">
           <i className="fa fa-globe my-3 text-light" />&nbsp;
@@ -39,10 +39,10 @@ const Navbar = ({ selectedLanguage, setSelectedLanguage }) => {
         </div>
       </div>
 
-      {/* {/ Main Navbar /} */}
+      {/* Main Navbar */}
       <nav className="navbar">
         <div className="nav-container">
-          {/* {/ Logo /} */}
+          {/* Logo */}
           <NavLink exact to="/" className="nav-logo">
             <span className="icon">
               <img src={img} alt="Logo" className="logo" />
@@ -66,7 +66,7 @@ const Navbar = ({ selectedLanguage, setSelectedLanguage }) => {
                 {item.submenu && (
                   <ul className="Dp_dW">
                     {item.submenu.map((submenuItem, subIndex) => {
-                      console.log('submenuItemmmmmm:', submenuItem); // Add this line to log the data
+                      console.log('submenuItemmmmmmmmmmmmmmmmmmmmmmmmmmmmm:', submenuItem); // Add this line to log the data
 
                       return (
                         <li key={subIndex} className="submenu-item">
@@ -89,7 +89,7 @@ const Navbar = ({ selectedLanguage, setSelectedLanguage }) => {
           </ul>
 
 
-          {/* {/ Mobile Icon /} */}
+          {/* Mobile Icon */}
           <div className="nav-icon" onClick={handleClick}>
             {click ? (
               <span className="icon">
