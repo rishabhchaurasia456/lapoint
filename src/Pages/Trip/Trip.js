@@ -13,7 +13,7 @@ import { useLocation } from 'react-router-dom'
 import Booking from '../Kitecamps/Booking'
 
 
-const Trip = () => {
+const Trip = ({ selectedLanguage }) => {
 
     const [activeTab, setActiveTab] = useState('OVERVIEW');
 
@@ -22,7 +22,7 @@ const Trip = () => {
     };
 
     const location = useLocation();
-    const { trip_name, img, vedio } = location.state || { trip_name: "mytrips", }; // Default values if no state
+    const { trip_data } = location.state || { trip_name: "mytrips", };
 
 
     return (
@@ -34,18 +34,18 @@ const Trip = () => {
                 <link rel="canonical" href="https://kiteactiveventures.com/kitecamp" />
             </Helmet>
             <div>
-               
+
 
                 <div className="video-container">
                     <video autoPlay loop muted className="background-video">
-                        <source src={vedio} type="video/mp4" />
+                        <source src={trip_data.vedio} type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
                 </div>
 
                 <div className="container">
-                    <h1>{trip_name}</h1>
-                    {img && <img src={img} alt={trip_name} className="img-fluid" />}
+                    <h1>{trip_data.trip_name[selectedLanguage]}</h1>
+                    {/* {trip_data.img && <img src={trip_data.img} alt={trip_data.trip_name} className="img-fluid" />} */}
                     {/* Tabs and other details go here */}
                 </div>
 
@@ -95,7 +95,7 @@ const Trip = () => {
                 </div>
 
                 {/* booking component import here   and this css pages.css */}
-                <Booking tripName={trip_name}/>
+                <Booking tripName={trip_data.trip_name[selectedLanguage]} />
             </div>
         </div>
     )

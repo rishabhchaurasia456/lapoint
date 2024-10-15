@@ -50,7 +50,7 @@ function App() {
 
           <Route exact path="/trip/:trip_name" element={
             <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
-              <Trip />
+              <Trip selectedLanguage={selectedLanguage} />
             </KiteLayout>
           } />
 

@@ -29,7 +29,7 @@ const Kitecamp = () => {
                             <div className="row">
                                 {cardData.map((card) => (
                                     <div key={card.id} className="col-lg-4 mb-3">
-                                        <Link to={card.path} state={{ trip_name: card.trip_name, vedio: card.vedio }}>
+                                        <Link to={card.path} state={{ trip_data: card.data }}>
                                             <div className="card card-bg mb-3"
                                                 style={{
                                                     backgroundImage: `url(${card.img})`,

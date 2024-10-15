@@ -11,14 +11,114 @@ import img9 from '../../Images/kc9.webp';
 import img10 from '../../Images/kc10.webp';
 
 export const cardData = [
-    { id: 1, img: img1, path: "/trip/vanlife", trip_name: "Vanlife", vedio: vedio },
-    { id: 2, img: img2, path: "/trip/zanzibar", trip_name: "zanzibar", vedio: vedio },
-    { id: 3, img: img3, path: "/trip/Snowkite", trip_name: "Snowkite", vedio: vedio },
-    { id: 4, img: img4, path: "/trip/skyCapTown", trip_name: "skyCapTown", vedio: vedio },
-    { id: 5, img: img5,  path: "/trip/KitemeccaTraifa", trip_name: "KitemeccaTraifa", vedio: vedio },
-    { id: 6, img: img6,  path: "/trip/EndlessSummerParty", trip_name: "EndlessSummerParty", vedio: vedio  },
-    { id: 7, img: img7,  path: "/trip/Brazil", trip_name: "Brazil", vedio: vedio },
-    { id: 8, img: img8,  path: "/trip/Dakhla", trip_name: "Dakhla", vedio: vedio },
-    { id: 9, img: img9,  path: "/trip/Sail&kite", trip_name: "Sail&kite", vedio: vedio },
-    { id: 10, img: img10,  path: "/trip/Sicily", trip_name: "Sicily", vedio: vedio },
+    {
+        id: 1, img: img1, path: "/trip/vanlife",
+        data: {
+            trip_name: {
+                en: "Vanlife",
+                hi: "Nvanlife",
+                nl: 'dvanlife'
+            },
+            vedio: vedio
+        },
+    },
+    { 
+        id: 2, img: img2, path: "/trip/zanzibar", 
+        data: {
+            trip_name:{
+                en:"zanzibar", 
+                hi:"Nzanzibar", 
+                nl:"Dzanzibar", 
+            },
+            vedio: vedio
+        },
+    },
+    { 
+        id: 3, img: img3, path: "/trip/Snowkite", 
+        data: {
+            trip_name:{
+                en:"Snowkite", 
+                hi:"NSnowkite", 
+                nl:"DSnowkite", 
+            },
+            vedio: vedio 
+        }
+    },
+    { 
+        id: 4, img: img4, path: "/trip/skyCapTown",
+        data: {
+            trip_name:{
+                en:"skyCapTown", 
+                hi:"NskyCapTown", 
+                nl:"DskyCapTown", 
+            },
+            vedio: vedio 
+        }
+    },
+    { 
+        id: 5, img: img5, path: "/trip/KitemeccaTraifa",
+        data: {
+            trip_name:{
+                en:"KitemeccaTraifa", 
+                hi:"NKitemeccaTraifa", 
+                nl:"DKitemeccaTraifa", 
+            },
+            vedio: vedio 
+        }
+    },
+    { 
+        id: 6, img: img6, path: "/trip/EndlessSummerParty",
+        data: {
+            trip_name:{
+                en:"EndlessSummerParty", 
+                hi:"NEndlessSummerParty", 
+                nl:"DEndlessSummerParty", 
+            },
+            vedio: vedio 
+        }
+    },
+    { 
+        id: 7, img: img7, path: "/trip/Brazil", 
+        data: {
+            trip_name:{
+                en:"Brazil", 
+                hi:"NBrazil", 
+                nl:"DBrazil", 
+            },
+            vedio: vedio 
+        }
+    },
+    { 
+        id: 8, img: img8, path: "/trip/Dakhla", 
+        data: {
+            trip_name:{
+                en:"Dakhla", 
+                hi:"NDakhla", 
+                nl:"DDakhla", 
+            },
+            vedio: vedio 
+        }
+    },
+    { 
+        id: 9, img: img9, path: "/trip/Sail&kite",
+        data: {
+            trip_name:{
+                en:"Sail&kite", 
+                hi:"NSail&kite", 
+                nl:"DSail&kite", 
+            },
+            vedio: vedio 
+        }
+    },
+    { 
+        id: 10, img: img10, path: "/trip/Sicily",
+        data: {
+            trip_name:{
+                en:"Sicily", 
+                hi:"NSicily", 
+                nl:"DSicily", 
+            },
+            vedio: vedio 
+        }
+    },
 ];
