@@ -144,19 +144,16 @@ const ourhistory = {
 
 
 const ourlastword = {
-
     title: {
         en: "Our last words",
         nl: "Onze laatste woorden",  // Netherlands Dutch (NL)
         du: "Onze laatste woorden"  // Dutch (DU)
     },
-
     subtitle: {
         en: "I guess we will see you soon?",
         nl: "Ik denk dat we je snel zullen zien?",  // Netherlands Dutch (NL)
         du: "Ik denk dat we je snel zullen zien?"  // Dutch (DU)
     },
-
     para: {
         en: "At KiteActive, our mission is to craft the ultimate kitesurfing adventure for you, combining top-notch lessons and clinics with some of the world’s most breathtaking locations. We’re committed to providing an unparalleled experience, thanks to our dedicated team of professional instructors who know the best spots for kitesurfing and relaxation.",
         nl: "Bij KiteActive is het onze missie om voor jou het ultieme kitesurfavontuur te creëren, waarbij we eersteklas lessen en clinics combineren met enkele van de meest adembenemende locaties ter wereld. We zijn toegewijd aan het bieden van een ongeëvenaarde ervaring, dankzij ons toegewijde team van professionele instructeurs die de beste plekken kennen voor zowel kitesurfen als ontspanning.",  // Netherlands Dutch (NL)
@@ -166,11 +163,7 @@ const ourlastword = {
 }
 
 
-
 const Aboutus = ({ selectedLanguage }) => {
-
-
-
     return (
         <div>
 

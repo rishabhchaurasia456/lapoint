@@ -69,12 +69,12 @@ const Surfcampslider = ({selectedLanguage}) => {
                         <Carousel ref={carouselRef} responsive={responsive} arrows={false}>
 
                             {/* card data in card.js  */}
-                            {cardData.map(({ img, path, vedio, trip_name }) => (
+                            {cardData.map((card) => (
                                 <div className="border w-100 px-2 my-5 border-0">
                                     <div>
                                         {/* <img src={img} className="slid_card_backimg rounded-4" alt="..." /> */}
-                                        <Link to={path} state={{ trip_name: trip_name, vedio: vedio }} className='nav-link'>
-                                        <div className="slid_card_backimg rounded-4" style={{ backgroundImage: `url(${img})`, backgroundSize: 'cover', backgroundPosition: 'center',}}>
+                                        <Link to={card.path} state={{ trip_data: card.data,}} className='nav-link'>
+                                        <div className="slid_card_backimg rounded-4" style={{ backgroundImage: `url(${card.img})`, backgroundSize: 'cover', backgroundPosition: 'center',}}>
                                             {/* <div class="slid_card_text">
                                                 <p class="card_d_text">{title[selectedLanguage]}</p>
                                             </div> */}

@@ -1,9 +1,7 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import React from 'react';
-
 import Home from './Pages/Home/Home';
-
 import { useState } from 'react';
 import Trip from './Pages/Trip/Trip';
 import Aboutus from './Pages/About/Aboutus';
@@ -32,7 +30,6 @@ function App() {
       <BrowserRouter>
         <ScrollToTop />
         <Routes>
-
           <Route path='/' element={
             <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
               <Home selectedLanguage={selectedLanguage} />
