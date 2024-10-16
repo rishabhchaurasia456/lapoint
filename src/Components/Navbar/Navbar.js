@@ -12,8 +12,8 @@ const Navbar = ({ selectedLanguage, setSelectedLanguage }) => {
 
   const languages = [
     { value: "en", text: "English" },
-    { value: "nl", text: "Dutch" },
-    { value: "hi", text: "Hindi" },
+    { value: "du", text: "Dutch" },
+    { value: "nl", text: "Netherland" },
   ];
 
   const handleChange = (event) => {
