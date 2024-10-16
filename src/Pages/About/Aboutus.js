@@ -16,158 +16,140 @@ import { Helmet } from 'react-helmet'
 
 
 const aboutcontent = {
-
     title: {
-        en: "Our essence - Good Times",
-        nl: "Onze essentie - Goede Tijden",
-        du: "Onze essentie - Goede Tijden"
-
+      en: "Our essence - Good Times",
+      gr: "Unser Wesen - Gute Zeiten", // German (GR)
+      du: "Onze essentie - Goede Tijden"
     },
     
     para: {
-        en: "At KiteActive, we believe in building a global community of kitesurfers who live and breathe the kiteboarding life. Every trip is designed not only to chase the best winds but to forge lasting connections and friendships that transcend borders. With KiteActive, you're not just embarking on a trip—you're joining a movement that embraces freedom, adventure, and the love of kitesurfing.",
-        nl: "Bij KiteActive geloven we in het opbouwen van een wereldwijde gemeenschap van kitesurfers die leven en ademen voor de kiteboarding levensstijl. Elke reis is ontworpen om niet alleen de beste winden te achtervolgen, maar ook om blijvende verbindingen en vriendschappen te smeden die grenzen overschrijden. Met KiteActive ga je niet alleen op reis—je sluit je aan bij een beweging die vrijheid, avontuur en de liefde voor kitesurfen omarmt.",
-        du: "Bij KiteActive geloven we in het opbouwen van een wereldwijde gemeenschap van kitesurfers die leven en ademen voor de kiteboarding levensstijl. Elke reis is ontworpen om niet alleen de beste winden te achtervolgen, maar ook om blijvende verbindingen en vriendschappen te smeden die grenzen overschrijden. Met KiteActive ga je niet alleen op reis—je sluit je aan bij een beweging die vrijheid, avontuur en de liefde voor kitesurfen omarmt.",
-
-    },
-
-
-};
-
-
-
-const aboutbgcontent = {
-    title : {
-
-        en: "The Kiteactive Story",         
-        nl: "Het Kiteactive Verhaal",
-        du: "Het Kiteactive Verhaal"
-    },
-
-};
-
-
-
-
-
-
-const ourmindset = {
-    title: {
-        en: "Our Mindset",
-        nl: "Onze Mindset",  // Netherlands Dutch (NL)
-        du: "Onze Mentaliteit"  // Dutch (DU)
-    },
-
-    subtitle: {
-        en: "Be a Friend",
-        nl: "Wees een Vriend",  // Netherlands Dutch (NL)
-        du: "Wees een Vriend"  // Dutch (DU)
-    },
-
-    para1: {
-        en: "At KiteActive, our mindset revolves around freedom, exploration, and community",
-        nl: "Bij KiteActive draait onze mindset om vrijheid, verkenning en gemeenschap",  // Netherlands Dutch (NL)
-        du: "Bij KiteActive draait onze mentaliteit om vrijheid, verkenning en gemeenschap"  // Dutch (DU)
-    },
-
-    para2: {
-        en: "To the Guests, by being cool, and always prepared to go the extra mile when needed.",
-        nl: "Voor de gasten, door relaxed te zijn en altijd bereid de extra stap te zetten wanneer nodig.",  // Netherlands Dutch (NL)
-        du: "Voor de gasten, door cool te zijn en altijd bereid te zijn een stap extra te zetten wanneer nodig."  // Dutch (DU)
-    },
-
-    para3: {
-        en: "Our mindset is about more than just the sport; it’s about living a life of adventure, passion, and authenticity.",
-        nl: "Onze mindset gaat over meer dan alleen de sport; het gaat om het leven van een avontuurlijk, gepassioneerd en authentiek leven.",  // Netherlands Dutch (NL)
-        du: "Onze mentaliteit gaat over meer dan alleen de sport; het gaat om een leven vol avontuur, passie en authenticiteit."  // Dutch (DU)
-    },
-
-    para4: {
-        en: "Adventure is in our DNA. We’re constantly seeking out new destinations, fresh experiences, and untamed waters that challenge us to improve, learn, and thrive.",
-        nl: "Avontuur zit in ons DNA. We zijn voortdurend op zoek naar nieuwe bestemmingen, frisse ervaringen en ongetemde wateren die ons uitdagen om te verbeteren, te leren en te bloeien.",  // Netherlands Dutch (NL)
-        du: "Avontuur zit in ons DNA. We zijn constant op zoek naar nieuwe bestemmingen, frisse ervaringen en ongetemde wateren die ons uitdagen om beter te worden, te leren en te gedijen."  // Dutch (DU)
+      en: "At KiteActive, we believe in building a global community of kitesurfers who live and breathe the kiteboarding life. Every trip is designed not only to chase the best winds but to forge lasting connections and friendships that transcend borders. With KiteActive, you're not just embarking on a trip—you're joining a movement that embraces freedom, adventure, and the love of kitesurfing.",
+      gr: "Bei KiteActive glauben wir daran, eine globale Gemeinschaft von Kitesurfern aufzubauen, die das Kiteboarding-Leben leben und atmen. Jede Reise ist so konzipiert, dass nicht nur die besten Winde verfolgt werden, sondern auch dauerhafte Verbindungen und Freundschaften entstehen, die Grenzen überschreiten. Mit KiteActive begibst du dich nicht nur auf eine Reise – du schließt dich einer Bewegung an, die Freiheit, Abenteuer und die Liebe zum Kitesurfen umarmt.", // German (GR)
+      du: "Bij KiteActive geloven we in het opbouwen van een wereldwijde gemeenschap van kitesurfers die leven en ademen voor de kiteboarding levensstijl. Elke reis is ontworpen om niet alleen de beste winden te achtervolgen, maar ook om blijvende verbindingen en vriendschappen te smeden die grenzen overschrijden. Met KiteActive ga je niet alleen op reis—je sluit je aan bij een beweging die vrijheid, avontuur en de liefde voor kitesurfen omarmt.",
     }
-};
-
-
-
-const ourhistory = {
+  };
+  
+  const aboutbgcontent = {
+    title: {
+      en: "The Kiteactive Story",         
+      gr: "Die Kiteactive-Geschichte", // German (GR)
+      du: "Het Kiteactive Verhaal"
+    }
+  };
+  
+  const ourmindset = {
+    title: {
+      en: "Our Mindset",
+      gr: "Unsere Denkweise", // German (GR)
+      du: "Onze Mentaliteit"
+    },
+  
+    subtitle: {
+      en: "Be a Friend",
+      gr: "Sei ein Freund", // German (GR)
+      du: "Wees een Vriend"
+    },
+  
+    para1: {
+      en: "At KiteActive, our mindset revolves around freedom, exploration, and community.",
+      gr: "Bei KiteActive dreht sich unsere Denkweise um Freiheit, Erkundung und Gemeinschaft.", // German (GR)
+      du: "Bij KiteActive draait onze mentaliteit om vrijheid, verkenning en gemeenschap."
+    },
+  
+    para2: {
+      en: "To the Guests, by being cool, and always prepared to go the extra mile when needed.",
+      gr: "Für die Gäste, indem wir entspannt sind und immer bereit, bei Bedarf die Extra-Meile zu gehen.", // German (GR)
+      du: "Voor de gasten, door cool te zijn en altijd bereid te zijn een stap extra te zetten wanneer nodig."
+    },
+  
+    para3: {
+      en: "Our mindset is about more than just the sport; it’s about living a life of adventure, passion, and authenticity.",
+      gr: "Unsere Denkweise dreht sich nicht nur um den Sport; es geht darum, ein Leben voller Abenteuer, Leidenschaft und Authentizität zu leben.", // German (GR)
+      du: "Onze mentaliteit gaat over meer dan alleen de sport; het gaat om een leven vol avontuur, passie en authenticiteit."
+    },
+  
+    para4: {
+      en: "Adventure is in our DNA. We’re constantly seeking out new destinations, fresh experiences, and untamed waters that challenge us to improve, learn, and thrive.",
+      gr: "Abenteuer liegt in unserer DNA. Wir sind ständig auf der Suche nach neuen Zielen, frischen Erlebnissen und ungezähmten Gewässern, die uns herausfordern, besser zu werden, zu lernen und zu gedeihen.", // German (GR)
+      du: "Avontuur zit in ons DNA. We zijn constant op zoek naar nieuwe bestemmingen, frisse ervaringen en ongetemde wateren die ons uitdagen om beter te worden, te leren en te gedijen."
+    }
+  };
+  
+  const ourhistory = {
     head: {
-        en: "Life should feel like this every day",
-        nl: "Het leven zou elke dag zo moeten voelen",  // Netherlands Dutch (NL)
-        du: "Het leven zou elke dag zo moeten voelen"  // Dutch (DU)
+      en: "Life should feel like this every day",
+      gr: "So sollte sich das Leben jeden Tag anfühlen", // German (GR)
+      du: "Het leven zou elke dag zo moeten voelen"
     },
-
+  
     title: {
-        en: "Our History",
-        nl: "Onze Geschiedenis",  // Netherlands Dutch (NL)
-        du: "Onze Geschiedenis"  // Dutch (DU)
+      en: "Our History",
+      gr: "Unsere Geschichte", // German (GR)
+      du: "Onze Geschiedenis"
     },
-
+  
     subtitle1: {
-        en: "The origin of good times",
-        nl: "De oorsprong van goede tijden",  // Netherlands Dutch (NL)
-        du: "De oorsprong van goede tijden"  // Dutch (DU)
+      en: "The origin of good times", 
+      gr: "Der Ursprung guter Zeiten", // German (GR)
+      du: "De oorsprong van goede tijden"
     },
-
+  
     para1: {
-        en: "Are you ready for the ultimate kitesurf experience? Let us take you on a kitetrip like no other, where every moment is packed with excitement, discovery, and the wind at your back. Whether you're here for the adrenaline or the camaraderie, KiteActive is your gateway to an unforgettable kitesurfing journey.",
-        nl: "Ben je klaar voor de ultieme kitesurfervaring? Laat ons je meenemen op een kitetour als geen ander, waar elk moment vol zit met opwinding, ontdekking en de wind in je rug. Of je nu komt voor de adrenaline of de kameraadschap, KiteActive is jouw toegangspoort tot een onvergetelijke kitesurfreis.",  // Netherlands Dutch (NL)
-        du: "Ben je klaar voor de ultieme kitesurfervaring? Laat ons je meenemen op een kitetrip zoals geen ander, waar elk moment vol spanning, ontdekking en de wind in je rug zit. Of je nu komt voor de adrenaline of de vriendschap, KiteActive is jouw toegang tot een onvergetelijke kitesurfreis."  // Dutch (DU)
+      en: "Are you ready for the ultimate kitesurf experience? Let us take you on a kitetrip like no other, where every moment is packed with excitement, discovery, and the wind at your back. Whether you're here for the adrenaline or the camaraderie, KiteActive is your gateway to an unforgettable kitesurfing journey.",
+      gr: "Bist du bereit für das ultimative Kitesurferlebnis? Lass uns dich auf einen Kitetrip mitnehmen, der seinesgleichen sucht, bei dem jeder Moment voller Spannung, Entdeckung und Rückenwind steckt. Ob du wegen des Adrenalins oder der Kameradschaft hier bist, KiteActive ist dein Tor zu einer unvergesslichen Kitesurfreise.", // German (GR)
+      du: "Ben je klaar voor de ultieme kitesurfervaring? Laat ons je meenemen op een kitetrip zoals geen ander, waar elk moment vol spanning, ontdekking en de wind in je rug zit. Of je nu komt voor de adrenaline of de vriendschap, KiteActive is jouw toegang tot een onvergetelijke kitesurfreis."
     },
-
+  
     para2: {
-        en: "KiteActive is dedicated to delivering the ultimate kitesurfing holiday, combining thrilling lessons and clinics with stunning global destinations",
-        nl: "KiteActive is toegewijd aan het leveren van de ultieme kitesurfvakantie, waarbij spannende lessen en clinics worden gecombineerd met adembenemende wereldwijde bestemmingen.",  // Netherlands Dutch (NL)
-        du: "KiteActive is toegewijd aan het bieden van de ultieme kitesurfvakantie, waarbij spannende lessen en clinics worden gecombineerd met prachtige wereldbestemmingen."  // Dutch (DU)
+      en: "KiteActive is dedicated to delivering the ultimate kitesurfing holiday, combining thrilling lessons and clinics with stunning global destinations.",
+      gr: "KiteActive ist darauf spezialisiert, den ultimativen Kitesurf-Urlaub zu bieten, bei dem aufregende Lektionen und Kliniken mit atemberaubenden globalen Zielen kombiniert werden.", // German (GR)
+      du: "KiteActive is toegewijd aan het bieden van de ultieme kitesurfvakantie, waarbij spannende lessen en clinics worden gecombineerd met prachtige wereldbestemmingen."
     },
-
+  
     subtitle2: {
-        en: "Life should feel like this every day.",
-        nl: "Het leven zou elke dag zo moeten voelen.",  // Netherlands Dutch (NL)
-        du: "Het leven zou elke dag zo moeten voelen."  // Dutch (DU)
+      en: "Life should feel like this every day.",
+      gr: "So sollte sich das Leben jeden Tag anfühlen.", // German (GR)
+      du: "Het leven zou elke dag zo moeten voelen."
     },
-
+  
     para3: {
-        en: "That was the comment that sparked the breakfast conversation that a few months later would lead to Sebastian’s and Alex’s idea of Lapoint. Peter joined the boys shortly after and so did long time friend Göran.",
-        nl: "Dat was de opmerking die het ontbijtgesprek aanwakkerde dat een paar maanden later zou leiden tot het idee van Sebastian en Alex voor Lapoint. Peter sloot zich kort daarna bij de jongens aan, net als hun oude vriend Göran.",  // Netherlands Dutch (NL)
-        du: "Dat was de opmerking die het ontbijtgesprek op gang bracht dat enkele maanden later zou leiden tot het idee van Sebastian en Alex voor Lapoint. Peter voegde zich kort daarna bij de jongens, net als hun oude vriend Göran."  // Dutch (DU)
+      en: "That was the comment that sparked the breakfast conversation that a few months later would lead to Sebastian’s and Alex’s idea of Lapoint. Peter joined the boys shortly after and so did long time friend Göran.",
+      gr: "Das war der Kommentar, der das Frühstücksgespräch auslöste, das ein paar Monate später zu Sebastian's und Alex' Idee von Lapoint führte. Peter schloss sich den Jungs kurz darauf an, ebenso wie ihr langjähriger Freund Göran.", // German (GR)
+      du: "Dat was de opmerking die het ontbijtgesprek op gang bracht dat enkele maanden later zou leiden tot het idee van Sebastian en Alex voor Lapoint. Peter voegde zich kort daarna bij de jongens, net als hun oude vriend Göran."
     },
-
+  
     para4: {
-        en: "Our expert team of instructors curates exceptional locations, ensuring you get the best spots to ride the waves.",
-        nl: "Ons deskundige team van instructeurs selecteert uitzonderlijke locaties, zodat je de beste plekken krijgt om de golven te berijden.",  // Netherlands Dutch (NL)
-        du: "Ons deskundige team van instructeurs stelt uitzonderlijke locaties samen, zodat je de beste plekken krijgt om de golven te rijden."  // Dutch (DU)
+      en: "Our expert team of instructors curates exceptional locations, ensuring you get the best spots to ride the waves.",
+      gr: "Unser Expertenteam von Ausbildern wählt außergewöhnliche Orte aus, um sicherzustellen, dass du die besten Spots zum Wellenreiten bekommst.", // German (GR)
+      du: "Ons deskundige team van instructeurs stelt uitzonderlijke locaties samen, zodat je de beste plekken krijgt om de golven te rijden."
     }
-};
-
-
-
-const ourlastword = {
+  };
+  
+  const ourlastword = {
     title: {
-        en: "Our last words",
-        nl: "Onze laatste woorden",  // Netherlands Dutch (NL)
-        du: "Onze laatste woorden"  // Dutch (DU)
+      en: "Our last words",
+      gr: "Unsere letzten Worte", // German (GR)
+      du: "Onze laatste woorden"
     },
+  
     subtitle: {
-        en: "I guess we will see you soon?",
-        nl: "Ik denk dat we je snel zullen zien?",  // Netherlands Dutch (NL)
-        du: "Ik denk dat we je snel zullen zien?"  // Dutch (DU)
+      en: "I guess we will see you soon?",
+      gr: "Ich denke, wir sehen uns bald?", // German (GR)
+      du: "Ik denk dat we je snel zullen zien?"
     },
+  
     para: {
-        en: "At KiteActive, our mission is to craft the ultimate kitesurfing adventure for you, combining top-notch lessons and clinics with some of the world’s most breathtaking locations. We’re committed to providing an unparalleled experience, thanks to our dedicated team of professional instructors who know the best spots for kitesurfing and relaxation.",
-        nl: "Bij KiteActive is het onze missie om voor jou het ultieme kitesurfavontuur te creëren, waarbij we eersteklas lessen en clinics combineren met enkele van de meest adembenemende locaties ter wereld. We zijn toegewijd aan het bieden van een ongeëvenaarde ervaring, dankzij ons toegewijde team van professionele instructeurs die de beste plekken kennen voor zowel kitesurfen als ontspanning.",  // Netherlands Dutch (NL)
-        du: "Bij KiteActive is het onze missie om het ultieme kitesurfavontuur voor jou samen te stellen, waarbij we eersteklas lessen en clinics combineren met enkele van de meest adembenemende locaties ter wereld. We streven ernaar om een ongeëvenaarde ervaring te bieden, dankzij ons toegewijde team van professionele instructeurs die de beste plekken kennen voor kitesurfen en ontspanning."  // Dutch (DU)
+      en: "At KiteActive, our mission is to craft the ultimate kitesurfing adventure for you, combining top-notch lessons and clinics with some of the world’s most breathtaking locations. We’re committed to providing an unparalleled experience, thanks to our dedicated team of professional instructors who know the best spots for kitesurfing and relaxation.",
+      gr: "Bei KiteActive ist es unsere Mission, das ultimative Kitesurfabenteuer für dich zu gestalten, indem wir erstklassige Lektionen und Kliniken mit einigen der atemberaubendsten Orte der Welt kombinieren. Wir sind bestrebt, eine unvergleichliche Erfahrung zu bieten, dank unseres engagierten Teams von professionellen Ausbildern, die die besten Orte für Kitesurfen und Entspannung kennen.", // German (GR)
+      du: "Bij KiteActive is het onze missie om het ultieme kitesurfavontuur voor jou samen te stellen, waarbij we eersteklas lessen en clinics combineren met enkele van de meest adembenemende locaties ter wereld. We streven ernaar om een ongeëvenaarde ervaring te bieden, dankzij ons toegewijde team van professionele instructeurs die de beste plekken kennen voor kitesurfen en ontspanning."
     }
-
-}
+  };
+  
 
 
 const Aboutus = ({ selectedLanguage }) => {
     return (
         <div>
-
-
             {/* for seo  */}
             <Helmet>
                 <title>KiteActive: Exciting Kite & Sailing Trips Along West Frisian Islands</title>

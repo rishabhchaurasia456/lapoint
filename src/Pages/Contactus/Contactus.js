@@ -9,45 +9,44 @@ import icon1 from '../../Images/mail.webp'
 import icon2 from '../../Images/whatsapp.webp'
 import icon3 from '../../Images/phone-call.webp'
 
+
 const mainContainer = {
     title: {
-        en: "Contact us and make your surf dream a reality",
-        nl: "Neem contact met ons op en maak je surfdroom waar",  // Netherlands Dutch (NL)
-        du: "Neem contact met ons op en maak je surfdroom werkelijkheid"  // Dutch (DU)
-    },
-
+      en: "Contact us and make your surf dream a reality",
+      gr: "Kontaktiere uns und verwirkliche deinen Surftraum", // German (GR)
+      du: "Neem contact met ons op en maak je surfdroom werkelijkheid" // Dutch (DU)
+    },  
     para: {
-        en: "KiteActive is your gateway to the ultimate kitesurfing adventure, where exhilaration meets luxury. Our expert instructors craft tailor-made lessons and clinics at some of the world’s most stunning kitesurfing destinations. Whether you’re a beginner or a seasoned rider, we’ve scouted the globe for the best locations to ensure an unforgettable experience on the water.",
-        nl: "KiteActive is jouw toegangspoort tot het ultieme kitesurfavontuur, waar opwinding luxe ontmoet. Onze deskundige instructeurs bieden op maat gemaakte lessen en clinics op enkele van de meest adembenemende kitesurfbestemmingen ter wereld. Of je nu een beginner of een ervaren rijder bent, we hebben de beste locaties ter wereld gezocht om een onvergetelijke ervaring op het water te garanderen.",  // Netherlands Dutch (NL)
-        du: "KiteActive is jouw toegang tot het ultieme kitesurfavontuur, waar opwinding luxe ontmoet. Onze deskundige instructeurs bieden op maat gemaakte lessen en clinics aan op enkele van de meest adembenemende kitesurfbestemmingen ter wereld. Of je nu een beginner bent of een doorgewinterde rijder, we hebben wereldwijd gezocht naar de beste locaties om een onvergetelijke ervaring op het water te garanderen."  // Dutch (DU)
+      en: "KiteActive is your gateway to the ultimate kitesurfing adventure, where exhilaration meets luxury. Our expert instructors craft tailor-made lessons and clinics at some of the world’s most stunning kitesurfing destinations. Whether you’re a beginner or a seasoned rider, we’ve scouted the globe for the best locations to ensure an unforgettable experience on the water.",
+      gr: "KiteActive ist dein Tor zum ultimativen Kitesurfabenteuer, wo Aufregung auf Luxus trifft. Unsere erfahrenen Instruktoren gestalten maßgeschneiderte Lektionen und Kliniken an einigen der atemberaubendsten Kitesurfziele der Welt. Egal, ob du ein Anfänger oder ein erfahrener Fahrer bist, wir haben die besten Standorte weltweit ausgesucht, um ein unvergessliches Erlebnis auf dem Wasser zu gewährleisten.", // German (GR)
+      du: "KiteActive is jouw toegang tot het ultieme kitesurfavontuur, waar opwinding luxe ontmoet. Onze deskundige instructeurs bieden op maat gemaakte lessen en clinics aan op enkele van de meest adembenemende kitesurfbestemmingen ter wereld. Of je nu een beginner bent of een doorgewinterde rijder, we hebben wereldwijd gezocht naar de beste locaties om een onvergetelijke ervaring op het water te garanderen." // Dutch (DU)
     },
-
+  
     title2: {
-        en: "Does something feel unclear?",
-        nl: "Voelt iets onduidelijk?",  // Netherlands Dutch (NL)
-        du: "Voelt er iets onduidelijk?",  // Dutch (DU)
+      en: "Does something feel unclear?",
+      gr: "Fühlt sich etwas unklar an?", // German (GR)
+      du: "Voelt er iets onduidelijk?" // Dutch (DU)
     },
-
+  
     title4: {
-        en: "Get in Touch!",
-        nl: "Neem contact op!",  // Netherlands Dutch (NL)
-        du: "Neem contact op!"  // Dutch (DU)
+      en: "Get in Touch!",
+      gr: "Nehmen Sie Kontakt auf!", // German (GR)
+      du: "Neem contact op!" // Dutch (DU)
     },
-
-
-  title5: {
-        en: "Free rebooking up to 14 days prior to arrival",
-        nl: "Gratis omboeken tot 14 dagen voor aankomst",  // Netherlands Dutch (NL)
-        du: "Gratis omboeken tot 14 dagen voor aankomst",  // Dutch (DU)
+  
+    title5: {
+      en: "Free rebooking up to 14 days prior to arrival",
+      gr: "Kostenlose Umbuchung bis 14 Tage vor der Ankunft", // German (GR)
+      du: "Gratis omboeken tot 14 dagen voor aankomst" // Dutch (DU)
     },
-
+  
     lifestylepara: {
-        en: "A professional kite team, on the beach and behind the computer. We organize your kitesurfing trip down to the last detail. We look forward to meeting you and having a great time together! Whether you're a beginner looking to learn the basics or an experienced kitesurfer seeking the thrill of new adventures, our team is here to support you every step of the way. From selecting the best locations with optimal wind conditions to arranging accommodations and equipment, we handle it all.",
-        nl: "Een professioneel kite team, op het strand en achter de computer. We organiseren je kitesurftrip tot in de kleinste details. We kijken ernaar uit om je te ontmoeten en samen een geweldige tijd te hebben! Of je nu een beginner bent die de basis wil leren of een ervaren kitesurfer die op zoek is naar de opwinding van nieuwe avonturen, ons team is er om je bij elke stap te ondersteunen. Van het selecteren van de beste locaties met optimale windomstandigheden tot het regelen van accommodaties en apparatuur, wij regelen het allemaal.",  // Netherlands Dutch (NL)
-        du: "Een professioneel kite team, op het strand en achter de computer. We organiseren je kitesurftrip tot in de kleinste details. We kijken ernaar uit om je te ontmoeten en samen een geweldige tijd te hebben! Of je nu een beginner bent die de basis wil leren of een ervaren kitesurfer die op zoek is naar de opwinding van nieuwe avonturen, ons team is er om je bij elke stap te ondersteunen. Van het selecteren van de beste locaties met optimale windomstandigheden tot het regelen van accommodaties en uitrusting, wij regelen het allemaal.",  // Dutch (DU)
+      en: "A professional kite team, on the beach and behind the computer. We organize your kitesurfing trip down to the last detail. We look forward to meeting you and having a great time together! Whether you're a beginner looking to learn the basics or an experienced kitesurfer seeking the thrill of new adventures, our team is here to support you every step of the way. From selecting the best locations with optimal wind conditions to arranging accommodations and equipment, we handle it all.",
+      gr: "Ein professionelles Kite-Team, am Strand und hinter dem Computer. Wir organisieren deine Kitesurfreise bis ins kleinste Detail. Wir freuen uns darauf, dich zu treffen und gemeinsam eine großartige Zeit zu haben! Egal, ob du ein Anfänger bist, der die Grundlagen lernen möchte, oder ein erfahrener Kitesurfer, der den Nervenkitzel neuer Abenteuer sucht, unser Team ist hier, um dich auf jedem Schritt des Weges zu unterstützen. Vom Auswählen der besten Standorte mit optimalen Windbedingungen bis hin zur Organisation von Unterkünften und Ausrüstung, wir kümmern uns um alles.", // German (GR)
+      du: "Een professioneel kite team, op het strand en achter de computer. We organiseren je kitesurftrip tot in de kleinste details. We kijken ernaar uit om je te ontmoeten en samen een geweldige tijd te hebben! Of je nu een beginner bent die de basis wil leren of een ervaren kitesurfer die op zoek is naar de opwinding van nieuwe avonturen, ons team is er om je bij elke stap te ondersteunen. Van het selecteren van de beste locaties met optimale windomstandigheden tot het regelen van accommodaties en uitrusting, wij regelen het allemaal." // Dutch (DU)
     }
-};
-
+  };
+  
    
 
 const Contactus = ({ selectedLanguage }) => {
@@ -64,7 +63,6 @@ const Contactus = ({ selectedLanguage }) => {
 
                 <link rel="canonical" href="https://www.kiteactiveventures.com/contact"/>
             </Helmet>
-
 
 
             <div className="page_cont">
@@ -110,9 +108,6 @@ const Contactus = ({ selectedLanguage }) => {
                 </div>
             </div>
 
-
-
-
             <div className='container mt-5  pt-5 '>
                 <div className='row mt-3'>
                     <div className='col-md-6'>
@@ -137,7 +132,6 @@ const Contactus = ({ selectedLanguage }) => {
 
                     </div>
                 </div>
-
             </div>
 
 

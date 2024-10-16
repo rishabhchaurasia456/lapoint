@@ -76,6 +76,8 @@
     margin-top: 5%;
 
   }
+
+
 }
 
 /* Small devices (phones, 576px and up)------------------ */
@@ -229,13 +231,13 @@
 }
 
 /* Medium devices (tablets, 768px and up) */
-@media (max-width: 1024px) and (min-width: 768px) {
+@media (max-width: 1024px) and (min-width: 500px) {
   .custom-prev {
-    left: 10px;
+    display: none !important;
   }
 
-  .custom-next {
-    right: 10px;
+  .custom-next {    
+    display: none !important;
   }
 }
 
@@ -910,7 +912,7 @@ details>summary::-webkit-details-marker {
   }
 
   .bg_para {
-    font-size: 15px;
+    font-size: 12px;
     line-height: 20px;
   }
 }
@@ -927,6 +929,7 @@ details>summary::-webkit-details-marker {
 .footer_headcontainer_text {
   color: white;
   margin-top: 5%;
+  padding: 0 50px 0 50px !important ;
   font-family: "Amatic SC", sans-serif;
   font-size: 40px;
   line-height: 40px;
@@ -990,11 +993,11 @@ details>summary::-webkit-details-marker {
 @media only screen and (max-width:600px) {
   .footer_headcontainer_text {
     text-align: center;
-    font-size: 42px;
+    font-size: 30px;
     font-weight: bold;
     color: white;
     font-family: "Amatic SC", sans-serif;
-    line-height: 50px;
+    line-height: 28px;
   }
 
   .email_button {
@@ -1020,6 +1023,8 @@ details>summary::-webkit-details-marker {
   }
 
 }
+
+
 
 /* --------------------------------------
 Trip CSS

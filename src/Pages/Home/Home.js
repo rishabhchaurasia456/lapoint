@@ -23,12 +23,9 @@ import Level from '../../Components/Level/Level'
 // import Footer from '../../Components/Footer/Footer'
 
 const Home = ({ selectedLanguage }) => {
-
   // const HeroSection = React.lazy(() => import('../../Components/HeroSection/HeroSection'));
-
   return (
     <div>
-
       {/* for home page seo  */}
 
       <Helmet>
@@ -42,11 +39,6 @@ const Home = ({ selectedLanguage }) => {
         <link rel="canonical" href="https://kiteactiveventures.com/" />
       </Helmet>
 
-
-
-
-
-
       {/* all home page Components section import here  */}
 
       <div>
@@ -56,7 +48,6 @@ const Home = ({ selectedLanguage }) => {
       </Suspense> */}
       </div>
       
-
       <HeroSection selectedLanguage={selectedLanguage} />
       <Surfcamp selectedLanguage={selectedLanguage} />
       <Surfcampslider selectedLanguage={selectedLanguage} />

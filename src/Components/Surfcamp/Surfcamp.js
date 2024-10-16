@@ -6,25 +6,25 @@ import img2 from '../../Images/img2.webp'
 import img3 from '../../Images/img3.webp'
 import img4 from '../../Images/img4.webp'
 
-const Surfcamp = ({selectedLanguage}) => {
+const Surfcamp = ({ selectedLanguage }) => {
 
   const content = {
     en: {
-        title: "Kiteactive",
-        title1: "for Veventures!",
-        subtitle: "Kiteactive for Veventures offers an unparalleled experience for adventure seekers and kite surfing enthusiasts. With our expertly curated trips, you can explore breathtaking destinations while enjoying world-class kite surfing conditions. We prioritize your comfort and safety, providing you with top-notch equipment and personalized guidance from our skilled instructors."
+      title: "Kiteactive",
+      title1: "for Veventures!",
+      subtitle: "Kiteactive for Veventures offers an unparalleled experience for adventure seekers and kite surfing enthusiasts. With our expertly curated trips, you can explore breathtaking destinations while enjoying world-class kite surfing conditions. We prioritize your comfort and safety, providing you with top-notch equipment and personalized guidance from our skilled instructors."
     },
-    nl: {
-        title: "Kiteactive",
-        title1: "voor het leven!",
-        subtitle: "KiteActive, een kitesurfreismerk dat anders is dan anders. Wij creëren onvergetelijke avonturen die een community van gepassioneerde kitesurfers met elkaar verbinden. Of je nu op jacht bent naar wind of nieuwe vrienden ontmoet, KiteActive draait om het ten volle leven van het kitesurfen. Ga met ons mee op de kitetrip van je leven!"
+    gr: {
+      title: "Kiteactive",
+      title1: "für Veventures!",
+      subtitle: "Kiteactive für Veventures bietet ein unvergleichliches Erlebnis für Abenteuersuchende und Kitesurfing-Enthusiasten. Mit unseren fachkundig zusammengestellten Reisen kannst du atemberaubende Reiseziele erkunden und erstklassige Kitesurfing-Bedingungen genießen. Wir legen großen Wert auf deinen Komfort und deine Sicherheit, stellen dir erstklassige Ausrüstung zur Verfügung und bieten dir eine persönliche Anleitung durch unsere erfahrenen Trainer."
     },
     du: {
-        title: "Kiteactive",
-        title1: "voor het avontuur!",
-        subtitle: "KiteActive voor avonturiers biedt een ongeëvenaarde ervaring voor avonturiers en kitesurf-enthousiastelingen. Met onze zorgvuldig samengestelde reizen kun je adembenemende bestemmingen verkennen terwijl je geniet van kitesurfomstandigheden van wereldklasse. Wij geven prioriteit aan jouw comfort en veiligheid, met topkwaliteit uitrusting en persoonlijke begeleiding door onze ervaren instructeurs."
+      title: "Kiteactive",
+      title1: "voor het avontuur!",
+      subtitle: "KiteActive voor avonturiers biedt een ongeëvenaarde ervaring voor avonturiers en kitesurf-enthousiastelingen. Met onze zorgvuldig samengestelde reizen kun je adembenemende bestemmingen verkennen terwijl je geniet van kitesurfomstandigheden van wereldklasse. Wij geven prioriteit aan jouw comfort en veiligheid, met topkwaliteit uitrusting en persoonlijke begeleiding door onze ervaren instructeurs."
     }
-};
+  };
 
 
 
@@ -39,54 +39,54 @@ const Surfcamp = ({selectedLanguage}) => {
             </p>
           </div>
         </div>
-        
+
       </div>
 
       {/* ----------------------------------------------- */}
 
 
       {/* Photo Section  */}
+    
       <div className="container mt-5 pt-5">
         <div className="row">
-          <div className="col-12 col-sm-12 col-md-6 col-lg-5">
+          <div className="col-12 col-md-6 col-lg-5">
             <Link>
               <img src={img1} alt="" className='surf_img1' />
             </Link>
           </div>
-          <div className="col-12 col-sm-12 col-md-6 col-lg-7">
+          <div className="col-12 col-md-6 col-lg-7">
             <div className="row">
-              <div className="col-lg-6">
+              <div className="col-12 col-lg-6">
                 <Link>
-                  <img src={img2} alt="" className=' surf_img2' />
+                  <img src={img2} alt="" className='surf_img2' />
                 </Link>
               </div>
-              <div className="col-lg-6 ">
-                <div className='p-1'>
-                  <Link>
-                    <img src={img3} alt="" className=' surf_img3' />
-                  </Link>
+              <div className="col-12 col-lg-6">
+                <div className='sufr_inside_row '>
+                  <div className='p-1'>
+                    <Link>
+                      <img src={img3} alt="" className='surf_img3' />
+                    </Link>
+                  </div>
+                  <br />
+                  <div className='p-1'>
+                    <Link>
+                      <img src={img4} alt="" className='surf_img4' />
+                    </Link>
+                  </div>
                 </div>
-                <br />
-
-                <div className='p-1'>
-                  <Link>
-                    <img src={img4} alt="" className=' surf_img4' />
-                  </Link>
-                </div>
-
               </div>
-
             </div>
           </div>
         </div>
 
         <div>
           <Link className='nav-link'>
-            <p className='text-danger fw-bold m-3 fs-5 text-center'> SEE ALL PHOTOS & VEDIOS</p>
+            <p className='text-danger fw-bold m-3 fs-5 text-center'>SEE ALL PHOTOS & VIDEOS</p>
           </Link>
         </div>
-
       </div>
+
 
       {/* photo container end  */}
 

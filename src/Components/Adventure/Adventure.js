@@ -20,7 +20,7 @@ const content = {
         subtitle: "अपना अविस्मरणीय खोजें",
         subtitle1: "2024 का उष्णकटिबंधीय साहसिक कार्य!",
     },
-    nl: {
+    gr: {
         title: "Grote surf, zonnige stranden, palmbomen en warm weer?",
         subtitle: "Vind uw onvergetelijke",
         subtitle1: "tropische avontuur van 2024!",
@@ -34,7 +34,7 @@ const Adventuredata = [
         title: {
             en: 'Ericeira',
             du: 'एरिसेरा',
-            nl: 'Ericeira'
+            gr: 'Ericeira'
         }
     },
     {
@@ -43,7 +43,7 @@ const Adventuredata = [
         title: {
             en: 'Alentejo',
             du: 'अलेंटेजो',
-            nl: 'Alentejo'
+            gr: 'Alentejo'
         }
     },
     {
@@ -52,7 +52,7 @@ const Adventuredata = [
         title: {
             en: 'Hoddevika',
             du: 'होडेविका',
-            nl: 'Hoddevika'
+            gr: 'Hoddevika'
         }
     },
     {
@@ -61,7 +61,7 @@ const Adventuredata = [
         title: {
             en: 'Fuerte Ventura',
             du: 'फुएर्टे वेंचुरा',
-            nl: 'Fuerte Ventura'
+            gr: 'Fuerte Ventura'
         }
     },
     {
@@ -70,7 +70,7 @@ const Adventuredata = [
         title: {
             en: 'Ahangama',
             du: 'अहंगामा',
-            nl: 'Ahangama'
+            gr: 'Ahangama'
         }
     },
 ]

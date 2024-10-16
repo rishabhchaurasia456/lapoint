@@ -147,6 +147,10 @@
     display: none;
 }
 
+.fa_icon_sidebar{
+    color: #ffc800;
+}
+
 @media screen and (max-width: 960px) {
     .Only_mobile {
         display: block;

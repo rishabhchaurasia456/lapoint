@@ -16,8 +16,8 @@ export const cardData = [
         data: {
             trip_name: {
                 en: "Vanlife",
-                nl: "Nvanlife",
-                du: 'dvanlife'
+                gr: "Vanleben",
+                du: 'Vanleven'
             },
             vedio: vedio
         },
@@ -27,8 +27,8 @@ export const cardData = [
         data: {
             trip_name:{
                 en:"zanzibar", 
-                nl:"Nzanzibar", 
-                du:"Dzanzibar", 
+                gr:"Sansibar", 
+                du:" Zanzibar ", 
             },
             vedio: vedio
         },
@@ -38,8 +38,8 @@ export const cardData = [
         data: {
             trip_name:{
                 en:"Snowkite", 
-                nl:"NSnowkite", 
-                du:"DSnowkite", 
+                gr:"Schneekite", 
+                du:"Sneeuwkite", 
             },
             vedio: vedio 
         }
@@ -49,8 +49,8 @@ export const cardData = [
         data: {
             trip_name:{
                 en:"skyCapTown", 
-                nl:"NskyCapTown", 
-                du:"DskyCapTown", 
+                gr:"SkyKapstadt", 
+                du:"SkyKaapstad", 
             },
             vedio: vedio 
         }
@@ -60,8 +60,8 @@ export const cardData = [
         data: {
             trip_name:{
                 en:"KitemeccaTraifa", 
-                nl:"NKitemeccaTraifa", 
-                du:"DKitemeccaTraifa", 
+                gr:"KitemekkaTarifa", 
+                du:"KitemekkaTarifa", 
             },
             vedio: vedio 
         }
@@ -71,8 +71,8 @@ export const cardData = [
         data: {
             trip_name:{
                 en:"EndlessSummerParty", 
-                nl:"NEndlessSummerParty", 
-                du:"DEndlessSummerParty", 
+                gr:"EndloseSommerParty", 
+                du:"EindeloosZomerFeest", 
             },
             vedio: vedio 
         }
@@ -82,8 +82,8 @@ export const cardData = [
         data: {
             trip_name:{
                 en:"Brazil", 
-                nl:"NBrazil", 
-                du:"DBrazil", 
+                gr:"Brasilien", 
+                du:"Brazilië", 
             },
             vedio: vedio 
         }
@@ -93,8 +93,8 @@ export const cardData = [
         data: {
             trip_name:{
                 en:"Dakhla", 
-                nl:"NDakhla", 
-                du:"DDakhla", 
+                gr:"Dakhla", 
+                du:"Dakhla", 
             },
             vedio: vedio 
         }
@@ -104,8 +104,8 @@ export const cardData = [
         data: {
             trip_name:{
                 en:"Sail&kite", 
-                nl:"NSail&kite", 
-                du:"DSail&kite", 
+                gr:"Kiten", 
+                du:"Zeil&kite", 
             },
             vedio: vedio 
         }
@@ -115,10 +115,12 @@ export const cardData = [
         data: {
             trip_name:{
                 en:"Sicily", 
-                nl:"NSicily", 
-                du:"DSicily", 
+                gr:"Sizilien", 
+                du:"Sicilië", 
             },
             vedio: vedio 
         }
     },
 ];
+
+

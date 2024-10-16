@@ -1,29 +1,25 @@
-import React, { useState } from 'react'
-import { Helmet } from 'react-helmet'
-// import vedio from "../../Images/website.filmpje.tarifa.mp4"
-import Kitespots from './TripComponent/Kitespots'
-import Packages from './TripComponent/Packages'
-import Accomodation from './TripComponent/Accomodation'
-import Included from './TripComponent/Included'
-import Review from './TripComponent/Review'
-import Hosted from './TripComponent/Hosted'
-import Activites from './TripComponent/Activites'
-import Overview from './TripComponent/Overview'
-import { useLocation } from 'react-router-dom'
-import Booking from '../Kitecamps/Booking'
-
+import React, { useState } from 'react';
+import { Helmet } from 'react-helmet';
+import Kitespots from './TripComponent/Kitespots';
+import Packages from './TripComponent/Packages';
+import Accomodation from './TripComponent/Accomodation';
+import Included from './TripComponent/Included';
+import Review from './TripComponent/Review';
+import Hosted from './TripComponent/Hosted';
+import Activites from './TripComponent/Activites';
+import Overview from './TripComponent/Overview';
+import trips from './Tripdata';
+import { useParams } from 'react-router-dom';
 
 const Trip = ({ selectedLanguage }) => {
+    const { trip_name } = useParams();
+    const trip = trips.find(t => t.name.toLowerCase() === trip_name.toLowerCase());
 
     const [activeTab, setActiveTab] = useState('OVERVIEW');
 
     const handleButtonClick = (tabName) => {
         setActiveTab(tabName);
     };
-
-    const location = useLocation();
-    const { trip_data } = location.state || { trip_name: "mytrips", };
-
 
     return (
         <div>
@@ -33,72 +29,86 @@ const Trip = ({ selectedLanguage }) => {
                 <meta name="keywords" content="surfcamp, lifestyle, adventure, activities, reviews" />
                 <link rel="canonical" href="https://kiteactiveventures.com/kitecamp" />
             </Helmet>
-            <div>
 
-
-                <div className="video-container">
+            {/* Video section */}
+            <div className="video-container">
+                {trip?.vedio && (
                     <video autoPlay loop muted className="background-video">
-                        <source src={trip_data.vedio} type="video/mp4" />
+                        <source src={trip.vedio} type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
-                </div>
+                )}
+            </div>
 
-                <div className="container">
-                    <h1>{trip_data.trip_name[selectedLanguage]}</h1>
-                    {/* {trip_data.img && <img src={trip_data.img} alt={trip_data.trip_name} className="img-fluid" />} */}
-                    {/* Tabs and other details go here */}
-                </div>
-
-                <div className="container">
-                    <div className="text-center mb-2 my-3 tab_scroll">
-                        <button className="trip_tabs" onClick={() => handleButtonClick('OVERVIEW')}>
-                            <p>OVERVIEW</p>
-                        </button>
-                        <button className="trip_tabs" onClick={() => handleButtonClick('KITESPOTS')}>
-                            <p>KITESPOTS</p>
-                        </button>
-                        <button className="trip_tabs" onClick={() => handleButtonClick('PACKAGES')}>
-                            <p>PACKAGES</p>
-                        </button>
-                        <button className="trip_tabs" onClick={() => handleButtonClick('ACCOMMODATION')}>
-                            <p>ACCOMMODATION</p>
-                        </button>
-                        <button className="trip_tabs" onClick={() => handleButtonClick('INCLUDED')}>
-                            <p>INCLUDED</p>
-                        </button>
-                        <button className="trip_tabs" onClick={() => handleButtonClick('REVIEWS')}>
-                            <p>REVIEWS</p>
-                        </button>
-                        <button className="trip_tabs" onClick={() => handleButtonClick('HOSTED_BY')}>
-                            <p>HOSTED BY</p>
-                        </button>
-                        <button className="trip_tabs" onClick={() => handleButtonClick('ACTIVITIES')}>
-                            <p>ACTIVITIES</p>
-                        </button>
-                    </div>
-                </div>
-                {/* </div> */}
-                <div className="container-fluid">
-                    <div className="output-container">
-
-                        <div>
-                            {activeTab === 'OVERVIEW' && <Overview />}
-                            {activeTab === 'KITESPOTS' && <Kitespots />}
-                            {activeTab === 'PACKAGES' && <Packages />}
-                            {activeTab === 'ACCOMMODATION' && <Accomodation />}
-                            {activeTab === 'INCLUDED' && <Included />}
-                            {activeTab === 'REVIEWS' && <Review />}
-                            {activeTab === 'HOSTED_BY' && <Hosted />}
-                            {activeTab === 'ACTIVITIES' && <Activites />}
+                {/* Conditionally render the tab buttons based on the available data */}
+            <div className="container">
+                <div class="row">
+                    <div class="col ">{/* tab_scroll class for scroll bar */}
+                        <div className=" mb-2 my-3 text-center ">
+                            {trip?.overview && (
+                                <button className="trip_tabs" onClick={() => handleButtonClick('OVERVIEW')}>
+                                    <p>OVERVIEW</p>
+                                </button>
+                            )}
+                            {trip?.kitespot && (
+                                <button className="trip_tabs" onClick={() => handleButtonClick('KITESPOTS')}>
+                                    <p>KITESPOTS</p>
+                                </button>
+                            )}
+                            {trip?.packages && (
+                                <button className="trip_tabs" onClick={() => handleButtonClick('PACKAGES')}>
+                                    <p>PACKAGES</p>
+                                </button>
+                            )}
+                            {trip?.accommodation && (
+                                <button className="trip_tabs" onClick={() => handleButtonClick('ACCOMMODATION')}>
+                                    <p>ACCOMMODATION</p>
+                                </button>
+                            )}
+                            {trip?.included && (
+                                <button className="trip_tabs" onClick={() => handleButtonClick('INCLUDED')}>
+                                    <p>INCLUDED</p>
+                                </button>
+                            )}
+                            {trip?.reviews && (
+                                <button className="trip_tabs" onClick={() => handleButtonClick('REVIEWS')}>
+                                    <p>REVIEWS</p>
+                                </button>
+                            )}
+                            {trip?.hosted && (
+                                <button className="trip_tabs" onClick={() => handleButtonClick('HOSTED_BY')}>
+                                    <p>HOSTED BY</p>
+                                </button>
+                            )}
+                            {trip?.activities && (
+                                <button className="trip_tabs" onClick={() => handleButtonClick('ACTIVITIES')}>
+                                    <p>ACTIVITIES</p>
+                                </button>
+                            )}
                         </div>
                     </div>
                 </div>
+            </div>
 
-                {/* booking component import here   and this css pages.css */}
-                <Booking tripName={trip_data.trip_name[selectedLanguage]} />
+            <div className="container-fluid">
+                <div className="output-container">
+                    {/* Conditionally render the components based on the active tab and the available data */}
+                    {activeTab === 'OVERVIEW' && trip?.overview && (
+                        <Overview overviewData={trip.overview} selectedLanguage={selectedLanguage} />
+                    )}
+                    {activeTab === 'KITESPOTS' && trip?.kitespot && (
+                        <Kitespots kitespotData={trip.kitespot} selectedLanguage={selectedLanguage} />
+                    )}
+                    {activeTab === 'PACKAGES' && trip?.packages && <Packages />}
+                    {activeTab === 'ACCOMMODATION' && trip?.accommodation && <Accomodation />}
+                    {activeTab === 'INCLUDED' && trip?.included && <Included />}
+                    {activeTab === 'REVIEWS' && trip?.reviews && <Review />}
+                    {activeTab === 'HOSTED_BY' && trip?.hosted && <Hosted />}
+                    {activeTab === 'ACTIVITIES' && trip?.activities && <Activites />}
+                </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default Trip
+export default Trip;

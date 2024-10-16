@@ -1,21 +1,12 @@
 import React from 'react'
-import img1 from "../../../Images/level-icon-6.webp"
-import img2 from "../../../Images/level-icon-3.webp"
-import img3 from "../../../Images/level-icon-4.webp"
-import img4 from "../../../Images/level-icon-2.webp"
 
-import gall_img1 from '../../../Images/img1.webp'
-import gall_img2 from '../../../Images/img2.webp'
-import gall_img3 from '../../../Images/img3.webp' 
-import gall_img4 from '../../../Images/img4.webp'
-
-const Overview = () => {
+const Overview = ({overviewData, selectedLanguage}) => {
     return (
         <div>
-            <div className="container-fluid">
-                <div className="row">
-                    <p className='trip_heading'>Kitesurf heaven on earth Karibu zanzibar</p>
-                    <p className='trip_para'>Dakhla is located on the edge of the Sahara with a huge flat water lagoon near the Atlantic Ocean. If you are looking for a kitesurfing destination with guaranteed wind and the flattest water you have ever seen, Dakhla is the right place for you. Dakhla has enormous wind reliability, a fantastic culture and great weather. The birds and dolphins will sail side by side with you. Everyone will enjoy with you when you talk about your kitesurfing adventures while enjoying a drink after your kitesurfing session! After a half-hour drive with the 4×4 you will have one of the most beautiful right-hand waves in the world. It is not without reason that they regularly organize the World Cup wave event here.  </p>
+            <div className="container-fluid mb-5">
+                <div className="row ">
+                    <p className='trip_heading'>{overviewData.trip_heading[selectedLanguage]}</p>
+                    <p className='trip_para text-center'>{overviewData.trip_para[selectedLanguage]}</p>
                 </div>
                 <div className="row">
                     <div class="container">
@@ -24,16 +15,16 @@ const Overview = () => {
                                 <div class="row">
                                     <div className="col">
                                         <div className="img_spacing">
-                                            <img src={img1} width="100%" alt="" />
-                                            <p className='img_head'>Early bird discount</p>
-                                            <p className='img_para'>Book before 1 November and get 10% discount</p>
+                                            <img src={overviewData.img1} width="100%" alt="" />
+                                            <p className='img_head'>{overviewData.img1_head[selectedLanguage]}</p>
+                                            <p className='img_para'>{overviewData.img1_para[selectedLanguage]}</p>
                                         </div>
                                     </div>
                                     <div className="col">
                                         <div className="img_spacing">
-                                            <img src={img2} width="100%" alt="" />
-                                            <p className='img_head'>Join our community</p>
-                                            <p className='img_para'>7-15 kiters / week Suited for: couples, solo, family, singles</p>
+                                            <img src={overviewData.img2} width="100%" alt="" />
+                                            <p className='img_head'>{overviewData.img2_head[selectedLanguage]}</p>
+                                            <p className='img_para'>{overviewData.img2_para[selectedLanguage]}</p>
                                         </div>
 
                                     </div>
@@ -43,16 +34,16 @@ const Overview = () => {
                                 <div class="row">
                                     <div className="col">
                                         <div className="img_spacing">
-                                            <img src={img3} width="100%" alt="" />
-                                            <p className='img_head'>Surf skill</p>
-                                            <p className='img_para'>Suited for all levels. Especially Level 1 - beginners!</p>
+                                            <img src={overviewData.img3} width="100%" alt="" />
+                                            <p className='img_head'>{overviewData.img3_head[selectedLanguage]}</p>
+                                            <p className='img_para'>{overviewData.img3_para[selectedLanguage]}</p>
                                         </div>
                                     </div>
                                     <div className="col">
                                         <div className="img_spacing">
-                                            <img src={img4} width="100%" alt="" />
-                                            <p className='img_head'>Only stars</p>
-                                            <p className='img_para'>Read the reviews of our travellers</p>
+                                            <img src={overviewData.img4} width="100%" alt="" />
+                                            <p className='img_head'>{overviewData.img4_head[selectedLanguage]}</p>
+                                            <p className='img_para'>{overviewData.img4_para[selectedLanguage]}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -63,21 +54,21 @@ const Overview = () => {
                 <div className="container pt-5">
                     <div className="row">
                         <div className="col-12 col-sm-12 col-md-6 col-lg-5">
-                            <img src={gall_img1} alt="" className='surf_img1' />
+                            <img src={overviewData.gall_img1} alt="" className='surf_img1' />
                         </div>
                         <div className="col-12 col-sm-12 col-md-6 col-lg-7">
                             <div className="row">
                                 <div className="col-lg-6">
-                                    <img src={gall_img2} alt="" className=' surf_img2' />
+                                    <img src={overviewData.gall_img2} alt="" className=' surf_img2' />
                                 </div>
                                 <div className="col-lg-6 ">
                                     <div className='p-1'>
-                                        <img src={gall_img3} alt="" className=' surf_img3' />
+                                        <img src={overviewData.gall_img3} alt="" className=' surf_img3' />
                                     </div>
                                     <br />
 
                                     <div className='p-1'>
-                                        <img src={gall_img4} alt="" className=' surf_img4' />
+                                        <img src={overviewData.gall_img4} alt="" className=' surf_img4' />
                                     </div>
 
                                 </div>

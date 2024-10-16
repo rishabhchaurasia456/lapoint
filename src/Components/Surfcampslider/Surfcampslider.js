@@ -2,9 +2,9 @@ import React, { useRef } from 'react'
 // import { NavLink } from 'react-bootstrap';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import {Carddata_head_section } from './Carddata';
+import { Carddata_head_section } from './Carddata';
 import { Link } from 'react-router-dom';
-import {cardData} from '../../Pages/Kitecamps/Kitecampdata'
+import { cardData } from '../../Pages/Kitecamps/Kitecampdata'
 
 const responsive = {
     superLargeDesktop: {
@@ -27,7 +27,7 @@ const responsive = {
 };
 
 
-const Surfcampslider = ({selectedLanguage}) => {
+const Surfcampslider = ({ selectedLanguage }) => {
 
     const carouselRef = useRef(null);
     const handleNext = () => {
@@ -54,11 +54,11 @@ const Surfcampslider = ({selectedLanguage}) => {
                 </div>
                 <div className="row ">
                     <div className="col text-center">
-                    <div className='Surf_slider_div'>
-                        <h1 className="surf_slider_text">
-                        <span className='text_span'> {Carddata_head_section[0].subtitle[selectedLanguage]} </span> {Carddata_head_section[0].subtitle1[selectedLanguage]}
-                        </h1>
-                    </div>
+                        <div className='Surf_slider_div'>
+                            <h1 className="surf_slider_text">
+                                <span className='text_span'> {Carddata_head_section[0].subtitle[selectedLanguage]} </span> {Carddata_head_section[0].subtitle1[selectedLanguage]}
+                            </h1>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -74,11 +74,11 @@ const Surfcampslider = ({selectedLanguage}) => {
                                     <div>
                                         {/* <img src={img} className="slid_card_backimg rounded-4" alt="..." /> */}
                                         <Link to={card.path} state={{ trip_data: card.data }} className='nav-link'>
-                                        <div className="slid_card_backimg rounded-4" style={{ backgroundImage: `url(${card.img})`, backgroundSize: 'cover', backgroundPosition: 'center',}}>
-                                            {/* <div class="slid_card_text">
+                                            <div className="slid_card_backimg rounded-4" style={{ backgroundImage: `url(${card.img})`, backgroundSize: 'cover', backgroundPosition: 'center', }}>
+                                                {/* <div class="slid_card_text">
                                                 <p class="card_d_text">{title[selectedLanguage]}</p>
                                             </div> */}
-                                        </div>
+                                            </div>
                                         </Link>
                                     </div>
                                 </div>

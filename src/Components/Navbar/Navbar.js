@@ -1,6 +1,6 @@
 
 import React, { useState } from "react";
-import {NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { navItems } from '../Navbar/Navdata';
 import "./Navbar.css"
 import img from '../../Images/logo-zwart-geel-geel.png'
@@ -14,7 +14,7 @@ const Navbar = ({ selectedLanguage, setSelectedLanguage }) => {
   const languages = [
     { value: "en", text: "English" },
     { value: "du", text: "Dutch" },
-    { value: "nl", text: "nedarland" },
+    { value: "gr", text: "German " },
   ];
 
   const handleChange = (event) => {
@@ -86,6 +86,45 @@ const Navbar = ({ selectedLanguage, setSelectedLanguage }) => {
                 )}
               </li>
             ))}
+
+
+
+            <div className='Only_mobile'>
+              <div className=" ">
+                <Link to="" className="nav-link border-bottom border-2">
+                  <p className=''> <i className='fa fa-user-o me-3 text_span'></i>Sign in</p>
+                </Link>
+              </div>
+              
+              {/* for language in mobile mode  */}
+              <div className="">
+                <Link to="" className="nav-link border-bottom border-2">
+                  <p className=''> <i className='fa fa-globe text_span me-3'></i>Select Language
+                  <select className='btn border text-dark' value={selectedLanguage} onChange={handleChange}>
+                      {languages.map((item) => (
+                        <option className='text-dark' key={item.value} value={item.value}>
+                          {item.text}
+                        </option>
+                      ))}
+                    </select>
+                  </p>
+                </Link>
+              </div>
+             
+
+
+              {/* social media icon  */}
+              <div className="navbar-nav  mt-3 ">
+                <div className='d-flex m-auto text-center'>
+                  <Link to="/" className="nav-link me-5"> <i className='fa fa-facebook fa_icon_sidebar'></i></Link>
+                  <Link to="/" className="nav-link me-5"> <i className='fa fa-instagram  fa_icon_sidebar'></i></Link>
+                  <Link to="/" className="nav-link me-5"> <i className='fa fa-youtube fa_icon_sidebar '></i></Link>
+                  <Link to="/" className="nav-link me-5"> <i className='fa fa-twitter fa_icon_sidebar '></i></Link>
+                </div>
+
+
+              </div>
+            </div>
           </ul>
 
 

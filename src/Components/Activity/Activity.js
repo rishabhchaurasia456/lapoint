@@ -6,12 +6,13 @@ import img1 from "../../Images/1.webp"
 import img2 from "../../Images/2.webp"
 import img3 from "../../Images/3.webp"
 
+
 const content = {
     en: {
         title: "Activity",
         title1: "Discover our experiences",
     },
-    nl: {
+    gr: {
         title: "Activiteit",
         title1: "Ontdek onze ervaringen",
     },
@@ -19,6 +20,8 @@ const content = {
         title: "Activiteit", // Keeping it consistent with Dutch
         title1: "Ontdek onze ervaringen", // Keeping it consistent with Dutch
     }
+
+
 };
 
 const Activitydata = [
@@ -28,12 +31,12 @@ const Activitydata = [
         title: {
             en: 'Old town Erice',
             du: 'Oude stad Erice', // Dutch translation
-            nl: 'Oude stad Erice' // Dutch translation
+            gr: 'Altstadt Erice' // German translation
         },
         text: {
             en: 'All over the world',
             du: 'Overal ter wereld', // Dutch translation
-            nl: 'Overal ter wereld' // Dutch translation
+            gr: 'Weltweit' // German translation
         }
     },
     {
@@ -42,12 +45,12 @@ const Activitydata = [
         title: {
             en: 'Wine Tasting',
             du: 'Wijnproeverij', // Dutch translation
-            nl: 'Wijnproeverij' // Dutch translation
+            gr: 'Weinverkostung' // German translation
         },
         text: {
             en: 'Ericeira & Sri Lanka',
             du: 'Ericeira en Sri Lanka', // Dutch translation
-            nl: 'Ericeira en Sri Lanka' // Dutch translation
+            gr: 'Ericeira und Sri Lanka' // German translation
         }
     },
     {
@@ -56,15 +59,16 @@ const Activitydata = [
         title: {
             en: 'To Climb',
             du: 'Om te klimmen', // Dutch translation
-            nl: 'Om te klimmen' // Dutch translation
+            gr: 'Klettern' // German translation
         },
         text: {
             en: 'Work & Surf',
             du: 'Werk en surfen', // Dutch translation
-            nl: 'Werk en surfen' // Dutch translation
+            gr: 'Arbeiten & Surfen' // German translation
         }
     },
 ];
+
 
 
 const responsive = {

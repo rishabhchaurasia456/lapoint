@@ -106,7 +106,7 @@
   .hero_heading2 {
     color: white;
     font-weight: 900;
-    font-size: 50px;
+    font-size: 40px !important;
     /* line-height: 80px; */
     text-transform: uppercase;
 

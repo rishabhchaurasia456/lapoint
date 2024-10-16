@@ -1,20 +1,21 @@
 import React from 'react'
 import img from "../../Images/just.svg"
 
-const content  = [
+const content = [
     {
         title: {
             en: "Let's cool down the planet Together",
-            nl: "Laten we samen de planeet afkoelen", // Dutch
-            du: "Laten we samen de planeet afkoelen", // Netherlands Dutch
+            gr: "Lasst uns gemeinsam den Planeten abkühlen", // German
+            du: "Laten we samen de planeet afkoelen", // Dutch
         },
         subtitle: {
             en: "At KiteActive we believe in the future of our planet and the oceans. Wouldn't it be great if our children could enjoy the same wonderful planet as we do? Just dig in!",
-            nl: "Bij KiteActive geloven we in de toekomst van onze planeet en de oceanen. Zou het niet geweldig zijn als onze kinderen van dezelfde prachtige planeet konden genieten als wij? Ga er maar in duiken!", // Dutch
-            du: "Bij KiteActive geloven we in de toekomst van onze planeet en de oceanen. Zou het niet geweldig zijn als onze kinderen van dezelfde prachtige planeet konden genieten als wij? Ga er maar in duiken!", // Netherlands Dutch
+            gr: "Bei KiteActive glauben wir an die Zukunft unseres Planeten und der Ozeane. Wäre es nicht großartig, wenn unsere Kinder denselben wunderbaren Planeten genießen könnten wie wir? Tauchen Sie ein!", // German
+            du: "Bij KiteActive geloven we in de toekomst van onze planeet en de oceanen. Zou het niet geweldig zijn als onze kinderen van dezelfde prachtige planeet konden genieten als wij? Ga er maar in duiken!", // Dutch
         }
     }
-]
+];
+
 
 const Elementcomp = ({selectedLanguage}) => {
     return (

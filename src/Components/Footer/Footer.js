@@ -3,135 +3,133 @@ import { Link } from 'react-router-dom'
 
 import footerlogo from '../../Images/logo-kiteactive.svg'
 
-  const footerhead = {
-    headtitle : {
+const footerhead = {
+    headtitle: {
       en: "Unlock Your Surfing Adventure: Join Our Membership for 30€ Off",
       du: "Ontgrendel je surfavontuur: Word lid van onze community en ontvang 30€ korting op je volgende surftrip!",
-      nl: "Word lid van onze ledencommunity en ontvang 30€ korting op je volgende surftrip!"
+      gr: "Entfesseln Sie Ihr Surf-Abenteuer: Treten Sie unserer Mitgliedschaft bei und erhalten Sie 30€ Rabatt!",
     }
-
-  }
-
+  };
+  
   const sections = [
     {
-        heading: {
-            en: 'KiteActive World',
-            du: 'KiteActive Wereld', // Dutch translation
-            nl: 'KiteActive Wereld', // Netherlands translation
+      heading: {
+        en: 'KiteActive World',
+        du: 'KiteActive Wereld', // Dutch translation
+        gr: 'KiteActive Welt', // German translation
+      },
+      links: [
+        {
+          to: '/',
+          text: {
+            en: 'Kite Camps',
+            du: 'Kite Camps', // Dutch translation
+            gr: 'Kite Camps', // German translation
+          },
         },
-        links: [
-            {
-                to: '/',
-                text: {
-                    en: 'Kite Camps',
-                    du: 'Kite Camps', // Dutch translation
-                    nl: 'Kitekampen', // Netherlands translation
-                },
-            },
-            {
-                to: '/',
-                text: {
-                    en: 'Discover KiteActive',
-                    du: 'Ontdek KiteActive', // Dutch translation
-                    nl: 'Ontdek KiteActive', // Netherlands translation
-                },
-            },
-            {
-                to: '/',
-                text: {
-                    en: 'KiteActive Team',
-                    du: 'KiteActive Team', // Dutch translation
-                    nl: 'KiteActive Team', // Netherlands translation
-                },
-            },
-            {
-                to: '/',
-                text: {
-                    en: 'Kitesurfing Packages',
-                    du: 'Kitesurfpakketten', // Dutch translation
-                    nl: 'Kitesurf Pakketten', // Netherlands translation
-                },
-            },
-            {
-                to: '/',
-                text: {
-                    en: 'Become Teamrider',
-                    du: 'Word Teamrijder', // Dutch translation
-                    nl: 'Word Teamrijder', // Netherlands translation
-                },
-            },
-        ],
+        {
+          to: '/',
+          text: {
+            en: 'Discover KiteActive',
+            du: 'Ontdek KiteActive', // Dutch translation
+            gr: 'Entdecken Sie KiteActive', // German translation
+          },
+        },
+        {
+          to: '/',
+          text: {
+            en: 'KiteActive Team',
+            du: 'KiteActive Team', // Dutch translation
+            gr: 'KiteActive Team', // German translation
+          },
+        },
+        {
+          to: '/',
+          text: {
+            en: 'Kitesurfing Packages',
+            du: 'Kitesurfpakketten', // Dutch translation
+            gr: 'Kitesurf-Pakete', // German translation
+          },
+        },
+        {
+          to: '/',
+          text: {
+            en: 'Become Teamrider',
+            du: 'Word Teamrijder', // Dutch translation
+            gr: 'Teamfahrer werden', // German translation
+          },
+        },
+      ],
     },
     {
-        heading: {
-            en: 'KiteActive World',
-            du: 'KiteActive Wereld', // Dutch translation
-            nl: 'KiteActive Wereld', // Netherlands translation
+      heading: {
+        en: 'KiteActive World',
+        du: 'KiteActive Wereld', // Dutch translation
+        gr: 'KiteActive Welt', // German translation
+      },
+      links: [
+        {
+          to: '/',
+          text: {
+            en: 'About Us',
+            du: 'Over ons', // Dutch translation
+            gr: 'Über uns', // German translation
+          },
         },
-        links: [
-            {
-                to: '/',
-                text: {
-                    en: 'About Us',
-                    du: 'Over ons', // Dutch translation
-                    nl: 'Over ons', // Netherlands translation
-                },
-            },
-            {
-                to: '/',
-                text: {
-                    en: 'Booking & Payment',
-                    du: 'Boeking en Betaling', // Dutch translation
-                    nl: 'Boeking & Betaling', // Netherlands translation
-                },
-            },
-            {
-                to: '/',
-                text: {
-                    en: 'Privacy Policy',
-                    du: 'Privacybeleid', // Dutch translation
-                    nl: 'Privacybeleid', // Netherlands translation
-                },
-            },
-            {
-                to: '/',
-                text: {
-                    en: 'Terms & Conditions',
-                    du: 'Algemene Voorwaarden', // Dutch translation
-                    nl: 'Algemene Voorwaarden', // Netherlands translation
-                },
-            },
-            {
-                to: '/',
-                text: {
-                    en: 'Cookies Policy',
-                    du: 'Cookiebeleid', // Dutch translation
-                    nl: 'Cookiebeleid', // Netherlands translation
-                },
-            },
-        ],
+        {
+          to: '/',
+          text: {
+            en: 'Booking & Payment',
+            du: 'Boeking en Betaling', // Dutch translation
+            gr: 'Buchung & Zahlung', // German translation
+          },
+        },
+        {
+          to: '/',
+          text: {
+            en: 'Privacy Policy',
+            du: 'Privacybeleid', // Dutch translation
+            gr: 'Datenschutzrichtlinie', // German translation
+          },
+        },
+        {
+          to: '/',
+          text: {
+            en: 'Terms & Conditions',
+            du: 'Algemene Voorwaarden', // Dutch translation
+            gr: 'Geschäftsbedingungen', // German translation
+          },
+        },
+        {
+          to: '/',
+          text: {
+            en: 'Cookies Policy',
+            du: 'Cookiebeleid', // Dutch translation
+            gr: 'Cookie-Richtlinie', // German translation
+          },
+        },
+      ],
     },
-];
-
-
-const footerdata = {
-  maindesc: {
+  ];
+  
+  const footerdata = {
+    maindesc: {
       en: "Join the KiteActive community! Discover the best kitespots in the world and make new friends! Together with our team we will make sure you will have the adventure of a lifetime!",
       du: "Sluit je aan bij de KiteActive-gemeenschap! Ontdek de beste kitespots ter wereld en maak nieuwe vrienden! Samen met ons team zorgen we ervoor dat je het avontuur van je leven beleeft!", // Dutch translation
-      nl: "Sluit je aan bij de KiteActive-gemeenschap! Ontdek de beste kitespots ter wereld en maak nieuwe vrienden! Samen met ons team zorgen we ervoor dat je het avontuur van je leven beleeft!", // Netherlands translation
-  },
-  heading: {
+      gr: "Treten Sie der KiteActive-Community bei! Entdecken Sie die besten Kitespots der Welt und finden Sie neue Freunde! Gemeinsam mit unserem Team stellen wir sicher, dass Sie das Abenteuer Ihres Lebens erleben!", // German translation
+    },
+    heading: {
       en: "Contact Us",
       du: "Neem contact met ons op", // Dutch translation
-      nl: "Neem contact met ons op", // Netherlands translation
-  },
-  para: {
+      gr: "Kontaktieren Sie uns", // German translation
+    },
+    para: {
       en: "For kitesurfing trips and inquiries, reach out to us! Contact our team today for the ride of your life!",
       du: "Voor kitesurfreizen en vragen kunt u contact met ons opnemen! Neem vandaag nog contact op met ons team voor de rit van je leven!", // Dutch translation
-      nl: "Voor kitesurfreizen en vragen kunt u contact met ons opnemen! Neem vandaag nog contact op met ons team voor de rit van je leven!", // Netherlands translation
-  },
-};
-
+      gr: "Für Kitesurfreisen und Anfragen, kontaktieren Sie uns! Kontaktieren Sie unser Team noch heute für das Abenteuer Ihres Lebens!", // German translation
+    },
+  };
+  
 
 const Footer = ({selectedLanguage}) => {
     return (
@@ -139,7 +137,7 @@ const Footer = ({selectedLanguage}) => {
             <div className='container-fluid'>
                 <div className='row footer_headcontainer pt-4'>
 
-                    <div className='col-md-7 footer_headcontainer_text p-4'>
+                    <div className='col-md-7 footer_headcontainer_text'>
                         <p>{footerhead.headtitle[selectedLanguage]}</p>
                     </div>
                     <div className='col-md-5 m-auto'>
@@ -167,7 +165,7 @@ const Footer = ({selectedLanguage}) => {
                                             </Link>
                                         </div>
 
-                                        <div className='text-light'>
+                                        <div className='text-light '>
                                             <p className='mt-4'>{footerdata.maindesc[selectedLanguage]}</p>
                                         </div>
 

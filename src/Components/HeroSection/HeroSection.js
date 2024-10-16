@@ -14,9 +14,9 @@ const HeroSection = ({ selectedLanguage }) => {
             title: "Kiteactive - Surf Camps, Work & Surf, Yoga & Waves",
             subtitle: "ADVENTURE AWAITS: DISCOVER THE WORLD",
         },
-        nl: {
-            title: "Kiteactive - surfkampen, werk & surf, yogo & surf",
-            subtitle: "ONTDEK DE WERELD",
+        gr: {
+            title: "Kiteactive - Surfcamps, Work & Surf, Yoga & Wellen",
+            subtitle: "ABENTEUER ERWARTET DICH: ENTDECKE DIE WELT",
         },
 
         du: {
