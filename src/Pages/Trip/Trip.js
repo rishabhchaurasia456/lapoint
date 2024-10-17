@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import Kitespots from './TripComponent/Kitespots';
 import Packages from './TripComponent/Packages';
@@ -16,6 +16,10 @@ const Trip = ({ selectedLanguage }) => {
     const trip = trips.find(t => t.name.toLowerCase() === trip_name.toLowerCase());
 
     const [activeTab, setActiveTab] = useState('OVERVIEW');
+
+    useEffect(() => {
+        setActiveTab('OVERVIEW');
+    }, [trip_name])
 
     const handleButtonClick = (tabName) => {
         setActiveTab(tabName);
@@ -99,12 +103,22 @@ const Trip = ({ selectedLanguage }) => {
                     {activeTab === 'KITESPOTS' && trip?.kitespot && (
                         <Kitespots kitespotData={trip.kitespot} selectedLanguage={selectedLanguage} />
                     )}
-                    {activeTab === 'PACKAGES' && trip?.packages && <Packages />}
-                    {activeTab === 'ACCOMMODATION' && trip?.accommodation && <Accomodation />}
+                    {activeTab === 'PACKAGES' && trip?.packages && (
+                        <Packages packagesData={trip.packages} selectedLanguage={selectedLanguage} />
+                    )}
+                    {activeTab === 'ACCOMMODATION' && trip?.accommodation && (
+                        <Accomodation accommodationData={trip.accommodation} selectedLanguage={selectedLanguage} />
+                    )}
                     {activeTab === 'INCLUDED' && trip?.included && <Included />}
-                    {activeTab === 'REVIEWS' && trip?.reviews && <Review />}
-                    {activeTab === 'HOSTED_BY' && trip?.hosted && <Hosted />}
-                    {activeTab === 'ACTIVITIES' && trip?.activities && <Activites />}
+                    {activeTab === 'REVIEWS' && trip?.reviews && (
+                        <Review />
+                    )}
+                    {activeTab === 'HOSTED_BY' && trip?.hosted && (
+                        <Hosted hostedData={trip.hosted} selectedLanguage={selectedLanguage} />
+                    )}
+                    {activeTab === 'ACTIVITIES' && trip?.activities && (
+                        <Activites activitiesData={trip.activities} selectedLanguage={selectedLanguage} />
+                    )}
                 </div>
             </div>
         </div>

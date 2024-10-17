@@ -57,7 +57,7 @@ const responsive = {
   }
 };
 
-const Activites = () => {
+const Activites = ({activitiesData, selectedLanguage}) => {
 
   const carouselRef = useRef(null);
   const handleNext = () => {
@@ -81,14 +81,14 @@ const Activites = () => {
             <Carousel ref={carouselRef} responsive={responsive} arrows={false}>
 
               {/* card data in card.js  */}
-              {Activity_data.map(({ title, img, index }) => (
+              {activitiesData.map((item, index) => (
                 <div className="border w-100 px-2 my-5 border-0" key={index}>
                   <div>
                     {/* <img src={img} className="slid_card_backimg rounded-4" alt="..." /> */}
                     <Link to="#" className='nav-link'>
-                      <div className="slid_card_backimg rounded-4" style={{ backgroundImage: `url(${img})`, backgroundSize: 'cover', backgroundPosition: 'center', }}>
+                      <div className="slid_card_backimg rounded-4" style={{ backgroundImage: `url(${item.img})` , backgroundSize: 'cover', backgroundPosition: 'center', }}>
                         <div class="slid_card_text">
-                          <p class="card_d_text">{title}</p>
+                          <p class="card_d_text">{item.title[selectedLanguage]}</p>
                         </div>
                       </div>
                     </Link>
@@ -98,13 +98,12 @@ const Activites = () => {
             </Carousel>
             <button className="fa fa-angle-left custom-prev" onClick={handlePrev} aria-label="Previous">  </button>
             <button className=" fa fa-angle-right custom-next" onClick={handleNext} aria-label="Next">   </button>
-
           </div>
         </div>
 
       </div>
     </div>
   )
-}
+};
 
 export default Activites

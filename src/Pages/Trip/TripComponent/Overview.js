@@ -5,7 +5,7 @@ const Overview = ({overviewData, selectedLanguage}) => {
         <div>
             <div className="container-fluid mb-5">
                 <div className="row ">
-                    <p className='trip_heading'>{overviewData.trip_heading[selectedLanguage]}</p>
+                    <p className='trip_heading'>{overviewData.trip_heading[selectedLanguage]}</p>                    
                     <p className='trip_para text-center'>{overviewData.trip_para[selectedLanguage]}</p>
                 </div>
                 <div className="row">
