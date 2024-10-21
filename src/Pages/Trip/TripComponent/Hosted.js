@@ -1,9 +1,9 @@
 import React from 'react'
-import img1 from "../../../Images/Hosted1.webp"
-import img2 from "../../../Images/hosted2.jpg"
-import img3 from "../../../Images/hosted3.webp"
-import img4 from "../../../Images/hosted4.webp"
-import earth from "../../../Images/earth.webp"
+// import img1 from "../../../Images/Hosted1.webp"
+// import img2 from "../../../Images/hosted2.jpg"
+// import img3 from "../../../Images/hosted3.webp"
+// import img4 from "../../../Images/hosted4.webp"
+// import earth from "../../../Images/earth.webp"
 
 import at from "../../../Images/at.webp"
 
