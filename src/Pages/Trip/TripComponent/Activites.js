@@ -2,40 +2,41 @@ import React, { useRef } from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import { Link } from 'react-router-dom';
-import img1 from '../../../Images/spice.webp'
-import img2 from '../../../Images/kuza.webp'
-import img3 from '../../../Images/blue.webp'
-import img4 from '../../../Images/local.webp'
-import img5 from '../../../Images/snorkeling.webp'
+
+// import img1 from '../../../Images/spice.webp'
+// import img2 from '../../../Images/kuza.webp'
+// import img3 from '../../../Images/blue.webp'
+// import img4 from '../../../Images/local.webp'
+// import img5 from '../../../Images/snorkeling.webp'
 
 
-const Activity_data = [
-  {
-    id: "1",
-    img: img1,
-    title: 'Spice Tour'
-  },
-  {
-    id: "2",
-    img: img2,
-    title: 'kuza cave'
-  },
-  {
-    id: "3",
-    img: img3,
-    title: 'Blue safari'
-  },
-  {
-    id: "4",
-    img: img4,
-    title: 'Local Dhow Sailing'
-  },
-  {
-    id: "5",
-    img: img5,
-    title: 'Snorkeling'
-  },
-]
+// const Activity_data = [
+//   {
+//     id: "1",
+//     img: img1,
+//     title: 'Spice Tour'
+//   },
+//   {
+//     id: "2",
+//     img: img2,
+//     title: 'kuza cave'
+//   },
+//   {
+//     id: "3",
+//     img: img3,
+//     title: 'Blue safari'
+//   },
+//   {
+//     id: "4",
+//     img: img4,
+//     title: 'Local Dhow Sailing'
+//   },
+//   {
+//     id: "5",
+//     img: img5,
+//     title: 'Snorkeling'
+//   },
+// ]
 
 const responsive = {
   superLargeDesktop: {

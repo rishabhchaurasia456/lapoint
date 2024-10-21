@@ -119,8 +119,6 @@ function App() {
               <MyCreative />
             </Aff_Layout>
           } />
-
-
         </Routes>
       </BrowserRouter>
     </div>

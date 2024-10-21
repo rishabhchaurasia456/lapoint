@@ -10,6 +10,7 @@ import Activites from './TripComponent/Activites';
 import Overview from './TripComponent/Overview';
 import trips from './Tripdata';
 import { useParams } from 'react-router-dom';
+import Booking from '../Kitecamps/Booking';
 
 const Trip = ({ selectedLanguage }) => {
     const { trip_name } = useParams();
@@ -38,7 +39,7 @@ const Trip = ({ selectedLanguage }) => {
             <div className="video-container">
                 {trip?.vedio && (
                     <video autoPlay loop muted className="background-video">
-                        <source src={trip.vedio} type="video/mp4" />
+                        <source src={trip.vedio} type="video/mp4"  loading="lazy"/>
                         Your browser does not support the video tag.
                     </video>
                 )}
@@ -120,6 +121,11 @@ const Trip = ({ selectedLanguage }) => {
                         <Activites activitiesData={trip.activities} selectedLanguage={selectedLanguage} />
                     )}
                 </div>
+
+                <div>
+                <Booking tripName={trip_name}/>
+                
+            </div>
             </div>
         </div>
     );

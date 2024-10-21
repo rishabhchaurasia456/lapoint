@@ -1,5 +1,22 @@
 import vedio from '../../Images/website.filmpje.tarifa.mp4';
 
+
+import vanlife_vedio from '../../Images/tripvedios/VanLife_vedio.mp4'
+import Zanzibar_vedio from '../../Images/tripvedios/zanzibar_vedio.mp4'
+import Snowkite_vedio from '../../Images/tripvedios/snow_kite_vedio.mp4'
+import skyCapTown_vedio from '../../Images/tripvedios/skycapeTown_vedio.mp4'
+import KitemeccaTraifa_vedio from '../../Images/tripvedios/kitemecca_vedio.mp4'
+import EndlessSummerParty_vedio from '../../Images/tripvedios/Endless_Egypt_vedio.mp4'
+import Brazil_vedio from '../../Images/tripvedios/Brazil_vedio.mp4'
+import Sailkite_vedio from '../../Images/tripvedios/sailkite_vedio.mp4'
+import Sicily_vedio from '../../Images/tripvedios/sicily_vedio.mp4'
+
+
+
+
+
+// valnlife img data .........................................
+
 import vanlife_img1 from "../../Images/level-icon-6.webp"
 import vanlife_img2 from "../../Images/level-icon-3.webp"
 import vanlife_img3 from "../../Images/level-icon-4.webp"
@@ -208,9 +225,10 @@ import tab3_2 from "../../Images/tab1_2.webp";
 const trips = [
     // vanlife trip data .......................
 
+
     {
         name: 'vanlife',
-        vedio: vedio,
+        vedio: vanlife_vedio,
         overview: {
             trip_heading: {
                 en: "Discover the Vanlife Roadtrip: A European Journey for Kitesurfers",
@@ -313,11 +331,557 @@ const trips = [
             },
         ],
         packages: {
-            h2: {
-                en: "location / vanlife",
-                gr: "Nither location / vanlife",
-                du: "Dutch location / vanlife"
+            levelsData: [
+                {
+                    levelName: 'Level 1 - Beginner',
+                    desc: {
+                        en: 'This is the perfect package if you have no experience with kitesurfing and want to learn this beautiful sport. Kitesurfing is not a sport that you can just learn in 1 afternoon. That’s why our trips are perfect! You are at a perfect destination with ideal conditions for a week with people who also want to learn as much as possible. Hey ho, let’s go!',
+                        du: 'Dit is het perfecte pakket als je geen ervaring hebt met kitesurfen en deze mooie sport wilt leren. Kitesurfen is geen sport die je in 1 middag kunt leren. Daarom zijn onze reizen perfect! Je bevindt je op een perfecte bestemming met ideale omstandigheden voor een week samen met mensen die ook zoveel mogelijk willen leren. Hey ho, laten we gaan!',
+                        gr: 'Dies ist das perfekte Paket, wenn du keine Erfahrung mit Kitesurfen hast und diesen schönen Sport erlernen möchtest. Kitesurfen ist kein Sport, den man in einem Nachmittag erlernen kann. Deshalb sind unsere Reisen perfekt! Du bist an einem perfekten Reiseziel mit idealen Bedingungen für eine Woche mit Menschen, die ebenfalls so viel wie möglich lernen wollen. Hey ho, los geht’s!'
+                    },
+                    imgsect: [
+                        {
+                            imgSrc: tab1_1,
+                            text: {
+                                en: 'Designed for beginners',
+                                du: 'Ontworpen voor beginners',
+                                gr: 'Für Anfänger entwickelt'
+                            },
+                            para: {
+                                en: 'This Level 1 – Beginner package is the ideal start to your kitesurfing career. We will help you get started and ensure that you can get on the water independently as a real kiter under good conditions, safely, and with great pleasure. A complete kite training in 1 week from Zero to Hero! 9 hours of lessons from our team. After the 9 hours you can practice independently with other kiters from your level for the rest of the week with our kite material. A complete package including kite lessons, (shared) equipment rental, supervision, and coaching for 6 days!',
+                                du: 'Dit Level 1 - Beginner pakket is de ideale start voor je kitesurfcarrière. We helpen je op weg en zorgen ervoor dat je zelfstandig het water op kunt als een echte kiter onder goede omstandigheden, veilig en met veel plezier. Een complete kitesurftraining in 1 week van Zero tot Hero! 9 uur les van ons team. Na de 9 uur kun je de rest van de week zelfstandig oefenen met andere kiters van jouw niveau met ons kitemateriaal. Een compleet pakket inclusief kitesurfles, (gedeelde) materiaalhuur, begeleiding en coaching voor 6 dagen!',
+                                gr: 'Dieses Level 1 – Anfängerpaket ist der ideale Start in deine Kitesurf-Karriere. Wir helfen dir beim Einstieg und stellen sicher, dass du unter guten Bedingungen, sicher und mit großer Freude als echter Kiter selbstständig auf dem Wasser sein kannst. Ein komplettes Kitesurf-Training in 1 Woche von Null auf Held! 9 Stunden Unterricht von unserem Team. Nach den 9 Stunden kannst du die restliche Woche mit anderen Kitern deines Levels mit unserem Kite-Material selbstständig üben. Ein komplettes Paket inklusive Kitesurf-Unterricht, (geteilte) Ausrüstungsmiete, Betreuung und Coaching für 6 Tage!'
+                            },
+                            imgPosition: 'left'
+                        },
+                        {
+                            imgSrc: tab1_2,
+                            text: {
+                                en: 'What to expect from this course?',
+                                du: 'Wat kun je van deze cursus verwachten?',
+                                gr: 'Was kannst du von diesem Kurs erwarten?'
+                            },
+                            para: {
+                                en: 'After this week you can go on the water independently with your kite set. To ensure that you make optimal progress, we teach with 1 instructor on a maximum of 2 students. You share a kite set together for the entire week so that you can help each other and learn together. Kitesurfing can be quite intensive, especially in the beginning. It is nice to be on the water together. You will get lessons from our certified instructors! Real kite professionals who have been active in kite industry for over 10 years!',
+                                du: 'Na deze week kun je zelfstandig het water op met je kiteset. Om ervoor te zorgen dat je optimaal vooruitgang boekt, geven we les met 1 instructeur voor maximaal 2 studenten. Je deelt de hele week samen een kiteset zodat je elkaar kunt helpen en samen kunt leren. Kitesurfen kan behoorlijk intensief zijn, vooral in het begin. Het is fijn om samen op het water te zijn. Je krijgt les van onze gecertificeerde instructeurs! Echte kiteprofessionals die al meer dan 10 jaar actief zijn in de kite-industrie!',
+                                gr: 'Nach dieser Woche kannst du mit deinem Kiteset selbstständig aufs Wasser gehen. Um sicherzustellen, dass du optimal vorankommst, unterrichten wir mit 1 Instruktor für maximal 2 Schüler. Ihr teilt euch eine Kiteset für die gesamte Woche, sodass ihr euch gegenseitig helfen und zusammen lernen könnt. Kitesurfen kann recht intensiv sein, besonders am Anfang. Es ist schön, gemeinsam auf dem Wasser zu sein. Du wirst von unseren zertifizierten Instruktoren unterrichtet! Echte Kite-Profis, die seit über 10 Jahren in der Kite-Branche tätig sind!'
+                            },
+                            imgPosition: 'right'
+                        }
+                    ],
+                    acordation_head: {
+                        en: 'What do you learn?',
+                        du: 'Wat leer je?',
+                        gr: 'Was lernst du?'
+                    },
+                    acordation_data: [
+                        {
+                            title: {
+                                en: 'Building up your kite and knowledge about kitematerials',
+                                du: 'Opbouwen van je kite en kennis over kitematerialen',
+                                gr: 'Aufbau deines Kites und Wissen über Kite-Materialien'
+                            },
+                            info: {
+                                en: 'Learn how to rig the kite, learn all about your material, bar extensions, line lengths, different systems, kite types, etc.',
+                                du: 'Leer hoe je de kite opzet, leer alles over je materiaal, stangverlengingen, lijnlengtes, verschillende systemen, kitetypes, enz.',
+                                gr: 'Lerne, wie man den Kite aufbaut, lerne alles über dein Material, Stangenverlängerungen, Leinenlängen, verschiedene Systeme, Kite-Typen, usw.'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Safe starting and landing',
+                                du: 'Veilig starten en landen',
+                                gr: 'Sicheres Starten und Landen'
+                            },
+                            info: {
+                                en: 'Perhaps the most important thing during your course. Learn to take off/land independently and safely on the beach.',
+                                du: 'Misschien wel het belangrijkste tijdens je cursus. Leer zelfstandig en veilig op het strand op te stijgen en te landen.',
+                                gr: 'Vielleicht das Wichtigste während deines Kurses. Lerne, selbstständig und sicher am Strand zu starten und zu landen.'
+                            }
+                        }
+                    ],
+
+                    faq_head: {
+                        en: "FAQ",
+                        du: "Veelgestelde vragen",
+                        gr: "Häufig gestellte Fragen"
+                    },
+                    faq_data: [
+                        {
+                            title: {
+                                en: 'What happens after the 9 hour course?',
+                                du: "Wat gebeurt er na de 9 uur durende cursus?",
+                                gr: "Was passiert nach dem 9-stündigen Kurs?"
+                            },
+                            info: {
+                                en: 'You will practice as much as possible independently, together with another kiter. The wind often blows all day at our destinations, so there is plenty of time for everyone to spend hours on the water. Our team will supervise you during your practise and give you tips where needed.',
+                                du: "Je zult zoveel mogelijk zelfstandig oefenen, samen met een andere kitesurfer. De wind waait vaak de hele dag op onze bestemmingen, dus er is voldoende tijd voor iedereen om uren op het water door te brengen. Ons team zal je tijdens je oefening begeleiden en waar nodig tips geven.",
+                                gr: "Du wirst so viel wie möglich unabhängig üben, zusammen mit einem anderen Kitesurfer. Der Wind weht an unseren Zielen oft den ganzen Tag, sodass jeder genug Zeit hat, Stunden auf dem Wasser zu verbringen. Unser Team wird dich während des Übens beaufsichtigen und dir bei Bedarf Tipps geben."
+                            },
+                        },
+                        {
+                            title: {
+                                en: 'What happens if I have or want private lessons?',
+                                du: "Wat gebeurt er als ik privélessen heb of wil?",
+                                gr: "Was passiert, wenn ich Privatunterricht habe oder möchte?"
+                            },
+                            info: {
+                                en: 'If it happens that the group lesson doesn’t suit you in terms of your level, you may receive private lessons. If you take private lessons, you will complete the course a little faster, but it is also a little more intensive. Our rule is that 7 hours of private lessons are equal to the nominal 9 hours of shared lessons. Do you really want private lessons? Please let us know in advance so that we can see what is possible.',
+                                du: "Als de groepsles niet bij je past qua niveau, kun je privélessen krijgen. Als je privélessen volgt, zul je de cursus iets sneller afronden, maar het is ook iets intensiever. Onze regel is dat 7 uur privélessen gelijk zijn aan de nominale 9 uur gedeelde lessen. Wil je echt privélessen? Laat het ons van tevoren weten, zodat we kunnen kijken wat mogelijk is.",
+                                gr: "Wenn es passiert, dass der Gruppenunterricht deinem Niveau nicht entspricht, kannst du Privatunterricht erhalten. Wenn du Privatunterricht nimmst, wirst du den Kurs etwas schneller abschließen, aber er ist auch etwas intensiver. Unsere Regel lautet, dass 7 Stunden Privatunterricht den nominalen 9 Stunden Gruppenunterricht entsprechen. Möchtest du wirklich Privatunterricht? Lass es uns im Voraus wissen, damit wir sehen können, was möglich ist."
+                            },
+                        },
+                    ],
+                    logo_img: [
+                        {
+                            img: tab1_card1,
+                            title: {
+                                en: "Professional team at your service",
+                                du: "Professioneel team tot uw dienst",
+                                gr: "Professionelles Team zu Ihren Diensten"
+                            },
+                        },
+                        {
+                            img: tab1_card2,
+                            title: {
+                                en: "Headset coaching",
+                                du: "Headset coaching",
+                                gr: "Headset-Coaching"
+                            },
+                        },
+                        {
+                            img: tab1_card3,
+                            title: {
+                                en: "Make progress in ideal conditions!",
+                                du: "Boek vooruitgang in ideale omstandigheden!",
+                                gr: "Mache Fortschritte unter idealen Bedingungen!"
+                            },
+                        },
+                        {
+                            img: tab1_card4,
+                            title: {
+                                en: "Ask advice from travel expert AJ",
+                                du: "Vraag advies aan reisspecialist AJ",
+                                gr: "Frage AJ, den Reiseexperten, um Rat"
+                            },
+                        },
+                    ]
+                },
+
+                {
+                    levelName: 'Level 2 - Waterstart',
+                    desc: {
+                        en: 'This is the perfect package if you have already had a kite course, but it has been a long time ago and you need to be refreshed. Or you need an extra eye on you and some waterstart coaching. Kitesurfing is not a sport that you can learn in 1 afternoon. That’s why our trips are perfect! You are at a beginner friendly destination for a week with people who also want to learn as much as possible. Hey ho, let’s go!',
+                        du: 'Dit is het perfecte pakket als je al eerder een kitesurfles hebt gehad, maar het lang geleden is en je je kennis moet opfrissen. Of je hebt een extra oog nodig op jou en wat coaching voor waterstart. Kitesurfen is geen sport die je in één middag kunt leren. Daarom zijn onze reizen perfect! Je bent een week op een beginnersvriendelijke bestemming met mensen die ook zoveel mogelijk willen leren. Hey ho, laten we gaan!',
+                        gr: 'Dies ist das perfekte Paket, wenn Sie bereits einen Kite-Kurs absolviert haben, dieser aber lange zurückliegt und Sie eine Auffrischung benötigen. Oder Sie benötigen ein zusätzliches Auge auf sich und ein bisschen Waterstart-Coaching. Kitesurfen ist kein Sport, den man an einem Nachmittag erlernen kann. Deshalb sind unsere Reisen perfekt! Sie sind eine Woche lang an einem anfängerfreundlichen Zielort mit Leuten, die ebenfalls so viel wie möglich lernen wollen. Hey ho, los geht’s!'
+                    },
+                    imgsect: [
+                        {
+                            imgSrc: tab2_1,
+                            text: {
+                                en: 'A lot of practise with supervision',
+                                du: 'Veel oefenen onder toezicht',
+                                gr: 'Viel Übung mit Aufsicht'
+                            },
+                            para: {
+                                en: 'This intermediate package is the ideal package for kiters who need to get on board. We will help you get started and ensure that you can get on the water independently as a real kiter under good conditions, safely, and with great pleasure. A complete kite training to make you a real independent kiter in 1 week!',
+                                du: 'Dit tussentijdse pakket is het ideale pakket voor kiters die aan boord moeten komen. We helpen je op weg en zorgen ervoor dat je onder goede omstandigheden zelfstandig op het water kunt, veilig en met veel plezier. Een complete kitesurftraining om je in 1 week tot een echte zelfstandige kiter te maken!',
+                                gr: 'Dieses Fortgeschrittenen-Paket ist ideal für Kiter, die auf das Brett kommen müssen. Wir helfen Ihnen beim Einstieg und stellen sicher, dass Sie unter guten Bedingungen, sicher und mit großem Vergnügen unabhängig auf dem Wasser kiten können. Ein vollständiges Kitesurf-Training, das Sie in einer Woche zu einem echten, unabhängigen Kiter macht!'
+                            },
+                            imgPosition: 'left',
+                        },
+                        {
+                            imgSrc: tab2_2,
+                            text: {
+                                en: 'What do you learn?',
+                                du: 'Wat leer je?',
+                                gr: 'Was lernst du?'
+                            },
+                            para: {
+                                en: 'After this week you can go on the water independently with your own kite set and the goal is that you can kite upwind so that you no longer have to walk! Our instructors ensure that you are in the right place with the right conditions, help you with tips and tricks, coach you, and keep an eye on things while you are practicing.',
+                                du: 'Na deze week kun je zelfstandig met je eigen kiteset het water op en is het doel dat je tegen de wind in kunt kiten, zodat je niet meer hoeft te lopen! Onze instructeurs zorgen ervoor dat je op de juiste plek met de juiste omstandigheden bent, helpen je met tips en trucs, coachen je en houden toezicht terwijl je oefent.',
+                                gr: 'Nach dieser Woche können Sie mit Ihrem eigenen Kiteset unabhängig aufs Wasser gehen und das Ziel ist es, gegen den Wind zu kiten, sodass Sie nicht mehr laufen müssen! Unsere Instruktoren sorgen dafür, dass Sie am richtigen Ort unter den richtigen Bedingungen sind, helfen Ihnen mit Tipps und Tricks, coachen Sie und behalten während des Trainings alles im Auge.'
+                            },
+                            imgPosition: 'right',
+                        }
+                    ],
+                    acordation_head: {
+                        en: 'What do you learn?',
+                        du: 'Wat leer je?',
+                        gr: 'Was lernst du?'
+                    },
+                    acordation_data: [
+                        {
+                            title: {
+                                en: 'Good spot analysis and knowledge of kite material',
+                                du: 'Goede spotanalyse en kennis van kitemateriaal',
+                                gr: 'Gute Spot-Analyse und Wissen über Kite-Material'
+                            },
+                            info: {
+                                en: 'Learn everything you need to know about the spot, forecast and your kite material',
+                                du: 'Leer alles wat je moet weten over de spot, de weersvoorspelling en je kitemateriaal',
+                                gr: 'Lernen Sie alles, was Sie über den Spot, die Vorhersage und Ihr Kite-Material wissen müssen'
+                            },
+                        },
+                        {
+                            title: {
+                                en: 'Refresh your safety skills',
+                                du: 'Vernieuw je veiligheidsvaardigheden',
+                                gr: 'Auffrischen deiner Sicherheitskenntnisse'
+                            },
+                            info: {
+                                en: 'Do you know how to do a self rescue?',
+                                du: 'Weet jij hoe je een zelfredding uitvoert?',
+                                gr: 'Weißt du, wie du eine Selbstrettung durchführst?'
+                            },
+                        },
+                        {
+                            title: {
+                                en: 'Safe starting and landing',
+                                du: 'Veilig starten en landen',
+                                gr: 'Sicheres Starten und Landen'
+                            },
+                            info: {
+                                en: 'The most important about your kite career!',
+                                du: 'Het belangrijkste over je kitecarrière!',
+                                gr: 'Das Wichtigste für deine Kite-Karriere!'
+                            },
+                        },
+                        {
+                            title: {
+                                en: 'Theory and Rules',
+                                du: 'Theorie en regels',
+                                gr: 'Theorie und Regeln'
+                            },
+                            info: {
+                                en: 'Everything you need to know',
+                                du: 'Alles wat je moet weten',
+                                gr: 'Alles, was du wissen musst'
+                            },
+                        },
+                        {
+                            title: {
+                                en: 'Waterstart',
+                                du: 'Waterstart',
+                                gr: 'Wasserstart'
+                            },
+                            info: {
+                                en: 'How do you perform the perfect waterstart?',
+                                du: 'Hoe voer je de perfecte waterstart uit?',
+                                gr: 'Wie führst du den perfekten Wasserstart aus?'
+                            },
+                        },
+                        {
+                            title: {
+                                en: 'Upwind riding and turns!',
+                                du: 'Upwind rijden en bochten!',
+                                gr: 'Aufwindfahren und Wendungen!'
+                            },
+                            info: {
+                                en: 'When riding upwind, you are finally an independent kiter!',
+                                du: 'Bij upwind rijden ben je eindelijk een zelfstandige kiter!',
+                                gr: 'Beim Aufwindfahren bist du endlich ein unabhängiger Kiter!'
+                            },
+                        }
+                    ],
+                    faq_head: "FAQ",
+                    faq_data: [
+                        {
+                            title: {
+                                en: 'Is kitegear included in this package?',
+                                du: 'Is kitemateriaal inbegrepen in dit pakket?',
+                                gr: 'Ist Kite-Ausrüstung in diesem Paket enthalten?'
+                            },
+                            info: {
+                                en: 'No, you need to bring your own kitegear or rent a complete set at € 399 / week',
+                                du: 'Nee, je moet je eigen kitemateriaal meenemen of een complete set huren voor € 399 / week',
+                                gr: 'Nein, du musst deine eigene Kite-Ausrüstung mitbringen oder ein komplettes Set für 399 €/Woche mieten'
+                            },
+                        },
+                        {
+                            title: {
+                                en: 'What happens if my level doesn’t match with this course?',
+                                du: 'Wat gebeurt er als mijn niveau niet overeenkomt met deze cursus?',
+                                gr: 'Was passiert, wenn mein Niveau nicht zu diesem Kurs passt?'
+                            },
+                            info: {
+                                en: 'One person picks it up faster than the other and that is really no problem at all. If we see that you need extra lessons after the 9 hours, our instructor will take you aside and discuss with you how many hours he thinks you still need. Depending on whether other people in the group need extra lessons, the extra costs are: €60/hour for private lessons and €35/hour for shared lessons. You can also decide to exchange your rental for the rest of the week for 3 hours of extra lessons so that it does not cost you anything extra that week.',
+                                du: 'De één pakt het sneller op dan de ander en dat is echt geen probleem. Als we zien dat je na de 9 uur extra lessen nodig hebt, zal onze instructeur je apart nemen en met je bespreken hoeveel uren hij denkt dat je nog nodig hebt. Afhankelijk van of andere mensen in de groep extra lessen nodig hebben, zijn de extra kosten: €60/uur voor privelessen en €35/uur voor gedeelde lessen. Je kunt er ook voor kiezen om je huur voor de rest van de week in te wisselen voor 3 uur extra lessen, zodat het je die week niets extra kost.',
+                                gr: 'Die eine Person lernt schneller als die andere, und das ist überhaupt kein Problem. Wenn wir sehen, dass du nach den 9 Stunden noch zusätzliche Lektionen brauchst, wird unser Instruktor dich beiseite nehmen und mit dir besprechen, wie viele Stunden er denkt, dass du noch benötigst. Abhängig davon, ob andere Personen in der Gruppe zusätzliche Lektionen benötigen, betragen die zusätzlichen Kosten: 60 €/Stunde für Einzelunterricht und 35 €/Stunde für Gruppenunterricht. Du kannst dich auch dafür entscheiden, deine Miete für den Rest der Woche gegen 3 Stunden zusätzlichen Unterricht einzutauschen, sodass dich das in dieser Woche nichts extra kostet.'
+                            },
+                        }
+                    ],
+
+                    logo_img: [
+                        {
+                            img: tab1_card1,
+                            title: {
+                                en: "Professional team at your service",
+                                du: "Professioneel team tot uw dienst",
+                                gr: "Professionelles Team zu Ihren Diensten"
+                            },
+                        },
+                        {
+                            img: tab1_card2,
+                            title: {
+                                en: "Headset coaching",
+                                du: "Headset coaching",
+                                gr: "Headset-Coaching"
+                            },
+                        },
+                        {
+                            img: tab1_card3,
+                            title: {
+                                en: "Make progress in ideal conditions!",
+                                du: "Boek vooruitgang in ideale omstandigheden!",
+                                gr: "Mache Fortschritte unter idealen Bedingungen!"
+                            },
+                        },
+                        {
+                            img: tab1_card4,
+                            title: {
+                                en: "Ask advice from travel expert AJ",
+                                du: "Vraag advies aan reisspecialist AJ",
+                                gr: "Frage AJ, den Reiseexperten, um Rat"
+                            },
+                        },
+                    ]
+
+
+
+
+                },
+
+                {
+                    levelName: 'Level 3 - Independend',
+                    desc: {
+                        en: 'If you are on the water with kiters of the same level, you always make more progression. You learn from each other and push yourself to learn new things! In this course you will be pushed and coached as much as possible to learn new tricks. With KiteActive you will spend a week in a perfect destination with people who also want to make progress. Hey ho, Let’s go!',
+                        du: "",
+                        gr: ""
+                    },
+                    imgsect: [
+                        {
+                            imgSrc: tab3_1,
+                            text: {
+                                en: 'Learn new tricks',
+                                du: "",
+                                gr: ""
+                            },
+                            para: {
+                                en: 'This is the ultimate package for anyone who can already kitesurf but wants to make progress and learn new tricks. From your very first jump to a kiteloop handle pass. Our team is ready to help you with the right tips and tricks to achieve your goals!',
+                                du: "",
+                                gr: ""
+                            },
+                            imgPosition: 'left',
+                        },
+                        {
+                            imgSrc: tab3_2,
+                            text: {
+                                en: 'What to expect from this course',
+                                du: "",
+                                gr: ""
+                            },
+                            para: {
+                                en: 'During the course we will look at what your personal goals are and what is feasible. We go through the theory together and during the week we try to push, coach and motivate you as much as possible to try new things in a safe way.',
+                                du: "",
+                                gr: ""
+                            },
+                            imgPosition: 'right',
+                        },
+                    ],
+                    acordation_head: {
+                        en: 'What do you learn?',
+                        du: "",
+                        gr: ""
+                    },
+                    acordation_data: [
+                        {
+                            title: {
+                                en: '  Learn the basics of pop ',
+                                du: "",
+                                gr: ""
+                            },
+                            info: {
+                                en: ' Learn how to pop. This is an very important skill which you need for your entire kite career!',
+                                du: "",
+                                gr: ""
+                            },
+                        },
+                        {
+                            title: {
+                                en: '  Your first jump   ',
+                                du: "",
+                                gr: ""
+                            },
+                            info: {
+                                en: '  You want to learn how to go skyhigh?  ',
+                                du: "",
+                                gr: ""
+                            },
+                        },
+                        {
+                            title: {
+                                en: ' Back & Frontroll  ',
+                                du: "",
+                                gr: ""
+                            },
+                            info: {
+                                en: ' Make a salto in the air! You think it is difficult, but we will learn you this amazing trick in 1 week!   ',
+                                du: "",
+                                gr: ""
+                            },
+                        },
+                        {
+                            title: {
+                                en: '  board grabs, onefooters and board-offs ',
+                                du: "",
+                                gr: ""
+                            },
+                            info: {
+                                en: '  Grab the board in front of the camera!  ',
+                                du: "",
+                                gr: ""
+                            },
+                        },
+                        {
+                            title: {
+                                en: ' Your first kiteloop (downloop)  ',
+                                du: "",
+                                gr: ""
+                            },
+                            info: {
+                                en: '  Fly like an rollercoaster :)  ',
+                                du: "",
+                                gr: ""
+                            },
+                        },
+                        {
+                            title: {
+                                en: ' Your first downwinder  ',
+                                du: "",
+                                gr: ""
+                            },
+                            info: {
+                                en: '   With a downwinder your are doing a kite tour along the coast! ',
+                                du: "",
+                                gr: ""
+                            },
+                        },
+                    ],
+                    faq_head: {
+                        en: "FAQ",
+                        du: "",
+                        gr: ""
+                    },
+                    faq_data: [
+                        {
+                            title: {
+                                en: '  How many hours include this course? ',
+                                du: "",
+                                gr: ""
+                            },
+                            info: {
+                                en: 'We do not link exact hours to this package. We try to push everyone as much as possible and occasionally provide 1-on-1 guidance. The goal is to make as much progress as possible and during this course we will give you all the tools you need to continue practicing.    ',
+                                du: "",
+                                gr: ""
+                            },
+                        },
+                        {
+                            title: {
+                                en: '   Is kitegear included in this package?',
+                                du: "",
+                                gr: ""
+                            },
+                            info: {
+                                en: ' No, you need to bring your own kitegear or rent a complete set at € 399 / week   ',
+                                du: "",
+                                gr: ""
+                            },
+                        },
+                        {
+                            title: {
+                                en: '  Am I Insured? ',
+                                du: "",
+                                gr: ""
+                            },
+                            info: {
+                                en: '  You are not insured against damage through KiteActive. We recommend that you check your travel insurance carefully to see whether it also covers extreme sports. to avoid disappointment and hassle on holiday. We work together with Sportzeker and then you are always covered for everything!  ',
+                                du: "",
+                                gr: ""
+                            },
+                        },
+                    ],
+                    logo_img: [
+                        {
+                            img: tab1_card1,
+                            title: {
+                                en: "Professional team at your service",
+                                du: "",
+                                gr: ""
+                            },
+                        },
+                        {
+                            img: tab1_card2,
+                            title: {
+                                en: "Headset coaching",
+                                du: "",
+                                gr: ""
+                            },
+                        },
+                        {
+                            img: tab1_card3,
+                            title: {
+                                en: "Make progress in ideal conditions!",
+                                du: "",
+                                gr: ""
+                            },
+                        },
+                        {
+                            img: tab1_card4,
+                            title: {
+                                en: "Ask advice from travel expert AJ",
+                                du: "",
+                                gr: ""
+                            },
+                        },
+                    ]
+                },
+            ],
+            Kitegear_rental: {
+                title: {
+                    en: "Kitegear rental",
+                    du: "",
+                    gr: ""
+                },
+                para1: {
+                    en: "With us you can find the latest kite material. We have most brands available and we ensure that you are always on the water with the right size kite. Don’t feel like carrying all your materials with you? No problem!",
+                    du: "",
+                    gr: ""
+                },
+                para2: {
+                    en: "A list of our brands: Core / Naish / F-one / North / Slingshot / Lieuwe / Appletree",
+                    du: "",
+                    gr: ""
+                }
+            },
+            Disclaimer: {
+                title: {
+                    en: "Disclaimer",
+                    du: "",
+                    gr: ""
+                },
+                para1: {
+                    en: "You ensure that you indicate your correct level during your booking. Unfortunately, we cannot control the wind. If you cannot complete your package you can settle the outstanding amount in various ways with us.- You can use the outstanding amount in our webshop on (kite) gear – You can use it for other KiteActive trips or give it as a gift card to friends – You can finish your package in 1 of our schools in Holland. Make sure you get your insurance in order if you break your own or our material",
+                    du: "",
+                    gr: ""
+                },
+                para2: {
+                    en: "Participation in our packages is always at your own risk. Kitesurfing is an extreme sport and although we will make sure you learn kitesurfing with us most safely, you always need to be aware of yourself and others. Always listen well to the instructions from our team.",
+                    du: "",
+                    gr: ""
+                }
             }
+
         },
         accommodation: {
             main_title: {
@@ -533,7 +1097,7 @@ const trips = [
             },
         ],
 
-        reviews: {}
+        // reviews: {}
 
     },
 
@@ -543,7 +1107,7 @@ const trips = [
     // Zanzibar trip data ......................
     {
         name: 'Zanzibar',
-        vedio: vedio,
+        vedio: Zanzibar_vedio,
         overview: {
             trip_heading: {
                 en: "Kitesurf heaven on earth",
@@ -673,21 +1237,21 @@ const trips = [
                     levelName: 'Level 1 - Beginner',
                     desc: {
                         en: 'This is the perfect package if you have no experience with kitesurfing and want to learn this beautiful sport. Kitesurfing is not a sport that you can just learn in 1 afternoon. That’s why our trips are perfect! You are at a perfect destination with ideal conditions for a week with people who also want to learn as much as possible. Hey ho, let’s go!',
-                        du: "",
-                        gr: ""
+                        du: 'Dit is het perfecte pakket als je geen ervaring hebt met kitesurfen en deze prachtige sport wilt leren. Kitesurfen is geen sport die je in een middag kunt leren. Daarom zijn onze reizen perfect! Je bevindt je op een perfecte bestemming met ideale omstandigheden voor een week samen met mensen die ook zoveel mogelijk willen leren. Hey ho, laten we gaan!',
+                        gr: 'Dies ist das perfekte Paket, wenn Sie keine Erfahrung mit dem Kitesurfen haben und diesen schönen Sport erlernen möchten. Kitesurfen ist kein Sport, den man an einem Nachmittag lernen kann. Deshalb sind unsere Reisen perfekt! Sie sind an einem perfekten Ort mit idealen Bedingungen für eine Woche mit Leuten, die ebenfalls so viel wie möglich lernen möchten. Hey ho, los geht’s!'
                     },
                     imgsect: [
                         {
                             imgSrc: tab1_1,
                             text: {
                                 en: 'Designed for beginners',
-                                du: "",
-                                gr: ""
+                                du: 'Ontworpen voor beginners',
+                                gr: 'Entworfen für Anfänger'
                             },
                             para: {
                                 en: 'This Level 1 – Beginner package is the ideal start to your kitesurfing career. We will help you get started and ensure that you can get on the water independently as a real kiter under good conditions, safely, and with great pleasure. A complete kite training in 1 week from Zero to Hero! 9 hours of lessons from our team. After the 9 hours you can practice independently with other kiters from your level for the rest of the week with our kite material. A complete package including kite lessons, (shared) equipment rental, supervision, and coaching for 6 days!',
-                                du: "",
-                                gr: ""
+                                du: 'Dit Level 1 – Beginner pakket is het ideale begin van je kitesurfcarrière. We helpen je op weg en zorgen ervoor dat je onder goede omstandigheden zelfstandig het water op kunt, veilig en met veel plezier. Een complete kitesurftraining in 1 week van Zero tot Hero! 9 uur les van ons team. Na de 9 uur kun je de rest van de week zelfstandig oefenen met andere kiters van jouw niveau met ons kitemateriaal. Een compleet pakket inclusief kitesurfles, (gedeeld) materiaalhuur, toezicht en coaching voor 6 dagen!',
+                                gr: 'Dieses Level 1 – Beginner-Paket ist der ideale Start für Ihre Kitesurf-Karriere. Wir helfen Ihnen beim Einstieg und sorgen dafür, dass Sie unter guten Bedingungen, sicher und mit viel Freude, eigenständig auf das Wasser gehen können. Ein komplettes Kite-Training in 1 Woche von Zero zu Hero! 9 Stunden Unterricht von unserem Team. Nach den 9 Stunden können Sie den Rest der Woche eigenständig mit anderen Kitern Ihres Niveaus mit unserem Kite-Material üben. Ein komplettes Paket inklusive Kitesurf-Unterricht, (geteiltem) Materialverleih, Aufsicht und Coaching für 6 Tage!'
                             },
                             imgPosition: 'left',
                         },
@@ -695,193 +1259,112 @@ const trips = [
                             imgSrc: tab1_2,
                             text: {
                                 en: 'What to expect from this course?',
-                                du: "",
-                                gr: ""
+                                du: 'Wat kun je verwachten van deze cursus?',
+                                gr: 'Was können Sie von diesem Kurs erwarten?'
                             },
                             para: {
                                 en: 'After this week you can go on the water independently with your kite set. To ensure that you make optimal progress, we teach with 1 instructor on a maximum of 2 students. You share a kite set together for the entire week so that you can help each other and learn together. Kitesurfing can be quite intensive, especially in the beginning. It is nice to be on the water together. You will get lessons from our certified instructors! Real kite professionals who have been active in kite industry for over 10 years!',
-                                du: "",
-                                gr: ""
+                                du: 'Na deze week kun je zelfstandig het water op met je kiteset. Om ervoor te zorgen dat je optimaal vooruitgang boekt, geven we les met 1 instructeur op maximaal 2 studenten. Je deelt de hele week een kiteset zodat je elkaar kunt helpen en samen kunt leren. Kitesurfen kan behoorlijk intensief zijn, vooral in het begin. Het is fijn om samen op het water te zijn. Je krijgt les van onze gecertificeerde instructeurs! Echte kitesurfprofessionals die al meer dan 10 jaar actief zijn in de kitesurfindustrie!',
+                                gr: 'Nach dieser Woche können Sie eigenständig mit Ihrem Kite-Set aufs Wasser gehen. Um sicherzustellen, dass Sie optimal vorankommen, unterrichten wir mit 1 Ausbilder auf maximal 2 Schüler. Sie teilen sich die ganze Woche über ein Kite-Set, damit Sie sich gegenseitig helfen und zusammen lernen können. Kitesurfen kann sehr intensiv sein, besonders am Anfang. Es ist schön, zusammen auf dem Wasser zu sein. Sie werden von unseren zertifizierten Ausbildern unterrichtet! Echte Kite-Profis, die seit über 10 Jahren in der Kite-Branche tätig sind!'
                             },
                             imgPosition: 'right',
                         },
                     ],
                     acordation_head: {
                         en: 'What do you learn?',
-                        du: "",
-                        gr: ""
+                        du: 'Wat leer je?',
+                        gr: 'Was lernst du?'
                     },
                     acordation_data: [
                         {
                             title: {
-                                en: 'Learn the basics of pop',
-                                du: "",
-                                gr: ""
+                                en: ' ',
+                                du: 'Leer de basis van pop',
+                                gr: 'Lerne die Grundlagen des Pops'
                             },
                             info: {
-                                en: 'Learn how to pop. This is an very important skill which you need for your entire kite career!',
-                                du: "",
-                                gr: ""
+                                en: '  !',
+                                du: 'Leer hoe je moet poppen. Dit is een zeer belangrijke vaardigheid die je nodig hebt voor je hele kitesurfcarrière!',
+                                gr: 'Lerne, wie man poppt. Dies ist eine sehr wichtige Fähigkeit, die Sie für Ihre gesamte Kitesurf-Karriere benötigen!'
                             },
                         },
-                        {
-                            title: {
-                                en: 'Learn the basics of pop',
-                                du: "",
-                                gr: ""
-                            },
-                            info: {
-                                en: 'Learn how to pop. This is an very important skill which you need for your entire kite career!',
-                                du: "",
-                                gr: ""
-                            },
-                        },
-                        {
-                            title: {
-                                en: 'Learn the basics of pop',
-                                du: "",
-                                gr: ""
-                            },
-                            info: {
-                                en: 'Learn how to pop. This is an very important skill which you need for your entire kite career!',
-                                du: "",
-                                gr: ""
-                            },
-                        },
-                        {
-                            title: {
-                                en: 'Learn the basics of pop',
-                                du: "",
-                                gr: ""
-                            },
-                            info: {
-                                en: 'Learn how to pop. This is an very important skill which you need for your entire kite career!',
-                                du: "",
-                                gr: ""
-                            },
-                        },
-                        {
-                            title: {
-                                en: 'Learn the basics of pop',
-                                du: "",
-                                gr: ""
-                            },
-                            info: {
-                                en: 'Learn how to pop. This is an very important skill which you need for your entire kite career!',
-                                du: "",
-                                gr: ""
-                            },
-                        },
-                        {
-                            title: {
-                                en: 'Learn the basics of pop',
-                                du: "",
-                                gr: ""
-                            },
-                            info: {
-                                en: 'Learn how to pop. This is an very important skill which you need for your entire kite career!',
-                                du: "",
-                                gr: ""
-                            },
-                        },
+                        // Additional repeated entries for 'acordation_data' and 'faq_data'
                     ],
                     faq_head: {
                         en: "FAQ",
-                        du: "",
-                        gr: ""
+                        du: "Veelgestelde vragen",
+                        gr: "FAQ"
                     },
                     faq_data: [
                         {
                             title: {
-                                en: 'Learn the basics of pop',
-                                du: "",
-                                gr: ""
+                                en: ' ',
+                                du: 'Leer de basis van pop',
+                                gr: 'Lerne die Grundlagen des Pops'
                             },
                             info: {
-                                en: 'Learn how to pop. This is an very important skill which you need for your entire kite career!',
-                                du: "",
-                                gr: ""
+                                en: '  !',
+                                du: 'Leer hoe je moet poppen. Dit is een zeer belangrijke vaardigheid die je nodig hebt voor je hele kitesurfcarrière!',
+                                gr: 'Lerne, wie man poppt. Dies ist eine sehr wichtige Fähigkeit, die Sie für Ihre gesamte Kitesurf-Karriere benötigen!'
                             },
                         },
-                        {
-                            title: {
-                                en: 'Learn the basics of pop',
-                                du: "",
-                                gr: ""
-                            },
-                            info: {
-                                en: 'Learn how to pop. This is an very important skill which you need for your entire kite career!',
-                                du: "",
-                                gr: ""
-                            },
-                        },
-                        {
-                            title: {
-                                en: 'Learn the basics of pop',
-                                du: "",
-                                gr: ""
-                            },
-                            info: {
-                                en: 'Learn how to pop. This is an very important skill which you need for your entire kite career!',
-                                du: "",
-                                gr: ""
-                            },
-                        },
+                        // Additional repeated entries for 'faq_data'
                     ],
                     logo_img: [
                         {
                             img: tab1_card1,
                             title: {
                                 en: "Professional team at your service",
-                                du: "",
-                                gr: ""
+                                du: 'Professioneel team tot uw dienst',
+                                gr: 'Professionelles Team zu Ihren Diensten'
                             },
                         },
                         {
                             img: tab1_card2,
                             title: {
                                 en: "Headset coaching",
-                                du: "",
-                                gr: ""
+                                du: 'Headset-coaching',
+                                gr: 'Headset-Coaching'
                             },
                         },
                         {
                             img: tab1_card3,
                             title: {
                                 en: "Make progress in ideal conditions!",
-                                du: "",
-                                gr: ""
+                                du: 'Boek vooruitgang in ideale omstandigheden!',
+                                gr: 'Machen Sie Fortschritte unter idealen Bedingungen!'
                             },
                         },
                         {
                             img: tab1_card4,
                             title: {
                                 en: "Ask advice from travel expert AJ",
-                                du: "",
-                                gr: ""
+                                du: 'Vraag advies aan reisspecialist AJ',
+                                gr: 'Fragen Sie Reiseexperte AJ um Rat'
                             },
                         },
                     ]
                 },
+
                 {
                     levelName: 'Level 2 - Waterstart',
                     desc: {
                         en: 'This is the perfect package if you have already had a kite course, but it has been a long time ago and you need to be refreshed. Or you need an extra eye on you and some waterstart coaching. Kitesurfing is not a sport that you can learn in 1 afternoon. That’s why our trips are perfect! You are at a beginner friendly destination for a week with people who also want to learn as much as possible. Hey ho, let’s go!',
-                        du: "",
-                        gr: ""
+                        du: 'Dit is het perfecte pakket als je al een kitesurfles hebt gevolgd, maar dat lang geleden is en je een opfrisser nodig hebt. Of als je een extra oog op je nodig hebt en wat hulp bij het starten in het water. Kitesurfen is geen sport die je in één middag kunt leren. Daarom zijn onze reizen perfect! Je bent op een bestemming die geschikt is voor beginners voor een week, samen met mensen die ook zoveel mogelijk willen leren. Hey ho, laten we gaan!',
+                        gr: 'Dies ist das perfekte Paket, wenn Sie bereits einen Kitekurs absolviert haben, dies aber lange her ist und Sie eine Auffrischung benötigen. Oder Sie brauchen ein extra Auge auf sich und etwas Waterstart-Coaching. Kitesurfen ist kein Sport, den man an einem Nachmittag erlernen kann. Deshalb sind unsere Reisen perfekt! Sie befinden sich eine Woche lang an einem anfängerfreundlichen Zielort mit Menschen, die ebenfalls so viel wie möglich lernen wollen. Hey ho, los geht\'s!'
                     },
                     imgsect: [
                         {
                             imgSrc: tab2_1,
                             text: {
                                 en: 'A lot of practise with supervision',
-                                du: "",
-                                gr: ""
+                                du: 'Veel oefenen onder toezicht',
+                                gr: 'Viel Übung unter Aufsicht'
                             },
                             para: {
                                 en: 'This intermediate package is the ideal package for kiters who need to get on board. We will help you get started and ensure that you can get on the water independently as a real kiter under good conditions, safely, and with great pleasure. A complete kite training to make you a real independent kiter in 1 week!',
-                                du: "",
-                                gr: ""
+                                du: 'Dit tussentijdse pakket is het ideale pakket voor kitesurfers die aan boord moeten komen. Wij helpen je op weg en zorgen ervoor dat je zelfstandig het water op kunt gaan als een echte kitesurfer onder goede omstandigheden, veilig en met veel plezier. Een complete kitesurftraining om je in 1 week een echt onafhankelijke kitesurfer te maken!',
+                                gr: 'Dieses Fortgeschrittenen-Paket ist das ideale Paket für Kitesurfer, die auf das Board kommen müssen. Wir helfen Ihnen beim Einstieg und stellen sicher, dass Sie bei guten Bedingungen, sicher und mit großem Vergnügen eigenständig aufs Wasser gehen können. Ein komplettes Kitesurftraining, um Sie in 1 Woche zu einem unabhängigen Kiter zu machen!'
                             },
                             imgPosition: 'left',
                         },
@@ -889,189 +1372,111 @@ const trips = [
                             imgSrc: tab2_2,
                             text: {
                                 en: 'What do you learn?',
-                                du: "",
-                                gr: ""
+                                du: 'Wat leer je?',
+                                gr: 'Was lernst du?'
                             },
                             para: {
                                 en: 'After this week you can go on the water independently with your own kite set and the goal is that you can kite upwind so that you no longer have to walk! Our instructors ensure that you are in the right place with the right conditions, help you with tips and tricks, coach you, and keep an eye on things while you are practicing.',
-                                du: "",
-                                gr: ""
+                                du: 'Na deze week kun je zelfstandig het water op met je eigen kite set en het doel is dat je tegen de wind in kunt kiten, zodat je niet meer hoeft te lopen! Onze instructeurs zorgen ervoor dat je op de juiste plek bent met de juiste omstandigheden, helpen je met tips en trucs, coachen je en houden je in de gaten terwijl je oefent.',
+                                gr: 'Nach dieser Woche können Sie eigenständig mit Ihrem eigenen Kite-Set aufs Wasser gehen, und das Ziel ist, dass Sie gegen den Wind kiten können, sodass Sie nicht mehr laufen müssen! Unsere Lehrer stellen sicher, dass Sie am richtigen Ort unter den richtigen Bedingungen sind, geben Ihnen Tipps und Tricks, coachen Sie und behalten Sie während des Übens im Auge.'
                             },
                             imgPosition: 'right',
-                        },
+                        }
                     ],
                     acordation_head: {
                         en: 'What do you learn?',
-                        du: "",
-                        gr: ""
+                        du: 'Wat leer je?',
+                        gr: 'Was lernst du?'
                     },
                     acordation_data: [
                         {
                             title: {
-                                en: 'Learn the basics of pop',
-                                du: "",
-                                gr: ""
+                                en: ' ',
+                                du: 'Leer de basis van poppen',
+                                gr: 'Lerne die Grundlagen des Pop'
                             },
                             info: {
-                                en: 'Learn how to pop. This is an very important skill which you need for your entire kite career!',
-                                du: "",
-                                gr: ""
-                            },
-                        },
-                        {
-                            title: {
-                                en: 'Learn the basics of pop',
-                                du: "",
-                                gr: ""
-                            },
-                            info: {
-                                en: 'Learn how to pop. This is an very important skill which you need for your entire kite career!',
-                                du: "",
-                                gr: ""
-                            },
-                        },
-                        {
-                            title: {
-                                en: 'Learn the basics of pop',
-                                du: "",
-                                gr: ""
-                            },
-                            info: {
-                                en: 'Learn how to pop. This is an very important skill which you need for your entire kite career!',
-                                du: "",
-                                gr: ""
-                            },
-                        },
-                        {
-                            title: {
-                                en: 'Learn the basics of pop',
-                                du: "",
-                                gr: ""
-                            },
-                            info: {
-                                en: 'Learn how to pop. This is an very important skill which you need for your entire kite career!',
-                                du: "",
-                                gr: ""
-                            },
-                        },
-                        {
-                            title: {
-                                en: 'Learn the basics of pop',
-                                du: "",
-                                gr: ""
-                            },
-                            info: {
-                                en: 'Learn how to pop. This is an very important skill which you need for your entire kite career!',
-                                du: "",
-                                gr: ""
-                            },
-                        },
-                        {
-                            title: {
-                                en: 'Learn the basics of pop',
-                                du: "",
-                                gr: ""
-                            },
-                            info: {
-                                en: 'Learn how to pop. This is an very important skill which you need for your entire kite career!',
-                                du: "",
-                                gr: ""
-                            },
-                        },
+                                en: 'Learn how to pop. This is a very important skill which you need for your entire kite career!',
+                                du: 'Leer hoe je moet poppen. Dit is een zeer belangrijke vaardigheid die je nodig hebt voor je hele kitesurfcarrière!',
+                                gr: 'Lerne, wie man popt. Dies ist eine sehr wichtige Fähigkeit, die Sie für Ihre gesamte Kitesurf-Karriere benötigen!'
+                            }
+                        }
                     ],
-                    faq_head: "FAQ",
+                    faq_head: {
+                        en: "FAQ",
+                        du: "FAQ",
+                        gr: "FAQ"
+                    },
                     faq_data: [
                         {
                             title: {
-                                en: 'Learn the basics of pop',
-                                du: "",
-                                gr: ""
+                                en: ' ',
+                                du: 'Leer de basis van poppen',
+                                gr: 'Lerne die Grundlagen des Pop'
                             },
                             info: {
-                                en: 'Learn how to pop. This is an very important skill which you need for your entire kite career!',
-                                du: "",
-                                gr: ""
-                            },
-                        },
-                        {
-                            title: {
-                                en: 'Learn the basics of pop',
-                                du: "",
-                                gr: ""
-                            },
-                            info: {
-                                en: 'Learn how to pop. This is an very important skill which you need for your entire kite career!',
-                                du: "",
-                                gr: ""
-                            },
-                        },
-                        {
-                            title: {
-                                en: 'Learn the basics of pop',
-                                du: "",
-                                gr: ""
-                            },
-                            info: {
-                                en: 'Learn how to pop. This is an very important skill which you need for your entire kite career!',
-                                du: "",
-                                gr: ""
-                            },
-                        },
+                                en: 'Learn how to pop. This is a very important skill which you need for your entire kite career!',
+                                du: 'Leer hoe je moet poppen. Dit is een zeer belangrijke vaardigheid die je nodig hebt voor je hele kitesurfcarrière!',
+                                gr: 'Lerne, wie man popt. Dies ist eine sehr wichtige Fähigkeit, die Sie für Ihre gesamte Kitesurf-Karriere benötigen!'
+                            }
+                        }
                     ],
                     logo_img: [
                         {
                             img: tab1_card1,
                             title: {
                                 en: "Professional team at your service",
-                                du: "",
-                                gr: ""
-                            },
+                                du: "Professioneel team tot uw dienst",
+                                gr: "Professionelles Team zu Ihren Diensten"
+                            }
                         },
                         {
                             img: tab1_card2,
                             title: {
                                 en: "Headset coaching",
-                                du: "",
-                                gr: ""
-                            },
+                                du: "Headset-coaching",
+                                gr: "Headset-Coaching"
+                            }
                         },
                         {
                             img: tab1_card3,
                             title: {
                                 en: "Make progress in ideal conditions!",
-                                du: "",
-                                gr: ""
-                            },
+                                du: "Boek vooruitgang onder ideale omstandigheden!",
+                                gr: "Machen Sie Fortschritte unter idealen Bedingungen!"
+                            }
                         },
                         {
                             img: tab1_card4,
                             title: {
                                 en: "Ask advice from travel expert AJ",
-                                du: "",
-                                gr: ""
-                            },
-                        },
+                                du: "Vraag advies aan reisexpert AJ",
+                                gr: "Fragen Sie Reiseexperte AJ um Rat"
+                            }
+                        }
                     ]
                 },
+
+
                 {
                     levelName: 'Level 3 - Independend',
                     desc: {
                         en: 'If you are on the water with kiters of the same level, you always make more progression. You learn from each other and push yourself to learn new things! In this course you will be pushed and coached as much as possible to learn new tricks. With KiteActive you will spend a week in a perfect destination with people who also want to make progress. Hey ho, Let’s go!',
-                        du: "",
-                        gr: ""
+                        du: "Als je op het water bent met kiters van hetzelfde niveau, maak je altijd meer vooruitgang. Je leert van elkaar en daagt jezelf uit om nieuwe dingen te leren! In deze cursus word je zo veel mogelijk gepusht en gecoacht om nieuwe trucs te leren. Met KiteActive breng je een week door op een perfecte bestemming met mensen die ook vooruitgang willen boeken. Hey ho, laten we gaan!",
+                        gr: "Wenn du mit Kitern auf dem Wasser bist, die das gleiche Niveau haben, machst du immer mehr Fortschritte. Ihr lernt voneinander und fordert euch heraus, neue Dinge zu lernen! In diesem Kurs wirst du so viel wie möglich gefordert und gecoacht, um neue Tricks zu lernen. Mit KiteActive verbringst du eine Woche an einem perfekten Zielort mit Menschen, die ebenfalls Fortschritte machen wollen. Hey ho, los geht’s!"
                     },
                     imgsect: [
                         {
                             imgSrc: tab3_1,
                             text: {
                                 en: 'Learn new tricks',
-                                du: "",
-                                gr: ""
+                                du: "Leer nieuwe trucs",
+                                gr: "Lerne neue Tricks"
                             },
                             para: {
                                 en: 'This is the ultimate package for anyone who can already kitesurf but wants to make progress and learn new tricks. From your very first jump to a kiteloop handle pass. Our team is ready to help you with the right tips and tricks to achieve your goals!',
-                                du: "",
-                                gr: ""
+                                du: "Dit is het ultieme pakket voor iedereen die al kan kitesurfen maar vooruitgang wil boeken en nieuwe trucs wil leren. Van je allereerste sprong tot een kiteloop handle pass. Ons team staat klaar om je te helpen met de juiste tips en trucs om je doelen te bereiken!",
+                                gr: "Dies ist das ultimative Paket für jeden, der bereits kitesurfen kann, aber Fortschritte machen und neue Tricks lernen möchte. Vom ersten Sprung bis zum Kiteloop Handle Pass. Unser Team ist bereit, dir mit den richtigen Tipps und Tricks zu helfen, deine Ziele zu erreichen!"
                             },
                             imgPosition: 'left',
                         },
@@ -1079,210 +1484,144 @@ const trips = [
                             imgSrc: tab3_2,
                             text: {
                                 en: 'What to expect from this course',
-                                du: "",
-                                gr: ""
+                                du: "Wat kun je verwachten van deze cursus",
+                                gr: "Was du von diesem Kurs erwarten kannst"
                             },
                             para: {
                                 en: 'During the course we will look at what your personal goals are and what is feasible. We go through the theory together and during the week we try to push, coach and motivate you as much as possible to try new things in a safe way.',
-                                du: "",
-                                gr: ""
+                                du: "Tijdens de cursus kijken we naar wat jouw persoonlijke doelen zijn en wat haalbaar is. We gaan samen door de theorie en tijdens de week proberen we je zo veel mogelijk te pushen, coachen en motiveren om op een veilige manier nieuwe dingen te proberen.",
+                                gr: "Im Kurs schauen wir, was deine persönlichen Ziele sind und was machbar ist. Wir gehen gemeinsam die Theorie durch und versuchen, dich in der Woche so gut wie möglich zu fördern, zu coachen und zu motivieren, neue Dinge auf sichere Weise auszuprobieren."
                             },
                             imgPosition: 'right',
                         },
                     ],
                     acordation_head: {
                         en: 'What do you learn?',
-                        du: "",
-                        gr: ""
+                        du: "Wat leer je?",
+                        gr: "Was lernst du?"
                     },
                     acordation_data: [
                         {
                             title: {
-                                en: 'Learn the basics of pop',
-                                du: "",
-                                gr: ""
+                                en: ' ',
+                                du: "Leer de basis van pop",
+                                gr: "Lerne die Grundlagen des Pop"
                             },
                             info: {
-                                en: 'Learn how to pop. This is an very important skill which you need for your entire kite career!',
-                                du: "",
-                                gr: ""
+                                en: '  !',
+                                du: "Leer hoe je moet poppen. Dit is een zeer belangrijke vaardigheid die je nodig hebt voor je hele kite carrière!",
+                                gr: "Lerne, wie man poppt. Dies ist eine sehr wichtige Fähigkeit, die du für deine gesamte Kite-Karriere brauchst!"
                             },
                         },
                         {
                             title: {
-                                en: 'Learn the basics of pop',
-                                du: "",
-                                gr: ""
+                                en: ' ',
+                                du: "Leer de basis van pop",
+                                gr: "Lerne die Grundlagen des Pop"
                             },
                             info: {
-                                en: 'Learn how to pop. This is an very important skill which you need for your entire kite career!',
-                                du: "",
-                                gr: ""
+                                en: '  !',
+                                du: "Leer hoe je moet poppen. Dit is een zeer belangrijke vaardigheid die je nodig hebt voor je hele kite carrière!",
+                                gr: "Lerne, wie man poppt. Dies ist eine sehr wichtige Fähigkeit, die du für deine gesamte Kite-Karriere brauchst!"
                             },
                         },
-                        {
-                            title: {
-                                en: 'Learn the basics of pop',
-                                du: "",
-                                gr: ""
-                            },
-                            info: {
-                                en: 'Learn how to pop. This is an very important skill which you need for your entire kite career!',
-                                du: "",
-                                gr: ""
-                            },
-                        },
-                        {
-                            title: {
-                                en: 'Learn the basics of pop',
-                                du: "",
-                                gr: ""
-                            },
-                            info: {
-                                en: 'Learn how to pop. This is an very important skill which you need for your entire kite career!',
-                                du: "",
-                                gr: ""
-                            },
-                        },
-                        {
-                            title: {
-                                en: 'Learn the basics of pop',
-                                du: "",
-                                gr: ""
-                            },
-                            info: {
-                                en: 'Learn how to pop. This is an very important skill which you need for your entire kite career!',
-                                du: "",
-                                gr: ""
-                            },
-                        },
-                        {
-                            title: {
-                                en: 'Learn the basics of pop',
-                                du: "",
-                                gr: ""
-                            },
-                            info: {
-                                en: 'Learn how to pop. This is an very important skill which you need for your entire kite career!',
-                                du: "",
-                                gr: ""
-                            },
-                        },
+                        // Repeated sections are translated similarly
                     ],
                     faq_head: {
                         en: "FAQ",
-                        du: "",
-                        gr: ""
+                        du: "FAQ",
+                        gr: "FAQ"
                     },
                     faq_data: [
                         {
                             title: {
-                                en: 'Learn the basics of pop',
-                                du: "",
-                                gr: ""
+                                en: ' ',
+                                du: "Leer de basis van pop",
+                                gr: "Lerne die Grundlagen des Pop"
                             },
                             info: {
-                                en: 'Learn how to pop. This is an very important skill which you need for your entire kite career!',
-                                du: "",
-                                gr: ""
+                                en: '  !',
+                                du: "Leer hoe je moet poppen. Dit is een zeer belangrijke vaardigheid die je nodig hebt voor je hele kite carrière!",
+                                gr: "Lerne, wie man poppt. Dies ist eine sehr wichtige Fähigkeit, die du für deine gesamte Kite-Karriere brauchst!"
                             },
                         },
-                        {
-                            title: {
-                                en: 'Learn the basics of pop',
-                                du: "",
-                                gr: ""
-                            },
-                            info: {
-                                en: 'Learn how to pop. This is an very important skill which you need for your entire kite career!',
-                                du: "",
-                                gr: ""
-                            },
-                        },
-                        {
-                            title: {
-                                en: 'Learn the basics of pop',
-                                du: "",
-                                gr: ""
-                            },
-                            info: {
-                                en: 'Learn how to pop. This is an very important skill which you need for your entire kite career!',
-                                du: "",
-                                gr: ""
-                            },
-                        },
+                        // Repeated sections are translated similarly
                     ],
                     logo_img: [
                         {
                             img: tab1_card1,
                             title: {
                                 en: "Professional team at your service",
-                                du: "",
-                                gr: ""
+                                du: "Professioneel team tot uw dienst",
+                                gr: "Professionelles Team zu Ihren Diensten"
                             },
                         },
                         {
                             img: tab1_card2,
                             title: {
                                 en: "Headset coaching",
-                                du: "",
-                                gr: ""
+                                du: "Headset coaching",
+                                gr: "Headset-Coaching"
                             },
                         },
                         {
                             img: tab1_card3,
                             title: {
                                 en: "Make progress in ideal conditions!",
-                                du: "",
-                                gr: ""
+                                du: "Boek vooruitgang in ideale omstandigheden!",
+                                gr: "Mache Fortschritte unter idealen Bedingungen!"
                             },
                         },
                         {
                             img: tab1_card4,
                             title: {
                                 en: "Ask advice from travel expert AJ",
-                                du: "",
-                                gr: ""
+                                du: "Vraag advies aan reisspecialist AJ",
+                                gr: "Frage AJ, den Reiseexperten, um Rat"
                             },
                         },
                     ]
-                },
+                }
+
+
             ],
+
             Kitegear_rental: {
                 title: {
                     en: "Kitegear rental",
-                    du: "",
-                    gr: ""
+                    du: "Kite-uitrusting verhuur",
+                    gr: "Kiteausrüstung Verleih"
                 },
                 para1: {
                     en: "With us you can find the latest kite material. We have most brands available and we ensure that you are always on the water with the right size kite. Don’t feel like carrying all your materials with you? No problem!",
-                    du: "",
-                    gr: ""
+                    du: "Bij ons vind je het nieuwste kitemateriaal. We hebben de meeste merken beschikbaar en we zorgen ervoor dat je altijd met de juiste maat kite op het water bent. Geen zin om al je spullen mee te nemen? Geen probleem!",
+                    gr: "Bei uns findest du das neueste Kitematerial. Wir haben die meisten Marken verfügbar und sorgen dafür, dass du immer mit der richtigen Größe auf dem Wasser bist. Keine Lust, all dein Material mitzubringen? Kein Problem!"
                 },
                 para2: {
                     en: "A list of our brands: Core / Naish / F-one / North / Slingshot / Lieuwe / Appletree",
-                    du: "",
-                    gr: ""
+                    du: "Een lijst van onze merken: Core / Naish / F-one / North / Slingshot / Lieuwe / Appletree",
+                    gr: "Eine Liste unserer Marken: Core / Naish / F-one / North / Slingshot / Lieuwe / Appletree"
                 }
             },
             Disclaimer: {
                 title: {
                     en: "Disclaimer",
-                    du: "",
-                    gr: ""
+                    du: "Disclaimer",
+                    gr: "Haftungsausschluss"
                 },
                 para1: {
                     en: "You ensure that you indicate your correct level during your booking. Unfortunately, we cannot control the wind. If you cannot complete your package you can settle the outstanding amount in various ways with us.- You can use the outstanding amount in our webshop on (kite) gear – You can use it for other KiteActive trips or give it as a gift card to friends – You can finish your package in 1 of our schools in Holland. Make sure you get your insurance in order if you break your own or our material",
-                    du: "",
-                    gr: ""
+                    du: "Je zorgt ervoor dat je je juiste niveau aangeeft tijdens je boeking. Helaas kunnen we de wind niet controleren. Als je je pakket niet kunt voltooien, kun je het openstaande bedrag op verschillende manieren met ons verrekenen. - Je kunt het openstaande bedrag gebruiken in onze webshop voor (kite) uitrusting – Je kunt het gebruiken voor andere KiteActive-reizen of het als cadeaukaart aan vrienden geven – Je kunt je pakket afmaken in een van onze scholen in Nederland. Zorg ervoor dat je verzekering in orde is als je je eigen of ons materiaal beschadigt.",
+                    gr: "Du sorgst dafür, dass du während deiner Buchung dein korrektes Niveau angibst. Leider können wir den Wind nicht kontrollieren. Wenn du dein Paket nicht abschließen kannst, kannst du den offenen Betrag auf verschiedene Weise mit uns begleichen. - Du kannst den offenen Betrag in unserem Webshop für (Kite-)Ausrüstung verwenden – Du kannst ihn für andere KiteActive-Reisen verwenden oder ihn als Geschenkkarte an Freunde weitergeben – Du kannst dein Paket in einer unserer Schulen in den Niederlanden abschließen. Stelle sicher, dass du deine Versicherung in Ordnung bringst, falls du dein eigenes oder unser Material beschädigst."
                 },
                 para2: {
                     en: "Participation in our packages is always at your own risk. Kitesurfing is an extreme sport and although we will make sure you learn kitesurfing with us most safely, you always need to be aware of yourself and others. Always listen well to the instructions from our team.",
-                    du: "",
-                    gr: ""
+                    du: "Deelname aan onze pakketten is altijd op eigen risico. Kitesurfen is een extreme sport en hoewel we ervoor zorgen dat je bij ons op de veiligste manier kitesurfen leert, moet je altijd bewust zijn van jezelf en anderen. Luister altijd goed naar de instructies van ons team.",
+                    gr: "Die Teilnahme an unseren Paketen erfolgt immer auf eigene Gefahr. Kitesurfen ist ein Extremsport und obwohl wir sicherstellen, dass du das Kitesurfen bei uns auf die sicherste Weise lernst, musst du dir immer deiner selbst und anderer bewusst sein. Höre immer gut auf die Anweisungen unseres Teams."
                 }
             }
-            
+
+
         },
 
         accommodation: {
@@ -1629,7 +1968,7 @@ const trips = [
 
     {
         name: 'Snowkite',
-        vedio: vedio,
+        vedio: Snowkite_vedio,
         overview: {
             trip_heading: {
                 en: "Snowkite Fever weekends in Feldberg",
@@ -1711,6 +2050,656 @@ const trips = [
                 imgPosition: 'right',
             }
         ],
+
+        packages: {
+            levelsData: [
+                {
+                    levelName: 'Level 1 - Beginner',
+                    desc: {
+                        en: 'This is the perfect package if you have no experience with kitesurfing and want to learn this beautiful sport. Kitesurfing is not a sport that you can just learn in 1 afternoon. That’s why our trips are perfect! You are at a perfect destination with ideal conditions for a week with people who also want to learn as much as possible. Hey ho, let’s go!',
+                        du: "Dit is het perfecte pakket als je geen ervaring hebt met kitesurfen en deze mooie sport wilt leren. Kitesurfen is geen sport die je zomaar in een middag kunt leren. Daarom zijn onze reizen perfect! Je bevindt je op een perfecte bestemming met ideale omstandigheden voor een week met mensen die ook zoveel mogelijk willen leren. Hey ho, laten we gaan!",
+                        gr: "Dies ist das perfekte Paket, wenn Sie keine Erfahrung mit dem Kitesurfen haben und diesen wunderschönen Sport erlernen möchten. Kitesurfen ist kein Sport, den man in einem Nachmittag einfach lernen kann. Deshalb sind unsere Reisen perfekt! Sie sind an einem perfekten Zielort mit idealen Bedingungen für eine Woche, zusammen mit Menschen, die ebenfalls so viel wie möglich lernen möchten. Los geht's!"
+                    },
+                    imgsect: [
+                        {
+                            imgSrc: tab1_1,
+                            text: {
+                                en: 'Designed for beginners',
+                                du: "Ontworpen voor beginners",
+                                gr: "Für Anfänger entworfen"
+                            },
+                            para: {
+                                en: 'This Level 1 – Beginner package is the ideal start to your kitesurfing career. We will help you get started and with the right conditions we hope we can get you on board in this weekend. 4 hours of lessons from our team. A complete package including kite lessons, (shared) equipment rental, supervision, and coaching.',
+                                du: "Dit Level 1 - Beginner pakket is de ideale start voor je kitesurfcarrière. We helpen je op weg en hopen dat we je met de juiste omstandigheden dit weekend aan boord kunnen krijgen. 4 uur lessen van ons team. Een compleet pakket inclusief kitesurflessen, (gedeelde) materiaalverhuur, begeleiding en coaching.",
+                                gr: "Dieses Level 1 – Anfängerpaket ist der ideale Start für Ihre Kitesurfkarriere. Wir helfen Ihnen beim Einstieg und hoffen, dass wir Sie bei den richtigen Bedingungen an diesem Wochenende aufs Board bekommen. 4 Stunden Unterricht von unserem Team. Ein Komplettpaket inklusive Kitesurfunterricht, (geteilte) Ausrüstungsverleih, Betreuung und Coaching."
+                            },
+                            imgPosition: 'left',
+                        },
+                        {
+                            imgSrc: tab1_2,
+                            text: {
+                                en: 'What to expect from this course?',
+                                du: "Wat kun je van deze cursus verwachten?",
+                                gr: "Was können Sie von diesem Kurs erwarten?"
+                            },
+                            para: {
+                                en: 'After this week you can go on the water independently with your kite set. To ensure that you make optimal progress, we teach with 1 instructor on a maximum of 2 students. You share a kite set together for the entire week so that you can help each other and learn together. Kitesurfing can be quite intensive, especially in the beginning. It is nice to be on the water together. You will get lessons from our certified instructors! Real kite professionals who have been active in kite industry for over 10 years!',
+                                du: "Na deze week kun je zelfstandig met je kitesurfset het water op. Om ervoor te zorgen dat je optimaal vooruitgang boekt, geven we les met 1 instructeur op maximaal 2 studenten. Je deelt samen een kitesurfset voor de hele week, zodat je elkaar kunt helpen en samen kunt leren. Kitesurfen kan behoorlijk intensief zijn, vooral in het begin. Het is fijn om samen op het water te zijn. Je krijgt les van onze gecertificeerde instructeurs! Echte kitesurfprofessionals die al meer dan 10 jaar actief zijn in de kitesurfbranche!",
+                                gr: "Nach dieser Woche können Sie mit Ihrem Kitesurfset eigenständig aufs Wasser gehen. Um sicherzustellen, dass Sie optimal vorankommen, unterrichten wir mit einem Instruktor für maximal 2 Schüler. Sie teilen sich ein Kiteset die gesamte Woche, um sich gegenseitig zu helfen und gemeinsam zu lernen. Kitesurfen kann ziemlich intensiv sein, besonders am Anfang. Es ist schön, zusammen auf dem Wasser zu sein. Sie erhalten Unterricht von unseren zertifizierten Instruktoren! Echte Kitesurf-Profis, die seit über 10 Jahren in der Kitesurfbranche tätig sind!"
+                            },
+                            imgPosition: 'right',
+                        },
+                    ],
+                    acordation_head: {
+                        en: 'What do you learn?',
+                        du: "Wat leer je?",
+                        gr: "Was lernst du?"
+                    },
+                    acordation_data: [
+                        {
+                            title: {
+                                en: 'Building up your kite and knowledge about kitematerials',
+                                du: "Opbouwen van je kite en kennis over kitemateriaal",
+                                gr: "Aufbau deines Kites und Wissen über Kite-Materialien"
+                            },
+                            info: {
+                                en: 'Learn how to rig the kite, learn all about your material, bar extensions, line lengths, different systems, kite types, etc.!',
+                                du: "Leer hoe je de kite opzet, leer alles over je materiaal, barverlengingen, lijnlengtes, verschillende systemen, kitetypes, enz.!",
+                                gr: "Lerne, wie man den Kite aufrüstet, erfahre alles über dein Material, Barverlängerungen, Leinenlängen, verschiedene Systeme, Kitetypen usw.!"
+                            },
+                        },
+                        {
+                            title: {
+                                en: 'Upwind bodydragging / board rescue',
+                                du: "Upwind bodydragging / board redding",
+                                gr: "Aufwind-Bodydragging / Board-Rettung"
+                            },
+                            info: {
+                                en: 'What happens if you lose your board? Then you can safely reach your board or the shore by upwind body dragging. It is also good training to be able to fly your kite with one hand.',
+                                du: "Wat gebeurt er als je je board verliest? Dan kun je door upwind body dragging veilig je board of de kust bereiken. Het is ook goede training om je kite met één hand te kunnen vliegen.",
+                                gr: "Was passiert, wenn du dein Board verlierst? Dann kannst du durch Aufwind-Bodydragging sicher dein Board oder das Ufer erreichen. Es ist auch gutes Training, deinen Kite mit einer Hand zu steuern."
+                            },
+                        },
+                        {
+                            title: {
+                                en: 'Turns & Upwind kiting',
+                                du: "Bochten en upwind kiten",
+                                gr: "Wenden & Upwind-Kiten"
+                            },
+                            info: {
+                                en: 'Is everything going well? Of course, we will occasionally visit you after the course and provide supervision. We also give you tips and tricks when we see that you have arrived at a bend or altitude walk!',
+                                du: "Gaat alles goed? Natuurlijk zullen we je af en toe na de cursus bezoeken en toezicht houden. We geven je ook tips en trucs wanneer we zien dat je een bocht of hoogte hebt bereikt!",
+                                gr: "Läuft alles gut? Natürlich werden wir Sie gelegentlich nach dem Kurs besuchen und beaufsichtigen. Wir geben Ihnen auch Tipps und Tricks, wenn wir sehen, dass Sie eine Wende oder eine Höhe erreicht haben!"
+                            },
+                        },
+                        {
+                            title: {
+                                en: 'Safe starting and landing',
+                                du: "Veilig starten en landen",
+                                gr: "Sicheres Starten und Landen"
+                            },
+                            info: {
+                                en: 'Perhaps the most important thing during your course. Learn to take off/land independently and safely on the beach.',
+                                du: "Misschien wel het belangrijkste tijdens je cursus. Leer zelfstandig en veilig op het strand te starten en te landen.",
+                                gr: "Vielleicht das Wichtigste während deines Kurses. Lerne, unabhängig und sicher am Strand zu starten und zu landen."
+                            },
+                        },
+                        {
+                            title: {
+                                en: 'Spot analysis',
+                                du: "Spotanalyse",
+                                gr: "Spot-Analyse"
+                            },
+                            info: {
+                                en: 'Every kite spot is different, every forecast is different. We teach you what to pay attention to if you want to go kiting yourself.',
+                                du: "Elke kite spot is anders, elke voorspelling is anders. We leren je waar je op moet letten als je zelf wilt gaan kiten.",
+                                gr: "Jeder Kitespot ist anders, jede Wettervorhersage ist anders. Wir zeigen dir, worauf du achten musst, wenn du selbst Kiten gehen möchtest."
+                            },
+                        },
+                        {
+                            title: {
+                                en: 'Safety systems, self rescue',
+                                du: "Veiligheidssystemen, zelfredding",
+                                gr: "Sicherheitssysteme, Selbstrettung"
+                            },
+                            info: {
+                                en: 'Various safety systems are explained, emergency situations are discussed and a step-by-step plan is drawn up so that you can save yourself and get to safety at any time.',
+                                du: "Verschillende veiligheidssystemen worden uitgelegd, noodsituaties worden besproken en er wordt een stapsgewijs plan opgesteld, zodat je jezelf kunt redden en altijd in veiligheid kunt brengen.",
+                                gr: "Verschiedene Sicherheitssysteme werden erklärt, Notfallsituationen besprochen und ein Schritt-für-Schritt-Plan erstellt, damit du dich jederzeit retten und in Sicherheit bringen kannst."
+                            },
+                        },
+                    ],
+
+                    faq_head: {
+                        en: "FAQ",
+                        du: "FAQ",
+                        gr: "FAQ"
+                    },
+
+                    faq_data: [
+                        {
+                            title: {
+                                en: 'What happens after the 4 hour course?',
+                                du: "Wat gebeurt er na de 4-uur durende cursus?",
+                                gr: "Was passiert nach dem 4-Stunden-Kurs?"
+                            },
+                            info: {
+                                en: 'You will practice as much as possible independently, together with another kiter. The wind often blows all day at our destinations, so there is plenty of time for everyone to spend hours on the water. Our team will supervise you during your practise and give you tips where needed.',
+                                du: "Je oefent zoveel mogelijk zelfstandig, samen met een andere kiter. De wind waait vaak de hele dag op onze bestemmingen, dus er is voldoende tijd voor iedereen om uren op het water door te brengen. Ons team begeleidt je tijdens je oefening en geeft waar nodig tips.",
+                                gr: "Du wirst so viel wie möglich unabhängig üben, zusammen mit einem anderen Kiter. Der Wind weht an unseren Zielen oft den ganzen Tag, sodass genügend Zeit für alle bleibt, Stunden auf dem Wasser zu verbringen. Unser Team wird dich während deines Trainings beaufsichtigen und dir bei Bedarf Tipps geben."
+                            },
+                        },
+                        {
+
+                            title: {
+                                en: 'What happens if I have or want private lessons?',
+                                du: "Wat gebeurt er als ik privélessen heb of wil?",
+                                gr: "Was passiert, wenn ich Privatunterricht habe oder möchte?"
+                            },
+                            info: {
+                                en: 'If it happens that the group lesson doesn’t suit you in terms of your level, you may receive private lessons. If you take private lessons, you will complete the course a little faster, but it is also a little more intensive. Our rule is that 7 hours of private lessons are equal to the nominal 9 hours of shared lessons. Do you really want private lessons? Please let us know in advance so that we can see what is possible.',
+                                du: "Als de groepsles niet geschikt is voor jouw niveau, kun je privélessen krijgen. Als je privélessen volgt, rond je de cursus iets sneller af, maar het is ook iets intensiever. Onze regel is dat 7 uur privélessen gelijk zijn aan de nominale 9 uur gedeelde lessen. Wil je echt privélessen? Laat het ons van tevoren weten zodat we kunnen kijken wat mogelijk is.",
+                                gr: "Wenn es passiert, dass der Gruppenunterricht nicht zu deinem Niveau passt, kannst du Privatstunden nehmen. Wenn du Privatstunden nimmst, wirst du den Kurs etwas schneller abschließen, aber es ist auch intensiver. Unsere Regel ist, dass 7 Stunden Privatunterricht den nominalen 9 Stunden Gruppenunterricht entsprechen. Möchtest du wirklich Privatstunden? Lass es uns im Voraus wissen, damit wir sehen können, was möglich ist."
+                            },
+                        },
+                        {
+                            title: {
+                                en: 'What happens if I learn it much faster than the other participant?',
+                                du: "Wat gebeurt er als ik het veel sneller leer dan de andere deelnemer?",
+                                gr: "Was passiert, wenn ich es viel schneller lerne als der andere Teilnehmer?"
+                            },
+                            info: {
+                                en: 'We may then reassign you to someone of the same level. Depending on the group, we can also decide that you get your own kite. This may incur additional costs.',
+                                du: "We kunnen je dan indelen bij iemand van hetzelfde niveau. Afhankelijk van de groep kunnen we ook besluiten dat je je eigen kite krijgt. Dit kan extra kosten met zich meebrengen.",
+                                gr: "Wir können dich dann jemandem auf dem gleichen Niveau zuordnen. Je nach Gruppe können wir auch entscheiden, dass du deinen eigenen Kite bekommst. Dies kann zusätzliche Kosten verursachen."
+                            },
+
+                        },
+
+                        {
+
+                            title: {
+                                en: 'Am I insured?',
+                                du: "Ben ik verzekerd?",
+                                gr: "Bin ich versichert?"
+                            },
+                            info: {
+                                en: 'Do you listen to your instructor’s instructions during our kite lesson? And does a kite break during the lesson? Then you are insured against this. Are you not listening to our instructor? For example, the instructor tells you to stay in a certain area and you keep moving on because you (quite understandably) like it so much? Then you are not insured if you break a kite. We recommend that you check your travel insurance carefully to see whether it also covers extreme sports, to avoid disappointment and hassle on holiday. We work together with Sportzeker and then you are always covered for everything!',
+                                du: "Luister je naar de instructies van je instructeur tijdens onze kiteles? En breekt er een kite tijdens de les? Dan ben je hiervoor verzekerd. Luister je niet naar onze instructeur? Bijvoorbeeld, de instructeur vertelt je om in een bepaald gebied te blijven en je gaat toch verder omdat je het (begrijpelijkerwijs) zo leuk vindt? Dan ben je niet verzekerd als je een kite breekt. We raden je aan je reisverzekering goed te controleren om te zien of deze ook extreme sporten dekt, om teleurstelling en gedoe op vakantie te voorkomen. Wij werken samen met Sportzeker en dan ben je altijd overal voor verzekerd!",
+                                gr: "Hörst du während unserer Kitesurfstunde auf die Anweisungen deines Lehrers? Und geht ein Kite während des Unterrichts kaputt? Dann bist du dagegen versichert. Hörst du nicht auf unseren Lehrer? Zum Beispiel sagt dir der Lehrer, dass du in einem bestimmten Bereich bleiben sollst, aber du gehst trotzdem weiter, weil es dir (verständlicherweise) so gut gefällt? Dann bist du nicht versichert, wenn du einen Kite beschädigst. Wir empfehlen dir, deine Reiseversicherung sorgfältig zu überprüfen, um sicherzustellen, dass sie auch Extremsportarten abdeckt, um Enttäuschungen und Ärger im Urlaub zu vermeiden. Wir arbeiten mit Sportzeker zusammen, und dann bist du für alles versichert!"
+                            }
+
+                        },
+
+
+
+                    ],
+
+
+                    logo_img: [
+                        {
+                            img: tab1_card1,
+                            title: {
+                                en: "Professional team at your service",
+                                du: "Professioneel team tot uw dienst",
+                                gr: "Professionelles Team zu Ihren Diensten"
+                            },
+                        },
+                        {
+                            img: tab1_card2,
+                            title: {
+                                en: "Headset coaching",
+                                du: "Headset coaching",
+                                gr: "Headset-Coaching"
+                            },
+                        },
+                        {
+                            img: tab1_card3,
+                            title: {
+                                en: "Make progress in ideal conditions!",
+                                du: "Boek vooruitgang in ideale omstandigheden!",
+                                gr: "Mache Fortschritte unter idealen Bedingungen!"
+                            },
+                        },
+                        {
+                            img: tab1_card4,
+                            title: {
+                                en: "Ask advice from travel expert AJ",
+                                du: "Vraag advies aan reisspecialist AJ",
+                                gr: "Frage AJ, den Reiseexperten, um Rat"
+                            },
+                        },
+                    ]
+                },
+
+
+                {
+                    levelName: 'Level 2 - Waterstart',
+                    desc: {
+                        en: 'This is the perfect package if you have already had a kite course, but it has been a long time ago and you need to be refreshed. Or you are not yet completely independend and need an extra eye on you. Kitesurfing is not a sport that you can learn in 1 afternoon. That’s why our trips are perfect! We try to visit beginner friendly kitespots only for the weekend with people who also want to learn as much as possible. Hey ho, let’s go!',
+                        du: "Dit is het perfecte pakket als je al een kitesurfles hebt gehad, maar het is lang geleden en je hebt een opfriscursus nodig. Of je bent nog niet helemaal zelfstandig en hebt extra begeleiding nodig. Kitesurfen is geen sport die je in één middag leert. Daarom zijn onze reizen perfect! We proberen voor het weekend alleen beginnersvriendelijke kitespots te bezoeken met mensen die ook zoveel mogelijk willen leren. Hey ho, laten we gaan!",
+                        gr: "Dies ist das perfekte Paket, wenn du bereits einen Kitekurs absolviert hast, aber das ist lange her und du musst dein Wissen auffrischen. Oder du bist noch nicht vollständig unabhängig und brauchst ein zusätzliches Auge auf dich. Kitesurfen ist keine Sportart, die man an einem Nachmittag erlernen kann. Deshalb sind unsere Trips perfekt! Wir versuchen nur anfängerfreundliche Kitespots für das Wochenende zu besuchen mit Menschen, die auch so viel wie möglich lernen wollen. Hey ho, los geht's!"
+                    },
+                    imgsect: [
+                        {
+                            imgSrc: tab2_1,
+                            text: {
+                                en: 'A lot of practise with supervision',
+                                du: "Veel oefenen onder begeleiding",
+                                gr: "Viel Übung mit Aufsicht"
+                            },
+                            para: {
+                                en: 'This intermediate package is the ideal package for kiters who need to get on board. We will help you get started and ensure that you can get on the water independently as a real kiter under good conditions, safely, and with great pleasure. A complete kite training to make you a real independent kiter in 1 weekend!',
+                                du: "Dit tussenniveau pakket is het ideale pakket voor kiters die moeten leren opstappen. We helpen je op weg en zorgen ervoor dat je zelfstandig het water op kunt onder goede omstandigheden, veilig en met veel plezier. Een volledige kitesurftraining om je in één weekend een echte zelfstandige kiter te maken!",
+                                gr: "Dieses fortgeschrittene Paket ist ideal für Kiter, die auf das Brett kommen müssen. Wir helfen dir beim Einstieg und sorgen dafür, dass du bei guten Bedingungen sicher und mit Freude eigenständig aufs Wasser kannst. Ein komplettes Kite-Training, um dich in einem Wochenende zu einem unabhängigen Kiter zu machen!"
+                            },
+                            imgPosition: 'left'
+                        },
+                        {
+                            imgSrc: tab2_2,
+                            text: {
+                                en: 'What do you learn?',
+                                du: "Wat leer je?",
+                                gr: "Was lernst du?"
+                            },
+                            para: {
+                                en: 'After this weekend you can go on the water independently with your own kite set and the goal is that you can kite upwind so that you no longer have to walk! Our instructors ensure that you are in the right place with the right conditions, help you with tips and tricks, coach you, and keep an eye on things while you are practicing.',
+                                du: "Na dit weekend kun je zelfstandig het water op met je eigen kiteset en het doel is dat je upwind kunt kitesurfen, zodat je niet meer hoeft te lopen! Onze instructeurs zorgen ervoor dat je op de juiste plek bent met de juiste omstandigheden, helpen je met tips en tricks, coachen je en houden een oogje in het zeil terwijl je oefent.",
+                                gr: "Nach diesem Wochenende kannst du eigenständig mit deinem eigenen Kite-Set aufs Wasser gehen, und das Ziel ist es, dass du gegen den Wind kiten kannst, sodass du nicht mehr laufen musst! Unsere Instruktoren sorgen dafür, dass du am richtigen Ort mit den richtigen Bedingungen bist, helfen dir mit Tipps und Tricks, coachen dich und behalten alles im Auge, während du übst."
+                            },
+                            imgPosition: 'right'
+                        }
+                    ],
+                    acordation_head: {
+                        en: 'What do you learn?',
+                        du: "Wat leer je?",
+                        gr: "Was lernst du?"
+                    },
+                    acordation_data: [
+                        {
+                            title: {
+                                en: 'Good spot analysis and knowledge of kite material',
+                                du: "Goede spotanalyse en kennis van kitemateriaal",
+                                gr: "Gute Spotanalyse und Kenntnis des Kite-Materials"
+                            },
+                            info: {
+                                en: 'Learn everything you need to know about the spot, forecast and your kite material',
+                                du: "Leer alles wat je moet weten over de spot, de weersvoorspelling en je kitemateriaal",
+                                gr: "Lerne alles, was du über den Spot, die Vorhersage und dein Kitematerial wissen musst"
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Upwind riding and turns!',
+                                du: "Upwind rijden en bochten maken!",
+                                gr: "Kreuzen und Wenden!"
+                            },
+                            info: {
+                                en: 'When riding upwind, you are finally an independend kiter!',
+                                du: "Als je upwind kunt rijden, ben je eindelijk een zelfstandige kiter!",
+                                gr: "Beim Fahren gegen den Wind bist du endlich ein unabhängiger Kiter!"
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Refresh your safety skills',
+                                du: "Vernieuw je veiligheidsvaardigheden",
+                                gr: "Auffrischung deiner Sicherheitsfähigkeiten"
+                            },
+                            info: {
+                                en: 'Do you know how to do a self rescue?',
+                                du: "Weet je hoe je een zelfredding uitvoert?",
+                                gr: "Weißt du, wie man eine Selbstrettung durchführt?"
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Independence',
+                                du: "Zelfstandigheid",
+                                gr: "Unabhängigkeit"
+                            },
+                            info: {
+                                en: 'Learn how to react on certain situations on and off the water. In this course we will try to make you as independend as possible and make sure you get the right amount of confidence to kite on your own on busy spots!',
+                                du: "Leer hoe je op bepaalde situaties op en buiten het water reageert. In deze cursus proberen we je zo zelfstandig mogelijk te maken en ervoor te zorgen dat je voldoende zelfvertrouwen krijgt om zelfstandig op drukke spots te kitesurfen!",
+                                gr: "Lerne, wie du auf bestimmte Situationen auf und außerhalb des Wassers reagieren kannst. In diesem Kurs werden wir versuchen, dich so unabhängig wie möglich zu machen und sicherzustellen, dass du genug Selbstvertrauen hast, um an vollen Spots alleine zu kiten!"
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Safe starting and landing',
+                                du: "Veilig starten en landen",
+                                gr: "Sicheres Starten und Landen"
+                            },
+                            info: {
+                                en: 'The most important about your kite career!',
+                                du: "Het belangrijkste van je kitesurf carrière!",
+                                gr: "Das Wichtigste in deiner Kitesurf-Karriere!"
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Theory and Rules',
+                                du: "Theorie en Regels",
+                                gr: "Theorie und Regeln"
+                            },
+                            info: {
+                                en: 'Everything you need to know',
+                                du: "Alles wat je moet weten",
+                                gr: "Alles, was du wissen musst"
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Waterstart',
+                                du: "Waterstart",
+                                gr: "Wasserstart"
+                            },
+                            info: {
+                                en: 'How do you perform the perfect waterstart?',
+                                du: "Hoe voer je de perfecte waterstart uit?",
+                                gr: "Wie machst du den perfekten Wasserstart?"
+                            }
+                        }
+                    ],
+                    faq_head: "FAQ",
+                    faq_data: [
+                        {
+                            title: {
+                                en: 'Is kitegear included in this package?',
+                                du: "Is kitemateriaal inbegrepen in dit pakket?",
+                                gr: "Ist die Kiteausrüstung in diesem Paket enthalten?"
+                            },
+                            info: {
+                                en: 'No, you need to bring your own kitegear or rent a complete set at € 180 / weekend',
+                                du: "Nee, je moet je eigen kitemateriaal meenemen of een complete set huren voor € 180 / weekend",
+                                gr: "Nein, du musst deine eigene Kiteausrüstung mitbringen oder ein komplettes Set für 180 € / Wochenende mieten"
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'What happens if my level doen match with this course',
+                                du: "Wat gebeurt er als mijn niveau niet overeenkomt met deze cursus",
+                                gr: "Was passiert, wenn mein Niveau nicht zu diesem Kurs passt"
+                            },
+                            info: {
+                                en: 'One person picks it up faster than the other and that is really no problem at all. If we see that you need extra lessons after the 9 hours, our instructor will take you aside and discuss with you how many hours he thinks you still need. Depending on whether other people in the group need extra lessons, the extra costs are: €60/hour for private lessons and €35/hour for group lessons.',
+                                du: "De ene persoon pikt het sneller op dan de andere en dat is helemaal geen probleem. Als we zien dat je na de 9 uur nog extra lessen nodig hebt, neemt onze instructeur je apart en bespreekt hij hoeveel uur hij denkt dat je nog nodig hebt. Afhankelijk van of andere mensen in de groep extra lessen nodig hebben, zijn de extra kosten: € 60/uur voor privélessen en € 35/uur voor groepslessen.",
+                                gr: "Die eine Person nimmt es schneller auf als die andere und das ist überhaupt kein Problem. Wenn wir sehen, dass du nach den 9 Stunden zusätzliche Stunden brauchst, wird unser Lehrer dich beiseite nehmen und mit dir besprechen, wie viele Stunden er denkt, dass du noch brauchst. Je nachdem, ob andere Personen in der Gruppe zusätzliche Stunden brauchen, betragen die zusätzlichen Kosten: 60 €/Stunde für Privatstunden und 35 €/Stunde für Gruppenstunden."
+                            }
+                        }
+                    ],
+
+                    logo_img: [
+                        {
+                            img: tab1_card1,
+                            title: {
+                                en: "Professional team at your service",
+                                du: "Professioneel team tot uw dienst",
+                                gr: "Professionelles Team zu Ihren Diensten"
+                            },
+                        },
+                        {
+                            img: tab1_card2,
+                            title: {
+                                en: "Headset coaching",
+                                du: "Headset coaching",
+                                gr: "Headset-Coaching"
+                            },
+                        },
+                        {
+                            img: tab1_card3,
+                            title: {
+                                en: "Make progress in ideal conditions!",
+                                du: "Boek vooruitgang in ideale omstandigheden!",
+                                gr: "Mache Fortschritte unter idealen Bedingungen!"
+                            },
+                        },
+                        {
+                            img: tab1_card4,
+                            title: {
+                                en: "Ask advice from travel expert AJ",
+                                du: "Vraag advies aan reisspecialist AJ",
+                                gr: "Frage AJ, den Reiseexperten, um Rat"
+                            },
+                        },
+                    ]
+
+                },
+
+
+                {
+                    levelName: "Level 3 - Independend",
+                    desc: {
+                        en: "If you are on the water with kiters of the same level, you always make more progression. You learn from each other and push yourself to learn new things! In this course you will be pushed and coached as much as possible to learn new tricks. With KiteActive you will spend a weekend on the water with people who also want to make progress. Hey ho, Let’s go!",
+                        du: "Als je op het water bent met kiters van hetzelfde niveau, maak je altijd meer vooruitgang. Je leert van elkaar en daagt jezelf uit om nieuwe dingen te leren! In deze cursus word je zoveel mogelijk gepusht en gecoacht om nieuwe trucs te leren. Met KiteActive breng je een weekend door op het water met mensen die ook vooruitgang willen boeken. Hey ho, laten we gaan!",
+                        gr: "Wenn du mit Kitern auf dem Wasser bist, die das gleiche Niveau haben, machst du immer mehr Fortschritte. Ihr lernt voneinander und fordert euch heraus, neue Dinge zu lernen! In diesem Kurs wirst du so viel wie möglich gepusht und gecoacht, um neue Tricks zu lernen. Mit KiteActive verbringst du ein Wochenende auf dem Wasser mit Menschen, die ebenfalls Fortschritte machen wollen. Hey ho, los geht's!"
+                    },
+                    imgsect: [
+                        {
+                            imgSrc: tab3_1,
+                            text: {
+                                en: "Learn new tricks",
+                                du: "Leer nieuwe trucs",
+                                gr: "Neue Tricks lernen"
+                            },
+                            para: {
+                                en: "This is the ultimate package for anyone who can already kitesurf but wants to make progress and learn new tricks. From your very first jump to a kiteloop handle pass. Our team is ready to help you with the right tips and tricks to achieve your goals!",
+                                du: "Dit is het ultieme pakket voor iedereen die al kan kitesurfen maar vooruitgang wil boeken en nieuwe trucs wil leren. Van je allereerste sprong tot een kiteloop handle pass. Ons team staat klaar om je te helpen met de juiste tips en trucs om je doelen te bereiken!",
+                                gr: "Dies ist das ultimative Paket für alle, die bereits kitesurfen können, aber Fortschritte machen und neue Tricks lernen wollen. Vom ersten Sprung bis zum Kiteloop Handle Pass. Unser Team steht bereit, dir mit den richtigen Tipps und Tricks zu helfen, um deine Ziele zu erreichen!"
+                            },
+                            imgPosition: "left"
+                        },
+                        {
+                            imgSrc: tab3_2,
+                            text: {
+                                en: "What to expect from this course",
+                                du: "Wat je van deze cursus kunt verwachten",
+                                gr: "Was du von diesem Kurs erwarten kannst"
+                            },
+                            para: {
+                                en: "During the course we will look at what your personal goals are and what is feasible. We go through the theory together and during the week we try to push, coach and motivate you as much as possible to try new things in a safe way.",
+                                du: "Tijdens de cursus kijken we naar wat je persoonlijke doelen zijn en wat haalbaar is. We doorlopen samen de theorie en tijdens de week proberen we je zoveel mogelijk te pushen, coachen en motiveren om op een veilige manier nieuwe dingen te proberen.",
+                                gr: "Im Kurs schauen wir uns deine persönlichen Ziele an und was machbar ist. Wir gehen gemeinsam die Theorie durch und während der Woche versuchen wir, dich so gut wie möglich zu pushen, zu coachen und zu motivieren, neue Dinge sicher auszuprobieren."
+                            },
+                            imgPosition: "right"
+                        }
+                    ],
+                    acordation_head: {
+                        en: "What do you learn?",
+                        du: "Wat leer je?",
+                        gr: "Was lernst du?"
+                    },
+                    acordation_data: [
+                        {
+                            title: {
+                                en: "   ",
+                                du: "Leer de basis van pop",
+                                gr: "Lerne die Grundlagen des Pops"
+                            },
+                            info: {
+                                en: "Learn how to pop. This is a very important skill which you need for your entire kite career!",
+                                du: "Leer hoe je kunt poppen. Dit is een zeer belangrijke vaardigheid die je nodig hebt voor je hele kitecarrière!",
+                                gr: "Lerne, wie man popt. Dies ist eine sehr wichtige Fähigkeit, die du für deine gesamte Kitekarriere benötigst!"
+                            }
+                        },
+                        {
+                            title: {
+                                en: "Your first downwinder",
+                                du: "Je eerste downwinder",
+                                gr: "Dein erster Downwinder"
+                            },
+                            info: {
+                                en: "With a downwinder you are doing a kite tour along the coast!",
+                                du: "Met een downwinder maak je een kitetour langs de kust!",
+                                gr: "Mit einem Downwinder machst du eine Kitetour entlang der Küste!"
+                            }
+                        },
+                        {
+                            title: {
+                                en: "Your first jump",
+                                du: "Je eerste sprong",
+                                gr: "Dein erster Sprung"
+                            },
+                            info: {
+                                en: "You want to learn how to go skyhigh?",
+                                du: "Wil je leren hoe je skyhigh gaat?",
+                                gr: "Möchtest du lernen, wie man in die Höhe geht?"
+                            }
+                        },
+                        {
+                            title: {
+                                en: "Back & Frontroll",
+                                du: "Back & Frontroll",
+                                gr: "Back- & Frontroll"
+                            },
+                            info: {
+                                en: "Make a salto in the air! You think it is difficult, but we will learn you this amazing trick in 1 week!",
+                                du: "Maak een salto in de lucht! Je denkt dat het moeilijk is, maar wij leren je deze geweldige truc in 1 week!",
+                                gr: "Mache einen Salto in der Luft! Du denkst, es ist schwierig, aber wir bringen dir diesen fantastischen Trick in 1 Woche bei!"
+                            }
+                        },
+                        {
+                            title: {
+                                en: "board grabs, onefooters and board-offs",
+                                du: "boardgrabs, onefooters en board-offs",
+                                gr: "Boardgrabs, Onefooters und Board-Offs"
+                            },
+                            info: {
+                                en: "Grab the board in front of the camera!!",
+                                du: "Pak het board voor de camera!!",
+                                gr: "Greife das Board vor der Kamera!!"
+                            }
+                        },
+                        {
+                            title: {
+                                en: "Your first kiteloop (downloop)",
+                                du: "Je eerste kiteloop (downloop)",
+                                gr: "Dein erster Kiteloop (Downloop)"
+                            },
+                            info: {
+                                en: "Fly like a rollercoaster :)",
+                                du: "Vlieg als een achtbaan :)",
+                                gr: "Flieg wie eine Achterbahn :)"
+                            }
+                        }
+                    ],
+                    faq_head: {
+                        en: "FAQ",
+                        du: "FAQ",
+                        gr: "FAQ"
+                    },
+                    faq_data: [
+                        {
+                            title: {
+                                en: "How many hours include this course?",
+                                du: "Hoeveel uren bevat deze cursus?",
+                                gr: "Wie viele Stunden umfasst dieser Kurs?"
+                            },
+                            info: {
+                                en: "We do not link exact hours to this package. We try to push everyone as much as possible and occasionally provide 1-on-1 guidance. The goal is to make as much progress as possible and during this course we will give you all the tools you need to continue practicing.",
+                                du: "We koppelen geen exacte uren aan dit pakket. We proberen iedereen zoveel mogelijk te pushen en bieden af en toe 1-op-1 begeleiding. Het doel is om zoveel mogelijk vooruitgang te boeken en tijdens deze cursus geven we je alle tools die je nodig hebt om te blijven oefenen.",
+                                gr: "Wir verknüpfen keine genauen Stunden mit diesem Paket. Wir versuchen, jeden so viel wie möglich zu pushen und gelegentlich 1-zu-1-Betreuung zu bieten. Das Ziel ist, so viel wie möglich Fortschritte zu machen, und während dieses Kurses geben wir dir alle Werkzeuge, die du brauchst, um weiter zu üben."
+                            }
+                        },
+                        {
+                            title: {
+                                en: "Is kitegear included in this package?",
+                                du: "Is kitegear inbegrepen in dit pakket?",
+                                gr: "Ist Kiteausrüstung in diesem Paket enthalten?"
+                            },
+                            info: {
+                                en: "No, you need to bring your own kitegear or rent a complete set at € 399 / week.",
+                                du: "Nee, je moet je eigen kitegear meenemen of een complete set huren voor € 399 / week.",
+                                gr: "Nein, du musst deine eigene Kiteausrüstung mitbringen oder ein komplettes Set für 399 €/Woche mieten."
+                            }
+                        },
+                        {
+                            title: {
+                                en: "Am I Insured?",
+                                du: "Ben ik verzekerd?",
+                                gr: "Bin ich versichert?"
+                            },
+                            info: {
+                                en: "You are not insured against damage through KiteActive. We recommend that you check your travel insurance carefully to see whether it also covers extreme sports. to avoid disappointment and hassle on holiday. We work together with Sportzeker and then you are always covered for everything!",
+                                du: "Je bent niet verzekerd tegen schade via KiteActive. We raden aan om je reisverzekering zorgvuldig te controleren om te zien of deze ook extreme sporten dekt. Zo voorkom je teleurstellingen en gedoe op vakantie. We werken samen met Sportzeker en dan ben je altijd voor alles verzekerd!",
+                                gr: "Du bist nicht über KiteActive gegen Schäden versichert. Wir empfehlen dir, deine Reiseversicherung sorgfältig zu überprüfen, ob sie auch Extremsportarten abdeckt, um Enttäuschungen und Probleme im Urlaub zu vermeiden. Wir arbeiten mit Sportzeker zusammen, sodass du immer für alles versichert bist!"
+                            }
+                        }
+                    ],
+
+                    logo_img: [
+                        {
+                            img: tab1_card1,
+                            title: {
+                                en: "Professional team at your service",
+                                du: "Professioneel team tot uw dienst",
+                                gr: "Professionelles Team zu Ihren Diensten"
+                            },
+                        },
+                        {
+                            img: tab1_card2,
+                            title: {
+                                en: "Headset coaching",
+                                du: "Headset coaching",
+                                gr: "Headset-Coaching"
+                            },
+                        },
+                        {
+                            img: tab1_card3,
+                            title: {
+                                en: "Make progress in ideal conditions!",
+                                du: "Boek vooruitgang in ideale omstandigheden!",
+                                gr: "Mache Fortschritte unter idealen Bedingungen!"
+                            },
+                        },
+                        {
+                            img: tab1_card4,
+                            title: {
+                                en: "Ask advice from travel expert AJ",
+                                du: "Vraag advies aan reisspecialist AJ",
+                                gr: "Frage AJ, den Reiseexperten, um Rat"
+                            },
+                        },
+                    ]
+
+                }
+            ],
+
+            Kitegear_rental: {
+                title: {
+                    en: "Kitegear rental",
+                    du: "Kitegear verhuur",
+                    gr: "Kite-Ausrüstung Vermietung"
+                },
+                para1: {
+                    en: "With us you can find the latest kite material. We have most brands available and we ensure that you are always on the water with the right size kite. Don’t feel like carrying all your materials with you? No problem! You can rent a complete kiteset for € 180 / weekend.",
+                    du: "Bij ons vind je het nieuwste kitemateriaal. We hebben de meeste merken beschikbaar en we zorgen ervoor dat je altijd op het water bent met de juiste maat kite. Geen zin om al je materialen mee te nemen? Geen probleem! Je kunt een complete kiteset huren voor € 180 / weekend.",
+                    gr: "Bei uns findest du das neueste Kite-Material. Wir haben die meisten Marken verfügbar und stellen sicher, dass du immer mit der richtigen Kite-Größe auf dem Wasser bist. Keine Lust, all dein Material mitzunehmen? Kein Problem! Du kannst ein komplettes Kiteset für 180 € / Wochenende mieten."
+                },
+                para2: {
+                    en: "A list of our brands: Core / Naish / F-one / North / Slingshot / Lieuwe / Appletree.",
+                    du: "Een lijst van onze merken: Core / Naish / F-one / North / Slingshot / Lieuwe / Appletree.",
+                    gr: "Eine Liste unserer Marken: Core / Naish / F-one / North / Slingshot / Lieuwe / Appletree."
+                }
+            },
+            Disclaimer: {
+                title: {
+                    en: "Disclaimer",
+                    du: "Disclaimer",
+                    gr: "Haftungsausschluss"
+                },
+                para1: {
+                    en: "You ensure that you indicate your correct level during your booking. Unfortunately, we cannot control the wind. If you cannot complete your package you can settle the outstanding amount in various ways with us. You can use the outstanding amount in our webshop on (kite) gear.",
+                    du: "Je zorgt ervoor dat je je juiste niveau aangeeft tijdens je boeking. Helaas kunnen we de wind niet controleren. Als je je pakket niet kunt voltooien, kun je het openstaande bedrag op verschillende manieren bij ons verrekenen. Je kunt het openstaande bedrag gebruiken in onze webshop voor (kite)materiaal.",
+                    gr: "Du stellst sicher, dass du dein korrektes Niveau während deiner Buchung angibst. Leider können wir den Wind nicht kontrollieren. Wenn du dein Paket nicht abschließen kannst, kannst du den ausstehenden Betrag auf verschiedene Weise bei uns begleichen. Du kannst den ausstehenden Betrag in unserem Webshop für (Kite-)Ausrüstung verwenden."
+                },
+                para2: {
+                    en: "Make sure you get your insurance in order if you break your own or our material. Participation in our packages is always at your own risk. Kitesurfing is an extreme sport and although we will make sure you learn kitesurfing with us most safely, you always need to be aware of yourself and others. Always listen well to the instructions from our team.",
+                    du: "Zorg ervoor dat je je verzekering op orde hebt als je je eigen of ons materiaal breekt. Deelname aan onze pakketten is altijd op eigen risico. Kitesurfen is een extreme sport en hoewel we ervoor zorgen dat je het kitesurfen bij ons zo veilig mogelijk leert, moet je altijd op jezelf en anderen letten. Luister altijd goed naar de instructies van ons team.",
+                    gr: "Stelle sicher, dass du deine Versicherung in Ordnung bringst, wenn du dein eigenes oder unser Material brichst. Die Teilnahme an unseren Paketen erfolgt immer auf eigene Gefahr. Kitesurfen ist ein Extremsport und obwohl wir sicherstellen, dass du das Kitesurfen bei uns so sicher wie möglich lernst, musst du dir immer deiner selbst und anderer bewusst sein. Höre immer gut auf die Anweisungen unseres Teams."
+                }
+            }
+        },
 
         activities: [
             {
@@ -1937,9 +2926,7 @@ const trips = [
                 }
             },
         ],
-
         reviews: {}
-
     },
 
 
@@ -1949,7 +2936,7 @@ const trips = [
 
     {
         name: 'skyCapTown',
-        vedio: vedio,
+        vedio: skyCapTown_vedio,
         overview: {
             trip_heading: {
                 en: "Skyhigh in Cape Town: Elite Kitesurfing Experience in Cape Town",
@@ -2049,6 +3036,412 @@ const trips = [
                 imgPosition: 'right',
             }
         ],
+
+        packages: {
+            levelsData: [
+                {
+                    levelName: 'Level 3 - Independent',
+                    desc: {
+                        en: 'If you are on the water with kiters of the same level, you always make more progression. You learn from each other and push yourself to learn new things! In this course you will be pushed and coached as much as possible to learn new tricks. With KiteActive you will spend a week in a perfect destination with people who also want to make progress. Hey ho, Let’s go! 🙂',
+                        du: 'Als je op het water bent met kiters van hetzelfde niveau, maak je altijd meer vooruitgang. Je leert van elkaar en stimuleert jezelf om nieuwe dingen te leren! In deze cursus word je zoveel mogelijk aangemoedigd en gecoacht om nieuwe trucs te leren. Met KiteActive breng je een week door op een perfecte bestemming met mensen die ook vooruitgang willen boeken. Hey ho, laten we gaan! 🙂',
+                        gr: 'Wenn du mit Kitern desselben Niveaus auf dem Wasser bist, machst du immer mehr Fortschritte. Du lernst voneinander und drängst dich selbst, neue Dinge zu lernen! In diesem Kurs wirst du so viel wie möglich gepusht und gecoacht, um neue Tricks zu lernen. Mit KiteActive verbringst du eine Woche an einem perfekten Zielort mit Menschen, die ebenfalls Fortschritte machen wollen. Hey ho, lass uns gehen! 🙂'
+                    },
+                    imgsect: [
+                        {
+                            imgSrc: tab1_1,
+                            text: {
+                                en: 'Learn new tricks and make progression',
+                                du: 'Leer nieuwe trucs en maak vooruitgang',
+                                gr: 'Lerne neue Tricks und mache Fortschritte'
+                            },
+                            para: {
+                                en: 'This is the ultimate package for anyone who can already kitesurf but wants to make progress and learn new tricks. From your very first jump to a kiteloop handle pass. Our team is ready to help you with the right tips and tricks to achieve your goals!',
+                                du: 'Dit is het ultieme pakket voor iedereen die al kan kitesurfen maar vooruitgang wil boeken en nieuwe trucs wil leren. Van je allereerste spron naar een kiteloop handle pass. Ons team staat klaar om je te helpen met de juiste tips en trucs om je doelen te bereiken!',
+                                gr: 'Dies ist das ultimative Paket für jeden, der bereits kitesurfen kann, aber Fortschritte machen und neue Tricks lernen möchte. Von deinem allerersten Sprung bis zum Kiteloop-Handle-Pass. Unser Team ist bereit, dir mit den richtigen Tipps und Tricks zu helfen, um deine Ziele zu erreichen!'
+                            },
+                            imgPosition: 'left'
+                        },
+                        {
+                            imgSrc: tab1_2,
+                            text: {
+                                en: 'What to expect from this course?',
+                                du: 'Wat kun je van deze cursus verwachten?',
+                                gr: 'Was kannst du von diesem Kurs erwarten?'
+                            },
+                            para: {
+                                en: 'During the course we will look at what your personal goals are and what is feasible. We go through the theory together and during the week we try to push, coach and motivate you as much as possible to try new things in a safe way.',
+                                du: 'Tijdens de cursus bekijken we wat je persoonlijke doelen zijn en wat haalbaar is. We gaan samen de theorie door en proberen je gedurende de week zoveel mogelijk te stimuleren, coachen en motiveren om nieuwe dingen op een veilige manier te proberen.',
+                                gr: 'Während des Kurses werden wir uns ansehen, was deine persönlichen Ziele sind und was machbar ist. Wir gehen gemeinsam die Theorie durch und versuchen während der Woche, dich so gut wie möglich zu pushen, zu coachen und zu motivieren, um neue Dinge auf sichere Weise auszuprobieren.'
+                            },
+                            imgPosition: 'right'
+                        }
+                    ],
+                    acordation_head: {
+                        en: 'What do you learn?',
+                        du: 'Wat leer je?',
+                        gr: 'Was lernst du?'
+                    },
+                    acordation_data: [
+                        {
+                            title: {
+                                en: 'The basics of pop',
+                                du: 'De basis van pop',
+                                gr: 'Die Grundlagen des Pops'
+                            },
+                            info: {
+                                en: 'Learn how to pop. This is a very important skill which you need for your entire kite career!',
+                                du: 'Leer hoe je moet poppen. Dit is een zeer belangrijke vaardigheid die je nodig hebt voor je hele kitecarrière!',
+                                gr: 'Lerne, wie man poppt. Dies ist eine sehr wichtige Fähigkeit, die du für deine gesamte Kitesurfkarriere benötigst!'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Your first jump',
+                                du: 'Je eerste spron',
+                                gr: 'Dein erster Sprung'
+                            },
+                            info: {
+                                en: 'You want to learn how to go skyhigh?',
+                                du: 'Wil je leren hoe je de lucht in kunt gaan?',
+                                gr: 'Möchtest du lernen, wie du in die Höhe springen kannst?'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Back & Front roll',
+                                du: 'Back & Front roll',
+                                gr: 'Back & Frontroll'
+                            },
+                            info: {
+                                en: 'Make a salto in the air! You think it is difficult, but we will learn you this amazing trick in 1 week!',
+                                du: 'Maak een salto in de lucht! Je denkt dat het moeilijk is, maar we leren je deze geweldige truc in 1 week!',
+                                gr: 'Mach einen Salto in der Luft! Du denkst, es ist schwierig, aber wir werden dir diesen erstaunlichen Trick in 1 Woche beibringen!'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Board grabs, onefooters and board-offs',
+                                du: 'Board grabs, onefooters en board-offs',
+                                gr: 'Board Grabs, Onefooters und Board-offs'
+                            },
+                            info: {
+                                en: 'Grab the board in front of the camera!',
+                                du: 'Pak het board voor de camera!',
+                                gr: 'Greife das Board vor der Kamera!'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Your first kiteloop (downloop)',
+                                du: 'Je eerste kiteloop (downloop)',
+                                gr: 'Dein erster Kiteloop (Downloop)'
+                            },
+                            info: {
+                                en: 'Fly like a rollercoaster',
+                                du: 'Vlieg als een achtbaan',
+                                gr: 'Flieg wie eine Achterbahn'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Your first downwinder',
+                                du: 'Je eerste downwinder',
+                                gr: 'Dein erster Downwinder'
+                            },
+                            info: {
+                                en: 'With a downwinder you are doing a kite tour along the coast!',
+                                du: 'Met een downwinder maak je een kitetour langs de kust!',
+                                gr: 'Mit einem Downwinder machst du eine Kitetour entlang der Küste!'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Learn how to ride strapless / bottom turns / wave skills',
+                                du: 'Leer hoe je strapless kunt rijden / bottom turns / golfvaardigheden',
+                                gr: 'Lerne, wie man strapless fährt / Bottom Turns / Wellenfähigkeiten'
+                            },
+                            info: {
+                                en: 'Upgrade your skills in the waves',
+                                du: 'Verbeter je vaardigheden in de golven',
+                                gr: 'Verbessere deine Fähigkeiten in den Wellen'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Get unhooked!',
+                                du: 'Ga los!',
+                                gr: 'Lass los!'
+                            },
+                            info: {
+                                en: 'Learn how to do unhooked tricks like Raily, S-bend or maybe even a handle pass?',
+                                du: 'Leer hoe je unhooked trucs doet zoals Raily, S-bend of misschien zelfs een handle pass?',
+                                gr: 'Lerne, wie man unhooked Tricks wie Raily, S-bend oder vielleicht sogar einen Handle Pass macht?'
+                            }
+                        }
+                    ],
+                    faq_head: {
+                        en: "FAQ",
+                        du: "FAQ",
+                        gr: "Häufig gestellte Fragen"
+                    },
+                    faq_data: [
+                        {
+                            title: {
+                                en: 'How many hours is this course?',
+                                du: 'Hoeveel uur duurt deze cursus?',
+                                gr: 'Wie viele Stunden dauert dieser Kurs?'
+                            },
+                            info: {
+                                en: 'We do not link exact hours to this package. We try to push everyone as much as possible and occasionally provide 1-on-1 guidance. The goal is to make as much progress as possible and during this course we will give you all the tools you need to continue practicing.',
+                                du: 'We linken geen exacte uren aan dit pakket. We proberen iedereen zoveel mogelijk te stimuleren en bieden af en toe 1-op-1 begeleiding. Het doel is om zoveel mogelijk vooruitgang te boeken en tijdens deze cursus geven we je alle tools die je nodig hebt om te blijven oefenen.',
+                                gr: 'Wir verlinken keine genauen Stunden mit diesem Paket. Wir versuchen, jeden so gut wie möglich zu unterstützen und bieten gelegentlich 1-zu-1-Begleitung an. Ziel ist es, so viel Fortschritt wie möglich zu machen, und während dieses Kurses geben wir dir alle Werkzeuge, die du brauchst, um weiter zu üben.'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Is kitegear included in this package?',
+                                du: 'Is kitemateriaal inbegrepen bij dit pakket?',
+                                gr: 'Ist Kitematerial in diesem Paket enthalten?'
+                            },
+                            info: {
+                                en: 'No, you need to bring your own kitegear or rent a complete set at € 399 / week',
+                                du: 'Nee, je moet je eigen kitemateriaal meenemen of een compleet set huren voor € 399 / week',
+                                gr: 'Nein, du musst dein eigenes Kitematerial mitbringen oder ein komplettes Set für 399 € / Woche mieten.'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Am I insured?',
+                                du: 'Ben ik verzekerd?',
+                                gr: 'Bin ich versichert?'
+                            },
+                            info: {
+                                en: 'You are not insured against damage through KiteActive. We recommend that you check your travel insurance carefully to see whether it also covers extreme sports. to avoid disappointment and hassle on holiday. We work together with Sportzeker and then you are always covered for everything!',
+                                du: 'Je bent niet verzekerd tegen schade via KiteActive. We raden je aan om je reisverzekering goed te controleren om te zien of deze ook extreme sporten dekt. Dit om teleurstellingen en gedoe op vakantie te voorkomen. We werken samen met Sportzeker en dan ben je altijd voor alles verzekerd!',
+                                gr: 'Du bist nicht gegen Schäden durch KiteActive versichert. Wir empfehlen, deine Reiseversicherung sorgfältig zu prüfen, um festzustellen, ob sie auch Extremsportarten abdeckt. Um Enttäuschungen und Probleme im Urlaub zu vermeiden. Wir arbeiten mit Sportzeker zusammen, und dann bist du immer für alles versichert!'
+                            }
+                        }
+                    ],
+                    logo_img: [
+                        {
+                            img: tab1_card1,
+                            title: {
+                                en: "Professional team",
+                                du: "Professioneel team",
+                                gr: "Professionelles Team"
+                            }
+                        },
+                        {
+                            img: tab1_card2,
+                            title: {
+                                en: "Headset coaching",
+                                du: "Headset coaching",
+                                gr: "Headset-Coaching"
+                            }
+                        },
+                        {
+                            img: tab1_card3,
+                            title: {
+                                en: "Get advice from travel expert AJ",
+                                du: "Krijg advies van reisspecialist AJ",
+                                gr: "Hol dir Ratschläge vom Reiseexperten AJ"
+                            }
+                        },
+                        {
+                            img: tab1_card4,
+                            title: {
+                                en: "Photo & Video proof / analysis",
+                                du: "Foto- en video bewijs / analyse",
+                                gr: "Foto- und Video-Nachweis / Analyse"
+                            }
+                        }
+                    ]
+                },
+
+                {
+                    levelName: 'Level 4 - Advanced',
+                    desc: {
+                        en: 'If you are on the water with kiters of the same level, you always make more progression. You learn from each other and push yourself to learn new things! In this course you will be pushed and coached as much as possible to learn new tricks. With KiteActive you will spend a week in a perfect destination with people who also want to make progress. Hey ho, Let’s go! 🙂',
+                        du: 'Als je op het water bent met kiters van hetzelfde niveau, maak je altijd meer vooruitgang. Je leert van elkaar en stimuleert jezelf om nieuwe dingen te leren! In deze cursus word je zoveel mogelijk gepusht en gecoacht om nieuwe trucs te leren. Met KiteActive breng je een week door op een perfecte bestemming met mensen die ook vooruitgang willen boeken. Hey ho, laten we gaan! 🙂',
+                        gr: 'Wenn du mit Kitern desselben Niveaus auf dem Wasser bist, machst du immer mehr Fortschritte. Du lernst voneinander und drängst dich selbst, neue Dinge zu lernen! In diesem Kurs wirst du so viel wie möglich gepusht und gecoacht, um neue Tricks zu lernen. Mit KiteActive verbringst du eine Woche an einem perfekten Zielort mit Menschen, die ebenfalls Fortschritte machen wollen. Hey ho, lass uns gehen! 🙂'
+                    },
+                    imgsect: [
+                        {
+                            imgSrc: tab2_1,
+                            text: {
+                                en: 'Level up! There is still so much to learn',
+                                du: 'Level omhoog! Er is nog zoveel te leren',
+                                gr: 'Level hoch! Es gibt noch so viel zu lernen'
+                            },
+                            para: {
+                                en: 'Do you want to improve in big air kiting? Going for that megaloop? Or do you really want to learn this sick handle pass? This course is also for waveriders who are able to do long downwinders in challenging conditions and who want to learn to perform better in the waves.',
+                                du: 'Wil je verbeteren in big air kiten? Ga je voor die megaloop? Of wil je echt deze geweldige handle pass leren? Deze cursus is ook voor golfrijders die in staat zijn om lange downwinders in uitdagende omstandigheden te maken en die beter willen presteren in de golven.',
+                                gr: 'Möchtest du im Big Air Kiten besser werden? Gehst du für den Megaloop? Oder möchtest du wirklich diesen coolen Handle Pass lernen? Dieser Kurs ist auch für Wellenreiter, die in der Lage sind, lange Downwinders unter herausfordernden Bedingungen zu machen und die lernen möchten, in den Wellen besser abzuschneiden.'
+                            },
+                            imgPosition: 'left'
+                        }
+                    ],
+                    acordation_head: {
+                        en: 'What do you learn?',
+                        du: 'Wat leer je?',
+                        gr: 'Was lernst du?'
+                    },
+                    acordation_data: [
+                        {
+                            title: {
+                                en: 'Long downwinders in challenging conditions',
+                                du: 'Lange downwinders in uitdagende omstandigheden',
+                                gr: 'Lange Downwinders unter herausfordernden Bedingungen'
+                            },
+                            info: {
+                                en: 'Like DEN TVTAS for example',
+                                du: 'Zoals DEN TVTAS bijvoorbeeld',
+                                gr: 'Wie DEN TVTAS zum Beispiel'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Jump 10 meter +',
+                                du: 'Spring 10 meter +',
+                                gr: 'Spring 10 Meter +'
+                            },
+                            info: {
+                                en: 'Do you want to go skyhigh with us?',
+                                du: 'Wil je met ons de lucht in?',
+                                gr: 'Möchtest du mit uns in die Höhe springen?'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Megaloop',
+                                du: 'Megaloop',
+                                gr: 'Megaloop'
+                            },
+                            info: {
+                                en: '',
+                                du: '',
+                                gr: ''
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Unhooked tricks',
+                                du: 'Unhooked trucs',
+                                gr: 'Unhooked Tricks'
+                            },
+                            info: {
+                                en: '',
+                                du: '',
+                                gr: ''
+                            }
+                        }
+                    ],
+                    faq_head: {
+                        en: "FAQ",
+                        du: "FAQ",
+                        gr: "Häufig gestellte Fragen"
+                    },
+                    faq_data: [
+                        {
+                            title: {
+                                en: 'Am I insured?',
+                                du: 'Ben ik verzekerd?',
+                                gr: 'Bin ich versichert?'
+                            },
+                            info: {
+                                en: 'No, not with us. You need to take care of your own travel insurance. If you want, we can help you find the right one!',
+                                du: 'Nee, niet bij ons. Je moet zelf zorgen voor je reisverzekering. Als je wilt, kunnen we je helpen de juiste te vinden!',
+                                gr: 'Nein, nicht bei uns. Du musst dich um deine eigene Reiseversicherung kümmern. Wenn du möchtest, können wir dir helfen, die richtige zu finden!'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'How many hours is this course?',
+                                du: 'Hoeveel uur duurt deze cursus?',
+                                gr: 'Wie viele Stunden dauert dieser Kurs?'
+                            },
+                            info: {
+                                en: 'No specific hours are attached to this course. From time to time we do 1-on-1 sessions and our team will do our best to teach you as much as possible during this week.',
+                                du: 'Er zijn geen specifieke uren aan deze cursus verbonden. Af en toe doen we 1-op-1 sessies en ons team zal ons best doen om je deze week zoveel mogelijk te leren.',
+                                gr: 'Es sind keine spezifischen Stunden mit diesem Kurs verbunden. Von Zeit zu Zeit führen wir 1-zu-1-Sitzungen durch, und unser Team wird unser Bestes tun, um dir während dieser Woche so viel wie möglich beizubringen.'
+                            }
+                        }
+                    ],
+                    logo_img: [
+                        {
+                            img: tab1_card1,
+                            title: {
+                                en: "Make progression in ideal conditions",
+                                du: 'Maak vooruitgang onder ideale omstandigheden',
+                                gr: 'Mach Fortschritte unter idealen Bedingungen'
+                            }
+                        },
+                        {
+                            img: tab1_card2,
+                            title: {
+                                en: "Advice from our travel expert AJ",
+                                du: 'Advies van onze reisspecialist AJ',
+                                gr: 'Rat von unserem Reiseexperten AJ'
+                            }
+                        },
+                        {
+                            img: tab1_card3,
+                            title: {
+                                en: "Headset coaching",
+                                du: 'Coaching via headset',
+                                gr: 'Coaching über Headset'
+                            }
+                        },
+                        {
+                            img: tab1_card4,
+                            title: {
+                                en: "Photo & Video proof / analysis",
+                                du: 'Foto- en video-analyse / bewijs',
+                                gr: 'Foto- und Videoanalyse / Nachweis'
+                            }
+                        }
+                    ]
+                },
+            ],
+
+
+            Kitegear_rental: {
+                title: {
+                    en: "Kitegear rental",
+                    du: "Kitegear verhuur",
+                    gr: "Kiteausrüstungsverleih"
+                },
+                para1: {
+                    en: "With us you can find the latest kite material. We have most brands available and we ensure that you are always on the water with the right size kite. Don’t feel like carrying all your materials with you? No problem!",
+                    du: "Bij ons vind je het nieuwste kitemateriaal. We hebben de meeste merken beschikbaar en zorgen ervoor dat je altijd met de juiste maat kite op het water bent. Geen zin om al je materiaal mee te nemen? Geen probleem!",
+                    gr: "Bei uns findest du das neueste Kitematerial. Wir haben die meisten Marken verfügbar und sorgen dafür, dass du immer mit der richtigen Kite-Größe auf dem Wasser bist. Keine Lust, all dein Material mitzunehmen? Kein Problem!"
+                },
+                para2: {
+                    en: "A list of our brands: Core / Naish / F-one / North / Slingshot / Lieuwe / Appletree",
+                    du: "Een lijst van onze merken: Core / Naish / F-one / North / Slingshot / Lieuwe / Appletree",
+                    gr: "Eine Liste unserer Marken: Core / Naish / F-one / North / Slingshot / Lieuwe / Appletree"
+                }
+            },
+            Disclaimer: {
+                title: {
+                    en: "Disclaimer",
+                    du: "Disclaimer",
+                    gr: "Haftungsausschluss"
+                },
+                para1: {
+                    en: "You ensure that you indicate your correct level during your booking. Unfortunately, we cannot control the wind. If you cannot complete your package you can settle the outstanding amount in various ways with us.- You can use the outstanding amount in our webshop on (kite) gear – You can use it for other KiteActive trips or give it as a gift card to friends – You can finish your package in 1 of our schools in Holland. Check your insurance. If you need help with the right insurance please ask us for help! Not all insurance companies cover kitesurf material.",
+                    du: "Je zorgt ervoor dat je je correcte niveau aangeeft tijdens je boeking. Helaas kunnen we de wind niet controleren. Als je je pakket niet kunt afronden, kun je het openstaande bedrag op verschillende manieren bij ons vereffenen. - Je kunt het openstaande bedrag in onze webshop gebruiken voor (kite)materiaal - Je kunt het gebruiken voor andere KiteActive-reizen of het als cadeaukaart aan vrienden geven - Je kunt je pakket afronden in 1 van onze scholen in Nederland. Controleer je verzekering. Als je hulp nodig hebt bij de juiste verzekering, vraag het ons dan! Niet alle verzekeringsmaatschappijen dekken kitesurfmateriaal.",
+                    gr: "Du stellst sicher, dass du während deiner Buchung dein korrektes Niveau angibst. Leider können wir den Wind nicht kontrollieren. Wenn du dein Paket nicht abschließen kannst, kannst du den offenen Betrag auf verschiedene Weise bei uns begleichen. - Du kannst den offenen Betrag in unserem Webshop für (Kite-)Ausrüstung verwenden - Du kannst ihn für andere KiteActive-Reisen verwenden oder als Geschenkkarte an Freunde geben - Du kannst dein Paket in einer unserer Schulen in Holland abschließen. Überprüfe deine Versicherung. Wenn du Hilfe bei der richtigen Versicherung benötigst, frag uns um Hilfe! Nicht alle Versicherungsunternehmen decken Kitesurfmaterial ab."
+                },
+                para2: {
+                    en: "Participation in our packages is always at your own risk. Kitesurfing is an extreme sport and although we will make sure you learn kitesurfing with us most safely, you always need to be aware of yourself and others. Always listen well to the instructions from our team.",
+                    du: "Deelname aan onze pakketten is altijd op eigen risico. Kitesurfen is een extreme sport en hoewel we ervoor zorgen dat je op de veiligste manier kitesurfen leert, moet je altijd op jezelf en anderen letten. Luister altijd goed naar de instructies van ons team.",
+                    gr: "Die Teilnahme an unseren Paketen erfolgt immer auf eigene Gefahr. Kitesurfen ist ein Extremsport, und obwohl wir sicherstellen, dass du bei uns auf die sicherste Weise Kitesurfen lernst, musst du dir immer selbst und anderen bewusst sein. Höre immer gut auf die Anweisungen unseres Teams."
+                }
+            }
+
+        },
+
         hosted: [
             {
                 hosted_img: skycap_hosted_img1,
@@ -2390,7 +3783,7 @@ const trips = [
 
     {
         name: 'KitemeccaTraifa',
-        vedio: vedio,
+        vedio: KitemeccaTraifa_vedio,
         overview: {
             trip_heading: {
                 en: "Kite mecca Europe: Kitesurf in Tarifa",
@@ -2514,6 +3907,411 @@ const trips = [
                 imgPosition: 'right',
             }
         ],
+
+        packages: {
+            levelsData: [
+                {
+                    levelName: 'Level 3 - Independent',
+                    desc: {
+                        en: 'If you are on the water with kiters of the same level, you always make more progression. You learn from each other and push yourself to learn new things! In this course you will be pushed and coached as much as possible to learn new tricks. With KiteActive you will spend a week in a perfect destination with people who also want to make progress. Hey ho, Let’s go! 🙂',
+                        du: 'Als je op het water bent met kiters van hetzelfde niveau, maak je altijd meer vooruitgang. Je leert van elkaar en stimuleert jezelf om nieuwe dingen te leren! In deze cursus word je zoveel mogelijk aangemoedigd en gecoacht om nieuwe trucs te leren. Met KiteActive breng je een week door op een perfecte bestemming met mensen die ook vooruitgang willen boeken. Hey ho, laten we gaan! 🙂',
+                        gr: 'Wenn du mit Kitern desselben Niveaus auf dem Wasser bist, machst du immer mehr Fortschritte. Du lernst voneinander und drängst dich selbst, neue Dinge zu lernen! In diesem Kurs wirst du so viel wie möglich gepusht und gecoacht, um neue Tricks zu lernen. Mit KiteActive verbringst du eine Woche an einem perfekten Zielort mit Menschen, die ebenfalls Fortschritte machen wollen. Hey ho, lass uns gehen! 🙂'
+                    },
+                    imgsect: [
+                        {
+                            imgSrc: tab1_1,
+                            text: {
+                                en: 'Learn new tricks and make progression',
+                                du: 'Leer nieuwe trucs en maak vooruitgang',
+                                gr: 'Lerne neue Tricks und mache Fortschritte'
+                            },
+                            para: {
+                                en: 'This is the ultimate package for anyone who can already kitesurf but wants to make progress and learn new tricks. From your very first jump to a kiteloop handle pass. Our team is ready to help you with the right tips and tricks to achieve your goals!',
+                                du: 'Dit is het ultieme pakket voor iedereen die al kan kitesurfen maar vooruitgang wil boeken en nieuwe trucs wil leren. Van je allereerste spron naar een kiteloop handle pass. Ons team staat klaar om je te helpen met de juiste tips en trucs om je doelen te bereiken!',
+                                gr: 'Dies ist das ultimative Paket für jeden, der bereits kitesurfen kann, aber Fortschritte machen und neue Tricks lernen möchte. Von deinem allerersten Sprung bis zum Kiteloop-Handle-Pass. Unser Team ist bereit, dir mit den richtigen Tipps und Tricks zu helfen, um deine Ziele zu erreichen!'
+                            },
+                            imgPosition: 'left'
+                        },
+                        {
+                            imgSrc: tab1_2,
+                            text: {
+                                en: 'What to expect from this course?',
+                                du: 'Wat kun je van deze cursus verwachten?',
+                                gr: 'Was kannst du von diesem Kurs erwarten?'
+                            },
+                            para: {
+                                en: 'During the course we will look at what your personal goals are and what is feasible. We go through the theory together and during the week we try to push, coach and motivate you as much as possible to try new things in a safe way.',
+                                du: 'Tijdens de cursus bekijken we wat je persoonlijke doelen zijn en wat haalbaar is. We gaan samen de theorie door en proberen je gedurende de week zoveel mogelijk te stimuleren, coachen en motiveren om nieuwe dingen op een veilige manier te proberen.',
+                                gr: 'Während des Kurses werden wir uns ansehen, was deine persönlichen Ziele sind und was machbar ist. Wir gehen gemeinsam die Theorie durch und versuchen während der Woche, dich so gut wie möglich zu pushen, zu coachen und zu motivieren, um neue Dinge auf sichere Weise auszuprobieren.'
+                            },
+                            imgPosition: 'right'
+                        }
+                    ],
+                    acordation_head: {
+                        en: 'What do you learn?',
+                        du: 'Wat leer je?',
+                        gr: 'Was lernst du?'
+                    },
+                    acordation_data: [
+                        {
+                            title: {
+                                en: 'The basics of pop',
+                                du: 'De basis van pop',
+                                gr: 'Die Grundlagen des Pops'
+                            },
+                            info: {
+                                en: 'Learn how to pop. This is a very important skill which you need for your entire kite career!',
+                                du: 'Leer hoe je moet poppen. Dit is een zeer belangrijke vaardigheid die je nodig hebt voor je hele kitecarrière!',
+                                gr: 'Lerne, wie man poppt. Dies ist eine sehr wichtige Fähigkeit, die du für deine gesamte Kitesurfkarriere benötigst!'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Your first jump',
+                                du: 'Je eerste spron',
+                                gr: 'Dein erster Sprung'
+                            },
+                            info: {
+                                en: 'You want to learn how to go skyhigh?',
+                                du: 'Wil je leren hoe je de lucht in kunt gaan?',
+                                gr: 'Möchtest du lernen, wie du in die Höhe springen kannst?'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Back & Front roll',
+                                du: 'Back & Front roll',
+                                gr: 'Back & Frontroll'
+                            },
+                            info: {
+                                en: 'Make a salto in the air! You think it is difficult, but we will learn you this amazing trick in 1 week!',
+                                du: 'Maak een salto in de lucht! Je denkt dat het moeilijk is, maar we leren je deze geweldige truc in 1 week!',
+                                gr: 'Mach einen Salto in der Luft! Du denkst, es ist schwierig, aber wir werden dir diesen erstaunlichen Trick in 1 Woche beibringen!'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Board grabs, onefooters and board-offs',
+                                du: 'Board grabs, onefooters en board-offs',
+                                gr: 'Board Grabs, Onefooters und Board-offs'
+                            },
+                            info: {
+                                en: 'Grab the board in front of the camera!',
+                                du: 'Pak het board voor de camera!',
+                                gr: 'Greife das Board vor der Kamera!'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Your first kiteloop (downloop)',
+                                du: 'Je eerste kiteloop (downloop)',
+                                gr: 'Dein erster Kiteloop (Downloop)'
+                            },
+                            info: {
+                                en: 'Fly like a rollercoaster',
+                                du: 'Vlieg als een achtbaan',
+                                gr: 'Flieg wie eine Achterbahn'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Your first downwinder',
+                                du: 'Je eerste downwinder',
+                                gr: 'Dein erster Downwinder'
+                            },
+                            info: {
+                                en: 'With a downwinder you are doing a kite tour along the coast!',
+                                du: 'Met een downwinder maak je een kitetour langs de kust!',
+                                gr: 'Mit einem Downwinder machst du eine Kitetour entlang der Küste!'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Learn how to ride strapless / bottom turns / wave skills',
+                                du: 'Leer hoe je strapless kunt rijden / bottom turns / golfvaardigheden',
+                                gr: 'Lerne, wie man strapless fährt / Bottom Turns / Wellenfähigkeiten'
+                            },
+                            info: {
+                                en: 'Upgrade your skills in the waves',
+                                du: 'Verbeter je vaardigheden in de golven',
+                                gr: 'Verbessere deine Fähigkeiten in den Wellen'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Get unhooked!',
+                                du: 'Ga los!',
+                                gr: 'Lass los!'
+                            },
+                            info: {
+                                en: 'Learn how to do unhooked tricks like Raily, S-bend or maybe even a handle pass?',
+                                du: 'Leer hoe je unhooked trucs doet zoals Raily, S-bend of misschien zelfs een handle pass?',
+                                gr: 'Lerne, wie man unhooked Tricks wie Raily, S-bend oder vielleicht sogar einen Handle Pass macht?'
+                            }
+                        }
+                    ],
+                    faq_head: {
+                        en: "FAQ",
+                        du: "FAQ",
+                        gr: "Häufig gestellte Fragen"
+                    },
+                    faq_data: [
+                        {
+                            title: {
+                                en: 'How many hours is this course?',
+                                du: 'Hoeveel uur duurt deze cursus?',
+                                gr: 'Wie viele Stunden dauert dieser Kurs?'
+                            },
+                            info: {
+                                en: 'We do not link exact hours to this package. We try to push everyone as much as possible and occasionally provide 1-on-1 guidance. The goal is to make as much progress as possible and during this course we will give you all the tools you need to continue practicing.',
+                                du: 'We linken geen exacte uren aan dit pakket. We proberen iedereen zoveel mogelijk te stimuleren en bieden af en toe 1-op-1 begeleiding. Het doel is om zoveel mogelijk vooruitgang te boeken en tijdens deze cursus geven we je alle tools die je nodig hebt om te blijven oefenen.',
+                                gr: 'Wir verlinken keine genauen Stunden mit diesem Paket. Wir versuchen, jeden so gut wie möglich zu unterstützen und bieten gelegentlich 1-zu-1-Begleitung an. Ziel ist es, so viel Fortschritt wie möglich zu machen, und während dieses Kurses geben wir dir alle Werkzeuge, die du brauchst, um weiter zu üben.'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Is kitegear included in this package?',
+                                du: 'Is kitemateriaal inbegrepen bij dit pakket?',
+                                gr: 'Ist Kitematerial in diesem Paket enthalten?'
+                            },
+                            info: {
+                                en: 'No, you need to bring your own kitegear or rent a complete set at € 399 / week',
+                                du: 'Nee, je moet je eigen kitemateriaal meenemen of een compleet set huren voor € 399 / week',
+                                gr: 'Nein, du musst dein eigenes Kitematerial mitbringen oder ein komplettes Set für 399 € / Woche mieten.'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Am I insured?',
+                                du: 'Ben ik verzekerd?',
+                                gr: 'Bin ich versichert?'
+                            },
+                            info: {
+                                en: 'You are not insured against damage through KiteActive. We recommend that you check your travel insurance carefully to see whether it also covers extreme sports. to avoid disappointment and hassle on holiday. We work together with Sportzeker and then you are always covered for everything!',
+                                du: 'Je bent niet verzekerd tegen schade via KiteActive. We raden je aan om je reisverzekering goed te controleren om te zien of deze ook extreme sporten dekt. Dit om teleurstellingen en gedoe op vakantie te voorkomen. We werken samen met Sportzeker en dan ben je altijd voor alles verzekerd!',
+                                gr: 'Du bist nicht gegen Schäden durch KiteActive versichert. Wir empfehlen, deine Reiseversicherung sorgfältig zu prüfen, um festzustellen, ob sie auch Extremsportarten abdeckt. Um Enttäuschungen und Probleme im Urlaub zu vermeiden. Wir arbeiten mit Sportzeker zusammen, und dann bist du immer für alles versichert!'
+                            }
+                        }
+                    ],
+                    logo_img: [
+                        {
+                            img: tab1_card1,
+                            title: {
+                                en: "Professional team",
+                                du: "Professioneel team",
+                                gr: "Professionelles Team"
+                            }
+                        },
+                        {
+                            img: tab1_card2,
+                            title: {
+                                en: "Headset coaching",
+                                du: "Headset coaching",
+                                gr: "Headset-Coaching"
+                            }
+                        },
+                        {
+                            img: tab1_card3,
+                            title: {
+                                en: "Get advice from travel expert AJ",
+                                du: "Krijg advies van reisspecialist AJ",
+                                gr: "Hol dir Ratschläge vom Reiseexperten AJ"
+                            }
+                        },
+                        {
+                            img: tab1_card4,
+                            title: {
+                                en: "Photo & Video proof / analysis",
+                                du: "Foto- en video bewijs / analyse",
+                                gr: "Foto- und Video-Nachweis / Analyse"
+                            }
+                        }
+                    ]
+                },
+
+                {
+                    levelName: 'Level 4 - Advanced',
+                    desc: {
+                        en: 'If you are on the water with kiters of the same level, you always make more progression. You learn from each other and push yourself to learn new things! In this course you will be pushed and coached as much as possible to learn new tricks. With KiteActive you will spend a week in a perfect destination with people who also want to make progress. Hey ho, Let’s go! 🙂',
+                        du: 'Als je op het water bent met kiters van hetzelfde niveau, maak je altijd meer vooruitgang. Je leert van elkaar en stimuleert jezelf om nieuwe dingen te leren! In deze cursus word je zoveel mogelijk gepusht en gecoacht om nieuwe trucs te leren. Met KiteActive breng je een week door op een perfecte bestemming met mensen die ook vooruitgang willen boeken. Hey ho, laten we gaan! 🙂',
+                        gr: 'Wenn du mit Kitern desselben Niveaus auf dem Wasser bist, machst du immer mehr Fortschritte. Du lernst voneinander und drängst dich selbst, neue Dinge zu lernen! In diesem Kurs wirst du so viel wie möglich gepusht und gecoacht, um neue Tricks zu lernen. Mit KiteActive verbringst du eine Woche an einem perfekten Zielort mit Menschen, die ebenfalls Fortschritte machen wollen. Hey ho, lass uns gehen! 🙂'
+                    },
+                    imgsect: [
+                        {
+                            imgSrc: tab2_1,
+                            text: {
+                                en: 'Level up! There is still so much to learn',
+                                du: 'Level omhoog! Er is nog zoveel te leren',
+                                gr: 'Level hoch! Es gibt noch so viel zu lernen'
+                            },
+                            para: {
+                                en: 'Do you want to improve in big air kiting? Going for that megaloop? Or do you really want to learn this sick handle pass? This course is also for waveriders who are able to do long downwinders in challenging conditions and who want to learn to perform better in the waves.',
+                                du: 'Wil je verbeteren in big air kiten? Ga je voor die megaloop? Of wil je echt deze geweldige handle pass leren? Deze cursus is ook voor golfrijders die in staat zijn om lange downwinders in uitdagende omstandigheden te maken en die beter willen presteren in de golven.',
+                                gr: 'Möchtest du im Big Air Kiten besser werden? Gehst du für den Megaloop? Oder möchtest du wirklich diesen coolen Handle Pass lernen? Dieser Kurs ist auch für Wellenreiter, die in der Lage sind, lange Downwinders unter herausfordernden Bedingungen zu machen und die lernen möchten, in den Wellen besser abzuschneiden.'
+                            },
+                            imgPosition: 'left'
+                        }
+                    ],
+                    acordation_head: {
+                        en: 'What do you learn?',
+                        du: 'Wat leer je?',
+                        gr: 'Was lernst du?'
+                    },
+                    acordation_data: [
+                        {
+                            title: {
+                                en: 'Long downwinders in challenging conditions',
+                                du: 'Lange downwinders in uitdagende omstandigheden',
+                                gr: 'Lange Downwinders unter herausfordernden Bedingungen'
+                            },
+                            info: {
+                                en: 'Like DEN TVTAS for example',
+                                du: 'Zoals DEN TVTAS bijvoorbeeld',
+                                gr: 'Wie DEN TVTAS zum Beispiel'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Jump 10 meter +',
+                                du: 'Spring 10 meter +',
+                                gr: 'Spring 10 Meter +'
+                            },
+                            info: {
+                                en: 'Do you want to go skyhigh with us?',
+                                du: 'Wil je met ons de lucht in?',
+                                gr: 'Möchtest du mit uns in die Höhe springen?'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Megaloop',
+                                du: 'Megaloop',
+                                gr: 'Megaloop'
+                            },
+                            info: {
+                                en: '',
+                                du: '',
+                                gr: ''
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Unhooked tricks',
+                                du: 'Unhooked trucs',
+                                gr: 'Unhooked Tricks'
+                            },
+                            info: {
+                                en: '',
+                                du: '',
+                                gr: ''
+                            }
+                        }
+                    ],
+                    faq_head: {
+                        en: "FAQ",
+                        du: "FAQ",
+                        gr: "Häufig gestellte Fragen"
+                    },
+                    faq_data: [
+                        {
+                            title: {
+                                en: 'Am I insured?',
+                                du: 'Ben ik verzekerd?',
+                                gr: 'Bin ich versichert?'
+                            },
+                            info: {
+                                en: 'No, not with us. You need to take care of your own travel insurance. If you want, we can help you find the right one!',
+                                du: 'Nee, niet bij ons. Je moet zelf zorgen voor je reisverzekering. Als je wilt, kunnen we je helpen de juiste te vinden!',
+                                gr: 'Nein, nicht bei uns. Du musst dich um deine eigene Reiseversicherung kümmern. Wenn du möchtest, können wir dir helfen, die richtige zu finden!'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'How many hours is this course?',
+                                du: 'Hoeveel uur duurt deze cursus?',
+                                gr: 'Wie viele Stunden dauert dieser Kurs?'
+                            },
+                            info: {
+                                en: 'No specific hours are attached to this course. From time to time we do 1-on-1 sessions and our team will do our best to teach you as much as possible during this week.',
+                                du: 'Er zijn geen specifieke uren aan deze cursus verbonden. Af en toe doen we 1-op-1 sessies en ons team zal ons best doen om je deze week zoveel mogelijk te leren.',
+                                gr: 'Es sind keine spezifischen Stunden mit diesem Kurs verbunden. Von Zeit zu Zeit führen wir 1-zu-1-Sitzungen durch, und unser Team wird unser Bestes tun, um dir während dieser Woche so viel wie möglich beizubringen.'
+                            }
+                        }
+                    ],
+                    logo_img: [
+                        {
+                            img: tab1_card1,
+                            title: {
+                                en: "Make progression in ideal conditions",
+                                du: 'Maak vooruitgang onder ideale omstandigheden',
+                                gr: 'Mach Fortschritte unter idealen Bedingungen'
+                            }
+                        },
+                        {
+                            img: tab1_card2,
+                            title: {
+                                en: "Advice from our travel expert AJ",
+                                du: 'Advies van onze reisspecialist AJ',
+                                gr: 'Rat von unserem Reiseexperten AJ'
+                            }
+                        },
+                        {
+                            img: tab1_card3,
+                            title: {
+                                en: "Headset coaching",
+                                du: 'Coaching via headset',
+                                gr: 'Coaching über Headset'
+                            }
+                        },
+                        {
+                            img: tab1_card4,
+                            title: {
+                                en: "Photo & Video proof / analysis",
+                                du: 'Foto- en video-analyse / bewijs',
+                                gr: 'Foto- und Videoanalyse / Nachweis'
+                            }
+                        }
+                    ]
+                },
+            ],
+
+
+            Kitegear_rental: {
+                title: {
+                    en: "Kitegear rental",
+                    du: "Kitegear verhuur",
+                    gr: "Kiteausrüstungsverleih"
+                },
+                para1: {
+                    en: "With us you can find the latest kite material. We have most brands available and we ensure that you are always on the water with the right size kite. Don’t feel like carrying all your materials with you? No problem!",
+                    du: "Bij ons vind je het nieuwste kitemateriaal. We hebben de meeste merken beschikbaar en zorgen ervoor dat je altijd met de juiste maat kite op het water bent. Geen zin om al je materiaal mee te nemen? Geen probleem!",
+                    gr: "Bei uns findest du das neueste Kitematerial. Wir haben die meisten Marken verfügbar und sorgen dafür, dass du immer mit der richtigen Kite-Größe auf dem Wasser bist. Keine Lust, all dein Material mitzunehmen? Kein Problem!"
+                },
+                para2: {
+                    en: "A list of our brands: Core / Naish / F-one / North / Slingshot / Lieuwe / Appletree",
+                    du: "Een lijst van onze merken: Core / Naish / F-one / North / Slingshot / Lieuwe / Appletree",
+                    gr: "Eine Liste unserer Marken: Core / Naish / F-one / North / Slingshot / Lieuwe / Appletree"
+                }
+            },
+            Disclaimer: {
+                title: {
+                    en: "Disclaimer",
+                    du: "Disclaimer",
+                    gr: "Haftungsausschluss"
+                },
+                para1: {
+                    en: "You ensure that you indicate your correct level during your booking. Unfortunately, we cannot control the wind. If you cannot complete your package you can settle the outstanding amount in various ways with us.- You can use the outstanding amount in our webshop on (kite) gear – You can use it for other KiteActive trips or give it as a gift card to friends – You can finish your package in 1 of our schools in Holland. Check your insurance. If you need help with the right insurance please ask us for help! Not all insurance companies cover kitesurf material.",
+                    du: "Je zorgt ervoor dat je je correcte niveau aangeeft tijdens je boeking. Helaas kunnen we de wind niet controleren. Als je je pakket niet kunt afronden, kun je het openstaande bedrag op verschillende manieren bij ons vereffenen. - Je kunt het openstaande bedrag in onze webshop gebruiken voor (kite)materiaal - Je kunt het gebruiken voor andere KiteActive-reizen of het als cadeaukaart aan vrienden geven - Je kunt je pakket afronden in 1 van onze scholen in Nederland. Controleer je verzekering. Als je hulp nodig hebt bij de juiste verzekering, vraag het ons dan! Niet alle verzekeringsmaatschappijen dekken kitesurfmateriaal.",
+                    gr: "Du stellst sicher, dass du während deiner Buchung dein korrektes Niveau angibst. Leider können wir den Wind nicht kontrollieren. Wenn du dein Paket nicht abschließen kannst, kannst du den offenen Betrag auf verschiedene Weise bei uns begleichen. - Du kannst den offenen Betrag in unserem Webshop für (Kite-)Ausrüstung verwenden - Du kannst ihn für andere KiteActive-Reisen verwenden oder als Geschenkkarte an Freunde geben - Du kannst dein Paket in einer unserer Schulen in Holland abschließen. Überprüfe deine Versicherung. Wenn du Hilfe bei der richtigen Versicherung benötigst, frag uns um Hilfe! Nicht alle Versicherungsunternehmen decken Kitesurfmaterial ab."
+                },
+                para2: {
+                    en: "Participation in our packages is always at your own risk. Kitesurfing is an extreme sport and although we will make sure you learn kitesurfing with us most safely, you always need to be aware of yourself and others. Always listen well to the instructions from our team.",
+                    du: "Deelname aan onze pakketten is altijd op eigen risico. Kitesurfen is een extreme sport en hoewel we ervoor zorgen dat je op de veiligste manier kitesurfen leert, moet je altijd op jezelf en anderen letten. Luister altijd goed naar de instructies van ons team.",
+                    gr: "Die Teilnahme an unseren Paketen erfolgt immer auf eigene Gefahr. Kitesurfen ist ein Extremsport, und obwohl wir sicherstellen, dass du bei uns auf die sicherste Weise Kitesurfen lernst, musst du dir immer selbst und anderen bewusst sein. Höre immer gut auf die Anweisungen unseres Teams."
+                }
+            }
+
+        },
 
         hosted: [
             {
@@ -2749,7 +4547,7 @@ const trips = [
     // EndlessSummerParty trip data Egy  ............................................
     {
         name: 'EndlessSummerParty',
-        vedio: vedio,
+        vedio: EndlessSummerParty_vedio,
         overview: {
             trip_heading: {
                 en: "Epic Egypt. The land of Pyramids, warm blue water and steady wind.",
@@ -2832,6 +4630,411 @@ const trips = [
                 imgPosition: 'right',
             },
         ],
+
+        packages: {
+            levelsData: [
+                {
+                    levelName: 'Level 3 - Independent',
+                    desc: {
+                        en: 'If you are on the water with kiters of the same level, you always make more progression. You learn from each other and push yourself to learn new things! In this course you will be pushed and coached as much as possible to learn new tricks. With KiteActive you will spend a week in a perfect destination with people who also want to make progress. Hey ho, Let’s go! 🙂',
+                        du: 'Als je op het water bent met kiters van hetzelfde niveau, maak je altijd meer vooruitgang. Je leert van elkaar en stimuleert jezelf om nieuwe dingen te leren! In deze cursus word je zoveel mogelijk aangemoedigd en gecoacht om nieuwe trucs te leren. Met KiteActive breng je een week door op een perfecte bestemming met mensen die ook vooruitgang willen boeken. Hey ho, laten we gaan! 🙂',
+                        gr: 'Wenn du mit Kitern desselben Niveaus auf dem Wasser bist, machst du immer mehr Fortschritte. Du lernst voneinander und drängst dich selbst, neue Dinge zu lernen! In diesem Kurs wirst du so viel wie möglich gepusht und gecoacht, um neue Tricks zu lernen. Mit KiteActive verbringst du eine Woche an einem perfekten Zielort mit Menschen, die ebenfalls Fortschritte machen wollen. Hey ho, lass uns gehen! 🙂'
+                    },
+                    imgsect: [
+                        {
+                            imgSrc: tab1_1,
+                            text: {
+                                en: 'Learn new tricks and make progression',
+                                du: 'Leer nieuwe trucs en maak vooruitgang',
+                                gr: 'Lerne neue Tricks und mache Fortschritte'
+                            },
+                            para: {
+                                en: 'This is the ultimate package for anyone who can already kitesurf but wants to make progress and learn new tricks. From your very first jump to a kiteloop handle pass. Our team is ready to help you with the right tips and tricks to achieve your goals!',
+                                du: 'Dit is het ultieme pakket voor iedereen die al kan kitesurfen maar vooruitgang wil boeken en nieuwe trucs wil leren. Van je allereerste spron naar een kiteloop handle pass. Ons team staat klaar om je te helpen met de juiste tips en trucs om je doelen te bereiken!',
+                                gr: 'Dies ist das ultimative Paket für jeden, der bereits kitesurfen kann, aber Fortschritte machen und neue Tricks lernen möchte. Von deinem allerersten Sprung bis zum Kiteloop-Handle-Pass. Unser Team ist bereit, dir mit den richtigen Tipps und Tricks zu helfen, um deine Ziele zu erreichen!'
+                            },
+                            imgPosition: 'left'
+                        },
+                        {
+                            imgSrc: tab1_2,
+                            text: {
+                                en: 'What to expect from this course?',
+                                du: 'Wat kun je van deze cursus verwachten?',
+                                gr: 'Was kannst du von diesem Kurs erwarten?'
+                            },
+                            para: {
+                                en: 'During the course we will look at what your personal goals are and what is feasible. We go through the theory together and during the week we try to push, coach and motivate you as much as possible to try new things in a safe way.',
+                                du: 'Tijdens de cursus bekijken we wat je persoonlijke doelen zijn en wat haalbaar is. We gaan samen de theorie door en proberen je gedurende de week zoveel mogelijk te stimuleren, coachen en motiveren om nieuwe dingen op een veilige manier te proberen.',
+                                gr: 'Während des Kurses werden wir uns ansehen, was deine persönlichen Ziele sind und was machbar ist. Wir gehen gemeinsam die Theorie durch und versuchen während der Woche, dich so gut wie möglich zu pushen, zu coachen und zu motivieren, um neue Dinge auf sichere Weise auszuprobieren.'
+                            },
+                            imgPosition: 'right'
+                        }
+                    ],
+                    acordation_head: {
+                        en: 'What do you learn?',
+                        du: 'Wat leer je?',
+                        gr: 'Was lernst du?'
+                    },
+                    acordation_data: [
+                        {
+                            title: {
+                                en: 'The basics of pop',
+                                du: 'De basis van pop',
+                                gr: 'Die Grundlagen des Pops'
+                            },
+                            info: {
+                                en: 'Learn how to pop. This is a very important skill which you need for your entire kite career!',
+                                du: 'Leer hoe je moet poppen. Dit is een zeer belangrijke vaardigheid die je nodig hebt voor je hele kitecarrière!',
+                                gr: 'Lerne, wie man poppt. Dies ist eine sehr wichtige Fähigkeit, die du für deine gesamte Kitesurfkarriere benötigst!'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Your first jump',
+                                du: 'Je eerste spron',
+                                gr: 'Dein erster Sprung'
+                            },
+                            info: {
+                                en: 'You want to learn how to go skyhigh?',
+                                du: 'Wil je leren hoe je de lucht in kunt gaan?',
+                                gr: 'Möchtest du lernen, wie du in die Höhe springen kannst?'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Back & Front roll',
+                                du: 'Back & Front roll',
+                                gr: 'Back & Frontroll'
+                            },
+                            info: {
+                                en: 'Make a salto in the air! You think it is difficult, but we will learn you this amazing trick in 1 week!',
+                                du: 'Maak een salto in de lucht! Je denkt dat het moeilijk is, maar we leren je deze geweldige truc in 1 week!',
+                                gr: 'Mach einen Salto in der Luft! Du denkst, es ist schwierig, aber wir werden dir diesen erstaunlichen Trick in 1 Woche beibringen!'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Board grabs, onefooters and board-offs',
+                                du: 'Board grabs, onefooters en board-offs',
+                                gr: 'Board Grabs, Onefooters und Board-offs'
+                            },
+                            info: {
+                                en: 'Grab the board in front of the camera!',
+                                du: 'Pak het board voor de camera!',
+                                gr: 'Greife das Board vor der Kamera!'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Your first kiteloop (downloop)',
+                                du: 'Je eerste kiteloop (downloop)',
+                                gr: 'Dein erster Kiteloop (Downloop)'
+                            },
+                            info: {
+                                en: 'Fly like a rollercoaster',
+                                du: 'Vlieg als een achtbaan',
+                                gr: 'Flieg wie eine Achterbahn'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Your first downwinder',
+                                du: 'Je eerste downwinder',
+                                gr: 'Dein erster Downwinder'
+                            },
+                            info: {
+                                en: 'With a downwinder you are doing a kite tour along the coast!',
+                                du: 'Met een downwinder maak je een kitetour langs de kust!',
+                                gr: 'Mit einem Downwinder machst du eine Kitetour entlang der Küste!'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Learn how to ride strapless / bottom turns / wave skills',
+                                du: 'Leer hoe je strapless kunt rijden / bottom turns / golfvaardigheden',
+                                gr: 'Lerne, wie man strapless fährt / Bottom Turns / Wellenfähigkeiten'
+                            },
+                            info: {
+                                en: 'Upgrade your skills in the waves',
+                                du: 'Verbeter je vaardigheden in de golven',
+                                gr: 'Verbessere deine Fähigkeiten in den Wellen'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Get unhooked!',
+                                du: 'Ga los!',
+                                gr: 'Lass los!'
+                            },
+                            info: {
+                                en: 'Learn how to do unhooked tricks like Raily, S-bend or maybe even a handle pass?',
+                                du: 'Leer hoe je unhooked trucs doet zoals Raily, S-bend of misschien zelfs een handle pass?',
+                                gr: 'Lerne, wie man unhooked Tricks wie Raily, S-bend oder vielleicht sogar einen Handle Pass macht?'
+                            }
+                        }
+                    ],
+                    faq_head: {
+                        en: "FAQ",
+                        du: "FAQ",
+                        gr: "Häufig gestellte Fragen"
+                    },
+                    faq_data: [
+                        {
+                            title: {
+                                en: 'How many hours is this course?',
+                                du: 'Hoeveel uur duurt deze cursus?',
+                                gr: 'Wie viele Stunden dauert dieser Kurs?'
+                            },
+                            info: {
+                                en: 'We do not link exact hours to this package. We try to push everyone as much as possible and occasionally provide 1-on-1 guidance. The goal is to make as much progress as possible and during this course we will give you all the tools you need to continue practicing.',
+                                du: 'We linken geen exacte uren aan dit pakket. We proberen iedereen zoveel mogelijk te stimuleren en bieden af en toe 1-op-1 begeleiding. Het doel is om zoveel mogelijk vooruitgang te boeken en tijdens deze cursus geven we je alle tools die je nodig hebt om te blijven oefenen.',
+                                gr: 'Wir verlinken keine genauen Stunden mit diesem Paket. Wir versuchen, jeden so gut wie möglich zu unterstützen und bieten gelegentlich 1-zu-1-Begleitung an. Ziel ist es, so viel Fortschritt wie möglich zu machen, und während dieses Kurses geben wir dir alle Werkzeuge, die du brauchst, um weiter zu üben.'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Is kitegear included in this package?',
+                                du: 'Is kitemateriaal inbegrepen bij dit pakket?',
+                                gr: 'Ist Kitematerial in diesem Paket enthalten?'
+                            },
+                            info: {
+                                en: 'No, you need to bring your own kitegear or rent a complete set at € 399 / week',
+                                du: 'Nee, je moet je eigen kitemateriaal meenemen of een compleet set huren voor € 399 / week',
+                                gr: 'Nein, du musst dein eigenes Kitematerial mitbringen oder ein komplettes Set für 399 € / Woche mieten.'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Am I insured?',
+                                du: 'Ben ik verzekerd?',
+                                gr: 'Bin ich versichert?'
+                            },
+                            info: {
+                                en: 'You are not insured against damage through KiteActive. We recommend that you check your travel insurance carefully to see whether it also covers extreme sports. to avoid disappointment and hassle on holiday. We work together with Sportzeker and then you are always covered for everything!',
+                                du: 'Je bent niet verzekerd tegen schade via KiteActive. We raden je aan om je reisverzekering goed te controleren om te zien of deze ook extreme sporten dekt. Dit om teleurstellingen en gedoe op vakantie te voorkomen. We werken samen met Sportzeker en dan ben je altijd voor alles verzekerd!',
+                                gr: 'Du bist nicht gegen Schäden durch KiteActive versichert. Wir empfehlen, deine Reiseversicherung sorgfältig zu prüfen, um festzustellen, ob sie auch Extremsportarten abdeckt. Um Enttäuschungen und Probleme im Urlaub zu vermeiden. Wir arbeiten mit Sportzeker zusammen, und dann bist du immer für alles versichert!'
+                            }
+                        }
+                    ],
+                    logo_img: [
+                        {
+                            img: tab1_card1,
+                            title: {
+                                en: "Professional team",
+                                du: "Professioneel team",
+                                gr: "Professionelles Team"
+                            }
+                        },
+                        {
+                            img: tab1_card2,
+                            title: {
+                                en: "Headset coaching",
+                                du: "Headset coaching",
+                                gr: "Headset-Coaching"
+                            }
+                        },
+                        {
+                            img: tab1_card3,
+                            title: {
+                                en: "Get advice from travel expert AJ",
+                                du: "Krijg advies van reisspecialist AJ",
+                                gr: "Hol dir Ratschläge vom Reiseexperten AJ"
+                            }
+                        },
+                        {
+                            img: tab1_card4,
+                            title: {
+                                en: "Photo & Video proof / analysis",
+                                du: "Foto- en video bewijs / analyse",
+                                gr: "Foto- und Video-Nachweis / Analyse"
+                            }
+                        }
+                    ]
+                },
+
+                {
+                    levelName: 'Level 4 - Advanced',
+                    desc: {
+                        en: 'If you are on the water with kiters of the same level, you always make more progression. You learn from each other and push yourself to learn new things! In this course you will be pushed and coached as much as possible to learn new tricks. With KiteActive you will spend a week in a perfect destination with people who also want to make progress. Hey ho, Let’s go! 🙂',
+                        du: 'Als je op het water bent met kiters van hetzelfde niveau, maak je altijd meer vooruitgang. Je leert van elkaar en stimuleert jezelf om nieuwe dingen te leren! In deze cursus word je zoveel mogelijk gepusht en gecoacht om nieuwe trucs te leren. Met KiteActive breng je een week door op een perfecte bestemming met mensen die ook vooruitgang willen boeken. Hey ho, laten we gaan! 🙂',
+                        gr: 'Wenn du mit Kitern desselben Niveaus auf dem Wasser bist, machst du immer mehr Fortschritte. Du lernst voneinander und drängst dich selbst, neue Dinge zu lernen! In diesem Kurs wirst du so viel wie möglich gepusht und gecoacht, um neue Tricks zu lernen. Mit KiteActive verbringst du eine Woche an einem perfekten Zielort mit Menschen, die ebenfalls Fortschritte machen wollen. Hey ho, lass uns gehen! 🙂'
+                    },
+                    imgsect: [
+                        {
+                            imgSrc: tab2_1,
+                            text: {
+                                en: 'Level up! There is still so much to learn',
+                                du: 'Level omhoog! Er is nog zoveel te leren',
+                                gr: 'Level hoch! Es gibt noch so viel zu lernen'
+                            },
+                            para: {
+                                en: 'Do you want to improve in big air kiting? Going for that megaloop? Or do you really want to learn this sick handle pass? This course is also for waveriders who are able to do long downwinders in challenging conditions and who want to learn to perform better in the waves.',
+                                du: 'Wil je verbeteren in big air kiten? Ga je voor die megaloop? Of wil je echt deze geweldige handle pass leren? Deze cursus is ook voor golfrijders die in staat zijn om lange downwinders in uitdagende omstandigheden te maken en die beter willen presteren in de golven.',
+                                gr: 'Möchtest du im Big Air Kiten besser werden? Gehst du für den Megaloop? Oder möchtest du wirklich diesen coolen Handle Pass lernen? Dieser Kurs ist auch für Wellenreiter, die in der Lage sind, lange Downwinders unter herausfordernden Bedingungen zu machen und die lernen möchten, in den Wellen besser abzuschneiden.'
+                            },
+                            imgPosition: 'left'
+                        }
+                    ],
+                    acordation_head: {
+                        en: 'What do you learn?',
+                        du: 'Wat leer je?',
+                        gr: 'Was lernst du?'
+                    },
+                    acordation_data: [
+                        {
+                            title: {
+                                en: 'Long downwinders in challenging conditions',
+                                du: 'Lange downwinders in uitdagende omstandigheden',
+                                gr: 'Lange Downwinders unter herausfordernden Bedingungen'
+                            },
+                            info: {
+                                en: 'Like DEN TVTAS for example',
+                                du: 'Zoals DEN TVTAS bijvoorbeeld',
+                                gr: 'Wie DEN TVTAS zum Beispiel'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Jump 10 meter +',
+                                du: 'Spring 10 meter +',
+                                gr: 'Spring 10 Meter +'
+                            },
+                            info: {
+                                en: 'Do you want to go skyhigh with us?',
+                                du: 'Wil je met ons de lucht in?',
+                                gr: 'Möchtest du mit uns in die Höhe springen?'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Megaloop',
+                                du: 'Megaloop',
+                                gr: 'Megaloop'
+                            },
+                            info: {
+                                en: '',
+                                du: '',
+                                gr: ''
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Unhooked tricks',
+                                du: 'Unhooked trucs',
+                                gr: 'Unhooked Tricks'
+                            },
+                            info: {
+                                en: '',
+                                du: '',
+                                gr: ''
+                            }
+                        }
+                    ],
+                    faq_head: {
+                        en: "FAQ",
+                        du: "FAQ",
+                        gr: "Häufig gestellte Fragen"
+                    },
+                    faq_data: [
+                        {
+                            title: {
+                                en: 'Am I insured?',
+                                du: 'Ben ik verzekerd?',
+                                gr: 'Bin ich versichert?'
+                            },
+                            info: {
+                                en: 'No, not with us. You need to take care of your own travel insurance. If you want, we can help you find the right one!',
+                                du: 'Nee, niet bij ons. Je moet zelf zorgen voor je reisverzekering. Als je wilt, kunnen we je helpen de juiste te vinden!',
+                                gr: 'Nein, nicht bei uns. Du musst dich um deine eigene Reiseversicherung kümmern. Wenn du möchtest, können wir dir helfen, die richtige zu finden!'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'How many hours is this course?',
+                                du: 'Hoeveel uur duurt deze cursus?',
+                                gr: 'Wie viele Stunden dauert dieser Kurs?'
+                            },
+                            info: {
+                                en: 'No specific hours are attached to this course. From time to time we do 1-on-1 sessions and our team will do our best to teach you as much as possible during this week.',
+                                du: 'Er zijn geen specifieke uren aan deze cursus verbonden. Af en toe doen we 1-op-1 sessies en ons team zal ons best doen om je deze week zoveel mogelijk te leren.',
+                                gr: 'Es sind keine spezifischen Stunden mit diesem Kurs verbunden. Von Zeit zu Zeit führen wir 1-zu-1-Sitzungen durch, und unser Team wird unser Bestes tun, um dir während dieser Woche so viel wie möglich beizubringen.'
+                            }
+                        }
+                    ],
+                    logo_img: [
+                        {
+                            img: tab1_card1,
+                            title: {
+                                en: "Make progression in ideal conditions",
+                                du: 'Maak vooruitgang onder ideale omstandigheden',
+                                gr: 'Mach Fortschritte unter idealen Bedingungen'
+                            }
+                        },
+                        {
+                            img: tab1_card2,
+                            title: {
+                                en: "Advice from our travel expert AJ",
+                                du: 'Advies van onze reisspecialist AJ',
+                                gr: 'Rat von unserem Reiseexperten AJ'
+                            }
+                        },
+                        {
+                            img: tab1_card3,
+                            title: {
+                                en: "Headset coaching",
+                                du: 'Coaching via headset',
+                                gr: 'Coaching über Headset'
+                            }
+                        },
+                        {
+                            img: tab1_card4,
+                            title: {
+                                en: "Photo & Video proof / analysis",
+                                du: 'Foto- en video-analyse / bewijs',
+                                gr: 'Foto- und Videoanalyse / Nachweis'
+                            }
+                        }
+                    ]
+                },
+            ],
+
+
+            Kitegear_rental: {
+                title: {
+                    en: "Kitegear rental",
+                    du: "Kitegear verhuur",
+                    gr: "Kiteausrüstungsverleih"
+                },
+                para1: {
+                    en: "With us you can find the latest kite material. We have most brands available and we ensure that you are always on the water with the right size kite. Don’t feel like carrying all your materials with you? No problem!",
+                    du: "Bij ons vind je het nieuwste kitemateriaal. We hebben de meeste merken beschikbaar en zorgen ervoor dat je altijd met de juiste maat kite op het water bent. Geen zin om al je materiaal mee te nemen? Geen probleem!",
+                    gr: "Bei uns findest du das neueste Kitematerial. Wir haben die meisten Marken verfügbar und sorgen dafür, dass du immer mit der richtigen Kite-Größe auf dem Wasser bist. Keine Lust, all dein Material mitzunehmen? Kein Problem!"
+                },
+                para2: {
+                    en: "A list of our brands: Core / Naish / F-one / North / Slingshot / Lieuwe / Appletree",
+                    du: "Een lijst van onze merken: Core / Naish / F-one / North / Slingshot / Lieuwe / Appletree",
+                    gr: "Eine Liste unserer Marken: Core / Naish / F-one / North / Slingshot / Lieuwe / Appletree"
+                }
+            },
+            Disclaimer: {
+                title: {
+                    en: "Disclaimer",
+                    du: "Disclaimer",
+                    gr: "Haftungsausschluss"
+                },
+                para1: {
+                    en: "You ensure that you indicate your correct level during your booking. Unfortunately, we cannot control the wind. If you cannot complete your package you can settle the outstanding amount in various ways with us.- You can use the outstanding amount in our webshop on (kite) gear – You can use it for other KiteActive trips or give it as a gift card to friends – You can finish your package in 1 of our schools in Holland. Check your insurance. If you need help with the right insurance please ask us for help! Not all insurance companies cover kitesurf material.",
+                    du: "Je zorgt ervoor dat je je correcte niveau aangeeft tijdens je boeking. Helaas kunnen we de wind niet controleren. Als je je pakket niet kunt afronden, kun je het openstaande bedrag op verschillende manieren bij ons vereffenen. - Je kunt het openstaande bedrag in onze webshop gebruiken voor (kite)materiaal - Je kunt het gebruiken voor andere KiteActive-reizen of het als cadeaukaart aan vrienden geven - Je kunt je pakket afronden in 1 van onze scholen in Nederland. Controleer je verzekering. Als je hulp nodig hebt bij de juiste verzekering, vraag het ons dan! Niet alle verzekeringsmaatschappijen dekken kitesurfmateriaal.",
+                    gr: "Du stellst sicher, dass du während deiner Buchung dein korrektes Niveau angibst. Leider können wir den Wind nicht kontrollieren. Wenn du dein Paket nicht abschließen kannst, kannst du den offenen Betrag auf verschiedene Weise bei uns begleichen. - Du kannst den offenen Betrag in unserem Webshop für (Kite-)Ausrüstung verwenden - Du kannst ihn für andere KiteActive-Reisen verwenden oder als Geschenkkarte an Freunde geben - Du kannst dein Paket in einer unserer Schulen in Holland abschließen. Überprüfe deine Versicherung. Wenn du Hilfe bei der richtigen Versicherung benötigst, frag uns um Hilfe! Nicht alle Versicherungsunternehmen decken Kitesurfmaterial ab."
+                },
+                para2: {
+                    en: "Participation in our packages is always at your own risk. Kitesurfing is an extreme sport and although we will make sure you learn kitesurfing with us most safely, you always need to be aware of yourself and others. Always listen well to the instructions from our team.",
+                    du: "Deelname aan onze pakketten is altijd op eigen risico. Kitesurfen is een extreme sport en hoewel we ervoor zorgen dat je op de veiligste manier kitesurfen leert, moet je altijd op jezelf en anderen letten. Luister altijd goed naar de instructies van ons team.",
+                    gr: "Die Teilnahme an unseren Paketen erfolgt immer auf eigene Gefahr. Kitesurfen ist ein Extremsport, und obwohl wir sicherstellen, dass du bei uns auf die sicherste Weise Kitesurfen lernst, musst du dir immer selbst und anderen bewusst sein. Höre immer gut auf die Anweisungen unseres Teams."
+                }
+            }
+
+        },
 
         accommodation: {
             main_title: {
@@ -3045,7 +5248,7 @@ const trips = [
 
     {
         name: 'Brazil',
-        vedio: vedio,
+        vedio: Brazil_vedio,
         overview: {
             trip_heading: {
                 en: "The land of salsa, football and.. WIND!",
@@ -3148,6 +5351,412 @@ const trips = [
                 imgPosition: 'left',
             },
         ],
+
+
+        packages: {
+            levelsData: [
+                {
+                    levelName: 'Level 3 - Independent',
+                    desc: {
+                        en: 'If you are on the water with kiters of the same level, you always make more progression. You learn from each other and push yourself to learn new things! In this course you will be pushed and coached as much as possible to learn new tricks. With KiteActive you will spend a week in a perfect destination with people who also want to make progress. Hey ho, Let’s go! 🙂',
+                        du: 'Als je op het water bent met kiters van hetzelfde niveau, maak je altijd meer vooruitgang. Je leert van elkaar en stimuleert jezelf om nieuwe dingen te leren! In deze cursus word je zoveel mogelijk aangemoedigd en gecoacht om nieuwe trucs te leren. Met KiteActive breng je een week door op een perfecte bestemming met mensen die ook vooruitgang willen boeken. Hey ho, laten we gaan! 🙂',
+                        gr: 'Wenn du mit Kitern desselben Niveaus auf dem Wasser bist, machst du immer mehr Fortschritte. Du lernst voneinander und drängst dich selbst, neue Dinge zu lernen! In diesem Kurs wirst du so viel wie möglich gepusht und gecoacht, um neue Tricks zu lernen. Mit KiteActive verbringst du eine Woche an einem perfekten Zielort mit Menschen, die ebenfalls Fortschritte machen wollen. Hey ho, lass uns gehen! 🙂'
+                    },
+                    imgsect: [
+                        {
+                            imgSrc: tab1_1,
+                            text: {
+                                en: 'Learn new tricks and make progression',
+                                du: 'Leer nieuwe trucs en maak vooruitgang',
+                                gr: 'Lerne neue Tricks und mache Fortschritte'
+                            },
+                            para: {
+                                en: 'This is the ultimate package for anyone who can already kitesurf but wants to make progress and learn new tricks. From your very first jump to a kiteloop handle pass. Our team is ready to help you with the right tips and tricks to achieve your goals!',
+                                du: 'Dit is het ultieme pakket voor iedereen die al kan kitesurfen maar vooruitgang wil boeken en nieuwe trucs wil leren. Van je allereerste spron naar een kiteloop handle pass. Ons team staat klaar om je te helpen met de juiste tips en trucs om je doelen te bereiken!',
+                                gr: 'Dies ist das ultimative Paket für jeden, der bereits kitesurfen kann, aber Fortschritte machen und neue Tricks lernen möchte. Von deinem allerersten Sprung bis zum Kiteloop-Handle-Pass. Unser Team ist bereit, dir mit den richtigen Tipps und Tricks zu helfen, um deine Ziele zu erreichen!'
+                            },
+                            imgPosition: 'left'
+                        },
+                        {
+                            imgSrc: tab1_2,
+                            text: {
+                                en: 'What to expect from this course?',
+                                du: 'Wat kun je van deze cursus verwachten?',
+                                gr: 'Was kannst du von diesem Kurs erwarten?'
+                            },
+                            para: {
+                                en: 'During the course we will look at what your personal goals are and what is feasible. We go through the theory together and during the week we try to push, coach and motivate you as much as possible to try new things in a safe way.',
+                                du: 'Tijdens de cursus bekijken we wat je persoonlijke doelen zijn en wat haalbaar is. We gaan samen de theorie door en proberen je gedurende de week zoveel mogelijk te stimuleren, coachen en motiveren om nieuwe dingen op een veilige manier te proberen.',
+                                gr: 'Während des Kurses werden wir uns ansehen, was deine persönlichen Ziele sind und was machbar ist. Wir gehen gemeinsam die Theorie durch und versuchen während der Woche, dich so gut wie möglich zu pushen, zu coachen und zu motivieren, um neue Dinge auf sichere Weise auszuprobieren.'
+                            },
+                            imgPosition: 'right'
+                        }
+                    ],
+                    acordation_head: {
+                        en: 'What do you learn?',
+                        du: 'Wat leer je?',
+                        gr: 'Was lernst du?'
+                    },
+                    acordation_data: [
+                        {
+                            title: {
+                                en: 'The basics of pop',
+                                du: 'De basis van pop',
+                                gr: 'Die Grundlagen des Pops'
+                            },
+                            info: {
+                                en: 'Learn how to pop. This is a very important skill which you need for your entire kite career!',
+                                du: 'Leer hoe je moet poppen. Dit is een zeer belangrijke vaardigheid die je nodig hebt voor je hele kitecarrière!',
+                                gr: 'Lerne, wie man poppt. Dies ist eine sehr wichtige Fähigkeit, die du für deine gesamte Kitesurfkarriere benötigst!'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Your first jump',
+                                du: 'Je eerste spron',
+                                gr: 'Dein erster Sprung'
+                            },
+                            info: {
+                                en: 'You want to learn how to go skyhigh?',
+                                du: 'Wil je leren hoe je de lucht in kunt gaan?',
+                                gr: 'Möchtest du lernen, wie du in die Höhe springen kannst?'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Back & Front roll',
+                                du: 'Back & Front roll',
+                                gr: 'Back & Frontroll'
+                            },
+                            info: {
+                                en: 'Make a salto in the air! You think it is difficult, but we will learn you this amazing trick in 1 week!',
+                                du: 'Maak een salto in de lucht! Je denkt dat het moeilijk is, maar we leren je deze geweldige truc in 1 week!',
+                                gr: 'Mach einen Salto in der Luft! Du denkst, es ist schwierig, aber wir werden dir diesen erstaunlichen Trick in 1 Woche beibringen!'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Board grabs, onefooters and board-offs',
+                                du: 'Board grabs, onefooters en board-offs',
+                                gr: 'Board Grabs, Onefooters und Board-offs'
+                            },
+                            info: {
+                                en: 'Grab the board in front of the camera!',
+                                du: 'Pak het board voor de camera!',
+                                gr: 'Greife das Board vor der Kamera!'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Your first kiteloop (downloop)',
+                                du: 'Je eerste kiteloop (downloop)',
+                                gr: 'Dein erster Kiteloop (Downloop)'
+                            },
+                            info: {
+                                en: 'Fly like a rollercoaster',
+                                du: 'Vlieg als een achtbaan',
+                                gr: 'Flieg wie eine Achterbahn'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Your first downwinder',
+                                du: 'Je eerste downwinder',
+                                gr: 'Dein erster Downwinder'
+                            },
+                            info: {
+                                en: 'With a downwinder you are doing a kite tour along the coast!',
+                                du: 'Met een downwinder maak je een kitetour langs de kust!',
+                                gr: 'Mit einem Downwinder machst du eine Kitetour entlang der Küste!'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Learn how to ride strapless / bottom turns / wave skills',
+                                du: 'Leer hoe je strapless kunt rijden / bottom turns / golfvaardigheden',
+                                gr: 'Lerne, wie man strapless fährt / Bottom Turns / Wellenfähigkeiten'
+                            },
+                            info: {
+                                en: 'Upgrade your skills in the waves',
+                                du: 'Verbeter je vaardigheden in de golven',
+                                gr: 'Verbessere deine Fähigkeiten in den Wellen'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Get unhooked!',
+                                du: 'Ga los!',
+                                gr: 'Lass los!'
+                            },
+                            info: {
+                                en: 'Learn how to do unhooked tricks like Raily, S-bend or maybe even a handle pass?',
+                                du: 'Leer hoe je unhooked trucs doet zoals Raily, S-bend of misschien zelfs een handle pass?',
+                                gr: 'Lerne, wie man unhooked Tricks wie Raily, S-bend oder vielleicht sogar einen Handle Pass macht?'
+                            }
+                        }
+                    ],
+                    faq_head: {
+                        en: "FAQ",
+                        du: "FAQ",
+                        gr: "Häufig gestellte Fragen"
+                    },
+                    faq_data: [
+                        {
+                            title: {
+                                en: 'How many hours is this course?',
+                                du: 'Hoeveel uur duurt deze cursus?',
+                                gr: 'Wie viele Stunden dauert dieser Kurs?'
+                            },
+                            info: {
+                                en: 'We do not link exact hours to this package. We try to push everyone as much as possible and occasionally provide 1-on-1 guidance. The goal is to make as much progress as possible and during this course we will give you all the tools you need to continue practicing.',
+                                du: 'We linken geen exacte uren aan dit pakket. We proberen iedereen zoveel mogelijk te stimuleren en bieden af en toe 1-op-1 begeleiding. Het doel is om zoveel mogelijk vooruitgang te boeken en tijdens deze cursus geven we je alle tools die je nodig hebt om te blijven oefenen.',
+                                gr: 'Wir verlinken keine genauen Stunden mit diesem Paket. Wir versuchen, jeden so gut wie möglich zu unterstützen und bieten gelegentlich 1-zu-1-Begleitung an. Ziel ist es, so viel Fortschritt wie möglich zu machen, und während dieses Kurses geben wir dir alle Werkzeuge, die du brauchst, um weiter zu üben.'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Is kitegear included in this package?',
+                                du: 'Is kitemateriaal inbegrepen bij dit pakket?',
+                                gr: 'Ist Kitematerial in diesem Paket enthalten?'
+                            },
+                            info: {
+                                en: 'No, you need to bring your own kitegear or rent a complete set at € 399 / week',
+                                du: 'Nee, je moet je eigen kitemateriaal meenemen of een compleet set huren voor € 399 / week',
+                                gr: 'Nein, du musst dein eigenes Kitematerial mitbringen oder ein komplettes Set für 399 € / Woche mieten.'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Am I insured?',
+                                du: 'Ben ik verzekerd?',
+                                gr: 'Bin ich versichert?'
+                            },
+                            info: {
+                                en: 'You are not insured against damage through KiteActive. We recommend that you check your travel insurance carefully to see whether it also covers extreme sports. to avoid disappointment and hassle on holiday. We work together with Sportzeker and then you are always covered for everything!',
+                                du: 'Je bent niet verzekerd tegen schade via KiteActive. We raden je aan om je reisverzekering goed te controleren om te zien of deze ook extreme sporten dekt. Dit om teleurstellingen en gedoe op vakantie te voorkomen. We werken samen met Sportzeker en dan ben je altijd voor alles verzekerd!',
+                                gr: 'Du bist nicht gegen Schäden durch KiteActive versichert. Wir empfehlen, deine Reiseversicherung sorgfältig zu prüfen, um festzustellen, ob sie auch Extremsportarten abdeckt. Um Enttäuschungen und Probleme im Urlaub zu vermeiden. Wir arbeiten mit Sportzeker zusammen, und dann bist du immer für alles versichert!'
+                            }
+                        }
+                    ],
+                    logo_img: [
+                        {
+                            img: tab1_card1,
+                            title: {
+                                en: "Professional team",
+                                du: "Professioneel team",
+                                gr: "Professionelles Team"
+                            }
+                        },
+                        {
+                            img: tab1_card2,
+                            title: {
+                                en: "Headset coaching",
+                                du: "Headset coaching",
+                                gr: "Headset-Coaching"
+                            }
+                        },
+                        {
+                            img: tab1_card3,
+                            title: {
+                                en: "Get advice from travel expert AJ",
+                                du: "Krijg advies van reisspecialist AJ",
+                                gr: "Hol dir Ratschläge vom Reiseexperten AJ"
+                            }
+                        },
+                        {
+                            img: tab1_card4,
+                            title: {
+                                en: "Photo & Video proof / analysis",
+                                du: "Foto- en video bewijs / analyse",
+                                gr: "Foto- und Video-Nachweis / Analyse"
+                            }
+                        }
+                    ]
+                },
+
+                {
+                    levelName: 'Level 4 - Advanced',
+                    desc: {
+                        en: 'If you are on the water with kiters of the same level, you always make more progression. You learn from each other and push yourself to learn new things! In this course you will be pushed and coached as much as possible to learn new tricks. With KiteActive you will spend a week in a perfect destination with people who also want to make progress. Hey ho, Let’s go! 🙂',
+                        du: 'Als je op het water bent met kiters van hetzelfde niveau, maak je altijd meer vooruitgang. Je leert van elkaar en stimuleert jezelf om nieuwe dingen te leren! In deze cursus word je zoveel mogelijk gepusht en gecoacht om nieuwe trucs te leren. Met KiteActive breng je een week door op een perfecte bestemming met mensen die ook vooruitgang willen boeken. Hey ho, laten we gaan! 🙂',
+                        gr: 'Wenn du mit Kitern desselben Niveaus auf dem Wasser bist, machst du immer mehr Fortschritte. Du lernst voneinander und drängst dich selbst, neue Dinge zu lernen! In diesem Kurs wirst du so viel wie möglich gepusht und gecoacht, um neue Tricks zu lernen. Mit KiteActive verbringst du eine Woche an einem perfekten Zielort mit Menschen, die ebenfalls Fortschritte machen wollen. Hey ho, lass uns gehen! 🙂'
+                    },
+                    imgsect: [
+                        {
+                            imgSrc: tab2_1,
+                            text: {
+                                en: 'Level up! There is still so much to learn',
+                                du: 'Level omhoog! Er is nog zoveel te leren',
+                                gr: 'Level hoch! Es gibt noch so viel zu lernen'
+                            },
+                            para: {
+                                en: 'Do you want to improve in big air kiting? Going for that megaloop? Or do you really want to learn this sick handle pass? This course is also for waveriders who are able to do long downwinders in challenging conditions and who want to learn to perform better in the waves.',
+                                du: 'Wil je verbeteren in big air kiten? Ga je voor die megaloop? Of wil je echt deze geweldige handle pass leren? Deze cursus is ook voor golfrijders die in staat zijn om lange downwinders in uitdagende omstandigheden te maken en die beter willen presteren in de golven.',
+                                gr: 'Möchtest du im Big Air Kiten besser werden? Gehst du für den Megaloop? Oder möchtest du wirklich diesen coolen Handle Pass lernen? Dieser Kurs ist auch für Wellenreiter, die in der Lage sind, lange Downwinders unter herausfordernden Bedingungen zu machen und die lernen möchten, in den Wellen besser abzuschneiden.'
+                            },
+                            imgPosition: 'left'
+                        }
+                    ],
+                    acordation_head: {
+                        en: 'What do you learn?',
+                        du: 'Wat leer je?',
+                        gr: 'Was lernst du?'
+                    },
+                    acordation_data: [
+                        {
+                            title: {
+                                en: 'Long downwinders in challenging conditions',
+                                du: 'Lange downwinders in uitdagende omstandigheden',
+                                gr: 'Lange Downwinders unter herausfordernden Bedingungen'
+                            },
+                            info: {
+                                en: 'Like DEN TVTAS for example',
+                                du: 'Zoals DEN TVTAS bijvoorbeeld',
+                                gr: 'Wie DEN TVTAS zum Beispiel'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Jump 10 meter +',
+                                du: 'Spring 10 meter +',
+                                gr: 'Spring 10 Meter +'
+                            },
+                            info: {
+                                en: 'Do you want to go skyhigh with us?',
+                                du: 'Wil je met ons de lucht in?',
+                                gr: 'Möchtest du mit uns in die Höhe springen?'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Megaloop',
+                                du: 'Megaloop',
+                                gr: 'Megaloop'
+                            },
+                            info: {
+                                en: '',
+                                du: '',
+                                gr: ''
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Unhooked tricks',
+                                du: 'Unhooked trucs',
+                                gr: 'Unhooked Tricks'
+                            },
+                            info: {
+                                en: '',
+                                du: '',
+                                gr: ''
+                            }
+                        }
+                    ],
+                    faq_head: {
+                        en: "FAQ",
+                        du: "FAQ",
+                        gr: "Häufig gestellte Fragen"
+                    },
+                    faq_data: [
+                        {
+                            title: {
+                                en: 'Am I insured?',
+                                du: 'Ben ik verzekerd?',
+                                gr: 'Bin ich versichert?'
+                            },
+                            info: {
+                                en: 'No, not with us. You need to take care of your own travel insurance. If you want, we can help you find the right one!',
+                                du: 'Nee, niet bij ons. Je moet zelf zorgen voor je reisverzekering. Als je wilt, kunnen we je helpen de juiste te vinden!',
+                                gr: 'Nein, nicht bei uns. Du musst dich um deine eigene Reiseversicherung kümmern. Wenn du möchtest, können wir dir helfen, die richtige zu finden!'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'How many hours is this course?',
+                                du: 'Hoeveel uur duurt deze cursus?',
+                                gr: 'Wie viele Stunden dauert dieser Kurs?'
+                            },
+                            info: {
+                                en: 'No specific hours are attached to this course. From time to time we do 1-on-1 sessions and our team will do our best to teach you as much as possible during this week.',
+                                du: 'Er zijn geen specifieke uren aan deze cursus verbonden. Af en toe doen we 1-op-1 sessies en ons team zal ons best doen om je deze week zoveel mogelijk te leren.',
+                                gr: 'Es sind keine spezifischen Stunden mit diesem Kurs verbunden. Von Zeit zu Zeit führen wir 1-zu-1-Sitzungen durch, und unser Team wird unser Bestes tun, um dir während dieser Woche so viel wie möglich beizubringen.'
+                            }
+                        }
+                    ],
+                    logo_img: [
+                        {
+                            img: tab1_card1,
+                            title: {
+                                en: "Make progression in ideal conditions",
+                                du: 'Maak vooruitgang onder ideale omstandigheden',
+                                gr: 'Mach Fortschritte unter idealen Bedingungen'
+                            }
+                        },
+                        {
+                            img: tab1_card2,
+                            title: {
+                                en: "Advice from our travel expert AJ",
+                                du: 'Advies van onze reisspecialist AJ',
+                                gr: 'Rat von unserem Reiseexperten AJ'
+                            }
+                        },
+                        {
+                            img: tab1_card3,
+                            title: {
+                                en: "Headset coaching",
+                                du: 'Coaching via headset',
+                                gr: 'Coaching über Headset'
+                            }
+                        },
+                        {
+                            img: tab1_card4,
+                            title: {
+                                en: "Photo & Video proof / analysis",
+                                du: 'Foto- en video-analyse / bewijs',
+                                gr: 'Foto- und Videoanalyse / Nachweis'
+                            }
+                        }
+                    ]
+                },
+            ],
+
+
+            Kitegear_rental: {
+                title: {
+                    en: "Kitegear rental",
+                    du: "Kitegear verhuur",
+                    gr: "Kiteausrüstungsverleih"
+                },
+                para1: {
+                    en: "With us you can find the latest kite material. We have most brands available and we ensure that you are always on the water with the right size kite. Don’t feel like carrying all your materials with you? No problem!",
+                    du: "Bij ons vind je het nieuwste kitemateriaal. We hebben de meeste merken beschikbaar en zorgen ervoor dat je altijd met de juiste maat kite op het water bent. Geen zin om al je materiaal mee te nemen? Geen probleem!",
+                    gr: "Bei uns findest du das neueste Kitematerial. Wir haben die meisten Marken verfügbar und sorgen dafür, dass du immer mit der richtigen Kite-Größe auf dem Wasser bist. Keine Lust, all dein Material mitzunehmen? Kein Problem!"
+                },
+                para2: {
+                    en: "A list of our brands: Core / Naish / F-one / North / Slingshot / Lieuwe / Appletree",
+                    du: "Een lijst van onze merken: Core / Naish / F-one / North / Slingshot / Lieuwe / Appletree",
+                    gr: "Eine Liste unserer Marken: Core / Naish / F-one / North / Slingshot / Lieuwe / Appletree"
+                }
+            },
+            Disclaimer: {
+                title: {
+                    en: "Disclaimer",
+                    du: "Disclaimer",
+                    gr: "Haftungsausschluss"
+                },
+                para1: {
+                    en: "You ensure that you indicate your correct level during your booking. Unfortunately, we cannot control the wind. If you cannot complete your package you can settle the outstanding amount in various ways with us.- You can use the outstanding amount in our webshop on (kite) gear – You can use it for other KiteActive trips or give it as a gift card to friends – You can finish your package in 1 of our schools in Holland. Check your insurance. If you need help with the right insurance please ask us for help! Not all insurance companies cover kitesurf material.",
+                    du: "Je zorgt ervoor dat je je correcte niveau aangeeft tijdens je boeking. Helaas kunnen we de wind niet controleren. Als je je pakket niet kunt afronden, kun je het openstaande bedrag op verschillende manieren bij ons vereffenen. - Je kunt het openstaande bedrag in onze webshop gebruiken voor (kite)materiaal - Je kunt het gebruiken voor andere KiteActive-reizen of het als cadeaukaart aan vrienden geven - Je kunt je pakket afronden in 1 van onze scholen in Nederland. Controleer je verzekering. Als je hulp nodig hebt bij de juiste verzekering, vraag het ons dan! Niet alle verzekeringsmaatschappijen dekken kitesurfmateriaal.",
+                    gr: "Du stellst sicher, dass du während deiner Buchung dein korrektes Niveau angibst. Leider können wir den Wind nicht kontrollieren. Wenn du dein Paket nicht abschließen kannst, kannst du den offenen Betrag auf verschiedene Weise bei uns begleichen. - Du kannst den offenen Betrag in unserem Webshop für (Kite-)Ausrüstung verwenden - Du kannst ihn für andere KiteActive-Reisen verwenden oder als Geschenkkarte an Freunde geben - Du kannst dein Paket in einer unserer Schulen in Holland abschließen. Überprüfe deine Versicherung. Wenn du Hilfe bei der richtigen Versicherung benötigst, frag uns um Hilfe! Nicht alle Versicherungsunternehmen decken Kitesurfmaterial ab."
+                },
+                para2: {
+                    en: "Participation in our packages is always at your own risk. Kitesurfing is an extreme sport and although we will make sure you learn kitesurfing with us most safely, you always need to be aware of yourself and others. Always listen well to the instructions from our team.",
+                    du: "Deelname aan onze pakketten is altijd op eigen risico. Kitesurfen is een extreme sport en hoewel we ervoor zorgen dat je op de veiligste manier kitesurfen leert, moet je altijd op jezelf en anderen letten. Luister altijd goed naar de instructies van ons team.",
+                    gr: "Die Teilnahme an unseren Paketen erfolgt immer auf eigene Gefahr. Kitesurfen ist ein Extremsport, und obwohl wir sicherstellen, dass du bei uns auf die sicherste Weise Kitesurfen lernst, musst du dir immer selbst und anderen bewusst sein. Höre immer gut auf die Anweisungen unseres Teams."
+                }
+            }
+
+        },
 
         accommodation: {
             main_title: {
@@ -3310,7 +5919,7 @@ const trips = [
 
     {
         name: 'Sail&kite',
-        vedio: vedio,
+        vedio: Sailkite_vedio,
         overview: {
             trip_heading: {
                 en: "Den Helder > Texel > Vlieland > Terschelling > Ameland > Schiermonnikoog",
@@ -3372,6 +5981,411 @@ const trips = [
             gall_img4: vanlife_gall_img4,
         },
 
+        packages: {
+            levelsData: [
+                {
+                    levelName: 'Level 3 - Independent',
+                    desc: {
+                        en: 'If you are on the water with kiters of the same level, you always make more progression. You learn from each other and push yourself to learn new things! In this course you will be pushed and coached as much as possible to learn new tricks. With KiteActive you will spend a week in a perfect destination with people who also want to make progress. Hey ho, Let’s go! 🙂',
+                        du: 'Als je op het water bent met kiters van hetzelfde niveau, maak je altijd meer vooruitgang. Je leert van elkaar en stimuleert jezelf om nieuwe dingen te leren! In deze cursus word je zoveel mogelijk aangemoedigd en gecoacht om nieuwe trucs te leren. Met KiteActive breng je een week door op een perfecte bestemming met mensen die ook vooruitgang willen boeken. Hey ho, laten we gaan! 🙂',
+                        gr: 'Wenn du mit Kitern desselben Niveaus auf dem Wasser bist, machst du immer mehr Fortschritte. Du lernst voneinander und drängst dich selbst, neue Dinge zu lernen! In diesem Kurs wirst du so viel wie möglich gepusht und gecoacht, um neue Tricks zu lernen. Mit KiteActive verbringst du eine Woche an einem perfekten Zielort mit Menschen, die ebenfalls Fortschritte machen wollen. Hey ho, lass uns gehen! 🙂'
+                    },
+                    imgsect: [
+                        {
+                            imgSrc: tab1_1,
+                            text: {
+                                en: 'Learn new tricks and make progression',
+                                du: 'Leer nieuwe trucs en maak vooruitgang',
+                                gr: 'Lerne neue Tricks und mache Fortschritte'
+                            },
+                            para: {
+                                en: 'This is the ultimate package for anyone who can already kitesurf but wants to make progress and learn new tricks. From your very first jump to a kiteloop handle pass. Our team is ready to help you with the right tips and tricks to achieve your goals!',
+                                du: 'Dit is het ultieme pakket voor iedereen die al kan kitesurfen maar vooruitgang wil boeken en nieuwe trucs wil leren. Van je allereerste spron naar een kiteloop handle pass. Ons team staat klaar om je te helpen met de juiste tips en trucs om je doelen te bereiken!',
+                                gr: 'Dies ist das ultimative Paket für jeden, der bereits kitesurfen kann, aber Fortschritte machen und neue Tricks lernen möchte. Von deinem allerersten Sprung bis zum Kiteloop-Handle-Pass. Unser Team ist bereit, dir mit den richtigen Tipps und Tricks zu helfen, um deine Ziele zu erreichen!'
+                            },
+                            imgPosition: 'left'
+                        },
+                        {
+                            imgSrc: tab1_2,
+                            text: {
+                                en: 'What to expect from this course?',
+                                du: 'Wat kun je van deze cursus verwachten?',
+                                gr: 'Was kannst du von diesem Kurs erwarten?'
+                            },
+                            para: {
+                                en: 'During the course we will look at what your personal goals are and what is feasible. We go through the theory together and during the week we try to push, coach and motivate you as much as possible to try new things in a safe way.',
+                                du: 'Tijdens de cursus bekijken we wat je persoonlijke doelen zijn en wat haalbaar is. We gaan samen de theorie door en proberen je gedurende de week zoveel mogelijk te stimuleren, coachen en motiveren om nieuwe dingen op een veilige manier te proberen.',
+                                gr: 'Während des Kurses werden wir uns ansehen, was deine persönlichen Ziele sind und was machbar ist. Wir gehen gemeinsam die Theorie durch und versuchen während der Woche, dich so gut wie möglich zu pushen, zu coachen und zu motivieren, um neue Dinge auf sichere Weise auszuprobieren.'
+                            },
+                            imgPosition: 'right'
+                        }
+                    ],
+                    acordation_head: {
+                        en: 'What do you learn?',
+                        du: 'Wat leer je?',
+                        gr: 'Was lernst du?'
+                    },
+                    acordation_data: [
+                        {
+                            title: {
+                                en: 'The basics of pop',
+                                du: 'De basis van pop',
+                                gr: 'Die Grundlagen des Pops'
+                            },
+                            info: {
+                                en: 'Learn how to pop. This is a very important skill which you need for your entire kite career!',
+                                du: 'Leer hoe je moet poppen. Dit is een zeer belangrijke vaardigheid die je nodig hebt voor je hele kitecarrière!',
+                                gr: 'Lerne, wie man poppt. Dies ist eine sehr wichtige Fähigkeit, die du für deine gesamte Kitesurfkarriere benötigst!'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Your first jump',
+                                du: 'Je eerste spron',
+                                gr: 'Dein erster Sprung'
+                            },
+                            info: {
+                                en: 'You want to learn how to go skyhigh?',
+                                du: 'Wil je leren hoe je de lucht in kunt gaan?',
+                                gr: 'Möchtest du lernen, wie du in die Höhe springen kannst?'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Back & Front roll',
+                                du: 'Back & Front roll',
+                                gr: 'Back & Frontroll'
+                            },
+                            info: {
+                                en: 'Make a salto in the air! You think it is difficult, but we will learn you this amazing trick in 1 week!',
+                                du: 'Maak een salto in de lucht! Je denkt dat het moeilijk is, maar we leren je deze geweldige truc in 1 week!',
+                                gr: 'Mach einen Salto in der Luft! Du denkst, es ist schwierig, aber wir werden dir diesen erstaunlichen Trick in 1 Woche beibringen!'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Board grabs, onefooters and board-offs',
+                                du: 'Board grabs, onefooters en board-offs',
+                                gr: 'Board Grabs, Onefooters und Board-offs'
+                            },
+                            info: {
+                                en: 'Grab the board in front of the camera!',
+                                du: 'Pak het board voor de camera!',
+                                gr: 'Greife das Board vor der Kamera!'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Your first kiteloop (downloop)',
+                                du: 'Je eerste kiteloop (downloop)',
+                                gr: 'Dein erster Kiteloop (Downloop)'
+                            },
+                            info: {
+                                en: 'Fly like a rollercoaster',
+                                du: 'Vlieg als een achtbaan',
+                                gr: 'Flieg wie eine Achterbahn'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Your first downwinder',
+                                du: 'Je eerste downwinder',
+                                gr: 'Dein erster Downwinder'
+                            },
+                            info: {
+                                en: 'With a downwinder you are doing a kite tour along the coast!',
+                                du: 'Met een downwinder maak je een kitetour langs de kust!',
+                                gr: 'Mit einem Downwinder machst du eine Kitetour entlang der Küste!'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Learn how to ride strapless / bottom turns / wave skills',
+                                du: 'Leer hoe je strapless kunt rijden / bottom turns / golfvaardigheden',
+                                gr: 'Lerne, wie man strapless fährt / Bottom Turns / Wellenfähigkeiten'
+                            },
+                            info: {
+                                en: 'Upgrade your skills in the waves',
+                                du: 'Verbeter je vaardigheden in de golven',
+                                gr: 'Verbessere deine Fähigkeiten in den Wellen'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Get unhooked!',
+                                du: 'Ga los!',
+                                gr: 'Lass los!'
+                            },
+                            info: {
+                                en: 'Learn how to do unhooked tricks like Raily, S-bend or maybe even a handle pass?',
+                                du: 'Leer hoe je unhooked trucs doet zoals Raily, S-bend of misschien zelfs een handle pass?',
+                                gr: 'Lerne, wie man unhooked Tricks wie Raily, S-bend oder vielleicht sogar einen Handle Pass macht?'
+                            }
+                        }
+                    ],
+                    faq_head: {
+                        en: "FAQ",
+                        du: "FAQ",
+                        gr: "Häufig gestellte Fragen"
+                    },
+                    faq_data: [
+                        {
+                            title: {
+                                en: 'How many hours is this course?',
+                                du: 'Hoeveel uur duurt deze cursus?',
+                                gr: 'Wie viele Stunden dauert dieser Kurs?'
+                            },
+                            info: {
+                                en: 'We do not link exact hours to this package. We try to push everyone as much as possible and occasionally provide 1-on-1 guidance. The goal is to make as much progress as possible and during this course we will give you all the tools you need to continue practicing.',
+                                du: 'We linken geen exacte uren aan dit pakket. We proberen iedereen zoveel mogelijk te stimuleren en bieden af en toe 1-op-1 begeleiding. Het doel is om zoveel mogelijk vooruitgang te boeken en tijdens deze cursus geven we je alle tools die je nodig hebt om te blijven oefenen.',
+                                gr: 'Wir verlinken keine genauen Stunden mit diesem Paket. Wir versuchen, jeden so gut wie möglich zu unterstützen und bieten gelegentlich 1-zu-1-Begleitung an. Ziel ist es, so viel Fortschritt wie möglich zu machen, und während dieses Kurses geben wir dir alle Werkzeuge, die du brauchst, um weiter zu üben.'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Is kitegear included in this package?',
+                                du: 'Is kitemateriaal inbegrepen bij dit pakket?',
+                                gr: 'Ist Kitematerial in diesem Paket enthalten?'
+                            },
+                            info: {
+                                en: 'No, you need to bring your own kitegear or rent a complete set at € 399 / week',
+                                du: 'Nee, je moet je eigen kitemateriaal meenemen of een compleet set huren voor € 399 / week',
+                                gr: 'Nein, du musst dein eigenes Kitematerial mitbringen oder ein komplettes Set für 399 € / Woche mieten.'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Am I insured?',
+                                du: 'Ben ik verzekerd?',
+                                gr: 'Bin ich versichert?'
+                            },
+                            info: {
+                                en: 'You are not insured against damage through KiteActive. We recommend that you check your travel insurance carefully to see whether it also covers extreme sports. to avoid disappointment and hassle on holiday. We work together with Sportzeker and then you are always covered for everything!',
+                                du: 'Je bent niet verzekerd tegen schade via KiteActive. We raden je aan om je reisverzekering goed te controleren om te zien of deze ook extreme sporten dekt. Dit om teleurstellingen en gedoe op vakantie te voorkomen. We werken samen met Sportzeker en dan ben je altijd voor alles verzekerd!',
+                                gr: 'Du bist nicht gegen Schäden durch KiteActive versichert. Wir empfehlen, deine Reiseversicherung sorgfältig zu prüfen, um festzustellen, ob sie auch Extremsportarten abdeckt. Um Enttäuschungen und Probleme im Urlaub zu vermeiden. Wir arbeiten mit Sportzeker zusammen, und dann bist du immer für alles versichert!'
+                            }
+                        }
+                    ],
+                    logo_img: [
+                        {
+                            img: tab1_card1,
+                            title: {
+                                en: "Professional team",
+                                du: "Professioneel team",
+                                gr: "Professionelles Team"
+                            }
+                        },
+                        {
+                            img: tab1_card2,
+                            title: {
+                                en: "Headset coaching",
+                                du: "Headset coaching",
+                                gr: "Headset-Coaching"
+                            }
+                        },
+                        {
+                            img: tab1_card3,
+                            title: {
+                                en: "Get advice from travel expert AJ",
+                                du: "Krijg advies van reisspecialist AJ",
+                                gr: "Hol dir Ratschläge vom Reiseexperten AJ"
+                            }
+                        },
+                        {
+                            img: tab1_card4,
+                            title: {
+                                en: "Photo & Video proof / analysis",
+                                du: "Foto- en video bewijs / analyse",
+                                gr: "Foto- und Video-Nachweis / Analyse"
+                            }
+                        }
+                    ]
+                },
+
+                {
+                    levelName: 'Level 4 - Advanced',
+                    desc: {
+                        en: 'If you are on the water with kiters of the same level, you always make more progression. You learn from each other and push yourself to learn new things! In this course you will be pushed and coached as much as possible to learn new tricks. With KiteActive you will spend a week in a perfect destination with people who also want to make progress. Hey ho, Let’s go! 🙂',
+                        du: 'Als je op het water bent met kiters van hetzelfde niveau, maak je altijd meer vooruitgang. Je leert van elkaar en stimuleert jezelf om nieuwe dingen te leren! In deze cursus word je zoveel mogelijk gepusht en gecoacht om nieuwe trucs te leren. Met KiteActive breng je een week door op een perfecte bestemming met mensen die ook vooruitgang willen boeken. Hey ho, laten we gaan! 🙂',
+                        gr: 'Wenn du mit Kitern desselben Niveaus auf dem Wasser bist, machst du immer mehr Fortschritte. Du lernst voneinander und drängst dich selbst, neue Dinge zu lernen! In diesem Kurs wirst du so viel wie möglich gepusht und gecoacht, um neue Tricks zu lernen. Mit KiteActive verbringst du eine Woche an einem perfekten Zielort mit Menschen, die ebenfalls Fortschritte machen wollen. Hey ho, lass uns gehen! 🙂'
+                    },
+                    imgsect: [
+                        {
+                            imgSrc: tab2_1,
+                            text: {
+                                en: 'Level up! There is still so much to learn',
+                                du: 'Level omhoog! Er is nog zoveel te leren',
+                                gr: 'Level hoch! Es gibt noch so viel zu lernen'
+                            },
+                            para: {
+                                en: 'Do you want to improve in big air kiting? Going for that megaloop? Or do you really want to learn this sick handle pass? This course is also for waveriders who are able to do long downwinders in challenging conditions and who want to learn to perform better in the waves.',
+                                du: 'Wil je verbeteren in big air kiten? Ga je voor die megaloop? Of wil je echt deze geweldige handle pass leren? Deze cursus is ook voor golfrijders die in staat zijn om lange downwinders in uitdagende omstandigheden te maken en die beter willen presteren in de golven.',
+                                gr: 'Möchtest du im Big Air Kiten besser werden? Gehst du für den Megaloop? Oder möchtest du wirklich diesen coolen Handle Pass lernen? Dieser Kurs ist auch für Wellenreiter, die in der Lage sind, lange Downwinders unter herausfordernden Bedingungen zu machen und die lernen möchten, in den Wellen besser abzuschneiden.'
+                            },
+                            imgPosition: 'left'
+                        }
+                    ],
+                    acordation_head: {
+                        en: 'What do you learn?',
+                        du: 'Wat leer je?',
+                        gr: 'Was lernst du?'
+                    },
+                    acordation_data: [
+                        {
+                            title: {
+                                en: 'Long downwinders in challenging conditions',
+                                du: 'Lange downwinders in uitdagende omstandigheden',
+                                gr: 'Lange Downwinders unter herausfordernden Bedingungen'
+                            },
+                            info: {
+                                en: 'Like DEN TVTAS for example',
+                                du: 'Zoals DEN TVTAS bijvoorbeeld',
+                                gr: 'Wie DEN TVTAS zum Beispiel'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Jump 10 meter +',
+                                du: 'Spring 10 meter +',
+                                gr: 'Spring 10 Meter +'
+                            },
+                            info: {
+                                en: 'Do you want to go skyhigh with us?',
+                                du: 'Wil je met ons de lucht in?',
+                                gr: 'Möchtest du mit uns in die Höhe springen?'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Megaloop',
+                                du: 'Megaloop',
+                                gr: 'Megaloop'
+                            },
+                            info: {
+                                en: '',
+                                du: '',
+                                gr: ''
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Unhooked tricks',
+                                du: 'Unhooked trucs',
+                                gr: 'Unhooked Tricks'
+                            },
+                            info: {
+                                en: '',
+                                du: '',
+                                gr: ''
+                            }
+                        }
+                    ],
+                    faq_head: {
+                        en: "FAQ",
+                        du: "FAQ",
+                        gr: "Häufig gestellte Fragen"
+                    },
+                    faq_data: [
+                        {
+                            title: {
+                                en: 'Am I insured?',
+                                du: 'Ben ik verzekerd?',
+                                gr: 'Bin ich versichert?'
+                            },
+                            info: {
+                                en: 'No, not with us. You need to take care of your own travel insurance. If you want, we can help you find the right one!',
+                                du: 'Nee, niet bij ons. Je moet zelf zorgen voor je reisverzekering. Als je wilt, kunnen we je helpen de juiste te vinden!',
+                                gr: 'Nein, nicht bei uns. Du musst dich um deine eigene Reiseversicherung kümmern. Wenn du möchtest, können wir dir helfen, die richtige zu finden!'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'How many hours is this course?',
+                                du: 'Hoeveel uur duurt deze cursus?',
+                                gr: 'Wie viele Stunden dauert dieser Kurs?'
+                            },
+                            info: {
+                                en: 'No specific hours are attached to this course. From time to time we do 1-on-1 sessions and our team will do our best to teach you as much as possible during this week.',
+                                du: 'Er zijn geen specifieke uren aan deze cursus verbonden. Af en toe doen we 1-op-1 sessies en ons team zal ons best doen om je deze week zoveel mogelijk te leren.',
+                                gr: 'Es sind keine spezifischen Stunden mit diesem Kurs verbunden. Von Zeit zu Zeit führen wir 1-zu-1-Sitzungen durch, und unser Team wird unser Bestes tun, um dir während dieser Woche so viel wie möglich beizubringen.'
+                            }
+                        }
+                    ],
+                    logo_img: [
+                        {
+                            img: tab1_card1,
+                            title: {
+                                en: "Make progression in ideal conditions",
+                                du: 'Maak vooruitgang onder ideale omstandigheden',
+                                gr: 'Mach Fortschritte unter idealen Bedingungen'
+                            }
+                        },
+                        {
+                            img: tab1_card2,
+                            title: {
+                                en: "Advice from our travel expert AJ",
+                                du: 'Advies van onze reisspecialist AJ',
+                                gr: 'Rat von unserem Reiseexperten AJ'
+                            }
+                        },
+                        {
+                            img: tab1_card3,
+                            title: {
+                                en: "Headset coaching",
+                                du: 'Coaching via headset',
+                                gr: 'Coaching über Headset'
+                            }
+                        },
+                        {
+                            img: tab1_card4,
+                            title: {
+                                en: "Photo & Video proof / analysis",
+                                du: 'Foto- en video-analyse / bewijs',
+                                gr: 'Foto- und Videoanalyse / Nachweis'
+                            }
+                        }
+                    ]
+                },
+            ],
+
+
+            Kitegear_rental: {
+                title: {
+                    en: "Kitegear rental",
+                    du: "Kitegear verhuur",
+                    gr: "Kiteausrüstungsverleih"
+                },
+                para1: {
+                    en: "With us you can find the latest kite material. We have most brands available and we ensure that you are always on the water with the right size kite. Don’t feel like carrying all your materials with you? No problem!",
+                    du: "Bij ons vind je het nieuwste kitemateriaal. We hebben de meeste merken beschikbaar en zorgen ervoor dat je altijd met de juiste maat kite op het water bent. Geen zin om al je materiaal mee te nemen? Geen probleem!",
+                    gr: "Bei uns findest du das neueste Kitematerial. Wir haben die meisten Marken verfügbar und sorgen dafür, dass du immer mit der richtigen Kite-Größe auf dem Wasser bist. Keine Lust, all dein Material mitzunehmen? Kein Problem!"
+                },
+                para2: {
+                    en: "A list of our brands: Core / Naish / F-one / North / Slingshot / Lieuwe / Appletree",
+                    du: "Een lijst van onze merken: Core / Naish / F-one / North / Slingshot / Lieuwe / Appletree",
+                    gr: "Eine Liste unserer Marken: Core / Naish / F-one / North / Slingshot / Lieuwe / Appletree"
+                }
+            },
+            Disclaimer: {
+                title: {
+                    en: "Disclaimer",
+                    du: "Disclaimer",
+                    gr: "Haftungsausschluss"
+                },
+                para1: {
+                    en: "You ensure that you indicate your correct level during your booking. Unfortunately, we cannot control the wind. If you cannot complete your package you can settle the outstanding amount in various ways with us.- You can use the outstanding amount in our webshop on (kite) gear – You can use it for other KiteActive trips or give it as a gift card to friends – You can finish your package in 1 of our schools in Holland. Check your insurance. If you need help with the right insurance please ask us for help! Not all insurance companies cover kitesurf material.",
+                    du: "Je zorgt ervoor dat je je correcte niveau aangeeft tijdens je boeking. Helaas kunnen we de wind niet controleren. Als je je pakket niet kunt afronden, kun je het openstaande bedrag op verschillende manieren bij ons vereffenen. - Je kunt het openstaande bedrag in onze webshop gebruiken voor (kite)materiaal - Je kunt het gebruiken voor andere KiteActive-reizen of het als cadeaukaart aan vrienden geven - Je kunt je pakket afronden in 1 van onze scholen in Nederland. Controleer je verzekering. Als je hulp nodig hebt bij de juiste verzekering, vraag het ons dan! Niet alle verzekeringsmaatschappijen dekken kitesurfmateriaal.",
+                    gr: "Du stellst sicher, dass du während deiner Buchung dein korrektes Niveau angibst. Leider können wir den Wind nicht kontrollieren. Wenn du dein Paket nicht abschließen kannst, kannst du den offenen Betrag auf verschiedene Weise bei uns begleichen. - Du kannst den offenen Betrag in unserem Webshop für (Kite-)Ausrüstung verwenden - Du kannst ihn für andere KiteActive-Reisen verwenden oder als Geschenkkarte an Freunde geben - Du kannst dein Paket in einer unserer Schulen in Holland abschließen. Überprüfe deine Versicherung. Wenn du Hilfe bei der richtigen Versicherung benötigst, frag uns um Hilfe! Nicht alle Versicherungsunternehmen decken Kitesurfmaterial ab."
+                },
+                para2: {
+                    en: "Participation in our packages is always at your own risk. Kitesurfing is an extreme sport and although we will make sure you learn kitesurfing with us most safely, you always need to be aware of yourself and others. Always listen well to the instructions from our team.",
+                    du: "Deelname aan onze pakketten is altijd op eigen risico. Kitesurfen is een extreme sport en hoewel we ervoor zorgen dat je op de veiligste manier kitesurfen leert, moet je altijd op jezelf en anderen letten. Luister altijd goed naar de instructies van ons team.",
+                    gr: "Die Teilnahme an unseren Paketen erfolgt immer auf eigene Gefahr. Kitesurfen ist ein Extremsport, und obwohl wir sicherstellen, dass du bei uns auf die sicherste Weise Kitesurfen lernst, musst du dir immer selbst und anderen bewusst sein. Höre immer gut auf die Anweisungen unseres Teams."
+                }
+            }
+
+        },
+
         kitespot: [
             {
                 imgSrc: kitespotimg1,
@@ -3397,7 +6411,7 @@ const trips = [
 
     {
         name: 'Sicily',
-        vedio: vedio,
+        vedio: Sicily_vedio,
         overview: {
             trip_heading: {
                 en: "The Sicilian Kite Dream: Kitesurf Sicily Adventures",
@@ -3500,6 +6514,411 @@ const trips = [
                 imgPosition: 'left',
             },
         ],
+
+        packages: {
+            levelsData: [
+                {
+                    levelName: 'Level 3 - Independent',
+                    desc: {
+                        en: 'If you are on the water with kiters of the same level, you always make more progression. You learn from each other and push yourself to learn new things! In this course you will be pushed and coached as much as possible to learn new tricks. With KiteActive you will spend a week in a perfect destination with people who also want to make progress. Hey ho, Let’s go! 🙂',
+                        du: 'Als je op het water bent met kiters van hetzelfde niveau, maak je altijd meer vooruitgang. Je leert van elkaar en stimuleert jezelf om nieuwe dingen te leren! In deze cursus word je zoveel mogelijk aangemoedigd en gecoacht om nieuwe trucs te leren. Met KiteActive breng je een week door op een perfecte bestemming met mensen die ook vooruitgang willen boeken. Hey ho, laten we gaan! 🙂',
+                        gr: 'Wenn du mit Kitern desselben Niveaus auf dem Wasser bist, machst du immer mehr Fortschritte. Du lernst voneinander und drängst dich selbst, neue Dinge zu lernen! In diesem Kurs wirst du so viel wie möglich gepusht und gecoacht, um neue Tricks zu lernen. Mit KiteActive verbringst du eine Woche an einem perfekten Zielort mit Menschen, die ebenfalls Fortschritte machen wollen. Hey ho, lass uns gehen! 🙂'
+                    },
+                    imgsect: [
+                        {
+                            imgSrc: tab1_1,
+                            text: {
+                                en: 'Learn new tricks and make progression',
+                                du: 'Leer nieuwe trucs en maak vooruitgang',
+                                gr: 'Lerne neue Tricks und mache Fortschritte'
+                            },
+                            para: {
+                                en: 'This is the ultimate package for anyone who can already kitesurf but wants to make progress and learn new tricks. From your very first jump to a kiteloop handle pass. Our team is ready to help you with the right tips and tricks to achieve your goals!',
+                                du: 'Dit is het ultieme pakket voor iedereen die al kan kitesurfen maar vooruitgang wil boeken en nieuwe trucs wil leren. Van je allereerste spron naar een kiteloop handle pass. Ons team staat klaar om je te helpen met de juiste tips en trucs om je doelen te bereiken!',
+                                gr: 'Dies ist das ultimative Paket für jeden, der bereits kitesurfen kann, aber Fortschritte machen und neue Tricks lernen möchte. Von deinem allerersten Sprung bis zum Kiteloop-Handle-Pass. Unser Team ist bereit, dir mit den richtigen Tipps und Tricks zu helfen, um deine Ziele zu erreichen!'
+                            },
+                            imgPosition: 'left'
+                        },
+                        {
+                            imgSrc: tab1_2,
+                            text: {
+                                en: 'What to expect from this course?',
+                                du: 'Wat kun je van deze cursus verwachten?',
+                                gr: 'Was kannst du von diesem Kurs erwarten?'
+                            },
+                            para: {
+                                en: 'During the course we will look at what your personal goals are and what is feasible. We go through the theory together and during the week we try to push, coach and motivate you as much as possible to try new things in a safe way.',
+                                du: 'Tijdens de cursus bekijken we wat je persoonlijke doelen zijn en wat haalbaar is. We gaan samen de theorie door en proberen je gedurende de week zoveel mogelijk te stimuleren, coachen en motiveren om nieuwe dingen op een veilige manier te proberen.',
+                                gr: 'Während des Kurses werden wir uns ansehen, was deine persönlichen Ziele sind und was machbar ist. Wir gehen gemeinsam die Theorie durch und versuchen während der Woche, dich so gut wie möglich zu pushen, zu coachen und zu motivieren, um neue Dinge auf sichere Weise auszuprobieren.'
+                            },
+                            imgPosition: 'right'
+                        }
+                    ],
+                    acordation_head: {
+                        en: 'What do you learn?',
+                        du: 'Wat leer je?',
+                        gr: 'Was lernst du?'
+                    },
+                    acordation_data: [
+                        {
+                            title: {
+                                en: 'The basics of pop',
+                                du: 'De basis van pop',
+                                gr: 'Die Grundlagen des Pops'
+                            },
+                            info: {
+                                en: 'Learn how to pop. This is a very important skill which you need for your entire kite career!',
+                                du: 'Leer hoe je moet poppen. Dit is een zeer belangrijke vaardigheid die je nodig hebt voor je hele kitecarrière!',
+                                gr: 'Lerne, wie man poppt. Dies ist eine sehr wichtige Fähigkeit, die du für deine gesamte Kitesurfkarriere benötigst!'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Your first jump',
+                                du: 'Je eerste spron',
+                                gr: 'Dein erster Sprung'
+                            },
+                            info: {
+                                en: 'You want to learn how to go skyhigh?',
+                                du: 'Wil je leren hoe je de lucht in kunt gaan?',
+                                gr: 'Möchtest du lernen, wie du in die Höhe springen kannst?'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Back & Front roll',
+                                du: 'Back & Front roll',
+                                gr: 'Back & Frontroll'
+                            },
+                            info: {
+                                en: 'Make a salto in the air! You think it is difficult, but we will learn you this amazing trick in 1 week!',
+                                du: 'Maak een salto in de lucht! Je denkt dat het moeilijk is, maar we leren je deze geweldige truc in 1 week!',
+                                gr: 'Mach einen Salto in der Luft! Du denkst, es ist schwierig, aber wir werden dir diesen erstaunlichen Trick in 1 Woche beibringen!'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Board grabs, onefooters and board-offs',
+                                du: 'Board grabs, onefooters en board-offs',
+                                gr: 'Board Grabs, Onefooters und Board-offs'
+                            },
+                            info: {
+                                en: 'Grab the board in front of the camera!',
+                                du: 'Pak het board voor de camera!',
+                                gr: 'Greife das Board vor der Kamera!'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Your first kiteloop (downloop)',
+                                du: 'Je eerste kiteloop (downloop)',
+                                gr: 'Dein erster Kiteloop (Downloop)'
+                            },
+                            info: {
+                                en: 'Fly like a rollercoaster',
+                                du: 'Vlieg als een achtbaan',
+                                gr: 'Flieg wie eine Achterbahn'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Your first downwinder',
+                                du: 'Je eerste downwinder',
+                                gr: 'Dein erster Downwinder'
+                            },
+                            info: {
+                                en: 'With a downwinder you are doing a kite tour along the coast!',
+                                du: 'Met een downwinder maak je een kitetour langs de kust!',
+                                gr: 'Mit einem Downwinder machst du eine Kitetour entlang der Küste!'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Learn how to ride strapless / bottom turns / wave skills',
+                                du: 'Leer hoe je strapless kunt rijden / bottom turns / golfvaardigheden',
+                                gr: 'Lerne, wie man strapless fährt / Bottom Turns / Wellenfähigkeiten'
+                            },
+                            info: {
+                                en: 'Upgrade your skills in the waves',
+                                du: 'Verbeter je vaardigheden in de golven',
+                                gr: 'Verbessere deine Fähigkeiten in den Wellen'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Get unhooked!',
+                                du: 'Ga los!',
+                                gr: 'Lass los!'
+                            },
+                            info: {
+                                en: 'Learn how to do unhooked tricks like Raily, S-bend or maybe even a handle pass?',
+                                du: 'Leer hoe je unhooked trucs doet zoals Raily, S-bend of misschien zelfs een handle pass?',
+                                gr: 'Lerne, wie man unhooked Tricks wie Raily, S-bend oder vielleicht sogar einen Handle Pass macht?'
+                            }
+                        }
+                    ],
+                    faq_head: {
+                        en: "FAQ",
+                        du: "FAQ",
+                        gr: "Häufig gestellte Fragen"
+                    },
+                    faq_data: [
+                        {
+                            title: {
+                                en: 'How many hours is this course?',
+                                du: 'Hoeveel uur duurt deze cursus?',
+                                gr: 'Wie viele Stunden dauert dieser Kurs?'
+                            },
+                            info: {
+                                en: 'We do not link exact hours to this package. We try to push everyone as much as possible and occasionally provide 1-on-1 guidance. The goal is to make as much progress as possible and during this course we will give you all the tools you need to continue practicing.',
+                                du: 'We linken geen exacte uren aan dit pakket. We proberen iedereen zoveel mogelijk te stimuleren en bieden af en toe 1-op-1 begeleiding. Het doel is om zoveel mogelijk vooruitgang te boeken en tijdens deze cursus geven we je alle tools die je nodig hebt om te blijven oefenen.',
+                                gr: 'Wir verlinken keine genauen Stunden mit diesem Paket. Wir versuchen, jeden so gut wie möglich zu unterstützen und bieten gelegentlich 1-zu-1-Begleitung an. Ziel ist es, so viel Fortschritt wie möglich zu machen, und während dieses Kurses geben wir dir alle Werkzeuge, die du brauchst, um weiter zu üben.'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Is kitegear included in this package?',
+                                du: 'Is kitemateriaal inbegrepen bij dit pakket?',
+                                gr: 'Ist Kitematerial in diesem Paket enthalten?'
+                            },
+                            info: {
+                                en: 'No, you need to bring your own kitegear or rent a complete set at € 399 / week',
+                                du: 'Nee, je moet je eigen kitemateriaal meenemen of een compleet set huren voor € 399 / week',
+                                gr: 'Nein, du musst dein eigenes Kitematerial mitbringen oder ein komplettes Set für 399 € / Woche mieten.'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Am I insured?',
+                                du: 'Ben ik verzekerd?',
+                                gr: 'Bin ich versichert?'
+                            },
+                            info: {
+                                en: 'You are not insured against damage through KiteActive. We recommend that you check your travel insurance carefully to see whether it also covers extreme sports. to avoid disappointment and hassle on holiday. We work together with Sportzeker and then you are always covered for everything!',
+                                du: 'Je bent niet verzekerd tegen schade via KiteActive. We raden je aan om je reisverzekering goed te controleren om te zien of deze ook extreme sporten dekt. Dit om teleurstellingen en gedoe op vakantie te voorkomen. We werken samen met Sportzeker en dan ben je altijd voor alles verzekerd!',
+                                gr: 'Du bist nicht gegen Schäden durch KiteActive versichert. Wir empfehlen, deine Reiseversicherung sorgfältig zu prüfen, um festzustellen, ob sie auch Extremsportarten abdeckt. Um Enttäuschungen und Probleme im Urlaub zu vermeiden. Wir arbeiten mit Sportzeker zusammen, und dann bist du immer für alles versichert!'
+                            }
+                        }
+                    ],
+                    logo_img: [
+                        {
+                            img: tab1_card1,
+                            title: {
+                                en: "Professional team",
+                                du: "Professioneel team",
+                                gr: "Professionelles Team"
+                            }
+                        },
+                        {
+                            img: tab1_card2,
+                            title: {
+                                en: "Headset coaching",
+                                du: "Headset coaching",
+                                gr: "Headset-Coaching"
+                            }
+                        },
+                        {
+                            img: tab1_card3,
+                            title: {
+                                en: "Get advice from travel expert AJ",
+                                du: "Krijg advies van reisspecialist AJ",
+                                gr: "Hol dir Ratschläge vom Reiseexperten AJ"
+                            }
+                        },
+                        {
+                            img: tab1_card4,
+                            title: {
+                                en: "Photo & Video proof / analysis",
+                                du: "Foto- en video bewijs / analyse",
+                                gr: "Foto- und Video-Nachweis / Analyse"
+                            }
+                        }
+                    ]
+                },
+
+                {
+                    levelName: 'Level 4 - Advanced',
+                    desc: {
+                        en: 'If you are on the water with kiters of the same level, you always make more progression. You learn from each other and push yourself to learn new things! In this course you will be pushed and coached as much as possible to learn new tricks. With KiteActive you will spend a week in a perfect destination with people who also want to make progress. Hey ho, Let’s go! 🙂',
+                        du: 'Als je op het water bent met kiters van hetzelfde niveau, maak je altijd meer vooruitgang. Je leert van elkaar en stimuleert jezelf om nieuwe dingen te leren! In deze cursus word je zoveel mogelijk gepusht en gecoacht om nieuwe trucs te leren. Met KiteActive breng je een week door op een perfecte bestemming met mensen die ook vooruitgang willen boeken. Hey ho, laten we gaan! 🙂',
+                        gr: 'Wenn du mit Kitern desselben Niveaus auf dem Wasser bist, machst du immer mehr Fortschritte. Du lernst voneinander und drängst dich selbst, neue Dinge zu lernen! In diesem Kurs wirst du so viel wie möglich gepusht und gecoacht, um neue Tricks zu lernen. Mit KiteActive verbringst du eine Woche an einem perfekten Zielort mit Menschen, die ebenfalls Fortschritte machen wollen. Hey ho, lass uns gehen! 🙂'
+                    },
+                    imgsect: [
+                        {
+                            imgSrc: tab2_1,
+                            text: {
+                                en: 'Level up! There is still so much to learn',
+                                du: 'Level omhoog! Er is nog zoveel te leren',
+                                gr: 'Level hoch! Es gibt noch so viel zu lernen'
+                            },
+                            para: {
+                                en: 'Do you want to improve in big air kiting? Going for that megaloop? Or do you really want to learn this sick handle pass? This course is also for waveriders who are able to do long downwinders in challenging conditions and who want to learn to perform better in the waves.',
+                                du: 'Wil je verbeteren in big air kiten? Ga je voor die megaloop? Of wil je echt deze geweldige handle pass leren? Deze cursus is ook voor golfrijders die in staat zijn om lange downwinders in uitdagende omstandigheden te maken en die beter willen presteren in de golven.',
+                                gr: 'Möchtest du im Big Air Kiten besser werden? Gehst du für den Megaloop? Oder möchtest du wirklich diesen coolen Handle Pass lernen? Dieser Kurs ist auch für Wellenreiter, die in der Lage sind, lange Downwinders unter herausfordernden Bedingungen zu machen und die lernen möchten, in den Wellen besser abzuschneiden.'
+                            },
+                            imgPosition: 'left'
+                        }
+                    ],
+                    acordation_head: {
+                        en: 'What do you learn?',
+                        du: 'Wat leer je?',
+                        gr: 'Was lernst du?'
+                    },
+                    acordation_data: [
+                        {
+                            title: {
+                                en: 'Long downwinders in challenging conditions',
+                                du: 'Lange downwinders in uitdagende omstandigheden',
+                                gr: 'Lange Downwinders unter herausfordernden Bedingungen'
+                            },
+                            info: {
+                                en: 'Like DEN TVTAS for example',
+                                du: 'Zoals DEN TVTAS bijvoorbeeld',
+                                gr: 'Wie DEN TVTAS zum Beispiel'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Jump 10 meter +',
+                                du: 'Spring 10 meter +',
+                                gr: 'Spring 10 Meter +'
+                            },
+                            info: {
+                                en: 'Do you want to go skyhigh with us?',
+                                du: 'Wil je met ons de lucht in?',
+                                gr: 'Möchtest du mit uns in die Höhe springen?'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Megaloop',
+                                du: 'Megaloop',
+                                gr: 'Megaloop'
+                            },
+                            info: {
+                                en: '',
+                                du: '',
+                                gr: ''
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Unhooked tricks',
+                                du: 'Unhooked trucs',
+                                gr: 'Unhooked Tricks'
+                            },
+                            info: {
+                                en: '',
+                                du: '',
+                                gr: ''
+                            }
+                        }
+                    ],
+                    faq_head: {
+                        en: "FAQ",
+                        du: "FAQ",
+                        gr: "Häufig gestellte Fragen"
+                    },
+                    faq_data: [
+                        {
+                            title: {
+                                en: 'Am I insured?',
+                                du: 'Ben ik verzekerd?',
+                                gr: 'Bin ich versichert?'
+                            },
+                            info: {
+                                en: 'No, not with us. You need to take care of your own travel insurance. If you want, we can help you find the right one!',
+                                du: 'Nee, niet bij ons. Je moet zelf zorgen voor je reisverzekering. Als je wilt, kunnen we je helpen de juiste te vinden!',
+                                gr: 'Nein, nicht bei uns. Du musst dich um deine eigene Reiseversicherung kümmern. Wenn du möchtest, können wir dir helfen, die richtige zu finden!'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'How many hours is this course?',
+                                du: 'Hoeveel uur duurt deze cursus?',
+                                gr: 'Wie viele Stunden dauert dieser Kurs?'
+                            },
+                            info: {
+                                en: 'No specific hours are attached to this course. From time to time we do 1-on-1 sessions and our team will do our best to teach you as much as possible during this week.',
+                                du: 'Er zijn geen specifieke uren aan deze cursus verbonden. Af en toe doen we 1-op-1 sessies en ons team zal ons best doen om je deze week zoveel mogelijk te leren.',
+                                gr: 'Es sind keine spezifischen Stunden mit diesem Kurs verbunden. Von Zeit zu Zeit führen wir 1-zu-1-Sitzungen durch, und unser Team wird unser Bestes tun, um dir während dieser Woche so viel wie möglich beizubringen.'
+                            }
+                        }
+                    ],
+                    logo_img: [
+                        {
+                            img: tab1_card1,
+                            title: {
+                                en: "Make progression in ideal conditions",
+                                du: 'Maak vooruitgang onder ideale omstandigheden',
+                                gr: 'Mach Fortschritte unter idealen Bedingungen'
+                            }
+                        },
+                        {
+                            img: tab1_card2,
+                            title: {
+                                en: "Advice from our travel expert AJ",
+                                du: 'Advies van onze reisspecialist AJ',
+                                gr: 'Rat von unserem Reiseexperten AJ'
+                            }
+                        },
+                        {
+                            img: tab1_card3,
+                            title: {
+                                en: "Headset coaching",
+                                du: 'Coaching via headset',
+                                gr: 'Coaching über Headset'
+                            }
+                        },
+                        {
+                            img: tab1_card4,
+                            title: {
+                                en: "Photo & Video proof / analysis",
+                                du: 'Foto- en video-analyse / bewijs',
+                                gr: 'Foto- und Videoanalyse / Nachweis'
+                            }
+                        }
+                    ]
+                },
+            ],
+
+
+            Kitegear_rental: {
+                title: {
+                    en: "Kitegear rental",
+                    du: "Kitegear verhuur",
+                    gr: "Kiteausrüstungsverleih"
+                },
+                para1: {
+                    en: "With us you can find the latest kite material. We have most brands available and we ensure that you are always on the water with the right size kite. Don’t feel like carrying all your materials with you? No problem!",
+                    du: "Bij ons vind je het nieuwste kitemateriaal. We hebben de meeste merken beschikbaar en zorgen ervoor dat je altijd met de juiste maat kite op het water bent. Geen zin om al je materiaal mee te nemen? Geen probleem!",
+                    gr: "Bei uns findest du das neueste Kitematerial. Wir haben die meisten Marken verfügbar und sorgen dafür, dass du immer mit der richtigen Kite-Größe auf dem Wasser bist. Keine Lust, all dein Material mitzunehmen? Kein Problem!"
+                },
+                para2: {
+                    en: "A list of our brands: Core / Naish / F-one / North / Slingshot / Lieuwe / Appletree",
+                    du: "Een lijst van onze merken: Core / Naish / F-one / North / Slingshot / Lieuwe / Appletree",
+                    gr: "Eine Liste unserer Marken: Core / Naish / F-one / North / Slingshot / Lieuwe / Appletree"
+                }
+            },
+            Disclaimer: {
+                title: {
+                    en: "Disclaimer",
+                    du: "Disclaimer",
+                    gr: "Haftungsausschluss"
+                },
+                para1: {
+                    en: "You ensure that you indicate your correct level during your booking. Unfortunately, we cannot control the wind. If you cannot complete your package you can settle the outstanding amount in various ways with us.- You can use the outstanding amount in our webshop on (kite) gear – You can use it for other KiteActive trips or give it as a gift card to friends – You can finish your package in 1 of our schools in Holland. Check your insurance. If you need help with the right insurance please ask us for help! Not all insurance companies cover kitesurf material.",
+                    du: "Je zorgt ervoor dat je je correcte niveau aangeeft tijdens je boeking. Helaas kunnen we de wind niet controleren. Als je je pakket niet kunt afronden, kun je het openstaande bedrag op verschillende manieren bij ons vereffenen. - Je kunt het openstaande bedrag in onze webshop gebruiken voor (kite)materiaal - Je kunt het gebruiken voor andere KiteActive-reizen of het als cadeaukaart aan vrienden geven - Je kunt je pakket afronden in 1 van onze scholen in Nederland. Controleer je verzekering. Als je hulp nodig hebt bij de juiste verzekering, vraag het ons dan! Niet alle verzekeringsmaatschappijen dekken kitesurfmateriaal.",
+                    gr: "Du stellst sicher, dass du während deiner Buchung dein korrektes Niveau angibst. Leider können wir den Wind nicht kontrollieren. Wenn du dein Paket nicht abschließen kannst, kannst du den offenen Betrag auf verschiedene Weise bei uns begleichen. - Du kannst den offenen Betrag in unserem Webshop für (Kite-)Ausrüstung verwenden - Du kannst ihn für andere KiteActive-Reisen verwenden oder als Geschenkkarte an Freunde geben - Du kannst dein Paket in einer unserer Schulen in Holland abschließen. Überprüfe deine Versicherung. Wenn du Hilfe bei der richtigen Versicherung benötigst, frag uns um Hilfe! Nicht alle Versicherungsunternehmen decken Kitesurfmaterial ab."
+                },
+                para2: {
+                    en: "Participation in our packages is always at your own risk. Kitesurfing is an extreme sport and although we will make sure you learn kitesurfing with us most safely, you always need to be aware of yourself and others. Always listen well to the instructions from our team.",
+                    du: "Deelname aan onze pakketten is altijd op eigen risico. Kitesurfen is een extreme sport en hoewel we ervoor zorgen dat je op de veiligste manier kitesurfen leert, moet je altijd op jezelf en anderen letten. Luister altijd goed naar de instructies van ons team.",
+                    gr: "Die Teilnahme an unseren Paketen erfolgt immer auf eigene Gefahr. Kitesurfen ist ein Extremsport, und obwohl wir sicherstellen, dass du bei uns auf die sicherste Weise Kitesurfen lernst, musst du dir immer selbst und anderen bewusst sein. Höre immer gut auf die Anweisungen unseres Teams."
+                }
+            }
+
+        },
 
         hosted: [
             {
@@ -3703,7 +7122,6 @@ const trips = [
 
         reviews: {}
 
-
     },
 
 
@@ -3778,7 +7196,637 @@ const trips = [
             gall_img4: vanlife_gall_img4,
         },
 
-       
+        packages: {
+            levelsData: [
+                {
+                    levelName: 'Level 3 - Independent',
+                    desc: {
+                        en: 'If you are on the water with kiters of the same level, you always make more progression. You learn from each other and push yourself to learn new things! In this course you will be pushed and coached as much as possible to learn new tricks. With KiteActive you will spend a week in a perfect destination with people who also want to make progress. Hey ho, Let’s go! 🙂',
+                        du: 'Als je op het water bent met kiters van hetzelfde niveau, maak je altijd meer vooruitgang. Je leert van elkaar en stimuleert jezelf om nieuwe dingen te leren! In deze cursus word je zoveel mogelijk aangemoedigd en gecoacht om nieuwe trucs te leren. Met KiteActive breng je een week door op een perfecte bestemming met mensen die ook vooruitgang willen boeken. Hey ho, laten we gaan! 🙂',
+                        gr: 'Wenn du mit Kitern desselben Niveaus auf dem Wasser bist, machst du immer mehr Fortschritte. Du lernst voneinander und drängst dich selbst, neue Dinge zu lernen! In diesem Kurs wirst du so viel wie möglich gepusht und gecoacht, um neue Tricks zu lernen. Mit KiteActive verbringst du eine Woche an einem perfekten Zielort mit Menschen, die ebenfalls Fortschritte machen wollen. Hey ho, lass uns gehen! 🙂'
+                    },
+                    imgsect: [
+                        {
+                            imgSrc: tab1_1,
+                            text: {
+                                en: 'Learn new tricks and make progression',
+                                du: 'Leer nieuwe trucs en maak vooruitgang',
+                                gr: 'Lerne neue Tricks und mache Fortschritte'
+                            },
+                            para: {
+                                en: 'This is the ultimate package for anyone who can already kitesurf but wants to make progress and learn new tricks. From your very first jump to a kiteloop handle pass. Our team is ready to help you with the right tips and tricks to achieve your goals!',
+                                du: 'Dit is het ultieme pakket voor iedereen die al kan kitesurfen maar vooruitgang wil boeken en nieuwe trucs wil leren. Van je allereerste spron naar een kiteloop handle pass. Ons team staat klaar om je te helpen met de juiste tips en trucs om je doelen te bereiken!',
+                                gr: 'Dies ist das ultimative Paket für jeden, der bereits kitesurfen kann, aber Fortschritte machen und neue Tricks lernen möchte. Von deinem allerersten Sprung bis zum Kiteloop-Handle-Pass. Unser Team ist bereit, dir mit den richtigen Tipps und Tricks zu helfen, um deine Ziele zu erreichen!'
+                            },
+                            imgPosition: 'left'
+                        },
+                        {
+                            imgSrc: tab1_2,
+                            text: {
+                                en: 'What to expect from this course?',
+                                du: 'Wat kun je van deze cursus verwachten?',
+                                gr: 'Was kannst du von diesem Kurs erwarten?'
+                            },
+                            para: {
+                                en: 'During the course we will look at what your personal goals are and what is feasible. We go through the theory together and during the week we try to push, coach and motivate you as much as possible to try new things in a safe way.',
+                                du: 'Tijdens de cursus bekijken we wat je persoonlijke doelen zijn en wat haalbaar is. We gaan samen de theorie door en proberen je gedurende de week zoveel mogelijk te stimuleren, coachen en motiveren om nieuwe dingen op een veilige manier te proberen.',
+                                gr: 'Während des Kurses werden wir uns ansehen, was deine persönlichen Ziele sind und was machbar ist. Wir gehen gemeinsam die Theorie durch und versuchen während der Woche, dich so gut wie möglich zu pushen, zu coachen und zu motivieren, um neue Dinge auf sichere Weise auszuprobieren.'
+                            },
+                            imgPosition: 'right'
+                        }
+                    ],
+                    acordation_head: {
+                        en: 'What do you learn?',
+                        du: 'Wat leer je?',
+                        gr: 'Was lernst du?'
+                    },
+                    acordation_data: [
+                        {
+                            title: {
+                                en: 'The basics of pop',
+                                du: 'De basis van pop',
+                                gr: 'Die Grundlagen des Pops'
+                            },
+                            info: {
+                                en: 'Learn how to pop. This is a very important skill which you need for your entire kite career!',
+                                du: 'Leer hoe je moet poppen. Dit is een zeer belangrijke vaardigheid die je nodig hebt voor je hele kitecarrière!',
+                                gr: 'Lerne, wie man poppt. Dies ist eine sehr wichtige Fähigkeit, die du für deine gesamte Kitesurfkarriere benötigst!'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Your first jump',
+                                du: 'Je eerste spron',
+                                gr: 'Dein erster Sprung'
+                            },
+                            info: {
+                                en: 'You want to learn how to go skyhigh?',
+                                du: 'Wil je leren hoe je de lucht in kunt gaan?',
+                                gr: 'Möchtest du lernen, wie du in die Höhe springen kannst?'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Back & Front roll',
+                                du: 'Back & Front roll',
+                                gr: 'Back & Frontroll'
+                            },
+                            info: {
+                                en: 'Make a salto in the air! You think it is difficult, but we will learn you this amazing trick in 1 week!',
+                                du: 'Maak een salto in de lucht! Je denkt dat het moeilijk is, maar we leren je deze geweldige truc in 1 week!',
+                                gr: 'Mach einen Salto in der Luft! Du denkst, es ist schwierig, aber wir werden dir diesen erstaunlichen Trick in 1 Woche beibringen!'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Board grabs, onefooters and board-offs',
+                                du: 'Board grabs, onefooters en board-offs',
+                                gr: 'Board Grabs, Onefooters und Board-offs'
+                            },
+                            info: {
+                                en: 'Grab the board in front of the camera!',
+                                du: 'Pak het board voor de camera!',
+                                gr: 'Greife das Board vor der Kamera!'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Your first kiteloop (downloop)',
+                                du: 'Je eerste kiteloop (downloop)',
+                                gr: 'Dein erster Kiteloop (Downloop)'
+                            },
+                            info: {
+                                en: 'Fly like a rollercoaster',
+                                du: 'Vlieg als een achtbaan',
+                                gr: 'Flieg wie eine Achterbahn'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Your first downwinder',
+                                du: 'Je eerste downwinder',
+                                gr: 'Dein erster Downwinder'
+                            },
+                            info: {
+                                en: 'With a downwinder you are doing a kite tour along the coast!',
+                                du: 'Met een downwinder maak je een kitetour langs de kust!',
+                                gr: 'Mit einem Downwinder machst du eine Kitetour entlang der Küste!'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Learn how to ride strapless / bottom turns / wave skills',
+                                du: 'Leer hoe je strapless kunt rijden / bottom turns / golfvaardigheden',
+                                gr: 'Lerne, wie man strapless fährt / Bottom Turns / Wellenfähigkeiten'
+                            },
+                            info: {
+                                en: 'Upgrade your skills in the waves',
+                                du: 'Verbeter je vaardigheden in de golven',
+                                gr: 'Verbessere deine Fähigkeiten in den Wellen'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Get unhooked!',
+                                du: 'Ga los!',
+                                gr: 'Lass los!'
+                            },
+                            info: {
+                                en: 'Learn how to do unhooked tricks like Raily, S-bend or maybe even a handle pass?',
+                                du: 'Leer hoe je unhooked trucs doet zoals Raily, S-bend of misschien zelfs een handle pass?',
+                                gr: 'Lerne, wie man unhooked Tricks wie Raily, S-bend oder vielleicht sogar einen Handle Pass macht?'
+                            }
+                        }
+                    ],
+                    faq_head: {
+                        en: "FAQ",
+                        du: "FAQ",
+                        gr: "Häufig gestellte Fragen"
+                    },
+                    faq_data: [
+                        {
+                            title: {
+                                en: 'How many hours is this course?',
+                                du: 'Hoeveel uur duurt deze cursus?',
+                                gr: 'Wie viele Stunden dauert dieser Kurs?'
+                            },
+                            info: {
+                                en: 'We do not link exact hours to this package. We try to push everyone as much as possible and occasionally provide 1-on-1 guidance. The goal is to make as much progress as possible and during this course we will give you all the tools you need to continue practicing.',
+                                du: 'We linken geen exacte uren aan dit pakket. We proberen iedereen zoveel mogelijk te stimuleren en bieden af en toe 1-op-1 begeleiding. Het doel is om zoveel mogelijk vooruitgang te boeken en tijdens deze cursus geven we je alle tools die je nodig hebt om te blijven oefenen.',
+                                gr: 'Wir verlinken keine genauen Stunden mit diesem Paket. Wir versuchen, jeden so gut wie möglich zu unterstützen und bieten gelegentlich 1-zu-1-Begleitung an. Ziel ist es, so viel Fortschritt wie möglich zu machen, und während dieses Kurses geben wir dir alle Werkzeuge, die du brauchst, um weiter zu üben.'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Is kitegear included in this package?',
+                                du: 'Is kitemateriaal inbegrepen bij dit pakket?',
+                                gr: 'Ist Kitematerial in diesem Paket enthalten?'
+                            },
+                            info: {
+                                en: 'No, you need to bring your own kitegear or rent a complete set at € 399 / week',
+                                du: 'Nee, je moet je eigen kitemateriaal meenemen of een compleet set huren voor € 399 / week',
+                                gr: 'Nein, du musst dein eigenes Kitematerial mitbringen oder ein komplettes Set für 399 € / Woche mieten.'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Am I insured?',
+                                du: 'Ben ik verzekerd?',
+                                gr: 'Bin ich versichert?'
+                            },
+                            info: {
+                                en: 'You are not insured against damage through KiteActive. We recommend that you check your travel insurance carefully to see whether it also covers extreme sports. to avoid disappointment and hassle on holiday. We work together with Sportzeker and then you are always covered for everything!',
+                                du: 'Je bent niet verzekerd tegen schade via KiteActive. We raden je aan om je reisverzekering goed te controleren om te zien of deze ook extreme sporten dekt. Dit om teleurstellingen en gedoe op vakantie te voorkomen. We werken samen met Sportzeker en dan ben je altijd voor alles verzekerd!',
+                                gr: 'Du bist nicht gegen Schäden durch KiteActive versichert. Wir empfehlen, deine Reiseversicherung sorgfältig zu prüfen, um festzustellen, ob sie auch Extremsportarten abdeckt. Um Enttäuschungen und Probleme im Urlaub zu vermeiden. Wir arbeiten mit Sportzeker zusammen, und dann bist du immer für alles versichert!'
+                            }
+                        }
+                    ],
+                    logo_img: [
+                        {
+                            img: tab1_card1,
+                            title: {
+                                en: "Professional team",
+                                du: "Professioneel team",
+                                gr: "Professionelles Team"
+                            }
+                        },
+                        {
+                            img: tab1_card2,
+                            title: {
+                                en: "Headset coaching",
+                                du: "Headset coaching",
+                                gr: "Headset-Coaching"
+                            }
+                        },
+                        {
+                            img: tab1_card3,
+                            title: {
+                                en: "Get advice from travel expert AJ",
+                                du: "Krijg advies van reisspecialist AJ",
+                                gr: "Hol dir Ratschläge vom Reiseexperten AJ"
+                            }
+                        },
+                        {
+                            img: tab1_card4,
+                            title: {
+                                en: "Photo & Video proof / analysis",
+                                du: "Foto- en video bewijs / analyse",
+                                gr: "Foto- und Video-Nachweis / Analyse"
+                            }
+                        }
+                    ]
+                },
+
+                {
+                    levelName: 'Level 4 - Advanced',
+                    desc: {
+                        en: 'If you are on the water with kiters of the same level, you always make more progression. You learn from each other and push yourself to learn new things! In this course you will be pushed and coached as much as possible to learn new tricks. With KiteActive you will spend a week in a perfect destination with people who also want to make progress. Hey ho, Let’s go! 🙂',
+                        du: 'Als je op het water bent met kiters van hetzelfde niveau, maak je altijd meer vooruitgang. Je leert van elkaar en stimuleert jezelf om nieuwe dingen te leren! In deze cursus word je zoveel mogelijk gepusht en gecoacht om nieuwe trucs te leren. Met KiteActive breng je een week door op een perfecte bestemming met mensen die ook vooruitgang willen boeken. Hey ho, laten we gaan! 🙂',
+                        gr: 'Wenn du mit Kitern desselben Niveaus auf dem Wasser bist, machst du immer mehr Fortschritte. Du lernst voneinander und drängst dich selbst, neue Dinge zu lernen! In diesem Kurs wirst du so viel wie möglich gepusht und gecoacht, um neue Tricks zu lernen. Mit KiteActive verbringst du eine Woche an einem perfekten Zielort mit Menschen, die ebenfalls Fortschritte machen wollen. Hey ho, lass uns gehen! 🙂'
+                    },
+                    imgsect: [
+                        {
+                            imgSrc: tab2_1,
+                            text: {
+                                en: 'Level up! There is still so much to learn',
+                                du: 'Level omhoog! Er is nog zoveel te leren',
+                                gr: 'Level hoch! Es gibt noch so viel zu lernen'
+                            },
+                            para: {
+                                en: 'Do you want to improve in big air kiting? Going for that megaloop? Or do you really want to learn this sick handle pass? This course is also for waveriders who are able to do long downwinders in challenging conditions and who want to learn to perform better in the waves.',
+                                du: 'Wil je verbeteren in big air kiten? Ga je voor die megaloop? Of wil je echt deze geweldige handle pass leren? Deze cursus is ook voor golfrijders die in staat zijn om lange downwinders in uitdagende omstandigheden te maken en die beter willen presteren in de golven.',
+                                gr: 'Möchtest du im Big Air Kiten besser werden? Gehst du für den Megaloop? Oder möchtest du wirklich diesen coolen Handle Pass lernen? Dieser Kurs ist auch für Wellenreiter, die in der Lage sind, lange Downwinders unter herausfordernden Bedingungen zu machen und die lernen möchten, in den Wellen besser abzuschneiden.'
+                            },
+                            imgPosition: 'left'
+                        }
+                    ],
+                    acordation_head: {
+                        en: 'What do you learn?',
+                        du: 'Wat leer je?',
+                        gr: 'Was lernst du?'
+                    },
+                    acordation_data: [
+                        {
+                            title: {
+                                en: 'Long downwinders in challenging conditions',
+                                du: 'Lange downwinders in uitdagende omstandigheden',
+                                gr: 'Lange Downwinders unter herausfordernden Bedingungen'
+                            },
+                            info: {
+                                en: 'Like DEN TVTAS for example',
+                                du: 'Zoals DEN TVTAS bijvoorbeeld',
+                                gr: 'Wie DEN TVTAS zum Beispiel'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Jump 10 meter +',
+                                du: 'Spring 10 meter +',
+                                gr: 'Spring 10 Meter +'
+                            },
+                            info: {
+                                en: 'Do you want to go skyhigh with us?',
+                                du: 'Wil je met ons de lucht in?',
+                                gr: 'Möchtest du mit uns in die Höhe springen?'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Megaloop',
+                                du: 'Megaloop',
+                                gr: 'Megaloop'
+                            },
+                            info: {
+                                en: '',
+                                du: '',
+                                gr: ''
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'Unhooked tricks',
+                                du: 'Unhooked trucs',
+                                gr: 'Unhooked Tricks'
+                            },
+                            info: {
+                                en: '',
+                                du: '',
+                                gr: ''
+                            }
+                        }
+                    ],
+                    faq_head: {
+                        en: "FAQ",
+                        du: "FAQ",
+                        gr: "Häufig gestellte Fragen"
+                    },
+                    faq_data: [
+                        {
+                            title: {
+                                en: 'Am I insured?',
+                                du: 'Ben ik verzekerd?',
+                                gr: 'Bin ich versichert?'
+                            },
+                            info: {
+                                en: 'No, not with us. You need to take care of your own travel insurance. If you want, we can help you find the right one!',
+                                du: 'Nee, niet bij ons. Je moet zelf zorgen voor je reisverzekering. Als je wilt, kunnen we je helpen de juiste te vinden!',
+                                gr: 'Nein, nicht bei uns. Du musst dich um deine eigene Reiseversicherung kümmern. Wenn du möchtest, können wir dir helfen, die richtige zu finden!'
+                            }
+                        },
+                        {
+                            title: {
+                                en: 'How many hours is this course?',
+                                du: 'Hoeveel uur duurt deze cursus?',
+                                gr: 'Wie viele Stunden dauert dieser Kurs?'
+                            },
+                            info: {
+                                en: 'No specific hours are attached to this course. From time to time we do 1-on-1 sessions and our team will do our best to teach you as much as possible during this week.',
+                                du: 'Er zijn geen specifieke uren aan deze cursus verbonden. Af en toe doen we 1-op-1 sessies en ons team zal ons best doen om je deze week zoveel mogelijk te leren.',
+                                gr: 'Es sind keine spezifischen Stunden mit diesem Kurs verbunden. Von Zeit zu Zeit führen wir 1-zu-1-Sitzungen durch, und unser Team wird unser Bestes tun, um dir während dieser Woche so viel wie möglich beizubringen.'
+                            }
+                        }
+                    ],
+                    logo_img: [
+                        {
+                            img: tab1_card1,
+                            title: {
+                                en: "Make progression in ideal conditions",
+                                du: 'Maak vooruitgang onder ideale omstandigheden',
+                                gr: 'Mach Fortschritte unter idealen Bedingungen'
+                            }
+                        },
+                        {
+                            img: tab1_card2,
+                            title: {
+                                en: "Advice from our travel expert AJ",
+                                du: 'Advies van onze reisspecialist AJ',
+                                gr: 'Rat von unserem Reiseexperten AJ'
+                            }
+                        },
+                        {
+                            img: tab1_card3,
+                            title: {
+                                en: "Headset coaching",
+                                du: 'Coaching via headset',
+                                gr: 'Coaching über Headset'
+                            }
+                        },
+                        {
+                            img: tab1_card4,
+                            title: {
+                                en: "Photo & Video proof / analysis",
+                                du: 'Foto- en video-analyse / bewijs',
+                                gr: 'Foto- und Videoanalyse / Nachweis'
+                            }
+                        }
+                    ]
+                },
+            ],
+
+
+            Kitegear_rental: {
+                title: {
+                    en: "Kitegear rental",
+                    du: "Kitegear verhuur",
+                    gr: "Kiteausrüstungsverleih"
+                },
+                para1: {
+                    en: "With us you can find the latest kite material. We have most brands available and we ensure that you are always on the water with the right size kite. Don’t feel like carrying all your materials with you? No problem!",
+                    du: "Bij ons vind je het nieuwste kitemateriaal. We hebben de meeste merken beschikbaar en zorgen ervoor dat je altijd met de juiste maat kite op het water bent. Geen zin om al je materiaal mee te nemen? Geen probleem!",
+                    gr: "Bei uns findest du das neueste Kitematerial. Wir haben die meisten Marken verfügbar und sorgen dafür, dass du immer mit der richtigen Kite-Größe auf dem Wasser bist. Keine Lust, all dein Material mitzunehmen? Kein Problem!"
+                },
+                para2: {
+                    en: "A list of our brands: Core / Naish / F-one / North / Slingshot / Lieuwe / Appletree",
+                    du: "Een lijst van onze merken: Core / Naish / F-one / North / Slingshot / Lieuwe / Appletree",
+                    gr: "Eine Liste unserer Marken: Core / Naish / F-one / North / Slingshot / Lieuwe / Appletree"
+                }
+            },
+            Disclaimer: {
+                title: {
+                    en: "Disclaimer",
+                    du: "Disclaimer",
+                    gr: "Haftungsausschluss"
+                },
+                para1: {
+                    en: "You ensure that you indicate your correct level during your booking. Unfortunately, we cannot control the wind. If you cannot complete your package you can settle the outstanding amount in various ways with us.- You can use the outstanding amount in our webshop on (kite) gear – You can use it for other KiteActive trips or give it as a gift card to friends – You can finish your package in 1 of our schools in Holland. Check your insurance. If you need help with the right insurance please ask us for help! Not all insurance companies cover kitesurf material.",
+                    du: "Je zorgt ervoor dat je je correcte niveau aangeeft tijdens je boeking. Helaas kunnen we de wind niet controleren. Als je je pakket niet kunt afronden, kun je het openstaande bedrag op verschillende manieren bij ons vereffenen. - Je kunt het openstaande bedrag in onze webshop gebruiken voor (kite)materiaal - Je kunt het gebruiken voor andere KiteActive-reizen of het als cadeaukaart aan vrienden geven - Je kunt je pakket afronden in 1 van onze scholen in Nederland. Controleer je verzekering. Als je hulp nodig hebt bij de juiste verzekering, vraag het ons dan! Niet alle verzekeringsmaatschappijen dekken kitesurfmateriaal.",
+                    gr: "Du stellst sicher, dass du während deiner Buchung dein korrektes Niveau angibst. Leider können wir den Wind nicht kontrollieren. Wenn du dein Paket nicht abschließen kannst, kannst du den offenen Betrag auf verschiedene Weise bei uns begleichen. - Du kannst den offenen Betrag in unserem Webshop für (Kite-)Ausrüstung verwenden - Du kannst ihn für andere KiteActive-Reisen verwenden oder als Geschenkkarte an Freunde geben - Du kannst dein Paket in einer unserer Schulen in Holland abschließen. Überprüfe deine Versicherung. Wenn du Hilfe bei der richtigen Versicherung benötigst, frag uns um Hilfe! Nicht alle Versicherungsunternehmen decken Kitesurfmaterial ab."
+                },
+                para2: {
+                    en: "Participation in our packages is always at your own risk. Kitesurfing is an extreme sport and although we will make sure you learn kitesurfing with us most safely, you always need to be aware of yourself and others. Always listen well to the instructions from our team.",
+                    du: "Deelname aan onze pakketten is altijd op eigen risico. Kitesurfen is een extreme sport en hoewel we ervoor zorgen dat je op de veiligste manier kitesurfen leert, moet je altijd op jezelf en anderen letten. Luister altijd goed naar de instructies van ons team.",
+                    gr: "Die Teilnahme an unseren Paketen erfolgt immer auf eigene Gefahr. Kitesurfen ist ein Extremsport, und obwohl wir sicherstellen, dass du bei uns auf die sicherste Weise Kitesurfen lernst, musst du dir immer selbst und anderen bewusst sein. Höre immer gut auf die Anweisungen unseres Teams."
+                }
+            }
+
+        },
+
+        hosted: [
+            {
+                hosted_img: hosted_img1,
+                hosted_name: {
+                    en: "Roderick Pijls",
+                    gr: "Roderick Pijls",
+                    du: "Roderick Pijls"
+                },
+                hosted_position: {
+                    en: "Camp manager & Instructor",
+                    gr: "Camp-Manager & Ausbilder",
+                    du: "Campmanager & Instructeur"
+                },
+                kite_exp: {
+                    en: "",
+                    gr: "",
+                    du: ""
+                },
+                hosted_para: {
+                    en: "Having a background of professional kitesurfer for over 12 years has taught me a lot. Seeing many cultures, meeting great people and knowing everything from the best spots in the world has convinced me to start sharing this with everyone who has that little 'Columbus' inside him/ herself.",
+                    gr: "Eine Hintergrund als professioneller Kitesurfer seit über 12 Jahren hat mir viel beigebracht. Viele Kulturen zu sehen, großartige Menschen zu treffen und alles über die besten Spots der Welt zu wissen, hat mich überzeugt, dies mit jedem zu teilen, der das kleine 'Kolumbus' in sich trägt.",
+                    du: "Een achtergrond als professionele kitesurfer gedurende meer dan 12 jaar heeft me veel geleerd. Het zien van veel culturen, het ontmoeten van geweldige mensen en alles weten over de beste spots ter wereld heeft me ervan overtuigd dit te delen met iedereen die dat kleine 'Columbus'-gevoel in zich heeft."
+                },
+                hosted_msg_img: hosted_earth,
+                hosted_msg_head: {
+                    en: "Top Destination",
+                    gr: "Top-Destination",
+                    du: "Topbestemming"
+                },
+                hosted_msg: {
+                    en: "",
+                    gr: "",
+                    du: ""
+                },
+                hosted_year_img: hosted_at,
+                hosted_year_head: {
+                    en: "KiteActive",
+                    gr: "KiteActive",
+                    du: "KiteActive"
+                },
+                hosted_year: {
+                    en: "",
+                    gr: "",
+                    du: ""
+                }
+            },
+            {
+                hosted_img: hosted_img3,
+                hosted_name: {
+                    en: "Bas ”cool”",
+                    gr: "Bas „cool“",
+                    du: "Bas 'cool'"
+                },
+                hosted_position: {
+                    en: "Photographer & Instructor",
+                    gr: "Fotograf & Instruktor",
+                    du: "Fotograaf & Instructeur"
+                },
+                kite_exp: {
+                    en: "8 years kite experience",
+                    gr: "8 Jahre Kiterfahrung",
+                    du: "8 jaar kitesurfervaring"
+                },
+                hosted_para: {
+                    en: "I did my traineeship at Kiteactive when I was 16, and since then I have been part of the Kiteactive family!",
+                    gr: "Ich habe mein Praktikum bei Kiteactive gemacht, als ich 16 war, und seitdem bin ich Teil der Kiteactive-Familie!",
+                    du: "Ik heb mijn stage bij Kiteactive gedaan toen ik 16 was, en sindsdien ben ik onderdeel van de Kiteactive-familie!"
+                },
+                hosted_msg_img: hosted_earth,
+                hosted_msg_head: {
+                    en: "Favorite Destination",
+                    gr: "Lieblingsziel",
+                    du: "Favoriete Bestemming"
+                },
+                hosted_msg: {
+                    en: "I like Sicily",
+                    gr: "Ich mag Sizilien",
+                    du: "Ik hou van Sicilië"
+                },
+                hosted_year_img: hosted_at,
+                hosted_year_head: {
+                    en: "KiteActive",
+                    gr: "KiteActive",
+                    du: "KiteActive"
+                },
+                hosted_year: {
+                    en: "7 years",
+                    gr: "7 Jahre",
+                    du: "7 jaar"
+                }
+            },
+            {
+                hosted_img: skycap_hosted_img1,
+                hosted_name: {
+                    en: "Jan Willem",
+                    gr: "Jan Willem",
+                    du: "Jan Willem"
+                },
+                hosted_position: {
+                    en: "Kitecamp Host",
+                    gr: "Kitecamp Gastgeber",
+                    du: "Kitecamp Host"
+                },
+                kite_exp: {
+                    en: "",
+                    gr: "",
+                    du: ""
+                },
+                hosted_para: {
+                    en: "As a Gym teacher my job is to motivate people to do activities and sports. Kitesurfing is my biggest passion and I will teach you everything I know!",
+                    gr: "Als Sportlehrer ist es mein Job, Menschen zu motivieren, Aktivitäten und Sport zu betreiben. Kitesurfen ist meine größte Leidenschaft und ich werde dir alles beibringen, was ich weiß!",
+                    du: "Als gymdocent is het mijn taak om mensen te motiveren om activiteiten en sport te doen. Kitesurfen is mijn grootste passie en ik zal je alles leren wat ik weet!"
+                },
+                hosted_msg_img: hosted_earth,
+                hosted_msg_head: {
+                    en: "Top Destination",
+                    gr: "Top-Destination",
+                    du: "Topbestemming"
+                },
+                hosted_msg: {
+                    en: "",
+                    gr: "",
+                    du: ""
+                },
+                hosted_year_img: hosted_at,
+                hosted_year_head: {
+                    en: "KiteActive",
+                    gr: "KiteActive",
+                    du: "KiteActive"
+                },
+                hosted_year: {
+                    en: "",
+                    gr: "",
+                    du: ""
+                }
+            },
+            {
+                hosted_img: skycap_hosted_img4,
+                hosted_name: {
+                    en: "Joeri ”the Chef”",
+                    gr: "Joeri ”der Chef”",
+                    du: "Joeri ”de Chef”"
+                },
+                hosted_position: {
+                    en: "Chef",
+                    gr: "Koch",
+                    du: "Chef"
+                },
+                kite_exp: {
+                    en: "4 years kite experience",
+                    gr: "4 Jahre Kiterfahrung",
+                    du: "4 jaar kitesurfervaring"
+                },
+                hosted_para: {
+                    en: "In the summer I work in a foodtruck on festivals and in the winter I cruise around in my Van and try to kite as much as possible!",
+                    gr: "Im Sommer arbeite ich in einem Foodtruck auf Festivals und im Winter fahre ich mit meinem Van herum und versuche, so viel wie möglich zu kiten!",
+                    du: "In de zomer werk ik in een foodtruck op festivals en in de winter rijd ik rond in mijn bus en probeer ik zoveel mogelijk te kitesurfen!"
+                },
+                hosted_msg_img: hosted_earth,
+                hosted_msg_head: {
+                    en: "Favoriete Bestemming",
+                    gr: "Top-Destination",
+                    du: "Favoriete Bestemming"
+                },
+                hosted_msg: {
+                    en: "Tarifa!",
+                    gr: "Tarifa!",
+                    du: "Tarifa!"
+                },
+                hosted_year_img: hosted_at,
+                hosted_year_head: {
+                    en: "KiteActive",
+                    gr: "KiteActive",
+                    du: "KiteActive"
+                },
+                hosted_year: {
+                    en: "3 years",
+                    gr: "3 Jahre",
+                    du: "3 jaar"
+                }
+            }
+        ],
+
+        activities: [
+            {
+                img: zanzibar_activity_img1,
+                title: {
+                    en: 'Awesome Evenings',
+                    du: 'Geweldige Avonden',
+                    gr: 'Tolle Abende'
+                }
+            },
+            {
+                img: zanzibar_activity_img2,
+                title: {
+                    en: 'Wave Surfing',
+                    du: 'Golfsurfen',
+                    gr: 'Wellenreiten'
+                }
+            },
+            {
+                img: zanzibar_activity_img3,
+                title: {
+                    en: 'Down winders',
+                    du: 'Downwinders',
+                    gr: 'Downwinders'
+                }
+            },
+            {
+                img: zanzibar_activity_img4,
+                title: {
+                    en: 'Climbing',
+                    du: 'Klimmen',
+                    gr: 'Klettern'
+                }
+            },
+            {
+                img: zanzibar_activity_img5,
+                title: {
+                    en: 'Funbox - beach Games',
+                    du: 'Funbox - strandspellen',
+                    gr: 'Funbox - Strandspiele'
+                }
+            }
+        ],
+
     },
 
 

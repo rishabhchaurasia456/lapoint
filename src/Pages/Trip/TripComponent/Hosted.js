@@ -1,11 +1,5 @@
 import React from 'react'
-// import img1 from "../../../Images/Hosted1.webp"
-// import img2 from "../../../Images/hosted2.jpg"
-// import img3 from "../../../Images/hosted3.webp"
-// import img4 from "../../../Images/hosted4.webp"
-// import earth from "../../../Images/earth.webp"
 
-import at from "../../../Images/at.webp"
 
 const Hosted = ({ hostedData, selectedLanguage }) => {
   return (
@@ -14,7 +8,7 @@ const Hosted = ({ hostedData, selectedLanguage }) => {
         <div className="row p-4">
           {hostedData.map((item, index) => (
             <div className="col-md-3">
-              <div className="hosted_card shadow text-center" key={index}>
+              <div className="hosted_card h-100 shadow text-center" key={index}>
                 <img src={item.hosted_img} className='hosted_card_img' alt='card' width="100%" />
                 <div className='hosted_card_body'>
                   <p className='hosted_card_title'>{item.hosted_name[selectedLanguage]}</p>
