@@ -1,5 +1,4 @@
 import React from 'react'
-<<<<<<< HEAD
 import kitespotimg1 from "../../../Images/zanzibar-lagoon-paje-kitesurf-1536x863-1.webp"
 import kitespotimg2 from "../../../Images/zanzibar-paje-2048x1365-1-1536x1024-1.webp"
 import kitespotimg3 from "../../../Images/web.webp"
@@ -76,18 +75,6 @@ const Kitespots = ({ kitespotData, selectedLanguage }) => {
     return (
         <div>
             <div className='container mt-5 pt-5'>
-=======
-// import kitespotimg1 from "../../../Images/zanzibar-lagoon-paje-kitesurf-1536x863-1.webp"
-// import kitespotimg2 from "../../../Images/zanzibar-paje-2048x1365-1-1536x1024-1.webp"
-// import kitespotimg3 from "../../../Images/web.webp"
-
-
-
-const Kitespots = ({ kitespotData, selectedLanguage }) => {
-    return (
-        <div>
-            <div className='container mt-5 pt-5 pb-5'>
->>>>>>> 38ad342e0030567fafadde58ef9a7902a83b1e70
                 {kitespotData.map((item, index) => (
                     <div className='row mt-5' key={index}>
                         {item.imgPosition === 'left' && (
