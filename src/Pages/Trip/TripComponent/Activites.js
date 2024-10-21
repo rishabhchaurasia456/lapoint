@@ -82,11 +82,7 @@ const Activites = ({activitiesData, selectedLanguage}) => {
                   <div>
                     {/* <img src={img} className="slid_card_backimg rounded-4" alt="..." /> */}
                     <Link to="#" className='nav-link'>
-<<<<<<< HEAD
-                      <div className="slid_card_backimg rounded-4" style={{ backgroundImage: `url(${item.img})`, backgroundSize: 'cover', backgroundPosition: 'center', }}>
-=======
                       <div className="slid_card_backimg rounded-4" style={{ backgroundImage: `url(${item.img})` , backgroundSize: 'cover', backgroundPosition: 'center', }}>
->>>>>>> 38ad342e0030567fafadde58ef9a7902a83b1e70
                         <div class="slid_card_text">
                           <p class="card_d_text">{item.title[selectedLanguage]}</p>
                         </div>
