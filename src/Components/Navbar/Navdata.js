@@ -13,7 +13,6 @@ const kiteCampsSubmenu = cardData.map(item => {
       id: `${item.id}`,
       path: item.path,
       trip_name: item.data?.trip_name || { en: 'Unnamed Trip' },  // Ensure trip_name exists
-      vedio: item.data?.vedio || 'No video available',
     };
   });
 

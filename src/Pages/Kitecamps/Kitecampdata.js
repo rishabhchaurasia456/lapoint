@@ -1,4 +1,3 @@
-import vedio from '../../Images/website.filmpje.tarifa.mp4';
 import img1 from '../../Images/kc1.webp';
 import img2 from '../../Images/kc2.webp';
 import img3 from '../../Images/kc3.webp';
@@ -19,7 +18,6 @@ export const cardData = [
                 gr: "Vanleben",
                 du: 'Vanleven'
             },
-            vedio: vedio
         },
     },
     { 
@@ -30,7 +28,6 @@ export const cardData = [
                 gr:"Sansibar", 
                 du:" Zanzibar ", 
             },
-            vedio: vedio
         },
     },
     { 
@@ -41,7 +38,6 @@ export const cardData = [
                 gr:"Schneekite", 
                 du:"Sneeuwkite", 
             },
-            vedio: vedio 
         }
     },
     { 
@@ -52,7 +48,6 @@ export const cardData = [
                 gr:"SkyKapstadt", 
                 du:"SkyKaapstad", 
             },
-            vedio: vedio 
         }
     },
     { 
@@ -63,7 +58,6 @@ export const cardData = [
                 gr:"KitemekkaTarifa", 
                 du:"KitemekkaTarifa", 
             },
-            vedio: vedio 
         }
     },
     { 
@@ -74,7 +68,6 @@ export const cardData = [
                 gr:"EndloseSommerParty", 
                 du:"EindeloosZomerFeest", 
             },
-            vedio: vedio 
         }
     },
     { 
@@ -85,7 +78,6 @@ export const cardData = [
                 gr:"Brasilien", 
                 du:"Brazilië", 
             },
-            vedio: vedio 
         }
     },
     { 
@@ -96,7 +88,6 @@ export const cardData = [
                 gr:"Dakhla", 
                 du:"Dakhla", 
             },
-            vedio: vedio 
         }
     },
     { 
@@ -107,7 +98,6 @@ export const cardData = [
                 gr:"Kiten", 
                 du:"Zeil&kite", 
             },
-            vedio: vedio 
         }
     },
     { 
@@ -118,7 +108,6 @@ export const cardData = [
                 gr:"Sizilien", 
                 du:"Sicilië", 
             },
-            vedio: vedio 
         }
     },
 ];

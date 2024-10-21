@@ -38,7 +38,7 @@ const Trip = ({ selectedLanguage }) => {
             {/* Video section */}
             <div className="video-container">
                 {trip?.vedio && (
-                    <video autoPlay loop muted className="background-video">
+                    <video key={trip.vedio} autoPlay loop muted className="background-video">
                         <source src={trip.vedio} type="video/mp4"  loading="lazy"/>
                         Your browser does not support the video tag.
                     </video>
