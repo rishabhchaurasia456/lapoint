@@ -2,40 +2,36 @@ import React, { useRef } from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import { Link } from 'react-router-dom';
-import img1 from '../../../Images/spice.webp'
-import img2 from '../../../Images/kuza.webp'
-import img3 from '../../../Images/blue.webp'
-import img4 from '../../../Images/local.webp'
-import img5 from '../../../Images/snorkeling.webp'
 
 
-const Activity_data = [
-  {
-    id: "1",
-    img: img1,
-    title: 'Spice Tour'
-  },
-  {
-    id: "2",
-    img: img2,
-    title: 'kuza cave'
-  },
-  {
-    id: "3",
-    img: img3,
-    title: 'Blue safari'
-  },
-  {
-    id: "4",
-    img: img4,
-    title: 'Local Dhow Sailing'
-  },
-  {
-    id: "5",
-    img: img5,
-    title: 'Snorkeling'
-  },
-]
+
+// const Activity_data = [
+//   {
+//     id: "1",
+//     img: img1,
+//     title: 'Spice Tour'
+//   },
+//   {
+//     id: "2",
+//     img: img2,
+//     title: 'kuza cave'
+//   },
+//   {
+//     id: "3",
+//     img: img3,
+//     title: 'Blue safari'
+//   },
+//   {
+//     id: "4",
+//     img: img4,
+//     title: 'Local Dhow Sailing'
+//   },
+//   {
+//     id: "5",
+//     img: img5,
+//     title: 'Snorkeling'
+//   },
+// ]
 
 const responsive = {
   superLargeDesktop: {
@@ -57,7 +53,7 @@ const responsive = {
   }
 };
 
-const Activites = () => {
+const Activites = ({activitiesData, selectedLanguage}) => {
 
   const carouselRef = useRef(null);
   const handleNext = () => {
@@ -81,14 +77,14 @@ const Activites = () => {
             <Carousel ref={carouselRef} responsive={responsive} arrows={false}>
 
               {/* card data in card.js  */}
-              {Activity_data.map(({ title, img, index }) => (
+              {activitiesData.map((item, index) => (
                 <div className="border w-100 px-2 my-5 border-0" key={index}>
                   <div>
                     {/* <img src={img} className="slid_card_backimg rounded-4" alt="..." /> */}
                     <Link to="#" className='nav-link'>
-                      <div className="slid_card_backimg rounded-4" style={{ backgroundImage: `url(${img})`, backgroundSize: 'cover', backgroundPosition: 'center', }}>
+                      <div className="slid_card_backimg rounded-4" style={{ backgroundImage: `url(${item.img})`, backgroundSize: 'cover', backgroundPosition: 'center', }}>
                         <div class="slid_card_text">
-                          <p class="card_d_text">{title}</p>
+                          <p class="card_d_text">{item.title[selectedLanguage]}</p>
                         </div>
                       </div>
                     </Link>

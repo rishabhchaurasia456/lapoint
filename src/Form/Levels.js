@@ -171,14 +171,14 @@ const Levels = () => {
             </div>
 
             <form onSubmit={handleNext} >
-              <h5 className='level_heading'>Choose duration</h5>
+              <h5 className='level_heading2'>Choose duration</h5>
               {/* Dropdown for selecting the duration */}
               <select className="form-control w-100 p-3" id="duration" onChange={handleDurationChange} value={selectedDuration} required>
                 <option>1 week</option>
                 <option>10 Days</option>
                 <option>2 weeks</option>
               </select>
-              <h5 className='level_heading'>Choose one package per traveller</h5>
+              <h5 className='level_heading2'>Choose one package per traveller</h5>
               {/* <div className="container-fluid">
                 {levels.map((item, index) => (
                   <div className="row form_crd_row mt-4" key={index}>
