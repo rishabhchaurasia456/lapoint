@@ -38,14 +38,14 @@ const Trip = ({ selectedLanguage }) => {
             {/* Video section */}
             <div className="video-container">
                 {trip?.vedio && (
-                    <video key={trip.vedio} autoPlay loop muted className="background-video">
-                        <source src={trip.vedio} type="video/mp4"  loading="lazy"/>
+                    <video autoPlay loop muted className="background-video">
+                        <source src={trip.vedio} type="video/mp4" loading="lazy" />
                         Your browser does not support the video tag.
                     </video>
                 )}
             </div>
 
-                {/* Conditionally render the tab buttons based on the available data */}
+            {/* Conditionally render the tab buttons based on the available data */}
             <div className="container">
                 <div class="row">
                     <div class="col ">{/* tab_scroll class for scroll bar */}
@@ -123,9 +123,46 @@ const Trip = ({ selectedLanguage }) => {
                 </div>
 
                 <div>
-                <Booking tripName={trip_name}/>
+                    <div className="container-fluid">
+                        <div className="row">
+                            {trip?.alltabs && (
+                                <div className="container-fluid">
+                                    <div className="row">
+                                        {/* Highlights/Inclusions Section */}
+                                        {trip.alltabs.highlight && (
+                                            <>
+                                                <h2 className='text-center'>Highlights/Inclusions</h2>
+                                                {trip.alltabs.highlight.map((items, index) => (
+                                                    <p className='px-5' key={index}>{items.text[selectedLanguage] || 'No translation available'}</p>
+                                                ))}
+                                            </>
+                                        )}
+                                        {/* Questions Section */}
+                                        {trip.alltabs.question && (
+                                            <>
+                                                <h2 className='text-center'>Do you have questions? We have answers!</h2>
+                                                {trip.alltabs.question.map((items, index) => (
+                                                    <div key={index}>
+                                                        <details className='px-5' key={index}>
+                                                            <summary className='p_faq'>{items.title[selectedLanguage] || 'No translation available'}</summary>
+                                                            <div className="p_faq__content fs-5 mb-2">
+                                                                <p>{items.para[selectedLanguage] || 'No translation available'}</p>
+                                                            </div>
+                                                        </details>
+                                                    </div>
+                                                ))}
+                                            </>
+                                        )}
+                                    </div>
+                                </div>
+                            )}
+                        </div>
+                    </div>
+                    <Booking tripName={trip_name} />
+
+                </div>
+
                 
-            </div>
             </div>
         </div>
     );
