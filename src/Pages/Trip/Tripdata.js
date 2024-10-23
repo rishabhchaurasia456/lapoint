@@ -229,6 +229,140 @@ const trips = [
     {
         name: 'vanlife',
         vedio: vanlife_vedio,
+
+        alltabs: {
+            highlight: [
+                {
+                    text: {
+                        en: "Join an awesome #vanlife #kite community",
+                        gr: "Schließe dich einer großartigen #vanlife #kite Gemeinschaft an",
+                        du: "Sluit je aan bij een geweldige #vanlife #kite community"
+                    }
+                },
+                {
+                    text: {
+                        en: "Unique road trip through Europe along the best kitespots",
+                        gr: "Einzigartige Roadtrip durch Europa entlang der besten Kitespots",
+                        du: "Unieke roadtrip door Europa langs de beste kitespots"
+                    }
+                },
+                {
+                    text: {
+                        en: "We find the best weather conditions, success is guaranteed!",
+                        gr: "Wir finden die besten Wetterbedingungen, Erfolg ist garantiert!",
+                        du: "Wij vinden de beste weersomstandigheden, succes gegarandeerd!"
+                    }
+                },
+                {
+                    text: {
+                        en: "No stress, we take care of everything!",
+                        gr: "Kein Stress, wir kümmern uns um alles!",
+                        du: "Geen stress, wij regelen alles!"
+                    }
+                },
+                {
+                    text: {
+                        en: "100% Fun guaranteed",
+                        gr: "100% Spaß garantiert",
+                        du: "100% plezier gegarandeerd"
+                    }
+                },
+                {
+                    text: {
+                        en: "Progression guaranteed",
+                        gr: "Fortschritt garantiert",
+                        du: "Vooruitgang gegarandeerd"
+                    }
+                },
+            ],
+            question: [
+                {
+                    title: {
+                        en: "What lesson package should I choose?",
+                        gr: "Welches Unterrichtspaket soll ich wählen?",
+                        du: "Welk lespakket moet ik kiezen?"
+                    },
+                    para: {
+                        en: "Send us an e-mail or contact us via chat and leave your phone number and we will give you extensive advice!",
+                        gr: "Sende uns eine E-Mail oder kontaktiere uns über den Chat und hinterlasse deine Telefonnummer, und wir geben dir umfassende Beratung!",
+                        du: "Stuur ons een e-mail of neem contact met ons op via de chat en laat je telefoonnummer achter en wij geven je uitgebreid advies!"
+                    }
+                },
+                {
+                    title: {
+                        en: "How is the group?",
+                        gr: "Wie ist die Gruppe?",
+                        du: "Hoe is de groep?"
+                    },
+                    para: {
+                        en: "Our groups can vary from young to old, and are often evenly distributed with both men and women. The group usually consists of ages between 20 and 45, with exceptions of course. We teach beginners and give tips to advanced kitesurfers, so you can expect every level from us. We also often offer group activities that you can participate in without obligation. On some trips you may share a large room with other KiteActive guests, but this will be indicated. You can often contact us in advance via our Facebook events or see via the WhatsApp group which people will be present on the trip.",
+                        gr: "Unsere Gruppen können von jung bis alt variieren und sind oft gleichmäßig auf Männer und Frauen verteilt. Die Gruppe besteht in der Regel aus Teilnehmern zwischen 20 und 45 Jahren, mit Ausnahmen natürlich. Wir unterrichten Anfänger und geben fortgeschrittenen Kitesurfern Tipps, also kannst du bei uns jedes Niveau erwarten. Wir bieten auch oft Gruppenaktivitäten an, an denen du unverbindlich teilnehmen kannst. Auf einigen Reisen kannst du ein großes Zimmer mit anderen KiteActive-Gästen teilen, aber das wird angegeben. Oft kannst du uns im Voraus über unsere Facebook-Events kontaktieren oder über die WhatsApp-Gruppe sehen, welche Personen auf der Reise dabei sein werden.",
+                        du: "Onze groepen kunnen variëren van jong tot oud en zijn vaak gelijkmatig verdeeld tussen mannen en vrouwen. De groep bestaat meestal uit leeftijden tussen 20 en 45, met natuurlijk uitzonderingen. We leren beginners en geven tips aan gevorderde kitesurfers, dus je kunt elk niveau van ons verwachten. We bieden ook vaak groepsactiviteiten aan waaraan je vrijblijvend kunt deelnemen. Op sommige trips kun je een grote kamer delen met andere KiteActive-gasten, maar dit wordt aangegeven. Je kunt ons vaak van tevoren via onze Facebook-evenementen contacteren of via de WhatsApp-groep zien welke mensen aanwezig zullen zijn op de trip."
+                    }
+                },
+                {
+                    title: {
+                        en: "For which level?",
+                        gr: "Für welches Niveau?",
+                        du: "Voor welk niveau?"
+                    },
+                    para: {
+                        en: "For all levels! From beginner to advanced, you can enjoy and train on this lagoon.",
+                        gr: "Für alle Niveaus! Vom Anfänger bis zum Fortgeschrittenen kannst du diese Lagune genießen und trainieren.",
+                        du: "Voor alle niveaus! Van beginner tot gevorderde, je kunt genieten en trainen op deze lagune."
+                    }
+                },
+                {
+                    title: {
+                        en: "How is the wind? What kite material is needed?",
+                        gr: "Wie ist der Wind? Welches Kite-Material wird benötigt?",
+                        du: "Hoe is de wind? Welk kite-materiaal is nodig?"
+                    },
+                    para: {
+                        en: "Normally the wind blows 13 to 30 knots so the golden rule is to bring all sizes of kites!",
+                        gr: "Normalerweise weht der Wind mit 13 bis 30 Knoten, also lautet die goldene Regel: Bringe alle Kite-Größen mit!",
+                        du: "Normaal gesproken waait de wind 13 tot 30 knopen, dus de gouden regel is: neem alle maten kites mee!"
+                    }
+                },
+                {
+                    title: {
+                        en: "Where do we go? How far are we going to drive?",
+                        gr: "Wohin gehen wir? Wie weit werden wir fahren?",
+                        du: "Waar gaan we heen? Hoe ver gaan we rijden?"
+                    },
+                    para: {
+                        en: "This depends on the weather forecast. A few days before the trips start we will do an online meeting where we discuss all the options with our weather experts. We will make sure we travel in the right direction to chase the best conditions! The amount of KM we drive during this trip is changing from 500-3000 km.",
+                        gr: "Das hängt von der Wettervorhersage ab. Ein paar Tage vor Beginn der Reisen werden wir ein Online-Meeting abhalten, bei dem wir alle Optionen mit unseren Wetterexperten besprechen. Wir sorgen dafür, dass wir in die richtige Richtung reisen, um die besten Bedingungen zu finden! Die Anzahl der Kilometer, die wir während dieser Reise fahren, variiert zwischen 500 und 3000 km.",
+                        du: "Dit hangt af van de weersvoorspelling. Enkele dagen voor de reis begint, houden we een online meeting waarin we alle opties bespreken met onze weerexperts. We zorgen ervoor dat we in de juiste richting reizen om de beste omstandigheden te vinden! Het aantal kilometers dat we tijdens deze trip afleggen varieert van 500 tot 3000 km."
+                    }
+                },
+                {
+                    title: {
+                        en: "How much are the extra costs?",
+                        gr: "Wie hoch sind die zusätzlichen Kosten?",
+                        du: "Hoeveel zijn de extra kosten?"
+                    },
+                    para: {
+                        en: "For gasoline and toll, it is between € 150-700. For camping (when we don't stay in unique, free off-grid places) around € 10-25 / night. For food and drinks you can budget roughly around € 20-40 / day.",
+                        gr: "Für Benzin und Maut sind es zwischen 150-700 €. Für Camping (wenn wir nicht an einzigartigen, kostenlosen Off-Grid-Orten bleiben) etwa 10-25 € / Nacht. Für Essen und Trinken kannst du grob mit 20-40 € / Tag rechnen.",
+                        du: "Voor benzine en tol is het tussen de € 150-700. Voor kamperen (wanneer we niet verblijven op unieke, gratis off-grid locaties) ongeveer € 10-25 / nacht. Voor eten en drinken kun je grofweg rekenen op € 20-40 / dag."
+                    }
+                },
+                {
+                    title: {
+                        en: "Are we going off-grid?",
+                        gr: "Werden wir off-grid gehen?",
+                        du: "Gaan we off-grid?"
+                    },
+                    para: {
+                        en: "Yes, we try to sleep a few nights in amazing places where you don't have to pay anything!",
+                        gr: "Ja, wir versuchen, ein paar Nächte an fantastischen Orten zu schlafen, wo du nichts bezahlen musst!",
+                        du: "Ja, we proberen een paar nachten te slapen op geweldige plekken waar je niets hoeft te betalen!"
+                    }
+                }
+            ]
+        },
+
         overview: {
             trip_heading: {
                 en: "Discover the Vanlife Roadtrip: A European Journey for Kitesurfers",
@@ -1097,7 +1231,7 @@ const trips = [
             },
         ],
 
-        // reviews: {}
+        // reviews: {} 
 
     },
 
@@ -1108,6 +1242,140 @@ const trips = [
     {
         name: 'Zanzibar',
         vedio: Zanzibar_vedio,
+
+        alltabs: {
+            highlight: [
+                {
+                    text: {
+                        en: "Stay at our beachside KiteActive hotel, just steps from the best kitespots.The perfect beginner spot with huge lagoon and shallow water",
+                        gr: "",
+                        du: ""
+                    }
+                },
+                {
+                    text: {
+                        en: "Expert Guidance: Learn or progress with our experienced instructors in a stunning, safe environment.",
+                        gr: "",
+                        du: ""
+                    }
+                },
+                {
+                    text: {
+                        en: "Community Vibes Connect with like-minded kiters and make lifelong friends on an adventure-filled holiday.",
+                        gr: "",
+                        du: ""
+                    }
+                },
+                {
+                    text: {
+                        en: "Seamless Experience We take care of everything—from accommodation to daily activities—so you can focus on kiting and having fun!",
+                        gr: "",
+                        du: ""
+                    }
+                },
+
+            ],
+            question: [
+                {
+                    title: {
+                        en: "What equipment should I take with me to Zanzibar?",
+                        gr: "",
+                        du: ""
+                    },
+                    para: {
+                        en: "Always try to take large sizes with you and, if you can choose, a larger board. The ideal kite set for an average weight of 75kg is a 15-12-9 m2 with a 140 board. Skimboards, strapless boards and foils are really cool toys in Zanzibar!",
+                        gr: "",
+                        du: "",
+                    }
+                },
+                {
+                    title: {
+                        en: "What is the wind like in Zanzibar?",
+                        gr: "",
+                        du: ""
+                    },
+                    para: {
+                        en: "The wind on Zanzibar is a much discussed topic in the kite world. The wind seasons are from June to September and from December to early March. Every season is different on Zanzibar, we have experienced seasons when you were working hard every day on your 9m2, but also seasons when we had no wind for a number of days or only for large kites (14m2 +). It remains a sport that depends on mother nature, but in general you will certainly enjoy jet kitesurfing!!!!!",
+                        gr: "",
+                        du: "",
+                    }
+                },
+                {
+                    title: {
+                        en: "Are vaccinations necessary?",
+                        gr: "",
+                        du: ""
+                    },
+                    para: {
+                        en: "Make sure you have completed all vaccinations with your doctor. If you come from the EU, a yellow fever vaccine is not mandatory, but it is if you come from other destinations. Regardless of length of stay, the following vaccinations are recommended for Tanzania: vaccination against DTP (Diphtheria, Tetanus and Polio), vaccination against hepatitis A (contagious jaundice) and a yellow fever vaccination. If you have not had measles or a measles vaccination, an MMR vaccination is recommended for Tanzania. tip: Make an appointment early with the local GGD or GP (some vaccinations need a week before they work). More information can be found athttp://www.vaccinatiesopreis.nl/inentingen-tanzania/",
+                        gr: "",
+                        du: "",
+                    }
+                },
+                {
+                    title: {
+                        en: "Do I need a VISA?",
+                        gr: "",
+                        du: ""
+                    },
+                    para: {
+                        en: "Yes, but you have to buy this at the airport for $50. So always make sure you have enough dollars with you when you arrive at the airport. This saves you a lot of time.",
+                        gr: "",
+                        du: "",
+                    }
+                },
+                {
+                    title: {
+                        en: "How can I book?",
+                        gr: "",
+                        du: ""
+                    },
+                    para: {
+                        en: "You can book online without obligation via this link. Booking a trip with us is very easy. Just send us one message, phone call, whatsapp or send a carrier pigeon that you want to come with and we will arrange the rest. As soon as you book, we will reserve a place for you for a trip of up to 10 days. Once the deposit has been transferred (40% of the total amount), you can be sure that you will be there! You can still travel up to 2 days after your booking free cancel, after which you will be charged.",
+                        gr: "",
+                        du: "",
+                    }
+                },
+                {
+                    title: {
+                        en: "What is the group composition on Zanzibar?",
+                        gr: "",
+                        du: ""
+                    },
+                    para: {
+                        en: "Our groups can vary from young to old, and are often evenly distributed with both men and women. The group usually consists of ages between 20 and 50, with exceptions of course. We teach beginners and give tips to advanced kitesurfers, so you can expect every level from us. We also often offer group activities that you can participate in without obligation. On some trips you may share a large room with other KiteActive guests, but this will be indicated. You can often see in advance via our WhatsApp group which people will be present on the trip. Because this is our very first own Guesthouse, the groups are larger than normal. People from other countries can also stay in our guesthouse.",
+                        gr: "",
+                        du: "",
+                    }
+                },
+                {
+                    title: {
+                        en: "Do you also arrange the flight?",
+                        gr: "",
+                        du: ""
+                    },
+                    para: {
+                        en: "In principle no, we mainly give advice on which flight is best to book! You fly to Stone Town, Zanzibar city (ZNZ). After landing, it is another hour's drive to the end point, Paje. Tui flies direct for good prices, don't forget to look via Brussels because that can make a big difference. We further recommend that Skyscanner to check for your best flight. Would you rather have KiteActive arrange everything? No problem. Enter your dates, budget, etc. preferences (travel duration/leg space/transfers) by email and we will book the best flight for you for a €50 booking fee.",
+                        gr: "",
+                        du: "",
+                    }
+                },
+                {
+                    title: {
+                        en: "Is there more to do besides kitesurfing?",
+                        gr: "",
+                        du: ""
+                    },
+                    para: {
+                        en: "In addition to kite surfing, Paje is a perfect place to learn how to dive or chill on the beach. In the evening you can always have a drink with fellow kite surfers in one of the local bars. For example, there is a big beach party every Friday evening at the Jambo bar and fun parties are regularly held at the nearby resorts. There are plenty of activities and things to see on the island. Our team will make sure you will not be bored",
+                        gr: "",
+                        du: "",
+                    }
+                },
+            ]
+        },
+
+
         overview: {
             trip_heading: {
                 en: "Kitesurf heaven on earth",
@@ -1969,6 +2237,116 @@ const trips = [
     {
         name: 'Snowkite',
         vedio: Snowkite_vedio,
+
+
+        alltabs: {
+            highlight: [
+                {
+                    text: {
+                        en: "Stay at our beachside KiteActive hotel, just steps from the best kitespots. The perfect beginner spot with huge lagoon and shallow water",
+                        gr: "Übernachten Sie in unserem KiteActive-Hotel am Strand, nur wenige Schritte von den besten Kitespots entfernt. Der perfekte Ort für Anfänger mit einer großen Lagune und flachem Wasser",
+                        du: "Verblijf in ons KiteActive-hotel aan het strand, op slechts een paar stappen van de beste kitespots. De perfecte plek voor beginners met een grote lagune en ondiep water"
+                    }
+                },
+                {
+                    text: {
+                        en: "Expert Guidance: Learn or progress with our experienced instructors in a stunning, safe environment.",
+                        gr: "Expertenanleitung: Lernen oder machen Sie Fortschritte mit unseren erfahrenen Lehrern in einer atemberaubenden, sicheren Umgebung.",
+                        du: "Expertbegeleiding: Leer of vorder met onze ervaren instructeurs in een prachtige, veilige omgeving."
+                    }
+                },
+                {
+                    text: {
+                        en: "Community Vibes: Connect with like-minded kiters and make lifelong friends on an adventure-filled holiday.",
+                        gr: "Gemeinschaftsgefühl: Knüpfen Sie Kontakte mit gleichgesinnten Kitern und schließen Sie lebenslange Freundschaften auf einem abenteuerlichen Urlaub.",
+                        du: "Gemeenschapsgevoel: Verbind met gelijkgestemde kiters en maak levenslange vrienden tijdens een avontuurlijke vakantie."
+                    }
+                },
+                {
+                    text: {
+                        en: "Seamless Experience: We take care of everything—from accommodation to daily activities—so you can focus on kiting and having fun!",
+                        gr: "Nahtloses Erlebnis: Wir kümmern uns um alles – von der Unterkunft bis zu den täglichen Aktivitäten – damit Sie sich aufs Kiten und Spaßhaben konzentrieren können!",
+                        du: "Naadloze ervaring: Wij zorgen voor alles - van accommodatie tot dagelijkse activiteiten - zodat jij je kunt concentreren op kiten en plezier maken!"
+                    }
+                }
+            ],
+            question: [
+                {
+                    title: {
+                        en: "What equipment should I take with me to Zanzibar?",
+                        gr: "Welche Ausrüstung sollte ich nach Sansibar mitnehmen?",
+                        du: "Welke uitrusting moet ik meenemen naar Zanzibar?"
+                    },
+                    para: {
+                        en: "Always try to take large sizes with you and, if you can choose, a larger board. The ideal kite set for an average weight of 75kg is a 15-12-9 m2 with a 140 board. Skimboards, strapless boards and foils are really cool toys in Zanzibar!",
+                        gr: "Versuchen Sie immer, große Größen mitzunehmen und, wenn möglich, ein größeres Board zu wählen. Das ideale Kite-Set für ein Durchschnittsgewicht von 75 kg ist ein 15-12-9 m2 mit einem 140er Board. Skimboards, strapless Boards und Foils sind in Sansibar wirklich coole Spielzeuge!",
+                        du: "Probeer altijd grote maten mee te nemen en, als je kunt kiezen, een groter board. De ideale kite set voor een gemiddeld gewicht van 75 kg is een 15-12-9 m2 met een 140 board. Skimboards, strapless boards en foils zijn echt coole speeltjes in Zanzibar!"
+                    }
+                },
+                {
+                    title: {
+                        en: "What is the wind like in Zanzibar?",
+                        gr: "Wie ist der Wind auf Sansibar?",
+                        du: "Hoe is de wind op Zanzibar?"
+                    },
+                    para: {
+                        en: "The wind on Zanzibar is a much discussed topic in the kite world. The wind seasons are from June to September and from December to early March. Every season is different on Zanzibar, we have experienced seasons when you were working hard every day on your 9m2, but also seasons when we had no wind for a number of days or only for large kites (14m2 +). It remains a sport that depends on mother nature, but in general you will certainly enjoy jet kitesurfing!!!!!",
+                        gr: "Der Wind auf Sansibar ist ein viel diskutiertes Thema in der Kite-Welt. Die Windsaison dauert von Juni bis September und von Dezember bis Anfang März. Jede Saison ist anders auf Sansibar. Wir haben Saisons erlebt, in denen man jeden Tag mit seinem 9m2-Kite hart arbeiten musste, aber auch Saisons, in denen es einige Tage keinen Wind gab oder nur große Kites (14m2 +) gebraucht wurden. Es bleibt ein Sport, der von Mutter Natur abhängt, aber im Allgemeinen wirst du das Jet-Kitesurfen auf jeden Fall genießen!!!!!",
+                        du: "De wind op Zanzibar is een veelbesproken onderwerp in de kitesurfwereld. De windseizoenen zijn van juni tot september en van december tot begin maart. Elk seizoen is anders op Zanzibar, we hebben seizoenen meegemaakt waarin je elke dag hard moest werken met je 9m2, maar ook seizoenen waarin we een aantal dagen geen wind hadden of alleen voor grote kites (14m2 +). Het blijft een sport die afhankelijk is van moeder natuur, maar in het algemeen zul je zeker genieten van jet kitesurfen!!!!!"
+                    }
+                },
+                {
+                    title: {
+                        en: "Are vaccinations necessary?",
+                        gr: "Sind Impfungen notwendig?",
+                        du: "Zijn vaccinaties noodzakelijk?"
+                    },
+                    para: {
+                        en: "Make sure you have completed all vaccinations with your doctor. If you come from the EU, a yellow fever vaccine is not mandatory, but it is if you come from other destinations. Regardless of length of stay, the following vaccinations are recommended for Tanzania: vaccination against DTP (Diphtheria, Tetanus and Polio), vaccination against hepatitis A (contagious jaundice) and a yellow fever vaccination. If you have not had measles or a measles vaccination, an MMR vaccination is recommended for Tanzania.",
+                        gr: "Stellen Sie sicher, dass Sie alle Impfungen mit Ihrem Arzt abgeschlossen haben. Wenn Sie aus der EU kommen, ist eine Gelbfieberimpfung nicht obligatorisch, aber sie ist erforderlich, wenn Sie aus anderen Ländern kommen. Unabhängig von der Aufenthaltsdauer werden für Tansania die folgenden Impfungen empfohlen: Impfung gegen DTP (Diphtherie, Tetanus und Polio), Impfung gegen Hepatitis A (ansteckende Gelbsucht) und eine Gelbfieberimpfung. Wenn Sie keine Masern hatten oder keine Masernimpfung erhalten haben, wird eine MMR-Impfung für Tansania empfohlen.",
+                        du: "Zorg ervoor dat je alle vaccinaties hebt voltooid bij je arts. Als je uit de EU komt, is een gele koorts vaccinatie niet verplicht, maar wel als je uit andere bestemmingen komt. Ongeacht de verblijfsduur worden de volgende vaccinaties aanbevolen voor Tanzania: vaccinatie tegen DTP (Difterie, Tetanus en Polio), vaccinatie tegen hepatitis A (besmettelijke geelzucht) en een gele koorts vaccinatie. Als je geen mazelen hebt gehad of geen mazelen vaccinatie hebt ontvangen, wordt een BMR-vaccinatie aanbevolen voor Tanzania."
+                    }
+                },
+                {
+                    title: {
+                        en: "Do I need a VISA?",
+                        gr: "Benötige ich ein Visum?",
+                        du: "Heb ik een visum nodig?"
+                    },
+                    para: {
+                        en: "Yes, but you have to buy this at the airport for $50. So always make sure you have enough dollars with you when you arrive at the airport. This saves you a lot of time.",
+                        gr: "Ja, aber Sie müssen es am Flughafen für 50 Dollar kaufen. Stellen Sie also sicher, dass Sie genügend Dollar bei sich haben, wenn Sie am Flughafen ankommen. Das spart Ihnen viel Zeit.",
+                        du: "Ja, maar je moet dit op de luchthaven kopen voor $50. Zorg er dus voor dat je genoeg dollars bij je hebt wanneer je op de luchthaven aankomt. Dit bespaart je veel tijd."
+                    }
+                },
+                {
+                    title: {
+                        en: "How can I book?",
+                        gr: "Wie kann ich buchen?",
+                        du: "Hoe kan ik boeken?"
+                    },
+                    para: {
+                        en: "You can book online without obligation via this link. Booking a trip with us is very easy. Just send us one message, phone call, WhatsApp or send a carrier pigeon that you want to come with and we will arrange the rest.",
+                        gr: "Sie können unverbindlich online über diesen Link buchen. Eine Reise mit uns zu buchen ist sehr einfach. Schicken Sie uns einfach eine Nachricht, einen Anruf, WhatsApp oder eine Brieftaube, dass Sie mitkommen möchten, und wir erledigen den Rest.",
+                        du: "Je kunt online vrijblijvend boeken via deze link. Een reis met ons boeken is heel eenvoudig. Stuur ons gewoon een bericht, telefoontje, WhatsApp of stuur een postduif dat je mee wilt en wij regelen de rest."
+                    }
+                },
+                {
+                    title: {
+                        en: "Is there more to do besides kitesurfing?",
+                        gr: "Gibt es neben Kitesurfen noch mehr zu tun?",
+                        du: "Is er meer te doen naast kitesurfen?"
+                    },
+                    para: {
+                        en: "In addition to kitesurfing, Paje is a perfect place to learn how to dive or chill on the beach.",
+                        gr: "Neben dem Kitesurfen ist Paje der perfekte Ort, um tauchen zu lernen oder am Strand zu entspannen.",
+                        du: "Naast kitesurfen is Paje de perfecte plek om te leren duiken of te ontspannen op het strand."
+                    }
+                }
+            ]
+        },
+
+
         overview: {
             trip_heading: {
                 en: "Snowkite Fever weekends in Feldberg",
@@ -2937,6 +3315,96 @@ const trips = [
     {
         name: 'skyCapTown',
         vedio: skyCapTown_vedio,
+
+        alltabs: {
+            highlight: [
+                {
+                    text: {
+                        en: "Progress with professional coaches",
+                        gr: "Fortschritte mit professionellen Trainern",
+                        du: "Vooruitgang met professionele coaches"
+                    }
+                },
+                {
+                    text: {
+                        en: "Amazing downwinders and day adventures",
+                        gr: "Erstaunliche Downwinder und Tagesabenteuer",
+                        du: "Geweldige downwinders en dagavonturen"
+                    }
+                },
+                {
+                    text: {
+                        en: "Delicious food",
+                        gr: "Leckeres Essen",
+                        du: "Heerlijk eten"
+                    }
+                },
+                {
+                    text: {
+                        en: "Explore new places and kitespots with the KiteActive crew",
+                        gr: "Entdecke neue Orte und Kitespots mit der KiteActive-Crew",
+                        du: "Ontdek nieuwe plekken en kitespots met de KiteActive-crew"
+                    }
+                },
+                {
+                    text: {
+                        en: "Optional cultural activities (hiking/ wine tasting/ Cape of Good Hope/ etc..)",
+                        gr: "Optionale kulturelle Aktivitäten (Wandern/ Weinprobe/ Kap der Guten Hoffnung/ usw.)",
+                        du: "Optionele culturele activiteiten (wandelen/ wijnproeven/ Kaap de Goede Hoop/ etc..)"
+                    }
+                }
+            ],
+            question: [
+                {
+                    title: {
+                        en: "How is the group?",
+                        gr: "Wie ist die Gruppe?",
+                        du: "Hoe is de groep?"
+                    },
+                    para: {
+                        en: "Unfortunately not. But we will give you the best advice to make sure you book the correct flight tickets.",
+                        gr: "Leider nicht. Aber wir geben dir die besten Tipps, damit du die richtigen Flugtickets buchst.",
+                        du: "Helaas niet. Maar we geven je het beste advies om ervoor te zorgen dat je de juiste vliegtickets boekt."
+                    }
+                },
+                {
+                    title: {
+                        en: "Do you also arrange flights?",
+                        gr: "Organisiert ihr auch Flüge?",
+                        du: "Regelen jullie ook vluchten?"
+                    },
+                    para: {
+                        en: "Unfortunately not. But we will give you the best advice to make sure you book the correct flight tickets.",
+                        gr: "Leider nicht. Aber wir geben dir die besten Tipps, damit du die richtigen Flugtickets buchst.",
+                        du: "Helaas niet. Maar we geven je het beste advies om ervoor te zorgen dat je de juiste vliegtickets boekt."
+                    }
+                },
+                {
+                    title: {
+                        en: "How is the wind? What kite material is needed?",
+                        gr: "Wie ist der Wind? Welches Kitematerial wird benötigt?",
+                        du: "Hoe is de wind? Welk kitemateriaal is nodig?"
+                    },
+                    para: {
+                        en: "Normally the wind blows 13 to 30 knots so the golden rule bring all sizes of kites!",
+                        gr: "Normalerweise weht der Wind mit 13 bis 30 Knoten, also lautet die goldene Regel: Bringe alle Größen von Kites mit!",
+                        du: "Normaal gesproken waait de wind 13 tot 30 knopen, dus de gouden regel: neem alle maten kites mee!"
+                    }
+                },
+                {
+                    title: {
+                        en: "Can I easily bring a boardbag?",
+                        gr: "Kann ich problemlos eine Boardtasche mitbringen?",
+                        du: "Kan ik gemakkelijk een boardtas meenemen?"
+                    },
+                    para: {
+                        en: "Yes! If you fly with KLM you can easily add an extra piece of luggage to your reservation.",
+                        gr: "Ja! Wenn du mit KLM fliegst, kannst du problemlos ein zusätzliches Gepäckstück zu deiner Reservierung hinzufügen.",
+                        du: "Ja! Als je met KLM vliegt, kun je gemakkelijk een extra stuk bagage toevoegen aan je reservering."
+                    }
+                }
+            ]
+        },
         overview: {
             trip_heading: {
                 en: "Skyhigh in Cape Town: Elite Kitesurfing Experience in Cape Town",
@@ -3784,6 +4252,116 @@ const trips = [
     {
         name: 'KitemeccaTraifa',
         vedio: KitemeccaTraifa_vedio,
+
+        alltabs: {
+            highlight: [
+                {
+                    text: {
+                        en: "Amazing kitesurf conditions",
+                        gr: "Fantastische Kitesurf-Bedingungen",
+                        du: "Geweldige kitesurf omstandigheden"
+                    }
+                },
+                {
+                    text: {
+                        en: "100% Fun guaranteed",
+                        gr: "100% Spaß garantiert",
+                        du: "100% plezier gegarandeerd"
+                    }
+                },
+                {
+                    text: {
+                        en: "Progression guaranteed",
+                        gr: "Fortschritt garantiert",
+                        du: "Vooruitgang gegarandeerd"
+                    }
+                },
+                {
+                    text: {
+                        en: "Optional cultural activities",
+                        gr: "Optionale kulturelle Aktivitäten",
+                        du: "Optionele culturele activiteiten"
+                    }
+                }
+            ],
+            question: [
+                {
+                    title: {
+                        en: "What lesson package should I choose?",
+                        gr: "Welches Unterrichtspaket sollte ich wählen?",
+                        du: "Welk lespakket moet ik kiezen?"
+                    },
+                    para: {
+                        en: "Send us an e-mail or contact us via chat and leave your phone number and we will give you extensive advice!",
+                        gr: "Sende uns eine E-Mail oder kontaktiere uns über den Chat und hinterlasse deine Telefonnummer, und wir werden dir umfassende Beratung geben!",
+                        du: "Stuur ons een e-mail of neem contact met ons op via chat en laat je telefoonnummer achter, dan geven wij je uitgebreid advies!"
+                    }
+                },
+                {
+                    title: {
+                        en: "How is the group?",
+                        gr: "Wie ist die Gruppe?",
+                        du: "Hoe is de groep?"
+                    },
+                    para: {
+                        en: "Our groups can vary from young to old, and are often evenly distributed with both men and women. The group usually consists of ages between 20 and 45, with exceptions of course. We teach beginners and give tips to advanced kitesurfers, so you can expect every level from us. We also often offer group activities that you can participate in without obligation. On some trips you may share a large room with other KiteActive guests, but this will be indicated. You can often contact us in advance via our Facebook events or see via the WhatsApp group which people will be present on the trip.",
+                        gr: "Unsere Gruppen können von jung bis alt variieren und sind oft gleichmäßig auf Männer und Frauen verteilt. Die Gruppe besteht normalerweise aus Menschen im Alter von 20 bis 45 Jahren, mit einigen Ausnahmen. Wir unterrichten Anfänger und geben fortgeschrittenen Kitesurfern Tipps, sodass du bei uns jedes Niveau erwarten kannst. Wir bieten auch oft Gruppenaktivitäten an, an denen du unverbindlich teilnehmen kannst. Bei einigen Reisen teilst du möglicherweise ein großes Zimmer mit anderen KiteActive-Gästen, aber dies wird vorher angegeben. Du kannst uns oft im Voraus über unsere Facebook-Events kontaktieren oder über die WhatsApp-Gruppe sehen, welche Personen an der Reise teilnehmen werden.",
+                        du: "Onze groepen kunnen variëren van jong tot oud en zijn vaak gelijk verdeeld tussen mannen en vrouwen. De groep bestaat meestal uit mensen tussen de 20 en 45 jaar, met natuurlijk enkele uitzonderingen. We leren beginners en geven tips aan gevorderde kitesurfers, dus je kunt van ons elk niveau verwachten. We bieden ook vaak groepsactiviteiten aan waar je vrijblijvend aan kunt deelnemen. Bij sommige reizen deel je mogelijk een grote kamer met andere KiteActive-gasten, maar dit wordt aangegeven. Je kunt ons vaak van tevoren contacteren via onze Facebook-evenementen of via de WhatsApp-groep zien welke mensen aanwezig zullen zijn op de reis."
+                    }
+                },
+                {
+                    title: {
+                        en: "Do you also arrange flights?",
+                        gr: "Organisiert ihr auch Flüge?",
+                        du: "Regelen jullie ook vluchten?"
+                    },
+                    para: {
+                        en: "Unfortunately not. But we will give you the best advice to make sure you book the correct flight tickets.",
+                        gr: "Leider nicht. Aber wir geben dir die besten Ratschläge, damit du die richtigen Flugtickets buchst.",
+                        du: "Helaas niet. Maar we geven je het beste advies om ervoor te zorgen dat je de juiste vliegtickets boekt."
+                    }
+                },
+                {
+                    title: {
+                        en: "For which level?",
+                        gr: "Für welches Niveau?",
+                        du: "Voor welk niveau?"
+                    },
+                    para: {
+                        en: "For all levels! From beginner to advanced, you can enjoy and train on this lagoon.",
+                        gr: "Für alle Niveaus! Vom Anfänger bis zum Fortgeschrittenen, du kannst auf dieser Lagune genießen und trainieren.",
+                        du: "Voor alle niveaus! Van beginner tot gevorderde, je kunt genieten en trainen op deze lagune."
+                    }
+                },
+                {
+                    title: {
+                        en: "How is the wind? What kite material is needed?",
+                        gr: "Wie ist der Wind? Welches Kitematerial wird benötigt?",
+                        du: "Hoe is de wind? Welk kite materiaal is nodig?"
+                    },
+                    para: {
+                        en: "Normally the wind blows 13 to 30 knots so the golden rule is to bring all sizes of kites!",
+                        gr: "Normalerweise weht der Wind mit 13 bis 30 Knoten, also lautet die goldene Regel: Bring alle Kitegrößen mit!",
+                        du: "Normaal gesproken waait de wind 13 tot 30 knopen, dus de gouden regel is om alle maten kites mee te nemen!"
+                    }
+                },
+                {
+                    title: {
+                        en: "Can I easily bring a boardbag?",
+                        gr: "Kann ich problemlos eine Boardtasche mitbringen?",
+                        du: "Kan ik gemakkelijk een boardbag meenemen?"
+                    },
+                    para: {
+                        en: "Yes! Royal Air Maroc gives you the chance to bring your boardbag of 23kg for free.",
+                        gr: "Ja! Royal Air Maroc gibt dir die Möglichkeit, deine 23kg-Boardtasche kostenlos mitzunehmen.",
+                        du: "Ja! Royal Air Maroc geeft je de kans om je boardbag van 23kg gratis mee te nemen."
+                    }
+                }
+            ]
+        },
+
+
+
         overview: {
             trip_heading: {
                 en: "Kite mecca Europe: Kitesurf in Tarifa",
@@ -4548,6 +5126,140 @@ const trips = [
     {
         name: 'EndlessSummerParty',
         vedio: EndlessSummerParty_vedio,
+
+        alltabs: {
+            highlight: [
+                {
+                    text: {
+                        en: "Een gigantische kitespot met alle ruimte",
+                        gr: "Ein riesiger Kitespot mit viel Platz",
+                        du: "Een gigantische kitespot met alle ruimte"
+                    }
+                },
+                {
+                    text: {
+                        en: "Je kunt overal staan, perfect voor beginners!",
+                        gr: "Du kannst überall stehen, perfekt für Anfänger!",
+                        du: "Je kunt overal staan, perfect voor beginners!"
+                    }
+                },
+                {
+                    text: {
+                        en: "Good food, all inclusive",
+                        gr: "Gutes Essen, alles inklusive",
+                        du: "Goed eten, alles inclusief"
+                    }
+                },
+                {
+                    text: {
+                        en: "Nice pool bar with delicious cocktails",
+                        gr: "Schöne Poolbar mit leckeren Cocktails",
+                        du: "Leuke poolbar met heerlijke cocktails"
+                    }
+                },
+                {
+                    text: {
+                        en: "Ideal conditions for learning and making progression",
+                        gr: "Ideale Bedingungen zum Lernen und Fortschritt machen",
+                        du: "Ideale omstandigheden om te leren en vooruitgang te boeken"
+                    }
+                },
+                {
+                    text: {
+                        en: "Awesome hotel",
+                        gr: "Tolles Hotel",
+                        du: "Geweldig hotel"
+                    }
+                },
+            ],
+            question: [
+                {
+                    title: {
+                        en: "How far is the accommodation from the kite spot",
+                        gr: "Wie weit ist die Unterkunft vom Kitespot entfernt?",
+                        du: "Hoe ver is de accommodatie van de kitespot?"
+                    },
+                    para: {
+                        en: "The kite spot is on your doorstep!",
+                        gr: "Der Kitespot ist direkt vor der Tür!",
+                        du: "De kitespot ligt voor de deur!"
+                    }
+                },
+                {
+                    title: {
+                        en: "What is the wind like and what material should I take with me?",
+                        gr: "Wie ist der Wind und welches Material sollte ich mitnehmen?",
+                        du: "Hoe is de wind en welk materiaal moet ik meenemen?"
+                    },
+                    para: {
+                        en: "On average the wind blows between 14 and 25 knots. So take all the kite sizes you have with you! Furthermore, a large board or a foil can sometimes come in handy in the mornings and a wave board is also recommended because there is also a beautiful wave spot!",
+                        gr: "Im Durchschnitt weht der Wind mit 14 bis 25 Knoten. Also nimm alle Kitegrößen mit, die du hast! Außerdem kann ein großes Board oder ein Foil am Morgen nützlich sein, und ein Waveboard wird auch empfohlen, da es auch einen wunderschönen Wavespot gibt!",
+                        du: "Gemiddeld waait de wind tussen de 14 en 25 knopen. Dus neem alle kite maten die je hebt mee! Verder kan een groot board of een foil soms handig zijn in de ochtend en een waveboard wordt ook aanbevolen omdat er ook een mooie wavespot is!"
+                    }
+                },
+                {
+                    title: {
+                        en: "How is the group?",
+                        gr: "Wie ist die Gruppe?",
+                        du: "Hoe is de groep?"
+                    },
+                    para: {
+                        en: "Our groups can vary from young to old, and are often evenly distributed with both men and women. The group usually consists of ages between 20 and 45, with exceptions of course. We teach beginners and give tips to advanced kitesurfers, so you can expect every level from us. We also often offer group activities that you can participate in without obligation. On some trips you may share a large room with other KiteActive guests, but this will be indicated. Click this link to join the official Whats-App group for Egypt in the KiteActive community.",
+                        gr: "Unsere Gruppen variieren von jung bis alt und sind oft gleichmäßig mit Männern und Frauen verteilt. Die Gruppe besteht normalerweise aus Personen im Alter von 20 bis 45 Jahren, mit Ausnahmen natürlich. Wir unterrichten Anfänger und geben fortgeschrittenen Kitesurfern Tipps, sodass du jedes Niveau bei uns erwarten kannst. Wir bieten auch oft Gruppenaktivitäten an, an denen du freiwillig teilnehmen kannst. Auf einigen Reisen teilst du möglicherweise ein großes Zimmer mit anderen KiteActive-Gästen, aber das wird vorher angegeben. Klicke auf diesen Link, um der offiziellen WhatsApp-Gruppe für Ägypten in der KiteActive-Community beizutreten.",
+                        du: "Onze groepen variëren van jong tot oud en zijn vaak gelijk verdeeld met zowel mannen als vrouwen. De groep bestaat meestal uit leeftijden tussen de 20 en 45, met natuurlijk uitzonderingen. We geven beginners les en geven tips aan gevorderde kitesurfers, dus je kunt elk niveau bij ons verwachten. We bieden ook vaak groepsactiviteiten aan waar je vrijblijvend aan kunt deelnemen. Tijdens sommige reizen deel je misschien een grote kamer met andere KiteActive-gasten, maar dat wordt aangegeven. Klik op deze link om lid te worden van de officiële WhatsApp-groep voor Egypte in de KiteActive-community."
+                    }
+                },
+                {
+                    title: {
+                        en: "How do I fly?",
+                        gr: "Wie fliege ich?",
+                        du: "Hoe vlieg ik?"
+                    },
+                    para: {
+                        en: "You fly into Hurghada airport. There are several airlines that fly here, but Transavia & Tui is a particular favorite.",
+                        gr: "Du fliegst zum Flughafen Hurghada. Es gibt mehrere Fluggesellschaften, die hierher fliegen, aber Transavia und Tui sind besonders beliebt.",
+                        du: "Je vliegt naar de luchthaven van Hurghada. Er zijn verschillende luchtvaartmaatschappijen die hier vliegen, maar Transavia en Tui zijn favoriet."
+                    }
+                },
+                {
+                    title: {
+                        en: "How long is the flight? And from Airport to the Kitevilla?",
+                        gr: "Wie lange dauert der Flug? Und vom Flughafen zur Kitevilla?",
+                        du: "Hoe lang is de vlucht? En van de luchthaven naar de Kitevilla?"
+                    },
+                    para: {
+                        en: "It is about a 5-hour flight from Amsterdam to Hurghada. From Hurghada, it is a 20-minute drive to the hotel.",
+                        gr: "Der Flug von Amsterdam nach Hurghada dauert etwa 5 Stunden. Von Hurghada aus sind es 20 Minuten Fahrt zum Hotel.",
+                        du: "Het is ongeveer een vlucht van 5 uur van Amsterdam naar Hurghada. Vanaf Hurghada is het 20 minuten rijden naar het hotel."
+                    }
+                },
+                {
+                    title: {
+                        en: "How is the nightlife?",
+                        gr: "Wie ist das Nachtleben?",
+                        du: "Hoe is het nachtleven?"
+                    },
+                    para: {
+                        en: "We are with a great group and we will make some awesome evenings together! 🙂",
+                        gr: "Wir sind mit einer großartigen Gruppe unterwegs und werden einige tolle Abende zusammen verbringen! 🙂",
+                        du: "We zijn met een geweldige groep en we gaan samen geweldige avonden beleven! 🙂"
+                    }
+                },
+                {
+                    title: {
+                        en: "I can't during this period",
+                        gr: "Ich kann in diesem Zeitraum nicht",
+                        du: "Ik kan niet in deze periode"
+                    },
+                    para: {
+                        en: "Sad!! Unfortunately, we only offer this event during this period. Fortunately, we have many other cool ones outside this period kitesurfing events and keep our Facebook Stay tuned to stay informed when new dates for Italy come online.",
+                        gr: "Schade!! Leider bieten wir dieses Event nur in diesem Zeitraum an. Zum Glück haben wir viele andere coole Kitesurfing-Events außerhalb dieses Zeitraums, und halte unsere Facebook-Seite im Auge, um informiert zu bleiben, wenn neue Termine für Italien online kommen.",
+                        du: "Jammer!! Helaas bieden we dit evenement alleen in deze periode aan. Gelukkig hebben we veel andere coole kitesurfing-evenementen buiten deze periode, en blijf onze Facebook-pagina volgen om op de hoogte te blijven wanneer nieuwe data voor Italië online komen."
+                    }
+                }
+            ]
+        },
+
         overview: {
             trip_heading: {
                 en: "Epic Egypt. The land of Pyramids, warm blue water and steady wind.",
@@ -5249,6 +5961,134 @@ const trips = [
     {
         name: 'Brazil',
         vedio: Brazil_vedio,
+
+        alltabs: {
+            highlight: [
+                {
+                    text: {
+                        en: "Travel with your kite along the most pristine locations",
+                        gr: "Reise mit deinem Kite zu den unberührtesten Orten",
+                        du: "Reis met je kite langs de meest ongerepte locaties"
+                    }
+                },
+                {
+                    text: {
+                        en: "Everyday wind",
+                        gr: "Täglicher Wind",
+                        du: "Elke dag wind"
+                    }
+                },
+                {
+                    text: {
+                        en: "100% fun guarantee",
+                        gr: "100% Spaßgarantie",
+                        du: "100% pleziergarantie"
+                    }
+                },
+                {
+                    text: {
+                        en: "Meet nice kiters with the same level",
+                        gr: "Treffe nette Kiter auf dem gleichen Level",
+                        du: "Ontmoet leuke kiters van hetzelfde niveau"
+                    }
+                },
+                {
+                    text: {
+                        en: "A professional team is ready to make as much progress as possible with you",
+                        gr: "Ein professionelles Team ist bereit, mit dir so viel Fortschritt wie möglich zu machen",
+                        du: "Een professioneel team staat klaar om zoveel mogelijk vooruitgang met je te boeken"
+                    }
+                }
+            ],
+            question: [
+                {
+                    title: {
+                        en: "Which kite material should I bring?",
+                        gr: "Welches Kitematerial sollte ich mitbringen?",
+                        du: "Welk kitemateriaal moet ik meenemen?"
+                    },
+                    para: {
+                        en: "The wind always blows at least 16 knots and often even harder around 20 knots. In the afternoon the wind sometimes decreases somewhat, so it is also good to take large sizes with you. the Golden rule: Bring all the kite sizes you have!!",
+                        gr: "Der Wind weht immer mindestens 16 Knoten, oft sogar stärker um 20 Knoten. Am Nachmittag lässt der Wind manchmal etwas nach, daher ist es auch gut, große Größen mitzunehmen. Die goldene Regel: Bringe alle Kitedimensionen mit, die du hast!!",
+                        du: "De wind waait altijd minimaal 16 knopen en vaak nog harder rond de 20 knopen. In de middag neemt de wind soms wat af, dus het is ook goed om grote maten mee te nemen. De gouden regel: Breng alle kitematen die je hebt mee!!"
+                    }
+                },
+                {
+                    title: {
+                        en: "When does the downwinder start?",
+                        gr: "Wann beginnt der Downwinder?",
+                        du: "Wanneer begint de downwinder?"
+                    },
+                    para: {
+                        en: "For the Chill & Adventure (& XXL) downwinders can be checked in at our KiteActive pousada on the relevant Saturday (~2:00 PM). Here we gather with the entire group, will eat a delicious meal that evening and the next morning (Sunday morning) we leave early with the downwinder to our first overnight location.",
+                        gr: "Für die Chill & Adventure (& XXL) Downwinder kannst du am betreffenden Samstag (~14:00 Uhr) in unserer KiteActive Pousada einchecken. Hier versammeln wir uns mit der gesamten Gruppe, essen an diesem Abend eine köstliche Mahlzeit und am nächsten Morgen (Sonntagmorgen) fahren wir früh mit dem Downwinder zu unserem ersten Übernachtungsort.",
+                        du: "Voor de Chill & Adventure (& XXL) downwinders kun je inchecken bij onze KiteActive pousada op de desbetreffende zaterdag (~14:00 uur). Hier verzamelen we met de hele groep, eten we een heerlijk diner en de volgende ochtend (zondagochtend) vertrekken we vroeg met de downwinder naar onze eerste overnachtingsplek."
+                    }
+                },
+                {
+                    title: {
+                        en: "For which level is this trip?",
+                        gr: "Für welches Niveau ist diese Reise?",
+                        du: "Voor welk niveau is deze reis?"
+                    },
+                    para: {
+                        en: "The chill downwinder for level 3 and the XXL & Adventure for level 4 Have done a downwinder at least once and be able to sail upwind independently and perform a self rescue.",
+                        gr: "Der Chill-Downwinder ist für Level 3, und der XXL & Adventure für Level 4. Du solltest mindestens einmal einen Downwinder gemacht haben, in der Lage sein, selbstständig gegen den Wind zu segeln und eine Selbstrettung durchzuführen.",
+                        du: "De chill downwinder is voor niveau 3 en de XXL & Adventure voor niveau 4. Je moet minstens één keer een downwinder hebben gedaan en zelfstandig tegen de wind in kunnen varen en een zelfredding kunnen uitvoeren."
+                    }
+                },
+                {
+                    title: {
+                        en: "Where does the downwinder end?",
+                        gr: "Wo endet der Downwinder?",
+                        du: "Waar eindigt de downwinder?"
+                    },
+                    para: {
+                        en: "Your downwinder ends at the final destination (Jericoacoara or Atins). Upon arrival, we will all enjoy a victory dinner, dance the night away and enjoy a delicious breakfast the next morning (this overnight stay is included). The next morning our drivers and supervisors will have to drive back to Cumbuco. You can decide for yourself whether you ride back with our crew (free of charge) or stay at the final destination.",
+                        gr: "Dein Downwinder endet am Ziel (Jericoacoara oder Atins). Bei der Ankunft genießen wir alle ein Siegesdinner, tanzen die Nacht durch und genießen am nächsten Morgen ein köstliches Frühstück (diese Übernachtung ist inbegriffen). Am nächsten Morgen müssen unsere Fahrer und Betreuer nach Cumbuco zurückfahren. Du kannst selbst entscheiden, ob du kostenlos mit unserer Crew zurückfährst oder am Zielort bleibst.",
+                        du: "Je downwinder eindigt op de eindbestemming (Jericoacoara of Atins). Bij aankomst genieten we allemaal van een overwinningsdiner, dansen we de hele nacht en de volgende ochtend genieten we van een heerlijk ontbijt (deze overnachting is inbegrepen). De volgende ochtend moeten onze chauffeurs en begeleiders terugrijden naar Cumbuco. Je kunt zelf beslissen of je met onze crew gratis terugrijdt of op de eindbestemming blijft."
+                    }
+                },
+                {
+                    title: {
+                        en: "Can I book extra nights?",
+                        gr: "Kann ich zusätzliche Nächte buchen?",
+                        du: "Kan ik extra nachten boeken?"
+                    },
+                    para: {
+                        en: "Yes no problem, discuss with our team and we will help you with anything you need!",
+                        gr: "Ja, kein Problem, sprich mit unserem Team und wir helfen dir bei allem, was du brauchst!",
+                        du: "Ja, geen probleem, bespreek het met ons team en we helpen je met alles wat je nodig hebt!"
+                    }
+                },
+                {
+                    title: {
+                        en: "Which flights are recommended?",
+                        gr: "Welche Flüge werden empfohlen?",
+                        du: "Welke vluchten worden aanbevolen?"
+                    },
+                    para: {
+                        en: "From Europe KLM is a good choice or FlyTAP. Roughly it will cost you between €800-1200 return.",
+                        gr: "Von Europa aus sind KLM oder FlyTAP eine gute Wahl. Ungefähr wird es dich zwischen 800-1200 € für Hin- und Rückflug kosten.",
+                        du: "Vanuit Europa zijn KLM of FlyTAP een goede keuze. Het kost je ongeveer tussen de €800-1200 voor een retour."
+                    }
+                },
+                {
+                    title: {
+                        en: "Can I sleep with my friend in the same room?",
+                        gr: "Kann ich mit meinem Freund im selben Zimmer schlafen?",
+                        du: "Kan ik met mijn vriend in dezelfde kamer slapen?"
+                    },
+                    para: {
+                        en: "Yes, please let us know during your booking and we will fix it!",
+                        gr: "Ja, lass es uns bitte bei der Buchung wissen, und wir regeln das!",
+                        du: "Ja, laat het ons weten tijdens je boeking en wij regelen het!"
+                    }
+                }
+            ]
+            ,
+        },
+
         overview: {
             trip_heading: {
                 en: "The land of salsa, football and.. WIND!",
@@ -5920,6 +6760,114 @@ const trips = [
     {
         name: 'Sail&kite',
         vedio: Sailkite_vedio,
+
+        alltabs: {
+            highlight: [
+                {
+                    text: {
+                        en: "1 of the most unique downwinders in the world",
+                        gr: "Einer der einzigartigsten Downwinder der Welt",
+                        du: "Een van de meest unieke downwinders ter wereld"
+                    }
+                },
+                {
+                    text: {
+                        en: "Kitesurf between seals, sandbanks & dolphins",
+                        gr: "Kitesurfen zwischen Robben, Sandbänken und Delfinen",
+                        du: "Kitesurfen tussen zeehonden, zandbanken en dolfijnen"
+                    }
+                },
+                {
+                    text: {
+                        en: "A real adventure for the advanced kiters",
+                        gr: "Ein echtes Abenteuer für die fortgeschrittenen Kiter",
+                        du: "Een echt avontuur voor de gevorderde kiters"
+                    }
+                },
+                {
+                    text: {
+                        en: "Explore Holland!",
+                        gr: "Erkunde Holland!",
+                        du: "Verken Nederland!"
+                    }
+                },
+            ],
+            question: [
+                {
+                    title: {
+                        en: "Can I go with any TV-TAS downwinder anyway?",
+                        gr: "Kann ich trotzdem mit einem beliebigen TV-TAS Downwinder mitfahren?",
+                        du: "Kan ik toch met elke TV-TAS downwinder meegaan?"
+                    },
+                    para: {
+                        en: "Unfortunately not, we work with the system that gives priority to the person who registered first and has the correct level. If you have been along, you will come back again and in this way we want to give everyone the opportunity to make this unique tour.",
+                        gr: "Leider nicht, wir arbeiten mit einem System, das der Person Vorrang gibt, die sich zuerst angemeldet hat und das richtige Niveau hat. Wenn Sie dabei waren, kommen Sie wieder und so wollen wir jedem die Möglichkeit geben, diese einzigartige Tour zu machen.",
+                        du: "Helaas niet, we werken met een systeem dat prioriteit geeft aan de persoon die zich als eerste heeft aangemeld en het juiste niveau heeft. Als je er al bij bent geweest, kom je weer terug en op deze manier willen we iedereen de kans geven om deze unieke tour te maken.",
+                    }
+                },
+                {
+                    title: {
+                        en: "I have a high starting number, do I have a chance?",
+                        gr: "Ich habe eine hohe Startnummer, habe ich eine Chance?",
+                        du: "Ik heb een hoog startnummer, heb ik kans?"
+                    },
+                    para: {
+                        en: "To be sure, a lot of people always cancel at the last minute and then places are moved on. Keep an eye on your phone/email when things get exciting!",
+                        gr: "Um sicher zu sein, sagen viele Leute immer in letzter Minute ab, und dann werden Plätze frei. Halte dein Telefon/E-Mail im Auge, wenn es spannend wird!",
+                        du: "Om zeker te zijn, zeggen veel mensen altijd op het laatste moment af en dan komen er plaatsen vrij. Houd je telefoon/e-mail in de gaten wanneer het spannend wordt!",
+                    }
+                },
+                {
+                    title: {
+                        en: "When will it be announced whether the downwinder will go ahead?",
+                        gr: "Wann wird bekannt gegeben, ob der Downwinder stattfinden kann?",
+                        du: "Wanneer wordt aangekondigd of de downwinder doorgaat?"
+                    },
+                    para: {
+                        en: "The first announcement will be made on Tuesday with code orange and on Thursday 12:00 it will be decided whether the downwinder can continue due to the predictions.",
+                        gr: "Die erste Ankündigung erfolgt am Dienstag mit Code Orange, und am Donnerstag um 12:00 Uhr wird entschieden, ob der Downwinder aufgrund der Vorhersagen stattfinden kann.",
+                        du: "De eerste aankondiging wordt dinsdag gedaan met code oranje en donderdag om 12:00 uur wordt besloten of de downwinder door kan gaan op basis van de voorspellingen.",
+                    }
+                },
+                {
+                    title: {
+                        en: "What if I drop out halfway through the tour?",
+                        gr: "Was ist, wenn ich mitten in der Tour aussteige?",
+                        du: "Wat als ik halverwege de tour uitstap?"
+                    },
+                    para: {
+                        en: "Then you have to make your own way back to your car in Den Helder by public transport",
+                        gr: "Dann müssen Sie mit öffentlichen Verkehrsmitteln selbst zu Ihrem Auto in Den Helder zurückfahren.",
+                        du: "Dan moet je zelf met het openbaar vervoer terug naar je auto in Den Helder."
+                    }
+                },
+                {
+                    title: {
+                        en: "What kind of accommodation do we sleep in?",
+                        gr: "In welcher Art von Unterkunft schlafen wir?",
+                        du: "In wat voor soort accommodatie slapen we?"
+                    },
+                    para: {
+                        en: "This differs every time because we always have to decide last minute whether it can go ahead or not, it just depends on where there is room. We usually ensure that we stay in a luxurious group accommodation that is fully equipped.",
+                        gr: "Das variiert jedes Mal, da wir immer in letzter Minute entscheiden müssen, ob es stattfinden kann oder nicht, es hängt einfach davon ab, wo Platz ist. Wir sorgen normalerweise dafür, dass wir in einer luxuriösen Gruppenunterkunft übernachten, die komplett ausgestattet ist.",
+                        du: "Dit verschilt elke keer omdat we altijd op het laatste moment moeten beslissen of het door kan gaan of niet, het hangt gewoon af van waar er ruimte is. We zorgen er meestal voor dat we in een luxe groepsaccommodatie verblijven die volledig is uitgerust."
+                    }
+                },
+                {
+                    title: {
+                        en: "I'm high on the list but I can't make it during the weekend the trip takes place.",
+                        gr: "Ich stehe hoch auf der Liste, aber ich kann am Wochenende, an dem die Reise stattfindet, nicht.",
+                        du: "Ik sta hoog op de lijst, maar ik kan niet komen tijdens het weekend waarop de reis plaatsvindt."
+                    },
+                    para: {
+                        en: "Very unfortunate! You may cancel once due to private circumstances and then unfortunately you will be at the back again. We need quite specific conditions for this trip so we also need your commitment 🙂",
+                        gr: "Sehr bedauerlich! Sie können einmal aufgrund privater Umstände absagen und dann sind Sie leider wieder am Ende der Liste. Für diese Reise benötigen wir recht spezifische Bedingungen, daher benötigen wir auch Ihr Engagement 🙂",
+                        du: "Heel jammer! Je mag eenmaal annuleren vanwege privé-omstandigheden en dan sta je helaas weer achteraan. We hebben vrij specifieke voorwaarden nodig voor deze reis, dus we hebben ook jouw inzet nodig 🙂"
+                    }
+                }
+            ]
+        },
+
         overview: {
             trip_heading: {
                 en: "Den Helder > Texel > Vlieland > Terschelling > Ameland > Schiermonnikoog",
@@ -6412,6 +7360,153 @@ const trips = [
     {
         name: 'Sicily',
         vedio: Sicily_vedio,
+
+        alltabs: {
+            highlight: [
+                {
+                    text: {
+                        en: "Een gigantische kitespot met alle ruimte",
+                        gr: "Ein riesiger Kitespot mit viel Platz",
+                        du: "Een gigantische kitespot met alle ruimte"
+                    }
+                },
+                {
+                    text: {
+                        en: "Je kunt overal staan, perfect voor beginners!",
+                        gr: "Du kannst überall stehen, perfekt für Anfänger!",
+                        du: "Je kunt overal staan, perfect voor beginners!"
+                    }
+                },
+                {
+                    text: {
+                        en: "Heerlijk Italiaans eten",
+                        gr: "Köstliches italienisches Essen",
+                        du: "Heerlijk Italiaans eten"
+                    }
+                },
+                {
+                    text: {
+                        en: "Leuke feestjes",
+                        gr: "Tolle Partys",
+                        du: "Leuke feestjes"
+                    }
+                },
+                {
+                    text: {
+                        en: "Mega gezellige groepen",
+                        gr: "Super gesellige Gruppen",
+                        du: "Mega gezellige groepen"
+                    }
+                },
+                {
+                    text: {
+                        en: "Heerlijk hotel met zwembad",
+                        gr: "Wundervolles Hotel mit Pool",
+                        du: "Heerlijk hotel met zwembad"
+                    }
+                }
+            ],
+            question: [
+                {
+                    title: {
+                        en: "How far is the accommodation from the kite spot?",
+                        gr: "Wie weit ist die Unterkunft vom Kitespot entfernt?",
+                        du: "Hoe ver is de accommodatie van de kitespot?"
+                    },
+                    para: {
+                        en: "The kite spot is on your doorstep!",
+                        gr: "Der Kitespot ist direkt vor deiner Haustür!",
+                        du: "De kitespot ligt voor de deur!"
+                    }
+                },
+                {
+                    title: {
+                        en: "Where is the best place to rent a car or scooter?",
+                        gr: "Wo kann man am besten ein Auto oder einen Roller mieten?",
+                        du: "Waar kun je het beste een auto of scooter huren?"
+                    },
+                    para: {
+                        en: "We have good contacts with local scooter and car rental companies and you can book through us without any problems. Of course there are several car rentals from Palermo airport where you can also rent a car for €10-30 / day. A good website that we recommend for finding the cheapest car is Carjet.",
+                        gr: "Wir haben gute Kontakte zu lokalen Roller- und Autovermietungen, und du kannst problemlos über uns buchen. Natürlich gibt es auch mehrere Autovermietungen am Flughafen Palermo, wo du ebenfalls ein Auto für 10-30 € pro Tag mieten kannst. Eine gute Website, die wir empfehlen, um das günstigste Auto zu finden, ist Carjet.",
+                        du: "We hebben goede contacten met lokale scooter- en autoverhuurbedrijven, en je kunt zonder problemen via ons boeken. Natuurlijk zijn er verschillende autoverhuurbedrijven vanaf Palermo luchthaven waar je ook een auto kunt huren voor €10-30 / dag. Een goede website die we aanbevelen om de goedkoopste auto te vinden is Carjet."
+                    }
+                },
+                {
+                    title: {
+                        en: "What is the wind like and what material should I take with me?",
+                        gr: "Wie ist der Wind und welches Material sollte ich mitnehmen?",
+                        du: "Hoe is de wind en welk materiaal moet ik meenemen?"
+                    },
+                    para: {
+                        en: "On average the wind blows between 14 and 25 knots. So take all the kite sizes you have with you! Furthermore, a large board or a foil can sometimes come in handy in the mornings and a wave board is also recommended because there is also a beautiful wave spot!",
+                        gr: "Im Durchschnitt weht der Wind zwischen 14 und 25 Knoten. Nimm also alle Kites mit, die du hast! Außerdem kann ein großes Board oder ein Foil am Morgen nützlich sein, und ein Waveboard wird ebenfalls empfohlen, da es auch einen schönen Wellenspot gibt!",
+                        du: "Gemiddeld waait de wind tussen de 14 en 25 knopen. Neem dus alle maten kites mee die je hebt! Verder kan een groot board of een foil soms handig zijn in de ochtend en een waveboard wordt ook aanbevolen omdat er ook een prachtige golvenspot is!"
+                    }
+                },
+                {
+                    title: {
+                        en: "How is the group?",
+                        gr: "Wie ist die Gruppe?",
+                        du: "Hoe is de groep?"
+                    },
+                    para: {
+                        en: "Our groups can vary from young to old, and are often evenly distributed with both men and women. The group usually consists of ages between 20 and 45, with exceptions of course. We teach beginners and give tips to advanced kitesurfers, so you can expect every level from us. We also often offer group activities that you can participate in without obligation. On some trips you may share a large room with other KiteActive guests, but this will be indicated. You can often see in advance via our Facebook Events which people will be present on the trip.",
+                        gr: "Unsere Gruppen können von jung bis alt variieren und sind oft gleichmäßig mit Männern und Frauen verteilt. Die Gruppe besteht normalerweise aus Menschen im Alter von 20 bis 45 Jahren, mit natürlich einigen Ausnahmen. Wir unterrichten Anfänger und geben fortgeschrittenen Kitesurfern Tipps, sodass du bei uns jedes Niveau erwarten kannst. Wir bieten auch oft Gruppenaktivitäten an, an denen du unverbindlich teilnehmen kannst. Bei einigen Reisen teilst du möglicherweise ein großes Zimmer mit anderen KiteActive-Gästen, aber dies wird vorher angegeben. Über unsere Facebook-Events kannst du oft im Voraus sehen, welche Leute bei der Reise dabei sein werden.",
+                        du: "Onze groepen kunnen variëren van jong tot oud en zijn vaak gelijk verdeeld tussen mannen en vrouwen. De groep bestaat meestal uit mensen tussen de 20 en 45 jaar, met natuurlijk enkele uitzonderingen. We leren beginners en geven tips aan gevorderde kitesurfers, dus je kunt van ons elk niveau verwachten. We bieden ook vaak groepsactiviteiten aan waar je vrijblijvend aan kunt deelnemen. Bij sommige reizen deel je mogelijk een grote kamer met andere KiteActive-gasten, maar dit wordt aangegeven. Via onze Facebook-evenementen kun je vaak van tevoren zien welke mensen aanwezig zullen zijn op de reis."
+                    }
+                },
+                {
+                    title: {
+                        en: "How do I fly?",
+                        gr: "Wie fliege ich?",
+                        du: "Hoe vlieg ik?"
+                    },
+                    para: {
+                        en: "You fly into Preveza airport. There are several airlines that fly here, but Transavia is a particular favorite.",
+                        gr: "Du fliegst zum Flughafen Preveza. Es gibt mehrere Fluggesellschaften, die dorthin fliegen, aber Transavia ist besonders beliebt.",
+                        du: "Je vliegt naar de luchthaven van Preveza. Er zijn verschillende luchtvaartmaatschappijen die hierheen vliegen, maar Transavia is een favoriet."
+                    }
+                },
+                {
+                    title: {
+                        en: "How long is the flight? And from Airport to the Kitevilla?",
+                        gr: "Wie lange dauert der Flug? Und vom Flughafen zur Kitevilla?",
+                        du: "Hoe lang is de vlucht? En van de luchthaven naar de Kitevilla?"
+                    },
+                    para: {
+                        en: "It is about a 2,5 hour flight and from Amsterdam to Trapani or Palermo. From Trapani it is a 15 minute drive, and from Palermo 2 hour drive to the hotel.",
+                        gr: "Es ist ein etwa 2,5-stündiger Flug von Amsterdam nach Trapani oder Palermo. Von Trapani sind es 15 Minuten Fahrt, und von Palermo sind es 2 Stunden Fahrt zum Hotel.",
+                        du: "Het is ongeveer een 2,5 uur durende vlucht van Amsterdam naar Trapani of Palermo. Vanaf Trapani is het 15 minuten rijden en vanaf Palermo is het 2 uur rijden naar het hotel."
+                    }
+                },
+                {
+                    title: {
+                        en: "How is the nightlife?",
+                        gr: "Wie ist das Nachtleben?",
+                        du: "Hoe is het nachtleven?"
+                    },
+                    para: {
+                        en: "Great, you shouldn't compare it with Ibiza, but there is a great club in the capital and there are endless beach bars that organize great theme parties. So don't forget your trendy outfit!",
+                        gr: "Großartig, du solltest es nicht mit Ibiza vergleichen, aber es gibt einen tollen Club in der Hauptstadt und endlose Strandbars, die großartige Themenpartys organisieren. Also vergiss nicht dein trendiges Outfit!",
+                        du: "Geweldig, je moet het niet vergelijken met Ibiza, maar er is een geweldige club in de hoofdstad en er zijn eindeloze strandbars die geweldige themaparty's organiseren. Dus vergeet je trendy outfit niet!"
+                    }
+                },
+                {
+                    title: {
+                        en: "I can't during this period",
+                        gr: "Ich kann in diesem Zeitraum nicht",
+                        du: "Ik kan niet tijdens deze periode"
+                    },
+                    para: {
+                        en: "Shame!! Unfortunately, we only offer this event during this period. Fortunately, we have many other cool ones outside this period kitesurfing events and keep our Facebook Stay tuned to stay informed when new dates for Italy come online.",
+                        gr: "Schade! Leider bieten wir diese Veranstaltung nur in diesem Zeitraum an. Glücklicherweise haben wir viele andere coole Kitesurf-Veranstaltungen außerhalb dieses Zeitraums, und auf unserer Facebook-Seite bleibst du informiert, wenn neue Termine für Italien online gehen.",
+                        du: "Jammer! Helaas bieden we dit evenement alleen tijdens deze periode aan. Gelukkig hebben we veel andere coole kitesurfevenementen buiten deze periode, en blijf op de hoogte via onze Facebook-pagina om te weten wanneer nieuwe data voor Italië online komen."
+                    }
+                }
+            ]
+        },
+
+
         overview: {
             trip_heading: {
                 en: "The Sicilian Kite Dream: Kitesurf Sicily Adventures",

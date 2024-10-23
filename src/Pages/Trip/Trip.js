@@ -38,7 +38,7 @@ const Trip = ({ selectedLanguage }) => {
             {/* Video section */}
             <div className="video-container">
                 {trip?.vedio && (
-                    <video autoPlay loop muted className="background-video">
+                    <video key={trip.vedio} autoPlay loop muted className="background-video">
                         <source src={trip.vedio} type="video/mp4" loading="lazy" />
                         Your browser does not support the video tag.
                     </video>
@@ -131,7 +131,7 @@ const Trip = ({ selectedLanguage }) => {
                                         {/* Highlights/Inclusions Section */}
                                         {trip.alltabs.highlight && (
                                             <>
-                                                <h2 className='text-center'>Highlights/Inclusions</h2>
+                                                <h2 className='text-center trip_heading'>Highlights/Inclusions</h2>
                                                 {trip.alltabs.highlight.map((items, index) => (
                                                     <p className='px-5' key={index}>{items.text[selectedLanguage] || 'No translation available'}</p>
                                                 ))}
@@ -140,7 +140,7 @@ const Trip = ({ selectedLanguage }) => {
                                         {/* Questions Section */}
                                         {trip.alltabs.question && (
                                             <>
-                                                <h2 className='text-center'>Do you have questions? We have answers!</h2>
+                                                <h2 className='text-center trip_heading'>Do you have questions? We have answers!</h2>
                                                 {trip.alltabs.question.map((items, index) => (
                                                     <div key={index}>
                                                         <details className='px-5' key={index}>
