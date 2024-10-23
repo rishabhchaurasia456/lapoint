@@ -156,7 +156,6 @@ const Aboutus = ({ selectedLanguage }) => {
                 <meta name="description" content="Discover KiteActive's thrilling kitesurfing holidays with expert instructors at stunning destinations worldwide. Join us for an unforgettable adventure!" />
                 <meta name="keywords" content="kite surfing, kitesurfing trips, kitesurf spots, kite surfing lessons, kitesurfing lessons worldwide, kitesurf vacation, kite travel, kitesurf holiday" />
                 <link rel="canonical" href="https://www.kiteactiveventures.com/about" />
-
             </Helmet>
 
 
@@ -316,7 +315,7 @@ const Aboutus = ({ selectedLanguage }) => {
 
             {/* Background image component  */}
 
-            <Bgimage selectedLanguage={selectedLanguage} />
+            <Bgimage selectedLanguage={selectedLanguage}  />
 
 
         </div>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Helmet } from 'react-helmet';
 import Kitespots from './TripComponent/Kitespots';
 import Packages from './TripComponent/Packages';
@@ -9,8 +9,10 @@ import Hosted from './TripComponent/Hosted';
 import Activites from './TripComponent/Activites';
 import Overview from './TripComponent/Overview';
 import trips from './Tripdata';
+import  './TripComponent/Trips.css'
 import { useParams } from 'react-router-dom';
 import Booking from '../Kitecamps/Booking';
+import Surfcampslider from '../../Components/Surfcampslider/Surfcampslider';
 
 const Trip = ({ selectedLanguage }) => {
     const { trip_name } = useParams();
@@ -26,6 +28,27 @@ const Trip = ({ selectedLanguage }) => {
         setActiveTab(tabName);
     };
 
+    const [isVideoVisible, setIsVideoVisible] = useState(false);
+    const videoRef = useRef();
+
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            if (entries[0].isIntersecting) {
+                setIsVideoVisible(true); // Video starts loading when it becomes visible
+            }
+        });
+
+        if (videoRef.current) {
+            observer.observe(videoRef.current);
+        }
+
+        return () => {
+            if (videoRef.current) {
+                observer.unobserve(videoRef.current);
+            }
+        };
+    }, []);
+
     return (
         <div>
             <Helmet>
@@ -36,14 +59,31 @@ const Trip = ({ selectedLanguage }) => {
             </Helmet>
 
             {/* Video section */}
-            <div className="video-container">
+            {/* <div className="video-container">
                 {trip?.vedio && (
                     <video key={trip.vedio} autoPlay loop muted className="background-video">
                         <source src={trip.vedio} type="video/mp4" loading="lazy" />
                         Your browser does not support the video tag.
                     </video>
                 )}
-            </div>
+            </div> */}
+
+            <div className="video-container">
+            {trip?.vedio && (
+                <video
+                    ref={videoRef}
+                    key={trip.vedio}
+                    autoPlay 
+                    loop 
+                    muted 
+                    preload={isVideoVisible ? 'auto' : 'none'} // Loads only when video is visible
+                    className="background-video"
+                >
+                    <source src={trip.vedio} type="video/mp4" loading="lazy" />
+                    Your browser does not support the video tag.
+                </video>
+            )}
+        </div>
 
             {/* Conditionally render the tab buttons based on the available data */}
             <div className="container">
@@ -158,8 +198,9 @@ const Trip = ({ selectedLanguage }) => {
                             )}
                         </div>
                     </div>
+                    <Surfcampslider selectedLanguage={selectedLanguage} /   >
                     <Booking tripName={trip_name} />
-
+                    
                 </div>
 
                 

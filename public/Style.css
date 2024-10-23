@@ -3,7 +3,7 @@
 /* -------------------------------------- */
 
 .text_span {
-  color: #fcc116;
+  color: #fdc016;
 }
 
 .surf_container {
@@ -201,7 +201,7 @@
 
 .custom-prev:hover,
 .custom-next:hover {
-  background-color: #ffc800;
+  background-color: #fdc016;
 }
 
 /* Small devices (phones, 576px and up) */
@@ -285,7 +285,8 @@
 /* Element css here  */
 /* -------------------------------------/- */
 .element_row {
-  background-color: #f9ca1e;
+  background-color:  #fdc016;
+ 
 }
 
 .element_text {
@@ -364,7 +365,7 @@
 
 
 .Level_cont_head {
-  color: #ffc800;
+  color: #fdc016;
   margin-top: 5%;
   font-family: "Amatic SC", sans-serif;
   font-size: 60px;
@@ -392,7 +393,7 @@
 
 .level_card:hover {
   cursor: pointer;
-  border: 1px solid #ffc800;
+  border: 1px solid #fdc016;
   border-radius: 5%;
   transform: translateY(-10px);
 
@@ -441,7 +442,7 @@
 
 
 .lifestyle_heading {
-  color: #fcc116;
+  color: #fdc016;
   font-weight: bold;
   font-size: 65px;
   line-height: 53px;
@@ -599,7 +600,7 @@ summary {
   font-size: 1.25rem;
   font-weight: 600;
   background-color: black;
-  color: #fcc116;
+  color: #fdc016;
   padding: 1rem;
   margin-bottom: 1rem;
   outline: none;
@@ -641,7 +642,7 @@ details>summary::-webkit-details-marker {
     font-size: 15px;
     font-weight: 600;
     background-color: black;
-    color: #fcc116;
+    color: #fdc016;
     padding: 1rem;
     margin-bottom: 1rem;
     outline: none;
@@ -875,7 +876,7 @@ details>summary::-webkit-details-marker {
 
 .bg_heading {
   margin-top: 5%;
-  color: #fcc116;
+  color: #fdc016;
   font-family: "Amatic SC", sans-serif;
   font-weight: 800;
   font-size: 60px;
@@ -923,7 +924,7 @@ details>summary::-webkit-details-marker {
 /* footer CSS ------------------------ */
 
 .footer_headcontainer {
-  background-color: #ffc800;
+  background-color: #fdc016;
 }
 
 .footer_headcontainer_text {
@@ -946,12 +947,11 @@ details>summary::-webkit-details-marker {
   font-size: 1rem;
   outline: none;
   margin-top: 23%;
-
 }
 
 .emailbtn {
   background-color: black !important;
-  color: #fcc116 !important;
+  color: #fdc016 !important;
   padding: 10px !important;
   width: 150%;
 }
@@ -973,7 +973,7 @@ details>summary::-webkit-details-marker {
 
 .footer_link:hover {
   text-decoration: none;
-  color: #ffc800;
+  color: #fdc016;
 
 }
 
@@ -983,7 +983,7 @@ details>summary::-webkit-details-marker {
 
 
 .fa_icon_footer{
-  color: #ffc800;
+  color: #fdc016;
   font-size: 30px !important;
 
 }
@@ -1024,458 +1024,3 @@ details>summary::-webkit-details-marker {
 
 }
 
-
-
-/* --------------------------------------
-Trip CSS
--------------------------------------- */
-
-.trip_tabs{
-  font-family: "Fira Sans", sans-serif;
-  font-weight: 100;
-  font-style: normal;
-  font-size: 18px;
-  background-color: transparent;
-  border: none;
-  outline: none;
-  margin: 3% 2.5% 0% 2.5%;
-  padding: 0%;
-  font-weight: bold;
-}
-
-.trip_tabs:hover{
-  text-decoration: underline;
-}
-
-.trip_tabs:active{
-  color: yellow;
-}
-
-.tab_scroll{
-  display: flex;
-  overflow-x: auto;
-  white-space: nowrap;
-  -webkit-overflow-scrolling: touch;
-}
-
-.trip_heading{
-  font-family: "Amatic SC", sans-serif;
-  color: black;
-  font-weight: bold;
-  font-size: 50px;
-  text-align: center;
-}
-
-.trip_para{
-  font-family: Roboto, arial, sans-serif;
-  font-weight: 30px !important;
-  font-size: 18px;
-  padding: 0% 5% !important;
-}
-
-.img_spacing{
-  padding: 20%;
-}
-
-.img_head{
-  font-family: "Amatic SC", sans-serif;
-  text-align: center;
-  color: black;
-  font-weight: bold;
-  font-size: 30px;
-}
-
-.img_para{
-  text-align: center;
-  color: black;
-}
-
-/* Medium devices (tablets, 768px and up)---------------- */
-/* @media (max-width: 1024px) and (min-width: 768px) {
-  .tab_scroll{
-    display: flex;
-    overflow-x: auto;
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
-  }
-} */
-
-/* Small devices (phones, 576px and up)------------------ */
-
-@media only screen and (max-width: 600px) {
-  .img_spacing{
-    padding: 15%;
-  }
-}
-
-/* --------------------------------
-Package tabs css 
--------------------------------- */
-
-.package_btn{
-  transition: color 0.3s ease;
-  margin-top: 5%;
-  font-family: "Fira Sans", sans-serif;
-  font-weight: 100;
-  font-style: normal;
-  font-size: 18px;
-  background-color: transparent;
-  border: none;
-  /* text-decoration: underline; */
-  color: black;
-  border-width: 1px;
-  outline: none;
-  /* margin: 3% 2.5% 0% 2.5%; */
-  padding: 1% 2% 0% 2% ;
-  position: relative;
-  font-weight: bold;
-}
-
-.package_btn:focus {
-  /* background-color: #ffbd2e; Active background color */
-  /* text-decoration: underline; */
-  color: #ffbd2e;
-  /* Optional: Change text color */
-  outline: none; /* Remove the default focus outline */
-}
-
-
-.package_btn:hover  {
-  /* text-decoration: underline; */
-  color: #ffbd2e; /* Active text color */
-  outline: none; /* Remove the default focus outline */
-}
-
-.package_btn:hover::after {
-  content: ''; /* Display the pseudo-element */
-  position: absolute;
-  left: 50%; /* Center the pseudo-element horizontally */
-  transform: translateX(-50%); /* Adjust for centering */
-  bottom: -5px; /* Position the pseudo-element below the button */
-  width: 50%; /* Width of the pseudo-element (adjust as needed) */
-  height: 2px; /* Height of the pseudo-element */
-  /* Color of the pseudo-element */
-  transition: all 0.5s ease-in-out;
-  background-color: #ffbd2e; 
-}
-
-.level_desc{
-  font-family: Roboto, arial, sans-serif;
-  font-weight: 30px !important;
-  font-size: 18px;
-  padding: 0% 5% !important;
-  margin-top: 5% !important;
-}
-
-.lifestyle_package_text{
-  font-family: "Amatic SC", sans-serif;
-  font-size: 40px;
-  font-weight: bold;
-}
-
-.lifestyle_package_para{
-  font-family: Roboto, arial, sans-serif;
-}
-
-.sum2_heading{
-  font-family: "Amatic SC", sans-serif;
-  font-size: 40px;
-  font-weight: bold;
-}
-
-.sum2_container {
-  background-color: #fff5da;
-  margin-bottom: 5%;
-  border-radius: 5px;
-}
-
-.sum2 {
-  font-family: "Amatic SC", sans-serif;
-  font-size: 22px;
-  font-weight: bold;
-  background-color: transparent;
-  color: #0f0f0f;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  outline: none;
-  border-radius: 0.25rem;
-  text-align: left;
-  cursor: pointer;
-  position: relative;
-}
-
-details>.sum2::after {
-  position: absolute;
-  content: "+";
-  right: 10px;
-
-}
-
-details[open]>.sum2::after {
-  position: absolute;
-  content: "-";
-  right: 10px;
-
-}
-
-details>.sum2::-webkit-details-marker {
-  display: none;
-}
-
-.sum2__content {
-  font-family: Roboto, arial, sans-serif;
-  font-size: 10px;
-  margin-top: -20px;
-  padding: 0px 20px 0px 30px;
-  background-color: transparent;
-  color: black;
-}
-
-
-.p_faq_heading{
-  font-family: "Amatic SC", sans-serif;
-  font-size: 40px;
-  font-weight: bold;
-}
-
-.p_faq_container {
-  background-color: transparent;
-  margin-bottom: 5%;
-  border-radius: 5px;
-}
-
-.p_faq {
-  font-family: "Amatic SC", sans-serif;
-  font-size: 22px;
-  font-weight: bold;
-  background-color: transparent;
-  color: #0f0f0f;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  outline: none;
-  border-radius: 0.25rem;
-  text-align: left;
-  cursor: pointer;
-  position: relative;
-}
-
-details>.p_faq::after {
-  position: absolute;
-  content: "+";
-  right: 10px;
-
-}
-
-details[open]>.p_faq::after {
-  position: absolute;
-  content: "-";
-  right: 10px;
-
-}
-
-details>.sum2::-webkit-details-marker {
-  display: none;
-}
-
-.p_faq__content {
-  font-family: Roboto, arial, sans-serif;
-  font-size: 10px;
-  margin-top: -20px;
-  padding: 0px 20px 0px 30px;
-  background-color: transparent;
-  color: black;
-}
-
-.logocard_container{
-  background-color: #fff5da;
-  margin-bottom: 5%;
-  border-radius: 5px;
-}
-
-.logo_img_contaienr{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding-top: 10%;
-}
-
-.logo_img {
-  width: 40%;
-  max-width: 100%;
-}
-
-/* .text-center {
-  margin-top: 10px;
-} */
-
-/* ---------------------------
-Accomodation
---------------------------- */
-
-.Accomodation1_head{
-  font-family: "Amatic SC", sans-serif;
-  font-size: 40px;
-  font-weight: bold;
-  padding-top: 5%;
-  text-align: center;
-}
-
-.Accomodation_desc{
-  font-size: 20px;
-  font-weight: lighter;
-  text-align: center;
-  padding: 0% 5% 0% 5% !important;
-}
-
-.box-accom-custom {
-  padding-bottom: 30px;
-  box-shadow: 0px 3px 9px rgba(0, 0, 0, 0.2);
-  padding-right: 0px;
-  padding-left: 0px;
-  border-radius: 20px; 
-  height: 100%;
-  /* width: 31.33% !important; */
-}
-
-.over-img-accomodation {
-  border-radius: 20px 20px 0px 0px;
-  width: 100%;
-}
-
-.box-accom-title {
-  text-align: center;
-  font-size: 24px;
-  font-weight: bold;
-  color: #000;
-  margin-top: 10px;
-  font-family: "Amatic SC";
-}
-
-.box-accom-des {
-  text-align: center;
-  font-size: 16px;
-  color: #000;
-  padding: 0px 10px;
-}
-
-/* --------------------------
-Included
--------------------------- */
-
-.included_desc{
-  font-size: 20px;
-  font-weight: lighter;
-  text-align: center;
-  padding: 0% 5% 0% 5% !important;
-}
-
-.level_heading_card{
-  background-color: #ffc800;
-  text-align: center;
-  align-items: center;
-  padding: 5%;
-  border-radius: 5px;
-  margin-bottom: 2%;
-}
-
-.level_heading{
-  font-size: 20px;
-}
-
-.week_btn{
-  width: 100%;
-  align-items: center;
-  height: 40px;
-  border: solid;
-  border-color: rgb(197, 197, 197);
-  background-color: rgb(223, 223, 223);
-}
-
-.included_card{
-  border: 2px solid;
-  height: 100%;
-}
-
-/* -----------------------------
-Review Card 
------------------------------ */
-
-.review_carousel-container {
-  margin: auto;
-  padding: 0 15px;
-}
-
-.review_carousel-item-padding-40-px {
-  padding: 10px;
-}
-
-.review_review-card {
-  background-color: #f3eedc;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.review_image-container {
-  display: flex;
-  align-items: center;
-}
-
-.review_rounded-circle {
-  width: 60px;
-  height: 60px;
-  margin-right: 10px;
-  border-radius: 50%;
-}
-
-.review_card-body {
-  display: flex;
-  flex-direction: column;
-}
-
-.review_name {
-  font-size: 16px;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-.review_date {
-  font-size: 14px;
-  margin-bottom: 10px;
-}
-
-.review_para {
-  font-size: 14px;
-}
-
-/* -----------------------
-Hosted css
------------------------ */
-
-.hosted_card{
-  border-radius: 15px;
-}
-
-.hosted_card_title{
-  margin-top: 20px;
-  font-family: "Amatic SC", sans-serif;
-  font-size: 30px;
-  font-weight: 500;
-  text-transform: capitalize;
-  color: #dbb837;
-}
-
-.hosted_card_year{
-  color: #dbb837;
-}
-
-.hosted_card_last{
-  font-size: 13px;
-}
-
-.hosted_card_last2{
-  margin-top: -10px;
-  font-size: 13px;
-}

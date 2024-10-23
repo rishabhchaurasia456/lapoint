@@ -20,8 +20,6 @@ const content = [
 const Elementcomp = ({selectedLanguage}) => {
     return (
         <div>
-
-
             <div className="container-fluid mt-5 pt-5">
                 <div className="row element_row">
                     <div className="col-12 col-md-3">

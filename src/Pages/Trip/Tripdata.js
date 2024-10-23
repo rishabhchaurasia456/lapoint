@@ -135,7 +135,7 @@ import KitemeccaTraifa_img11 from '../../Images/snowkite_hosted_img4.webp'
 
 
 
-// EndlessSummerParty trip IMAGES data Egy  ............................................
+// EndlessSummerParty trip IMAGES data Egy ............................................
 
 import endless_img1 from '../../Images/endless1.jpg'
 import endless_img2 from '../../Images/endless2.jpg'
@@ -224,7 +224,6 @@ import tab3_2 from "../../Images/tab1_2.webp";
 
 const trips = [
     // vanlife trip data .......................
-
 
     {
         name: 'vanlife',
@@ -1124,13 +1123,15 @@ const trips = [
                 du: ""
             }
         },
-        included: {
-            h2: {
-                en: "location / vanlife",
-                gr: "Nither location / vanlife",
-                du: "Dutch location / vanlife"
-            }
-        },
+
+        // included: {
+        //     h2: {
+        //         en: "location / vanlife",
+        //         gr: "Nither location / vanlife",
+        //         du: "Dutch location / vanlife"
+        //     }
+        // },
+       
         reviews: {
             h2: {
                 en: "location / vanlife",

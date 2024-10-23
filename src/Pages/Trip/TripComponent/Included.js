@@ -335,26 +335,36 @@ const Included = () => {
       </div>
 
       <div className="container">
-        <div className="row h-100">
+        <div className="row">
           {/* Level 1 */}
-          <div className="col-md-4">
+          <div className="col-md-4 col-sm-12">
             <div className="level_heading_card">
-              <p className='level_heading'>Level 1 - Beginner</p>
+              <p className="includ_heading">Level 1 - Beginner</p>
             </div>
             <div className="row mb-3">
               {["1 week", "10 Days", "2 Weeks"].map((option) => (
-                <div className="col-4" key={option}>
-                  <button className='week_btn' onClick={() => handleButtonClick('level1', option)}>
+                <div className="col-4 col-sm-6 col-md-4" key={option}>
+                  <button
+                    className="week_btn"
+                    onClick={() => handleButtonClick("level1", option)}
+                  >
                     {option}
                   </button>
                 </div>
               ))}
-              <div className="card px-3 h-100 mb-4 bg-transparent text-center">
-                <p className='text-center'>{levelData.level1[selectedOption.level1].price}</p>
+              <div className="card m-3">
+                <p className="text-center fw-bold fs-5">
+                  {levelData.level1[selectedOption.level1].price}
+                </p>
                 {levelData.level1[selectedOption.level1].para.map((item, index) => (
-                  <p key={index} className='text-center'>
+                  <p key={index}>
                     <span>
-                      <img className='me-3' src={item.image} alt="icon" style={{ maxWidth: '30px' }} />
+                      <img
+                        className="me-3"
+                        src={item.image}
+                        alt="icon"
+                        style={{ maxWidth: "30px" }}
+                      />
                     </span>
                     {item.text}
                   </p>
@@ -363,23 +373,25 @@ const Included = () => {
             </div>
           </div>
 
+
+
           {/* Level 2 */}
           <div className="col-md-4">
             <div className="level_heading_card">
-              <p className='level_heading'>Level 2 - Intermediate</p>
+              <p className='includ_heading'>Level 2 - Intermediate</p>
             </div>
             <div className="row mb-3">
               {["1 week", "10 Days", "2 Weeks"].map((option) => (
-                <div className="col-4" key={option}>
+                <div className="col-4 col-sm-6 col-md-4" key={option}>
                   <button className='week_btn' onClick={() => handleButtonClick('level2', option)}>
                     {option}
                   </button>
                 </div>
               ))}
-              <div className="card px-3 h-100 mb-4 bg-transparent text-center">
-                <p className='text-center'>{levelData.level2[selectedOption.level2].price}</p>
+              <div className="card m-3">
+                <p className='text-center fw-bold fs-5'>{levelData.level2[selectedOption.level2].price}</p>
                 {levelData.level2[selectedOption.level2].para.map((item, index) => (
-                  <p key={index} className='text-center'>
+                  <p key={index} className=''>
                     <span>
                       <img className='me-3' src={item.image} alt="icon" style={{ maxWidth: '30px' }} />
                     </span>
@@ -393,20 +405,20 @@ const Included = () => {
           {/* Level 3 */}
           <div className="col-md-4">
             <div className="level_heading_card">
-              <p className='level_heading'>Level 3 - Advanced</p>
+              <p className='includ_heading'>Level 3 - Advanced</p>
             </div>
             <div className="row mb-3">
               {["1 week", "10 Days", "2 Weeks"].map((option) => (
-                <div className="col-4" key={option}>
+                <div className="col-4 col-sm-6 col-md-4" key={option}>
                   <button className='week_btn' onClick={() => handleButtonClick('level3', option)}>
                     {option}
                   </button>
                 </div>
               ))}
-              <div className="card px-3 h-100 mb-4 bg-transparent text-center">
-                <p className='text-center'>{levelData.level3[selectedOption.level3].price}</p>
+              <div className="card m-3 h-100">
+                <p className='text-center fw-bold fs-5'>{levelData.level3[selectedOption.level3].price}</p>
                 {levelData.level3[selectedOption.level3].para.map((item, index) => (
-                  <p key={index} className='text-center'>
+                  <p key={index} className=''>
                     <span>
                       <img className='me-3' src={item.image} alt="icon" style={{ maxWidth: '30px' }} />
                     </span>
@@ -416,6 +428,8 @@ const Included = () => {
               </div>
             </div>
           </div>
+
+
         </div>
       </div>
     </div>
