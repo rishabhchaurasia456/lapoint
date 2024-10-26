@@ -1,4 +1,4 @@
-import vedio from '../../Images/website.filmpje.tarifa.mp4';
+// import vedio from '../../Images/website.filmpje.tarifa.mp4';
 
 
 import vanlife_vedio from '../../Images/tripvedios/VanLife_vedio.mp4'
@@ -12,15 +12,25 @@ import Sailkite_vedio from '../../Images/tripvedios/sailkite_vedio.mp4'
 import Sicily_vedio from '../../Images/tripvedios/sicily_vedio.mp4'
 
 
+import vanlifecover from "../../Images/tripvedios/vanlifecover.webp"
+import zanzibarcover from "../../Images/tripvedios/zanzibar.webp"
+import snowkitecover from "../../Images/tripvedios/snowkite.webp"
+import skycaptowncover from "../../Images/tripvedios/skycapetowncover.webp"
+import kitemeacacover from "../../Images/tripvedios/kitmecacover.webp"
+import endlesscoover from "../../Images/tripvedios/egyptcover.webp"
+import brazilcover from "../../Images/tripvedios/brazilcover.webp"
+import sailkitecover from "../../Images/tripvedios/sailkitecover.webp"
+import sicily from "../../Images/tripvedios/sciliycover.webp"
+
 
 
 
 // valnlife img data .........................................
 
-import vanlife_img1 from "../../Images/level-icon-6.webp"
-import vanlife_img2 from "../../Images/level-icon-3.webp"
-import vanlife_img3 from "../../Images/level-icon-4.webp"
-import vanlife_img4 from "../../Images/level-icon-2.webp"
+// import vanlife_img1 from "../../Images/level-icon-6.webp"
+// import vanlife_img2 from "../../Images/level-icon-3.webp"
+// import vanlife_img3 from "../../Images/level-icon-4.webp"
+// import vanlife_img4 from "../../Images/level-icon-2.webp"
 
 import vanlife_gall_img1 from '../../Images/vanlife1.webp'
 import vanlife_gall_img2 from '../../Images/vanlife2.webp'
@@ -66,6 +76,20 @@ import zanzibar_activity_img3 from '../../Images/activity3.webp'
 import zanzibar_activity_img4 from '../../Images/activity4.webp'
 import zanzibar_activity_img5 from '../../Images/activity5.webp'
 
+import surf_img1 from '../../Images/surf-img1.png'
+import surf_img2 from '../../Images/surf_img2.png'
+import surf_img3 from '../../Images/surf_img3.png'
+import surf_img4 from '../../Images/surf_img4.png'
+import surf_img5 from '../../Images/surf_img5.png'
+import surf_img6 from '../../Images/surf_img6.png'
+import surf_img7 from '../../Images/surf_img7.png'
+import surf_img8 from '../../Images/surf_img8.png'
+import surf_img9 from '../../Images/surf_img9.png'
+import surf_img10 from '../../Images/surf_img10.png'
+import surf_img11 from '../../Images/surf_img11.png'
+import surf_img12 from '../../Images/surf_img12.png'
+import surf_img13 from '../../Images/surf_img13.png'
+
 
 
 
@@ -86,30 +110,32 @@ import Snow_hosted_img4 from '../../Images/snowkite_hosted_img4.webp'
 
 
 
+
+
 // Sky high capetown trip  IMAGES data ..................
 
 
-import skycap_OW_gall_img1 from '../../Images/skyCap_OW_img1.jpg'
-import skycap_OW_gall_img2 from '../../Images/skyCap_OW_img2.jpg'
-import skycap_OW_gall_img3 from '../../Images/skyCap_OW_img3.jpg'
-import skycap_OW_gall_img4 from '../../Images/skyCap_OW_img4.jpg'
+import skycap_OW_gall_img1 from '../../Images/skyCap_OW_img1.webp'
+import skycap_OW_gall_img2 from '../../Images/skyCap_OW_img2.webp'
+import skycap_OW_gall_img3 from '../../Images/skyCap_OW_img3.webp'
+import skycap_OW_gall_img4 from '../../Images/skyCap_OW_img4.webp'
 
 
-import skycap_kitespotimg1 from '../../Images/skyCap_kitspot_img1.jpg'
-import skycap_kitespotimg2 from '../../Images/skyCap_kitspot_img2.jpg'
+import skycap_kitespotimg1 from '../../Images/skyCap_kitspot_img1.webp'
+import skycap_kitespotimg2 from '../../Images/skyCap_kitspot_img2.webp'
 
 
-import skycap_hotel1 from '../../Images/skyCap_ACC_img1.jpg'
-import skycap_hotel2 from '../../Images/skyCap_ACC_img2.jpg'
-import skycap_hotel3 from '../../Images/skyCap_ACC_img3.jpg'
-import skycap_hotel4 from '../../Images/skyCap_ACC_img4.jpg'
-import skycap_hotel5 from '../../Images/skyCap_ACC_img5.jpg'
-import skycap_hotel6 from '../../Images/skyCap_ACC_img6.jpg'
+import skycap_hotel1 from '../../Images/skyCap_ACC_img1.webp'
+import skycap_hotel2 from '../../Images/skyCap_ACC_img2.webp'
+import skycap_hotel3 from '../../Images/skyCap_ACC_img3.webp'
+import skycap_hotel4 from '../../Images/skyCap_ACC_img4.webp'
+import skycap_hotel5 from '../../Images/skyCap_ACC_img5.webp'
+import skycap_hotel6 from '../../Images/skyCap_ACC_img6.webp'
 
 
-import skycap_hosted_img1 from '../../Images/skyCap_hosted_img1.jpg'
+import skycap_hosted_img1 from '../../Images/skyCap_hosted_img1.webp'
 import skycap_hosted_img2 from '../../Images/snowkite_hosted_img3.webp'
-import skycap_hosted_img3 from '../../Images/skyCap_hosted_img2.jpg'
+import skycap_hosted_img3 from '../../Images/skyCap_hosted_img2.webp'
 import skycap_hosted_img4 from '../../Images/snowkite_hosted_img4.webp'
 
 
@@ -118,18 +144,18 @@ import skycap_hosted_img4 from '../../Images/snowkite_hosted_img4.webp'
 // KitemeccaTraifa images data ...........................
 
 
-import KitemeccaTraifa_img1 from '../../Images/KitemeccaTraifa1.jpg'
-import KitemeccaTraifa_img2 from '../../Images/KitemeccaTraifa2.jpg'
-import KitemeccaTraifa_img3 from '../../Images/KitemeccaTraifa3.jpg'
-import KitemeccaTraifa_img4 from '../../Images/KitemeccaTraifa4.jpg'
+import KitemeccaTraifa_img1 from '../../Images/KitemeccaTraifa1.webp'
+import KitemeccaTraifa_img2 from '../../Images/KitemeccaTraifa2.webp'
+import KitemeccaTraifa_img3 from '../../Images/KitemeccaTraifa3.webp'
+import KitemeccaTraifa_img4 from '../../Images/KitemeccaTraifa4.webp'
 
-import KitemeccaTraifa_img5 from '../../Images/KitemeccaTraifa5.jpg'
-import KitemeccaTraifa_img6 from '../../Images/KitemeccaTraifa6.jpg'
-import KitemeccaTraifa_img7 from '../../Images/KitemeccaTraifa7.jpg'
+import KitemeccaTraifa_img5 from '../../Images/KitemeccaTraifa5.webp'
+import KitemeccaTraifa_img6 from '../../Images/KitemeccaTraifa6.webp'
+import KitemeccaTraifa_img7 from '../../Images/KitemeccaTraifa7.webp'
 
 import KitemeccaTraifa_img8 from '../../Images/KitemeccaTraifa8.webp'
-import KitemeccaTraifa_img9 from '../../Images/KitemeccaTraifa9.jpg'
-import KitemeccaTraifa_img10 from '../../Images/skyCap_hosted_img1.jpg'
+import KitemeccaTraifa_img9 from '../../Images/KitemeccaTraifa9.webp'
+import KitemeccaTraifa_img10 from '../../Images/skyCap_hosted_img1.webp'
 import KitemeccaTraifa_img11 from '../../Images/snowkite_hosted_img4.webp'
 
 
@@ -137,19 +163,19 @@ import KitemeccaTraifa_img11 from '../../Images/snowkite_hosted_img4.webp'
 
 // EndlessSummerParty trip IMAGES data Egy ............................................
 
-import endless_img1 from '../../Images/endless1.jpg'
-import endless_img2 from '../../Images/endless2.jpg'
-import endless_img3 from '../../Images/endless3.jpg'
-import endless_img4 from '../../Images/endless4.jpg'
+import endless_img1 from '../../Images/endless1.webp'
+import endless_img2 from '../../Images/endless2.webp'
+import endless_img3 from '../../Images/endless3.webp'
+import endless_img4 from '../../Images/endless4.webp'
 
-import endless_img5 from '../../Images/endless_kitespot_1.jpg'
+import endless_img5 from '../../Images/endless_kitespot_1.webp'
 
-import endless_acc_img1 from '../../Images/endless_acc_1.jpg'
-import endless_acc_img2 from '../../Images/endless_acc_2.jpg'
-import endless_acc_img3 from '../../Images/endless_acc_3.jpg'
+import endless_acc_img1 from '../../Images/endless_acc_1.webp'
+import endless_acc_img2 from '../../Images/endless_acc_2.webp'
+import endless_acc_img3 from '../../Images/endless_acc_3.webp'
 import endless_acc_img4 from '../../Images/skyCap_ACC_img1.jpg'
-import endless_acc_img5 from '../../Images/skyCap_ACC_img3.jpg'
-import endless_acc_img6 from '../../Images/skyCap_ACC_img2.jpg'
+import endless_acc_img5 from '../../Images/skyCap_ACC_img3.webp'
+import endless_acc_img6 from '../../Images/skyCap_ACC_img2.webp'
 
 
 
@@ -228,7 +254,7 @@ const trips = [
     {
         name: 'vanlife',
         vedio: vanlife_vedio,
-
+        backcover: vanlifecover,
         alltabs: {
             highlight: [
                 {
@@ -373,7 +399,7 @@ const trips = [
                 gr: "Begleite uns auf einem unvergesslichen VanLife-Roadtrip entlang der atemberaubenden Küsten Europas, perfekt für Kitesurfer! Erlebe das aufregende Gefühl, neben brechenden Wellen aufzuwachen, jag den Wind und entdecke ständig versteckte Schätze. Das ist VanLife vom Feinsten – wo epische Kitesurf-Sessions auf die Freiheit der offenen Straße treffen. Packe dein Equipment, spring in deinen Van und lass uns aufbrechen zu einem Abenteuer deines Lebens! KiteActive bringt dich zu neuen Spots, bietet Coaching und Fortschrittskurse und ermöglicht dir, eine großartige neue Community kennenzulernen!",
                 du: "Sluit je aan bij ons voor een onvergetelijke VanLife-roadtrip langs de prachtige kusten van Europa, perfect voor kitesurfers! Ervaar de opwinding van wakker worden naast brekende golven, achter de wind aanjagen en voortdurend verborgen juweeltjes verkennen. Dit is VanLife op zijn best - waar epische kitesurf-sessies samenkomen met de vrijheid van de open weg. Pak je gear, stap in je bus en laten we de weg opgaan voor het avontuur van je leven! KiteActive neemt je mee naar nieuwe plekken, biedt coaching en voortgangscursussen en helpt je een geweldige nieuwe gemeenschap te ontmoeten!"
             },
-            img1: vanlife_img1,
+            img1: surf_img10,
             img1_head: {
                 en: "Dates 2025",
                 gr: "Termine 2025",
@@ -384,7 +410,7 @@ const trips = [
                 gr: "19. - 29. September",
                 du: "19 - 29 september"
             },
-            img2: vanlife_img2,
+            img2: surf_img8,
             img2_head: {
                 en: "Skills",
                 gr: "Fähigkeiten",
@@ -395,7 +421,7 @@ const trips = [
                 gr: "Jede Fähigkeit ist willkommen.. von Anfängern bis Fortgeschrittenen",
                 du: "Iedere vaardigheid is welkom.. van beginners tot gevorderden"
             },
-            img3: vanlife_img3,
+            img3: surf_img12,
             img3_head: {
                 en: "Join KiteActive",
                 gr: "Werde Teil von KiteActive",
@@ -406,7 +432,7 @@ const trips = [
                 gr: "Nur gute Vibes. Trete dem Gruppenchat bei, um informiert zu bleiben oder mit anderen Reisenden / dem KA-Team zu plaudern.",
                 du: "Alleen goede vibes. Sluit je aan bij de groepschat om op de hoogte te blijven of chat met andere reizigers / KA Team."
             },
-            img4: vanlife_img4,
+            img4: surf_img6,
             img4_head: {
                 en: "Choose your style",
                 gr: "Wähle deinen Stil",
@@ -1124,14 +1150,6 @@ const trips = [
             }
         },
 
-        // included: {
-        //     h2: {
-        //         en: "location / vanlife",
-        //         gr: "Nither location / vanlife",
-        //         du: "Dutch location / vanlife"
-        //     }
-        // },
-       
         reviews: {
             h2: {
                 en: "location / vanlife",
@@ -1139,6 +1157,7 @@ const trips = [
                 du: "Dutch location / vanlife"
             }
         },
+
         hosted: [
             {
                 hosted_img: hosted_img1,
@@ -1243,137 +1262,77 @@ const trips = [
     {
         name: 'Zanzibar',
         vedio: Zanzibar_vedio,
-
+        backcover: zanzibarcover,
         alltabs: {
             highlight: [
                 {
                     text: {
                         en: "Stay at our beachside KiteActive hotel, just steps from the best kitespots.The perfect beginner spot with huge lagoon and shallow water",
-                        gr: "",
-                        du: ""
+                        gr: "Übernachten Sie in unserem KiteActive-Hotel am Strand, nur wenige Schritte von den besten Kitespots entfernt. Der perfekte Anfängerort mit großer Lagune und flachem Wasser.",
+                        du: "Verblijf in ons KiteActive hotel aan het strand, op slechts een paar stappen van de beste kitespots. De perfecte beginnersplek met een grote lagune en ondiep water."
                     }
                 },
                 {
                     text: {
                         en: "Expert Guidance: Learn or progress with our experienced instructors in a stunning, safe environment.",
-                        gr: "",
-                        du: ""
+                        gr: "Expertenanleitung: Lernen oder entwickeln Sie sich mit unseren erfahrenen Ausbildern in einer atemberaubenden und sicheren Umgebung weiter.",
+                        du: "Deskundige begeleiding: Leer of maak vooruitgang met onze ervaren instructeurs in een prachtige, veilige omgeving."
                     }
                 },
                 {
                     text: {
                         en: "Community Vibes Connect with like-minded kiters and make lifelong friends on an adventure-filled holiday.",
-                        gr: "",
-                        du: ""
+                        gr: "Gemeinschaftsgefühl: Verbinden Sie sich mit Gleichgesinnten und schließen Sie lebenslange Freundschaften auf einem abenteuerreichen Urlaub.",
+                        du: "Gemeenschapsgevoel: Maak contact met gelijkgestemde kiters en maak levenslange vrienden tijdens een avontuurlijke vakantie."
                     }
                 },
                 {
                     text: {
                         en: "Seamless Experience We take care of everything—from accommodation to daily activities—so you can focus on kiting and having fun!",
-                        gr: "",
-                        du: ""
+                        gr: "Nahtloses Erlebnis: Wir kümmern uns um alles – von der Unterkunft bis zu den täglichen Aktivitäten – sodass Sie sich auf das Kiten und Spaß haben konzentrieren können!",
+                        du: "Naadloze ervaring: Wij zorgen voor alles - van accommodatie tot dagelijkse activiteiten - zodat je je kunt concentreren op kiten en plezier hebben!"
                     }
-                },
-
+                }
             ],
             question: [
                 {
-                    title: {
-                        en: "What equipment should I take with me to Zanzibar?",
-                        gr: "",
-                        du: ""
+                    "title": {
+                        "en": "What equipment should I take with me to Zanzibar?",
+                        "gr": "Welche Ausrüstung sollte ich nach Sansibar mitnehmen?",
+                        "du": "Welke uitrusting moet ik meenemen naar Zanzibar?"
                     },
-                    para: {
-                        en: "Always try to take large sizes with you and, if you can choose, a larger board. The ideal kite set for an average weight of 75kg is a 15-12-9 m2 with a 140 board. Skimboards, strapless boards and foils are really cool toys in Zanzibar!",
-                        gr: "",
-                        du: "",
+                    "para": {
+                        "en": "Always try to take large sizes with you and, if you can choose, a larger board. The ideal kite set for an average weight of 75kg is a 15-12-9 m2 with a 140 board. Skimboards, strapless boards and foils are really cool toys in Zanzibar!",
+                        "gr": "Versuchen Sie immer, große Größen mitzunehmen, und wenn Sie die Wahl haben, ein größeres Board. Das ideale Kite-Set für ein durchschnittliches Gewicht von 75 kg besteht aus 15-12-9 m2 mit einem 140er Board. Skimboards, strapless Boards und Foils sind wirklich coole Spielzeuge auf Sansibar!",
+                        "du": "Probeer altijd grote maten mee te nemen en, indien mogelijk, een groter board. Het ideale kiteset voor een gemiddeld gewicht van 75 kg is 15-12-9 m2 met een 140 board. Skimboards, strapless boards en foils zijn echt coole speeltjes op Zanzibar!"
                     }
                 },
                 {
-                    title: {
-                        en: "What is the wind like in Zanzibar?",
-                        gr: "",
-                        du: ""
+                    "title": {
+                        "en": "What is the wind like in Zanzibar?",
+                        "gr": "Wie ist der Wind auf Sansibar?",
+                        "du": "Hoe is de wind op Zanzibar?"
                     },
-                    para: {
-                        en: "The wind on Zanzibar is a much discussed topic in the kite world. The wind seasons are from June to September and from December to early March. Every season is different on Zanzibar, we have experienced seasons when you were working hard every day on your 9m2, but also seasons when we had no wind for a number of days or only for large kites (14m2 +). It remains a sport that depends on mother nature, but in general you will certainly enjoy jet kitesurfing!!!!!",
-                        gr: "",
-                        du: "",
+                    "para": {
+                        "en": "The wind on Zanzibar is a much discussed topic in the kite world. The wind seasons are from June to September and from December to early March. Every season is different on Zanzibar, we have experienced seasons when you were working hard every day on your 9m2, but also seasons when we had no wind for a number of days or only for large kites (14m2 +). It remains a sport that depends on mother nature, but in general you will certainly enjoy jet kitesurfing!!!!!",
+                        "gr": "Der Wind auf Sansibar ist ein viel diskutiertes Thema in der Kiteszene. Die Windsaisons dauern von Juni bis September und von Dezember bis Anfang März. Jede Saison ist anders auf Sansibar; wir haben Saisons erlebt, in denen man täglich mit einem 9m2-Schirm unterwegs war, aber auch Saisons, in denen es mehrere Tage lang keinen Wind gab oder nur für große Schirme (14m2 +). Es bleibt ein Sport, der von Mutter Natur abhängt, aber im Allgemeinen wird man das Kitesurfen genießen!",
+                        "du": "De wind op Zanzibar is een veelbesproken onderwerp in de kitescene. De windseizoenen zijn van juni tot september en van december tot begin maart. Elk seizoen is anders op Zanzibar; we hebben seizoenen meegemaakt waarin je elke dag met je 9m2 aan het werk was, maar ook seizoenen waarin er een aantal dagen geen wind was of alleen voor grote kites (14m2+). Het blijft een sport die afhankelijk is van moeder natuur, maar over het algemeen zul je zeker genieten van het kitesurfen!"
                     }
                 },
                 {
-                    title: {
-                        en: "Are vaccinations necessary?",
-                        gr: "",
-                        du: ""
+                    "title": {
+                        "en": "Are vaccinations necessary?",
+                        "gr": "Sind Impfungen notwendig?",
+                        "du": "Zijn vaccinaties noodzakelijk?"
                     },
-                    para: {
-                        en: "Make sure you have completed all vaccinations with your doctor. If you come from the EU, a yellow fever vaccine is not mandatory, but it is if you come from other destinations. Regardless of length of stay, the following vaccinations are recommended for Tanzania: vaccination against DTP (Diphtheria, Tetanus and Polio), vaccination against hepatitis A (contagious jaundice) and a yellow fever vaccination. If you have not had measles or a measles vaccination, an MMR vaccination is recommended for Tanzania. tip: Make an appointment early with the local GGD or GP (some vaccinations need a week before they work). More information can be found athttp://www.vaccinatiesopreis.nl/inentingen-tanzania/",
-                        gr: "",
-                        du: "",
+                    "para": {
+                        "en": "Make sure you have completed all vaccinations with your doctor. If you come from the EU, a yellow fever vaccine is not mandatory, but it is if you come from other destinations. Regardless of length of stay, the following vaccinations are recommended for Tanzania: vaccination against DTP (Diphtheria, Tetanus and Polio), vaccination against hepatitis A (contagious jaundice) and a yellow fever vaccination. If you have not had measles or a measles vaccination, an MMR vaccination is recommended for Tanzania. tip: Make an appointment early with the local GGD or GP (some vaccinations need a week before they work). More information can be found athttp://www.vaccinatiesopreis.nl/inentingen-tanzania/",
+                        "gr": "Stellen Sie sicher, dass alle Impfungen bei Ihrem Arzt abgeschlossen sind. Wenn Sie aus der EU kommen, ist eine Gelbfieberimpfung nicht obligatorisch, es sei denn, Sie kommen aus anderen Zielen. Unabhängig von der Aufenthaltsdauer werden für Tansania folgende Impfungen empfohlen: Impfung gegen DTP (Diphtherie, Tetanus und Polio), Impfung gegen Hepatitis A (infektiöse Gelbsucht) und Gelbfieberimpfung. Wenn Sie keine Masern hatten oder keine Masernimpfung, wird eine MMR-Impfung für Tansania empfohlen. Tipp: Vereinbaren Sie frühzeitig einen Termin mit dem örtlichen Gesundheitsamt oder Hausarzt (einige Impfungen benötigen eine Woche, bevor sie wirken). Weitere Informationen finden Sie unter http://www.vaccinatiesopreis.nl/inentingen-tanzania/",
+                        "du": "Zorg ervoor dat u alle vaccinaties bij uw arts heeft voltooid. Als u uit de EU komt, is een vaccinatie tegen gele koorts niet verplicht, tenzij u uit andere bestemmingen komt. Ongeacht de verblijfsduur worden de volgende vaccinaties voor Tanzania aanbevolen: vaccinatie tegen DTP (difterie, tetanus en polio), vaccinatie tegen hepatitis A (besmettelijke geelzucht) en een vaccinatie tegen gele koorts. Als u geen mazelen heeft gehad of geen mazelenvaccinatie, wordt een BMR-vaccinatie voor Tanzania aanbevolen. Tip: Maak tijdig een afspraak bij de lokale GGD of huisarts (sommige vaccinaties hebben een week nodig voordat ze werken). Meer informatie vindt u op http://www.vaccinatiesopreis.nl/inentingen-tanzania/"
                     }
-                },
-                {
-                    title: {
-                        en: "Do I need a VISA?",
-                        gr: "",
-                        du: ""
-                    },
-                    para: {
-                        en: "Yes, but you have to buy this at the airport for $50. So always make sure you have enough dollars with you when you arrive at the airport. This saves you a lot of time.",
-                        gr: "",
-                        du: "",
-                    }
-                },
-                {
-                    title: {
-                        en: "How can I book?",
-                        gr: "",
-                        du: ""
-                    },
-                    para: {
-                        en: "You can book online without obligation via this link. Booking a trip with us is very easy. Just send us one message, phone call, whatsapp or send a carrier pigeon that you want to come with and we will arrange the rest. As soon as you book, we will reserve a place for you for a trip of up to 10 days. Once the deposit has been transferred (40% of the total amount), you can be sure that you will be there! You can still travel up to 2 days after your booking free cancel, after which you will be charged.",
-                        gr: "",
-                        du: "",
-                    }
-                },
-                {
-                    title: {
-                        en: "What is the group composition on Zanzibar?",
-                        gr: "",
-                        du: ""
-                    },
-                    para: {
-                        en: "Our groups can vary from young to old, and are often evenly distributed with both men and women. The group usually consists of ages between 20 and 50, with exceptions of course. We teach beginners and give tips to advanced kitesurfers, so you can expect every level from us. We also often offer group activities that you can participate in without obligation. On some trips you may share a large room with other KiteActive guests, but this will be indicated. You can often see in advance via our WhatsApp group which people will be present on the trip. Because this is our very first own Guesthouse, the groups are larger than normal. People from other countries can also stay in our guesthouse.",
-                        gr: "",
-                        du: "",
-                    }
-                },
-                {
-                    title: {
-                        en: "Do you also arrange the flight?",
-                        gr: "",
-                        du: ""
-                    },
-                    para: {
-                        en: "In principle no, we mainly give advice on which flight is best to book! You fly to Stone Town, Zanzibar city (ZNZ). After landing, it is another hour's drive to the end point, Paje. Tui flies direct for good prices, don't forget to look via Brussels because that can make a big difference. We further recommend that Skyscanner to check for your best flight. Would you rather have KiteActive arrange everything? No problem. Enter your dates, budget, etc. preferences (travel duration/leg space/transfers) by email and we will book the best flight for you for a €50 booking fee.",
-                        gr: "",
-                        du: "",
-                    }
-                },
-                {
-                    title: {
-                        en: "Is there more to do besides kitesurfing?",
-                        gr: "",
-                        du: ""
-                    },
-                    para: {
-                        en: "In addition to kite surfing, Paje is a perfect place to learn how to dive or chill on the beach. In the evening you can always have a drink with fellow kite surfers in one of the local bars. For example, there is a big beach party every Friday evening at the Jambo bar and fun parties are regularly held at the nearby resorts. There are plenty of activities and things to see on the island. Our team will make sure you will not be bored",
-                        gr: "",
-                        du: "",
-                    }
-                },
+                }
             ]
+
         },
 
 
@@ -1388,7 +1347,7 @@ const trips = [
                 gr: "Entdecke Afrika mit KiteActive während eines Kitesurf-Urlaubs auf Sansibar. Eine tropische Insel mitten im azurblauen Indischen Ozean, der Kitesurf-Urlaub auf Sansibar ist ein erstklassiger Kite-Spot. Mega ist für alle Niveaus zugänglich, mit wunderbarem, warmem, knietiefem Wasser und einem wunderschönen Riff außerhalb der Lagune mit fantastischen Wellen. Seit 2015 hat KiteActive sein eigenes Kitesurf-Hotel und seine Kiteschule am Strand. Wir können diesen wunderbaren Ort mit seinen freundlichen Einheimischen jedem empfehlen. Hakuna Matata!",
                 du: "Ontdek Afrika met KiteActive tijdens een kitesurfvakantie in Zanzibar. Een tropisch eiland midden in de azuurblauwe Indische Oceaan, Zanzibar kitesurf vakantie is een wereldklasse kitespot. Mega is toegankelijk voor alle niveaus met prachtig, warm, kniediep water en een prachtig rif buiten de lagune met fantastische golven. Sinds 2015 heeft KiteActive een eigen kitesurfschool en kitesurfhotel aan het strand. We kunnen deze prachtige plek met zijn vriendelijke lokale bevolking aan iedereen aanraden. Hakuna Matata!"
             },
-            img1: vanlife_img1,
+            img1: surf_img1,
             img1_head: {
                 en: "Early bird discount",
                 gr: "Frühbucherrabatt",
@@ -1399,7 +1358,7 @@ const trips = [
                 gr: "Buche vor dem 1. November und erhalte 10% Rabatt",
                 du: "Boek voor 1 november en ontvang 10% korting"
             },
-            img2: vanlife_img2,
+            img2: surf_img2,
             img2_head: {
                 en: "Join our community",
                 gr: "Werde Teil unserer Community",
@@ -1410,7 +1369,7 @@ const trips = [
                 gr: "7-15 Kiter / Woche Geeignet für: Paare, Alleinreisende, Familien, Singles",
                 du: "7-15 kiters / week Geschikt voor: koppels, solo, familie, singles"
             },
-            img3: vanlife_img3,
+            img3: surf_img3,
             img3_head: {
                 en: "Surf skill",
                 gr: "Surffähigkeiten",
@@ -1421,7 +1380,7 @@ const trips = [
                 gr: "Geeignet für alle Niveaus. Besonders Level 1 - Anfänger!",
                 du: "Geschikt voor alle niveaus. Vooral Niveau 1 - beginners!"
             },
-            img4: vanlife_img4,
+            img4: surf_img4,
             img4_head: {
                 en: "Only stars",
                 gr: "Nur Sterne",
@@ -2238,8 +2197,7 @@ const trips = [
     {
         name: 'Snowkite',
         vedio: Snowkite_vedio,
-
-
+        backcover: snowkitecover,
         alltabs: {
             highlight: [
                 {
@@ -2359,7 +2317,7 @@ const trips = [
                 gr: "Begleite KiteActive auf ein aufregendes Snowkite-Abenteuer in Feldberg! Eingebettet im Herzen des Schwarzwaldes bietet Feldberg makellos verschneite Landschaften und ideale Windbedingungen zum Snowkiten. Egal, ob du ein erfahrener Kiter bist oder etwas Neues ausprobieren möchtest, unsere erfahrenen Trainer führen dich durch die Grundlagen und helfen dir, den Sport zu meistern. Erlebe den Nervenkitzel, über den Schnee zu gleiten, atemberaubende Bergblicke und die Kameradschaft von Gleichgesinnten. Mit bereitgestellter Ausrüstung und gemütlichen Unterkünften ist dies der ultimative Winterurlaub. Verpasse nicht dieses einzigartige Abenteuer mit KiteActive!",
                 du: "Sluit je aan bij KiteActive voor een opwindend snowkite-avontuur in Feldberg! Gelegen in het hart van het Zwarte Woud, biedt Feldberg ongerepte, met sneeuw bedekte landschappen en ideale windomstandigheden voor snowkiten. Of je nu een ervaren kiter bent of iets nieuws wilt proberen, onze ervaren instructeurs begeleiden je door de basis en helpen je de sport onder de knie te krijgen. Geniet van de sensatie van glijden over sneeuw, adembenemende berguitzichten en de gezelligheid van mede-kite-enthousiastelingen. Met alle apparatuur inbegrepen en knusse accommodaties geregeld, is dit de ultieme winteruitstap. Mis dit unieke avontuur met KiteActive niet!"
             },
-            img1: vanlife_img1,
+            img1: surf_img5,
             img1_head: {
                 en: "Dates 2025",
                 gr: "Daten 2025",
@@ -2370,7 +2328,7 @@ const trips = [
                 gr: "26. - 28. Dez. 2024 16. - 18. Jan. 2025 26. Feb. - 01. März 2025",
                 du: "26 - 28 dec 2024 16 - 18 jan 2025 26 feb - 01 mrt 2025"
             },
-            img2: vanlife_img2,
+            img2: surf_img6,
             img2_head: {
                 en: "Skills",
                 gr: "Fähigkeiten",
@@ -2381,7 +2339,7 @@ const trips = [
                 gr: "Alle Niveaus sind willkommen",
                 du: "Alle niveaus zijn welkom"
             },
-            img3: vanlife_img3,
+            img3: surf_img7,
             img3_head: {
                 en: "Join KiteActive",
                 gr: "Mach mit bei KiteActive",
@@ -2392,7 +2350,7 @@ const trips = [
                 gr: "Nur gute Vibes. Trete dem Gruppenchat bei, um informiert zu bleiben oder mit anderen Reisenden / dem KA-Team zu chatten.",
                 du: "Alleen goede vibes. Doe mee met de groepschat om op de hoogte te blijven of te chatten met andere reizigers / het KA-team."
             },
-            img4: vanlife_img4,
+            img4: surf_img8,
             img4_head: {
                 en: "Early bird",
                 gr: "Frühbucher",
@@ -3316,7 +3274,7 @@ const trips = [
     {
         name: 'skyCapTown',
         vedio: skyCapTown_vedio,
-
+        backcover: skycaptowncover,
         alltabs: {
             highlight: [
                 {
@@ -3417,7 +3375,7 @@ const trips = [
                 gr: "Mach dich bereit für ein episches Abenteuer im Skyhigh Kitesurf Camp in Kapstadt mit KiteActive, exklusiv für fortgeschrittene Kitesurfer! Genieße erstklassiges Coaching, erkunde die besten Kitesurf-Spots und nutze die neueste Ausrüstung. Die atemberaubenden Strände und perfekten Windbedingungen Kapstadts machen es zum Paradies für Kitesurfer. Abseits des Wassers kannst du mit neuen Freunden entspannen, die lebendige lokale Szene erkunden und den atemberaubenden Blick auf den Tafelberg genießen. Es geht um tolle Vibes, herausfordernde Fahrten und unvergessliche Erinnerungen. Verpasse es nicht – schließe dich uns für das ultimative Kitesurferlebnis an!",
                 du: "Bereid je voor op een episch avontuur bij het Skyhigh Kitesurf Camp in Kaapstad met KiteActive, exclusief ontworpen voor gevorderde kiters! Geniet van eersteklas coaching, bedwing de beste kitesurfspots en maak gebruik van de nieuwste uitrusting. De prachtige stranden en perfecte windcondities van Kaapstad maken het tot een paradijs voor kitesurfers. Buiten het water kun je ontspannen met nieuwe vrienden, de bruisende lokale scène verkennen en genieten van het adembenemende uitzicht op de Tafelberg. Het draait allemaal om geweldige vibes, uitdagende ritten en onvergetelijke herinneringen. Mis het niet – sluit je bij ons aan voor de ultieme kitesurfervaring!"
             },
-            img1: vanlife_img1,
+            img1: surf_img9,
             img1_head: {
                 en: "Dates 2025",
                 gr: "Termine 2025",
@@ -3428,7 +3386,7 @@ const trips = [
                 gr: "15. Februar - 1. März 2025",
                 du: "15 februari - 1 maart 2025"
             },
-            img2: vanlife_img2,
+            img2: surf_img10,
             img2_head: {
                 en: "Skills",
                 gr: "Fähigkeiten",
@@ -3439,7 +3397,7 @@ const trips = [
                 gr: "Level 3 - 4 | Unabhängig / Fortgeschritten",
                 du: "Niveau 3 - 4 | Onafhankelijk / Gevorderd"
             },
-            img3: vanlife_img3,
+            img3: surf_img11,
             img3_head: {
                 en: "Join KiteActive",
                 gr: "Schließe dich KiteActive an",
@@ -3450,7 +3408,7 @@ const trips = [
                 gr: "Nur gute Vibes. Trete dem Gruppenchat bei, um informiert zu bleiben oder mit anderen Reisenden / dem KA-Team zu chatten.",
                 du: "Alleen goede vibes. Doe mee met de groepschat om op de hoogte te blijven of te chatten met andere reizigers / het KA-team."
             },
-            img4: vanlife_img4,
+            img4: surf_img12,
             img4_head: {
                 en: "Early bird",
                 gr: "Frühbucher",
@@ -4253,7 +4211,7 @@ const trips = [
     {
         name: 'KitemeccaTraifa',
         vedio: KitemeccaTraifa_vedio,
-
+        backcover: kitemeacacover,
         alltabs: {
             highlight: [
                 {
@@ -4375,7 +4333,7 @@ const trips = [
                 du: "Tarifa staat niet alleen bekend als het meest zuidelijke punt van Spanje, maar ook als het kitesurfmekka van Europa, waar je kunt kitesurfen in Tarifa met zijn unieke mix van Marokkaanse en Spaanse invloeden. Een perfecte bestemming voor je kitevakantie dicht bij huis! Dit surfparadijs ligt op slechts 14 km van de Afrikaanse kust en staat bekend als een plek waar de wind altijd waait. Het nachtleven in Tarifa is ook leuk met gezellige bars en heerlijke restaurants. Ben jij een echte golfrijder of houd je van vlakke spots waar je overal kniediep kunt staan? Wil je deze winter goedkoop ontsnappen? Check in en ontdek het zelf!"
             },
 
-            img1: vanlife_img1,
+            img1: surf_img13,
             img1_head: {
                 en: "Dates 2025",
                 gr: "Termine 2025",
@@ -4386,7 +4344,7 @@ const trips = [
                 gr: "25. Januar - 1. Februar",
                 du: "25 januari - 1 februari"
             },
-            img2: vanlife_img2,
+            img2: surf_img1,
             img2_head: {
                 en: "Skills",
                 gr: "Fähigkeiten",
@@ -4397,7 +4355,7 @@ const trips = [
                 gr: "Level 2 ist möglich, Level 3 ist besser für dieses Kitecamp!",
                 du: "Niveau 2 is mogelijk, niveau 3 is beter voor dit kitecamp!"
             },
-            img3: vanlife_img3,
+            img3: surf_img2,
             img3_head: {
                 en: "Join KiteActive",
                 gr: "Schließe dich KiteActive an",
@@ -4408,7 +4366,7 @@ const trips = [
                 gr: "Nur gute Vibes. Trete dem Gruppenchat bei, um informiert zu bleiben oder mit anderen Reisenden / dem KA-Team zu chatten.",
                 du: "Alleen goede vibes. Doe mee in de groepschat om op de hoogte te blijven of te chatten met andere reizigers / het KA-team."
             },
-            img4: vanlife_img4,
+            img4: surf_img6,
             img4_head: {
                 en: "Early bird",
                 gr: "Frühbucher",
@@ -5127,7 +5085,7 @@ const trips = [
     {
         name: 'EndlessSummerParty',
         vedio: EndlessSummerParty_vedio,
-
+        backcover: endlesscoover,
         alltabs: {
             highlight: [
                 {
@@ -5272,7 +5230,7 @@ const trips = [
                 gr: "In unserem Epic KiteCamp in Hurghada tauchst du ein in das Kitesurf-Paradies im Herzen des atemberaubenden Roten Meeres Ägyptens! Genieße deinen Aufenthalt in einem luxuriösen All-Inclusive-Resort, wo jedes Detail berücksichtigt wird, sodass du dich auf das Wesentliche konzentrieren kannst: Kitesurfen. Ob du ein erfahrener Profi oder gerade erst anfängst, Hurghada gehört zu den besten Spots der Welt, um Kitesurfen zu lernen. Mit seinen warmen, flachen Gewässern und zuverlässigen Winden wirst du im Handumdrehen über die Wellen gleiten. Unsere erfahrenen Instruktoren und hochwertige Ausrüstung sorgen dafür, dass du schnell in einer einladenden, anfängerfreundlichen Atmosphäre Fortschritte machst. Dank direkter Flüge ist es ein Kinderspiel, dieses Kitesurf-Paradies zu erreichen! Mach dich bereit für das Abenteuer deines Lebens!",
                 du: "In ons Epic KiteCamp in Hurghada duik je het kitesurfparadijs in, recht in het hart van de verbluffende Rode Zee van Egypte! Geniet van je verblijf in een luxueus all-inclusive resort waar elk detail is verzorgd, zodat je je kunt concentreren op wat het belangrijkst is: kitesurfen. Of je nu een doorgewinterde pro bent of net begint, Hurghada is een van de beste plekken ter wereld om te leren kitesurfen. Met zijn warme, ondiepe wateren en betrouwbare winden surf je in een mum van tijd over de golven. Onze deskundige instructeurs en topkwaliteit apparatuur zorgen ervoor dat je snel vooruitgang boekt in een verwelkomende, beginner-vriendelijke sfeer. Dankzij directe vluchten is het een fluitje van een cent om dit kitesurfparadijs te bereiken! Maak je klaar voor het avontuur van je leven!"
             },
-            img1: vanlife_img1,
+            img1: surf_img9,
             img1_head: {
                 en: "Only stars!",
                 gr: "Nur Sterne!",
@@ -5283,7 +5241,7 @@ const trips = [
                 gr: "Lies die Bewertungen unserer Reisenden über Kite-Reisen.",
                 du: "Lees de recensies van onze reizigers over kite reizen."
             },
-            img2: vanlife_img2,
+            img2: surf_img10,
             img2_head: {
                 en: "Community",
                 gr: "Gemeinschaft",
@@ -5294,7 +5252,7 @@ const trips = [
                 gr: "11-15 Kiter / Woche Paare, Solo, Familie, allein. Trete dem Gruppenchat bei, um informiert zu bleiben oder mit anderen Reisenden / dem KA-Team zu chatten.",
                 du: "11-15 kiters / week koppels, solo, gezin, alleen. Doe mee in de groepschat om op de hoogte te blijven of te chatten met andere reizigers / KA-team."
             },
-            img3: vanlife_img3,
+            img3: surf_img4,
             img3_head: {
                 en: "Surf skills",
                 gr: "Surf-Fähigkeiten",
@@ -5305,7 +5263,7 @@ const trips = [
                 gr: "Level 1-3 / Anfänger bis Fortgeschrittene Kitesurf-Unterricht",
                 du: "Niveau 1-3 / Beginner tot Gevorderde Kitesurflessen"
             },
-            img4: vanlife_img4,
+            img4: surf_img2,
             img4_head: {
                 en: "Save the date",
                 gr: "Das Datum vormerken",
@@ -5962,6 +5920,7 @@ const trips = [
     {
         name: 'Brazil',
         vedio: Brazil_vedio,
+        backcover: brazilcover,
 
         alltabs: {
             highlight: [
@@ -6101,7 +6060,7 @@ const trips = [
                 gr: "Jahrelang haben wir nach den schönsten Reisezielen gesucht, die wichtige Faktoren wie: zuverlässigen Wind, unberührte Sandstrände, rollende Wellen und unbegrenzten Platz auf dem Wasser kombinieren. Hast du jemals von einem solchen Ort geträumt? Dann hast du gerade die Reise gefunden, die deinen Traum wahr werden lässt! Wenn du dich unserem XXL Downwinder durch Brasilien, einem der besten Kitesurfspots der Welt, anschließt, lassen wir die überfüllten Strände und den Massentourismus hinter uns. Du wirst neue Kitesurfspots entdecken und von unseren professionellen Kitesurfern gecoacht, die schon seit Jahren hierher kommen. Das Leben ist eine große Reise, also warum nicht stilvoll reisen!",
                 du: "Jarenlang hebben we gezocht naar de mooiste bestemmingen die belangrijke factoren combineren zoals: betrouwbare wind, ongerepte zandstranden, golvende zeeën en onbeperkte ruimte op het water. Heb je ooit gedroomd van zo'n plek? Dan heb je net de reis gevonden die je droom waar zal maken! Wanneer je je aansluit bij onze XXL Downwinder door Brazilië, een van de beste kitesurfplekken ter wereld, laten we de drukke stranden en het massatoerisme achter ons. Je zult nieuwe kitesurfplekken ontdekken en gecoacht worden door onze professionele kitesurfers die hier al jaren komen. Het leven is een grote reis, waarom niet in stijl reizen!"
             },
-            img1: vanlife_img1,
+            img1: surf_img7,
             img1_head: {
                 en: "Save the date",
                 gr: "Das Datum vormerken",
@@ -6112,7 +6071,7 @@ const trips = [
                 gr: "Unsere KiteActive Downwinder in Brasilien finden vom 2. bis 26. November statt, oder kontaktiere uns, um deinen individuellen Downwinder zu planen!",
                 du: "Onze KiteActive downwinders in Brazilië zijn van 2 - 26 nov of neem contact met ons op om je aangepaste downwinder te plannen!"
             },
-            img2: vanlife_img2,
+            img2: surf_img8,
             img2_head: {
                 en: "Only stars!",
                 gr: "Nur Sterne!",
@@ -6123,7 +6082,7 @@ const trips = [
                 gr: "Lies die Bewertungen unserer Reisenden",
                 du: "Lees de recensies van onze reizigers"
             },
-            img3: vanlife_img3,
+            img3: surf_img10,
             img3_head: {
                 en: "Skill set",
                 gr: "Fähigkeiten",
@@ -6134,7 +6093,7 @@ const trips = [
                 gr: "Niveau 3-4 Mittelstufe bis Fortgeschrittene",
                 du: "Niveau 3-4 Gemiddeld tot Gevorderd"
             },
-            img4: vanlife_img4,
+            img4: surf_img13,
             img4_head: {
                 en: "Join KiteActive",
                 gr: "Mach mit bei KiteActive",
@@ -6761,6 +6720,8 @@ const trips = [
     {
         name: 'Sail&kite',
         vedio: Sailkite_vedio,
+        backcover: sailkitecover,
+
 
         alltabs: {
             highlight: [
@@ -6880,7 +6841,7 @@ const trips = [
                 gr: "In diesem Jahr organisiert KiteActive erneut eines der einzigartigsten TV-TAS Downwinder-Erlebnisse der Welt in unserem eigenen Land! In diesem Jahr wird KiteActive wieder DEN TV-TAS Downwinder organisieren. Weißt du nicht, was DEN TV TAS bedeutet? Es ist ein praktisches Eselsbrücken für die Namen aller niederländischen Watteninseln. Der Kitesurf-Downwinder beginnt in Den Helder. An der Nordseite von Texel machen wir eine Inselüberquerung in Richtung Vlieland, und nach dem Mittagessen geht es weiter nach Terschelling. Je nach Wind verbringen wir die Nacht hier und setzen unser Abenteuer am nächsten Tag in Richtung Ameland und Schiermonnikoog fort. Dies ist einer der aufregendsten Kitesurf-Ausflüge, die du in diesem Jahr machen kannst!",
                 du: "Dit jaar organiseert KiteActive opnieuw een van de meest unieke TV TAS downwinder ervaringen ter wereld in ons eigen land! Dit jaar organiseert KiteActive weer de DEN TV-TAS downwinder. Weet je niet wat DEN TV TAS betekent? Het is een handig geheugensteuntje voor de namen van alle Nederlandse Waddeneilanden. De kitesurf downwinder begint in Den Helder. Aan de noordkant van Texel maken we een eilandoversteek naar Vlieland, en na de lunch gaan we verder naar Terschelling. Afhankelijk van de wind zullen we hier de nacht doorbrengen en de volgende dag ons avontuur voortzetten naar Ameland en Schiermonnikoog. Dit is een van de spannendste kitesurfreizen die je dit jaar kunt maken!"
             },
-            img1: vanlife_img1,
+            img1: surf_img13,
             img1_head: {
                 en: "Surf skill",
                 gr: "Surf-Fähigkeit",
@@ -6891,7 +6852,7 @@ const trips = [
                 gr: "Stufe 4 - Fortgeschritten! Die Gruppengröße beträgt maximal 25 Personen.",
                 du: "Niveau 4 - Gevorderd! De groepsgrootte is maximaal 25 personen."
             },
-            img2: vanlife_img2,
+            img2: surf_img10,
             img2_head: {
                 en: "Join community",
                 gr: "Treten Sie der Gemeinschaft bei",
@@ -6902,7 +6863,7 @@ const trips = [
                 gr: "Treten Sie dem Gruppenchat bei, um informiert zu bleiben oder mit anderen Reisenden / KA-Team zu chatten.",
                 du: "Sluit je aan bij de groepschat om op de hoogte te blijven of te chatten met andere reizigers / KA-team."
             },
-            img3: vanlife_img3,
+            img3: surf_img3,
             img3_head: {
                 en: "Be ready.. Always!",
                 gr: "Sei bereit... Immer!",
@@ -6913,7 +6874,7 @@ const trips = [
                 gr: "Das Windfenster reicht vom 15. April bis Ende Oktober. VORSICHT: Ab diesem Jahr werden wir die Tour auch während des Wochenangebots durchführen.",
                 du: "Het windvenster is van 15 april tot het einde van oktober. LET OP: Vanaf dit jaar zullen we de tour ook tijdens het weekaanbod maken."
             },
-            img4: vanlife_img4,
+            img4: surf_img6,
             img4_head: {
                 en: "Wind & Weather",
                 gr: "Wind & Wetter",
@@ -7361,6 +7322,7 @@ const trips = [
     {
         name: 'Sicily',
         vedio: Sicily_vedio,
+        backcover: sicily,
 
         alltabs: {
             highlight: [
@@ -7519,7 +7481,7 @@ const trips = [
                 gr: "Ein Kitesurfziel in Europa, das alles hat! Köstliches Essen, nette Menschen und einen erstklassigen Kitespot mit... WIND! Kurz gesagt: Der sizilianische Kitesurf-Traum. Reisen Sie mit uns diesen Sommer nach Marsala für ein einzigartiges Kite-Camp auf Sizilien, einem unserer Lieblingsziele!",
                 du: "Een kitesurfbestemming in Europa die alles heeft! Heerlijk eten, leuke mensen en een wereldklasse kitespot met... WIND! Kortom: De Siciliaanse kitesurf droom. Reis deze zomer met ons naar Marsala voor een uniek kitekamp op Sicilië, een van onze favoriete bestemmingen!"
             },
-            img1: vanlife_img1,
+            img1: surf_img12,
             img1_head: {
                 en: "Only stars!",
                 gr: "Nur Sterne!",
@@ -7530,7 +7492,7 @@ const trips = [
                 gr: "Lesen Sie die Bewertungen unserer Reisenden über Kite-Reisen.",
                 du: "Lees de beoordelingen van onze reizigers over kite-reizen."
             },
-            img2: vanlife_img2,
+            img2: surf_img10,
             img2_head: {
                 en: "Community",
                 gr: "Gemeinschaft",
@@ -7541,7 +7503,7 @@ const trips = [
                 gr: "7-12 Kiter / Woche Paare, Alleinreisende, Familien. Treten Sie dem Gruppenchat bei, um informiert zu bleiben oder mit anderen Reisenden / KA-Team zu chatten.",
                 du: "7-12 kitesurfers / week stellen stellen, solo, gezin, single. Sluit je aan bij de groepschat om op de hoogte te blijven of te chatten met andere reizigers / KA Team."
             },
-            img3: vanlife_img3,
+            img3: surf_img4,
             img3_head: {
                 en: "Surf skills",
                 gr: "Surf-Fähigkeiten",
@@ -7552,7 +7514,7 @@ const trips = [
                 gr: "Level 1-3 / Anfänger bis Fortgeschrittene Kitesurf-Kurse",
                 du: "Niveau 1-3 / Beginners tot Gevorderde Kitesurflessen"
             },
-            img4: vanlife_img4,
+            img4: surf_img13,
             img4_head: {
                 en: "Save the date",
                 gr: "Merken Sie sich das Datum",
@@ -8230,7 +8192,8 @@ const trips = [
 
     {
         name: 'Dakhla',
-        vedio: vedio,
+        vedio: Zanzibar_vedio,
+        backcover: zanzibarcover,
         overview: {
             trip_heading: {
                 en: "Experience Nature's Beauty and Adventure",
@@ -8242,7 +8205,7 @@ const trips = [
                 gr: "Entdecke die bezaubernde Schönheit von Dakhla, einem versteckten Juwel im Herzen Indiens. Bekannt für seine atemberaubenden Landschaften und lebendige Kultur, wird Dakhla schnell zu einem der besten Ziele für Kitesurf-Enthusiasten. Mit unberührten Stränden, konstanten Winden und warmem Wasser ist es der perfekte Spielplatz für sowohl Anfänger als auch erfahrene Kitesurfer.",
                 du: "Ontdek de betoverende schoonheid van Dakhla, een verborgen parel in het hart van India. Bekend om zijn prachtige landschappen en levendige cultuur, wordt Dakhla snel een van de topbestemmingen voor kitesurfenthousiastelingen. Met ongerepte stranden, constante winden en warm water is het de perfecte speelplaats voor zowel beginners als ervaren kitesurfers."
             },
-            img1: vanlife_img1,
+            img1: surf_img5,
             img1_head: {
                 en: "Dates 2025",
                 gr: "Daten 2025",
@@ -8253,7 +8216,7 @@ const trips = [
                 gr: "19 - 29 September",
                 du: "19 - 29 September"
             },
-            img2: vanlife_img2,
+            img2: surf_img9,
             img2_head: {
                 en: "Skills",
                 gr: "Fähigkeiten",
@@ -8264,7 +8227,7 @@ const trips = [
                 gr: "Jede Fähigkeit ist willkommen.. von Anfängern bis Fortgeschrittenen",
                 du: "Iedere vaardigheid is welkom.. van beginners tot gevorderden"
             },
-            img3: vanlife_img3,
+            img3: surf_img1,
             img3_head: {
                 en: "Join KiteActive",
                 gr: "Werde Mitglied bei KiteActive",
@@ -8275,7 +8238,7 @@ const trips = [
                 gr: "Nur gute Vibes. Trete dem Gruppenchat bei, um informiert zu bleiben oder mit anderen Reisenden / KA-Team zu chatten.",
                 du: "Alleen goede vibes. Doe mee in de groepschat om op de hoogte te blijven of te chatten met andere reizigers / KA-team."
             },
-            img4: vanlife_img4,
+            img4: surf_img10,
             img4_head: {
                 en: "Choose your style",
                 gr: "Wähle deinen Stil",

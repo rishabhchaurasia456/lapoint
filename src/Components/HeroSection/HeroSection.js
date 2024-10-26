@@ -1,48 +1,70 @@
-import React from 'react'
-import "./HeroSection.css"
+import React, { useRef, useEffect, useState } from 'react';
+import './HeroSection.css';
 
-import vedio from "../../Images/Kiteactive-video1-1.mp4"
-
-// import img from '../../Images/logo-zwart-geel-geel.png'
-// import { Link } from 'react-router-dom'
-
-
+import vedio from '../../Images/Kiteactive-video1-1.mp4';
+import bgcover from '../../Images/tripvedios/homecover.webp';
 
 const HeroSection = ({ selectedLanguage }) => {
+  const content = {
+    en: {
+      title: 'Kiteactive - Surf Camps, Work & Surf, Yoga & Waves',
+      subtitle: 'ADVENTURE AWAITS: DISCOVER THE WORLD',
+    },
+    gr: {
+      title: 'Kiteactive - Surfcamps, Work & Surf, Yoga & Wellen',
+      subtitle: 'ABENTEUER ERWARTET DICH: ENTDECKE DIE WELT',
+    },
+    du: {
+      title: 'Kiteactive - Surfkampen, Werk & Surf, Yoga & Golven',
+      subtitle: 'HET AVONTUUR WACHT: ONTDEK DE WERELD',
+    },
+  };
 
-    const content = {
-        en: {
-            title: "Kiteactive - Surf Camps, Work & Surf, Yoga & Waves",
-            subtitle: "ADVENTURE AWAITS: DISCOVER THE WORLD",
-        },
-        gr: {
-            title: "Kiteactive - Surfcamps, Work & Surf, Yoga & Wellen",
-            subtitle: "ABENTEUER ERWARTET DICH: ENTDECKE DIE WELT",
-        },
+  const [videoLoaded, setVideoLoaded] = useState(false);
+  const containerRef = useRef(); // Use the containerRef to observe
 
-        du: {
-            title: "Kiteactive - Surfkampen, Werk & Surf, Yoga & Golven",
-            subtitle: "HET AVONTUUR WACHT: ONTDEK DE WERELD",
-        },
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        setVideoLoaded(true); // Load the video when the container becomes visible
+      }
+    });
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+
+    return () => {
+      if (containerRef.current) {
+        observer.unobserve(containerRef.current);
+      }
     };
-    return (
-        <div>
+  }, []);
 
-            <div className="video-container">
-                <video autoPlay loop muted className="background-video">
-                    <source src={vedio} type="video/mp4" loading="lazy" />
-                    Your browser does not support the video tag.
-                </video>
-                
-                {/* You can add other content here */}
-                <div className="content">
-                    {/* logo for mobile mode only show  */}
-                    <p className='hero_heading1'>{content[selectedLanguage].title}</p>
-                    <h1 className='hero_heading2'>{content[selectedLanguage].subtitle}</h1>
-                </div>
-            </div>
-        </div>
-    )
-}
+  return (
+    <div ref={containerRef} className="video-container">
+      {!videoLoaded && <img src={bgcover} alt="Loading..." className="background-image" />}
+       {/* {/ Show image before video /} */}
+      {videoLoaded && (
+        <video
+          autoPlay
+          loop
+          muted
+          className="background-video"
+          style={{ display: videoLoaded ? 'block' : 'none' }} // Hide video until it's loaded
+        >
+          <source src={vedio} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      )}
 
-export default HeroSection
+      {/* {/ Other content /}  */}
+      <div className="content">
+        <p className="hero_heading1">{content[selectedLanguage].title}</p>
+        <h1 className="hero_heading2">{content[selectedLanguage].subtitle}</h1>
+      </div>
+    </div>
+  );
+};
+
+export default HeroSection;

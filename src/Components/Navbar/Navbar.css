@@ -1,14 +1,53 @@
+
+
+.nav_pos {
+    position: fixed;
+    background: transparent;
+    z-index: 1000;
+    margin-top: 0;
+}
+
+
+#navbarManage {
+    background-color: transparent;
+    position: static;    
+    transition: 1s;
+
+}
+
+#navbarManage.scrolled {
+    background-color: #fdfaec;
+    position: fixed;
+    top: 0;
+    animation-name: animate;
+    animation-duration: 0.1s;
+
+}
+
+@keyframes animate {
+    from {
+        top: -10px;
+
+    }
+
+    to {
+        top: 0;
+
+    }
+}
+
+
 .language_div{
     text-align: right;
     margin-right: 80px;
     padding: 0;
-    margin-top: 10px;
+    /* margin-top: 10px; */
     position: relative;
     z-index: 100;
 }
 
 .LNG_text{
-    color: #fff !important;
+    color: black !important;
 }
 
 
@@ -21,7 +60,7 @@
     font-size: 1.2rem;
     position: sticky;
     top: 0;
-    /* margin-top: 15px !important; */
+    /* margin-top: 15px; */
     z-index: 20;
 
 }
@@ -70,7 +109,7 @@
 }
 
 .nav-links {
-    color: #fff;
+    color: black;
     text-decoration: none;
     padding: 0.5rem 1rem;
     font-weight: bold;

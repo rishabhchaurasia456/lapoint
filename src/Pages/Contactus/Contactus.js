@@ -45,8 +45,7 @@ const mainContainer = {
       gr: "Ein professionelles Kite-Team, am Strand und hinter dem Computer. Wir organisieren deine Kitesurfreise bis ins kleinste Detail. Wir freuen uns darauf, dich zu treffen und gemeinsam eine großartige Zeit zu haben! Egal, ob du ein Anfänger bist, der die Grundlagen lernen möchte, oder ein erfahrener Kitesurfer, der den Nervenkitzel neuer Abenteuer sucht, unser Team ist hier, um dich auf jedem Schritt des Weges zu unterstützen. Vom Auswählen der besten Standorte mit optimalen Windbedingungen bis hin zur Organisation von Unterkünften und Ausrüstung, wir kümmern uns um alles.", // German (GR)
       du: "Een professioneel kite team, op het strand en achter de computer. We organiseren je kitesurftrip tot in de kleinste details. We kijken ernaar uit om je te ontmoeten en samen een geweldige tijd te hebben! Of je nu een beginner bent die de basis wil leren of een ervaren kitesurfer die op zoek is naar de opwinding van nieuwe avonturen, ons team is er om je bij elke stap te ondersteunen. Van het selecteren van de beste locaties met optimale windomstandigheden tot het regelen van accommodaties en uitrusting, wij regelen het allemaal." // Dutch (DU)
     }
-  };
-  
+  };  
    
 
 const Contactus = ({ selectedLanguage }) => {
@@ -69,8 +68,8 @@ const Contactus = ({ selectedLanguage }) => {
                 <img src={headerbackimg} className='headerbackimg' alt="" />
             </div>
 
-            {/* image background content  */}
 
+            {/* image background content  */}
 
             <div className='main_container'> 
                 <h1 className='contact_text'> {mainContainer.title[selectedLanguage]}</h1>
@@ -85,7 +84,7 @@ const Contactus = ({ selectedLanguage }) => {
             <div className=' container crd_main_div'>
                 <div className="row text-center">
                     <div className="col-lg-4">
-                        <div className="card crd_div    ">
+                        <div className="card crd_div">
                             <img src={icon1} className='card_icon m-auto w-25' alt="" />
                             <div className="crd_title m-3">Email</div>
                             <div className="crd_title2">Click on icon to submit</div>
@@ -119,12 +118,12 @@ const Contactus = ({ selectedLanguage }) => {
                     <div className='col-md-6'>
                         <div className="life_style_div">
                             <div className="">
-                                <h1 className="lifestyle_heading">
+                                <h1 className="contact_text2">
                                 {mainContainer.title5[selectedLanguage]}                                   
                                 </h1>
                             </div>
                             <div className="">
-                                <h1 className="lifestyle_para">
+                                <h1 className="contact_para2">
                                     <p> {mainContainer.lifestylepara[selectedLanguage]}</p>                                  
                                 </h1>
                             </div>
@@ -133,7 +132,6 @@ const Contactus = ({ selectedLanguage }) => {
                     </div>
                 </div>
             </div>
-
 
         </div>
     )

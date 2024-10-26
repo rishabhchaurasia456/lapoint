@@ -24,8 +24,8 @@ const Elementcomp = ({selectedLanguage}) => {
                 <div className="row element_row">
                     <div className="col-12 col-md-3">
                         {/* <!-- Content for the first column --> */}
-                        <div>
-                            <img src={img} alt="" className='w-75 mt-4 pt-4 mx-3 ' />
+                        <div className=''>
+                            <img src={img} alt="" className='element_img' />
                         </div>
                     </div>
                     <div className="col-12 col-md-6">

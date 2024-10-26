@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import Kitespots from './TripComponent/Kitespots';
 import Packages from './TripComponent/Packages';
@@ -9,10 +9,12 @@ import Hosted from './TripComponent/Hosted';
 import Activites from './TripComponent/Activites';
 import Overview from './TripComponent/Overview';
 import trips from './Tripdata';
-import  './TripComponent/Trips.css'
-import { useParams } from 'react-router-dom';
+import './TripComponent/Trips.css'
+import { Link, useParams } from 'react-router-dom';
 import Booking from '../Kitecamps/Booking';
 import Surfcampslider from '../../Components/Surfcampslider/Surfcampslider';
+
+import checkicon from '../../Images/check-mark.png'
 
 const Trip = ({ selectedLanguage }) => {
     const { trip_name } = useParams();
@@ -28,26 +30,7 @@ const Trip = ({ selectedLanguage }) => {
         setActiveTab(tabName);
     };
 
-    const [isVideoVisible, setIsVideoVisible] = useState(false);
-    const videoRef = useRef();
-
-    useEffect(() => {
-        const observer = new IntersectionObserver((entries) => {
-            if (entries[0].isIntersecting) {
-                setIsVideoVisible(true); // Video starts loading when it becomes visible
-            }
-        });
-
-        if (videoRef.current) {
-            observer.observe(videoRef.current);
-        }
-
-        return () => {
-            if (videoRef.current) {
-                observer.unobserve(videoRef.current);
-            }
-        };
-    }, []);
+    const [videoLoaded, setVideoLoaded] = useState(false);
 
     return (
         <div>
@@ -56,34 +39,44 @@ const Trip = ({ selectedLanguage }) => {
                 <meta name="description" content="This is the home page of your website where you can find information about surfcamps, lifestyle, and more." />
                 <meta name="keywords" content="surfcamp, lifestyle, adventure, activities, reviews" />
                 <link rel="canonical" href="https://kiteactiveventures.com/kitecamp" />
+                {trip?.backcover && <link rel="preload" as="image" href={trip.backcover} />}
             </Helmet>
 
-            {/* Video section */}
-            {/* <div className="video-container">
-                {trip?.vedio && (
-                    <video key={trip.vedio} autoPlay loop muted className="background-video">
-                        <source src={trip.vedio} type="video/mp4" loading="lazy" />
-                        Your browser does not support the video tag.
-                    </video>
-                )}
-            </div> */}
 
+
+            {/* Video section */}
             <div className="video-container">
-            {trip?.vedio && (
-                <video
-                    ref={videoRef}
-                    key={trip.vedio}
-                    autoPlay 
-                    loop 
-                    muted 
-                    preload={isVideoVisible ? 'auto' : 'none'} // Loads only when video is visible
-                    className="background-video"
-                >
-                    <source src={trip.vedio} type="video/mp4" loading="lazy" />
-                    Your browser does not support the video tag.
-                </video>
-            )}
-        </div>
+                {trip?.vedio && (
+                    <>
+                        {/* Ensure the image loads instantly */}
+                        {!videoLoaded && (
+                            <img
+                                src={trip.backcover}
+                                alt="Loading..."
+                                className="placeholder-image"
+                                loading="eager" // Prioritize image loading
+                                style={{ display: videoLoaded ? 'none' : 'block' }} // Hide image once the video loads
+                            />
+                        )}
+
+                        <video
+                            key={trip.vedio}
+                            autoPlay
+                            loop
+                            muted
+                            className="background-video"
+                            style={{ display: videoLoaded ? 'block' : 'none' }} // Only display video when it is ready
+                            onCanPlayThrough={() => setVideoLoaded(true)} // Trigger video load completion
+                            loading="lazy" // Lazy load the video for better performance
+                        >
+                            <source src={trip.vedio} type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
+                    </>
+                )}
+            </div>
+
+
 
             {/* Conditionally render the tab buttons based on the available data */}
             <div className="container">
@@ -137,7 +130,6 @@ const Trip = ({ selectedLanguage }) => {
 
             <div className="container-fluid">
                 <div className="output-container">
-                    {/* Conditionally render the components based on the active tab and the available data */}
                     {activeTab === 'OVERVIEW' && trip?.overview && (
                         <Overview overviewData={trip.overview} selectedLanguage={selectedLanguage} />
                     )}
@@ -163,47 +155,77 @@ const Trip = ({ selectedLanguage }) => {
                 </div>
 
                 <div>
+
+
+                    <div className="container-fluid m-0 p-0">
+                        <div className="row ">
+                            <div className="col">
+                                <div className='strip'>
+                                    <div>
+                                        <h5 className='strip_text'>Free rebooking up to 14 days prior to arrivalRead <span>
+                                            <Link to="/" className='strip_link'>Read more</Link>
+                                        </span></h5>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <div className="container-fluid">
                         <div className="row">
                             {trip?.alltabs && (
+
                                 <div className="container-fluid">
                                     <div className="row">
                                         {/* Highlights/Inclusions Section */}
                                         {trip.alltabs.highlight && (
                                             <>
-                                                <h2 className='text-center trip_heading'>Highlights/Inclusions</h2>
+                                                <h2 className='text-center surf_text mt-5'>Highlights/Inclusions</h2>
                                                 {trip.alltabs.highlight.map((items, index) => (
-                                                    <p className='px-5' key={index}>{items.text[selectedLanguage] || 'No translation available'}</p>
-                                                ))}
-                                            </>
-                                        )}
-                                        {/* Questions Section */}
-                                        {trip.alltabs.question && (
-                                            <>
-                                                <h2 className='text-center trip_heading'>Do you have questions? We have answers!</h2>
-                                                {trip.alltabs.question.map((items, index) => (
-                                                    <div key={index}>
-                                                        <details className='px-5' key={index}>
-                                                            <summary className='p_faq'>{items.title[selectedLanguage] || 'No translation available'}</summary>
-                                                            <div className="p_faq__content fs-5 mb-2">
-                                                                <p>{items.para[selectedLanguage] || 'No translation available'}</p>
-                                                            </div>
-                                                        </details>
+                                                    <div className='d-flex '>
+                                                        <img src={checkicon} alt="icon" className='check_icon' />
+
+                                                        <p className='mx-2 high_text' key={index}>{items.text[selectedLanguage] || 'No translation available'}</p>
                                                     </div>
                                                 ))}
                                             </>
                                         )}
+
+                                        {/* Questions Section */}
+                                        {/* Questions Section */}
+                                        {trip.alltabs.question && (
+                                            <>
+                                                <h2 className='text-center surf_text mt-4 mb-5'>Do you have questions? We have answers!</h2>
+                                                <div className="container">
+                                                    <div className="row">
+                                                        {trip.alltabs.question.map((items, index) => (
+                                                            <div className="col-md-6" key={index}> {/* This creates two columns in a single row */}
+                                                                <details className=''>
+                                                                    <summary className='p_faq'>{items.title[selectedLanguage] || 'No translation available'}</summary>
+                                                                    <div className="p_faq__content fs-5 mb-2">
+                                                                        <p>{items.para[selectedLanguage] || 'No translation available'}</p>
+                                                                    </div>
+                                                                </details>
+                                                            </div>
+                                                        ))}
+                                                    </div>
+                                                </div>
+                                            </>
+                                        )}
+
+
                                     </div>
                                 </div>
                             )}
                         </div>
                     </div>
-                    <Surfcampslider selectedLanguage={selectedLanguage} /   >
+                    <Surfcampslider selectedLanguage={selectedLanguage} />
                     <Booking tripName={trip_name} />
-                    
+
                 </div>
 
-                
+
             </div>
         </div>
     );

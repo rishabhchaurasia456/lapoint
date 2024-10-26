@@ -10,11 +10,11 @@ const Activity = () => {
   const [actcounts, setactCounts] = useState([0, 0, 0, 0, 0]);
 
   const recc_activity = [
-    { level: 'Longsleeve lycra', price: 45, link: '/1' },
-    { level: 'Kitesurf sunglasses', price: 50, link: '/2' },
-    { level: 'Kite shoes', price: 35, link: '/3' },
-    { level: 'Gear rental', price: 450, link: '/4' },
-    { level: 'Boardbag', price: 200, link: '/5' },
+    { level: 'Longsleeve lycra', price: 45, link: '#' },
+    { level: 'Kitesurf sunglasses', price: 50, link: '#' },
+    { level: 'Kite shoes', price: 35, link: '#' },
+    { level: 'Gear rental', price: 450, link: '#' },
+    { level: 'Boardbag', price: 200, link: '#' },
   ];
 
   // Increment count for a specific level

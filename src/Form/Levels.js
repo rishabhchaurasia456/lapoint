@@ -117,9 +117,9 @@ const Levels = () => {
   const prices = basePrices[selectedDuration];
 
   const levels = [
-    { level: 'Level 1 – Beginner', price: prices.beginner, link: '/1' },
-    { level: 'Level 2 – Waterstart', price: prices.waterstart, link: '/4' },
-    { level: 'Level 3 – Zelfstandig', price: prices.zelfstandig, link: '/3' },
+    { level: 'Level 1 – Beginner', price: prices.beginner, link: '#' },
+    { level: 'Level 2 – Waterstart', price: prices.waterstart, link: '#' },
+    { level: 'Level 3 – Zelfstandig', price: prices.zelfstandig, link: '#' },
   ];
 
 

@@ -1,13 +1,19 @@
 import React from 'react'
 
-const Overview = ({overviewData, selectedLanguage}) => {
+const Overview = ({ overviewData, selectedLanguage }) => {
     return (
         <div>
-            <div className="container-fluid mb-5">
+            <div className="container d-flex flex-column align-items-center justify-content-center surf_container">
                 <div className="row ">
-                    <p className='trip_heading'>{overviewData.trip_heading[selectedLanguage]}</p>                    
-                    <p className='trip_para text-center'>{overviewData.trip_para[selectedLanguage]}</p>
+                    <div className="col text-center">
+                        <h1 className='surf_text text_span'> {overviewData.trip_heading[selectedLanguage]}</h1>
+                        <p className='surf_para'>{overviewData.trip_para[selectedLanguage]}</p>
+                    </div>
                 </div>
+
+               
+
+
                 <div className="row">
                     <div class="container">
                         <div class="row">

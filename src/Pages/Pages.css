@@ -96,7 +96,24 @@
   .bg_img_text {
     font-size: 40px;
   }
+
+  .ab_text,
+  .ab2_text {
+    font-weight: 800;
+    font-size: 35px;
+    line-height: 40px;
+  }
+
+  .ab_para,
+  .ab2_para {
+    font-weight: 400;
+    font-size: 15px;
+    margin-top: 5%;
+    text-align: justify;
+  }
 }
+
+
 
 
 
@@ -122,6 +139,8 @@
 /* -------------------- */
 
 
+
+/* trips js vedio css  */
 
 
 .video-container {
@@ -228,6 +247,28 @@
   font-weight: 400;
 }
 
+.contact_text2 {
+  color: #fdc016;
+  font-weight: 900;
+  font-size: 50px;
+  line-height: 53px;
+  /* text-align: center; */
+  font-family: "Amatic SC", sans-serif;
+  text-transform: uppercase;
+  /* margin: 5%; */
+
+}
+
+.contact_para2 {
+  color: black;
+  font-family: sans-serif;
+  margin-top: 3%;
+  /* text-align: center; */
+  font-size: 20px;
+  line-height: 22px;
+  font-weight: 400;
+
+}
 
 .crd_main_div {
   max-width: 900px;
@@ -247,6 +288,25 @@
 }
 
 
+
+@media only screen and (max-width: 600px) {
+
+  .contact_text , .contact_text2 {
+    font-weight: 800;
+    font-size: 35px;
+    line-height: 40px;
+    margin-top: 10%;
+  }
+
+  .contact_para, .contact_para2 {
+    font-weight: 400;
+    font-size: 15px;
+    margin-top: 8%;
+    margin: 10px;
+    text-align: justify;
+  }
+
+}
 
 /* ------------------------------------------------------------- */
 /* booking  css  */
@@ -335,9 +395,20 @@
 
   .right_div span {
     padding: 0px;
-    font-size: 18px !important  ;
+    font-size: 18px !important;
     display: inline-block;
     margin-left: 18px !important;
   }
 
 }
+
+
+
+
+/* ---------------------------------- */
+/* Trip js css here  */
+
+/* -------------------------------------- */
+
+
+

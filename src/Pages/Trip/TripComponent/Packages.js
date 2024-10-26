@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const Packages = ({packagesData, selectedLanguage}) => {
+const Packages = ({ packagesData, selectedLanguage }) => {
   const [activeTab, setActiveTab] = useState(0); // Use 0 as the default index
 
   return (
@@ -22,7 +22,7 @@ const Packages = ({packagesData, selectedLanguage}) => {
       <div className="container">
         <div className="output-container">
           <div className="row">
-            <p className='level_desc'>{packagesData.levelsData[activeTab]?.desc[selectedLanguage]}</p> {/* Access the correct index */}
+            <p className='surf_para text-center'>{packagesData.levelsData[activeTab]?.desc[selectedLanguage]}</p> {/* Access the correct index */}
           </div>
           <div className='container mt-5'>
             {packagesData.levelsData[activeTab]?.imgsect.map((item, index) => (
@@ -36,8 +36,8 @@ const Packages = ({packagesData, selectedLanguage}) => {
                 )}
                 <div className='col-md-6'>
                   <div className="life_style_div">
-                    <p className='lifestyle_package_text'>{item.text[selectedLanguage]}</p>
-                    <div className="lifestyle_package_para">
+                    <p className='lifestyle_text'>{item.text[selectedLanguage]}</p>
+                    <div className="lifestyle_para">
                       <p>{item.para[selectedLanguage]}</p>
                     </div>
                   </div>
@@ -87,23 +87,24 @@ const Packages = ({packagesData, selectedLanguage}) => {
             </div>
           </div>
 
-          
-           <div className='container-fluid'>
-             <div className="row">
-               <div className="col">
-                 <div>
-                   <h2 className='text-center'>{packagesData.Kitegear_rental.title[selectedLanguage]}</h2>
-                   <p className='text-center'>{packagesData.Kitegear_rental.para1[selectedLanguage]}</p>
-                   <p className='text-center'>{packagesData.Kitegear_rental.para2[selectedLanguage]}</p>
-                 </div>
-                 <div>
-                   <h2 className='text-center'>{packagesData.Disclaimer.title[selectedLanguage]}</h2>
-                   <p className='text-center'>{packagesData.Disclaimer.para1[selectedLanguage]}</p>
-                   <p className='text-center'>{packagesData.Disclaimer.para2[selectedLanguage]}</p>
-                 </div>
-               </div>
-             </div>
-           </div>
+
+          {/* Kitegear rental  container here  */}
+          <div className='container-fluid'>
+            <div className="row">
+              <div className="col">
+                <div>
+                  <h2 className='surf_text text-center'>{packagesData.Kitegear_rental.title[selectedLanguage]}</h2>
+                  <p className='text-center surf_para fs-5'>{packagesData.Kitegear_rental.para1[selectedLanguage]}</p>
+                  <p className='text-center surf_para fs-5'>{packagesData.Kitegear_rental.para2[selectedLanguage]}</p>
+                </div>
+                <div>
+                  <h2 className='text-center surf_text mt-5 pt-5'>{packagesData.Disclaimer.title[selectedLanguage]}</h2>
+                  <p className='text-center surf_para fs-5'>{packagesData.Disclaimer.para1[selectedLanguage]}</p>
+                  <p className='text-center surf_para fs-6'>{packagesData.Disclaimer.para2[selectedLanguage]}</p>
+                </div>
+              </div>
+            </div>
+          </div>
 
           <div className="container-fluid">
             <div className="row logocard_container">

@@ -74,7 +74,6 @@
   .surf_para {
     font-size: 15px;
     margin-top: 5%;
-
   }
 
 
@@ -89,14 +88,15 @@
 
   .surf_text {
     font-weight: 800;
-    font-size: 40px;
+    font-size: 35px;
     line-height: 40px;
   }
 
   .surf_para {
     font-size: 15px;
     margin-top: 5%;
-    font-weight: bold;
+    text-align: justify;
+
   }
 
 
@@ -188,7 +188,7 @@
   border-radius: 50px;
   font-size: 2rem;
   cursor: pointer;
-  z-index: 1001;
+  z-index: 100;
 }
 
 .custom-prev {
@@ -212,7 +212,7 @@
 
   .surf_slider_text {
     font-weight: 800;
-    font-size: 25px;
+    font-size: 30px;
     line-height: 40px;
 
   }
@@ -236,7 +236,7 @@
     display: none !important;
   }
 
-  .custom-next {    
+  .custom-next {
     display: none !important;
   }
 }
@@ -269,9 +269,9 @@
 @media only screen and (max-width: 600px) {
   .camp_review_text {
     font-weight: 800;
-    margin-bottom: 10% !important;
-    font-size: 25px;
+    font-size: 35px;
     line-height: 40px;
+    margin-bottom: 8% !important;
   }
 
   .camp_review_text {
@@ -285,9 +285,16 @@
 /* Element css here  */
 /* -------------------------------------/- */
 .element_row {
-  background-color:  #fdc016;
- 
+  background-color: #fdc016;
+
 }
+
+.element_img {
+  margin-top: 15%;
+  margin-left: 10%;
+  width: 70%;
+}
+
 
 .element_text {
   color: black;
@@ -327,13 +334,14 @@
 
 /* Small devices (phones, 576px and up) */
 @media only screen and (max-width: 600px) {
+  .element_img {
+    max-width: 80%;
+  }
 
   .element_btn {
     margin: 5%;
     margin-top: 20%;
     margin-left: 25%;
-
-
   }
 
   .element_text {
@@ -344,9 +352,11 @@
     line-height: 40px;
     font-weight: 900;
     letter-spacing: 2PX;
-
   }
 
+  .element_para {
+    font-size: 14px;
+  }
 }
 
 
@@ -414,6 +424,21 @@
 
 
 
+/* Small devices (phones, 576px and up) */
+@media only screen and (max-width: 600px) {
+  .Level_cont_head {
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 8% !important;
+  }
+
+  .Level_cont_para {
+    font-size: 15px;
+    margin-top: 5%;
+  }
+}
+
 
 
 
@@ -480,87 +505,6 @@
 
 
 
-/* ------------------------------------------------ */
-/* European CSS here  */
-/* ------------------------------------------------ */
-
-
-.Eurp_container {
-  margin-top: 10%;
-}
-
-.Eurp_text_div {
-  max-width: 900px;
-}
-
-.Eurp_para {
-  font-size: 22px;
-  line-height: 23px;
-  font-weight: 500;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-.Eurp_text {
-  color: black;
-  font-weight: bold;
-  font-size: 60px;
-  line-height: 55px;
-  font-family: "Amatic SC", sans-serif;
-  text-transform: uppercase;
-
-}
-
-
-.Eurp_img_container {
-  width: 100%;
-  height: 70vh;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 20px;
-  margin: auto;
-}
-
-.background_text {
-  padding-top: 50% !important;
-  font-size: 50px !important;
-  color: white !important;
-  font-weight: bolder !important;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
-}
-
-/* Small devices (phones, 576px and up) */
-@media only screen and (max-width: 600px) {
-  .background_text {
-    font-size: 35px !important;
-
-
-  }
-
-  .Eurp_img_container {
-    width: 100%;
-    height: 40vh;
-  }
-
-  .Eurp_para {
-    font-size: 18px;
-    margin-top: 5%;
-    font-weight: bold;
-
-  }
-
-  .Eurp_text {
-    font-weight: 800;
-    font-size: 25px;
-    line-height: 40px;
-  }
-
-
-
-}
-
-
 
 
 /* =---------------------------------- */
@@ -590,7 +534,7 @@
 }
 
 .faq_img {
-  width: 90%;
+  max-width: 90%;
   /* background-size: cover; */
 }
 
@@ -636,14 +580,22 @@ details>summary::-webkit-details-marker {
 }
 
 
+
+
 @media (max-width: 576px) {
+
+  .faq_text {
+    font-weight: 800;
+    font-size: 35px;
+    line-height: 40px;
+  }
 
   summary {
     font-size: 15px;
     font-weight: 600;
     background-color: black;
     color: #fdc016;
-    padding: 1rem;
+    padding: 0;
     margin-bottom: 1rem;
     outline: none;
     border-radius: 0.25rem;
@@ -662,6 +614,12 @@ details>summary::-webkit-details-marker {
 
 }
 
+@media (max-width: 1024px) and (min-width: 500px) {
+
+  .faq_img {
+display: none;
+  }
+}
 
 
 /* TEXT Container  Css  */
@@ -684,7 +642,7 @@ details>summary::-webkit-details-marker {
   font-size: 60px;
   line-height: 45px;
   font-weight: 800;
-    font-family: "Amatic SC", sans-serif;
+  font-family: "Amatic SC", sans-serif;
   text-transform: uppercase;
 
 }
@@ -703,6 +661,9 @@ details>summary::-webkit-details-marker {
 }
 
 
+
+
+
 @media only screen and (max-width: 600px) {
   .text_container {
     max-width: 500px;
@@ -711,13 +672,15 @@ details>summary::-webkit-details-marker {
   .text_para {
     font-size: 15px;
     line-height: 18px;
-   
+    text-align: justify;
+
   }
 
   .text_head {
-    font-size: 28px;
-    text-align: center;
-    
+    font-weight: 800;
+  font-size: 35px;
+  line-height: 40px;
+
   }
 }
 
@@ -784,17 +747,19 @@ details>summary::-webkit-details-marker {
     /* Adjust as needed */
     overflow: hidden;
     filter: brightness(150%);
-  } 
-  
+  }
+
   .Activity_head {
-    font-size: 18px;
+    font-size: 15px;
   }
 
   .Activity_head_text {
-    font-size: 30px;
-    line-height: 30px;
+    font-weight: 800;
+    font-size: 35px;
+    line-height: 40px;
   }
-  .card_d_text{
+
+  .card_d_text {
     margin-bottom: 100px;
   }
 }
@@ -865,7 +830,6 @@ details>summary::-webkit-details-marker {
 
 
 .bg_text {
-
   margin-top: 20%;
   color: white;
   font-weight: 500;
@@ -898,6 +862,10 @@ details>summary::-webkit-details-marker {
 }
 
 
+
+
+
+
 @media only screen and (max-width: 600px) {
   .bg_image2 {
     background-size: cover;
@@ -908,13 +876,20 @@ details>summary::-webkit-details-marker {
   }
 
   .bg_heading {
-    font-size: 30px;
-    line-height: 32px;
+    font-weight: 800;
+    font-size: 35px;
+    line-height: 40px;
   }
 
   .bg_para {
-    font-size: 12px;
+    font-size: 15px;
+    margin-top: 4%;
+    margin-bottom: 5%;
     line-height: 20px;
+  }
+
+  .bg_text {
+    margin-top: 10%;
   }
 }
 
@@ -930,7 +905,7 @@ details>summary::-webkit-details-marker {
 .footer_headcontainer_text {
   color: white;
   margin-top: 5%;
-  padding: 0 50px 0 50px !important ;
+  padding: 0 50px 0 50px !important;
   font-family: "Amatic SC", sans-serif;
   font-size: 40px;
   line-height: 40px;
@@ -938,15 +913,8 @@ details>summary::-webkit-details-marker {
   letter-spacing: 2PX;
 }
 
-.email_input {
-  background: #fffae7;
-  border: none;
-  border-radius: 0;
-  width: 100%;
-  padding: 1rem;
-  font-size: 1rem;
-  outline: none;
-  margin-top: 23%;
+.input-group{
+  width: 80% !important;
 }
 
 .emailbtn {
@@ -982,15 +950,14 @@ details>summary::-webkit-details-marker {
 }
 
 
-.fa_icon_footer{
+.fa_icon_footer {
   color: #fdc016;
   font-size: 30px !important;
 
 }
 
 
-
-@media only screen and (max-width:600px) {
+@media only screen and (max-width: 600px) {
   .footer_headcontainer_text {
     text-align: center;
     font-size: 30px;
@@ -998,29 +965,17 @@ details>summary::-webkit-details-marker {
     color: white;
     font-family: "Amatic SC", sans-serif;
     line-height: 28px;
+    padding: 0;
+    margin: 0;
   }
 
-  .email_button {
-    width: 100%;
-    background: #fffae7 !important;
-    margin-top: 8px;
-    padding: 1rem 1.5rem;
-    border: 0;
-    border-radius: 1.25rem;
-    background-color: rgba(255, 0, 0, .1);
-    font-weight: 500 !important;
-    font-family: Lapoint Repro Mono, Lapoint Repro, sans-serif;
-    color: red;
-    line-height: 1;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: background-color .2s ease-in-out, color .2s ease-in-out;
+  .input-group{
+    width: 80% !important;
   }
-
   .footerlogo {
     margin-top: 10%;
     width: 80%;
   }
+  
 
 }
-

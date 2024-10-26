@@ -140,8 +140,9 @@ const Footer = ({selectedLanguage}) => {
                     <div className='col-md-7 footer_headcontainer_text'>
                         <p>{footerhead.headtitle[selectedLanguage]}</p>
                     </div>
-                    <div className='col-md-5 m-auto'>
-                        <div class="input-group mb-3 w-75">
+
+                    <div className='col-md-5'>
+                        <div class="input-group mb-3">
                             <input type="text" class="form-control p-2" placeholder="Your Email" aria-label="Recipient's username" aria-describedby="basic-addon2" />
                             <div class="input-group-append">
                                 <button class="btn btn-outline-secondary emailbtn" type="button">subscribe</button>

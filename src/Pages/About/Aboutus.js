@@ -1,5 +1,5 @@
 import React from 'react'
-import vedio from "../../Images/website.filmpje.tarifa.mp4"
+import vedio from "../../Images/aboutus_ved.mp4"
 // import './Pages.css'
 import '../../Pages/Pages.css';
 //  import bigimg from '../../Images/abimg.png'

@@ -15,7 +15,7 @@ const Carddata_head_section = [
             du: "Alle niveaus zijn welkom!!", // Dutch
         },
         subtitle: {
-            en: "From beginner to pro",
+            en: "From Beginner to Pro",
             gr: "Vom Anfänger bis zum Profi", // German
             du: "Van beginner tot pro", // Dutch
         }
