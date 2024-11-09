@@ -27,10 +27,6 @@ import sicily from "../../Images/tripvedios/sciliycover.webp"
 
 // valnlife img data .........................................
 
-// import vanlife_img1 from "../../Images/level-icon-6.webp"
-// import vanlife_img2 from "../../Images/level-icon-3.webp"
-// import vanlife_img3 from "../../Images/level-icon-4.webp"
-// import vanlife_img4 from "../../Images/level-icon-2.webp"
 
 import vanlife_gall_img1 from '../../Images/vanlife1.webp'
 import vanlife_gall_img2 from '../../Images/vanlife2.webp'
@@ -1332,7 +1328,6 @@ const trips = [
                     }
                 }
             ]
-
         },
 
 
@@ -1957,7 +1952,9 @@ const trips = [
                 en: "We proudly present you our own KiteActive Hotel on the beach in Paje. The ideal set-up for kite surfers. The atmosphere and our team ensure a top stay with everything you need within reach!",
                 gr: "Wir präsentieren stolz unser eigenes KiteActive Hotel am Strand von Paje. Das ideale Setup für Kitesurfer. Die Atmosphäre und unser Team sorgen für einen erstklassigen Aufenthalt mit allem, was Sie brauchen, in greifbarer Nähe!",
                 du: "We presenteren met trots ons eigen KiteActive Hotel op het strand in Paje. De ideale opstelling voor kitesurfers. De sfeer en ons team zorgen voor een topverblijf met alles wat je nodig hebt binnen handbereik!"
-            }
+            },
+            iframe: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6486.035624855454!2d39.53296055!3d-6.2658911!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x185d3d0a989c2b8f%3A0xd23378fca6a1a8db!2sPaje%2C%20Tanzania!5e1!3m2!1sen!2sin!4v1729937684338!5m2!1sen!2sin"
+         
         },
 
         activities: [
@@ -4157,7 +4154,9 @@ const trips = [
                 en: "We proudly present you our own KiteActive Hotel on the beach in Paje. The ideal set-up for kite surfers. The atmosphere and our team ensure a top stay with everything you need within reach!",
                 gr: "Wir präsentieren stolz unser eigenes KiteActive Hotel am Strand von Paje. Das ideale Setup für Kitesurfer. Die Atmosphäre und unser Team sorgen für einen erstklassigen Aufenthalt mit allem, was Sie brauchen, in greifbarer Nähe!",
                 du: "We presenteren met trots ons eigen KiteActive Hotel op het strand in Paje. De ideale opstelling voor kitesurfers. De sfeer en ons team zorgen voor een topverblijf met alles wat je nodig hebt binnen handbereik!"
-            }
+            },
+                 iframe: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10842.252843950639!2d18.4798475!3d-33.8167284!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc5ff411ab18fb%3A0x47240d82e7e09a22!2sKhaya%20Kite%20and%20Yoga%20House!5e1!3m2!1sen!2sin!4v1729943208729!5m2!1sen!2sin"                 
+
         },
 
         activities: [
@@ -4200,8 +4199,10 @@ const trips = [
                     du: 'Funbox - strandspellen',
                     gr: 'Funbox - Strandspiele'
                 }
-            }
-        ],
+            },
+                
+               
+            ],
         reviews: {}
     },
 
@@ -6151,8 +6152,6 @@ const trips = [
                 imgPosition: 'left',
             },
         ],
-
-
         packages: {
             levelsData: [
                 {
@@ -6557,7 +6556,6 @@ const trips = [
             }
 
         },
-
         accommodation: {
             main_title: {
                 en: "Kite In & Out",
@@ -6663,10 +6661,12 @@ const trips = [
                 en: "There are good flights from Amsterdam to Fortaleza, which will take you there in approximately 12 hours. There are 2 good connections; KLM (via Paris or Rio) and TAP (via Lissabon).",
                 gr: "Es gibt gute Flüge von Amsterdam nach Fortaleza, die etwa 12 Stunden dauern. Es gibt 2 gute Verbindungen; KLM (über Paris oder Rio) und TAP (über Lissabon).",
                 du: "Er zijn goede vluchten van Amsterdam naar Fortaleza, die ongeveer 12 uur duren. Er zijn 2 goede verbindingen; KLM (via Parijs of Rio) en TAP (via Lissabon)."
-            }
+            },
+
+            iframe : "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13023.844754398688!2d-38.7215728!3d-3.6302715!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c0cbf4a405555d%3A0xa721927c28beb60e!2sKite%20soul%20Pousada%20hotel%20Cumbuco!5e1!3m2!1sen!2sin!4v1729944314464!5m2!1sen!2sin"
+
+            
         },
-
-
         activities: [
             {
                 img: zanzibar_activity_img1,
@@ -6721,8 +6721,6 @@ const trips = [
         name: 'Sail&kite',
         vedio: Sailkite_vedio,
         backcover: sailkitecover,
-
-
         alltabs: {
             highlight: [
                 {
@@ -8131,8 +8129,11 @@ const trips = [
                 en: "You fly with Ryanair from Dusseldorf (weeze) to Trapani. From here it is still approx. 10 minutes drive to the hotel!",
                 gr: "Sie fliegen mit Ryanair von Düsseldorf (Weeze) nach Trapani. Von hier sind es noch ca. 10 Minuten Fahrt bis zum Hotel!",
                 du: "Je vliegt met Ryanair van Düsseldorf (Weeze) naar Trapani. Vanaf hier is het nog ongeveer 10 minuten rijden naar het hotel!"
-            }
+            },
+            iframe : "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10298.975014497346!2d12.47138!3d37.8899681!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x131bddc59b077e19%3A0x4b30956c48812015!2sResort%20Santa%20Maria!5e1!3m2!1sen!2sin!4v1729944942438!5m2!1sen!2sin"
+           
         },
+
 
 
         activities: [
@@ -8181,11 +8182,6 @@ const trips = [
         reviews: {}
 
     },
-
-
-
-
-
 
 
     // Dhakla Trip data ................................

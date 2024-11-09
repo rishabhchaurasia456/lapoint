@@ -3,12 +3,11 @@ import { NavLink, useNavigate, useLocation } from 'react-router-dom';
 import "./Form.css"
 import axios from 'axios';
 
-
 const Levels = () => {
   const [selectedDuration, setSelectedDuration] = useState('1 week'); // Track selected duration
   const [counts, setCounts] = useState([0, 0, 0]); // Separate counts for each level
   const [carRentalSelections, setCarRentalSelections] = useState([true, false, false]); // Car rental for Level 1 is always true
-  const [zanzibarItems, setZanzibarItems] = useState([]);
+  const [setZanzibarItems] = useState([]);
 
 
   // useEffect(() => {
@@ -43,10 +42,10 @@ const Levels = () => {
   //   fetchItems();
   // }, []);
 
-  useEffect(() => { 
+  useEffect(() => {
     const fetchItems = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/get-data-to-zoho");
+        const response = await axios.get("http://localhost:5000/api/user/get-data-to-zoho");
 
         // Check if the request was successful and the data exists
         if (response.data && response.data) {
@@ -67,7 +66,7 @@ const Levels = () => {
     };
 
     fetchItems();
-}, []);
+  }, []);
 
 
   const navigate = useNavigate(); // useNavigate for navigation
@@ -117,9 +116,9 @@ const Levels = () => {
   const prices = basePrices[selectedDuration];
 
   const levels = [
-    { level: 'Level 1 – Beginner', price: prices.beginner, link: '#' },
-    { level: 'Level 2 – Waterstart', price: prices.waterstart, link: '#' },
-    { level: 'Level 3 – Zelfstandig', price: prices.zelfstandig, link: '#' },
+    { level: 'Level 1 – Beginner', price: prices.beginner, link: '/1' },
+    { level: 'Level 2 – Waterstart', price: prices.waterstart, link: '/4' },
+    { level: 'Level 3 – Zelfstandig', price: prices.zelfstandig, link: '/3' },
   ];
 
 
@@ -179,7 +178,7 @@ const Levels = () => {
                 <option>2 weeks</option>
               </select>
               <h5 className='level_heading'>Choose one package per traveller</h5>
-              {/* <div className="container-fluid">
+              <div className="container-fluid">
                 {levels.map((item, index) => (
                   <div className="row form_crd_row mt-4" key={index}>
                     <div className="col-md-9">
@@ -213,14 +212,13 @@ const Levels = () => {
                         </div>
                       </div>
 
-                     
+
 
                       <div className='mx-3 mb-2'>
                         <NavLink to="/form" className='moreinfo_btn'>
                           More info
                         </NavLink>
                       </div>
-
 
                     </div>
 
@@ -230,12 +228,11 @@ const Levels = () => {
                       <i className="fa fa-plus-circle P_M_icon" onClick={(e) => { e.preventDefault(); increment(index); }} ></i>
                     </div>
 
-
                   </div>
                 ))}
-              </div> */}
+              </div>
 
-              <div className="container-fluid">
+              {/* <div className="container-fluid">
   {zanzibarItems.length > 0 ? (
     zanzibarItems.map((item, index) => (
       <div className="row form_crd_row mt-4" key={item.item_id}>
@@ -243,13 +240,12 @@ const Levels = () => {
           <div className='level_crd_text'>
             <p className='level_crd_para'>
               <span>
-                <b>{item.name}</b> {/* Display the item name */}
+                <b>{item.name}</b> 
               </span>{' '}
-              | <span>Price: €{item.rate}</span> {/* Display the price */}
+              | <span>Price: €{item.rate}</span> 
             </p>
           </div>
 
-          {/* You can add additional fields from the API response here */}
           <div className="mx-3 mb-2">
             <NavLink to="/form" className='moreinfo_btn'>
               More info
@@ -267,7 +263,7 @@ const Levels = () => {
   ) : (
     <p>No Zanzibar items available.</p>
   )}
-</div>
+</div> */}
 
 
 

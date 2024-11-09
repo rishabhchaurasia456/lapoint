@@ -64,14 +64,12 @@ const Userinfo = () => {
             handleChange(0, 'email', value); // Update the email for traveller 1 when toggled
         }
     };
-
     // Handle input changes for each traveler
     const handleChange = (index, field, value) => {
         const updatedTravellers = [...travellers];
         updatedTravellers[index][field] = value;
         setTravellers(updatedTravellers);
     };
-
     // Handle activity checkbox change for a traveler
     const handleActivityChange = (index, activity) => {
         const updatedTravellers = [...travellers];
@@ -103,7 +101,6 @@ const Userinfo = () => {
                 alert(`The activity "${activity}" can only be selected by ${activityCount} traveler(s).`);
             }
         }
-
         setTravellers(updatedTravellers);
     };
 

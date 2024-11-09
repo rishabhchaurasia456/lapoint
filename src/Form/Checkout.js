@@ -43,7 +43,6 @@ const Checkout = () => {
     }
     return (
         <>
-
             <div className="container-fluid level_container">
                 <div className="row">
                     <div className="col text-center">
@@ -62,7 +61,6 @@ const Checkout = () => {
                         <div className="col-lg-2"></div>
                         <div className="col-lg-8">
                             <div className="datepick_border"></div>
-
                             <div>
                                  <div className='text-center checkout_data'>
                                  <p>Selected Duration : {selectedDuration}</p>

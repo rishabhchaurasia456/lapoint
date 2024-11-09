@@ -42,8 +42,6 @@ const Trip = ({ selectedLanguage }) => {
                 {trip?.backcover && <link rel="preload" as="image" href={trip.backcover} />}
             </Helmet>
 
-
-
             {/* Video section */}
             <div className="video-container">
                 {trip?.vedio && (

@@ -53,6 +53,7 @@ const Contactus = ({ selectedLanguage }) => {
     return (
         <div>
             {/* For seo  */}
+            
             <Helmet>
                 <title>Contact Us - KiteActive: Your Kitesurfing Experts </title>
 
@@ -61,6 +62,7 @@ const Contactus = ({ selectedLanguage }) => {
                 <meta name="keywords" content="kite surfing, kitesurfing trips, kitesurf spots, kite surfing lessons, kitesurfing lessons worldwide, kitesurf vacation, kite travel, kitesurf holiday" />
 
                 <link rel="canonical" href="https://www.kiteactiveventures.com/contact"/>
+            
             </Helmet>
 
 

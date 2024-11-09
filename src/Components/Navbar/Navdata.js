@@ -63,7 +63,7 @@ export const navItems = [
                 gr: "Kontakt",  // Netherlands Dutch (NL)
             },
             path: '/contact'
-        },
+        }
 ];
 
 

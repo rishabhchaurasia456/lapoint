@@ -20,8 +20,6 @@ const content = {
         title: "Activiteit", // Keeping it consistent with Dutch
         title1: "Ontdek onze ervaringen", // Keeping it consistent with Dutch
     }
-
-
 };
 
 const Activitydata = [

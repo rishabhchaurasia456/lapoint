@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-import { addDays, parse, isSameDay,isWithinInterval  } from 'date-fns';
+import { addDays, parse, isSameDay, isWithinInterval } from 'date-fns';
 import './DatePickerStyles.css'; // Import your custom CSS
 
 const Datepicker = () => {
@@ -25,15 +25,22 @@ const Datepicker = () => {
       { range: "2024/10/24 - 2024/10/27", status: 1 }, // Unavailable
       { range: "2024/10/27 - 2024/11/01", status: 0 },  // Available
       { range: "2024/11/22 - 2024/11/27", status: 1 }, // Unavailable
-      { range: "2024/11/06 - 2024/11/09", status: 1 }, // Unavailable
       { range: "2024/11/10 - 2024/11/16", status: 0 },  // Available
       { range: "2024/11/24 - 2024/11/30", status: 0 },  // Available
+      { range: "2024/11/03 - 2024/11/09", status: 0 },  // Available
+      { range: "2024/12/08 - 2024/12/14", status: 0 },  // Available
+      { range: "2024/12/23 - 2024/12/29", status: 0 },  // Available
+      { range: "2024/12/18 - 2024/12/18", status: 1 },  // unav
+      { range: "2024/12/31 - 2025/01/03", status: 1 },  // unav
     ],
     "10 Days": [
       { range: "2024/10/01 - 2024/10/10", status: 1 }, // Unavailable
       { range: "2024/09/17 - 2024/09/26", status: 1 }, // Unavailable
       { range: "2024/10/10 - 2024/10/20", status: 0 },  // Available
+      { range: "2024/10/22 - 2024/10/30", status: 0 },  // Available
       { range: "2024/11/06 - 2024/11/15", status: 0 },  // Available
+      { range: "2024/11/27 - 2024/11/5", status: 1 },  // Available
+      { range: "2024/11/17 - 2024/11/26", status: 0 },  // Available
       { range: "2024/11/27 - 2024/11/5", status: 1 },  // Available
     ],
     "2 weeks": [
@@ -125,9 +132,9 @@ const Datepicker = () => {
 
     if (startDate && endDate && isWithinInterval(date, { start: startDate, end: endDate })) {
       return 'selected-range-date';
-    } 
+    }
     return '';
-    
+
 
   };
   return (

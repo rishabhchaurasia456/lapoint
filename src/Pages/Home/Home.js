@@ -27,6 +27,7 @@ const Home = ({ selectedLanguage }) => {
   return (
     <div>
       {/* for home page seo  */}
+     
 
       <Helmet>
         <title>Kitesurf Holidays - Adventurous Kitesurf Trips | KiteActive </title>
@@ -38,6 +39,8 @@ const Home = ({ selectedLanguage }) => {
         <link rel="icon" href="./logo512.png" />
         <link rel="canonical" href="https://kiteactiveventures.com/" />
       </Helmet>
+     
+
 
       {/* all home page Components section import here  */}
 
