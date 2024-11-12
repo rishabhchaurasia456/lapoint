@@ -16,31 +16,31 @@ const Levels = () => {
     const fetchItems = async () => {
       try {
         const response = await axios.get("https://backend-kiteactive.onrender.com/api/user/get-data-to-zoho");
-  
+
         if (response.data && response.data) {
           const itemsResponse = response.data;
           console.log("API Response:", itemsResponse.data.items);
-  
+
           // Filter items based on tripName and selectedDuration
           const filteredItems = itemsResponse.data.items.filter(item => {
             const itemName = item.name ? item.name.toLowerCase().trim() : '';
             const tripNameLower = tripName ? tripName.toLowerCase().trim() : '';
             const durationLower = selectedDuration ? selectedDuration.toLowerCase().trim() : '';
-  
+
             // Log the values for debugging
             console.log("Item Name:", itemName);
             console.log("Trip Name:", tripNameLower);
             console.log("Selected Duration:", durationLower);
-  
+
             const matchesTripName = itemName.includes(tripNameLower);
             const matchesDuration = itemName.includes(durationLower);
-  
+
             console.log("matchesTripName:", matchesTripName);
             console.log("matchesDuration:", matchesDuration);
-  
+
             return matchesTripName && matchesDuration;
           });
-  
+
           setZanzibarItems(filteredItems);
         } else {
           console.log("No items found in the response.");
@@ -50,10 +50,10 @@ const Levels = () => {
         console.error("Error fetching items:", error);
       }
     };
-  
+
     fetchItems();
   }, [tripName, selectedDuration]); // Add selectedDuration as a dependency
-  
+
 
   const navigate = useNavigate(); // useNavigate for navigation
 
@@ -188,24 +188,24 @@ const Levels = () => {
                         </div>
 
                         <div className="mx-3 my-3 ">
-                        <div className="form-check ">
-                          <input type="checkbox"
-                            className="form-check-input"
-                            id={`carRental-${index}`}
-                            checked={carRentalSelections[index]}
-                            onChange={() => {
-                              toggleCarRental(index);
-                            }}
-                            disabled={index === 0}
-                            required
-                          />
-                          <label className="form-check-label " htmlFor={`carRental-${index}`}>
-                            {index === 0
-                              ? 'Rent of complete Kiteset – Always Included (€60 per person)'
-                              : `Add Rent of complete Kiteset for ${item.level} (€60 per person)`}
-                          </label>
+                          <div className="form-check ">
+                            <input type="checkbox"
+                              className="form-check-input"
+                              id={`carRental-${index}`}
+                              checked={carRentalSelections[index]}
+                              onChange={() => {
+                                toggleCarRental(index);
+                              }}
+                              disabled={index === 0}
+                              required
+                            />
+                            <label className="form-check-label " htmlFor={`carRental-${index}`}>
+                              {index === 0
+                                ? 'Rent of complete Kiteset – Always Included (€60 per person)'
+                                : `Add Rent of complete Kiteset for ${item.level} (€60 per person)`}
+                            </label>
+                          </div>
                         </div>
-                      </div>
 
 
                         <div className="mx-3 mb-2">
