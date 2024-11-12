@@ -7,31 +7,53 @@ const Levels = () => {
   const [selectedDuration, setSelectedDuration] = useState('7 Days'); // Track selected duration
   const [counts, setCounts] = useState([0, 0, 0]); // Separate counts for each level
   const [carRentalSelections, setCarRentalSelections] = useState([true, false, false]); // Car rental for Level 1 is always true
-  const [setZanzibarItems] = useState([]);
+  const [zanzibarItems, setZanzibarItems] = useState([]);
 
-  // useEffect(() => {
-  //   const fetchItems = async () => {
-  //     try {
-  //       const response = await axios.get("https://backend-kiteactive.onrender.com/api/user/get-data-to-zoho");
+  const location = useLocation();
+  const { tripName } = location.state || {};
 
-  //       if (response.data && response.data) {
-  //         const itemsResponse = response.data;
-  //         console.log("API Response:", itemsResponse.data.items);
-
-  //         const zanzibarItems = itemsResponse.data.items.filter(item => item.name && item.name.includes("Zanzibar"));
-
-  //         setZanzibarItems(zanzibarItems);
-  //       } else {
-  //         console.log("No items found in the response.");
-  //       }
-  //     } catch (error) {
-  //       console.error("Error fetching items:", error);
-  //     }
-  //   };
-
-  //   fetchItems();
-  // }, []);
-
+  useEffect(() => {
+    const fetchItems = async () => {
+      try {
+        const response = await axios.get("https://backend-kiteactive.onrender.com/api/user/get-data-to-zoho");
+  
+        if (response.data && response.data) {
+          const itemsResponse = response.data;
+          console.log("API Response:", itemsResponse.data.items);
+  
+          // Filter items based on tripName and selectedDuration
+          const filteredItems = itemsResponse.data.items.filter(item => {
+            const itemName = item.name ? item.name.toLowerCase().trim() : '';
+            const tripNameLower = tripName ? tripName.toLowerCase().trim() : '';
+            const durationLower = selectedDuration ? selectedDuration.toLowerCase().trim() : '';
+  
+            // Log the values for debugging
+            console.log("Item Name:", itemName);
+            console.log("Trip Name:", tripNameLower);
+            console.log("Selected Duration:", durationLower);
+  
+            const matchesTripName = itemName.includes(tripNameLower);
+            const matchesDuration = itemName.includes(durationLower);
+  
+            console.log("matchesTripName:", matchesTripName);
+            console.log("matchesDuration:", matchesDuration);
+  
+            return matchesTripName && matchesDuration;
+          });
+  
+          setZanzibarItems(filteredItems);
+        } else {
+          console.log("No items found in the response.");
+          console.log("Too Many Request , Please Try Sometimes Later")
+        }
+      } catch (error) {
+        console.error("Error fetching items:", error);
+      }
+    };
+  
+    fetchItems();
+  }, [tripName, selectedDuration]); // Add selectedDuration as a dependency
+  
 
   const navigate = useNavigate(); // useNavigate for navigation
 
@@ -103,10 +125,6 @@ const Levels = () => {
     return acc + levelPrice + carRentalPrice;
   }, 0);
 
-  // const carRentalPrice = counts.reduce((acc, count, index) => {
-  //   return acc + (carRentalSelections[index] ? selectedDays * 60 : 0);
-  // }, 0);
-
   const carRentalPrice = counts.reduce((acc, count, index) => {
     // Only include the Kiteset rental if the checkbox is selected for levels and count > 0
     return acc + (carRentalSelections[index] && count > 0 && index !== 0 ? selectedDays * 60 : 0);
@@ -132,8 +150,6 @@ const Levels = () => {
     });
   };
 
-  const location = useLocation();
-  const { tripName } = location.state || {};
 
   return (
     <div>
@@ -156,18 +172,22 @@ const Levels = () => {
                 <option>14 Days</option>
               </select>
               <h5 className='level_heading'>Choose one package per traveller</h5>
-              <div className="container-fluid">
-                {levels.map((item, index) => (
-                  <div className="row form_crd_row mt-4" key={index}>
-                    <div className="col-md-9">
-                      <div className='level_crd_text'>
-                        <p className='level_crd_para'>
-                          <span><b>{item.level}</b></span>{' '}
-                          | <span>From € {item.price}</span>
-                        </p>
-                      </div>
 
-                      <div className="mx-3 my-3 ">
+              <div className="container-fluid">
+                {zanzibarItems.length > 0 ? (
+                  zanzibarItems.map((item, index) => (
+                    <div className="row form_crd_row mt-4" key={item.item_id}>
+                      <div className="col-md-9">
+                        <div className='level_crd_text'>
+                          <p className='level_crd_para'>
+                            <span>
+                              <b>{item.name}</b>
+                            </span>{' '}
+                            | <span>Price: €{item.rate}</span>
+                          </p>
+                        </div>
+
+                        <div className="mx-3 my-3 ">
                         <div className="form-check ">
                           <input type="checkbox"
                             className="form-check-input"
@@ -187,20 +207,24 @@ const Levels = () => {
                         </div>
                       </div>
 
-                      <div className='mx-3 mb-2'>
-                        <NavLink to="/form" className='moreinfo_btn'>
-                          More info
-                        </NavLink>
+
+                        <div className="mx-3 mb-2">
+                          <NavLink to="/form" className='moreinfo_btn'>
+                            More info
+                          </NavLink>
+                        </div>
+                      </div>
+
+                      <div className="col-md-3">
+                        <i className="fa fa-minus-circle P_M_icon" onClick={(e) => { e.preventDefault(); decrement(index); }}></i>
+                        <span className='add_num'>{counts[index]}</span>
+                        <i className="fa fa-plus-circle P_M_icon" onClick={(e) => { e.preventDefault(); increment(index); }}></i>
                       </div>
                     </div>
-
-                    <div className="col-md-3">
-                      <i className="fa fa-minus-circle P_M_icon" onClick={(e) => { e.preventDefault(); decrement(index); }}></i>
-                      <span className='add_num'>{counts[index]}</span>
-                      <i className="fa fa-plus-circle P_M_icon" onClick={(e) => { e.preventDefault(); increment(index); }} ></i>
-                    </div>
-                  </div>
-                ))}
+                  ))
+                ) : (
+                  <p>No items available for the selected duration.</p>
+                )}
               </div>
 
               <div className='btn_container'>
