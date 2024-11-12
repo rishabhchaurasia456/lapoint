@@ -17,7 +17,9 @@ const Checkout = () => {
         startDate,
         endDate,
         actcounts,
-        activityDetails
+        activityDetails,
+        carRentalPrice,
+        carRentalSelections,
     } = location.state;
 
 
@@ -64,7 +66,7 @@ const Checkout = () => {
                             <div>
                                  <div className='text-center checkout_data'>
                                  <p>Selected Duration : {selectedDuration}</p>
-                                 <p>Total Count :  {totalCount}</p>
+                                 <p>Total Person :  {totalCount}</p>
                                  </div>
 
                                 <div>
@@ -74,7 +76,7 @@ const Checkout = () => {
                                             <div className='row' key={index}>
                                                 <div className="col-lg-9">
                                                     <div className='checkout_data'>
-                                                        {room.room} - Count : {countsbed[index]}
+                                                        {room.room} : {countsbed[index]}
                                                     </div>
                                                 </div>
                                                 <div className="col-lg-3">
@@ -90,7 +92,9 @@ const Checkout = () => {
                                 </div>
 
                                 <div>
-                                    <h2 className='checkout_heading'>Selected room</h2>
+                                    <h2 className='checkout_heading'>Selected Levels</h2>
+                                    Total Kitset rent price : {carRentalPrice}
+
                                     {levels.map((item, index) => (
                                         counts[index] > 0 && (
 
@@ -98,7 +102,7 @@ const Checkout = () => {
 
                                                 <div className="col-lg-9">
                                                     <div className='checkout_data'>
-                                                        {item.level} - Count : {counts[index]}
+                                                        {item.level} : {counts[index]}
                                                     </div>
                                                 </div>
                                                 <div className="col-lg-3">
@@ -121,7 +125,7 @@ const Checkout = () => {
                                         <div className='row' key={index}>
                                             <div className="col-lg-9">
                                                 <div className='checkout_data'>
-                                                    {activity.name} - Count : {activity.count}
+                                                    {activity.name} : {activity.count}
                                                 </div>
                                             </div>
                                             <div className="col-lg-3">

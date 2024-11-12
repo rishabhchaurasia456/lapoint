@@ -10,7 +10,7 @@ const Room = () => {
 
   const location = useLocation();
   const navigate = useNavigate();
-  const { selectedDuration, counts, totalPrice, totalCount, levels, startDate, endDate } = location.state;
+  const { selectedDuration, counts, totalPrice, totalCount, levels, startDate, endDate, carRentalSelections, carRentalPrice } = location.state;
 
   // Room type array
   const roomtype = useMemo(() => [
@@ -81,6 +81,8 @@ const Room = () => {
         totalCount,
         levels,
         counts,
+        carRentalSelections,
+        carRentalPrice,
         startDate,
         endDate
       }
@@ -107,14 +109,14 @@ const Room = () => {
                         </div>
                       )}
                       <p>
-                        <span>{totalCount} Person, {selectedDuration}</span>
+                        <span>{totalCount} Person, {selectedDuration}, </span>
 
                         {/* Show details for each level where count is > 0 */}
                         {levels.map((item, index) => (
                           counts[index] > 0 && (
                             <span key={index}>
                               <span>
-                                <b>{item.level}</b>
+                                <b>{item.level}, </b>
                                 {/* | Count: {counts[index]} | Price: € {counts[index] * item.price} */}
                               </span>
                             </span>

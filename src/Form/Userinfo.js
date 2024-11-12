@@ -17,7 +17,7 @@ const Userinfo = () => {
         startDate,
         endDate,
         // actcounts,
-        activityDetails // List of available activities
+        // activityDetails // List of available activities
     } = location.state;
 
     const [userDetails, setUserDetails] = useState({
@@ -42,20 +42,20 @@ const Userinfo = () => {
     );
 
     // State to track global selection count for each activity
-    const [activitySelections, setActivitySelections] = useState(
-        activityDetails.reduce((acc, activity) => {
-            acc[activity.name] = 0; // Initialize count to 0 for each activity
-            return acc;
-        }, {})
-    );
+    // const [activitySelections, setActivitySelections] = useState(
+    //     activityDetails.reduce((acc, activity) => {
+    //         acc[activity.name] = 0; // Initialize count to 0 for each activity
+    //         return acc;
+    //     }, {})
+    // );
 
     // State to track global selection count for each level
-    const [levelSelections, setLevelSelections] = useState(
-        levels.reduce((acc, level, index) => {
-            acc[level.level] = 0; // Initialize count to 0 for each level
-            return acc;
-        }, {})
-    );
+    // const [levelSelections, setLevelSelections] = useState(
+    //     levels.reduce((acc, level, index) => {
+    //         acc[level.level] = 0; // Initialize count to 0 for each level
+    //         return acc;
+    //     }, {})
+    // );
 
     // Handle input changes for user details
     const handleUserChange = (field, value) => {
@@ -71,74 +71,74 @@ const Userinfo = () => {
         setTravellers(updatedTravellers);
     };
     // Handle activity checkbox change for a traveler
-    const handleActivityChange = (index, activity) => {
-        const updatedTravellers = [...travellers];
-        const selectedActivities = updatedTravellers[index].selectedActivities;
+    // const handleActivityChange = (index, activity) => {
+    //     const updatedTravellers = [...travellers];
+    //     const selectedActivities = updatedTravellers[index].selectedActivities;
 
-        const activityCount = activityDetails.find(act => act.name === activity).count; // Get the count limit for this activity
+    //     const activityCount = activityDetails.find(act => act.name === activity).count; // Get the count limit for this activity
 
-        // Check if the traveler has already selected this activity
-        if (selectedActivities.includes(activity)) {
-            // Remove activity from the traveler's selected activities
-            updatedTravellers[index].selectedActivities = selectedActivities.filter(a => a !== activity);
-            // Update global selection count
-            setActivitySelections({
-                ...activitySelections,
-                [activity]: activitySelections[activity] - 1,
-            });
-        } else {
-            // Check if the global count for this activity exceeds the limit
-            if (activitySelections[activity] < activityCount) {
-                // Add activity if under the limit
-                updatedTravellers[index].selectedActivities = [...selectedActivities, activity];
-                // Update global selection count
-                setActivitySelections({
-                    ...activitySelections,
-                    [activity]: activitySelections[activity] + 1,
-                });
-            } else {
-                // Prevent further selections if limit is reached
-                alert(`The activity "${activity}" can only be selected by ${activityCount} traveler(s).`);
-            }
-        }
-        setTravellers(updatedTravellers);
-    };
+    //     // Check if the traveler has already selected this activity
+    //     if (selectedActivities.includes(activity)) {
+    //         // Remove activity from the traveler's selected activities
+    //         updatedTravellers[index].selectedActivities = selectedActivities.filter(a => a !== activity);
+    //         // Update global selection count
+    //         setActivitySelections({
+    //             ...activitySelections,
+    //             [activity]: activitySelections[activity] - 1,
+    //         });
+    //     } else {
+    //         // Check if the global count for this activity exceeds the limit
+    //         if (activitySelections[activity] < activityCount) {
+    //             // Add activity if under the limit
+    //             updatedTravellers[index].selectedActivities = [...selectedActivities, activity];
+    //             // Update global selection count
+    //             setActivitySelections({
+    //                 ...activitySelections,
+    //                 [activity]: activitySelections[activity] + 1,
+    //             });
+    //         } else {
+    //             // Prevent further selections if limit is reached
+    //             alert(`The activity "${activity}" can only be selected by ${activityCount} traveler(s).`);
+    //         }
+    //     }
+    //     setTravellers(updatedTravellers);
+    // };
 
     // Handle level selection for a traveler
-    const handleLevelChange = (index, levelName) => {
-        const updatedTravellers = [...travellers];
-        const previousLevel = updatedTravellers[index].selectedLevel; // Store the previously selected level
+    // const handleLevelChange = (index, levelName) => {
+    //     const updatedTravellers = [...travellers];
+    //     const previousLevel = updatedTravellers[index].selectedLevel; // Store the previously selected level
 
-        const levelIndex = levels.findIndex(level => level.level === levelName); // Find the level by name
-        const levelCount = counts[levelIndex]; // Get the count limit for this level
+    //     const levelIndex = levels.findIndex(level => level.level === levelName); // Find the level by name
+    //     const levelCount = counts[levelIndex]; // Get the count limit for this level
 
-        // Check if the new level is different from the previously selected level
-        if (previousLevel !== levelName) {
-            // First, check if the new level is within the allowed count
-            if (levelSelections[levelName] < levelCount) {
-                // Update the traveler's level
-                updatedTravellers[index].selectedLevel = levelName;
+    //     // Check if the new level is different from the previously selected level
+    //     if (previousLevel !== levelName) {
+    //         // First, check if the new level is within the allowed count
+    //         if (levelSelections[levelName] < levelCount) {
+    //             // Update the traveler's level
+    //             updatedTravellers[index].selectedLevel = levelName;
 
-                // Adjust the global level selections
-                const newLevelSelections = { ...levelSelections };
+    //             // Adjust the global level selections
+    //             const newLevelSelections = { ...levelSelections };
 
-                // If the traveler had a previously selected level, decrease its count
-                if (previousLevel) {
-                    newLevelSelections[previousLevel] -= 1;
-                }
+    //             // If the traveler had a previously selected level, decrease its count
+    //             if (previousLevel) {
+    //                 newLevelSelections[previousLevel] -= 1;
+    //             }
 
-                // Increase the count for the newly selected level
-                newLevelSelections[levelName] += 1;
+    //             // Increase the count for the newly selected level
+    //             newLevelSelections[levelName] += 1;
 
-                // Update the state
-                setTravellers(updatedTravellers);
-                setLevelSelections(newLevelSelections);
-            } else {
-                // Prevent further selections if the limit for the new level is reached
-                alert(`The level "${levelName}" can only be selected by ${levelCount} traveler(s).`);
-            }
-        }
-    };
+    //             // Update the state
+    //             setTravellers(updatedTravellers);
+    //             setLevelSelections(newLevelSelections);
+    //         } else {
+    //             // Prevent further selections if the limit for the new level is reached
+    //             alert(`The level "${levelName}" can only be selected by ${levelCount} traveler(s).`);
+    //         }
+    //     }
+    // };
 
 
 
@@ -154,86 +154,6 @@ const Userinfo = () => {
     };
 
 
-
-    // Function to submit and log traveler and user data
-    // const handleSubmit = async (e) => {
-    //     e.preventDefault();
-        
-    //     const ZOHO_REFRESH_TOKEN = "1000.ba8df45b4690b9167193757e117297ae.d41191118c1efc83f10383c1f82d2e9f"; 
-    //     const ZOHO_CLIENT_ID = "1000.RP27OLBHIZMFTQNPC9F5H8E0WYW1XO";
-    //     const ZOHO_CLIENT_SECRET = "a6aa0e9c2cc5aeebbbe2a20f056cda5b2f8d617d02";
-        
-    //     const customerData = {
-    //         contact_name: `${userDetails.firstName} ${userDetails.lastName}`,
-    //         company_name: 'Your Company Name',  // Replace with actual company name
-    //         contact_persons: [
-    //             {
-    //                 first_name: userDetails.firstName,
-    //                 last_name: userDetails.lastName,
-    //                 email: userDetails.email,
-    //                 phone: userDetails.phone
-    //             }
-    //         ]
-    //     };
-
-        
-    //     try {
-
-    //         const tokenResponse = await axios.post(
-    //             "https://accounts.zoho.com/oauth/v2/token",
-    //             new URLSearchParams({
-    //               grant_type: "refresh_token",
-    //               refresh_token: ZOHO_REFRESH_TOKEN,
-    //               client_id: ZOHO_CLIENT_ID,
-    //               client_secret: ZOHO_CLIENT_SECRET
-    //             })
-    //           );
-
-    //         // const accessToken = '1000.ca49faa89995a5cc3d5ce6d8aa3e7619.c90c20d332ca7de8f56821d9a2f30c59'; // Replace with your actual access token
-    //         const response = await axios.post(
-    //             'https://books.zoho.com/api/v3/contacts?organization_id=848230206',
-    //             customerData,
-    //             {
-    //                 headers: {
-    //                     Authorization: `Zoho-oauthtoken ${tokenResponse}`,
-    //                     'Content-Type': 'application/json',
-    //                 },
-    //             }
-    //         );
-    //         console.log('Customer created:', response.data);
-    //     } catch (error) {
-    //         if (error.response) {
-    //             console.error('Error response:', error.response.data);
-    //         } else {
-    //             console.error('Error creating customer:', error.message);
-    //         }
-    //     }
-    // };
-
-    // let data = {
-    //         userDetails: userDetails,
-    //         travellers: travellers
-    //       };
-        
-
-    // fetch('https://script.google.com/macros/s/AKfycbxlnXUi787wwwZEh5ZWRn18AUWJM7C_nI3gHz-mISxqdZjYCVqYyDs_PoO4sIgKk2-6Pw/exec', {
-    //     method: 'POST',
-    //     headers: {
-    //         'Content-Type': 'application/json'
-    //     },
-    //     body: JSON.stringify(data)
-    // }).then(response => {
-    //     return response.text();
-    // }).then(data => {
-    //     console.log("ADD in google sheet", data); // 'Data Saved Successfully' message from the web app
-    // }).catch(error => {
-    //     console.error('Error:', error);
-    // });
-    // console.log("userDetails",userDetails)
-    // console.log("travellers",travellers)
-
-    // working code 
-
     const googleSubmit = async () => {
       
         // Bundle them into one object
@@ -244,7 +164,7 @@ const Userinfo = () => {
         console.log("ddddddddddddddd", data)
         try {
           // Send the data to the backend
-          const gresponse = await axios.post("http://localhost:5000/api/send-to-sheet", data);
+          const gresponse = await axios.post("https://backend-kiteactive.onrender.com/api/user/send-to-sheet", data);
           console.log("Data sent to sheet successfully", gresponse.data);
         } catch (error) {
           // Log any errors for debugging
@@ -269,11 +189,11 @@ const Userinfo = () => {
         };
     
         try {
-          const response = await axios.post("http://localhost:5000/api/send-to-zoho", customerData);
+          const response = await axios.post("https://backend-kiteactive.onrender.com/api/user/send-to-zoho", customerData);
           console.log("Data sent to Zoho successfully", response.data);
+          googleSubmit();
         } catch (error) {
             console.error("Error sending data to Zoho:", error);
-            googleSubmit();
         }
     };
 
@@ -384,7 +304,7 @@ const Userinfo = () => {
                             </div>
 
                             {/* Activity checkboxes */}
-                            <div className="mt-3">
+                            {/* <div className="mt-3">
                                 <h5>Activities</h5>
                                 {activityDetails.map((activity, activityIndex) => (
                                     <div key={activityIndex} className='form-check'>
@@ -400,12 +320,12 @@ const Userinfo = () => {
                                         </label>
                                     </div>
                                 ))}
-                            </div>
+                            </div> */}
 
 
                             {/* {/ Level selection /} */}
 
-                            <div className="mt-3">
+                            {/* <div className="mt-3">
                                 <h5>Levels</h5>
                                 {levels.map((level, levelIndex) => (
                                     <div key={levelIndex} className='form-check'>
@@ -421,7 +341,7 @@ const Userinfo = () => {
                                         </label>
                                     </div>
                                 ))}
-                            </div>
+                            </div> */}
                         </div>
 
                     </div>
@@ -452,14 +372,14 @@ const Userinfo = () => {
                                 </div>
                             )}
                             <p>
-                                <span>{totalCount} Person, {selectedDuration}</span>
+                                <span>{totalCount} Person, {selectedDuration}, </span>
 
                                 {/* Show details for each level where count is > 0 */}
                                 {levels.map((item, index) => (
                                     counts[index] > 0 && (
                                         <span key={index}>
                                             <span>
-                                                <b>{item.level}</b>
+                                                <b>{item.level}, </b>
                                                 {/* | Count: {counts[index]} | Price: € {counts[index] * item.price} */}
                                             </span>
                                         </span>
@@ -549,7 +469,7 @@ const Userinfo = () => {
                     <div className="col-lg-8">
                         <div className='btn_container mb-5'>
                             <button className="level_btn " onClick={handleSubmit}>
-                                Proceed to Checkout
+                                Make Reservation
                             </button>
                         </div>
                     </div>

@@ -8,7 +8,7 @@ import './DatePickerStyles.css'; // Import your custom CSS
 const Datepicker = () => {
   const location = useLocation();
   const navigate = useNavigate(); // To navigate to the final page
-  const { selectedDuration, counts, totalPrice, totalCount, levels } = location.state;
+  const { selectedDuration, counts, totalPrice, totalCount, levels, carRentalSelections, carRentalPrice } = location.state;
 
   const [startDate, setStartDate] = useState(null);
   const [endDate, setEndDate] = useState(null);
@@ -16,36 +16,34 @@ const Datepicker = () => {
 
   // Sample date ranges for different durations with status
   const dateRanges = {
-    "1 week": [
-      { range: "2024/09/15 - 2024/09/21", status: 0 }, // Available
-      { range: "2024/09/22 - 2024/09/28", status: 1 }, // Unavailable
-      { range: "2024/09/29 - 2024/10/05", status: 0 },  // Available
-      { range: "2024/10/01 - 2024/10/7", status: 0 },  // Available
-      { range: "2024/10/13 - 2024/10/19", status: 0 },  // Available
-      { range: "2024/10/24 - 2024/10/27", status: 1 }, // Unavailable
-      { range: "2024/10/27 - 2024/11/01", status: 0 },  // Available
-      { range: "2024/11/22 - 2024/11/27", status: 1 }, // Unavailable
-      { range: "2024/11/10 - 2024/11/16", status: 0 },  // Available
-      { range: "2024/11/24 - 2024/11/30", status: 0 },  // Available
-      { range: "2024/11/03 - 2024/11/09", status: 0 },  // Available
-      { range: "2024/12/08 - 2024/12/14", status: 0 },  // Available
-      { range: "2024/12/23 - 2024/12/29", status: 0 },  // Available
-      { range: "2024/12/18 - 2024/12/18", status: 1 },  // unav
-      { range: "2024/12/31 - 2025/01/03", status: 1 },  // unav
+    "7 Days": [
+      { range: "2024/11/01 - 2024/11/07", status: 0 },
+      { range: "2024/11/08 - 2024/11/14", status: 0 },
+      { range: "2024/11/15 - 2024/11/21", status: 0 },
+      { range: "2024/11/22 - 2024/11/28", status: 0 },
+      { range: "2024/11/29 - 2024/12/05", status: 0 },
+      { range: "2024/12/06 - 2024/12/12", status: 0 },
+      { range: "2024/12/13 - 2024/12/19", status: 0 },
+      { range: "2024/12/20 - 2024/12/26", status: 0 },
+      { range: "2024/12/27 - 2025/01/02", status: 0 },
+      { range: "2025/01/03 - 2025/01/10", status: 0 },
     ],
     "10 Days": [
-      { range: "2024/10/01 - 2024/10/10", status: 1 }, // Unavailable
-      { range: "2024/09/17 - 2024/09/26", status: 1 }, // Unavailable
-      { range: "2024/10/10 - 2024/10/20", status: 0 },  // Available
-      { range: "2024/10/22 - 2024/10/30", status: 0 },  // Available
-      { range: "2024/11/06 - 2024/11/15", status: 0 },  // Available
-      { range: "2024/11/27 - 2024/11/5", status: 1 },  // Available
-      { range: "2024/11/17 - 2024/11/26", status: 0 },  // Available
-      { range: "2024/11/27 - 2024/11/5", status: 1 },  // Available
+      { range: "2024/11/01 - 2024/11/10", status: 0 },
+      { range: "2024/11/11 - 2024/11/20", status: 0 },
+      { range: "2024/11/21 - 2024/11/30", status: 0 },
+      { range: "2024/12/01 - 2024/12/10", status: 0 },
+      { range: "2024/12/11 - 2024/12/20", status: 0 },
+      { range: "2024/12/21 - 2024/12/30", status: 0 },
+      { range: "2024/12/31 - 2025/01/09", status: 0 },
+
     ],
-    "2 weeks": [
-      { range: "2024/09/17 - 2024/09/30", status: 0 }, // Available
-      { range: "2024/10/01 - 2024/10/14", status: 1 }  // Unavailable
+    "14 Days": [
+      { range: "2024/11/01 - 2024/11/14", status: 0 },
+      { range: "2024/11/15 - 2024/11/28", status: 0 },
+      { range: "2024/11/29 - 2024/12/03", status: 0 },
+      { range: "2024/12/13 - 2024/12/26", status: 0 },
+      { range: "2024/12/27 - 2025/01/09", status: 0 },
     ],
   };
 
@@ -89,11 +87,11 @@ const Datepicker = () => {
   // Duration in days based on the previous page selection
   const getDurationInDays = () => {
     switch (selectedDuration) {
-      case '1 week':
+      case '7 Days':
         return 7;
       case '10 Days':
         return 10;
-      case '2 weeks':
+      case '14 Days':
         return 14;
       default:
         return 0;
@@ -112,6 +110,8 @@ const Datepicker = () => {
           levels,
           startDate,
           endDate,
+          carRentalSelections,
+          carRentalPrice, 
         },
       });
     } else {
@@ -145,13 +145,13 @@ const Datepicker = () => {
           <div className="col-lg-8 m-0 p-0">
             <div className='m-auto text-center m-0 p-0 '>
               <p className='text-center person_week'>
-                <span>{totalCount} Person, {selectedDuration}</span>
+                <span>{totalCount} Person, {selectedDuration}, </span>
                 {/* Show details for each level where count is > 0 */}
                 {levels.map((item, index) => (
                   counts[index] > 0 && (
                     <span key={index}>
                       <span>
-                        <b>{item.level}</b>
+                        <b>{item.level}, </b>
                         {/* | Count: {counts[index]} | Price: € {counts[index] * item.price} */}
                       </span>
                     </span>

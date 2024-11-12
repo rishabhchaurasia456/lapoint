@@ -5,7 +5,7 @@ const Activity = () => {
   const location = useLocation();
   const navigate = useNavigate(); // Hook to navigate to other pages
 
-  const { selectedDuration, counts, countsbed, roomPrices, roomtype, updatedTotalPrice, totalCount, levels, startDate, endDate } = location.state;
+  const { selectedDuration, counts, countsbed, roomPrices, roomtype, updatedTotalPrice, totalCount, levels, startDate, endDate, carRentalPrice, carRentalSelections, } = location.state;
 
   const [actcounts, setactCounts] = useState([0, 0, 0, 0, 0]);
 
@@ -68,7 +68,9 @@ const Activity = () => {
         startDate,
         endDate,
         actcounts, // Pass the activity counts as well
-        activityDetails
+        activityDetails,
+        carRentalSelections,
+        carRentalPrice,
       },
     });
   };
@@ -89,14 +91,14 @@ const Activity = () => {
                     </div>
                   )}
                   <p>
-                    <span>{totalCount} Person, {selectedDuration}</span>
+                    <span>{totalCount} Person, {selectedDuration}, </span>
 
                     {/* Show details for each level where count is > 0 */}
                     {levels.map((item, index) => (
                       counts[index] > 0 && (
                         <span key={index}>
                           <span>
-                            <b>{item.level}</b>
+                            <b>{item.level}, </b>
                             {/* | Count: {counts[index]} | Price: € {counts[index] * item.price} */}
                           </span>
                         </span>
