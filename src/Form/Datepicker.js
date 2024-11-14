@@ -8,7 +8,7 @@ import './DatePickerStyles.css'; // Import your custom CSS
 const Datepicker = () => {
   const location = useLocation();
   const navigate = useNavigate(); // To navigate to the final page
-  const { selectedDuration, counts, totalPrice, totalCount, levels, carRentalSelections, carRentalPrice } = location.state;
+  const { selectedDuration, counts, totalPrice, totalCount, levels, carRentalSelections, carRentalPrice, lineItems } = location.state;
 
   const [startDate, setStartDate] = useState(null);
   const [endDate, setEndDate] = useState(null);
@@ -112,6 +112,7 @@ const Datepicker = () => {
           endDate,
           carRentalSelections,
           carRentalPrice, 
+          lineItems
         },
       });
     } else {

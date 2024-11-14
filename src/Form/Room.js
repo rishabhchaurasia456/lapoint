@@ -10,7 +10,7 @@ const Room = () => {
 
   const location = useLocation();
   const navigate = useNavigate();
-  const { selectedDuration, counts, totalPrice, totalCount, levels, startDate, endDate, carRentalSelections, carRentalPrice } = location.state;
+  const { selectedDuration, counts, totalPrice, totalCount, levels, startDate, endDate, carRentalSelections, carRentalPrice, lineItems } = location.state;
 
   // Room type array
   const roomtype = useMemo(() => [
@@ -84,7 +84,8 @@ const Room = () => {
         carRentalSelections,
         carRentalPrice,
         startDate,
-        endDate
+        endDate,
+        lineItems
       }
     });
   };

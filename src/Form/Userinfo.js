@@ -18,7 +18,10 @@ const Userinfo = () => {
         endDate,
         // actcounts,
         // activityDetails // List of available activities
+        lineItems
     } = location.state;
+
+    console.log("line itemssssssssss", lineItems)
 
     const [userDetails, setUserDetails] = useState({
         firstName: '',
@@ -185,11 +188,17 @@ const Userinfo = () => {
                     email: userDetails.email,
                     phone: userDetails.phone
                 }
-            ]
+            ],
+            
+            line_items: lineItems.map(item => ({
+                item_id: item.item_id, // Use the item ID from lineItems
+                quantity: item.quantity,  // Use the quantity from lineItems
+                rate: item.rate,  // Use the rate from lineItems
+            })),
         };
     
         try {
-          const response = await axios.post("https://backend-kiteactive.onrender.com/api/user/send-to-zoho", customerData);
+          const response = await axios.post("http://localhost:5500/api/user/send-to-zoho", customerData);
           console.log("Data sent to Zoho successfully", response.data);
           googleSubmit();
         } catch (error) {

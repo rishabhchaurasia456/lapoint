@@ -20,6 +20,7 @@ const Checkout = () => {
         activityDetails,
         carRentalPrice,
         carRentalSelections,
+        lineItems
     } = location.state;
 
 
@@ -39,7 +40,8 @@ const Checkout = () => {
                 startDate,
                 endDate,
                 actcounts,
-                activityDetails
+                activityDetails,
+                lineItems
             }
         })
     }

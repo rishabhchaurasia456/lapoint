@@ -7,7 +7,7 @@ const Levels = () => {
   const [selectedDuration, setSelectedDuration] = useState('7 Days'); // Track selected duration
   const [counts, setCounts] = useState([0, 0, 0]); // Separate counts for each level
   const [carRentalSelections, setCarRentalSelections] = useState([true, false, false]); // Car rental for Level 1 is always true
-  const [zanzibarItems, setZanzibarItems] = useState([]);
+  const [zohoItems, setZohoItems] = useState([]);
 
   const location = useLocation();
   const { tripName } = location.state || {};
@@ -41,7 +41,7 @@ const Levels = () => {
             return matchesTripName && matchesDuration;
           });
 
-          setZanzibarItems(filteredItems);
+          setZohoItems(filteredItems);
         } else {
           console.log("No items found in the response.");
           console.log("Too Many Request , Please Try Sometimes Later")
@@ -119,15 +119,27 @@ const Levels = () => {
   const totalCount = counts.reduce((acc, count) => acc + count, 0);
 
   const totalPrice = counts.reduce((acc, count, index) => {
-    const levelPrice = count * levels[index].price;
+  //   const levelPrice = count * levels[index].rate;
+  //   console.log("llllllllllllllllllllllllllllll",levelPrice)
+  //   // Only add car rental price for levels where the checkbox is selected
+  //   const carRentalPrice = carRentalSelections[index] && count > 0 ? selectedDays * 60 * count : 0;
+  //   return acc + levelPrice + carRentalPrice;
+  // }, 0);
+  if (zohoItems[index]) {
+    const levelRate = count * zohoItems[index].rate; // Use the Zoho item rate
+    console.log("Item Rate for Level:", zohoItems[index].rate);
     // Only add car rental price for levels where the checkbox is selected
-    const carRentalPrice = carRentalSelections[index] && count > 0 ? selectedDays * 60 : 0;
-    return acc + levelPrice + carRentalPrice;
-  }, 0);
+    const carRentalPrice = carRentalSelections[index] && count > 0 ? selectedDays * 60 * count : 0;
+    return acc + levelRate + carRentalPrice;
+  }
+  return acc;
+}, 0);
+  console.log("iiiiiiiiiiiiiiiiiiiiiiiiii", totalPrice)
+
 
   const carRentalPrice = counts.reduce((acc, count, index) => {
     // Only include the Kiteset rental if the checkbox is selected for levels and count > 0
-    return acc + (carRentalSelections[index] && count > 0 && index !== 0 ? selectedDays * 60 : 0);
+    return acc + (carRentalSelections[index] && count > 0 && index !== 0 ? selectedDays * 60 * count : 0);
   }, 0);
 
   console.log("cccccccccccccccccc", carRentalPrice)
@@ -137,6 +149,18 @@ const Levels = () => {
   // Navigate to the next page and pass data
   const handleNext = (event) => {
     event.preventDefault();
+
+    const lineItems = counts.map((count, index) => {
+      if (count > 0 && zohoItems[index]) {
+        return {
+          item_id: zohoItems[index].item_id,
+          quantity: count,
+          rate: zohoItems[index].rate
+        };
+      }
+      return null;
+    }).filter(item => item !== null);
+
     navigate('/datepicker', {
       state: {
         selectedDuration,
@@ -146,8 +170,10 @@ const Levels = () => {
         levels: selectedLevels, // Only pass selected levels where count > 0
         carRentalSelections, // Pass car rental selection per level
         carRentalPrice,
+        lineItems
       },
     });
+  console.log("iiiiiiiiiiiiiiiiiiiiiiiiiikkkkkkkkkkkkkk", totalPrice)
   };
 
 
@@ -174,8 +200,8 @@ const Levels = () => {
               <h5 className='level_heading'>Choose one package per traveller</h5>
 
               <div className="container-fluid">
-                {zanzibarItems.length > 0 ? (
-                  zanzibarItems.map((item, index) => (
+                {zohoItems.length > 0 ? (
+                  zohoItems.map((item, index) => (
                     <div className="row form_crd_row mt-4" key={item.item_id}>
                       <div className="col-md-9">
                         <div className='level_crd_text'>
@@ -183,7 +209,7 @@ const Levels = () => {
                             <span>
                               <b>{item.name}</b>
                             </span>{' '}
-                            | <span>Price: €{item.rate}</span>
+                            | <span name="rate">Price: €{item.rate}</span>
                           </p>
                         </div>
 

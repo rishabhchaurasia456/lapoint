@@ -5,7 +5,7 @@ const Activity = () => {
   const location = useLocation();
   const navigate = useNavigate(); // Hook to navigate to other pages
 
-  const { selectedDuration, counts, countsbed, roomPrices, roomtype, updatedTotalPrice, totalCount, levels, startDate, endDate, carRentalPrice, carRentalSelections, } = location.state;
+  const { selectedDuration, counts, countsbed, roomPrices, roomtype, updatedTotalPrice, totalCount, levels, startDate, endDate, carRentalPrice, carRentalSelections, lineItems } = location.state;
 
   const [actcounts, setactCounts] = useState([0, 0, 0, 0, 0]);
 
@@ -71,6 +71,7 @@ const Activity = () => {
         activityDetails,
         carRentalSelections,
         carRentalPrice,
+        lineItems
       },
     });
   };
