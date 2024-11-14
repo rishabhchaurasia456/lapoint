@@ -93,8 +93,9 @@ const Checkout = () => {
 
                                 <div>
                                     <h2 className='checkout_heading'>Selected Levels</h2>
+                                    <div className="checkout_data">
                                     Total Kitset rent price : {carRentalPrice}
-
+                                    </div>
                                     {levels.map((item, index) => (
                                         counts[index] > 0 && (
 

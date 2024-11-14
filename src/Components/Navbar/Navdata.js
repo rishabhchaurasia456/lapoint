@@ -53,7 +53,7 @@ export const navItems = [
                 du: "Verhalen",  // Dutch (DU)
                 gr: "Geschichten",  // Netherlands Dutch (NL)
             },
-            path: '/'
+            path: '/stories'
         },
         { 
             id: "5",

@@ -1,10 +1,19 @@
-import React from 'react'
+import React , {useState} from 'react'
 import { Link } from 'react-router-dom'
 
 import img1 from '../../Images/img1.webp'
 import img2 from '../../Images/img2.webp'
 import img3 from '../../Images/img3.webp'
 import img4 from '../../Images/img4.webp'
+
+import popimg1 from '../../Images/popimg1.png'
+import popimg2 from '../../Images/popimg2.png'
+import popimg3 from '../../Images/popimg3.png'
+import popimg4 from '../../Images/popimg4.png'
+import popimg5 from '../../Images/popimg5.png'
+import popimg6 from '../../Images/popimg6.png'
+import popimg7 from '../../Images/popimg7.png'
+import popimg8 from '../../Images/popimg1.png'
 
 const Surfcamp = ({ selectedLanguage }) => {
 
@@ -28,6 +37,14 @@ const Surfcamp = ({ selectedLanguage }) => {
 
 
 
+  const [showPopup, setShowPopup] = useState(false);
+
+  // Function to toggle popup visibility
+  const togglePopup = () => {
+    setShowPopup(!showPopup);
+  };
+
+
   return (
     <div>
       <div className="container d-flex flex-column align-items-center justify-content-center surf_container">
@@ -46,7 +63,7 @@ const Surfcamp = ({ selectedLanguage }) => {
 
 
       {/* Photo Section  */}
-    
+
       <div className="container mt-5 pt-5">
         <div className="row">
           <div className="col-12 col-md-6 col-lg-5">
@@ -80,11 +97,39 @@ const Surfcamp = ({ selectedLanguage }) => {
           </div>
         </div>
 
+  
+
+         {/* POP up Container  */}
         <div>
-          <Link className='nav-link'>
-            <p className='text-danger fw-bold m-3 fs-5 text-center'>SEE ALL PHOTOS & VIDEOS</p>
+          {/* Link to trigger popup */}
+          <Link className="nav-link" onClick={togglePopup}>
+            <p className="text-danger fw-bold m-3 fs-5 text-center">SEE ALL PHOTOS & VIDEOS</p>
           </Link>
+
+          {/* Popup Component */}
+          {showPopup && (
+            <div className="popup-overlay" onClick={togglePopup}>
+              <div className="popup-content" onClick={(e) => e.stopPropagation()}>
+                <i className="fa fa-close fs-5 popupclose" onClick={togglePopup}></i>
+                {/* <h2>Shop Popup</h2> */}
+               <div className="popimgs_div">
+               <img src={popimg1} alt="" className='popimg'/>
+                <img src={popimg2} alt="" className='popimg'/>
+                <img src={popimg3} alt="" className='popimg'/>
+                <img src={popimg4} alt="" className='popimg'/>
+                <img src={popimg5} alt="" className='popimg'/>
+                <img src={popimg6} alt="" className='popimg'/>
+                <img src={popimg7} alt="" className='popimg'/>
+                <img src={popimg8} alt="" className='popimg'/>
+               </div>
+              </div>
+            </div>
+          )}
         </div>
+
+
+
+
       </div>
 
 

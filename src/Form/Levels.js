@@ -31,6 +31,7 @@ const Levels = () => {
             console.log("Item Name:", itemName);
             console.log("Trip Name:", tripNameLower);
             console.log("Selected Duration:", durationLower);
+            
 
             const matchesTripName = itemName.includes(tripNameLower);
             const matchesDuration = itemName.includes(durationLower);

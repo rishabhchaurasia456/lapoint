@@ -32,6 +32,18 @@ const Trip = ({ selectedLanguage }) => {
 
     const [videoLoaded, setVideoLoaded] = useState(false);
 
+
+
+    // popup code here 
+
+    const [showPopup, setShowPopup] = useState(false);
+
+    // Function to toggle popup visibility
+    const togglePopup = () => {
+        setShowPopup(!showPopup);
+    };
+
+
     return (
         <div>
             <Helmet>
@@ -57,8 +69,7 @@ const Trip = ({ selectedLanguage }) => {
                             />
                         )}
 
-                        <video
-                            key={trip.vedio}
+                        <video key={trip.vedio}
                             autoPlay
                             loop
                             muted
@@ -151,25 +162,47 @@ const Trip = ({ selectedLanguage }) => {
                         <Activites activitiesData={trip.activities} selectedLanguage={selectedLanguage} />
                     )}
                 </div>
-
                 <div>
 
 
-                    <div className="container-fluid m-0 p-0">
-                        <div className="row ">
-                            <div className="col">
-                                <div className='strip'>
-                                    <div>
-                                        <h5 className='strip_text'>Free rebooking up to 14 days prior to arrivalRead <span>
-                                            <Link to="/" className='strip_link'>Read more</Link>
-                                        </span></h5>
-                                    </div>
+                    {/* Free rebooking Strip container  with popup  */}
 
+                    <div className="container-fluid m-0 p-0">
+                        <div className="row">
+                            <div className="col">
+                                <div className="strip">
+                                    <div>
+                                        <h5 className="strip_text">
+                                            Free Rebooking up to 14 days prior to Arrival
+                                            <span>
+                                                <Link to="#" className="strip_link" onClick={togglePopup}> Read more</Link>
+                                            </span>
+                                        </h5>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+
+                        {/* Popup Component */}
+                        {showPopup && (
+                            <div className="bottom-popup m-auto">
+                                <div className="strip_popup_content">
+                                    <i className='fa fa-close clsbtn' onClick={togglePopup}></i>
+                                    <h5 className='popup_head'>Free rebooking up to 14 days prior to arrival</h5>
+                                    <p className='popup_content'>Kiteactive for Veventures provides an exceptional experience for adventure seekers and kitesurfing enthusiasts, with the flexibility to plan confidently. Book your stay more than three weeks in advance and enjoy a 14-day window to rebook or cancel without fees. For last-minute plans, bookings made within three weeks come with a 72-hour adjustment period. Cancelations up to 35 days prior receive 75% of your payment back. We also offer a free rebooking or gift card option up to 14 days before arrival, ensuring peace of mind as you prepare to experience world-class kitesurfing and explore breathtaking destinations. Add optional cancellation insurance for extra reassurance.
+
+                                    </p>
+                                    {/* <button onClick={togglePopup} className="btn btn-danger">Close</button> */}
+                                </div>
+                            </div>
+                        )}
                     </div>
 
+
+
+
+
+                    {/* HighLight component start here  */}
                     <div className="container-fluid">
                         <div className="row">
                             {trip?.alltabs && (
