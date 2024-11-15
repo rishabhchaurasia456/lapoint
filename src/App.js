@@ -20,7 +20,9 @@ import Aff_Dashboard from './Affiliate/Aff_Dashboard';
 import NewAffiliate from './Affiliate/NewAffiliate';
 import MyCreative from './Affiliate/MyCreative';
 import Formlayout from './Form/Formlayout';
+
 import Stories from './Pages/Stories/Stories';
+import School from './Pages/School/School';
 
 function App() {
 
@@ -52,6 +54,11 @@ function App() {
           <Route path='/contact' element={
             <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
               <Contactus selectedLanguage={selectedLanguage} />
+            </KiteLayout>
+          } />
+          <Route path='/School' element={
+            <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
+              <School selectedLanguage={selectedLanguage}/>
             </KiteLayout>
           } />
 

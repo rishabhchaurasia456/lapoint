@@ -315,13 +315,13 @@
 /* Stories Page css here --------------- */
 /* ---------------------------------- */
 
-.strories_ban{
+.strories_ban {
   position: relative;
 }
 
 
 
-.stroies_cont{
+.stroies_cont {
   background-color: #000;
   margin: 5%;
   position: absolute;
@@ -332,7 +332,7 @@
   width: 70% !important;
 }
 
-.storiesbtn{
+.storiesbtn {
   background-color: #fdc016;
   color: #000;
   width: 60%;
@@ -347,7 +347,7 @@
 }
 
 
-.stories_card{
+.stories_card {
   margin-top: 15%;
 
 }
@@ -356,8 +356,8 @@
 /* Small devices (phones, 576px and up)------------------ */
 
 @media only screen and (max-width: 600px) {
-  .stroies_cont{
-    display: none;        
+  .stroies_cont {
+    display: none;
   }
 
 }
@@ -367,7 +367,72 @@
 
 
 
+/* ------------------------------- */
+/* School page css here  */
+/* ------------------------------- */
 
+.w_K_sec {
+  background-color: #fff6db;
+  margin-top: 8%;
+  padding: 5%;
+}
+
+.school_heading {
+  color: black;
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 53px;
+  font-family: "Amatic SC", sans-serif;
+  text-transform: uppercase;
+}
+
+
+.school_para {
+  color: black;
+  font-family: sans-serif;
+  margin-top: 5%;
+  font-size: 18px;
+  line-height: 23px;
+  font-weight: 400;
+  letter-spacing: 2PX;
+
+}
+
+.w_K_img{
+  width: 60%;
+  border-radius: 10px;
+  margin-top: 5%;
+}
+
+
+.t_M_img{
+  width: 12%;
+  margin: 10px;
+}
+
+
+/* -------------- */
+/* small device   css */
+/* -------------- */
+
+
+@media only screen and (max-width: 600px) {
+
+  .w_K_img{
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 5%;
+  }
+
+  .t_M_img{
+    width: 70%;
+  }
+  
+  .storiesbtn {
+    width: 80%;
+  }
+
+}
 
 
 

@@ -88,7 +88,6 @@ const Stories = () => {
                     </div>
                     <div className="col-lg-4">
                         <button type='button' className='storiesbtn'>Kite Stories</button>
-
                     </div>
                     <div className="col-lg-4">
                         <button type='button' className='storiesbtn'>kite Academy</button>

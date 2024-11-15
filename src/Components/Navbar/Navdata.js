@@ -45,7 +45,7 @@ export const navItems = [
                 du: "School",  // Dutch (DU)
                 gr: "Schule",  
             },
-            path: '/' },
+            path: '/School' },
         { 
             id: "4",
             name: {
@@ -63,7 +63,7 @@ export const navItems = [
                 gr: "Kontakt",  // Netherlands Dutch (NL)
             },
             path: '/contact'
-        }
+        }       
 ];
 
 
