@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import { useLocation } from 'react-router-dom';
-// import Swal from 'sweetalert2';
-// import 'animate.css';
+import { useNavigate, useLocation } from 'react-router-dom';
 import axios from 'axios';
 
 const Userinfo = () => {
+    const navigate = useNavigate();
     const location = useLocation();
 
     const {
@@ -14,7 +13,7 @@ const Userinfo = () => {
         // roomPrices,
         selectedRooms,
         // updatedTotalPrice,
-        totalCount, // Total number of travelers
+        totalCount, 
         levels,
         startDate,
         endDate,
@@ -175,6 +174,12 @@ const Userinfo = () => {
           // Send the data to the backend
           const gresponse = await axios.post("https://backend-kiteactive.onrender.com/api/user/send-to-sheet", data);
           console.log("Data sent to sheet successfully", gresponse.data);
+
+          if (gresponse.status === 200) {
+            console.log('Listing added successfully:', gresponse.data);
+            navigate('/thankyou');
+          }
+
         } catch (error) {
           // Log any errors for debugging
           console.error("Error sending data to sheet:", error.response?.data || error.message);
@@ -209,7 +214,7 @@ const Userinfo = () => {
         };
     
         try {
-          const response = await axios.post("http://localhost:5500/api/user/send-to-zoho", customerData);
+          const response = await axios.post("https://backend-kiteactive.onrender.com/api/user/send-to-zoho", customerData);
           console.log("Data sent to Zoho successfully", response.data);
           googleSubmit();
         } catch (error) {

@@ -23,6 +23,7 @@ import Formlayout from './Form/Formlayout';
 
 import Stories from './Pages/Stories/Stories';
 import School from './Pages/School/School';
+import Thankyou from './Form/Thankyou';
 
 function App() {
 
@@ -73,9 +74,13 @@ function App() {
             <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
               <Kitecamp />
             </KiteLayout>
-          }>
+          } />
 
-          </Route>
+          <Route path='/thankyou' element={
+            <Formlayout>
+              <Thankyou />
+            </Formlayout>
+          } />
 
           <Route path='/form' element={
             <Formlayout>
