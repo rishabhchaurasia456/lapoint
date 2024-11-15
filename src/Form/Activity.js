@@ -5,7 +5,7 @@ const Activity = () => {
   const location = useLocation();
   const navigate = useNavigate(); // Hook to navigate to other pages
 
-  const { selectedDuration, counts, countsbed, roomPrices, roomtype, updatedTotalPrice, totalCount, levels, startDate, endDate, carRentalPrice, carRentalSelections, lineItems } = location.state;
+  const { selectedDuration, counts, countsbed, selectedRooms, updatedTotalPrice, totalCount, levels, startDate, endDate, carRentalPrice, carRentalSelections, lineItems } = location.state;
 
   const [actcounts, setactCounts] = useState([0, 0, 0, 0, 0]);
 
@@ -59,9 +59,10 @@ const Activity = () => {
         selectedDuration,
         counts,
         countsbed,
-        roomPrices,
-        roomtype,
+        // roomPrices,
+        // roomtype,
         // updatedTotalPrice,
+        selectedRooms, // Pass the filtered selected rooms
         updatedTotalPrice: finalTotalPrice,
         totalCount,
         levels,

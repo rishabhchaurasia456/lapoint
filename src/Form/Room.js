@@ -71,12 +71,22 @@ const Room = () => {
 
   // Handle navigation to the next page
   const handleNext = () => {
+
+    const selectedRooms = roomtype
+    .map((room, index) => ({
+      room: room.room,
+      count: countsbed[index],
+      price: roomPrices[index], // Include price if needed
+    }))
+    .filter(room => room.count > 0); 
+
     navigate('/activity', {
       state: {
         selectedDuration,
         countsbed, // Send the updated counts
-        roomPrices, // Pass the individual room prices
-        roomtype,  // Pass the room types
+        // roomPrices, // Pass the individual room prices
+        // roomtype,  // Pass the room types
+        selectedRooms, // Pass the filtered selected rooms
         updatedTotalPrice, // Pass the updated total price
         totalCount,
         levels,

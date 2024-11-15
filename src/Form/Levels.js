@@ -27,11 +27,6 @@ const Levels = () => {
             const tripNameLower = tripName ? tripName.toLowerCase().trim() : '';
             const durationLower = selectedDuration ? selectedDuration.toLowerCase().trim() : '';
 
-            // Log the values for debugging
-            console.log("Item Name:", itemName);
-            console.log("Trip Name:", tripNameLower);
-            console.log("Selected Duration:", durationLower);
-
             const matchesTripName = itemName.includes(tripNameLower);
             const matchesDuration = itemName.includes(durationLower);
 
@@ -52,10 +47,10 @@ const Levels = () => {
     };
 
     fetchItems();
-  }, [tripName, selectedDuration]); // Add selectedDuration as a dependency
+  }, [tripName, selectedDuration]);
 
 
-  const navigate = useNavigate(); // useNavigate for navigation
+  const navigate = useNavigate();
 
   // Handle duration selection change
   const handleDurationChange = (event) => {
@@ -119,27 +114,22 @@ const Levels = () => {
   const totalCount = counts.reduce((acc, count) => acc + count, 0);
 
   const totalPrice = counts.reduce((acc, count, index) => {
-  //   const levelPrice = count * levels[index].rate;
-  //   console.log("llllllllllllllllllllllllllllll",levelPrice)
-  //   // Only add car rental price for levels where the checkbox is selected
-  //   const carRentalPrice = carRentalSelections[index] && count > 0 ? selectedDays * 60 * count : 0;
-  //   return acc + levelPrice + carRentalPrice;
-  // }, 0);
   if (zohoItems[index]) {
     const levelRate = count * zohoItems[index].rate; // Use the Zoho item rate
     console.log("Item Rate for Level:", zohoItems[index].rate);
     // Only add car rental price for levels where the checkbox is selected
     const carRentalPrice = carRentalSelections[index] && count > 0 ? selectedDays * 60 * count : 0;
+    console.log("carRentalPriceeeeeeeeeeeeeeeeeeeeeeee", carRentalPrice)
     return acc + levelRate + carRentalPrice;
   }
   return acc;
 }, 0);
-  console.log("iiiiiiiiiiiiiiiiiiiiiiiiii", totalPrice)
+  console.log("totalpriceeeeee", totalPrice)
 
 
   const carRentalPrice = counts.reduce((acc, count, index) => {
     // Only include the Kiteset rental if the checkbox is selected for levels and count > 0
-    return acc + (carRentalSelections[index] && count > 0 && index !== 0 ? selectedDays * 60 * count : 0);
+    return acc + (carRentalSelections[index] && count > 0 ? selectedDays * 60 * count : 0);
   }, 0);
 
   console.log("cccccccccccccccccc", carRentalPrice)
@@ -173,7 +163,6 @@ const Levels = () => {
         lineItems
       },
     });
-  console.log("iiiiiiiiiiiiiiiiiiiiiiiiiikkkkkkkkkkkkkk", totalPrice)
   };
 
 
@@ -191,7 +180,6 @@ const Levels = () => {
 
             <form onSubmit={handleNext}>
               <h5 className='level_heading'>Choose duration</h5>
-              {/* Dropdown for selecting the duration */}
               <select className="form-control w-100 p-3" id="duration" onChange={handleDurationChange} value={selectedDuration} required>
                 <option>7 Days</option>
                 <option>10 Days</option>

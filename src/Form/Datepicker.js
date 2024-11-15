@@ -120,6 +120,8 @@ const Datepicker = () => {
     }
   };
 
+  console.log("iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiirrrrrrrrrrrrrr", totalPrice)
+
   // Add a custom CSS class to start dates for highlighting (available/unavailable)
   const highlightStartDate = (date) => {
     const foundDate = validDates.find(({ date: validDate }) => isSameDay(validDate, date));

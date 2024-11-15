@@ -9,8 +9,9 @@ const Checkout = () => {
         selectedDuration,
         counts,
         countsbed,
-        roomPrices,
-        roomtype,
+        // roomPrices,
+        // roomtype,
+        selectedRooms,
         updatedTotalPrice,
         totalCount,
         levels,
@@ -19,9 +20,12 @@ const Checkout = () => {
         actcounts,
         activityDetails,
         carRentalPrice,
-        carRentalSelections,
         lineItems
     } = location.state;
+
+    console.log("carRentalPriceeeeeeeeeeeeeeeee", carRentalPrice)
+    console.log("roommmmmmmm", selectedRooms)
+    console.log("activityDetailssssssssssssssssss", activityDetails)
 
 
     const navigate = useNavigate()
@@ -32,8 +36,9 @@ const Checkout = () => {
                 selectedDuration,
                 counts,
                 countsbed,
-                roomPrices,
-                roomtype,
+                // roomPrices,
+                // roomtype,
+                selectedRooms,
                 updatedTotalPrice,
                 totalCount,
                 levels,
@@ -41,7 +46,8 @@ const Checkout = () => {
                 endDate,
                 actcounts,
                 activityDetails,
-                lineItems
+                lineItems, 
+                carRentalPrice,
             }
         })
     }
@@ -71,8 +77,27 @@ const Checkout = () => {
                                  <p>Total Person :  {totalCount}</p>
                                  </div>
 
-                                <div>
-                                    <h2 className='checkout_heading'>Room Details</h2>
+                                    <div>
+                                        <h2 className='checkout_heading'>Room Details</h2>
+                                        {selectedRooms.map((room, index) => (
+                                        <div className='row' key={index}>
+                                            <div className="col-lg-9">
+                                                <div className='checkout_data'>
+                                                    {room.room} : {room.count}
+                                                </div>
+                                            </div>
+                                            <div className="col-lg-3">
+                                                <div className='checkout_data'>
+                                                    {/* Price: */}
+                                                    {/* | Total Price: */}
+                                                    € {room.price}
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    ))}
+                                    </div>
+                                {/* <div>
                                     {roomtype.map((room, index) => (
                                         countsbed[index] > 0 && (
                                             <div className='row' key={index}>
@@ -81,9 +106,9 @@ const Checkout = () => {
                                                         {room.room} : {countsbed[index]}
                                                     </div>
                                                 </div>
-                                                <div className="col-lg-3">
+                                                <div className="col-lg-3"> */}
                                                     {/* | Room Price:  */}
-                                                    <div className='checkout_data'>
+                                                    {/* <div className='checkout_data'>
                                                         € {roomPrices[index]}
                                                     </div>
                                                 </div>
@@ -91,7 +116,7 @@ const Checkout = () => {
                                             </div>
                                         )
                                     ))}
-                                </div>
+                                </div> */}
 
                                 <div>
                                     <h2 className='checkout_heading'>Selected Levels</h2>

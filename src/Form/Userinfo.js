@@ -10,18 +10,22 @@ const Userinfo = () => {
         counts,
         // countsbed,
         // roomPrices,
-        // roomtype,
+        selectedRooms,
         // updatedTotalPrice,
         totalCount, // Total number of travelers
         levels,
         startDate,
         endDate,
         // actcounts,
-        // activityDetails // List of available activities
-        lineItems
+        activityDetails, // List of available activities
+        lineItems,
+        carRentalPrice,
     } = location.state;
 
     console.log("line itemssssssssss", lineItems)
+    console.log("roomtypeeeeeeeeeeeeeeeeeeeee", selectedRooms)
+    console.log("zoho_senttttttttttttttttttttttttttt", carRentalPrice)
+
 
     const [userDetails, setUserDetails] = useState({
         firstName: '',
@@ -195,6 +199,11 @@ const Userinfo = () => {
                 quantity: item.quantity,  // Use the quantity from lineItems
                 rate: item.rate,  // Use the rate from lineItems
             })),
+
+            activityDetails,
+            selectedRooms,
+            carRentalPrice,
+            totalCount,
         };
     
         try {
