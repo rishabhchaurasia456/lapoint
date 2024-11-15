@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
+// import Swal from 'sweetalert2';
+// import 'animate.css';
 import axios from 'axios';
 
 const Userinfo = () => {
@@ -214,6 +216,35 @@ const Userinfo = () => {
             console.error("Error sending data to Zoho:", error);
         }
     };
+
+
+
+    // after submit form jsx
+
+    
+    // const formRef = useRef(null);
+
+    // const handleSubmitforform = (e) => {
+    //     e.preventDefault();
+    
+    //     // Trigger SweetAlert popup and reset the form after alert is closed
+    //     Swal.fire({
+    //       title: "Reservation Submitted!",
+    //       text: "Thank you for making a reservation. We’ll get back to you shortly.",
+    //       icon: "success",
+    //       showClass: {
+    //         popup: "animate__animated animate__fadeInUp animate__faster"
+    //       },
+    //       hideClass: {
+    //         popup: "animate__animated animate__fadeOutDown animate__faster"
+    //       }
+    //     }).then(() => {
+    //       // Reset the form fields after the SweetAlert dialog closes
+    //       if (formRef.current) {
+    //         formRef.current.reset();
+    //       }
+    //     });
+    //   };
 
     const renderTravellerForms = () => {
         return travellers.map((traveller, index) => (
@@ -494,6 +525,8 @@ const Userinfo = () => {
                     <div className="col-lg-2"></div>
                 </div>
             </div>
+
+
         </div>
     );
 };

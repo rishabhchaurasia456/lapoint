@@ -21,6 +21,9 @@ import NewAffiliate from './Affiliate/NewAffiliate';
 import MyCreative from './Affiliate/MyCreative';
 import Formlayout from './Form/Formlayout';
 
+import Stories from './Pages/Stories/Stories';
+import School from './Pages/School/School';
+
 function App() {
 
   const [selectedLanguage, setSelectedLanguage] = useState('en');
@@ -51,6 +54,17 @@ function App() {
           <Route path='/contact' element={
             <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
               <Contactus selectedLanguage={selectedLanguage} />
+            </KiteLayout>
+          } />
+          <Route path='/School' element={
+            <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
+              <School selectedLanguage={selectedLanguage}/>
+            </KiteLayout>
+          } />
+
+          <Route path='/stories' element={
+            <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>         
+                  <Stories selectedLanguage={selectedLanguage} />
             </KiteLayout>
           } />
 

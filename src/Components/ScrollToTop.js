@@ -6,8 +6,8 @@ import { useLocation } from 'react-router-dom';
 const ScrollToTop = () => {
   const { pathname } = useLocation();
 
+  // Scroll to the top when the pathname changes
   useEffect(() => {
-    // Scroll to the top when the pathname changes
     window.scrollTo(0, 0);
   }, [pathname]);
 

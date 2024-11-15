@@ -196,13 +196,10 @@ const Datepicker = () => {
                   <span> {startDate.toLocaleDateString()} - </span>
                   <span> {endDate.toLocaleDateString()}</span>
                 </div>
-              )}
-
-              {/* Button to navigate to the final page */}
-              {/* <button  className=""></button> */}
+              )}        
 
               <div className='btn_container'>
-                <button className="level_btn mb-5 " onClick={handleNextPage}>
+                <button className="level_btn"  onClick={handleNextPage}>
                   Next
                 </button>
               </div>
