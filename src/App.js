@@ -44,6 +44,7 @@ import Boaz from './Pages/Kiteactiveteam/Teammembers/Boaz';
 import Basboode from './Pages/Kiteactiveteam/Teammembers/Basboode';
 import Emielrense from './Pages/Kiteactiveteam/Teammembers/Emielrense';
 import Jurretvan from './Pages/Kiteactiveteam/Teammembers/Jurretvan';
+import PageTracker from './Components/PageTracker';
 
 function App() {
 
@@ -53,6 +54,7 @@ function App() {
     <div>
       <BrowserRouter>
         <ScrollToTop />
+        <PageTracker>
         <Routes>
           <Route path='/' element={
             <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
@@ -326,6 +328,7 @@ function App() {
             </Aff_Layout>
           } />
         </Routes>
+        </PageTracker>
       </BrowserRouter>
     </div>
   );

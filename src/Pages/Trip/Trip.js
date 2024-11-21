@@ -10,7 +10,7 @@ import Activites from './TripComponent/Activites';
 import Overview from './TripComponent/Overview';
 import trips from './Tripdata';
 import './TripComponent/Trips.css'
-import { Link, useParams } from 'react-router-dom';
+import { Link, useLocation, useParams } from 'react-router-dom';
 import Booking from '../Kitecamps/Booking';
 import Surfcampslider from '../../Components/Surfcampslider/Surfcampslider';
 
@@ -68,6 +68,47 @@ const Trip = ({ selectedLanguage }) => {
     const togglePopupimg = () => {
         setShowimgPopup(!showimgpopup);
     };
+
+    // ----------------------------------------
+
+    const location = useLocation();
+
+    useEffect(() => {
+        const params = new URLSearchParams(location.search);
+        const userId = params.get('id');
+
+        // Check if the userId is present in the URL
+        if (userId) {
+            // Store the userId in localStorage so it's persisted across page visits
+            localStorage.setItem('userId', userId);
+            trackVisit(userId, window.location.pathname);
+        } else {
+            // If userId is not in the URL, get it from localStorage
+            const storedUserId = localStorage.getItem('userId');
+            if (storedUserId) {
+                trackVisit(storedUserId, window.location.pathname);
+            }
+        }
+    }, [location]);
+
+    // Function to send visit data to the backend
+    const trackVisit = (userId, page) => {
+        fetch('http://localhost:5500/track', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ id: userId, page: page })
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log("Visit tracked:", data);
+        })
+        .catch(error => {
+            console.error("Error tracking visit:", error);
+        });
+    };
+    // ----------------------------------------
 
 
     return (
