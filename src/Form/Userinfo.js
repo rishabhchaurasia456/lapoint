@@ -186,7 +186,7 @@ const Userinfo = () => {
         }
       };
       
-    const handleSubmit = async (e) => {
+    const handleSubmitforform = async (e) => {
         e.preventDefault();
         
         const customerData = {
@@ -522,7 +522,7 @@ const Userinfo = () => {
                     <div className="col-lg-2"></div>
                     <div className="col-lg-8">
                         <div className='btn_container mb-5'>
-                            <button className="level_btn " onClick={handleSubmit}>
+                            <button className="level_btn " onClick={handleSubmitforform}>
                                 Make Reservation
                             </button>
                         </div>
@@ -530,6 +530,8 @@ const Userinfo = () => {
                     <div className="col-lg-2"></div>
                 </div>
             </div>
+
+
 
 
         </div>
