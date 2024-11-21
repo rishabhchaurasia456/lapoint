@@ -186,7 +186,7 @@ const Userinfo = () => {
         }
       };
       
-    const handleSubmitforform = async (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         
         const customerData = {
