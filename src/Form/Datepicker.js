@@ -8,7 +8,7 @@ import './DatePickerStyles.css'; // Import your custom CSS
 const Datepicker = () => {
   const location = useLocation();
   const navigate = useNavigate(); // To navigate to the final page
-  const { selectedDuration, counts, totalPrice, totalCount, levels, carRentalSelections, carRentalPrice } = location.state;
+  const { selectedDuration, counts, totalPrice, totalCount, levels, carRentalSelections, carRentalPrice, lineItems } = location.state;
 
   const [startDate, setStartDate] = useState(null);
   const [endDate, setEndDate] = useState(null);
@@ -112,12 +112,15 @@ const Datepicker = () => {
           endDate,
           carRentalSelections,
           carRentalPrice, 
+          lineItems
         },
       });
     } else {
       alert('Please select a valid date.');
     }
   };
+
+  console.log("iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiirrrrrrrrrrrrrr", totalPrice)
 
   // Add a custom CSS class to start dates for highlighting (available/unavailable)
   const highlightStartDate = (date) => {

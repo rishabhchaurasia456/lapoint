@@ -1,10 +1,9 @@
-import React, { useState, useRef } from 'react';
-import { useLocation } from 'react-router-dom';
-import Swal from 'sweetalert2';
-import 'animate.css';
+import React, { useState } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import axios from 'axios';
 
 const Userinfo = () => {
+    const navigate = useNavigate();
     const location = useLocation();
 
     const {
@@ -12,15 +11,22 @@ const Userinfo = () => {
         counts,
         // countsbed,
         // roomPrices,
-        // roomtype,
+        selectedRooms,
         // updatedTotalPrice,
-        totalCount, // Total number of travelers
+        totalCount, 
         levels,
         startDate,
         endDate,
         // actcounts,
-        // activityDetails // List of available activities
+        activityDetails, // List of available activities
+        lineItems,
+        carRentalPrice,
     } = location.state;
+
+    console.log("line itemssssssssss", lineItems)
+    console.log("roomtypeeeeeeeeeeeeeeeeeeeee", selectedRooms)
+    console.log("zoho_senttttttttttttttttttttttttttt", carRentalPrice)
+
 
     const [userDetails, setUserDetails] = useState({
         firstName: '',
@@ -168,6 +174,12 @@ const Userinfo = () => {
           // Send the data to the backend
           const gresponse = await axios.post("https://backend-kiteactive.onrender.com/api/user/send-to-sheet", data);
           console.log("Data sent to sheet successfully", gresponse.data);
+
+          if (gresponse.status === 200) {
+            console.log('Listing added successfully:', gresponse.data);
+            navigate('/thankyou');
+          }
+
         } catch (error) {
           // Log any errors for debugging
           console.error("Error sending data to sheet:", error.response?.data || error.message);
@@ -187,7 +199,18 @@ const Userinfo = () => {
                     email: userDetails.email,
                     phone: userDetails.phone
                 }
-            ]
+            ],
+            
+            line_items: lineItems.map(item => ({
+                item_id: item.item_id, // Use the item ID from lineItems
+                quantity: item.quantity,  // Use the quantity from lineItems
+                rate: item.rate,  // Use the rate from lineItems
+            })),
+
+            activityDetails,
+            selectedRooms,
+            carRentalPrice,
+            totalCount,
         };
     
         try {
@@ -204,29 +227,29 @@ const Userinfo = () => {
     // after submit form jsx
 
     
-    const formRef = useRef(null);
+    // const formRef = useRef(null);
 
-    const handleSubmitforform = (e) => {
-        e.preventDefault();
+    // const handleSubmitforform = (e) => {
+    //     e.preventDefault();
     
-        // Trigger SweetAlert popup and reset the form after alert is closed
-        Swal.fire({
-          title: "Reservation Submitted!",
-          text: "Thank you for making a reservation. We’ll get back to you shortly.",
-          icon: "success",
-          showClass: {
-            popup: "animate__animated animate__fadeInUp animate__faster"
-          },
-          hideClass: {
-            popup: "animate__animated animate__fadeOutDown animate__faster"
-          }
-        }).then(() => {
-          // Reset the form fields after the SweetAlert dialog closes
-          if (formRef.current) {
-            formRef.current.reset();
-          }
-        });
-      };
+    //     // Trigger SweetAlert popup and reset the form after alert is closed
+    //     Swal.fire({
+    //       title: "Reservation Submitted!",
+    //       text: "Thank you for making a reservation. We’ll get back to you shortly.",
+    //       icon: "success",
+    //       showClass: {
+    //         popup: "animate__animated animate__fadeInUp animate__faster"
+    //       },
+    //       hideClass: {
+    //         popup: "animate__animated animate__fadeOutDown animate__faster"
+    //       }
+    //     }).then(() => {
+    //       // Reset the form fields after the SweetAlert dialog closes
+    //       if (formRef.current) {
+    //         formRef.current.reset();
+    //       }
+    //     });
+    //   };
 
     const renderTravellerForms = () => {
         return travellers.map((traveller, index) => (
@@ -499,7 +522,7 @@ const Userinfo = () => {
                     <div className="col-lg-2"></div>
                     <div className="col-lg-8">
                         <div className='btn_container mb-5'>
-                            <button className="level_btn " onClick={handleSubmitforform}>
+                            <button className="level_btn " onClick={handleSubmit}>
                                 Make Reservation
                             </button>
                         </div>

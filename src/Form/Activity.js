@@ -1,13 +1,191 @@
+// import React, { useState } from 'react';
+// import { useLocation, useNavigate } from 'react-router-dom';
+
+// const Activity = () => {
+//   const location = useLocation();
+//   const navigate = useNavigate(); // Hook to navigate to other pages
+
+//   const { selectedDuration, counts, countsbed, selectedRooms, updatedTotalPrice, totalCount, levels, startDate, endDate, carRentalPrice, carRentalSelections, lineItems } = location.state;
+
+//   const [actcounts, setactCounts] = useState([0, 0, 0, 0, 0]);
+
+//   const recc_activity = [
+//     { level: 'Longsleeve lycra', price: 45, link: '#' },
+//     { level: 'Kitesurf sunglasses', price: 50, link: '#' },
+//     { level: 'Kite shoes', price: 35, link: '#' },
+//     { level: 'Gear rental', price: 450, link: '#' },
+//     { level: 'Boardbag', price: 200, link: '#' },
+//     { activity: 'Longsleeve lycra', price: 45, link: '#' },
+//     { activity: 'Kitesurf sunglasses', price: 50, link: '#' },
+//     { activity: 'Kite shoes', price: 35, link: '#' },
+//     { activity: 'Gear rental', price: 450, link: '#' },
+//     { activity: 'Boardbag', price: 200, link: '#' },
+//   ];
+
+//   // Increment count for a specific level
+//   const increment = (index) => {
+//     setactCounts((prevCounts) => {
+//       const newCounts = [...prevCounts];
+//       if (newCounts[index] < totalCount) {
+//         newCounts[index] += 1;
+//       }
+//       return newCounts;
+//     });
+//   };
+
+//   // Decrement count for a specific level
+//   const decrement = (index) => {
+//     setactCounts((prevCounts) => {
+//       const newCounts = [...prevCounts];
+//       if (newCounts[index] > 0) newCounts[index] -= 1;
+//       return newCounts;
+//     });
+//   };
+
+
+//   const calculateTotalActivityPrice = () => {
+//     return recc_activity.reduce((total, item, index) => {
+//       return total + actcounts[index] * item.price;
+//     }, 0);
+//   };
+//   // Handler to navigate to the checkout page
+//   const handleCheckout = () => {
+//     const totalActivityPrice = calculateTotalActivityPrice();
+//     const finalTotalPrice = updatedTotalPrice + totalActivityPrice;
+
+//     const activityDetails = recc_activity.map((item, index) => ({
+//       name: item.level,
+//       count: actcounts[index],
+//       price: actcounts[index] * item.price,
+//     })).filter(activity => activity.count > 0);
+
+//     navigate('/checkout', {
+//       state: {
+//         selectedDuration,
+//         counts,
+//         countsbed,
+//         // roomPrices,
+//         // roomtype,
+//         // updatedTotalPrice,
+//         selectedRooms, // Pass the filtered selected rooms
+//         updatedTotalPrice: finalTotalPrice,
+//         totalCount,
+//         levels,
+//         startDate,
+//         endDate,
+//         actcounts, // Pass the activity counts as well
+//         activityDetails,
+//         carRentalSelections,
+//         carRentalPrice,
+//         lineItems
+//       },
+//     });
+//   };
+
+//   return (
+//     <div className="container-fluid level_container pb-5 ">
+//       <div className="row">
+//         <div className="col-lg-2"></div>
+//         <div className="col-lg-8">
+//           <div className="container">
+//             <div className="row">
+//               <div className="col text-center">
+//                 <div className='person_week'>
+//                   {startDate && endDate && (
+//                     <div>
+//                       <span> {startDate.toLocaleDateString()} - </span>
+//                       <span> {endDate.toLocaleDateString()}</span>
+//                     </div>
+//                   )}
+//                   <p>
+//                     <span>{totalCount} Person, {selectedDuration}, </span>
+
+//                     {/* Show details for each level where count is > 0 */}
+//                     {levels.map((item, index) => (
+//                       counts[index] > 0 && (
+//                         <span key={index}>
+//                           <span>
+//                             <b>{item.level}, </b>
+//                             {/* | Count: {counts[index]} | Price: € {counts[index] * item.price} */}
+//                           </span>
+//                         </span>
+//                       )
+//                     ))}
+//                   </p>
+
+//                   {/* <h3><b>Updated Total Price:</b> € {updatedTotalPrice}</h3> */}
+//                 </div>
+//               </div>
+//             </div>
+//           </div>
+
+//           <div className="container-fluid">
+//             {recc_activity.map((item, index) => (
+//               <div className="row form_crd_row mt-4" key={index}>
+
+//                 <div className="col-lg-9">
+//                   <div className='level_crd_text'>
+//                     <p className='level_crd_para'>
+//                       <span>
+//                         <b>{item.level}</b>
+//                       </span>{' '}
+//                       | <span>From € {item.price}</span>
+//                     </p>
+//                   </div>
+//                 </div>
+//                 <div className="col-md-3">
+//                   <i className="fa fa-minus-circle P_M_icon " onClick={(e) => { e.preventDefault(); decrement(index); }}></i>
+//                   <span>{actcounts[index]}</span>
+//                   <i className="fa fa-plus-circle P_M_icon" onClick={(e) => { e.preventDefault(); increment(index); }} ></i>
+//                 </div>
+//               </div>
+//             ))}
+//           </div>
+
+
+
+
+//           <div className='btn_container'>
+//             <button className="level_btn " onClick={handleCheckout}>
+//               Proceed to Checkout
+//             </button>
+//           </div>
+
+//         </div>
+//         <div className="col-lg-2"></div>
+
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Activity;
+
+
+
+
+
 import React, { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 const Activity = () => {
   const location = useLocation();
-  const navigate = useNavigate(); // Hook to navigate to other pages
+  const navigate = useNavigate();
 
-  const { selectedDuration, counts, countsbed, roomPrices, roomtype, updatedTotalPrice, totalCount, levels, startDate, endDate, carRentalPrice, carRentalSelections, } = location.state;
-
-  const [actcounts, setactCounts] = useState([0, 0, 0, 0, 0]);
+  const {
+    levels,
+    selectedDuration,
+    counts,
+    countsbed,
+    selectedRooms,
+    updatedTotalPrice,
+    totalCount,
+    startDate,
+    endDate,
+    carRentalPrice,
+    carRentalSelections,
+    lineItems,
+  } = location.state;
 
   const recc_activity = [
     { level: 'Longsleeve lycra', price: 45, link: '#' },
@@ -15,11 +193,28 @@ const Activity = () => {
     { level: 'Kite shoes', price: 35, link: '#' },
     { level: 'Gear rental', price: 450, link: '#' },
     { level: 'Boardbag', price: 200, link: '#' },
+    { activity: 'Longsleeve lycra', price: 45, link: '#' },
+    { activity: 'Kitesurf sunglasses', price: 50, link: '#' },
+    { activity: 'Kite shoes', price: 35, link: '#' },
+    { activity: 'Gear rental', price: 450, link: '#' },
+    { activity: 'Boardbag', price: 200, link: '#' },
   ];
 
-  // Increment count for a specific level
-  const increment = (index) => {
-    setactCounts((prevCounts) => {
+  // Filter data into recommended and add-on activities
+  const recommendedActivities = recc_activity.filter((item) => item.level);
+  const addOnActivities = recc_activity.filter((item) => item.activity);
+
+  // Separate state for each category
+  const [recommendedCounts, setRecommendedCounts] = useState(
+    Array(recommendedActivities.length).fill(0)
+  );
+  const [addOnCounts, setAddOnCounts] = useState(
+    Array(addOnActivities.length).fill(0)
+  );
+
+  // Increment/Decrement functions for Recommended Activities
+  const incrementRecommended = (index) => {
+    setRecommendedCounts((prevCounts) => {
       const newCounts = [...prevCounts];
       if (newCounts[index] < totalCount) {
         newCounts[index] += 1;
@@ -28,125 +223,177 @@ const Activity = () => {
     });
   };
 
-  // Decrement count for a specific level
-  const decrement = (index) => {
-    setactCounts((prevCounts) => {
+  const decrementRecommended = (index) => {
+    setRecommendedCounts((prevCounts) => {
       const newCounts = [...prevCounts];
       if (newCounts[index] > 0) newCounts[index] -= 1;
       return newCounts;
     });
   };
 
-
-  const calculateTotalActivityPrice = () => {
-    return recc_activity.reduce((total, item, index) => {
-      return total + actcounts[index] * item.price;
-    }, 0);
+  // Increment/Decrement functions for Add-On Activities
+  const incrementAddOn = (index) => {
+    setAddOnCounts((prevCounts) => {
+      const newCounts = [...prevCounts];
+      if (newCounts[index] < totalCount) {
+        newCounts[index] += 1;
+      }
+      return newCounts;
+    });
   };
-  // Handler to navigate to the checkout page
+
+  const decrementAddOn = (index) => {
+    setAddOnCounts((prevCounts) => {
+      const newCounts = [...prevCounts];
+      if (newCounts[index] > 0) newCounts[index] -= 1;
+      return newCounts;
+    });
+  };
+
+  // Calculate total price
+  const calculateTotalActivityPrice = () => {
+    const recommendedPrice = recommendedActivities.reduce(
+      (total, item, index) => total + recommendedCounts[index] * item.price,
+      0
+    );
+    const addOnPrice = addOnActivities.reduce(
+      (total, item, index) => total + addOnCounts[index] * item.price,
+      0
+    );
+    return recommendedPrice + addOnPrice;
+  };
+
   const handleCheckout = () => {
     const totalActivityPrice = calculateTotalActivityPrice();
     const finalTotalPrice = updatedTotalPrice + totalActivityPrice;
 
-    const activityDetails = recc_activity.map((item, index) => ({
-      name: item.level,
-      count: actcounts[index],
-      price: actcounts[index] * item.price,
-    })).filter(activity => activity.count > 0);
+    const activityDetails = [
+      ...recommendedActivities.map((item, index) => ({
+        name: item.level,
+        count: recommendedCounts[index],
+        price: recommendedCounts[index] * item.price,
+      })),
+      ...addOnActivities.map((item, index) => ({
+        name: item.activity,
+        count: addOnCounts[index],
+        price: addOnCounts[index] * item.price,
+      })),
+    ].filter((activity) => activity.count > 0);
 
     navigate('/checkout', {
       state: {
         selectedDuration,
         counts,
         countsbed,
-        roomPrices,
-        roomtype,
-        // updatedTotalPrice,
+        selectedRooms,
         updatedTotalPrice: finalTotalPrice,
         totalCount,
-        levels,
         startDate,
         endDate,
-        actcounts, // Pass the activity counts as well
+        recommendedCounts,
+        addOnCounts,
         activityDetails,
         carRentalSelections,
         carRentalPrice,
+        lineItems,
+        levels,
       },
     });
   };
 
   return (
-    <div className="container-fluid level_container pb-5 ">
+    <div className="container-fluid level_container pb-5">
       <div className="row">
         <div className="col-lg-2"></div>
         <div className="col-lg-8">
           <div className="container">
             <div className="row">
               <div className="col text-center">
-                <div className='person_week'>
+                <div className="person_week">
                   {startDate && endDate && (
                     <div>
-                      <span> {startDate.toLocaleDateString()} - </span>
-                      <span> {endDate.toLocaleDateString()}</span>
+                      <span> {new Date(startDate).toLocaleDateString()} - </span>
+                      <span> {new Date(endDate).toLocaleDateString()}</span>
                     </div>
                   )}
                   <p>
-                    <span>{totalCount} Person, {selectedDuration}, </span>
-
-                    {/* Show details for each level where count is > 0 */}
+                    <span>
+                      {totalCount} Person, {selectedDuration},{' '}
+                    </span>
                     {levels.map((item, index) => (
-                      counts[index] > 0 && (
-                        <span key={index}>
-                          <span>
-                            <b>{item.level}, </b>
-                            {/* | Count: {counts[index]} | Price: € {counts[index] * item.price} */}
-                          </span>
-                        </span>
-                      )
-                    ))}
+                          counts[index] > 0 && (
+                            <span key={index}>
+                              <span>
+                                <b>{item.level}, </b>
+                                {/* | Count: {counts[index]} | Price: € {counts[index] * item.price} */}
+                              </span>
+                            </span>
+                          )
+                        ))}
                   </p>
-
-                  {/* <h3><b>Updated Total Price:</b> € {updatedTotalPrice}</h3> */}
                 </div>
               </div>
             </div>
           </div>
-
+          <h3 className='text-light'>Recommended Activities</h3>
           <div className="container-fluid">
-            {recc_activity.map((item, index) => (
+            {recommendedActivities.map((item, index) => (
               <div className="row form_crd_row mt-4" key={index}>
-
                 <div className="col-lg-9">
-                  <div className='level_crd_text'>
-                    <p className='level_crd_para'>
-                      <span>
-                        <b>{item.level}</b>
-                      </span>{' '}
-                      | <span>From € {item.price}</span>
+                  <div className="level_crd_text">
+                    <p>
+                      <b>{item.level}</b> | From €{item.price}
                     </p>
                   </div>
                 </div>
                 <div className="col-md-3">
-                  <i className="fa fa-minus-circle P_M_icon " onClick={(e) => { e.preventDefault(); decrement(index); }}></i>
-                  <span>{actcounts[index]}</span>
-                  <i className="fa fa-plus-circle P_M_icon" onClick={(e) => { e.preventDefault(); increment(index); }} ></i>
+                  <i
+                    className="fa fa-minus-circle P_M_icon"
+                    onClick={() => decrementRecommended(index)}
+                  ></i>
+                  <span>{recommendedCounts[index]}</span>
+                  <i
+                    className="fa fa-plus-circle P_M_icon"
+                    onClick={() => incrementRecommended(index)}
+                  ></i>
                 </div>
               </div>
             ))}
           </div>
 
-         
+          <h3 className='text-light'>Add-On Activities</h3>
+          <div className="container-fluid">
+            {addOnActivities.map((item, index) => (
+              <div className="row form_crd_row mt-4" key={index}>
+                <div className="col-lg-9">
+                  <div className="level_crd_text">
+                    <p>
+                      <b>{item.activity}</b> | From €{item.price}
+                    </p>
+                  </div>
+                </div>
+                <div className="col-md-3">
+                  <i
+                    className="fa fa-minus-circle P_M_icon"
+                    onClick={() => decrementAddOn(index)}
+                  ></i>
+                  <span>{addOnCounts[index]}</span>
+                  <i
+                    className="fa fa-plus-circle P_M_icon"
+                    onClick={() => incrementAddOn(index)}
+                  ></i>
+                </div>
+              </div>
+            ))}
+          </div>
 
-
-          <div className='btn_container'>
-            <button className="level_btn " onClick={handleCheckout}>
+          <div className="btn_container">
+            <button className="level_btn" onClick={handleCheckout}>
               Proceed to Checkout
             </button>
           </div>
-
         </div>
         <div className="col-lg-2"></div>
-
       </div>
     </div>
   );
