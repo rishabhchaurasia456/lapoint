@@ -16,6 +16,23 @@ import Surfcampslider from '../../Components/Surfcampslider/Surfcampslider';
 
 import checkicon from '../../Images/check-mark.png'
 
+
+// see all images here 
+
+
+import popimg1 from '../../Images/popupimg.png'
+import popimg3 from '../../Images/popupimg13.png'
+import popimg4 from '../../Images/popupimg3.png'
+import popimg5 from '../../Images/popupimg4.png'
+import popimg6 from '../../Images/popupimg5.png'
+import popimg7 from '../../Images/popupimg6.png'
+import popimg8 from '../../Images/popupimg7.png'
+import popimg9 from '../../Images/popupimg8.png'
+import popimg10 from '../../Images/popupimg9.png'
+import popimg11 from '../../Images/popupimg10.png'
+import popimg12 from '../../Images/popupimg11.png'
+import popimg13 from '../../Images/popupimg12.png'
+
 const Trip = ({ selectedLanguage }) => {
     const { trip_name } = useParams();
     const trip = trips.find(t => t.name.toLowerCase() === trip_name.toLowerCase());
@@ -34,13 +51,22 @@ const Trip = ({ selectedLanguage }) => {
 
 
 
-    // popup code here 
-
+    // text popup code here 
     const [showPopup, setShowPopup] = useState(false);
 
     // Function to toggle popup visibility
     const togglePopup = () => {
         setShowPopup(!showPopup);
+    };
+
+
+
+    // See all images popup 
+    const [showimgpopup, setShowimgPopup] = useState(false);
+
+    // Function to toggle popup visibility
+    const togglePopupimg = () => {
+        setShowimgPopup(!showimgpopup);
     };
 
 
@@ -165,6 +191,47 @@ const Trip = ({ selectedLanguage }) => {
                 <div>
 
 
+
+
+
+                    {/* See all photo section  */}
+
+
+                    <div>
+                        {/* Link to trigger popup */}
+                        <Link className="nav-link" onClick={togglePopupimg}>
+                            <p className="text-danger fw-bold m-3 fs-5 text-center">SEE ALL PHOTOS & VIDEOS</p>
+                        </Link>
+
+                        {/* Popup Component */}
+                        {showimgpopup && (
+                            <div className="popup-overlay scroll-1" onClick={togglePopupimg}>
+                                <div className="popup-content" onClick={(e) => e.stopPropagation()}>
+                                    <i className="fa fa-close  popupclose" onClick={togglePopupimg}></i>
+                                    {/* <h2>Shop Popup</h2> */}
+                                    <div className="popimgs_div">
+                                        <img src={popimg1} alt="" className='popimg' />
+                                        <img src={popimg3} alt="" className='popimg' />
+                                        <img src={popimg4} alt="" className='popimg' />
+                                        <img src={popimg5} alt="" className='popimg' />
+                                        <img src={popimg6} alt="" className='popimg' />
+                                        <img src={popimg7} alt="" className='popimg' />
+                                        <img src={popimg8} alt="" className='popimg' />
+                                        <img src={popimg9} alt="" className='popimg' />
+                                        <img src={popimg10} alt="" className='popimg' />
+                                        <img src={popimg11} alt="" className='popimg' />
+                                        <img src={popimg12} alt="" className='popimg' />
+                                        <img src={popimg13} alt="" className='popimg' />
+                                    </div>
+                                </div>
+                            </div>
+                        )}
+                    </div>
+
+
+
+
+
                     {/* Free rebooking Strip container  with popup  */}
 
                     <div className="container-fluid m-0 p-0">
@@ -183,16 +250,24 @@ const Trip = ({ selectedLanguage }) => {
                             </div>
                         </div>
 
+                        {showPopup && <div className="Strip_overlay" />}
+
                         {/* Popup Component */}
                         {showPopup && (
-                            <div className="bottom-popup m-auto">
-                                <div className="strip_popup_content">
-                                    <i className='fa fa-close clsbtn' onClick={togglePopup}></i>
-                                    <h5 className='popup_head'>Free rebooking up to 14 days prior to arrival</h5>
-                                    <p className='popup_content'>Kiteactive for Veventures provides an exceptional experience for adventure seekers and kitesurfing enthusiasts, with the flexibility to plan confidently. Book your stay more than three weeks in advance and enjoy a 14-day window to rebook or cancel without fees. For last-minute plans, bookings made within three weeks come with a 72-hour adjustment period. Cancelations up to 35 days prior receive 75% of your payment back. We also offer a free rebooking or gift card option up to 14 days before arrival, ensuring peace of mind as you prepare to experience world-class kitesurfing and explore breathtaking destinations. Add optional cancellation insurance for extra reassurance.
+                            <div className="container">
+                                <div className="row">
+                                    <div className="col">
+                                        <div className="bottom-popup m-auto">
+                                            <div className="strip_popup_content">
+                                                <i className='fa fa-close clsbtn' onClick={togglePopup}></i>
+                                                <h5 className='popup_head'>Free rebooking up to 14 days prior to arrival</h5>
+                                                <p className='popup_content'>Kiteactive for Veventures provides an exceptional experience for adventure seekers and kitesurfing enthusiasts, with the flexibility to plan confidently. Book your stay more than three weeks in advance and enjoy a 14-day window to rebook or cancel without fees. For last-minute plans, bookings made within three weeks come with a 72-hour adjustment period. Cancelations up to 35 days prior receive 75% of your payment back. We also offer a free rebooking or gift card option up to 14 days before arrival, ensuring peace of mind as you prepare to experience world-class kitesurfing and explore breathtaking destinations. Add optional cancellation insurance for extra reassurance.
 
-                                    </p>
-                                    {/* <button onClick={togglePopup} className="btn btn-danger">Close</button> */}
+                                                </p>
+                                                {/* <button onClick={togglePopup} className="btn btn-danger">Close</button> */}
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         )}

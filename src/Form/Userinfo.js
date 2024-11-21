@@ -522,7 +522,7 @@ const Userinfo = () => {
                     <div className="col-lg-2"></div>
                     <div className="col-lg-8">
                         <div className='btn_container mb-5'>
-                            <button className="level_btn " onClick={handleSubmitforform}>
+                            <button className="level_btn " onClick={handleSubmit}>
                                 Make Reservation
                             </button>
                         </div>

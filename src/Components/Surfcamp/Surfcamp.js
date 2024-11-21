@@ -1,4 +1,4 @@
-import React , {useState} from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 import img1 from '../../Images/img1.webp'
@@ -6,14 +6,15 @@ import img2 from '../../Images/img2.webp'
 import img3 from '../../Images/img3.webp'
 import img4 from '../../Images/img4.webp'
 
-import popimg1 from '../../Images/popimg1.png'
-import popimg2 from '../../Images/popimg2.png'
-import popimg3 from '../../Images/popimg3.png'
-import popimg4 from '../../Images/popimg4.png'
-import popimg5 from '../../Images/popimg5.png'
-import popimg6 from '../../Images/popimg6.png'
-import popimg7 from '../../Images/popimg7.png'
-import popimg8 from '../../Images/popimg1.png'
+
+import popimg1 from '../../Images/popupimg1.png'
+import popimg2 from '../../Images/popupimg9.png'
+import popimg3 from '../../Images/popupimg3.png'
+import popimg4 from '../../Images/popupimg4.png'
+import popimg5 from '../../Images/popupimg5.png'
+import popimg6 from '../../Images/popupimg6.png'
+import popimg7 from '../../Images/popupimg7.png'
+import popimg8 from '../../Images/popupimg8.png'
 
 const Surfcamp = ({ selectedLanguage }) => {
 
@@ -35,8 +36,6 @@ const Surfcamp = ({ selectedLanguage }) => {
     }
   };
 
-
-
   const [showPopup, setShowPopup] = useState(false);
 
   // Function to toggle popup visibility
@@ -56,7 +55,6 @@ const Surfcamp = ({ selectedLanguage }) => {
             </p>
           </div>
         </div>
-
       </div>
 
       {/* ----------------------------------------------- */}
@@ -97,9 +95,9 @@ const Surfcamp = ({ selectedLanguage }) => {
           </div>
         </div>
 
-  
 
-         {/* POP up Container  */}
+
+        {/*  See all photo section POP up Container  */}
         <div>
           {/* Link to trigger popup */}
           <Link className="nav-link" onClick={togglePopup}>
@@ -108,20 +106,20 @@ const Surfcamp = ({ selectedLanguage }) => {
 
           {/* Popup Component */}
           {showPopup && (
-            <div className="popup-overlay" onClick={togglePopup}>
+            <div className="popup-overlay scroll-1" onClick={togglePopup}>
               <div className="popup-content" onClick={(e) => e.stopPropagation()}>
-                <i className="fa fa-close fs-5 popupclose" onClick={togglePopup}></i>
+                <i className="fa fa-close  popupclose" onClick={togglePopup}></i>
                 {/* <h2>Shop Popup</h2> */}
-               <div className="popimgs_div">
-               <img src={popimg1} alt="" className='popimg'/>
-                <img src={popimg2} alt="" className='popimg'/>
-                <img src={popimg3} alt="" className='popimg'/>
-                <img src={popimg4} alt="" className='popimg'/>
-                <img src={popimg5} alt="" className='popimg'/>
-                <img src={popimg6} alt="" className='popimg'/>
-                <img src={popimg7} alt="" className='popimg'/>
-                <img src={popimg8} alt="" className='popimg'/>
-               </div>
+                <div className="popimgs_div">
+                  <img src={popimg1} alt="" className='popimg' />
+                  <img src={popimg2} alt="" className='popimg' />
+                  <img src={popimg3} alt="" className='popimg' />
+                  <img src={popimg4} alt="" className='popimg' />
+                  <img src={popimg5} alt="" className='popimg' />
+                  <img src={popimg6} alt="" className='popimg' />
+                  <img src={popimg7} alt="" className='popimg' />
+                  <img src={popimg8} alt="" className='popimg' />
+                </div>
               </div>
             </div>
           )}
@@ -129,10 +127,7 @@ const Surfcamp = ({ selectedLanguage }) => {
 
 
 
-
       </div>
-
-
       {/* photo container end  */}
 
 

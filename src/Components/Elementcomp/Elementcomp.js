@@ -17,7 +17,7 @@ const content = [
 ];
 
 
-const Elementcomp = ({selectedLanguage}) => {
+const Elementcomp = ({ selectedLanguage }) => {
     return (
         <div>
             <div className="container-fluid mt-5 pt-5">
@@ -36,11 +36,15 @@ const Elementcomp = ({selectedLanguage}) => {
                             </p>
                         </div>
                     </div>
-                        {/* <!-- Content for the third column --> */}
+                    {/* <!-- Content for the third column --> */}
                     <div className="col-12 col-md-3">
-                    <button className='element_btn text-center'>
-                        digg inn!
-                    </button>
+                        <button
+                            className="element_btn text-center"
+                            onClick={() => window.location.href = 'https://justdiggit.org/'}
+                        >
+                            digg inn!
+                        </button>
+
                     </div>
                 </div>
             </div>

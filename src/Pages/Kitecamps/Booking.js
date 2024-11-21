@@ -14,12 +14,12 @@ const Booking = ({ tripName }) => {
                 <div className="row ">
                     {/* Logo and Trip Name */}
                     <div className="col-lg-6">
-                      <div className="d-flex ">
-                      <img src={logo} alt="" className="booking_logo" />
-                        <span className="show_trip_name">
-                            {tripName}
-                        </span>
-                      </div>
+                        <div className="d-flex ">
+                            <img src={logo} alt="" className="booking_logo" />
+                            <span className="show_trip_name">
+                                {tripName}
+                            </span>
+                        </div>
                     </div>
 
                     {/* Booking button and Pricing */}
@@ -40,10 +40,12 @@ const Booking = ({ tripName }) => {
                                 </NavLink>
                             </span>
 
-                            {/* WhatsApp Icon */}
                             <span className="mx-2">
-                                <i className="fa fa-whatsapp fs-3 text-warning"></i>
+                                <a href="https://wa.me/31850091325?text=Hello" className="ms-2 text-decoration-none text-warning fw-bold" title="Call us on WhatsApp">
+                                    <i className="fa fa-whatsapp fs-3 text-warning"></i>
+                                </a>
                             </span>
+
                         </div>
                     </div>
                 </div>

@@ -1260,7 +1260,7 @@ const trips = [
         vedio: Zanzibar_vedio,
         backcover: zanzibarcover,
         alltabs: {
-            highlight: [
+            highlight:[
                 {
                     text: {
                         en: "Stay at our beachside KiteActive hotel, just steps from the best kitespots.The perfect beginner spot with huge lagoon and shallow water",
