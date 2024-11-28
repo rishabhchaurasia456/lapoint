@@ -44,6 +44,7 @@ import Boaz from './Pages/Kiteactiveteam/Teammembers/Boaz';
 import Basboode from './Pages/Kiteactiveteam/Teammembers/Basboode';
 import Emielrense from './Pages/Kiteactiveteam/Teammembers/Emielrense';
 import Jurretvan from './Pages/Kiteactiveteam/Teammembers/Jurretvan';
+import Cookiepolicy from './Pages/Cookiepolicy/Cookiepolicy';
 
 function App() {
 
@@ -54,6 +55,9 @@ function App() {
       <BrowserRouter>
         <ScrollToTop />
         <Routes>
+
+          {/* --------------------Nav bar pages-----------------------  */}
+
           <Route path='/' element={
             <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
               <Home selectedLanguage={selectedLanguage} />
@@ -90,7 +94,7 @@ function App() {
           } />
 
 
-          {/* stories inner pages ------------------------------------ */}
+          {/* ---------------------stories inner pages ------------------------------------ */}
 
           <Route path='/den-tv-tas' element={
             <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
@@ -123,12 +127,8 @@ function App() {
             </KiteLayout>
           } />
 
+          {/* ------------------kite camp  all pages routes here ---------------- */}
 
-
-
-
-
-          {/* kite camp  all pages routes here  */}
           <Route path='/kitecamp' element={
             <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
               <Kitecamp />
@@ -144,7 +144,7 @@ function App() {
 
 
           {/* ---------------------------------------- */}
-          {/* footer pages links here */}
+          {/* footer pages links pages  here */}
           {/* ---------------------------------------- */}
 
           <Route path='/Discover_Kiteactive' element={
@@ -192,7 +192,6 @@ function App() {
               <Aj />
             </KiteLayout>
           }>
-
           </Route>
           <Route path='/Arnaud_Plas' element={
             <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
@@ -259,6 +258,13 @@ function App() {
           <Route path='/Term_Condition' element={
             <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
               <Termcondition />
+            </KiteLayout>
+          }>
+          </Route>
+
+          <Route path='/Cookie_policy' element={
+            <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
+              <Cookiepolicy />
             </KiteLayout>
           }>
           </Route>

@@ -188,3 +188,24 @@
   }
 
 }
+
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 1024px) and (min-width: 500px) {
+  .date_visible_span {
+    margin: 2px !important
+  }
+
+  .custom-datepicker::before {
+    display: none;
+  }
+
+  .react-datepicker {
+    /* max-width: 100% !important; */
+    width: 55.5%;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+

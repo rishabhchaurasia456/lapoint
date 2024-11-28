@@ -172,7 +172,7 @@ const Userinfo = () => {
         console.log("ddddddddddddddd", data)
         try {
           // Send the data to the backend
-          const gresponse = await axios.post("https://backend-kiteactive.onrender.com/api/user/send-to-sheet", data);
+          const gresponse = await axios.post("https://api.kiteactiveventures.com/api/user/send-to-sheet", data);
           console.log("Data sent to sheet successfully", gresponse.data);
 
           if (gresponse.status === 200) {
@@ -214,7 +214,7 @@ const Userinfo = () => {
         };
     
         try {
-          const response = await axios.post("https://backend-kiteactive.onrender.com/api/user/send-to-zoho", customerData);
+          const response = await axios.post("https://api.kiteactiveventures.com/api/user/send-to-zoho", customerData);
           console.log("Data sent to Zoho successfully", response.data);
           googleSubmit();
         } catch (error) {

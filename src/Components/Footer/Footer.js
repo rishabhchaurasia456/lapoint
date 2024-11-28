@@ -102,7 +102,7 @@ const sections = [
         },
       },
       {
-        to: '/',
+        to: '/Cookie_policy',
         text: {
           en: 'Cookies Policy',
           du: 'Cookiebeleid', // Dutch translation

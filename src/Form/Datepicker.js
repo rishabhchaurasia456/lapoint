@@ -188,7 +188,7 @@ const Datepicker = () => {
                 <i class="fa fa-circle cir2" aria-hidden="true"></i>
                 <span className=''> Booked Date</span>
               </div>
-
+ 
 
               {/* Display the selected start and end dates */}
               {startDate && endDate && (

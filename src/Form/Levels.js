@@ -15,7 +15,7 @@ const Levels = () => {
   useEffect(() => {
     const fetchItems = async () => {
       try {
-        const response = await axios.get("https://backend-kiteactive.onrender.com/api/user/get-data-to-zoho");
+        const response = await axios.get("https://api.kiteactiveventures.com/api/user/get-data-to-zoho");
 
         if (response.data && response.data) {
           const itemsResponse = response.data;
@@ -171,8 +171,9 @@ const Levels = () => {
       <div className="container-fluid level_container ">
         <div className="row pb-3">
           <div className="col-md-2"></div>
+
           <div className="col-md-8">
-            <div class="mt-4 pt-5 mb-5">
+            <div class="">
               <h1 className='tripName'>
                 {tripName}
               </h1>
@@ -180,7 +181,7 @@ const Levels = () => {
 
             <form onSubmit={handleNext}>
               <h5 className='level_heading'>Choose duration</h5>
-              <select className="form-control w-100 p-3" id="duration" onChange={handleDurationChange} value={selectedDuration} required>
+              <select className="form-control w-100 level_input" id="duration" onChange={handleDurationChange} value={selectedDuration} required>
                 <option>7 Days</option>
                 <option>10 Days</option>
                 <option>14 Days</option>

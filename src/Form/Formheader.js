@@ -18,32 +18,31 @@ const Formheader = () => {
 
     return (
         <div>
-            <div className="container-fluid pt-3" style={{ backgroundColor: 'black' }}>
+            <div className="container-fluid pt-3 pb-0 mb-0" style={{ backgroundColor: 'black' }}>
                 <div className="row">
                     <div className="col-lg-2"></div>
                     <div className="col-lg-8">
                         <div className="row">
                             {/* Back button col */}
-                            <div className="col-4" onClick={handleBackClick}>
+                            <div className="col-3" onClick={handleBackClick}>
                                 <i className='fa fa-long-arrow-left left_icon'></i>
                             </div>
                             {/* Logo col */}
-                            <div className="col-4">
+                            <div className="col-6">
                                 <NavLink to="/" className="navbar-brand">
-                                    <img src={logo} alt="logo" className="img-fluid w-75" />
+                                    <img src={logo} alt="logo" className="formheader_img" />
                                 </NavLink>
                             </div>
 
                             {/* question mark popup btn */}
-                            <div className="col-4">
+                            <div className="col-3">
                                 <div className='text-center'>
                                     <i className="fa fa-question-circle-o que_mark" onClick={togglePopup}></i>
-
-
+                                    {showPopup && <div className="Strip_overlay" />}
                                     {showPopup && (
                                         <div className="popup-box">
-                                            <p className='fw-bold '>Need help? Something not working? <i className='fa fa-close mx-2 px-2 close_btn' onClick={togglePopup} ></i></p>
-                                            <p>
+                                            <p className='fw-bold'>Need help? Something not working? <i className='fa fa-close mx-2 px-2 close_btn' onClick={togglePopup} ></i></p>
+                                            <p className='surf_para fs-5'>
                                                 If you have any issues with the booking or the payment, please contact us on  <Link to="https://wa.me/31850091325" target="_blank">WhatsApp +31 850091325</Link> or email us at <Link to="mailto:info@kiteactive.com">info@kiteactive.com</Link> so we can help you out. No matter what your problem is, we have the answer!!
                                             </p>
                                         </div>
