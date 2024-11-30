@@ -16,7 +16,7 @@ const Aff_Navbar = () => {
                                 <Link className="nav-link active" aria-current="page" to="/affiliate_admin">Home</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/new_affiliate">New Affiliate</Link>
+                                <Link className="nav-link" to="/my_affiliate">My Affiliate</Link>
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link" to="/myCreative">My Creative</Link>

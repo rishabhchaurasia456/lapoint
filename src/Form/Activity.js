@@ -1,218 +1,53 @@
-// import React, { useState } from 'react';
-// import { useLocation, useNavigate } from 'react-router-dom';
-
-// const Activity = () => {
-//   const location = useLocation();
-//   const navigate = useNavigate(); // Hook to navigate to other pages
-
-//   const { selectedDuration, counts, countsbed, selectedRooms, updatedTotalPrice, totalCount, levels, startDate, endDate, carRentalPrice, carRentalSelections, lineItems } = location.state;
-
-//   const [actcounts, setactCounts] = useState([0, 0, 0, 0, 0]);
-
-//   const recc_activity = [
-//     { level: 'Longsleeve lycra', price: 45, link: '#' },
-//     { level: 'Kitesurf sunglasses', price: 50, link: '#' },
-//     { level: 'Kite shoes', price: 35, link: '#' },
-//     { level: 'Gear rental', price: 450, link: '#' },
-//     { level: 'Boardbag', price: 200, link: '#' },
-//     { activity: 'Longsleeve lycra', price: 45, link: '#' },
-//     { activity: 'Kitesurf sunglasses', price: 50, link: '#' },
-//     { activity: 'Kite shoes', price: 35, link: '#' },
-//     { activity: 'Gear rental', price: 450, link: '#' },
-//     { activity: 'Boardbag', price: 200, link: '#' },
-//   ];
-
-//   // Increment count for a specific level
-//   const increment = (index) => {
-//     setactCounts((prevCounts) => {
-//       const newCounts = [...prevCounts];
-//       if (newCounts[index] < totalCount) {
-//         newCounts[index] += 1;
-//       }
-//       return newCounts;
-//     });
-//   };
-
-//   // Decrement count for a specific level
-//   const decrement = (index) => {
-//     setactCounts((prevCounts) => {
-//       const newCounts = [...prevCounts];
-//       if (newCounts[index] > 0) newCounts[index] -= 1;
-//       return newCounts;
-//     });
-//   };
-
-
-//   const calculateTotalActivityPrice = () => {
-//     return recc_activity.reduce((total, item, index) => {
-//       return total + actcounts[index] * item.price;
-//     }, 0);
-//   };
-//   // Handler to navigate to the checkout page
-//   const handleCheckout = () => {
-//     const totalActivityPrice = calculateTotalActivityPrice();
-//     const finalTotalPrice = updatedTotalPrice + totalActivityPrice;
-
-//     const activityDetails = recc_activity.map((item, index) => ({
-//       name: item.level,
-//       count: actcounts[index],
-//       price: actcounts[index] * item.price,
-//     })).filter(activity => activity.count > 0);
-
-//     navigate('/checkout', {
-//       state: {
-//         selectedDuration,
-//         counts,
-//         countsbed,
-//         // roomPrices,
-//         // roomtype,
-//         // updatedTotalPrice,
-//         selectedRooms, // Pass the filtered selected rooms
-//         updatedTotalPrice: finalTotalPrice,
-//         totalCount,
-//         levels,
-//         startDate,
-//         endDate,
-//         actcounts, // Pass the activity counts as well
-//         activityDetails,
-//         carRentalSelections,
-//         carRentalPrice,
-//         lineItems
-//       },
-//     });
-//   };
-
-//   return (
-//     <div className="container-fluid level_container pb-5 ">
-//       <div className="row">
-//         <div className="col-lg-2"></div>
-//         <div className="col-lg-8">
-//           <div className="container">
-//             <div className="row">
-//               <div className="col text-center">
-//                 <div className='person_week'>
-//                   {startDate && endDate && (
-//                     <div>
-//                       <span> {startDate.toLocaleDateString()} - </span>
-//                       <span> {endDate.toLocaleDateString()}</span>
-//                     </div>
-//                   )}
-//                   <p>
-//                     <span>{totalCount} Person, {selectedDuration}, </span>
-
-//                     {/* Show details for each level where count is > 0 */}
-//                     {levels.map((item, index) => (
-//                       counts[index] > 0 && (
-//                         <span key={index}>
-//                           <span>
-//                             <b>{item.level}, </b>
-//                             {/* | Count: {counts[index]} | Price: € {counts[index] * item.price} */}
-//                           </span>
-//                         </span>
-//                       )
-//                     ))}
-//                   </p>
-
-//                   {/* <h3><b>Updated Total Price:</b> € {updatedTotalPrice}</h3> */}
-//                 </div>
-//               </div>
-//             </div>
-//           </div>
-
-//           <div className="container-fluid">
-//             {recc_activity.map((item, index) => (
-//               <div className="row form_crd_row mt-4" key={index}>
-
-//                 <div className="col-lg-9">
-//                   <div className='level_crd_text'>
-//                     <p className='level_crd_para'>
-//                       <span>
-//                         <b>{item.level}</b>
-//                       </span>{' '}
-//                       | <span>From € {item.price}</span>
-//                     </p>
-//                   </div>
-//                 </div>
-//                 <div className="col-md-3">
-//                   <i className="fa fa-minus-circle P_M_icon " onClick={(e) => { e.preventDefault(); decrement(index); }}></i>
-//                   <span>{actcounts[index]}</span>
-//                   <i className="fa fa-plus-circle P_M_icon" onClick={(e) => { e.preventDefault(); increment(index); }} ></i>
-//                 </div>
-//               </div>
-//             ))}
-//           </div>
-
-
-
-
-//           <div className='btn_container'>
-//             <button className="level_btn " onClick={handleCheckout}>
-//               Proceed to Checkout
-//             </button>
-//           </div>
-
-//         </div>
-//         <div className="col-lg-2"></div>
-
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Activity;
-
-
-
-
-
-import React, { useState } from 'react';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 const Activity = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const {
-    levels,
-    selectedDuration,
-    counts,
-    countsbed,
-    selectedRooms,
-    updatedTotalPrice,
-    totalCount,
-    startDate,
-    endDate,
-    carRentalPrice,
-    carRentalSelections,
-    lineItems,
-  } = location.state;
+  const [recommendedActivities, setRecommendedActivities] = useState([]);
+  const [addOnActivities, setAddOnActivities] = useState([]);
+  const [recommendedCounts, setRecommendedCounts] = useState([]);
+  const [addOnCounts, setAddOnCounts] = useState([]);
 
-  const recc_activity = [
-    { level: 'Longsleeve lycra', price: 45, link: '#' },
-    { level: 'Kitesurf sunglasses', price: 50, link: '#' },
-    { level: 'Kite shoes', price: 35, link: '#' },
-    { level: 'Gear rental', price: 450, link: '#' },
-    { level: 'Boardbag', price: 200, link: '#' },
-    { activity: 'Longsleeve lycra', price: 45, link: '#' },
-    { activity: 'Kitesurf sunglasses', price: 50, link: '#' },
-    { activity: 'Kite shoes', price: 35, link: '#' },
-    { activity: 'Gear rental', price: 450, link: '#' },
-    { activity: 'Boardbag', price: 200, link: '#' },
-  ];
+  const { tripName, selectedDuration, updatedTotalPrice, totalCount, levels, startDate, endDate, counts, countsbed, selectedRooms, carRentalPrice, carRentalSelections, lineItems } = location.state;
 
-  // Filter data into recommended and add-on activities
-  const recommendedActivities = recc_activity.filter((item) => item.level);
-  const addOnActivities = recc_activity.filter((item) => item.activity);
+  useEffect(() => {
+    const fetchTripData = async () => {
+      try {
+        const response = await axios.post("http://localhost:5500/api/admin/getall_activity");
 
-  // Separate state for each category
-  const [recommendedCounts, setRecommendedCounts] = useState(
-    Array(recommendedActivities.length).fill(0)
-  );
-  const [addOnCounts, setAddOnCounts] = useState(
-    Array(addOnActivities.length).fill(0)
-  );
+        // Filter data by the tripName passed from the previous component
+        const tripActivities = response.data.getallTripActivity.filter(
+          (activity) => activity.tripName === tripName
+        );
 
-  // Increment/Decrement functions for Recommended Activities
+        // Separate recommended and add-on activities
+        const recommended = tripActivities
+          .filter((activity) => activity.activitytype === "Recommended Activities")
+          .flatMap((activity) => activity.activitydetail);
+
+        const addOn = tripActivities
+          .filter((activity) => activity.activitytype === "Add-On Activities")
+          .flatMap((activity) => activity.activitydetail);
+
+        setRecommendedActivities(recommended);
+        setAddOnActivities(addOn);
+
+        // Initialize the counts to zero for both recommended and add-on activities
+        setRecommendedCounts(new Array(recommended.length).fill(0));
+        setAddOnCounts(new Array(addOn.length).fill(0));
+
+      } catch (error) {
+        console.error("Error fetching trip activities:", error);
+      }
+    };
+
+    fetchTripData();
+  }, [tripName]);
+
+  // Update count for recommended activities
   const incrementRecommended = (index) => {
     setRecommendedCounts((prevCounts) => {
       const newCounts = [...prevCounts];
@@ -226,12 +61,14 @@ const Activity = () => {
   const decrementRecommended = (index) => {
     setRecommendedCounts((prevCounts) => {
       const newCounts = [...prevCounts];
-      if (newCounts[index] > 0) newCounts[index] -= 1;
+      if (newCounts[index] > 0) {
+        newCounts[index] -= 1;
+      }
       return newCounts;
     });
   };
 
-  // Increment/Decrement functions for Add-On Activities
+  // Update count for add-on activities
   const incrementAddOn = (index) => {
     setAddOnCounts((prevCounts) => {
       const newCounts = [...prevCounts];
@@ -245,12 +82,14 @@ const Activity = () => {
   const decrementAddOn = (index) => {
     setAddOnCounts((prevCounts) => {
       const newCounts = [...prevCounts];
-      if (newCounts[index] > 0) newCounts[index] -= 1;
+      if (newCounts[index] > 0) {
+        newCounts[index] -= 1;
+      }
       return newCounts;
     });
   };
 
-  // Calculate total price
+  // Calculate the total price of selected activities
   const calculateTotalActivityPrice = () => {
     const recommendedPrice = recommendedActivities.reduce(
       (total, item, index) => total + recommendedCounts[index] * item.price,
@@ -263,40 +102,42 @@ const Activity = () => {
     return recommendedPrice + addOnPrice;
   };
 
+  // Proceed to checkout with selected activities
   const handleCheckout = () => {
     const totalActivityPrice = calculateTotalActivityPrice();
     const finalTotalPrice = updatedTotalPrice + totalActivityPrice;
 
     const activityDetails = [
       ...recommendedActivities.map((item, index) => ({
-        name: item.level,
+        name: item.activityName,
         count: recommendedCounts[index],
         price: recommendedCounts[index] * item.price,
       })),
       ...addOnActivities.map((item, index) => ({
-        name: item.activity,
+        name: item.activityName,
         count: addOnCounts[index],
         price: addOnCounts[index] * item.price,
       })),
-    ].filter((activity) => activity.count > 0);
+    ].filter((activity) => activity.count > 0); // Filter out activities with count 0
 
     navigate('/checkout', {
       state: {
+        tripName,
         selectedDuration,
-        counts,
-        countsbed,
-        selectedRooms,
         updatedTotalPrice: finalTotalPrice,
         totalCount,
-        startDate,
-        endDate,
         recommendedCounts,
         addOnCounts,
         activityDetails,
-        carRentalSelections,
-        carRentalPrice,
-        lineItems,
         levels,
+        counts,
+        countsbed,
+        selectedRooms,
+        carRentalPrice,
+        carRentalSelections,
+        startDate,
+        endDate,
+        lineItems,
       },
     });
   };
@@ -312,29 +153,30 @@ const Activity = () => {
                 <div className="person_week">
                   {startDate && endDate && (
                     <div>
-                      <span> {new Date(startDate).toLocaleDateString()} - </span>
-                      <span> {new Date(endDate).toLocaleDateString()}</span>
+                      <span>{new Date(startDate).toLocaleDateString()} - </span>
+                      <span>{new Date(endDate).toLocaleDateString()}</span>
                     </div>
                   )}
                   <p>
                     <span>
-                      {totalCount} Person, {selectedDuration},{' '}
+                      {totalCount} Person, {selectedDuration} {levels.map((item, index) => counts[index] > 0 && <span key={index}>{item.level}, </span>)}
                     </span>
-                    {levels.map((item, index) => (
-                          counts[index] > 0 && (
-                            <span key={index}>
-                              <span>
-                                <b>{item.level}, </b>
-                                {/* | Count: {counts[index]} | Price: € {counts[index] * item.price} */}
-                              </span>
-                            </span>
-                          )
+                    {levels && levels.length > 0 ? (
+                      <span>
+                        {levels.map((level, index) => (
+                          <span key={index}>{level.name}, </span>
                         ))}
+                      </span>
+                    ) : (
+                      <p>No levels selected.</p>
+                    )}
                   </p>
                 </div>
               </div>
             </div>
           </div>
+
+          {/* Display Recommended Activities */}
           <h3 className='text-light'>Recommended Activities</h3>
           <div className="container-fluid">
             {recommendedActivities.map((item, index) => (
@@ -342,25 +184,20 @@ const Activity = () => {
                 <div className="col-lg-9">
                   <div className="level_crd_text">
                     <p>
-                      <b>{item.level}</b> | From €{item.price}
+                      <b>{item.activityName}</b> | From €{item.price}
                     </p>
                   </div>
                 </div>
                 <div className="col-md-3">
-                  <i
-                    className="fa fa-minus-circle P_M_icon"
-                    onClick={() => decrementRecommended(index)}
-                  ></i>
+                  <i className="fa fa-minus-circle P_M_icon" onClick={() => decrementRecommended(index)}></i>
                   <span>{recommendedCounts[index]}</span>
-                  <i
-                    className="fa fa-plus-circle P_M_icon"
-                    onClick={() => incrementRecommended(index)}
-                  ></i>
+                  <i className="fa fa-plus-circle P_M_icon" onClick={() => incrementRecommended(index)}></i>
                 </div>
               </div>
             ))}
           </div>
 
+          {/* Display Add-On Activities */}
           <h3 className='text-light'>Add-On Activities</h3>
           <div className="container-fluid">
             {addOnActivities.map((item, index) => (
@@ -368,20 +205,14 @@ const Activity = () => {
                 <div className="col-lg-9">
                   <div className="level_crd_text">
                     <p>
-                      <b>{item.activity}</b> | From €{item.price}
+                      <b>{item.activityName}</b> | From €{item.price}
                     </p>
                   </div>
                 </div>
                 <div className="col-md-3">
-                  <i
-                    className="fa fa-minus-circle P_M_icon"
-                    onClick={() => decrementAddOn(index)}
-                  ></i>
+                  <i className="fa fa-minus-circle P_M_icon" onClick={() => decrementAddOn(index)}></i>
                   <span>{addOnCounts[index]}</span>
-                  <i
-                    className="fa fa-plus-circle P_M_icon"
-                    onClick={() => incrementAddOn(index)}
-                  ></i>
+                  <i className="fa fa-plus-circle P_M_icon" onClick={() => incrementAddOn(index)}></i>
                 </div>
               </div>
             ))}

@@ -15,7 +15,7 @@ const PageTracker = ({ children }) => {
     }, [location]);
 
     const trackVisit = (userId, page) => {
-        fetch('http://localhost:5500/track', {
+        fetch('http://localhost:5500/api/affiliate/track', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

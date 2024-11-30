@@ -2,107 +2,94 @@ import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-import { addDays, parse, isSameDay, isWithinInterval } from 'date-fns';
-import './DatePickerStyles.css'; // Import your custom CSS
+import { addDays, parseISO, isSameDay, isWithinInterval } from 'date-fns';
+import axios from 'axios';
+import './DatePickerStyles.css';
 
 const Datepicker = () => {
   const location = useLocation();
-  const navigate = useNavigate(); // To navigate to the final page
-  const { selectedDuration, counts, totalPrice, totalCount, levels, carRentalSelections, carRentalPrice, lineItems } = location.state;
+  const navigate = useNavigate();
+  const {
+    tripName,
+    selectedDuration,
+    counts,
+    totalPrice,
+    totalCount,
+    levels,
+    carRentalSelections,
+    carRentalPrice,
+    lineItems,
+  } = location.state;
+
+  console.log("levelssssssssssssssssssss", levels)
 
   const [startDate, setStartDate] = useState(null);
   const [endDate, setEndDate] = useState(null);
   const [validDates, setValidDates] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-  // Sample date ranges for different durations with status
-  const dateRanges = {
-    "7 Days": [
-      { range: "2024/11/01 - 2024/11/07", status: 0 },
-      { range: "2024/11/08 - 2024/11/14", status: 0 },
-      { range: "2024/11/15 - 2024/11/21", status: 0 },
-      { range: "2024/11/22 - 2024/11/28", status: 0 },
-      { range: "2024/11/29 - 2024/12/05", status: 0 },
-      { range: "2024/12/06 - 2024/12/12", status: 0 },
-      { range: "2024/12/13 - 2024/12/19", status: 0 },
-      { range: "2024/12/20 - 2024/12/26", status: 0 },
-      { range: "2024/12/27 - 2025/01/02", status: 0 },
-      { range: "2025/01/03 - 2025/01/10", status: 0 },
-    ],
-    "10 Days": [
-      { range: "2024/11/01 - 2024/11/10", status: 0 },
-      { range: "2024/11/11 - 2024/11/20", status: 0 },
-      { range: "2024/11/21 - 2024/11/30", status: 0 },
-      { range: "2024/12/01 - 2024/12/10", status: 0 },
-      { range: "2024/12/11 - 2024/12/20", status: 0 },
-      { range: "2024/12/21 - 2024/12/30", status: 0 },
-      { range: "2024/12/31 - 2025/01/09", status: 0 },
+  // Fetch all date ranges using Axios and filter based on tripName and selectedDuration
+  const fetchDateRanges = async () => {
+    try {
+      const response = await axios.post('http://localhost:5500/api/admin/getall_date_ranges');
+      const data = response.data;
 
-    ],
-    "14 Days": [
-      { range: "2024/11/01 - 2024/11/14", status: 0 },
-      { range: "2024/11/15 - 2024/11/28", status: 0 },
-      { range: "2024/11/29 - 2024/12/03", status: 0 },
-      { range: "2024/12/13 - 2024/12/26", status: 0 },
-      { range: "2024/12/27 - 2025/01/09", status: 0 },
-    ],
-  };
+      // Filter for the selected tripName and duration
+      const filteredDates = data.getAllTripDateRange
+        .filter(
+          (trip) => trip.tripName === tripName && trip.days === selectedDuration
+        )
+        .flatMap((trip) =>
+          trip.dateRanges.map((range) => ({
+            startDate: parseISO(range.startDate),
+            endDate: parseISO(range.endDate),
+            status: range.status,
+          }))
+        );
 
-  // Extract start dates with status
-  const generateValidStartDates = (duration) => {
-    const ranges = dateRanges[duration];
-    let validStartDateArray = [];
-
-    ranges.forEach(({ range, status }) => {
-      const [start] = range.split(" - ");
-      const startDate = parse(start, "yyyy/MM/dd", new Date());
-
-      validStartDateArray.push({ date: startDate, status });
-    });
-
-    return validStartDateArray;
-  };
-
-  // Calculate the valid start dates based on the selected duration
-  useEffect(() => {
-    if (selectedDuration) {
-      const validStartDatesArray = generateValidStartDates(selectedDuration);
-      setValidDates(validStartDatesArray);
+      setValidDates(filteredDates);
+    } catch (error) {
+      console.error("Error fetching date ranges:", error);
+    } finally {
+      setLoading(false);
     }
-  }, [selectedDuration]);
+  };
 
+  useEffect(() => {
+    if (tripName && selectedDuration) {
+      fetchDateRanges();
+    }
+  }, [tripName, selectedDuration]);
 
   // Handle start date selection (only for available dates)
   const handleDateChange = (date) => {
-    const selected = validDates.find(({ date: validDate, status }) => isSameDay(validDate, date) && status === 0);
+    const selected = validDates.find(
+      ({ startDate, status }) =>
+        isSameDay(startDate, date) && status === 0
+    );
 
     if (selected) {
       setStartDate(date);
-      const calculatedEndDate = addDays(date, getDurationInDays() - 1);
+      const calculatedEndDate = addDays(date, getDurationInDays(selectedDuration));
       setEndDate(calculatedEndDate);
     } else {
-      alert('Selected date is unavailable. Please choose another date.');
+      alert("Selected date is unavailable. Please choose another date.");
     }
   };
 
-  // Duration in days based on the previous page selection
-  const getDurationInDays = () => {
-    switch (selectedDuration) {
-      case '7 Days':
-        return 7;
-      case '10 Days':
-        return 10;
-      case '14 Days':
-        return 14;
-      default:
-        return 0;
-    }
+  // Duration in days based on the selectedDuration directly
+  const getDurationInDays = (selectedDuration) => {
+    // Manually parsing the duration from the string (e.g., "7 days" -> 7)
+    const durationInDays = parseInt(selectedDuration.split(' ')[0], 10);
+    return durationInDays - 1; // Assuming the duration includes the start day
   };
 
   // Function to navigate to the final page with all data
   const handleNextPage = () => {
     if (startDate && endDate) {
-      navigate('/room', {
+      navigate("/room", {
         state: {
+          tripName,
           selectedDuration,
           counts,
           totalPrice,
@@ -111,109 +98,108 @@ const Datepicker = () => {
           startDate,
           endDate,
           carRentalSelections,
-          carRentalPrice, 
-          lineItems
+          carRentalPrice,
+          lineItems,
         },
       });
     } else {
-      alert('Please select a valid date.');
+      alert("Please select a valid date.");
     }
   };
 
-  console.log("iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiirrrrrrrrrrrrrr", totalPrice)
-
-  // Add a custom CSS class to start dates for highlighting (available/unavailable)
+  // Add a custom CSS class to highlight start dates
   const highlightStartDate = (date) => {
-    const foundDate = validDates.find(({ date: validDate }) => isSameDay(validDate, date));
+    const foundDate = validDates.find(({ startDate }) =>
+      isSameDay(startDate, date)
+    );
 
     if (foundDate) {
       if (foundDate.status === 1) {
-        return 'unavailable-date';
+        return "unavailable-date";
       }
-      return 'available-date';
+      return "available-date";
     }
 
-    if (startDate && endDate && isWithinInterval(date, { start: startDate, end: endDate })) {
-      return 'selected-range-date';
+    if (
+      startDate &&
+      endDate &&
+      isWithinInterval(date, { start: startDate, end: endDate })
+    ) {
+      return "selected-range-date";
     }
-    return '';
-
-
+    return "";
   };
+
   return (
     <div>
-      <div className="container-fluid level_container">
-        <div className="row">
-          <div className="col-lg-2"></div>
-          <div className="col-lg-8 m-0 p-0">
-            <div className='m-auto text-center m-0 p-0 '>
-              <p className='text-center person_week'>
-                <span>{totalCount} Person, {selectedDuration}, </span>
-                {/* Show details for each level where count is > 0 */}
-                {levels.map((item, index) => (
-                  counts[index] > 0 && (
-                    <span key={index}>
-                      <span>
-                        <b>{item.level}, </b>
-                        {/* | Count: {counts[index]} | Price: € {counts[index] * item.price} */}
-                      </span>
+      {loading ? (
+        <div>Loading date ranges...</div>
+      ) : (
+        <div className="container-fluid level_container">
+          <div className="row">
+            <div className="col-lg-2"></div>
+            <div className="col-lg-8 m-0 p-0">
+              <div className="m-auto text-center m-0 p-0">
+                <p className="text-center person_week">
+                  <span>
+                    {totalCount} Person, {selectedDuration},{" "}
+                  </span>
+                  {levels && levels.length > 0 ? (
+                    <span>
+                      {levels.map((level, index) => (
+                        <span key={index}>{level.name}, </span>
+                      ))}
                     </span>
-                  )
-                ))}
-              </p>
+                  ) : (
+                    <p>No levels selected.</p>
+                  )}
+                </p>
 
-              <div className='datepick_border'> </div>
-              {/* <h3>Total Price: € {totalPrice}</h3> */}
-              {/* Date Range Picker */}
-              <div className='datepicker_cont'>
-                <div className='custom-datepicker'>
-                  <h2 className='cal_head mb-4'>Select Start Date</h2>
-                  <DatePicker
-                    selected={startDate}
-                    onChange={handleDateChange}
-                    inline
-                    monthsShown={2} // Display two months
-                    dateFormat="yyyy/MM/dd"
-                    placeholderText="Select Start Date"
-                    dayClassName={highlightStartDate} // Add custom class to start dates
-                    className="custom-datepicker" />
+                <div className="datepick_border"></div>
+                <div className="datepicker_cont">
+                  <div className="custom-datepicker">
+                    <h2 className="cal_head mb-4">Select Start Date</h2>
+                    <DatePicker
+                      selected={startDate}
+                      onChange={handleDateChange}
+                      inline
+                      monthsShown={2}
+                      dateFormat="yyyy/MM/dd"
+                      placeholderText="Select Start Date"
+                      dayClassName={highlightStartDate}
+                      className="custom-datepicker"
+                    />
+                  </div>
+                </div>
+
+                <div className="date_visible">
+                  <i className="fa fa-circle cir1" aria-hidden="true"></i>
+                  <span className="date_visible_span"> Available Date</span>
+                  <i className="fa fa-circle cir2" aria-hidden="true"></i>
+                  <span> Booked Date</span>
+                </div>
+
+                {startDate && endDate && (
+                  <div className="fw-bold cal_head">
+                    <span> {startDate.toLocaleDateString()} - </span>
+                    <span> {endDate.toLocaleDateString()}</span>
+                  </div>
+                )}
+
+                <div className="btn_container">
+                  <button className="level_btn" onClick={handleNextPage}>
+                    Next
+                  </button>
                 </div>
               </div>
-
-              {/* date visiblity  */}
-              <div className='date_visible'>
-                <i class="fa fa-circle cir1" aria-hidden="true"></i>
-                <span className='date_visible_span'> Available Date</span>
-
-                <i class="fa fa-circle cir2" aria-hidden="true"></i>
-                <span className=''> Booked Date</span>
-              </div>
-
-
-              {/* Display the selected start and end dates */}
-              {startDate && endDate && (
-                <div className='fw-bold cal_head '>
-                  <span> {startDate.toLocaleDateString()} - </span>
-                  <span> {endDate.toLocaleDateString()}</span>
-                </div>
-              )}        
-
-              <div className='btn_container'>
-                <button className="level_btn"  onClick={handleNextPage}>
-                  Next
-                </button>
-              </div>
-
             </div>
+            <div className="col-lg-2"></div>
           </div>
-
-          <div className="col-lg-2"></div>
-
-
         </div>
-      </div>
+      )}
     </div>
   );
 };
 
 export default Datepicker;
+

@@ -13,7 +13,7 @@ const Userinfo = () => {
         // roomPrices,
         selectedRooms,
         // updatedTotalPrice,
-        totalCount, 
+        totalCount,
         levels,
         startDate,
         endDate,
@@ -49,22 +49,6 @@ const Userinfo = () => {
         }))
     );
 
-    // State to track global selection count for each activity
-    // const [activitySelections, setActivitySelections] = useState(
-    //     activityDetails.reduce((acc, activity) => {
-    //         acc[activity.name] = 0; // Initialize count to 0 for each activity
-    //         return acc;
-    //     }, {})
-    // );
-
-    // State to track global selection count for each level
-    // const [levelSelections, setLevelSelections] = useState(
-    //     levels.reduce((acc, level, index) => {
-    //         acc[level.level] = 0; // Initialize count to 0 for each level
-    //         return acc;
-    //     }, {})
-    // );
-
     // Handle input changes for user details
     const handleUserChange = (field, value) => {
         setUserDetails({ ...userDetails, [field]: value });
@@ -78,79 +62,7 @@ const Userinfo = () => {
         updatedTravellers[index][field] = value;
         setTravellers(updatedTravellers);
     };
-    // Handle activity checkbox change for a traveler
-    // const handleActivityChange = (index, activity) => {
-    //     const updatedTravellers = [...travellers];
-    //     const selectedActivities = updatedTravellers[index].selectedActivities;
-
-    //     const activityCount = activityDetails.find(act => act.name === activity).count; // Get the count limit for this activity
-
-    //     // Check if the traveler has already selected this activity
-    //     if (selectedActivities.includes(activity)) {
-    //         // Remove activity from the traveler's selected activities
-    //         updatedTravellers[index].selectedActivities = selectedActivities.filter(a => a !== activity);
-    //         // Update global selection count
-    //         setActivitySelections({
-    //             ...activitySelections,
-    //             [activity]: activitySelections[activity] - 1,
-    //         });
-    //     } else {
-    //         // Check if the global count for this activity exceeds the limit
-    //         if (activitySelections[activity] < activityCount) {
-    //             // Add activity if under the limit
-    //             updatedTravellers[index].selectedActivities = [...selectedActivities, activity];
-    //             // Update global selection count
-    //             setActivitySelections({
-    //                 ...activitySelections,
-    //                 [activity]: activitySelections[activity] + 1,
-    //             });
-    //         } else {
-    //             // Prevent further selections if limit is reached
-    //             alert(`The activity "${activity}" can only be selected by ${activityCount} traveler(s).`);
-    //         }
-    //     }
-    //     setTravellers(updatedTravellers);
-    // };
-
-    // Handle level selection for a traveler
-    // const handleLevelChange = (index, levelName) => {
-    //     const updatedTravellers = [...travellers];
-    //     const previousLevel = updatedTravellers[index].selectedLevel; // Store the previously selected level
-
-    //     const levelIndex = levels.findIndex(level => level.level === levelName); // Find the level by name
-    //     const levelCount = counts[levelIndex]; // Get the count limit for this level
-
-    //     // Check if the new level is different from the previously selected level
-    //     if (previousLevel !== levelName) {
-    //         // First, check if the new level is within the allowed count
-    //         if (levelSelections[levelName] < levelCount) {
-    //             // Update the traveler's level
-    //             updatedTravellers[index].selectedLevel = levelName;
-
-    //             // Adjust the global level selections
-    //             const newLevelSelections = { ...levelSelections };
-
-    //             // If the traveler had a previously selected level, decrease its count
-    //             if (previousLevel) {
-    //                 newLevelSelections[previousLevel] -= 1;
-    //             }
-
-    //             // Increase the count for the newly selected level
-    //             newLevelSelections[levelName] += 1;
-
-    //             // Update the state
-    //             setTravellers(updatedTravellers);
-    //             setLevelSelections(newLevelSelections);
-    //         } else {
-    //             // Prevent further selections if the limit for the new level is reached
-    //             alert(`The level "${levelName}" can only be selected by ${levelCount} traveler(s).`);
-    //         }
-    //     }
-    // };
-
-
-
-    // Handle toggling to use same details for Traveller 1
+   
     const handleToggle = () => {
         setUseSameDetails(!useSameDetails);
         if (!useSameDetails) {
@@ -163,32 +75,32 @@ const Userinfo = () => {
 
 
     const googleSubmit = async () => {
-      
+
         // Bundle them into one object
         let data = {
-          userDetails: userDetails,
-          travellers: travellers
+            userDetails: userDetails,
+            travellers: travellers
         };
         console.log("ddddddddddddddd", data)
         try {
-          // Send the data to the backend
-          const gresponse = await axios.post("https://backend-kiteactive.onrender.com/api/user/send-to-sheet", data);
-          console.log("Data sent to sheet successfully", gresponse.data);
+            // Send the data to the backend
+            const gresponse = await axios.post("https://api.kiteactiveventures.com/api/user/send-to-sheet", data);
+            console.log("Data sent to sheet successfully", gresponse.data);
 
-          if (gresponse.status === 200) {
-            console.log('Listing added successfully:', gresponse.data);
-            navigate('/thankyou');
-          }
+            if (gresponse.status === 200) {
+                console.log('Listing added successfully:', gresponse.data);
+                navigate('/thankyou');
+            }
 
         } catch (error) {
-          // Log any errors for debugging
-          console.error("Error sending data to sheet:", error.response?.data || error.message);
+            // Log any errors for debugging
+            console.error("Error sending data to sheet:", error.response?.data || error.message);
         }
-      };
-      
+    };
+
     const handleSubmit = async (e) => {
         e.preventDefault();
-        
+
         const customerData = {
             contact_name: `${userDetails.firstName} ${userDetails.lastName}`,
             company_name: 'Your Company Name',  // Replace with actual company name
@@ -200,7 +112,7 @@ const Userinfo = () => {
                     phone: userDetails.phone
                 }
             ],
-            
+
             line_items: lineItems.map(item => ({
                 item_id: item.item_id, // Use the item ID from lineItems
                 quantity: item.quantity,  // Use the quantity from lineItems
@@ -212,44 +124,16 @@ const Userinfo = () => {
             carRentalPrice,
             totalCount,
         };
-    
+
         try {
-          const response = await axios.post("https://backend-kiteactive.onrender.com/api/user/send-to-zoho", customerData);
-          console.log("Data sent to Zoho successfully", response.data);
-          googleSubmit();
+            const response = await axios.post("https://api.kiteactiveventures.com/api/user/send-to-zoho", customerData);
+            console.log("Data sent to Zoho successfully", response.data);
+            googleSubmit();
         } catch (error) {
             console.error("Error sending data to Zoho:", error);
         }
     };
 
-
-
-    // after submit form jsx
-
-    
-    // const formRef = useRef(null);
-
-    // const handleSubmitforform = (e) => {
-    //     e.preventDefault();
-    
-    //     // Trigger SweetAlert popup and reset the form after alert is closed
-    //     Swal.fire({
-    //       title: "Reservation Submitted!",
-    //       text: "Thank you for making a reservation. We’ll get back to you shortly.",
-    //       icon: "success",
-    //       showClass: {
-    //         popup: "animate__animated animate__fadeInUp animate__faster"
-    //       },
-    //       hideClass: {
-    //         popup: "animate__animated animate__fadeOutDown animate__faster"
-    //       }
-    //     }).then(() => {
-    //       // Reset the form fields after the SweetAlert dialog closes
-    //       if (formRef.current) {
-    //         formRef.current.reset();
-    //       }
-    //     });
-    //   };
 
     const renderTravellerForms = () => {
         return travellers.map((traveller, index) => (
@@ -258,14 +142,6 @@ const Userinfo = () => {
                     <div className="col-lg-2"></div>
                     <div className="col-lg-8 card mb-3 p-4">
                         <h5 className="form_head">Traveller #{index + 1} Information</h5>
-
-                        {/* <div className='form-check my-3'>
-                            <input type='checkbox' className='form-check-input' id='useSameDetails' checked={useSameDetails} onChange={handleToggle} />
-
-                            <label className='form-check-label' htmlFor='useSameDetails'>
-                                Use the same information for Traveller 1
-                            </label>
-                        </div> */}
 
                         <div className='d-flex mt-2'>
                             <div>
@@ -279,7 +155,6 @@ const Userinfo = () => {
                             </div>
 
                         </div>
-                        {/* <span>hdkjf</span> */}
 
 
                         <div className='' key={index}>
@@ -356,46 +231,6 @@ const Userinfo = () => {
                                     </select>
                                 </div>
                             </div>
-
-                            {/* Activity checkboxes */}
-                            {/* <div className="mt-3">
-                                <h5>Activities</h5>
-                                {activityDetails.map((activity, activityIndex) => (
-                                    <div key={activityIndex} className='form-check'>
-                                        <input
-                                            type='checkbox'
-                                            className='form-check-input'
-                                            id={`activity-${index}-${activityIndex}`}
-                                            checked={travellers[index].selectedActivities.includes(activity.name)}
-                                            onChange={() => handleActivityChange(index, activity.name)}
-                                        />
-                                        <label className='form-check-label' htmlFor={`activity-${index}-${activityIndex}`}>
-                                            {activity.name} ({activity.count} available)
-                                        </label>
-                                    </div>
-                                ))}
-                            </div> */}
-
-
-                            {/* {/ Level selection /} */}
-
-                            {/* <div className="mt-3">
-                                <h5>Levels</h5>
-                                {levels.map((level, levelIndex) => (
-                                    <div key={levelIndex} className='form-check'>
-                                        <input
-                                            type='radio'
-                                            className='form-check-input'
-                                            id={`level-${index}-${levelIndex}`}
-                                            checked={travellers[index].selectedLevel === level.level}
-                                            onChange={() => handleLevelChange(index, level.level)}
-                                        />
-                                        <label className='form-check-label' htmlFor={`level-${index}-${levelIndex}`}>
-                                            {level.level} (Limit: {counts[levelIndex]})
-                                        </label>
-                                    </div>
-                                ))}
-                            </div> */}
                         </div>
 
                     </div>
@@ -429,16 +264,15 @@ const Userinfo = () => {
                                 <span>{totalCount} Person, {selectedDuration}, </span>
 
                                 {/* Show details for each level where count is > 0 */}
-                                {levels.map((item, index) => (
-                                    counts[index] > 0 && (
-                                        <span key={index}>
-                                            <span>
-                                                <b>{item.level}, </b>
-                                                {/* | Count: {counts[index]} | Price: € {counts[index] * item.price} */}
-                                            </span>
-                                        </span>
-                                    )
-                                ))}
+                                {levels && levels.length > 0 ? (
+                                    <span>
+                                        {levels.map((level, index) => (
+                                            <span key={index}>{level.name}, </span>
+                                        ))}
+                                    </span>
+                                ) : (
+                                    <p>No levels selected.</p>
+                                )}
                             </p>
                             <div className="datepick_border"> </div>
 

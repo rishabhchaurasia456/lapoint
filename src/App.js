@@ -45,6 +45,21 @@ import Basboode from './Pages/Kiteactiveteam/Teammembers/Basboode';
 import Emielrense from './Pages/Kiteactiveteam/Teammembers/Emielrense';
 import Jurretvan from './Pages/Kiteactiveteam/Teammembers/Jurretvan';
 import PageTracker from './Components/PageTracker';
+import MyAffiliate from './Affiliate/MyAffiliate';
+import AdminLogin from './Admin/AdminLogin';
+import Admin_Layout from './Admin/Admin_Layout';
+import Admin_Dashborad from './Admin/Admin_Dashborad';
+import Admin_Level from './Admin/Admin_Level';
+import Admin_Add_Level from './Admin/Admin_Add_Level';
+import Admin_DateRange from './Admin/Admin_DateRange';
+import Admin_Add_DateRange from './Admin/Admin_Add_DateRange';
+import Admin_Edit_DateRange from './Admin/Admin_Edit_DateRange';
+import Admin_Room from './Admin/Admin_Room';
+import Admin_Add_Room from './Admin/Admin_Add_Room';
+import Admin_Edit_Room from './Admin/Admin_Edit_Room';
+import Admin_Activity from './Admin/Admin_Activity';
+import Admin_Add_Activity from './Admin/Admin_Add_Activity';
+import Admin_Edit_Activity from './Admin/Admin_Edit_Activity';
 
 function App() {
 
@@ -316,6 +331,12 @@ function App() {
             </Aff_Layout>
           } />
 
+          <Route path="/my_affiliate" element={
+            <Aff_Layout>
+              <MyAffiliate />
+            </Aff_Layout>
+          } />
+
           <Route path="/new_affiliate" element={
             <Aff_Layout>
               <NewAffiliate />
@@ -327,6 +348,86 @@ function App() {
               <MyCreative />
             </Aff_Layout>
           } />
+
+
+          <Route path="/admin" element={
+            <>
+              <AdminLogin />
+            </>
+          } />
+
+          <Route path="/admin/dashboard" element={
+            <Admin_Layout>
+              <Admin_Dashborad />
+            </Admin_Layout>
+          } />
+
+          <Route path="/admin/levels" element={
+            <Admin_Layout>
+              <Admin_Level />
+            </Admin_Layout>
+          } />
+
+          <Route path="/admin/add/levels" element={
+            <Admin_Layout>
+              <Admin_Add_Level />
+            </Admin_Layout>
+          } />
+
+          <Route path="/admin/dates" element={
+            <Admin_Layout>
+              <Admin_DateRange />
+            </Admin_Layout>
+          } />
+
+          <Route path="/admin/add/dates" element={
+            <Admin_Layout>
+              <Admin_Add_DateRange />
+            </Admin_Layout>
+          } />
+
+          <Route path="/admin/edit/dates/:id" element={
+            <Admin_Layout>
+              <Admin_Edit_DateRange />
+            </Admin_Layout>
+          } />
+
+          <Route path="/admin/room" element={
+            <Admin_Layout>
+              <Admin_Room />
+            </Admin_Layout>
+          } />
+
+          <Route path="/admin/add/room" element={
+            <Admin_Layout>
+              <Admin_Add_Room />
+            </Admin_Layout>
+          } />
+
+          <Route path="/admin/edit/room/:id" element={
+            <Admin_Layout>
+              <Admin_Edit_Room />
+            </Admin_Layout>
+          } />
+
+          <Route path="/admin/activity" element={
+            <Admin_Layout>
+              <Admin_Activity />
+            </Admin_Layout>
+          } />
+
+          <Route path="/admin/add/activity" element={
+            <Admin_Layout>
+              <Admin_Add_Activity />
+            </Admin_Layout>
+          } />
+
+          <Route path="/admin/edit/activity/:id" element={
+            <Admin_Layout>
+              <Admin_Edit_Activity />
+            </Admin_Layout>
+          } />
+          
         </Routes>
         </PageTracker>
       </BrowserRouter>
