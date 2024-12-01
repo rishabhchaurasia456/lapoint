@@ -73,388 +73,374 @@ function App() {
       <BrowserRouter>
         <ScrollToTop />
         <PageTracker>
-        <Routes>
-          <Route path='/' element={
-            <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
-              <Home selectedLanguage={selectedLanguage} />
-            </KiteLayout>
-          } />
+          <Routes>
+            <Route path='/' element={
+              <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
+                <Home selectedLanguage={selectedLanguage} />
+              </KiteLayout>
+            } />
 
-          <Route path='/about' element={
-            <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
-              <Aboutus selectedLanguage={selectedLanguage} />
-            </KiteLayout>
-          } />
+            <Route path='/about' element={
+              <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
+                <Aboutus selectedLanguage={selectedLanguage} />
+              </KiteLayout>
+            } />
 
-          <Route exact path="/trip/:trip_name" element={
-            <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
-              <Trip selectedLanguage={selectedLanguage} />
-            </KiteLayout>
-          } />
+            <Route exact path="/trip/:trip_name" element={
+              <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
+                <Trip selectedLanguage={selectedLanguage} />
+              </KiteLayout>
+            } />
 
-          <Route path='/contact' element={
-            <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
-              <Contactus selectedLanguage={selectedLanguage} />
-            </KiteLayout>
-          } />
-          <Route path='/School' element={
-            <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
-              <School selectedLanguage={selectedLanguage} />
-            </KiteLayout>
-          } />
+            <Route path='/contact' element={
+              <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
+                <Contactus selectedLanguage={selectedLanguage} />
+              </KiteLayout>
+            } />
+            <Route path='/School' element={
+              <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
+                <School selectedLanguage={selectedLanguage} />
+              </KiteLayout>
+            } />
 
-          <Route path='/stories' element={
-            <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
-              <Stories selectedLanguage={selectedLanguage} />
-            </KiteLayout>
-          } />
-
-
-          {/* stories inner pages ------------------------------------ */}
-
-          <Route path='/den-tv-tas' element={
-            <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
-              <Dentvtas selectedLanguage={selectedLanguage} />
-            </KiteLayout>
-          } />
-
-          <Route path='/teamrider' element={
-            <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
-              <Teamrider selectedLanguage={selectedLanguage} />
-            </KiteLayout>
-          } />
+            <Route path='/stories' element={
+              <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
+                <Stories selectedLanguage={selectedLanguage} />
+              </KiteLayout>
+            } />
 
 
-          <Route path='/DownWinder' element={
-            <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
-              <Downwinders selectedLanguage={selectedLanguage} />
-            </KiteLayout>
-          } />
+            {/* stories inner pages ------------------------------------ */}
 
-          <Route path='/WhyZanzibar' element={
-            <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
-              <Whyzanzibar selectedLanguage={selectedLanguage} />
-            </KiteLayout>
-          } />
+            <Route path='/den-tv-tas' element={
+              <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
+                <Dentvtas selectedLanguage={selectedLanguage} />
+              </KiteLayout>
+            } />
 
-          <Route path='/kiteGear' element={
-            <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
-              <Kitegear selectedLanguage={selectedLanguage} />
-            </KiteLayout>
-          } />
+            <Route path='/teamrider' element={
+              <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
+                <Teamrider selectedLanguage={selectedLanguage} />
+              </KiteLayout>
+            } />
 
 
+            <Route path='/DownWinder' element={
+              <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
+                <Downwinders selectedLanguage={selectedLanguage} />
+              </KiteLayout>
+            } />
 
+            <Route path='/WhyZanzibar' element={
+              <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
+                <Whyzanzibar selectedLanguage={selectedLanguage} />
+              </KiteLayout>
+            } />
 
-
-
-          {/* kite camp  all pages routes here  */}
-          <Route path='/kitecamp' element={
-            <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
-              <Kitecamp />
-            </KiteLayout>
-          }>
-          </Route>
-
-          <Route path='/thankyou' element={
-            <Formlayout>
-              <Thankyou />
-            </Formlayout>
-          } />
-
-
-          {/* ---------------------------------------- */}
-          {/* footer pages links here */}
-          {/* ---------------------------------------- */}
-
-          <Route path='/Discover_Kiteactive' element={
-            <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
-              <Discoverkiteactive />
-            </KiteLayout>
-          }>
-          </Route>
-
-
-          <Route path='/Kiteactive_Team' element={
-            <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
-              <Kiteactiveteam />
-            </KiteLayout>
-          }>
-          </Route>
-
-          {/* ----------------------ALL TEAM MEMBERS pages------------------------------  */}
-
-          <Route path='/Annemaj' element={
-            <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
-              <Annemaj />
-            </KiteLayout>
-          }>
-          </Route>
-
-
-          <Route path='/Felix_Maks' element={
-            <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
-              <Felix />
-            </KiteLayout>
-          }>
-          </Route>
-
-
-          <Route path='/Roderickje_Pijls' element={
-            <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
-              <Roderick />
-            </KiteLayout>
-          }>
-          </Route>
-
-          <Route path='/aj' element={
-            <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
-              <Aj />
-            </KiteLayout>
-          }>
-
-          </Route>
-          <Route path='/Arnaud_Plas' element={
-            <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
-              <Arnaud />
-            </KiteLayout>
-          }>
-          </Route>
-          <Route path='/Boaz_Oketch' element={
-            <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
-              <Boaz />
-            </KiteLayout>
-          }>
-          </Route>
-          <Route path='/Bas_Boode' element={
-            <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
-              <Basboode />
-            </KiteLayout>
-          }>
-          </Route>
-
-          <Route path='/EmielRense' element={
-            <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
-              <Emielrense />
-            </KiteLayout>
-          }>
-          </Route>
-          <Route path='/Jurret_Van' element={
-            <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
-              <Jurretvan />
-            </KiteLayout>
-          }>
-          </Route>
+            <Route path='/kiteGear' element={
+              <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
+                <Kitegear selectedLanguage={selectedLanguage} />
+              </KiteLayout>
+            } />
 
 
 
 
 
 
-          {/* ------------------------------------------ */}
+            {/* kite camp  all pages routes here  */}
+            <Route path='/kitecamp' element={
+              <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
+                <Kitecamp />
+              </KiteLayout>
+            }>
+            </Route>
 
-
-          <Route path='/Become_Partner' element={
-            <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
-              <Becomepartner />
-            </KiteLayout>
-          }>
-          </Route>
-
-          <Route path='/Booking_Payment' element={
-            <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
-              <BookingPayment />
-            </KiteLayout>
-          }>
-          </Route>
-
-
-          <Route path='/PrivacyPolicy' element={
-            <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
-              <PrivacyPolicy />
-            </KiteLayout>
-          }>
-          </Route>
-
-
-          <Route path='/Term_Condition' element={
-            <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
-              <Termcondition />
-            </KiteLayout>
-          }>
-          </Route>
-
-          {/* <Route path='/Cookies_Policy' element={
-            <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
-              
-            </KiteLayout>
-          }>
-          </Route> */}
-
-
-
-
-          <Route path='/form' element={
-            <Formlayout>
-              <Levels />
-            </Formlayout>
-          } />
-          <Route path="/datepicker" element={
-            <Formlayout>
-              <Datepicker />
-            </Formlayout>
-          } />
-          <Route path="/room" element={
-            <>
+            <Route path='/thankyou' element={
               <Formlayout>
-                <Room />
+                <Thankyou />
               </Formlayout>
-            </>
-          } />
-          <Route path="/activity" element={
-            <>
+            } />
+
+
+            {/* ---------------------------------------- */}
+            {/* footer pages links here */}
+            {/* ---------------------------------------- */}
+
+            <Route path='/Discover_Kiteactive' element={
+              <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
+                <Discoverkiteactive />
+              </KiteLayout>
+            }>
+            </Route>
+
+
+            <Route path='/Kiteactive_Team' element={
+              <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
+                <Kiteactiveteam />
+              </KiteLayout>
+            }>
+            </Route>
+
+            {/* ----------------------ALL TEAM MEMBERS pages------------------------------  */}
+
+            <Route path='/Annemaj' element={
+              <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
+                <Annemaj />
+              </KiteLayout>
+            }>
+            </Route>
+
+
+            <Route path='/Felix_Maks' element={
+              <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
+                <Felix />
+              </KiteLayout>
+            }>
+            </Route>
+
+
+            <Route path='/Roderickje_Pijls' element={
+              <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
+                <Roderick />
+              </KiteLayout>
+            }>
+            </Route>
+
+            <Route path='/aj' element={
+              <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
+                <Aj />
+              </KiteLayout>
+            }>
+
+            </Route>
+            <Route path='/Arnaud_Plas' element={
+              <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
+                <Arnaud />
+              </KiteLayout>
+            }>
+            </Route>
+            <Route path='/Boaz_Oketch' element={
+              <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
+                <Boaz />
+              </KiteLayout>
+            }>
+            </Route>
+            <Route path='/Bas_Boode' element={
+              <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
+                <Basboode />
+              </KiteLayout>
+            }>
+            </Route>
+
+            <Route path='/EmielRense' element={
+              <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
+                <Emielrense />
+              </KiteLayout>
+            }>
+            </Route>
+            <Route path='/Jurret_Van' element={
+              <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
+                <Jurretvan />
+              </KiteLayout>
+            }>
+            </Route>
+            
+
+            {/* ------------------------------------------ */}
+
+
+            <Route path='/Become_Partner' element={
+              <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
+                <Becomepartner />
+              </KiteLayout>
+            }>
+            </Route>
+
+            <Route path='/Booking_Payment' element={
+              <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
+                <BookingPayment />
+              </KiteLayout>
+            }>
+            </Route>
+
+
+            <Route path='/PrivacyPolicy' element={
+              <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
+                <PrivacyPolicy />
+              </KiteLayout>
+            }>
+            </Route>
+
+            <Route path='/Term_Condition' element={
+              <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
+                <Termcondition />
+              </KiteLayout>
+            }>
+            </Route>
+
+
+            <Route path='/form' element={
               <Formlayout>
-                <Activity />
+                <Levels />
               </Formlayout>
-            </>
-          } />
-          <Route path="/checkout" element={
-            <>
+            } />
+            <Route path="/datepicker" element={
               <Formlayout>
-                <Checkout />
+                <Datepicker />
               </Formlayout>
-            </>
-          } />
-          <Route path="/userinfo" element={
-            <>
-              <Formlayout>
-                <Userinfo />
-              </Formlayout>
-            </>
-          } />
+            } />
+            <Route path="/room" element={
+              <>
+                <Formlayout>
+                  <Room />
+                </Formlayout>
+              </>
+            } />
+            <Route path="/activity" element={
+              <>
+                <Formlayout>
+                  <Activity />
+                </Formlayout>
+              </>
+            } />
+            <Route path="/checkout" element={
+              <>
+                <Formlayout>
+                  <Checkout />
+                </Formlayout>
+              </>
+            } />
+            <Route path="/userinfo" element={
+              <>
+                <Formlayout>
+                  <Userinfo />
+                </Formlayout>
+              </>
+            } />
 
-          <Route path="/affiliate_admin" element={
-            <Aff_Layout>
-              <Aff_Dashboard />
-            </Aff_Layout>
-          } />
+            <Route path="/affiliate_admin" element={
+              <Aff_Layout>
+                <Aff_Dashboard />
+              </Aff_Layout>
+            } />
 
-          <Route path="/my_affiliate" element={
-            <Aff_Layout>
-              <MyAffiliate />
-            </Aff_Layout>
-          } />
+            <Route path="/my_affiliate" element={
+              <Aff_Layout>
+                <MyAffiliate />
+              </Aff_Layout>
+            } />
 
-          <Route path="/new_affiliate" element={
-            <Aff_Layout>
-              <NewAffiliate />
-            </Aff_Layout>
-          } />
+            <Route path="/new_affiliate" element={
+              <Aff_Layout>
+                <NewAffiliate />
+              </Aff_Layout>
+            } />
 
-          <Route path="/myCreative" element={
-            <Aff_Layout>
-              <MyCreative />
-            </Aff_Layout>
-          } />
+            <Route path="/myCreative" element={
+              <Aff_Layout>
+                <MyCreative />
+              </Aff_Layout>
+            } />
 
 
-          <Route path="/admin" element={
-            <>
-              <AdminLogin />
-            </>
-          } />
+            <Route path="/admin" element={
+              <>
+                <AdminLogin />
+              </>
+            } />
 
-          <Route path="/admin/dashboard" element={
-            <Admin_Layout>
-              <Admin_Dashborad />
-            </Admin_Layout>
-          } />
+            <Route path="/admin/dashboard" element={
+              <Admin_Layout>
+                <Admin_Dashborad />
+              </Admin_Layout>
+            } />
 
-          <Route path="/admin/levels" element={
-            <Admin_Layout>
-              <Admin_Level />
-            </Admin_Layout>
-          } />
+            <Route path="/admin/levels" element={
+              <Admin_Layout>
+                <Admin_Level />
+              </Admin_Layout>
+            } />
 
-          <Route path="/admin/add/levels" element={
-            <Admin_Layout>
-              <Admin_Add_Level />
-            </Admin_Layout>
-          } />
+            <Route path="/admin/add/levels" element={
+              <Admin_Layout>
+                <Admin_Add_Level />
+              </Admin_Layout>
+            } />
 
-          <Route path="/admin/dates" element={
-            <Admin_Layout>
-              <Admin_DateRange />
-            </Admin_Layout>
-          } />
+            <Route path="/admin/dates" element={
+              <Admin_Layout>
+                <Admin_DateRange />
+              </Admin_Layout>
+            } />
 
-          <Route path="/admin/add/dates" element={
-            <Admin_Layout>
-              <Admin_Add_DateRange />
-            </Admin_Layout>
-          } />
+            <Route path="/admin/add/dates" element={
+              <Admin_Layout>
+                <Admin_Add_DateRange />
+              </Admin_Layout>
+            } />
 
-          <Route path="/admin/edit/dates/:id" element={
-            <Admin_Layout>
-              <Admin_Edit_DateRange />
-            </Admin_Layout>
-          } />
+            <Route path="/admin/edit/dates/:id" element={
+              <Admin_Layout>
+                <Admin_Edit_DateRange />
+              </Admin_Layout>
+            } />
 
-          <Route path="/admin/room" element={
-            <Admin_Layout>
-              <Admin_Room />
-            </Admin_Layout>
-          } />
+            <Route path="/admin/room" element={
+              <Admin_Layout>
+                <Admin_Room />
+              </Admin_Layout>
+            } />
 
-          <Route path="/admin/add/room" element={
-            <Admin_Layout>
-              <Admin_Add_Room />
-            </Admin_Layout>
-          } />
+            <Route path="/admin/add/room" element={
+              <Admin_Layout>
+                <Admin_Add_Room />
+              </Admin_Layout>
+            } />
 
-          <Route path="/admin/edit/room/:id" element={
-            <Admin_Layout>
-              <Admin_Edit_Room />
-            </Admin_Layout>
-          } />
+            <Route path="/admin/edit/room/:id" element={
+              <Admin_Layout>
+                <Admin_Edit_Room />
+              </Admin_Layout>
+            } />
 
-          <Route path="/admin/activity" element={
-            <Admin_Layout>
-              <Admin_Activity />
-            </Admin_Layout>
-          } />
+            <Route path="/admin/activity" element={
+              <Admin_Layout>
+                <Admin_Activity />
+              </Admin_Layout>
+            } />
 
-          <Route path="/admin/add/activity" element={
-            <Admin_Layout>
-              <Admin_Add_Activity />
-            </Admin_Layout>
-          } />
+            <Route path="/admin/add/activity" element={
+              <Admin_Layout>
+                <Admin_Add_Activity />
+              </Admin_Layout>
+            } />
 
-          <Route path="/admin/edit/activity/:id" element={
-            <Admin_Layout>
-              <Admin_Edit_Activity />
-            </Admin_Layout>
-          } />
+            <Route path="/admin/edit/activity/:id" element={
+              <Admin_Layout>
+                <Admin_Edit_Activity />
+              </Admin_Layout>
+            } />
 
-          <Route path="/admin/coupon" element={
-            <Admin_Layout>
-              <Admin_Coupon />
-            </Admin_Layout>
-          } />
+            <Route path="/admin/coupon" element={
+              <Admin_Layout>
+                <Admin_Coupon />
+              </Admin_Layout>
+            } />
 
-          <Route path="/admin/add/coupon" element={
-            <Admin_Layout>
-              <Admin_Add_Coupon />
-            </Admin_Layout>
-          } />
+            <Route path="/admin/add/coupon" element={
+              <Admin_Layout>
+                <Admin_Add_Coupon />
+              </Admin_Layout>
+            } />
 
-          <Route path="/admin/edit/coupon/:id" element={
-            <Admin_Layout>
-              <Admin_Edit_Coupon />
-            </Admin_Layout>
-          } />
-          
-        </Routes>
+            <Route path="/admin/edit/coupon/:id" element={
+              <Admin_Layout>
+                <Admin_Edit_Coupon />
+              </Admin_Layout>
+            } />
+
+          </Routes>
         </PageTracker>
       </BrowserRouter>
     </div>
