@@ -7,6 +7,7 @@ const Booking = ({ tripName }) => {
 
     // const location = useLocation();
     // const { trip_name } = location.state || {}; 
+    
     return (
         <div>
 
@@ -14,7 +15,7 @@ const Booking = ({ tripName }) => {
                 <div className="row ">
                     {/* Logo and Trip Name */}
                     <div className="col-lg-6">
-                        <div className="d-flex ">
+                        <div className="d-flex left_div">
                             <img src={logo} alt="" className="booking_logo" />
                             <span className="show_trip_name">
                                 {tripName}
@@ -24,25 +25,25 @@ const Booking = ({ tripName }) => {
 
                     {/* Booking button and Pricing */}
                     <div className="col-lg-6 ">
-                        <div className='right_div'>
-                            <span className="mx-2">
+                        <div className='right_div text-center '>
+                            <span className="booking_item_span">
                                 From
                             </span>
-                            <span className="mx-2">
+                            <span className="booking_item_span">
                                 $420.54
                             </span>
-                            <span className="mx-2">
+                            <span className="booking_item_span">
                                 / Week
                             </span>
-                            <span className="mx-2">
+                            <span className="booking_item_span">
                                 <NavLink to="/form" state={{ tripName }} className="Booking_btn">
                                     Book
                                 </NavLink>
                             </span>
 
-                            <span className="mx-2">
-                                <a href="https://wa.me/31850091325?text=Hello" className="ms-2 text-decoration-none text-warning fw-bold" title="Call us on WhatsApp">
-                                    <i className="fa fa-whatsapp fs-3 text-warning"></i>
+                            <span className="booking_item_span">
+                                <a href="https://wa.me/31850091325?text=Hello" className=" text-decoration-none text-warning fw-bold" title="Call us on WhatsApp">
+                                    <i className="fa fa-whatsapp wp_icon text-warning"></i>
                                 </a>
                             </span>
 

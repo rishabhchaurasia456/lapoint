@@ -130,7 +130,7 @@ const Room = () => {
               </div>
 
               <div className="container-fluid">
-                <p className="level_heading fs-5">Choose your room type | Price add-on per room for the duration</p>
+                <p className="level_heading">Choose your room type | Price add-on per room for the duration</p>
 
                 {roomtype.map((item, index) => (
                   <div className="row form_crd_row mt-4" key={item._id}>

@@ -276,6 +276,7 @@ function App() {
           }>
           </Route>
 
+
           <Route path='/Term_Condition' element={
             <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
               <Termcondition />
@@ -283,8 +284,12 @@ function App() {
           }>
           </Route>
 
-
-
+          {/* <Route path='/Cookies_Policy' element={
+            <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
+              
+            </KiteLayout>
+          }>
+          </Route> */}
 
 
 

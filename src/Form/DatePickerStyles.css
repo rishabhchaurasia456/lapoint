@@ -1,3 +1,7 @@
+.person_week {
+  font-size: 22px;
+}
+
 .cal_head {
   text-transform: uppercase;
   color: #ffc800;
@@ -9,7 +13,7 @@
 
 .datepick_border {
   border: 1px solid #ffc800;
-  margin: 5%;
+  margin: 2%;
 }
 
 .unavailable-date {
@@ -25,7 +29,7 @@
 
 
 .selected-range-date {
-  background-color: rgb(64, 240, 64); 
+  background-color: rgb(64, 240, 64);
   color: black;
 }
 
@@ -106,8 +110,10 @@
 .react-datepicker__navigation--next {
   top: 30px;
   font-size: 15px !important;
-  color: black !important;
+
+
 }
+
 
 .react-datepicker__month {
   margin: 10px;
@@ -129,7 +135,7 @@
 .custom-datepicker::before {
   content: '';
   position: absolute;
-  top: 450px;
+  top: 400px;
   /* margin-top: 10%; */
   bottom: 0;
   left: 50%;
@@ -139,21 +145,53 @@
   z-index: 1;
 }
 
+.date_pick_btn {
+  background-color: #ffc800;
+  color: black;
+  font-size: 25px;
+  margin: auto;
+  width: 87%;
+  margin-bottom: 10px;
+  padding: 5px;
+  border: 0;
+  text-decoration: none;
+  border-radius: 8px;
+}
 
+
+@media only screen and (max-width: 600px) {
+  .person_week {
+    font-size: 15px !important;
+  }
+
+  .date_pick_btn{
+    background-color: #ffc800;
+    color: black;
+    font-size: 20px;
+    margin: auto;
+    width: 87%;
+    border: 0;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+}
 
 
 /* Adjustments for mobile */
 @media (max-width: 768px) {
 
-  .datepicker_cont{
+  .datepicker_cont {
     margin: 0;
     padding: 0;
   }
+
   .react-datepicker {
     width: 100%;
     margin: 0;
     padding: 0;
   }
+
   .custom-datepicker .react-datepicker__day {
     width: 25px;
     border-radius: 50%;
@@ -187,4 +225,22 @@
 
   }
 
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 1024px) and (min-width: 500px) {
+  .date_visible_span {
+    margin: 2px !important
+  }
+
+  .custom-datepicker::before {
+    display: none;
+  }
+
+  .react-datepicker {
+    /* max-width: 100% !important; */
+    width: 55.5%;
+    margin: 0;
+    padding: 0;
+  }
 }

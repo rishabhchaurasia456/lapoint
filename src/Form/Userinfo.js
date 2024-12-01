@@ -62,7 +62,7 @@ const Userinfo = () => {
         updatedTravellers[index][field] = value;
         setTravellers(updatedTravellers);
     };
-   
+
     const handleToggle = () => {
         setUseSameDetails(!useSameDetails);
         if (!useSameDetails) {
@@ -142,7 +142,6 @@ const Userinfo = () => {
                     <div className="col-lg-2"></div>
                     <div className="col-lg-8 card mb-3 p-4">
                         <h5 className="form_head">Traveller #{index + 1} Information</h5>
-
                         <div className='d-flex mt-2'>
                             <div>
                                 <label class="switch">
@@ -153,9 +152,7 @@ const Userinfo = () => {
                             <div className='mx-2'>
                                 <p>  Use the same information for Traveller 1</p>
                             </div>
-
                         </div>
-
 
                         <div className='' key={index}>
                             <div className='row my-2'>
@@ -177,7 +174,6 @@ const Userinfo = () => {
 
                             </div>
                             <div className='row mt-2'>
-
                                 <div class="col mat-input">
                                     <label for="">Email</label>
                                     <input type="text" className='w-100'
@@ -187,7 +183,6 @@ const Userinfo = () => {
                                         disabled={index === 0 && useSameDetails} // Disable if using same details 
                                     />
                                 </div>
-
 
 
                                 <div className="col mat-input">
@@ -232,7 +227,6 @@ const Userinfo = () => {
                                 </div>
                             </div>
                         </div>
-
                     </div>
 
                     <div className="col-lg-2"></div>
@@ -247,11 +241,9 @@ const Userinfo = () => {
 
             {/* show selected trip data by user   */}
 
-
             <div className="container-fluid level_container">
                 <div className="row">
                     <div className="col text-center">
-
                         <div className=" person_week">
                             {/* <p><b>Selected Duration:</b> {selectedDuration}</p> */}
                             {startDate && endDate && (
@@ -275,7 +267,6 @@ const Userinfo = () => {
                                 )}
                             </p>
                             <div className="datepick_border"> </div>
-
                         </div>
                     </div>
                 </div>
@@ -288,7 +279,7 @@ const Userinfo = () => {
             <div className="container-fluid level_container">
                 <div className="row">
                     <div className="col-lg-2"></div>
-                    <div className="col-lg-8 card mb-3 p-4">
+                    <div className="col-lg-8 card mb-3 p-3 mt-3">
                         <form className=''>
                             <h5 className="form_head">User Information for Payment</h5>
                             <div className='row'>
@@ -322,9 +313,66 @@ const Userinfo = () => {
                                 <div className="col mat-input">
                                     <select className='w-100'>
                                         <option>Select Country</option>
+                                        <option>Afghanistan</option>
+                                        <option>Albania</option>
+                                        <option>Algeria</option>
+                                        <option>Andorra</option>
+                                        <option>Bangladesh</option>
+                                        <option>Barbados</option>
+                                        <option>Belgium</option>
+                                        <option>Belize</option>
+                                        <option>Bhutan</option>
+                                        <option>Canada</option>
+                                        <option>China</option>
+                                        <option>Colombia</option>
+                                        <option>Egypt</option>
+                                        <option>Ethiopia</option>
+                                        <option>Estonia</option>
+                                        <option>Finland</option>
+                                        <option>France</option>
+                                        <option>Germany</option>
+                                        <option>Ghana</option>
+                                        <option>Georgia</option>
+                                        <option>Ghana</option>
+                                        <option>Guyana</option>
+                                        <option>Hong Kong</option>
+                                        <option>Hungary</option>
+                                        <option>Iceland</option>
                                         <option>India</option>
-                                        <option>UK</option>
+                                        <option>Indonesia</option>
+                                        <option>Iran</option>
+                                        <option>Ireland</option>
+                                        <option>Italy</option>
+                                        <option>Japan</option>
+                                        <option>Jordan</option>
+                                        <option>Kenya</option>
+                                        <option>Korea</option>
+                                        <option>Kuwait</option>
+                                        <option>Liberia</option>
+                                        <option>Malaysia</option>
+                                        <option>Maldives</option>
+                                        <option>Monaco</option>
+                                        <option>Myanmar</option>
+                                        <option>Nepal</option>
+                                        <option>Netherlands</option>
+                                        <option>New Zealand</option>
+                                        <option>Nepal</option>
+                                        <option>Norway</option>
+                                        <option>Oman</option>
+                                        <option>Pakistan</option>
+                                        <option>Poland</option>
+                                        <option>Russian</option>
+                                        <option>Saudi Arabia</option>
+                                        <option>South Africa</option>
+                                        <option>Spain</option>
+                                        <option>Sri Lanka</option>
+                                        <option>Tanzania</option>
+                                        <option>Thailand    </option>
+                                        <option>United Kingdom</option>
                                         <option>USA</option>
+                                        <option>Serbia</option>
+                                        <option>Zimbabwe</option>
+
                                     </select>
                                 </div>
 

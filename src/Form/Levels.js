@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { NavLink, useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import "./Form.css"
 import axios from 'axios';
 
@@ -132,13 +132,13 @@ const Levels = () => {
       <div className="row pb-3">
         <div className="col-md-2"></div>
         <div className="col-md-8">
-          <div className="mt-4 pt-5 mb-5">
+          <div className="mt-2">
             <h1 className="tripName">{tripName}</h1>
           </div>
           <form onSubmit={handleNext}>
             <h5 className="level_heading">Choose duration</h5>
             <select
-              className="form-control w-100 p-3"
+              className="form-control form-select w-100 level_input"
               id="duration"
               onChange={handleDurationChange}
               value={selectedDuration}
@@ -156,7 +156,8 @@ const Levels = () => {
               {zohoItems.length > 0 ? (
                 zohoItems.map((item, index) => (
                   <div className="row form_crd_row mt-4" key={item.item_id}>
-                    <div className="col-md-9">
+                    {/* Column for Item Details */}
+                    <div className="col">
                       <div className="level_crd_text">
                         <p className="level_crd_para">
                           <span>
@@ -176,7 +177,7 @@ const Levels = () => {
                             disabled={index === 0}
                           />
                           <label
-                            className="form-check-label"
+                            className="form-check-label check_box_text"
                             htmlFor={`carRental-${index}`}
                           >
                             {index === 0
@@ -185,34 +186,60 @@ const Levels = () => {
                           </label>
                         </div>
                       </div>
-                      <div className="mx-3 mb-2">
-                        <NavLink to="/form" className="moreinfo_btn">
-                          More info
-                        </NavLink>
-                      </div>
                     </div>
-                    <div className="col-md-3">
-                      <i
-                        className="fa fa-minus-circle P_M_icon"
-                        onClick={() => decrement(index)}
-                      ></i>
-                      <span className="add_num">{counts[index]}</span>
-                      <i
-                        className="fa fa-plus-circle P_M_icon"
-                        onClick={() => increment(index)}
-                      ></i>
+
+                    {/* Row for Additional Actions */}
+                    <div className="row">
+                      {/* Dropdown Content */}
+                      <div className="col-8">
+                        <div className="mx-3">
+                          <div className="col" key={index}>
+                            <details className="styled-dropdown">
+                              <summary className="summary-header text-dark">What's included</summary>
+                              <div className="dropdown-content fs-5 mb-2">
+                                {item.description.split("\n").map((line, lineIndex) => (
+                                  <p key={lineIndex} className="fs-6 text-dark">
+                                    <i className="fa fa-check-circle text-warning mx-2"></i>{line}
+                                  </p>
+                                ))}
+                              </div>
+                            </details>
+                          </div>
+                        </div>
+                      </div>
+                      {/* Increment and Decrement Section */}
+                      <div className="col-4 p_m_col mt-0 pt-0">
+                        <div className="p_m_col d-flex mt-0 pt-0 align-items-center">
+                          <i
+                            className="fa fa-minus-circle P_M_icon"
+                            onClick={() => decrement(index)}
+                          ></i>
+                          <span className="add_num mx-2">{counts[index]}</span>
+                          <i className="fa fa-plus-circle P_M_icon"
+                            onClick={() => increment(index)}
+                          ></i>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 ))
               ) : (
                 <p>No items available for the selected duration.</p>
               )}
+
+          
+
+              <div className="btn_container">
+                {selectedDuration && counts.some(count => count > 0) && (
+                  <button className="level_btn" type="submit">
+                    Continue
+                  </button>
+                )}
+              </div>
+
+
             </div>
-            <div className="btn_container">
-              <button className="level_btn" type="submit">
-                Continue <i className="fa fa-arrow-right"></i>
-              </button>
-            </div>
+
           </form>
         </div>
         <div className="col-md-2"></div>
