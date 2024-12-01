@@ -186,13 +186,16 @@ const Datepicker = () => {
                   </div>
                 )}
 
-                <div className="btn_container">
-                  <button className="level_btn" onClick={handleNextPage}>
-                    Next
-                  </button>
-                </div>
+
+
+              </div>
+              <div className="btn_container">
+                <button className="date_pick_btn mb-3" onClick={handleNextPage}>
+                  Next
+                </button>
               </div>
             </div>
+
             <div className="col-lg-2"></div>
           </div>
         </div>

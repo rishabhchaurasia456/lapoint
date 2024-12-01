@@ -74,7 +74,7 @@ const Checkout = () => {
 
                         {/* Room Details */}
                         <div>
-                            <h2 className='checkout_heading'>Room Details</h2>
+                            <h2 className='level_heading'>Room Details</h2>
                             {selectedRooms.map((room, index) => (
                                 <div className='row' key={index}>
                                     <div className="col-lg-9">
@@ -93,7 +93,7 @@ const Checkout = () => {
 
                         {/* Selected Levels */}
                         <div>
-                            <h2 className='checkout_heading'>Selected Levels</h2>
+                            <h2 className='level_heading'>Selected Levels</h2>
                             <div className="checkout_data">
                                 Total Kitset Rental Price: € {carRentalPrice}
                             </div>
@@ -117,7 +117,7 @@ const Checkout = () => {
 
                         {/* Selected Activities */}
                         <div>
-                            <h2 className='checkout_heading'>Selected Activities</h2>
+                            <h2 className='level_heading'>Selected Activities</h2>
                             {activityDetails.map((activity, index) => (
                                 <div className='row' key={index}>
                                     <div className="col-lg-9">
@@ -136,7 +136,7 @@ const Checkout = () => {
 
                         {/* Updated Total Price */}
                         <div className='text-center mt-4'>
-                            <h3 className='checkout_heading'>Updated Total Price: € {updatedTotalPrice}</h3>
+                            <h3 className='level_heading fs-3'>Updated Total Price: € {updatedTotalPrice}</h3>
                         </div>
 
                         {/* Confirm and Pay Button */}
@@ -147,7 +147,7 @@ const Checkout = () => {
                         </div>
                     </div>
                 </div>
-                <div className="col-lg-2"></div>
+                <div className="col-lg-2 mb-5 pb-5"></div>
             </div>
         </div>
     );

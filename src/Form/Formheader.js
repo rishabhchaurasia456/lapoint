@@ -8,13 +8,10 @@ const Formheader = () => {
     const handleBackClick = () => {
         navigate(-1);
     };
-
     const [showPopup, setShowPopup] = useState(false);
-
     const togglePopup = () => {
         setShowPopup(!showPopup);
     };
-
 
     return (
         <div>
@@ -30,7 +27,7 @@ const Formheader = () => {
                             {/* Logo col */}
                             <div className="col-4">
                                 <NavLink to="/" className="navbar-brand">
-                                    <img src={logo} alt="logo" className="img-fluid w-75" />
+                                    <img src={logo} alt="logo" className="header_img" />
                                 </NavLink>
                             </div>
 
@@ -39,11 +36,11 @@ const Formheader = () => {
                                 <div className='text-center'>
                                     <i className="fa fa-question-circle-o que_mark" onClick={togglePopup}></i>
 
-
+                                    {showPopup && <div className="Strip_overlay" />}
                                     {showPopup && (
                                         <div className="popup-box">
-                                            <p className='fw-bold '>Need help? Something not working? <i className='fa fa-close mx-2 px-2 close_btn' onClick={togglePopup} ></i></p>
-                                            <p>
+                                            <p className='fw-bold'>Need help? Something not working? <i className='fa fa-close mx-2 px-2 close_btn' onClick={togglePopup} ></i></p>
+                                            <p className='surf_para fs-5'>
                                                 If you have any issues with the booking or the payment, please contact us on  <Link to="https://wa.me/31850091325" target="_blank">WhatsApp +31 850091325</Link> or email us at <Link to="mailto:info@kiteactive.com">info@kiteactive.com</Link> so we can help you out. No matter what your problem is, we have the answer!!
                                             </p>
                                         </div>

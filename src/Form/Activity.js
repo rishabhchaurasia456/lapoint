@@ -177,7 +177,7 @@ const Activity = () => {
           </div>
 
           {/* Display Recommended Activities */}
-          <h3 className='text-light'>Recommended Activities</h3>
+          <h3 className='level_heading'>Recommended Activities</h3>
           <div className="container-fluid">
             {recommendedActivities.map((item, index) => (
               <div className="row form_crd_row mt-4" key={index}>
@@ -198,7 +198,7 @@ const Activity = () => {
           </div>
 
           {/* Display Add-On Activities */}
-          <h3 className='text-light'>Add-On Activities</h3>
+          <h3 className='level_heading'>Add-On Activities</h3>
           <div className="container-fluid">
             {addOnActivities.map((item, index) => (
               <div className="row form_crd_row mt-4" key={index}>
