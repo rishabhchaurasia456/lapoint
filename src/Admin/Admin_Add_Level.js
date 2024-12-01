@@ -29,6 +29,9 @@ const Admin_Add_Level = () => {
   return (
     <div className="container-fluid">
       <div className="row">
+        <h1 className='text-center'>Add New Trip levels Dates</h1>
+      </div>
+      <div className="row p-3">
         <div className="col-md-3"></div>
         <div className="col-md-6">
           <form onSubmit={handleSubmit}>

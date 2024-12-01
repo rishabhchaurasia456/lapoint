@@ -53,7 +53,7 @@ const Admin_Level = () => {
   };
 
   const handleDelete = async (id) => {
-    if (window.confirm("Are you sure you want to delete this activity?")) {
+    if (window.confirm("Are you sure you want to delete this level and days?")) {
       try {
         const response = await axios.delete(
           `http://localhost:5500/api/admin/delete_form_level/${id}`
@@ -64,8 +64,8 @@ const Admin_Level = () => {
           setTripLevels((prevData) => prevData.filter((trip) => trip._id !== id));
         }
       } catch (error) {
-        console.error("Error deleting activity:", error);
-        alert("Failed to delete the activity. Please try again.");
+        console.error("Error deleting level and days:", error);
+        alert("Failed to delete the level and days. Please try again.");
       }
     }
   };

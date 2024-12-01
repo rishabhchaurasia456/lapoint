@@ -22,7 +22,7 @@ const Admin_DateRange = () => {
   }, []);
 
   const handleDelete = async (id) => {
-    if (window.confirm("Are you sure you want to delete this trip?")) {
+    if (window.confirm("Are you sure you want to delete this trip dates?")) {
       try {
         const response = await axios.delete(
           `http://localhost:5500/api/admin/delete_date_range/${id}`
@@ -33,8 +33,8 @@ const Admin_DateRange = () => {
           setTripData((prevData) => prevData.filter((trip) => trip._id !== id));
         }
       } catch (error) {
-        console.error("Error deleting trip:", error);
-        alert("Failed to delete the trip. Please try again.");
+        console.error("Error deleting trip dates:", error);
+        alert("Failed to delete the trip dates. Please try again.");
       }
     }
   };

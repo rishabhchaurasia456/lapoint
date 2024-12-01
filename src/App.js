@@ -60,6 +60,9 @@ import Admin_Edit_Room from './Admin/Admin_Edit_Room';
 import Admin_Activity from './Admin/Admin_Activity';
 import Admin_Add_Activity from './Admin/Admin_Add_Activity';
 import Admin_Edit_Activity from './Admin/Admin_Edit_Activity';
+import Admin_Coupon from './Admin/Admin_Coupon';
+import Admin_Add_Coupon from './Admin/Admin_Add_Coupon';
+import Admin_Edit_Coupon from './Admin/Admin_Edit_Coupon';
 
 function App() {
 
@@ -425,6 +428,24 @@ function App() {
           <Route path="/admin/edit/activity/:id" element={
             <Admin_Layout>
               <Admin_Edit_Activity />
+            </Admin_Layout>
+          } />
+
+          <Route path="/admin/coupon" element={
+            <Admin_Layout>
+              <Admin_Coupon />
+            </Admin_Layout>
+          } />
+
+          <Route path="/admin/add/coupon" element={
+            <Admin_Layout>
+              <Admin_Add_Coupon />
+            </Admin_Layout>
+          } />
+
+          <Route path="/admin/edit/coupon/:id" element={
+            <Admin_Layout>
+              <Admin_Edit_Coupon />
             </Admin_Layout>
           } />
           
