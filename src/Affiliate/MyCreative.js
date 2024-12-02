@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import config from '../config/config';
 
 const MyCreative = () => {
     const [selectedOption, setSelectedOption] = useState(""); // Track selected option (image/text_link)
@@ -10,7 +11,7 @@ const MyCreative = () => {
 
     // Fetch affiliate users data from the backend API when the component mounts
     useEffect(() => {
-        axios.post('http://localhost:5500/api/affiliate/affiliate_user_list') // Adjust to the correct API URL
+        axios.post(`${config.API_BASE_URL}/api/affiliate/affiliate_user_list`) // Adjust to the correct API URL
             .then(response => {
                 console.log('Fetched affiliates:', response.data); // Log the actual data returned from the API
                 if (response.data) {

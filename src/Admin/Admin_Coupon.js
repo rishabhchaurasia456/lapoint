@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import config from '../config/config';
 
 const Admin_Coupon = () => {
     const [couponData, setCouponData] = useState([]);
@@ -9,7 +10,7 @@ const Admin_Coupon = () => {
         const fetchCouponData = async () => {
             try {
                 const response = await axios.post(
-                    "http://localhost:5500/api/admin/getall_coupon"
+                    `${config.API_BASE_URL}/api/admin/getall_coupon`
                 );
                 const fetchedData = response.data.getallCoupon || [];
                 setCouponData(fetchedData);
@@ -25,7 +26,7 @@ const Admin_Coupon = () => {
         if (window.confirm("Are you sure you want to delete this coupon?")) {
             try {
                 const response = await axios.delete(
-                    `http://localhost:5500/api/admin/delete_coupon/${id}`
+                    `${config.API_BASE_URL}/api/admin/delete_coupon/${id}`
                 );
                 if (response.status === 200) {
                     alert(response.data.message);

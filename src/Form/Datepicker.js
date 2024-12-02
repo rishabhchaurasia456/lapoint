@@ -5,6 +5,7 @@ import 'react-datepicker/dist/react-datepicker.css';
 import { addDays, parseISO, isSameDay, isWithinInterval } from 'date-fns';
 import axios from 'axios';
 import './DatePickerStyles.css';
+import config from '../config/config';
 
 const Datepicker = () => {
   const location = useLocation();
@@ -31,7 +32,7 @@ const Datepicker = () => {
   // Fetch all date ranges using Axios and filter based on tripName and selectedDuration
   const fetchDateRanges = async () => {
     try {
-      const response = await axios.post('http://localhost:5500/api/admin/getall_date_ranges');
+      const response = await axios.post(`${config.API_BASE_URL}/api/admin/getall_date_ranges`);
       const data = response.data;
 
       // Filter for the selected tripName and duration

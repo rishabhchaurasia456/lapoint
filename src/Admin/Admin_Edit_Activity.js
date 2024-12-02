@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
+import config from '../config/config';
 
 const Admin_Edit_Activity = () => {
     const { id } = useParams(); // Get tripId from URL
@@ -12,11 +13,11 @@ const Admin_Edit_Activity = () => {
     useEffect(() => {
         const fetchActivityDetails = async () => {
             try {
-                const response = await axios.post(`http://localhost:5500/api/admin/get_activity/${id}`);
+                const response = await axios.post(`${config.API_BASE_URL}/api/admin/get_activity/${id}`);
                 console.log("response", response.data.trip);
 
                 const trip = response.data.trip;
-                
+
                 // Set the trip name
                 setTripName(trip.tripName);
                 setActivityType(trip.activitytype);
@@ -51,7 +52,7 @@ const Admin_Edit_Activity = () => {
     // Handle form submission to update the activity
     const handleSubmit = async (e) => {
         e.preventDefault();
-        
+
         // Prepare the payload, sending tripId and the updated activity details
         const payload = {
             tripName,
@@ -64,7 +65,7 @@ const Admin_Edit_Activity = () => {
 
         try {
             // Send the request to update the activity details for the given tripId
-            const response = await axios.post(`http://localhost:5500/api/admin/edit_activity/${id}`, payload);
+            const response = await axios.post(`${config.API_BASE_URL}/api/admin/edit_activity/${id}`, payload);
             if (response.status === 200) {
                 alert('Activity details updated successfully!');
                 navigate('/admin/activity'); // Navigate back to the activity list
@@ -92,18 +93,22 @@ const Admin_Edit_Activity = () => {
                     />
                 </div>
 
+                {/* Activity Type Dropdown */}
                 <div className="mb-3">
                     <label htmlFor="activityType" className="form-label">
                         Activity Type
                     </label>
-                    <input
-                        type="text"
+                    <select
                         className="form-control"
                         id="activityType"
                         value={activityType}
-                        onChange={(e) => setActivityType(e.target.value)} // Editable for Activity Type
+                        onChange={(e) => setActivityType(e.target.value)}
                         required
-                    />
+                    >
+                        <option value="">--Select Activity Type--</option>
+                        <option value="Recommended Activities">Recommended Activities</option>
+                        <option value="Add-On Activities">Add-On Activities</option>
+                    </select>
                 </div>
 
                 <h4>Activity Details</h4>

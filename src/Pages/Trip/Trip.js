@@ -11,6 +11,7 @@ import Overview from './TripComponent/Overview';
 import trips from './Tripdata';
 import './TripComponent/Trips.css'
 import { Link, useLocation, useParams } from 'react-router-dom';
+import config from '../../config/config';
 import Booking from '../Kitecamps/Booking';
 import Surfcampslider from '../../Components/Surfcampslider/Surfcampslider';
 
@@ -93,7 +94,7 @@ const Trip = ({ selectedLanguage }) => {
 
     // Function to send visit data to the backend
     const trackVisit = (userId, page) => {
-        fetch('http://localhost:5500/api/affiliate/track', {
+        fetch(`${config.API_BASE_URL}/api/affiliate/track`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

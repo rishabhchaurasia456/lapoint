@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import "./Form.css"
 import axios from 'axios';
+import config from '../config/config';
 
 const Levels = () => {
   const [selectedDuration, setSelectedDuration] = useState('');
@@ -16,7 +17,7 @@ const Levels = () => {
   useEffect(() => {
     const fetchTripData = async () => {
       try {
-        const { data } = await axios.post("http://localhost:5500/api/admin/admin_get_form_level");
+        const { data } = await axios.post(`${config.API_BASE_URL}/api/admin/admin_get_form_level`);
         const tripData = data.getAllTripLevelDate || [];
         const selectedTrip = tripData.find(trip => trip.trip_name.toLowerCase() === tripName.toLowerCase());
 
@@ -191,7 +192,7 @@ const Levels = () => {
                     {/* Row for Additional Actions */}
                     <div className="row">
                       {/* Dropdown Content */}
-                      <div className="col-8">
+                      <div className="col-10">
                         <div className="mx-3">
                           <div className="col" key={index}>
                             <details className="styled-dropdown">
@@ -208,7 +209,7 @@ const Levels = () => {
                         </div>
                       </div>
                       {/* Increment and Decrement Section */}
-                      <div className="col-4 p_m_col mt-0 pt-0">
+                      <div className="col-2 p_m_col mt-0 pt-0">
                         <div className="p_m_col d-flex mt-0 pt-0 align-items-center">
                           <i
                             className="fa fa-minus-circle P_M_icon"

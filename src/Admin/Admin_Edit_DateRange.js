@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import config from '../config/config';
 
 const Admin_Edit_DateRange = () => {
   const { id } = useParams(); // Trip ID from URL
@@ -17,7 +18,7 @@ const Admin_Edit_DateRange = () => {
     const fetchTripData = async () => {
       try {
         setLoading(true);
-        const response = await axios.post(`http://localhost:5500/api/admin/get_date_ranges/${id}`);
+        const response = await axios.post(`${config.API_BASE_URL}/api/admin/get_date_ranges/${id}`);
         const tripData = response.data?.getTripDateRange;
         if (tripData) {
           setTripName(tripData.tripName);
@@ -80,7 +81,7 @@ const Admin_Edit_DateRange = () => {
       setMessage('');
 
       // Make the API call to update trip data
-      await axios.put(`http://localhost:5500/api/admin/edit_date_range/${id}`, {
+      await axios.put(`${config.API_BASE_URL}/api/admin/edit_date_range/${id}`, {
         tripName,
         days,
         dateRanges,

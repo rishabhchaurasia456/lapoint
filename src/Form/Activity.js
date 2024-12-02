@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
+import config from '../config/config';
 
 const Activity = () => {
   const location = useLocation();
@@ -16,7 +17,7 @@ const Activity = () => {
   useEffect(() => {
     const fetchTripData = async () => {
       try {
-        const response = await axios.post("http://localhost:5500/api/admin/getall_activity");
+        const response = await axios.post(`${config.API_BASE_URL}/api/admin/getall_activity`);
 
         // Filter data by the tripName passed from the previous component
         const tripActivities = response.data.getallTripActivity.filter(

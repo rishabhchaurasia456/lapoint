@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import config from '../config/config';
 
 const Room = () => {
   const [countsbed, setCountsbed] = useState([]); // Dynamic counts for each room type
@@ -16,7 +17,7 @@ const Room = () => {
   useEffect(() => {
     const fetchRoomDetails = async () => {
       try {
-        const response = await axios.post("http://localhost:5500/api/admin/getall_room", { tripName });
+        const response = await axios.post(`${config.API_BASE_URL}/api/admin/getall_room`, { tripName });
         const tripRooms = response.data.getallTripRoom?.find(trip => trip.tripName === tripName)?.roomdetail || []; // Match by tripName
         setRoomtype(tripRooms);
 

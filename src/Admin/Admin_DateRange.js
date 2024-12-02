@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import config from '../config/config';
 
 const Admin_DateRange = () => {
   const [tripData, setTripData] = useState([]);
@@ -9,7 +10,7 @@ const Admin_DateRange = () => {
     const fetchTripData = async () => {
       try {
         const response = await axios.post(
-          "http://localhost:5500/api/admin/getall_date_ranges"
+          `${config.API_BASE_URL}/api/admin/getall_date_ranges`
         );
         const fetchedData = response.data.getAllTripDateRange || [];
         setTripData(fetchedData);
@@ -25,7 +26,7 @@ const Admin_DateRange = () => {
     if (window.confirm("Are you sure you want to delete this trip dates?")) {
       try {
         const response = await axios.delete(
-          `http://localhost:5500/api/admin/delete_date_range/${id}`
+          `${config.API_BASE_URL}/api/admin/delete_date_range/${id}`
         );
         if (response.status === 200) {
           alert(response.data.message);

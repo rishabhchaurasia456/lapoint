@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import config from '../config/config';
 
 const Admin_Activity = () => {
     const [tripActivity, setTripActivity] = useState([]);
@@ -9,7 +10,7 @@ const Admin_Activity = () => {
         const fetchTripData = async () => {
             try {
                 const response = await axios.post(
-                    "http://localhost:5500/api/admin/getall_activity"
+                    `${config.API_BASE_URL}/api/admin/getall_activity`
                 );
                 const fetchedData = response.data.getallTripActivity || [];
                 setTripActivity(fetchedData);
@@ -26,7 +27,7 @@ const Admin_Activity = () => {
         if (window.confirm("Are you sure you want to delete this activity?")) {
             try {
                 const response = await axios.delete(
-                    `http://localhost:5500/api/admin/delete_activity/${id}`
+                    `${config.API_BASE_URL}/api/admin/delete_activity/${id}`
                 );
                 if (response.status === 200) {
                     alert(response.data.message);

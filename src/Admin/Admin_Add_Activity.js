@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import config from '../config/config';
 
 const Admin_Add_Activity = () => {
   const [tripName, setTripName] = useState('');
@@ -37,7 +38,7 @@ const Admin_Add_Activity = () => {
     };
 
     try {
-      const response = await axios.post('http://localhost:5500/api/admin/create_activity', payload);
+      const response = await axios.post(`${config.API_BASE_URL}/api/admin/create_activity`, payload);
       if (response.status === 201) {
         alert('Activity entry created successfully!');
         setTripName('');
@@ -74,14 +75,17 @@ const Admin_Add_Activity = () => {
           <label htmlFor="activityType" className="form-label">
             Activity Type
           </label>
-          <input
-            type="text"
+          <select
             className="form-control"
             id="activityType"
             value={activityType}
             onChange={(e) => setActivityType(e.target.value)}
             required
-          />
+          >
+            <option value="">--Select Activity Type--</option>
+            <option value="Recommended Activities">Recommended Activities</option>
+            <option value="Add-On Activities">Add-On Activities</option>
+          </select>
         </div>
 
         {/* Activity Details Section */}

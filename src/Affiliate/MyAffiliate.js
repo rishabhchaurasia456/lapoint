@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import config from '../config/config';
 
 const MyAffiliate = () => {
     const [affiliates, setAffiliates] = useState([]);  // State to store the affiliate data
@@ -9,7 +10,7 @@ const MyAffiliate = () => {
 
     // Fetch affiliate data from the backend
     useEffect(() => {
-        axios.post('http://localhost:5500/api/affiliate/affiliate_user_list')  // Use your backend endpoint for fetching affiliate data
+        axios.post(`${config.API_BASE_URL}/api/affiliate/affiliate_user_list`)  // Use your backend endpoint for fetching affiliate data
             .then(response => {
                 setAffiliates(response.data);  // Store affiliate data in state
                 setLoading(false);  // Stop loading once data is fetched

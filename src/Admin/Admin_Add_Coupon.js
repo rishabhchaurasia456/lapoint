@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import config from '../config/config';
 
 const Admin_Add_Coupon = () => {
     const navigate = useNavigate()
@@ -34,7 +35,7 @@ const Admin_Add_Coupon = () => {
         };
 
         try {
-            const response = await axios.post('http://localhost:5500/api/admin/create_coupon', data);
+            const response = await axios.post(`${config.API_BASE_URL}/api/admin/create_coupon`, data);
 
             if (response.status === 201) {
                 setMessage(response.data.message);

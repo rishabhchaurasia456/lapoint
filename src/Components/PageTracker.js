@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import config from '../config/config';
 
 const PageTracker = ({ children }) => {
     const location = useLocation();
@@ -15,7 +16,7 @@ const PageTracker = ({ children }) => {
     }, [location]);
 
     const trackVisit = (userId, page) => {
-        fetch('http://localhost:5500/api/affiliate/track', {
+        fetch(`${config.API_BASE_URL}/api/affiliate/track`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

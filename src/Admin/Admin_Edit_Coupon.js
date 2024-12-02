@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import config from '../config/config';
 
 const Admin_Edit_Coupon = () => {
     const { id } = useParams(); // Get coupon ID from URL
@@ -17,7 +18,7 @@ const Admin_Edit_Coupon = () => {
     useEffect(() => {
         const fetchCouponDetails = async () => {
             try {
-                const response = await axios.post(`http://localhost:5500/api/admin/get_coupon/${id}`);
+                const response = await axios.post(`${config.API_BASE_URL}/api/admin/get_coupon/${id}`);
                 const coupon = response.data.coupon;
                 setDiscountName(coupon.discountName);
                 setDiscountRate(coupon.discountRate);
@@ -43,7 +44,7 @@ const Admin_Edit_Coupon = () => {
         };
 
         try {
-            const response = await axios.put(`http://localhost:5500/api/admin/edit_coupon/${id}`, updatedCoupon);
+            const response = await axios.put(`${config.API_BASE_URL}/api/admin/edit_coupon/${id}`, updatedCoupon);
             if (response.status === 200) {
                 alert('Coupon updated successfully!');
                 navigate('/admin/coupon'); // Redirect to the coupon list page or desired path

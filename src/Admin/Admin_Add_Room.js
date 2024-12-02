@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import config from '../config/config';
 
 const Admin_Add_Room = () => {
   const [tripName, setTripName] = useState('');
@@ -31,7 +32,7 @@ const Admin_Add_Room = () => {
     };
 
     try {
-      const response = await axios.post('http://localhost:5500/api/admin/create_room', payload);
+      const response = await axios.post(`${config.API_BASE_URL}/api/admin/create_room`, payload);
       if (response.status === 201) {
         alert('Room entry created successfully!');
         setTripName('');

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import config from '../config/config';
 
 const Admin_Add_DateRange = () => {
   const [tripName, setTripName] = useState('');
@@ -53,7 +54,7 @@ const Admin_Add_DateRange = () => {
       setMessage('');
 
       // Make the API call
-      const response = await axios.post('http://localhost:5500/api/admin/create_date_ranges', {
+      const response = await axios.post(`${config.API_BASE_URL}/api/admin/create_date_ranges`, {
         tripName,
         days,
         dateRanges,

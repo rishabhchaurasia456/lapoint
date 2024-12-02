@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import config from '../config/config';
 
 const Admin_Level = () => {
   const [tripLevels, setTripLevels] = useState([]); // State to store trip data
@@ -11,7 +12,7 @@ const Admin_Level = () => {
     const fetchTripData = async () => {
       try {
         const response = await axios.post(
-          "http://localhost:5500/api/admin/admin_get_form_level"
+          `${config.API_BASE_URL}/api/admin/admin_get_form_level`
         );
         const tripData = response.data.getAllTripLevelDate || [];
         console.log("API Response:", tripData);
@@ -35,14 +36,14 @@ const Admin_Level = () => {
     const { name, value } = e.target;
     setEditTrip((prev) => ({
       ...prev,
-      [name]: name === "days" ? value.split(",") : value, // Update days as an array
+      [name]: name === "days" ? value.split(", ") : value, // Update days as an array
     }));
   };
 
   // Handle saving the edited data
   const handleSave = async () => {
     try {
-      await axios.put(`http://localhost:5500/api/admin/edit_trip_level/${editTrip._id}`, editTrip);
+      await axios.put(`${config.API_BASE_URL}/api/admin/edit_trip_level/${editTrip._id}`, editTrip);
       setTripLevels((prev) =>
         prev.map((trip) => (trip._id === editTrip._id ? editTrip : trip))
       );
@@ -56,7 +57,7 @@ const Admin_Level = () => {
     if (window.confirm("Are you sure you want to delete this level and days?")) {
       try {
         const response = await axios.delete(
-          `http://localhost:5500/api/admin/delete_form_level/${id}`
+          `${config.API_BASE_URL}/api/admin/delete_form_level/${id}`
         );
         if (response.status === 200) {
           alert(response.data.message);

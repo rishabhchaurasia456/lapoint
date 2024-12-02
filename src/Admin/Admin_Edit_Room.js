@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
+import config from '../config/config';
 
 const Admin_Edit_Room = () => {
   const { id } = useParams(); // Get roomId from URL
@@ -11,7 +12,7 @@ const Admin_Edit_Room = () => {
   useEffect(() => {
     const fetchRoomDetails = async () => {
       try {
-        const response = await axios.post(`http://localhost:5500/api/admin/get_room/${id}`);
+        const response = await axios.post(`${config.API_BASE_URL}/api/admin/get_room/${id}`);
         console.log("response", response.data.trip);
 
         const trip = response.data.trip;
@@ -61,7 +62,7 @@ const Admin_Edit_Room = () => {
   
     try {
       // Send the request to update the room details for the given tripId
-      const response = await axios.post(`http://localhost:5500/api/admin/edit_room/${id}`, payload);
+      const response = await axios.post(`${config.API_BASE_URL}/api/admin/edit_room/${id}`, payload);
       if (response.status === 200) {
         alert('Room details updated successfully!');
         navigate('/admin/room'); // Navigate back to the rooms list

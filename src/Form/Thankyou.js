@@ -1,11 +1,12 @@
 import axios from 'axios';
 import React, { useEffect } from 'react'
+import config from '../config/config';
 
 const Thankyou = () => {
   useEffect(() => {
     const  usertracked_book= async () => {
       try {
-        const response = await axios.get("http://localhost:5500/api/affiliate/thankyou");
+        const response = await axios.get(`${config.API_BASE_URL}/api/affiliate/thankyou`);
         console.log(response);
       } catch (error) {
         console.error("Error fetching user details:", error);
