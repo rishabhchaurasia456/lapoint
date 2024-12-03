@@ -41,6 +41,7 @@ const Userinfo = () => {
     });
 
     const [useSameDetails, setUseSameDetails] = useState(false);
+    const [isTermsAccepted, setIsTermsAccepted] = useState(false);
 
     const [travellers, setTravellers] = useState(
         Array.from({ length: totalCount }).map(() => ({
@@ -55,6 +56,10 @@ const Userinfo = () => {
             size: '',
         }))
     );
+
+    const handleTermsChange = (e) => {
+        setIsTermsAccepted(e.target.checked);
+    };
 
     // Handle input changes for user details
     const handleUserChange = (field, value) => {
@@ -427,15 +432,28 @@ const Userinfo = () => {
             {renderTravellerForms()}
 
 
-            {/* Checkout btn  */}
+            {/* Make reservation btn  */}
             <div className="container-fluid level_container">
+                <div className="row">
+                    <div className="col">
+                        <input
+                            type="checkbox"
+                            checked={isTermsAccepted}
+                            onChange={handleTermsChange}
+                        />
+                        <span className="ms-2">I agree to the <a href="#" target="_blank">Terms and Conditions</a></span>
+                    </div>
+                </div>
                 <div className="row">
                     <div className="col-lg-2"></div>
                     <div className="col-lg-8">
                         <div className='btn_container mb-5'>
-                            <button className="level_btn " onClick={handleSubmit}>
-                                Make Reservation
-                            </button>
+                            {/* Conditionally render the button based on isTermsAccepted */}
+                            {isTermsAccepted ? (
+                                <button className="level_btn" onClick={handleSubmit}>
+                                    Make Reservation
+                                </button>
+                            ) : null} {/* Button is not rendered if isTermsAccepted is false */}
                         </div>
                     </div>
                     <div className="col-lg-2"></div>
