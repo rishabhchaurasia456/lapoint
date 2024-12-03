@@ -53,7 +53,7 @@ const Checkout = () => {
 
     const handleApplyCoupon = () => {
         const coupon = coupons.find(c => c.discountCode === couponCode);
-        
+
         if (coupon) {
             const discountAmountValue = (updatedTotalPrice * coupon.discountRate) / 100;
             const newTotalPrice = updatedTotalPrice - discountAmountValue;
@@ -185,17 +185,14 @@ const Checkout = () => {
 
                         <div className='text-center mt-4'>
                             <div className="row">
-                                <div className="col">
-                                    <input
-                                        className='form-control'
-                                        placeholder='Coupon code'
-                                        value={couponCode}
-                                        onChange={(e) => setCouponCode(e.target.value)}
-                                    />
+                                <div className="col col_input">
+                                    <input placeholder='Coupon code' type="text" name="text" class="input" value={couponCode}
+                                        onChange={(e) => setCouponCode(e.target.value)}>
+
+                                    </input>
                                 </div>
                                 <div className="col">
-                                    <button className='btn btn-primary' onClick={handleApplyCoupon}>
-                                        Apply Coupon
+                                    <button className='coupon_btn' onClick={handleApplyCoupon}>Apply Coupon
                                     </button>
                                 </div>
                             </div>
