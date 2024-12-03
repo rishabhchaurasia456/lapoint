@@ -1,32 +1,70 @@
-import React from 'react';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
+import config from '../config/config';
 
 const Checkout = () => {
     const location = useLocation();
     const navigate = useNavigate();
 
-    // Check if state exists; provide defaults to avoid errors
-    if (!location.state) {
-        return <div>Error: Missing checkout data</div>;
-    }
+    const [couponCode, setCouponCode] = useState("");
+    const [discountedPrice, setDiscountedPrice] = useState(0); // Default 0, updated later
+    const [discountAmount, setDiscountAmount] = useState(0); // Track discount amount
+    const [error, setError] = useState("");
+    const [coupons, setCoupons] = useState([]);
 
     // Destructure and provide fallback values to ensure safety
     const {
-        selectedDuration,
+        selectedDuration = "",
         counts = [],
         countsbed = [],
         selectedRooms = [],
         updatedTotalPrice = 0,
         totalCount = 0,
-        levels,
+        levels = [],
         startDate = null,
         endDate = null,
         actcounts = [],
         activityDetails = [],
         carRentalPrice = 0,
         lineItems = [],
-    } = location.state;
+    } = location.state || {}; // Safely destructure with defaults if state is null/undefined
 
+    // Always call useEffect unconditionally
+    useEffect(() => {
+        setDiscountedPrice(updatedTotalPrice); // Set initial price
+    }, [updatedTotalPrice]);
+
+    useEffect(() => {
+        const fetchCouponData = async () => {
+            try {
+                const response = await axios.post(
+                    `${config.API_BASE_URL}/api/admin/getall_coupon`
+                );
+                const fetchedData = response.data.getallCoupon || [];
+                setCoupons(fetchedData);
+            } catch (error) {
+                console.error("Error fetching trip levels:", error);
+            }
+        };
+
+        fetchCouponData();
+    }, []);
+
+    const handleApplyCoupon = () => {
+        const coupon = coupons.find(c => c.discountCode === couponCode);
+        
+        if (coupon) {
+            const discountAmountValue = (updatedTotalPrice * coupon.discountRate) / 100;
+            const newTotalPrice = updatedTotalPrice - discountAmountValue;
+            setDiscountedPrice(newTotalPrice);
+            setDiscountAmount(discountAmountValue); // Set the discount amount
+            setError(""); // Clear error message if coupon is valid
+        } else {
+            setError("Invalid coupon code");
+            setDiscountedPrice(updatedTotalPrice); // Reset price if invalid
+        }
+    };
 
     const handleUserinfo = () => {
         navigate('/userinfo', {
@@ -35,7 +73,7 @@ const Checkout = () => {
                 counts,
                 countsbed,
                 selectedRooms,
-                updatedTotalPrice,
+                updatedTotalPrice: discountedPrice, // Use discounted price
                 totalCount,
                 levels,
                 startDate,
@@ -44,9 +82,15 @@ const Checkout = () => {
                 activityDetails,
                 carRentalPrice,
                 lineItems,
+                discountAmount
             }
         });
     };
+
+    // **Ensure location.state exists before rendering the UI**
+    if (!location.state) {
+        return <div>Error: Missing checkout data</div>;
+    }
 
     return (
         <div className="container-fluid level_container">
@@ -56,7 +100,7 @@ const Checkout = () => {
                         <span>{startDate ? new Date(startDate).toLocaleDateString() : "Start Date"}</span>
                         -
                         <span>{endDate ? new Date(endDate).toLocaleDateString() : "End Date"}</span>
-                        <span> | Total Price: € {updatedTotalPrice}</span>
+                        <span> | Total Price: € {discountedPrice}</span> {/* Use discounted price here */}
                     </div>
                 </div>
             </div>
@@ -136,7 +180,26 @@ const Checkout = () => {
 
                         {/* Updated Total Price */}
                         <div className='text-center mt-4'>
-                            <h3 className='level_heading fs-3'>Updated Total Price: € {updatedTotalPrice}</h3>
+                            <h3 className='level_heading fs-3'>Updated Total Price: € {discountedPrice}</h3> {/* Use discounted price */}
+                        </div>
+
+                        <div className='text-center mt-4'>
+                            <div className="row">
+                                <div className="col">
+                                    <input
+                                        className='form-control'
+                                        placeholder='Coupon code'
+                                        value={couponCode}
+                                        onChange={(e) => setCouponCode(e.target.value)}
+                                    />
+                                </div>
+                                <div className="col">
+                                    <button className='btn btn-primary' onClick={handleApplyCoupon}>
+                                        Apply Coupon
+                                    </button>
+                                </div>
+                            </div>
+                            {error && <p className="text-danger mt-2">{error}</p>}
                         </div>
 
                         {/* Confirm and Pay Button */}

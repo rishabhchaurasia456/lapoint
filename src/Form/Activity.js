@@ -160,7 +160,7 @@ const Activity = () => {
                   )}
                   <p>
                     <span>
-                      {totalCount} Person, {selectedDuration} {levels.map((item, index) => counts[index] > 0 && <span key={index}>{item.level}, </span>)}
+                      {totalCount} Person, {selectedDuration}, {levels.map((item, index) => counts[index] > 0 && <span key={index}>{item.level} </span>)}
                     </span>
                     {levels && levels.length > 0 ? (
                       <span>
@@ -199,7 +199,7 @@ const Activity = () => {
           </div>
 
           {/* Display Add-On Activities */}
-          <h3 className='level_heading'>Add-On Activities</h3>
+          <h3 className='level_heading'>Add On Activities</h3>
           <div className="container-fluid">
             {addOnActivities.map((item, index) => (
               <div className="row form_crd_row mt-4" key={index}>

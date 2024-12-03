@@ -67,7 +67,7 @@ const Admin_Coupon = () => {
                             couponData.map((coupon) => (
                                 <tr key={coupon._id}>
                                     <td>{coupon.discountName}</td>
-                                    <td>{coupon.discountRate}</td>
+                                    <td>{coupon.discountRate}%</td>
                                     <td>{coupon.discountCode}</td>
                                     <td>
                                         <Link className='btn btn-primary' to={`/admin/edit/coupon/${coupon._id}`}>Edit</Link>&nbsp;

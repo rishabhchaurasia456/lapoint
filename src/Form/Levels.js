@@ -152,7 +152,7 @@ const Levels = () => {
               ))}
             </select>
 
-            <h5 className="level_heading">Choose one package per traveller</h5>
+            <h5 className="level_heading">Choose your package</h5>
             <div className="container-fluid">
               {zohoItems.length > 0 ? (
                 zohoItems.map((item, index) => (

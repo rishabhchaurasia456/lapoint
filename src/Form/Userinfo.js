@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import axios from 'axios';
+import config from '../config/config';
+
 
 const Userinfo = () => {
     const navigate = useNavigate();
@@ -12,7 +14,7 @@ const Userinfo = () => {
         // countsbed,
         // roomPrices,
         selectedRooms,
-        // updatedTotalPrice,
+        updatedTotalPrice,
         totalCount,
         levels,
         startDate,
@@ -21,8 +23,11 @@ const Userinfo = () => {
         activityDetails, // List of available activities
         lineItems,
         carRentalPrice,
+        discountAmount
     } = location.state;
 
+    console.log("updatedTotalPriceeeeeeeeeeeeeeeeeeeeeeeeee", updatedTotalPrice)
+    console.log("discountAmounttttttttttttttttttttttttttttt", discountAmount)
     console.log("line itemssssssssss", lineItems)
     console.log("roomtypeeeeeeeeeeeeeeeeeeeee", selectedRooms)
     console.log("zoho_senttttttttttttttttttttttttttt", carRentalPrice)
@@ -84,7 +89,7 @@ const Userinfo = () => {
         console.log("ddddddddddddddd", data)
         try {
             // Send the data to the backend
-            const gresponse = await axios.post("https://api.kiteactiveventures.com/api/user/send-to-sheet", data);
+            const gresponse = await axios.post(`${config.API_BASE_URL}/api/user/send-to-sheet`, data);
             console.log("Data sent to sheet successfully", gresponse.data);
 
             if (gresponse.status === 200) {
@@ -123,10 +128,11 @@ const Userinfo = () => {
             selectedRooms,
             carRentalPrice,
             totalCount,
+            discountAmount,
         };
 
         try {
-            const response = await axios.post("https://api.kiteactiveventures.com/api/user/send-to-zoho", customerData);
+            const response = await axios.post(`${config.API_BASE_URL}/api/user/send-to-zoho`, customerData);
             console.log("Data sent to Zoho successfully", response.data);
             googleSubmit();
         } catch (error) {
