@@ -48,9 +48,11 @@ const Userinfo = () => {
             lastName: '',
             email: '',
             dob: '',
+            address: '',
+            city: '',
+            pincode: '',
             gender: '',
             size: '',
-            selectedActivities: [] // Storing selected activities for each traveler
         }))
     );
 
@@ -204,7 +206,7 @@ const Userinfo = () => {
 
                             <hr className='mt-4' />
                             <div className='row mt-2'>
-                                <div className="col-6 mat-input">
+                                <div className="col mat-input">
                                     <h5 className='form_head'>Gender</h5>
                                     <select
                                         className='100'
@@ -215,10 +217,7 @@ const Userinfo = () => {
                                         <option value='Male'>Male</option>
                                     </select>
                                 </div>
-                            </div>
-
-                            <div className="row mt-2">
-                                <div className="col-6 mat-input">
+                                <div className="col mat-input">
                                     <h5 className='form_head'>Size</h5>
                                     <select
                                         className='w-100'
@@ -230,6 +229,30 @@ const Userinfo = () => {
                                         <option value='XL'>XL</option>
                                         <option value='XXL'>XXL</option>
                                     </select>
+                                </div>
+                            </div>
+
+                            <div className='row mt-2'>
+                                <div class="col mat-input">
+                                    <label for="">Address</label>
+                                    <input type="text" className='w-100'
+                                        placeholder='Address' value={travellers[index].address}
+                                        onChange={(e) => handleChange(index, 'address', e.target.value)} />
+                                </div>
+                                <div class="col mat-input">
+                                    <label for="">City</label>
+                                    <input type="text" className='w-100'
+                                        placeholder='City' value={travellers[index].city}
+                                        onChange={(e) => handleChange(index, 'city', e.target.value)} />
+                                </div>
+                            </div>
+
+                            <div className='row mt-2'>
+                                <div class="col-6 mat-input">
+                                    <label for="">Pincode</label>
+                                    <input type="text" className='w-100'
+                                        placeholder='Pincode' value={travellers[index].pincode}
+                                        onChange={(e) => handleChange(index, 'pincode', e.target.value)} />
                                 </div>
                             </div>
                         </div>
