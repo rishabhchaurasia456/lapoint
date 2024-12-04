@@ -1,8 +1,14 @@
 /* level css here  */
 
+
+
 .level_container {
     background-color: black;
     height: 100%;
+}
+
+.bg_cont {
+    height: 150vh;
 }
 
 .level_heading {
@@ -42,7 +48,7 @@
         padding: 5px !important;
     }
 
-    
+
 }
 
 
@@ -145,7 +151,7 @@
 
 .dropdown-content {
     margin-top: 10px;
-    padding: 10px;  
+    padding: 10px;
     border-top: 1px solid #ddd;
     background-color: #ffffff;
     border-radius: 0 0 8px 8px;
@@ -207,6 +213,7 @@
     .checkout_data {
         font-size: 15px !important;
     }
+
     .styled-dropdown {
         position: relative;
         width: 100%;
@@ -268,10 +275,11 @@
 
 
 
-/* From Uiverse.io by ErzenXz */ 
-.col_input{
+/* From Uiverse.io by ErzenXz */
+.col_input {
     text-align: left;
 }
+
 .input {
     width: 100%;
     max-width: 280px;
@@ -283,27 +291,27 @@
     outline: none;
     transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
     box-shadow: 0px 0px 20px -18px;
-  }
-  
-  .input:hover {
+}
+
+.input:hover {
     border: 2px solid lightgrey;
     box-shadow: 0px 0px 20px -17px;
-  }
-  
-  .input:active {
-    transform: scale(0.95);
-  }
-  
-  .input:focus {
-    border: 2px solid grey;
-  }
+}
 
-.room_cont{
-    height: 90vh;
+.input:active {
+    transform: scale(0.95);
+}
+
+.input:focus {
+    border: 2px solid grey;
+}
+
+.room_cont {
+    height: 100vh;
 }
 
 
-.coupon_btn{
+.coupon_btn {
     background-color: #ffc800;
     color: black;
     font-size: 20px;
@@ -328,8 +336,9 @@
         outline: none;
         transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
         box-shadow: 0px 0px 20px -18px;
-      }
-    .coupon_btn{
+    }
+
+    .coupon_btn {
         background-color: #ffc800;
         color: black;
         font-size: 20px;

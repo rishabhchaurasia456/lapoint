@@ -129,7 +129,7 @@ const Levels = () => {
   };
 
   return (
-    <div className="container-fluid level_container">
+    <div className="container-fluid level_container bg_cont">
       <div className="row pb-3">
         <div className="col-md-2"></div>
         <div className="col-md-8">

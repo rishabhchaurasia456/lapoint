@@ -93,7 +93,7 @@ const Checkout = () => {
     }
 
     return (
-        <div className="container-fluid level_container">
+        <div className="container-fluid level_container ">
             <div className="row">
                 <div className="col text-center">
                     <div className='person_week mt-5'>
@@ -188,7 +188,6 @@ const Checkout = () => {
                                 <div className="col col_input">
                                     <input placeholder='Coupon code' type="text" name="text" class="input" value={couponCode}
                                         onChange={(e) => setCouponCode(e.target.value)}>
-
                                     </input>
                                 </div>
                                 <div className="col">

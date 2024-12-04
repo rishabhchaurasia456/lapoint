@@ -144,7 +144,7 @@ const Activity = () => {
   };
 
   return (
-    <div className="container-fluid level_container pb-5">
+    <div className="container-fluid level_container  bg_cont pb-5">
       <div className="row">
         <div className="col-lg-2"></div>
         <div className="col-lg-8">
