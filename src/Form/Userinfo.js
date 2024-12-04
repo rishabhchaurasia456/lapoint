@@ -435,14 +435,16 @@ const Userinfo = () => {
             {/* Make reservation btn  */}
             <div className="container-fluid level_container">
                 <div className="row">
-                    <div className="col">
+                    <div className="col-md-2"></div>
+                    <div className="col-md-8">
                         <input
                             type="checkbox"
                             checked={isTermsAccepted}
                             onChange={handleTermsChange}
                         />
-                        <span className="ms-2">I agree to the <a href="#" target="_blank">Terms and Conditions</a></span>
+                        <span className="ms-2">I agree to the <a href="/Term_Condition" target="_blank">Terms and Conditions</a></span>
                     </div>
+                    <div className="col-md-2"></div>
                 </div>
                 <div className="row">
                     <div className="col-lg-2"></div>
