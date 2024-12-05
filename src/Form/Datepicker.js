@@ -152,7 +152,7 @@ const Datepicker = () => {
               <div className="m-auto text-center m-0 p-0">
                 <p className="text-center person_week">
                   <span>
-                    {totalCount} Person, {selectedDuration},{" "}
+                    {totalCount} Person/ {selectedDuration}/{" "}
                   </span>
                   {levels && levels.length > 0 ? (
                     <span>

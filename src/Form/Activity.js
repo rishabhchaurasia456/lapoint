@@ -160,7 +160,7 @@ const Activity = () => {
                   )}
                   <p>
                     <span>
-                      {totalCount} Person, {selectedDuration}, {levels.map((item, index) => counts[index] > 0 && <span key={index}>{item.level} </span>)}
+                      {totalCount} Person/ {selectedDuration}/ {levels.map((item, index) => counts[index] > 0 && <span key={index}>{item.level} </span>)}
                     </span>
                     {levels && levels.length > 0 ? (
                       <span>

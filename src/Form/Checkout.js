@@ -149,6 +149,18 @@ const Checkout = () => {
                                         <div className="col-lg-9">
                                             <div className='checkout_data'>
                                                 {item.item_name}: {counts[index]}
+                                                <div className="col mt-1" key={index}>
+                                                    <details className="styled-dropdown">
+                                                    <summary className="summary-header text-dark">What's included</summary>
+                                                    <div className="dropdown-content fs-5 mb-2">
+                                                        {item.description.split("\n").map((line, lineIndex) => (
+                                                        <p key={lineIndex} className="fs-6 text-dark">
+                                                            <i className="fa fa-check-circle text-warning mx-2"></i>{line}
+                                                        </p>
+                                                        ))}
+                                                    </div>
+                                                    </details>
+                                                </div>
                                             </div>
                                         </div>
                                         <div className="col-lg-3">

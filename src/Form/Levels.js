@@ -152,7 +152,20 @@ const Levels = () => {
               ))}
             </select>
 
-            <h5 className="level_heading">Choose your package</h5>
+            <h5 className="level_heading">
+            <div className="container">
+              <div className="row">
+                <div className="col">
+                  Choose your package
+                </div>
+                <div className="col">
+                  <div className="float-end">
+                    No. of People
+                  </div>
+                </div>
+              </div>
+            </div>
+            </h5>
             <div className="container-fluid">
               {zohoItems.length > 0 ? (
                 zohoItems.map((item, index) => (
@@ -164,7 +177,7 @@ const Levels = () => {
                           <span>
                             <b>{item.name}</b>
                           </span>{' '}
-                          {/* | <span>Price: €{item.rate}</span> */}
+                          | <span>From: €{item.rate}</span>
                         </p>
                       </div>
                       <div className="mx-3 my-3">
@@ -182,8 +195,8 @@ const Levels = () => {
                             htmlFor={`carRental-${index}`}
                           >
                             {index === 0
-                              ? 'Shared Rental – Always Included (€60 x person)'
-                              : `Shared Rental for this level (€60 x  person)`}
+                              ? 'Shared Rental – Always Included (€60 x person x days)'
+                              : `Shared Rental for this level (€60 x  person x days)`}
                           </label>
                         </div>
                       </div>

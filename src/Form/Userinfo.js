@@ -72,9 +72,10 @@ const Userinfo = () => {
             lastName: '',
             email: '',
             dob: '',
+            country: '',
             address: '',
             city: '',
-            pincode: '',
+            postalcode: '',
             gender: '',
             size: '',
         }))
@@ -164,6 +165,7 @@ const Userinfo = () => {
         try {
             const response = await axios.post(`${config.API_BASE_URL}/api/user/send-to-zoho`, customerData);
             console.log("Data sent to Zoho successfully", response.data);
+            handleBooking();
             googleSubmit();
         } catch (error) {
             console.error("Error sending data to Zoho:", error);
@@ -240,7 +242,7 @@ const Userinfo = () => {
                                         className='100'
                                         value={travellers[index].gender}
                                         onChange={(e) => handleChange(index, 'gender', e.target.value)}>
-                                        {/* <option value=''>Gender</option> */}
+                                        <option value=''>Select Gender</option>
                                         <option value='Female'>Female</option>
                                         <option value='Male'>Male</option>
                                         <option value='Male'>Other</option>
@@ -252,6 +254,7 @@ const Userinfo = () => {
                                         className='w-100'
                                         value={travellers[index].size}
                                         onChange={(e) => handleChange(index, 'size', e.target.value)}>
+                                        <option value=''>Select Size</option>
                                         <option value='S'>S</option>
                                         <option value='M'>M</option>
                                         <option value='L'>L</option>
@@ -262,96 +265,92 @@ const Userinfo = () => {
                             </div>
 
                             <div className='row mt-2'>
+                                <div className="col mat-input">
+                                    <select className='w-100'
+                                        value={travellers[index].country}
+                                        onChange={(e) => handleChange(index, 'country', e.target.value)}>
+                                        <option value=''>Select Country</option>
+                                        <option value='Afghanistan'>Afghanistan</option>
+                                        <option value='Albania'>Albania</option>
+                                        <option value='Algeria'>Algeria</option>
+                                        <option value='Andorra'>Andorra</option>
+                                        <option value='Bangladesh'>Bangladesh</option>
+                                        <option value='Barbados'>Barbados</option>
+                                        <option value='Belgium'>Belgium</option>
+                                        <option value='Belize'>Belize</option>
+                                        <option value='Bhutan'>Bhutan</option>
+                                        <option value='Canada'>Canada</option>
+                                        <option value='China'>China</option>
+                                        <option value='Colombia'>Colombia</option>
+                                        <option value='Egypt'>Egypt</option>
+                                        <option value='Ethiopia'>Ethiopia</option>
+                                        <option value='Estonia'>Estonia</option>
+                                        <option value='Finland'>Finland</option>
+                                        <option value='France'>France</option>
+                                        <option value='Germany'>Germany</option>
+                                        <option value='Ghana'>Ghana</option>
+                                        <option value='Georgia'>Georgia</option>
+                                        <option value='Guyana'>Guyana</option>
+                                        <option value='Hong Kong'>Hong Kong</option>
+                                        <option value='Hungary'>Hungary</option>
+                                        <option value='Iceland'>Iceland</option>
+                                        <option value='India'>India</option>
+                                        <option value='Indonesia'>Indonesia</option>
+                                        <option value='Iran'>Iran</option>
+                                        <option value='Ireland'>Ireland</option>
+                                        <option value='Italy'>Italy</option>
+                                        <option value='Japan'>Japan</option>
+                                        <option value='Jordan'>Jordan</option>
+                                        <option value='Kenya'>Kenya</option>
+                                        <option value='Korea'>Korea</option>
+                                        <option value='Kuwait'>Kuwait</option>
+                                        <option value='Liberia'>Liberia</option>
+                                        <option value='Malaysia'>Malaysia</option>
+                                        <option value='Maldives'>Maldives</option>
+                                        <option value='Monaco'>Monaco</option>
+                                        <option value='Myanmar'>Myanmar</option>
+                                        <option value='Nepal'>Nepal</option>
+                                        <option value='Netherlands'>Netherlands</option>
+                                        <option value='New Zealand'>New Zealand</option>
+                                        <option value='Nepal'>Nepal</option>
+                                        <option value='Norway'>Norway</option>
+                                        <option value='Oman'>Oman</option>
+                                        <option value='Pakistan'>Pakistan</option>
+                                        <option value='Poland'>Poland</option>
+                                        <option value='Russian'>Russian</option>
+                                        <option value='Saudi Arabia'>Saudi Arabia</option>
+                                        <option value='South Africa'>South Africa</option>
+                                        <option value='Spain'>Spain</option>
+                                        <option value='Sri Lanka'>Sri Lanka</option>
+                                        <option value='Tanzania'>Tanzania</option>
+                                        <option value='Thailand'>Thailand</option>
+                                        <option value='United Kingdom'>United Kingdom</option>
+                                        <option value='USA'>USA</option>
+                                        <option value='Serbia'>Serbia</option>
+                                        <option value='Zimbabwe'>Zimbabwe</option>
+                                    </select>
+                                </div>
                                 <div class="col mat-input">
                                     <label for="">Address</label>
                                     <input type="text" className='w-100'
                                         placeholder='Address' value={travellers[index].address}
                                         onChange={(e) => handleChange(index, 'address', e.target.value)} />
                                 </div>
+                            </div>
+
+                            <div className='row mt-2'>
                                 <div class="col mat-input">
                                     <label for="">City</label>
                                     <input type="text" className='w-100'
                                         placeholder='City' value={travellers[index].city}
                                         onChange={(e) => handleChange(index, 'city', e.target.value)} />
                                 </div>
-
-                            </div>
-
-                            <div className='row mt-2'>
                                 <div class="col mat-input">
                                     <label for="">Postal code</label>
                                     <input type="text" className='w-100'
-                                        placeholder='Postal code' value={travellers[index].pincode}
-                                        onChange={(e) => handleChange(index, 'pincode', e.target.value)} />
+                                        placeholder='Postal code' value={travellers[index].postalcode}
+                                        onChange={(e) => handleChange(index, 'postalcode', e.target.value)} />
                                 </div>
-
-
-                                <div className="col mat-input">
-                                    <select className='w-100'>
-                                        <option>Select Country</option>
-                                        <option>Afghanistan</option>
-                                        <option>Albania</option>
-                                        <option>Algeria</option>
-                                        <option>Andorra</option>
-                                        <option>Bangladesh</option>
-                                        <option>Barbados</option>
-                                        <option>Belgium</option>
-                                        <option>Belize</option>
-                                        <option>Bhutan</option>
-                                        <option>Canada</option>
-                                        <option>China</option>
-                                        <option>Colombia</option>
-                                        <option>Egypt</option>
-                                        <option>Ethiopia</option>
-                                        <option>Estonia</option>
-                                        <option>Finland</option>
-                                        <option>France</option>
-                                        <option>Germany</option>
-                                        <option>Ghana</option>
-                                        <option>Georgia</option>
-                                        <option>Ghana</option>
-                                        <option>Guyana</option>
-                                        <option>Hong Kong</option>
-                                        <option>Hungary</option>
-                                        <option>Iceland</option>
-                                        <option>India</option>
-                                        <option>Indonesia</option>
-                                        <option>Iran</option>
-                                        <option>Ireland</option>
-                                        <option>Italy</option>
-                                        <option>Japan</option>
-                                        <option>Jordan</option>
-                                        <option>Kenya</option>
-                                        <option>Korea</option>
-                                        <option>Kuwait</option>
-                                        <option>Liberia</option>
-                                        <option>Malaysia</option>
-                                        <option>Maldives</option>
-                                        <option>Monaco</option>
-                                        <option>Myanmar</option>
-                                        <option>Nepal</option>
-                                        <option>Netherlands</option>
-                                        <option>New Zealand</option>
-                                        <option>Nepal</option>
-                                        <option>Norway</option>
-                                        <option>Oman</option>
-                                        <option>Pakistan</option>
-                                        <option>Poland</option>
-                                        <option>Russian</option>
-                                        <option>Saudi Arabia</option>
-                                        <option>South Africa</option>
-                                        <option>Spain</option>
-                                        <option>Sri Lanka</option>
-                                        <option>Tanzania</option>
-                                        <option>Thailand    </option>
-                                        <option>United Kingdom</option>
-                                        <option>USA</option>
-                                        <option>Serbia</option>
-                                        <option>Zimbabwe</option>
-
-                                    </select>
-                                </div>
-
                             </div>
                         </div>
                     </div>
@@ -496,7 +495,7 @@ const Userinfo = () => {
                         <div className='btn_container mb-5'>
                             {/* Conditionally render the button based on isTermsAccepted */}
                             {isTermsAccepted ? (
-                                <button className="level_btn" onClick={handleBooking}>
+                                <button className="level_btn" onClick={handleSubmit}>
                                     Make Reservation
                                 </button>
                             ) : null} {/* Button is not rendered if isTermsAccepted is false */}

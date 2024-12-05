@@ -113,7 +113,7 @@ const Room = () => {
                         </div>
                       )}
                       <p>
-                        <span>{totalCount} Person, {selectedDuration}, </span>
+                        <span>{totalCount} Person/ {selectedDuration}/ </span>
                         {levels && levels.length > 0 ? (
                           <span>
                             {levels.map((level, index) => (
