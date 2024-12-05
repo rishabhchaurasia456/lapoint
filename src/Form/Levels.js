@@ -171,7 +171,7 @@ const Levels = () => {
                 zohoItems.map((item, index) => (
                   <div className="row form_crd_row mt-4" key={item.item_id}>
                     {/* Column for Item Details */}
-                    <div className="col">
+                    <div className="col-lg-8 col-sm-12">
                       <div className="level_crd_text">
                         <p className="level_crd_para">
                           <span>
@@ -203,9 +203,9 @@ const Levels = () => {
                     </div>
 
                     {/* Row for Additional Actions */}
-                    <div className="row">
+                    {/* <div className="row"> */}
                       {/* Dropdown Content */}
-                      <div className="col-10">
+                      <div className="col-lg-8 col-8">
                         <div className="mx-3">
                           <div className="col" key={index}>
                             <details className="styled-dropdown">
@@ -222,8 +222,8 @@ const Levels = () => {
                         </div>
                       </div>
                       {/* Increment and Decrement Section */}
-                      <div className="col-2 p_m_col mt-0 pt-0">
-                        <div className="p_m_col d-flex mt-0 pt-0 align-items-center">
+                      <div className="col-lg-2 col-4 p_m_col mt-0 pt-0">
+                        <div className="p_m_col d-flex  align-items-center">
                           <i
                             className="fa fa-minus-circle P_M_icon"
                             onClick={() => decrement(index)}
@@ -234,7 +234,7 @@ const Levels = () => {
                           ></i>
                         </div>
                       </div>
-                    </div>
+                    {/* </div> */}
                   </div>
                 ))
               ) : (

@@ -121,6 +121,7 @@
 
 .p_m_col {
     float: right;
+    margin-top: -50px;
 }
 
 
@@ -233,10 +234,13 @@
         border: 1px solid black;
         border-radius: 8px;
         width: auto;
-        max-width: 80%;
+        max-width: 90%;
     }
 
-
+    .p_m_col {
+        float: right;
+        margin-top: 0px;
+    }
 
 }
 
@@ -253,6 +257,11 @@
         margin-top: 9x;
         width: auto;
         max-width: 100%;
+    }
+
+    .p_m_col {
+        float: right;
+        margin-top: 0px;
     }
 }
 
