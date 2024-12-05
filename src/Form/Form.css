@@ -122,6 +122,7 @@
 .p_m_col {
     float: right;
     margin-top: -50px;
+    margin-left: 10%;
 }
 
 
@@ -139,7 +140,6 @@
 
 .summary-header {
     display: block;
-    /* font-weight: bold; */
     font-size: 15px;
     padding: 5px;
     color: black;
@@ -147,7 +147,7 @@
     border: 1px solid black;
     border-radius: 10px;
     width: auto;
-    max-width: 22%;
+    max-width: 25%;
 }
 
 .dropdown-content {
@@ -240,6 +240,7 @@
     .p_m_col {
         float: right;
         margin-top: 0px;
+        margin-left: 0%;
     }
 
 }
@@ -262,6 +263,7 @@
     .p_m_col {
         float: right;
         margin-top: 0px;
+        margin-left: 0%;
     }
 }
 
