@@ -1,5 +1,5 @@
 const config = {
-    API_BASE_URL: "https://api.kiteactiveventures.com",
+    API_BASE_URL: "http://localhost:5500",
 };
 
 export default config;

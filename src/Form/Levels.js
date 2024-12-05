@@ -164,7 +164,7 @@ const Levels = () => {
                           <span>
                             <b>{item.name}</b>
                           </span>{' '}
-                          | <span>Price: €{item.rate}</span>
+                          {/* | <span>Price: €{item.rate}</span> */}
                         </p>
                       </div>
                       <div className="mx-3 my-3">
@@ -182,8 +182,8 @@ const Levels = () => {
                             htmlFor={`carRental-${index}`}
                           >
                             {index === 0
-                              ? 'Rent of complete Kiteset – Always Included (€60 per person)'
-                              : `Add Rent of complete Kiteset for this level (€60 per person)`}
+                              ? 'Shared Rental – Always Included (€60 x person)'
+                              : `Shared Rental for this level (€60 x  person)`}
                           </label>
                         </div>
                       </div>
@@ -228,7 +228,7 @@ const Levels = () => {
                 <p>No items available for the selected duration.</p>
               )}
 
-          
+
 
               <div className="btn_container">
                 {selectedDuration && counts.some(count => count > 0) && (

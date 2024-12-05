@@ -108,7 +108,7 @@ const Room = () => {
                     <div className="person_week">
                       {startDate && endDate && (
                         <div>
-                          <span> {startDate.toLocaleDateString()} - </span>
+                          <span> {startDate.toLocaleDateString()} to </span>
                           <span> {endDate.toLocaleDateString()}</span>
                         </div>
                       )}

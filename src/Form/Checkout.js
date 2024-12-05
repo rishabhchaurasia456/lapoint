@@ -99,10 +99,10 @@ const Checkout = () => {
             <div className="row">
                 <div className="col text-center">
                     <div className='person_week mt-5'>
-                        <span>{startDate ? new Date(startDate).toLocaleDateString() : "Start Date"}</span>
-                        -
-                        <span>{endDate ? new Date(endDate).toLocaleDateString() : "End Date"}</span>
-                        <span> | Total Price: € {discountedPrice}</span> {/* Use discounted price here */}
+                        <span className='me-3'>{startDate ? new Date(startDate).toLocaleDateString() : "Start Date"}</span>
+                          to   
+                        <span className='mx-3'>{endDate ? new Date(endDate).toLocaleDateString() : "End Date"}</span>
+                        <span className=' level_heading'> | Total Price: € {discountedPrice}</span> {/* Use discounted price here */}
                     </div>
                 </div>
             </div>
@@ -163,7 +163,7 @@ const Checkout = () => {
 
                         {/* Selected Activities */}
                         <div>
-                            <h2 className='level_heading'>Selected Activities</h2>
+                            <h2 className='level_heading'>Selected Add Ons</h2>
                             {activityDetails.map((activity, index) => (
                                 <div className='row' key={index}>
                                     <div className="col-lg-9">
@@ -180,10 +180,7 @@ const Checkout = () => {
                             ))}
                         </div>
 
-                        {/* Updated Total Price */}
-                        <div className='text-center mt-4'>
-                            <h3 className='level_heading fs-3'>Updated Total Price: € {discountedPrice}</h3> {/* Use discounted price */}
-                        </div>
+                      
 
                         <div className='text-center mt-4'>
                             <div className="row">
@@ -200,10 +197,15 @@ const Checkout = () => {
                             {error && <p className="text-danger mt-2">{error}</p>}
                         </div>
 
+                          {/* Updated Total Price */}
+                          <div className='text-center mt-5'>
+                            <h3 className='level_heading fs-3'>Updated Total Price: € {discountedPrice}</h3> {/* Use discounted price */}
+                        </div>
+
                         {/* Confirm and Pay Button */}
                         <div className='btn_container'>
                             <button className="level_btn mb-4" onClick={handleUserinfo}>
-                                Confirm and Pay
+                                Confirm
                             </button>
                         </div>
                     </div>

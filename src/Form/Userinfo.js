@@ -46,14 +46,14 @@ const Userinfo = () => {
             selectedDuration,
             totalCount
         };
-      
+
         try {
-          const response = await axios.post(`${config.API_BASE_URL}/api/user/update-seats`, bookingData);
-          console.log('Status updated successfully:', response.data);
+            const response = await axios.post(`${config.API_BASE_URL}/api/user/update-seats`, bookingData);
+            console.log('Status updated successfully:', response.data);
         } catch (error) {
-          console.error('Error updating status:', error.response?.data || error.message);
+            console.error('Error updating status:', error.response?.data || error.message);
         }
-      };
+    };
 
 
     const [userDetails, setUserDetails] = useState({
@@ -243,6 +243,7 @@ const Userinfo = () => {
                                         {/* <option value=''>Gender</option> */}
                                         <option value='Female'>Female</option>
                                         <option value='Male'>Male</option>
+                                        <option value='Male'>Other</option>
                                     </select>
                                 </div>
                                 <div className="col mat-input">
@@ -273,20 +274,93 @@ const Userinfo = () => {
                                         placeholder='City' value={travellers[index].city}
                                         onChange={(e) => handleChange(index, 'city', e.target.value)} />
                                 </div>
+
                             </div>
 
                             <div className='row mt-2'>
-                                <div class="col-6 mat-input">
-                                    <label for="">Pincode</label>
+                                <div class="col mat-input">
+                                    <label for="">Postal code</label>
                                     <input type="text" className='w-100'
-                                        placeholder='Pincode' value={travellers[index].pincode}
+                                        placeholder='Postal code' value={travellers[index].pincode}
                                         onChange={(e) => handleChange(index, 'pincode', e.target.value)} />
                                 </div>
+
+
+                                <div className="col mat-input">
+                                    <select className='w-100'>
+                                        <option>Select Country</option>
+                                        <option>Afghanistan</option>
+                                        <option>Albania</option>
+                                        <option>Algeria</option>
+                                        <option>Andorra</option>
+                                        <option>Bangladesh</option>
+                                        <option>Barbados</option>
+                                        <option>Belgium</option>
+                                        <option>Belize</option>
+                                        <option>Bhutan</option>
+                                        <option>Canada</option>
+                                        <option>China</option>
+                                        <option>Colombia</option>
+                                        <option>Egypt</option>
+                                        <option>Ethiopia</option>
+                                        <option>Estonia</option>
+                                        <option>Finland</option>
+                                        <option>France</option>
+                                        <option>Germany</option>
+                                        <option>Ghana</option>
+                                        <option>Georgia</option>
+                                        <option>Ghana</option>
+                                        <option>Guyana</option>
+                                        <option>Hong Kong</option>
+                                        <option>Hungary</option>
+                                        <option>Iceland</option>
+                                        <option>India</option>
+                                        <option>Indonesia</option>
+                                        <option>Iran</option>
+                                        <option>Ireland</option>
+                                        <option>Italy</option>
+                                        <option>Japan</option>
+                                        <option>Jordan</option>
+                                        <option>Kenya</option>
+                                        <option>Korea</option>
+                                        <option>Kuwait</option>
+                                        <option>Liberia</option>
+                                        <option>Malaysia</option>
+                                        <option>Maldives</option>
+                                        <option>Monaco</option>
+                                        <option>Myanmar</option>
+                                        <option>Nepal</option>
+                                        <option>Netherlands</option>
+                                        <option>New Zealand</option>
+                                        <option>Nepal</option>
+                                        <option>Norway</option>
+                                        <option>Oman</option>
+                                        <option>Pakistan</option>
+                                        <option>Poland</option>
+                                        <option>Russian</option>
+                                        <option>Saudi Arabia</option>
+                                        <option>South Africa</option>
+                                        <option>Spain</option>
+                                        <option>Sri Lanka</option>
+                                        <option>Tanzania</option>
+                                        <option>Thailand    </option>
+                                        <option>United Kingdom</option>
+                                        <option>USA</option>
+                                        <option>Serbia</option>
+                                        <option>Zimbabwe</option>
+
+                                    </select>
+                                </div>
+
                             </div>
                         </div>
                     </div>
 
+
+
                     <div className="col-lg-2"></div>
+
+
                 </div>
             </div>
 
@@ -365,87 +439,7 @@ const Userinfo = () => {
                                 </div>
 
                             </div>
-                            <div className='row mt-2'>
 
-                                <div className="col mat-input">
-                                    <select className='w-100'>
-                                        <option>Select Country</option>
-                                        <option>Afghanistan</option>
-                                        <option>Albania</option>
-                                        <option>Algeria</option>
-                                        <option>Andorra</option>
-                                        <option>Bangladesh</option>
-                                        <option>Barbados</option>
-                                        <option>Belgium</option>
-                                        <option>Belize</option>
-                                        <option>Bhutan</option>
-                                        <option>Canada</option>
-                                        <option>China</option>
-                                        <option>Colombia</option>
-                                        <option>Egypt</option>
-                                        <option>Ethiopia</option>
-                                        <option>Estonia</option>
-                                        <option>Finland</option>
-                                        <option>France</option>
-                                        <option>Germany</option>
-                                        <option>Ghana</option>
-                                        <option>Georgia</option>
-                                        <option>Ghana</option>
-                                        <option>Guyana</option>
-                                        <option>Hong Kong</option>
-                                        <option>Hungary</option>
-                                        <option>Iceland</option>
-                                        <option>India</option>
-                                        <option>Indonesia</option>
-                                        <option>Iran</option>
-                                        <option>Ireland</option>
-                                        <option>Italy</option>
-                                        <option>Japan</option>
-                                        <option>Jordan</option>
-                                        <option>Kenya</option>
-                                        <option>Korea</option>
-                                        <option>Kuwait</option>
-                                        <option>Liberia</option>
-                                        <option>Malaysia</option>
-                                        <option>Maldives</option>
-                                        <option>Monaco</option>
-                                        <option>Myanmar</option>
-                                        <option>Nepal</option>
-                                        <option>Netherlands</option>
-                                        <option>New Zealand</option>
-                                        <option>Nepal</option>
-                                        <option>Norway</option>
-                                        <option>Oman</option>
-                                        <option>Pakistan</option>
-                                        <option>Poland</option>
-                                        <option>Russian</option>
-                                        <option>Saudi Arabia</option>
-                                        <option>South Africa</option>
-                                        <option>Spain</option>
-                                        <option>Sri Lanka</option>
-                                        <option>Tanzania</option>
-                                        <option>Thailand    </option>
-                                        <option>United Kingdom</option>
-                                        <option>USA</option>
-                                        <option>Serbia</option>
-                                        <option>Zimbabwe</option>
-
-                                    </select>
-                                </div>
-
-
-                                <div className="col mat-input">
-                                    <select className='w-100'>
-                                        <option>How did you find us</option>
-                                        <option>Kiteschool</option>
-                                        <option>Advertisement</option>
-                                        <option>Socials</option>
-                                        <option>From a friend</option>
-                                    </select>
-                                </div>
-
-
-                            </div>
                         </form>
                     </div>
                     <div className="col-lg-2"></div>
@@ -455,17 +449,44 @@ const Userinfo = () => {
             {renderTravellerForms()}
 
 
+
+
+
+            <div className="container-fluid level_container">
+                <div className="row">
+                    <div className="col-lg-2"></div>
+                    <div className="col-lg-8 card">
+                        <div className='row mb-2 mt-2'>
+                            <div className="col mat-input">
+                                <select className='w-100'>
+                                    <option>How did you find us</option>
+                                    <option>Kiteschool</option>
+                                    <option>Advertisement</option>
+                                    <option>Socials</option>
+                                    <option>From a friend</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-lg-2"></div>
+                </div>
+            </div>
+
+
+
+
+
             {/* Make reservation btn  */}
             <div className="container-fluid level_container">
                 <div className="row">
                     <div className="col-md-2"></div>
-                    <div className="col-md-8">
+                    <div className="col-md-8 mt-3">
                         <input
                             type="checkbox"
                             checked={isTermsAccepted}
                             onChange={handleTermsChange}
                         />
-                        <span className="ms-2">I agree to the <a href="/Term_Condition" target="_blank">Terms and Conditions</a></span>
+                        <span className="ms-2 text-light">I agree to the <a href="/Term_Condition" className='text-warning' target="_blank">Terms and Conditions</a></span>
                     </div>
                     <div className="col-md-2"></div>
                 </div>

@@ -186,7 +186,9 @@ const Datepicker = () => {
                   <i className="fa fa-circle cir1" aria-hidden="true"></i>
                   <span className="date_visible_span"> Available Date</span>
                   <i className="fa fa-circle cir2" aria-hidden="true"></i>
-                  <span> Booked Date</span>
+                  <span className='date_visible_span'> Booked Date</span>
+                  <i className="fa fa-circle cir3" aria-hidden="true"></i>
+                  <span className=''> Limited Seats</span>
                 </div>
 
                 {startDate && endDate && (

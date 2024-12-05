@@ -154,7 +154,7 @@ const Activity = () => {
                 <div className="person_week">
                   {startDate && endDate && (
                     <div>
-                      <span>{new Date(startDate).toLocaleDateString()} - </span>
+                      <span>{new Date(startDate).toLocaleDateString()} to </span>
                       <span>{new Date(endDate).toLocaleDateString()}</span>
                     </div>
                   )}
