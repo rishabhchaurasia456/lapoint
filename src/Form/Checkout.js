@@ -100,7 +100,7 @@ const Checkout = () => {
                 <div className="col text-center">
                     <div className='person_week mt-5'>
                         <span className='me-3'>{startDate ? new Date(startDate).toLocaleDateString() : "Start Date"}</span>
-                          to   
+                        to
                         <span className='mx-3'>{endDate ? new Date(endDate).toLocaleDateString() : "End Date"}</span>
                         <span className=' level_heading'> | Total Price: € {discountedPrice}</span> {/* Use discounted price here */}
                     </div>
@@ -151,14 +151,14 @@ const Checkout = () => {
                                                 {item.item_name}: {counts[index]}
                                                 <div className="col mt-1" key={index}>
                                                     <details className="styled-dropdown">
-                                                    <summary className="summary-header text-dark">What's included</summary>
-                                                    <div className="dropdown-content fs-5 mb-2">
-                                                        {item.description.split("\n").map((line, lineIndex) => (
-                                                        <p key={lineIndex} className="fs-6 text-dark">
-                                                            <i className="fa fa-check-circle text-warning mx-2"></i>{line}
-                                                        </p>
-                                                        ))}
-                                                    </div>
+                                                        <summary className="summary-header text-dark">What's included</summary>
+                                                        <div className="dropdown-content fs-5 mb-2">
+                                                            {item.description.split("\n").map((line, lineIndex) => (
+                                                                <p key={lineIndex} className="fs-6 text-dark">
+                                                                    <i className="fa fa-check-circle text-warning mx-2"></i>{line}
+                                                                </p>
+                                                            ))}
+                                                        </div>
                                                     </details>
                                                 </div>
                                             </div>
@@ -174,25 +174,25 @@ const Checkout = () => {
                         </div>
 
                         {/* Selected Activities */}
-                        <div>
-                            <h2 className='level_heading'>Selected Add Ons</h2>
-                            {activityDetails.map((activity, index) => (
-                                <div className='row' key={index}>
-                                    <div className="col-lg-9">
-                                        <div className='checkout_data'>
-                                            {activity.name}: {activity.count}
+                        {activityDetails.length > 0 ? (
+                            <div>
+                                <h2 className='level_heading'>Selected Add Ons</h2>
+                                {activityDetails.map((activity, index) => (
+                                    <div className='row' key={index}>
+                                        <div className="col-lg-9">
+                                            <div className='checkout_data'>
+                                                {activity.name}: {activity.count}
+                                            </div>
+                                        </div>
+                                        <div className="col-lg-3">
+                                            <div className='checkout_data'>
+                                                € {activity.price}
+                                            </div>
                                         </div>
                                     </div>
-                                    <div className="col-lg-3">
-                                        <div className='checkout_data'>
-                                            € {activity.price}
-                                        </div>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-
-                      
+                                ))}
+                            </div>
+                        ) : ("")}
 
                         <div className='text-center mt-4'>
                             <div className="row">
@@ -209,8 +209,8 @@ const Checkout = () => {
                             {error && <p className="text-danger mt-2">{error}</p>}
                         </div>
 
-                          {/* Updated Total Price */}
-                          <div className='text-center mt-5'>
+                        {/* Updated Total Price */}
+                        <div className='text-center mt-5'>
                             <h3 className='level_heading fs-3'>Updated Total Price: € {discountedPrice}</h3> {/* Use discounted price */}
                         </div>
 

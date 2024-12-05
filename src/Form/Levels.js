@@ -209,7 +209,7 @@ const Levels = () => {
                         <div className="mx-3">
                           <div className="col" key={index}>
                             <details className="styled-dropdown">
-                              <summary className="summary-header text-dark">What's included</summary>
+                              <summary className="summary-header text-dark">What's the Deal</summary>
                               <div className="dropdown-content fs-5 mb-2">
                                 {item.description.split("\n").map((line, lineIndex) => (
                                   <p key={lineIndex} className="fs-6 text-dark">

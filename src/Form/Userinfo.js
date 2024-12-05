@@ -195,14 +195,14 @@ const Userinfo = () => {
                         <div className='' key={index}>
                             <div className='row my-2'>
                                 <div class="col mat-input">
-                                    <label for="">First Name</label>
+                                    <label className="ps-3">First Name</label>
                                     <input type="text" className='w-100'
                                         placeholder='First Name' value={travellers[index].firstName}
                                         onChange={(e) => handleChange(index, 'firstName', e.target.value)} disabled={index === 0 && useSameDetails} />
                                 </div>
 
                                 <div class="col mat-input">
-                                    <label for="">Last Name</label>
+                                    <label className="ps-3">Last Name</label>
                                     <input type="text" className='w-100'
                                         placeholder='Last Name'
                                         value={travellers[index].lastName}
@@ -213,7 +213,7 @@ const Userinfo = () => {
                             </div>
                             <div className='row mt-2'>
                                 <div class="col mat-input">
-                                    <label for="">Email</label>
+                                    <label className="ps-3">Email</label>
                                     <input type="text" className='w-100'
                                         placeholder='Email'
                                         value={travellers[index].email}
@@ -331,7 +331,7 @@ const Userinfo = () => {
                                     </select>
                                 </div>
                                 <div class="col mat-input">
-                                    <label for="">Address</label>
+                                    <label className="ps-3">Address</label>
                                     <input type="text" className='w-100'
                                         placeholder='Address' value={travellers[index].address}
                                         onChange={(e) => handleChange(index, 'address', e.target.value)} />
@@ -340,13 +340,13 @@ const Userinfo = () => {
 
                             <div className='row mt-2'>
                                 <div class="col mat-input">
-                                    <label for="">City</label>
+                                    <label className="ps-3">City</label>
                                     <input type="text" className='w-100'
                                         placeholder='City' value={travellers[index].city}
                                         onChange={(e) => handleChange(index, 'city', e.target.value)} />
                                 </div>
                                 <div class="col mat-input">
-                                    <label for="">Postal code</label>
+                                    <label className="ps-3">Postal code</label>
                                     <input type="text" className='w-100'
                                         placeholder='Postal code' value={travellers[index].postalcode}
                                         onChange={(e) => handleChange(index, 'postalcode', e.target.value)} />
@@ -383,7 +383,7 @@ const Userinfo = () => {
                                 </div>
                             )}
                             <p>
-                                <span>{totalCount} Person, {selectedDuration}, </span>
+                                <span>{totalCount} Person/ {selectedDuration}/ </span>
 
                                 {/* Show details for each level where count is > 0 */}
                                 {levels && levels.length > 0 ? (
@@ -414,12 +414,12 @@ const Userinfo = () => {
                             <h5 className="form_head">User Information for Payment</h5>
                             <div className='row'>
                                 <div class="col mat-input">
-                                    <label for="">First Name</label>
+                                    <label className="ps-3">First Name</label>
                                     <input id="" type="text" className='w-100' value={userDetails.firstName} placeholder="First name" onChange={(e) => handleUserChange('firstName', e.target.value)} />
                                 </div>
 
                                 <div class="col mat-input">
-                                    <label for="">Last Name</label>
+                                    <label className="ps-3">Last Name</label>
                                     <input id="" type="text" className='w-100' value={userDetails.lastName} placeholder="Last name" onChange={(e) => handleUserChange('lastName', e.target.value)} />
                                 </div>
 
@@ -427,13 +427,13 @@ const Userinfo = () => {
                             </div>
                             <div className='row mt-2'>
                                 <div class="col mat-input">
-                                    <label for="">Email</label>
+                                    <label className="ps-3">Email</label>
                                     <input id="" type="text" className='w-100' value={userDetails.email} placeholder='Email' onChange={(e) => handleUserChange('email', e.target.value)} />
                                 </div>
 
 
                                 <div class="col mat-input">
-                                    <label for="">Phone</label>
+                                    <label className="ps-3">Phone</label>
                                     <input id="" type="text" className='w-100' value={userDetails.phone} placeholder='Phone Number' onChange={(e) => handleUserChange('phone', e.target.value)} />
                                 </div>
 

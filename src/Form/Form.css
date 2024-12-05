@@ -138,7 +138,7 @@
 
 .summary-header {
     display: block;
-    font-weight: bold;
+    /* font-weight: bold; */
     font-size: 15px;
     padding: 5px;
     color: black;
