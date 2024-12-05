@@ -64,17 +64,22 @@ const Datepicker = () => {
 
   // Handle start date selection (only for available dates)
   const handleDateChange = (date) => {
-    const selected = validDates.find(
-      ({ startDate, status }) =>
-        isSameDay(startDate, date) && status === 0
-    );
+    const selected = validDates.find(({ startDate }) => isSameDay(startDate, date));
 
+    // Check if the selected date has an availability status
     if (selected) {
+      // If the status is less than totalCount, show a message indicating availability
+      if (selected.status < totalCount) {
+        alert(`Only ${selected.status} are available for this date.`);
+        return; // Prevent selecting the date
+      }
+
+      // If the status is sufficient, set the start date and calculate the end date
       setStartDate(date);
       const calculatedEndDate = addDays(date, getDurationInDays(selectedDuration));
       setEndDate(calculatedEndDate);
     } else {
-      alert("Selected date is unavailable. Please choose another date.");
+      alert("Please select a valid date.");
     }
   };
 
@@ -108,17 +113,20 @@ const Datepicker = () => {
     }
   };
 
-  // Add a custom CSS class to highlight start dates
+  // Add a custom CSS class to highlight start dates and set the status text
   const highlightStartDate = (date) => {
     const foundDate = validDates.find(({ startDate }) =>
       isSameDay(startDate, date)
     );
 
     if (foundDate) {
-      if (foundDate.status === 1) {
-        return "unavailable-date";
+      if (foundDate.status === 0) {
+        return "booked-date"; // Class for Booked
+      } else if (foundDate.status >= 1 && foundDate.status <= 3) {
+        return "few-left-date"; // Class for Few Left
+      } else if (foundDate.status > 3) {
+        return "available-date"; // Class for Available
       }
-      return "available-date";
     }
 
     if (
@@ -128,7 +136,8 @@ const Datepicker = () => {
     ) {
       return "selected-range-date";
     }
-    return "";
+
+    return ""; // Default class
   };
 
   return (

@@ -152,14 +152,14 @@ const Admin_Edit_DateRange = () => {
                 onChange={(e) => handleDateRangeChange(index, 'endDate', e.target.value)}
                 required
               />
-              <select
-                className="form-select me-2"
+              <input
+                type="text"
+                className="form-control me-2"
+                placeholder="Status (e.g., Available or Booked)"
                 value={range.status}
-                onChange={(e) => handleDateRangeChange(index, 'status', parseInt(e.target.value, 10))}
-              >
-                <option value={0}>Available</option>
-                <option value={1}>Booked</option>
-              </select>
+                onChange={(e) => handleDateRangeChange(index, 'status', e.target.value)}
+                required
+              />
               <button
                 type="button"
                 className="btn btn-danger"

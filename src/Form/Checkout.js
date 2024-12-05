@@ -15,6 +15,7 @@ const Checkout = () => {
 
     // Destructure and provide fallback values to ensure safety
     const {
+        tripName,
         selectedDuration = "",
         counts = [],
         countsbed = [],
@@ -69,6 +70,7 @@ const Checkout = () => {
     const handleUserinfo = () => {
         navigate('/userinfo', {
             state: {
+                tripName,
                 selectedDuration,
                 counts,
                 countsbed,

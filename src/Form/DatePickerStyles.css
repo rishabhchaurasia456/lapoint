@@ -16,15 +16,19 @@
   margin: 2%;
 }
 
-.unavailable-date {
+.booked-date {
   background-color: red !important;
-  color: white !important;
+  color: white;
+}
+
+.few-left-date {
+  background-color: orange !important;
+  color: white;
 }
 
 .available-date {
-  background-color: #a2fd19 !important;
-
-  color: black !important;
+  background-color: green !important;
+  color: white;
 }
 
 
@@ -164,7 +168,7 @@
     font-size: 15px !important;
   }
 
-  .date_pick_btn{
+  .date_pick_btn {
     background-color: #ffc800;
     color: black;
     font-size: 20px;
@@ -173,7 +177,7 @@
     border: 0;
     text-decoration: none;
     border-radius: 8px;
-}
+  }
 
 }
 

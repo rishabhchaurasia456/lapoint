@@ -9,6 +9,7 @@ const Userinfo = () => {
     const location = useLocation();
 
     const {
+        tripName,
         selectedDuration,
         counts,
         // countsbed,
@@ -31,6 +32,28 @@ const Userinfo = () => {
     console.log("line itemssssssssss", lineItems)
     console.log("roomtypeeeeeeeeeeeeeeeeeeeee", selectedRooms)
     console.log("zoho_senttttttttttttttttttttttttttt", carRentalPrice)
+    const datestatus = {
+        tripName,
+        startDate,
+        selectedDuration,
+        totalCount
+    }
+    console.log("datestatussss", datestatus)
+    const handleBooking = async () => {
+        const bookingData = {
+            tripName,
+            startDate,
+            selectedDuration,
+            totalCount
+        };
+      
+        try {
+          const response = await axios.post(`${config.API_BASE_URL}/api/user/update-seats`, bookingData);
+          console.log('Status updated successfully:', response.data);
+        } catch (error) {
+          console.error('Error updating status:', error.response?.data || error.message);
+        }
+      };
 
 
     const [userDetails, setUserDetails] = useState({
@@ -452,7 +475,7 @@ const Userinfo = () => {
                         <div className='btn_container mb-5'>
                             {/* Conditionally render the button based on isTermsAccepted */}
                             {isTermsAccepted ? (
-                                <button className="level_btn" onClick={handleSubmit}>
+                                <button className="level_btn" onClick={handleBooking}>
                                     Make Reservation
                                 </button>
                             ) : null} {/* Button is not rendered if isTermsAccepted is false */}
