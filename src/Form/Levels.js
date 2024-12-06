@@ -238,7 +238,7 @@ const Levels = () => {
                   </div>
                 ))
               ) : (
-                <p>No items available for the selected duration.</p>
+                <p className='background_black'>No items available for the selected duration.</p>
               )}
 
 

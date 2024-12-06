@@ -7,9 +7,10 @@
     height: 100%;
 }
 
-/* .bg_cont {
+.background_black {
+    background-color: #000;
     height: 150vh;
-} */
+}
 
 .level_heading {
     text-transform: uppercase;
