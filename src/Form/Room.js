@@ -130,7 +130,7 @@ const Room = () => {
                 </div>
               </div>
 
-              <div className="container-fluid">
+              {/* <div className="container-fluid">
                 <p className="level_heading">Choose your room type | Price add-on per room for the duration</p>
 
                 {roomtype.map((item, index) => (
@@ -150,7 +150,43 @@ const Room = () => {
                     </div>
                   </div>
                 ))}
+              </div> */}
+              <div className="container-fluid">
+                <p className="level_heading text-center">Choose your room type | Price add-on per room for the duration</p>
+
+                  <div className="row mt-4">
+                    {roomtype.map((item, index) => (
+                        <div className="col-lg-4 col-md-6 col-sm-12" key={item._id}>
+                          <div className="card  h-100 rounded-5">
+                          <img
+                            src={`${config.API_BASE_URL}/${item.images[0]}`}
+                            className="card-img-top rounded-top-5"
+                            alt={item.roomName}
+                            onError={(e) => {
+                              e.target.onerror = null; // Prevent infinite fallback loop
+                              e.target.src = require("../Images/flexbanner.jpg"); // Fallback image
+                            }}
+                          />
+                            <div className="card-body">
+                              <div className="row">
+                                <div className="col-7">
+                                  <h5 className="card-title">{item.roomName}</h5>
+                                  <p className="card-text">€ {item.price} / per night</p>
+                                </div>
+                                <div className="col-5 d-flex align-items-center justify-content-center">
+                                  {/* <a href="#" className="btn btn-primary"></a> */}
+                                  <i className="fa fa-minus-circle P_M_icon" onClick={(e) => { e.preventDefault(); decrement(index); }}></i>
+                                  <span>{countsbed[index]}</span>
+                                  <i className="fa fa-plus-circle P_M_icon" onClick={(e) => { e.preventDefault(); increment(index); }}></i>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    ))}
+                  </div>
               </div>
+
 
               {canProceed && (
                 <div className="btn_container">

@@ -189,7 +189,7 @@ const Activity = () => {
                     </p>
                   </div>
                 </div>
-                <div className="col-md-3">
+                <div className="col-md-3 d-flex align-items-center justify-content-center">
                   <i className="fa fa-minus-circle P_M_icon" onClick={() => decrementRecommended(index)}></i>
                   <span>{recommendedCounts[index]}</span>
                   <i className="fa fa-plus-circle P_M_icon" onClick={() => incrementRecommended(index)}></i>
@@ -210,7 +210,7 @@ const Activity = () => {
                     </p>
                   </div>
                 </div>
-                <div className="col-md-3">
+                <div className="col-md-3 d-flex align-items-center justify-content-center">
                   <i className="fa fa-minus-circle P_M_icon" onClick={() => decrementAddOn(index)}></i>
                   <span>{addOnCounts[index]}</span>
                   <i className="fa fa-plus-circle P_M_icon" onClick={() => incrementAddOn(index)}></i>

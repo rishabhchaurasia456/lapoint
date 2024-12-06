@@ -166,6 +166,14 @@ const Datepicker = () => {
                 </p>
 
                 <div className="datepick_border"></div>
+                <div className="date_visible">
+                  <i className="fa fa-circle cir1" aria-hidden="true"></i>
+                  <span className="date_visible_span"> Available Date</span>
+                  <i className="fa fa-circle cir2" aria-hidden="true"></i>
+                  <span className='date_visible_span'> Booked Date</span>
+                  <i className="fa fa-circle cir3" aria-hidden="true"></i>
+                  <span className=''> Limited Seats Almost Full</span>
+                </div>
                 <div className="datepicker_cont">
                   <div className="custom-datepicker">
                     <h2 className="cal_head mb-4">Select Start Date</h2>
@@ -182,23 +190,12 @@ const Datepicker = () => {
                   </div>
                 </div>
 
-                <div className="date_visible">
-                  <i className="fa fa-circle cir1" aria-hidden="true"></i>
-                  <span className="date_visible_span"> Available Date</span>
-                  <i className="fa fa-circle cir2" aria-hidden="true"></i>
-                  <span className='date_visible_span'> Booked Date</span>
-                  <i className="fa fa-circle cir3" aria-hidden="true"></i>
-                  <span className=''> Limited Seats</span>
-                </div>
-
                 {startDate && endDate && (
                   <div className="fw-bold cal_head">
                     <span> {startDate.toLocaleDateString()} - </span>
                     <span> {endDate.toLocaleDateString()}</span>
                   </div>
                 )}
-
-
 
               </div>
               <div className="btn_container">

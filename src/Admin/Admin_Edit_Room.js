@@ -4,7 +4,7 @@ import axios from 'axios';
 import config from '../config/config';
 
 const Admin_Edit_Room = () => {
-  const { id } = useParams(); // Get roomId from URL
+  const { id } = useParams();
   const [tripName, setTripName] = useState('');
   const [roomDetails, setRoomDetails] = useState([]);
   const navigate = useNavigate();
@@ -13,66 +13,103 @@ const Admin_Edit_Room = () => {
     const fetchRoomDetails = async () => {
       try {
         const response = await axios.post(`${config.API_BASE_URL}/api/admin/get_room/${id}`);
-        console.log("response", response.data.trip);
-
         const trip = response.data.trip;
-        
-        // Set the trip name
         setTripName(trip.tripName);
-
-        // Set the room details array (populate initially with data)
         setRoomDetails(trip.roomdetail);
       } catch (error) {
-        console.error("Error fetching room details:", error);
+        console.error('Error fetching room details:', error);
       }
     };
-
     fetchRoomDetails();
-  }, [id]); // Depend on id to fetch room details whenever the id changes
+  }, [id]);
 
-  // Handle changes in room details
   const handleRoomChange = (index, field, value) => {
     const updatedRoomDetails = [...roomDetails];
     updatedRoomDetails[index][field] = value;
     setRoomDetails(updatedRoomDetails);
   };
 
-  // Add a new room field (if required for editing multiple rooms)
+  const handleImageUpload = (index, event) => {
+    const file = event.target.files[0];
+    if (file) {
+      const updatedRoomDetails = [...roomDetails];
+      if (!updatedRoomDetails[index].newImages) {
+        updatedRoomDetails[index].newImages = [];
+      }
+      updatedRoomDetails[index].newImages.push(file);
+      setRoomDetails(updatedRoomDetails);
+    }
+  };
+
+  const removeExistingImage = (roomIndex, imageIndex) => {
+    const updatedRoomDetails = [...roomDetails];
+    const imageToDelete = updatedRoomDetails[roomIndex].images[imageIndex];
+
+    if (!updatedRoomDetails[roomIndex].imagesToDelete) {
+      updatedRoomDetails[roomIndex].imagesToDelete = [];
+    }
+
+    updatedRoomDetails[roomIndex].imagesToDelete.push(imageToDelete);
+    updatedRoomDetails[roomIndex].images.splice(imageIndex, 1);
+    setRoomDetails(updatedRoomDetails);
+  };
+
+  const removeNewImage = (roomIndex, newImageIndex) => {
+    const updatedRoomDetails = [...roomDetails];
+    updatedRoomDetails[roomIndex].newImages.splice(newImageIndex, 1);
+    setRoomDetails(updatedRoomDetails);
+  };
+
+  const removeRoom = (index) => {
+    const updatedRoomDetails = roomDetails.filter((_, i) => i !== index);
+    setRoomDetails(updatedRoomDetails);
+  };
+
   const addRoomField = () => {
-    setRoomDetails([...roomDetails, { roomName: '', price: '' }]);
+    setRoomDetails([
+      ...roomDetails,
+      { roomName: '', price: '', images: [], description: '', newImages: [] },
+    ]);
   };
 
-  // Remove a room field
-  const removeRoomField = (index) => {
-    setRoomDetails(roomDetails.filter((_, i) => i !== index));
-  };
-
-  // Handle form submission to update the room
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
-    // Prepare the payload, sending tripId and the updated room details
-    const payload = {
-      tripName,
-      roomdetail: roomDetails.map((room) => ({
-        roomName: room.roomName,
-        price: parseFloat(room.price),  // Ensure price is a number
-      })),
-    };
-  
+
+    const formData = new FormData();
+    formData.append('tripName', tripName);
+
+    roomDetails.forEach((room, index) => {
+      formData.append(`roomdetail[${index}][roomName]`, room.roomName);
+      formData.append(`roomdetail[${index}][price]`, parseFloat(room.price));
+      formData.append(`roomdetail[${index}][description]`, room.description);
+
+      room.images.forEach((image, imgIndex) => {
+        formData.append(`roomdetail[${index}][images][${imgIndex}]`, image);
+      });
+
+      room.imagesToDelete?.forEach((image, deleteIndex) => {
+        formData.append(`roomdetail[${index}][imagesToDelete][${deleteIndex}]`, image);
+      });
+
+      room.newImages?.forEach((file, fileIndex) => {
+        formData.append(`roomdetail[${index}][newImages][${fileIndex}]`, file);
+      });
+    });
+
     try {
-      // Send the request to update the room details for the given tripId
-      const response = await axios.post(`${config.API_BASE_URL}/api/admin/edit_room/${id}`, payload);
+      const response = await axios.post(`${config.API_BASE_URL}/api/admin/edit_room/${id}`, formData, {
+        headers: { 'Content-Type': 'multipart/form-data' },
+      });
+
       if (response.status === 200) {
         alert('Room details updated successfully!');
-        navigate('/admin/room'); // Navigate back to the rooms list
+        navigate('/admin/room');
       }
     } catch (error) {
       console.error('Error updating room details:', error);
       alert('Failed to update room details. Please try again.');
     }
   };
-  
 
   return (
     <div className="container">
@@ -87,14 +124,14 @@ const Admin_Edit_Room = () => {
             className="form-control"
             id="tripName"
             value={tripName}
-            readOnly // Read-only since trip name shouldn't be changed in this edit form
+            readOnly
           />
         </div>
 
         <h4>Room Details</h4>
         {roomDetails.map((room, index) => (
-          <div key={index} className="row mb-2">
-            <div className="col-md-5">
+          <div key={index} className="row mb-4">
+            <div className="col-md-3">
               <input
                 type="text"
                 className="form-control"
@@ -104,7 +141,7 @@ const Admin_Edit_Room = () => {
                 required
               />
             </div>
-            <div className="col-md-5">
+            <div className="col-md-2">
               <input
                 type="number"
                 className="form-control"
@@ -114,23 +151,74 @@ const Admin_Edit_Room = () => {
                 required
               />
             </div>
-            <div className="col-md-2">
+            <div className="col-md-4">
+              <textarea
+                className="form-control"
+                placeholder="Description"
+                value={room.description}
+                onChange={(e) => handleRoomChange(index, 'description', e.target.value)}
+              />
+            </div>
+            <div className="col-md-3">
+              <label>Images:</label>
+              <div>
+                {room.images.map((image, imgIndex) => (
+                  <div key={imgIndex}>
+                    <img
+                      src={`${config.API_BASE_URL}/${image}`}
+                      alt="Room"
+                      style={{ width: '80px' }}
+                    />
+                    <button
+                      type="button"
+                      className="btn btn-sm btn-danger"
+                      onClick={() => removeExistingImage(index, imgIndex)}
+                    >
+                      Remove
+                    </button>
+                  </div>
+                ))}
+              </div>
+              <label>New Images:</label>
+              <input
+                type="file"
+                className="form-control"
+                onChange={(e) => handleImageUpload(index, e)}
+                accept="image/*"
+              />
+              {room.newImages?.map((file, fileIndex) => (
+                <div key={fileIndex}>
+                  {file.name}
+                  <button
+                    type="button"
+                    className="btn btn-sm btn-danger"
+                    onClick={() => removeNewImage(index, fileIndex)}
+                  >
+                    Remove
+                  </button>
+                </div>
+              ))}
+            </div>
+            <div className="col-md-12 text-end mt-3">
               <button
                 type="button"
                 className="btn btn-danger"
-                onClick={() => removeRoomField(index)}
+                onClick={() => removeRoom(index)}
               >
-                Remove
+                Remove Room
               </button>
             </div>
           </div>
         ))}
 
-        <button type="button" className="btn btn-secondary mb-3" onClick={addRoomField}>
+        <button
+          type="button"
+          className="btn btn-secondary mb-3"
+          onClick={addRoomField}
+        >
           Add Another Room
         </button>
-
-        <button type="submit" className="btn btn-primary">
+        <button type="submit" className="btn btn-primary mt-3">
           Update Room
         </button>
       </form>
