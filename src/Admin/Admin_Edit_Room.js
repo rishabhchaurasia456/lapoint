@@ -92,8 +92,14 @@ const Admin_Edit_Room = () => {
       });
 
       room.newImages?.forEach((file, fileIndex) => {
-        formData.append(`roomdetail[${index}][newImages][${fileIndex}]`, file);
+        formData.append(`roomdetail[${index}][newImages]`, file);
       });
+
+      // Debugging
+      for (let pair of formData.entries()) {
+        console.log(pair[0], pair[1]);
+      }
+
     });
 
     try {
@@ -162,7 +168,7 @@ const Admin_Edit_Room = () => {
             <div className="col-md-3">
               <label>Images:</label>
               <div>
-                {room.images.map((image, imgIndex) => (
+                {/* {room.images.map((image, imgIndex) => (
                   <div key={imgIndex}>
                     <img
                       src={`${config.API_BASE_URL}/${image}`}
@@ -177,7 +183,24 @@ const Admin_Edit_Room = () => {
                       Remove
                     </button>
                   </div>
+                ))} */}
+                {room.images.map((image, imgIndex) => (
+                  <div key={imgIndex}>
+                    <img
+                      src={`${config.API_BASE_URL}/${image.replace(/\\/g, '/')}`} // Convert backslashes to slashes
+                      alt="Room"
+                      style={{ width: '80px' }}
+                    />
+                    <button
+                      type="button"
+                      className="btn btn-sm btn-danger"
+                      onClick={() => removeExistingImage(index, imgIndex)}
+                    >
+                      Remove
+                    </button>
+                  </div>
                 ))}
+
               </div>
               <label>New Images:</label>
               <input
