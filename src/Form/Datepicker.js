@@ -168,11 +168,11 @@ const Datepicker = () => {
                 <div className="datepick_border"></div>
                 <div className="date_visible">
                   <i className="fa fa-circle cir1" aria-hidden="true"></i>
-                  <span className="date_visible_span"> Available Date</span>
+                  <span className="date_visible_span"> Available </span>
                   <i className="fa fa-circle cir2" aria-hidden="true"></i>
-                  <span className='date_visible_span'> Booked Date</span>
+                  <span className='date_visible_span'> Fully Booked</span>
                   <i className="fa fa-circle cir3" aria-hidden="true"></i>
-                  <span className=''> Limited Seats Almost Full</span>
+                  <span className=''> Last spots</span>
                 </div>
                 <div className="datepicker_cont">
                   <div className="custom-datepicker">

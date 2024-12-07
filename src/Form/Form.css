@@ -49,6 +49,10 @@
         padding: 5px !important;
     }
 
+    .level_crd_price {
+        margin-left: 16% !important;
+    }
+
 
 }
 
@@ -204,7 +208,7 @@
 
     .P_M_icon {
         cursor: pointer;
-        font-size: 20px;
+        font-size: 25px;
         margin: 5px;
         margin-top: 5px !important;
         padding-top: 0 !important;
@@ -276,8 +280,6 @@
 
 /* checkout component css  */
 
-
-
 .checkout_data {
     font-size: 17px;
     margin: 5px;
@@ -327,7 +329,7 @@
     background-color: #ffc800;
     color: black;
     font-size: 20px;
-    margin: auto;
+    margin: 0 0 0 35px;
     width: 50%;
     padding: 8px 0 8px 0;
     border: 0;
@@ -380,18 +382,22 @@
 
 
 
-
 /* --------------------------------  */
 /* userinfo  component css  */
 /* --------------------------------  */
+
+
 
 .form_head {
     font-size: 18px;
     font-weight: bold;
 }
 
+
 /* From input field css */
 .mat-input {
+    -webkit-appearance: none !important;
+    appearance: none !important;
     margin: 1px;
     padding: 1px;
     position: relative;
@@ -456,12 +462,24 @@
 
 
 /* in form  select box css  */
-
-
 /* From input field css */
 .mat-input {
+    -webkit-appearance: none;
+    appearance: none;
     position: relative;
     font-size: inherit;
+}
+
+
+.forDob {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100% !important;
+    border: 1px solid #8c8c8c !important;
+    border-radius: 4px !important;
+    color: #606060;
+    padding: 1em !important;
+    font-size: inherit !important;
 }
 
 .mat-input input {
@@ -491,6 +509,8 @@
 }
 
 .mat-input label {
+    -webkit-appearance: none;
+    appearance: none;
     position: absolute;
     top: 1.4em;
     left: 1em;
@@ -500,6 +520,8 @@
 }
 
 .mat-input:has(input:focus) label {
+    -webkit-appearance: none;
+    appearance: none;
     color: #ffc800;
 }
 
@@ -520,9 +542,12 @@
 }
 
 .mat-input select {
+    -webkit-appearance: none;
+    appearance: none;
     width: 100% !important;
     border: 1px solid #8c8c8c !important;
     border-radius: 4px !important;
+    color: #606060;
     padding: 1em !important;
     font-size: inherit !important;
     background-color: #0000000a !important;
@@ -531,6 +556,8 @@
 
 .mat-input select:hover,
 .mat-input select:focus {
+    -webkit-appearance: none;
+    appearance: none;
     border-color: #ffc800 !important;
     outline: none !important;
 }
@@ -597,6 +624,8 @@ input:focus+.slider {
 input:checked+.slider:before {
     transform: translateX(1.9em);
 }
+
+
 
 
 /* ------------------------------------- */
@@ -693,3 +722,35 @@ input:checked+.slider:before {
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* user info css for safarii Browser  */
