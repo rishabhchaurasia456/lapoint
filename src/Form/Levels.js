@@ -174,10 +174,12 @@ const Levels = () => {
                     <div className="col-lg-8 col-sm-12">
                       <div className="level_crd_text">
                         <p className="level_crd_para">
-                          <span className='col'>
-                            <b>{item.name}</b>
-                          </span>{' '}
-                          <span className='level_crd_price'> | From: €{item.rate}</span>
+                          <div className="row">
+                            <span className='col-sm-12'>
+                              <b>{item.name}</b>
+                            </span>{' '}
+                            <span className='col-sm-12 level_crd_price'> | From: €{item.rate}</span>
+                          </div>
                         </p>
                       </div>
                       <div className="mx-3 my-3">
