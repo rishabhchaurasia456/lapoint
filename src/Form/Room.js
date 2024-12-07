@@ -115,44 +115,10 @@ const Room = () => {
         <div className="col-lg-8">
           <div className="container-fluid">
             <p className="level_heading text-center mt-5">
-              Choose your room type | Price add-on per room for the duration
+              Choose your room type
             </p>
 
             <div className="row mt-4">
-              {/* {roomtype.map((item, index) => (
-                <div className="col-lg-4 col-md-6 col-sm-12" key={item._id}>
-                  <div className="card h-100 rounded-2">
-                    <img
-                      src={`${config.API_BASE_URL}/${item.images[0]}`}
-                      className="card-img-top rounded-top-2"
-                      alt={item.roomName}
-                      onError={e => {
-                        e.target.onerror = null;
-                        e.target.src = require('../Images/flexbanner.jpg');
-                      }}
-                    />
-                    <div className="card-body">
-                      <div className="row">
-                        <div className="col-7 ">
-                          <h5 className="card-title">{item.roomName}</h5>
-                          <p className="card-text">€ {item.price} / per night</p>
-                        </div>
-                        <div className="col-5 d-flex align-items-center justify-content-center">
-                          <i className="fa fa-minus-circle P_M_icon" onClick={() => decrement(index)}></i>
-                          <span>{countsbed[index]}</span>
-                          <i className="fa fa-plus-circle P_M_icon" onClick={() => increment(index)}></i>
-                        </div>
-                      </div>
-                      <button
-                        className="level_btn fs-6 mt-3"
-                        onClick={() => toggleDetails(index)}
-                      >
-                        {activeCardIndex === index ? 'Hide Details' : 'View Details'}
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              ))} */}
               {roomtype.map((item, index) => (
                 <div className="col-lg-4 col-md-6 col-sm-12 mt-4" key={item._id}>
                   <div className="card h-100 rounded-2">

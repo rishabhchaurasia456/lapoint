@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import axios from 'axios';
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 import config from '../config/config';
 
 
@@ -165,8 +167,8 @@ const Userinfo = () => {
         try {
             const response = await axios.post(`${config.API_BASE_URL}/api/user/send-to-zoho`, customerData);
             console.log("Data sent to Zoho successfully", response.data);
-            handleBooking();
             googleSubmit();
+            handleBooking();
         } catch (error) {
             console.error("Error sending data to Zoho:", error);
         }
@@ -222,22 +224,7 @@ const Userinfo = () => {
                                     />
                                 </div>
 
-
                                 <div className="col mat-input">
-                                    <input
-                                        type='date'
-                                        className=' w-100 forDob'
-                                        placeholder='Date of Birth'
-                                        value={travellers[index].dob}
-                                        onChange={(e) => handleChange(index, 'dob', e.target.value)}
-                                    />
-                                </div>
-                            </div>
-
-                            <hr className='mt-4' />
-                            <div className='row mt-2'>
-                                <div className="col mat-input">
-                                    <h5 className='form_head'>Gender</h5>
                                     <select
                                         className='100'
                                         value={travellers[index].gender}
@@ -248,19 +235,47 @@ const Userinfo = () => {
                                         <option value='Male'>Other</option>
                                     </select>
                                 </div>
-                                <div className="col mat-input">
-                                    <h5 className='form_head'>Size</h5>
-                                    <select
-                                        className='w-100'
-                                        value={travellers[index].size}
-                                        onChange={(e) => handleChange(index, 'size', e.target.value)}>
-                                        <option value=''>Select Size</option>
-                                        <option value='S'>S</option>
-                                        <option value='M'>M</option>
-                                        <option value='L'>L</option>
-                                        <option value='XL'>XL</option>
-                                        <option value='XXL'>XXL</option>
-                                    </select>
+                            </div>
+
+                            <hr className='mt-4' />
+                            <div className='row mt-2'>
+                                <div className="col">
+                                    {/* <input
+                                        type='date'
+                                        className=' w-100 forDob'
+                                        placeholder='Date of Birth'
+                                        value={travellers[index].dob}
+                                        onChange={(e) => handleChange(index, 'dob', e.target.value)}
+                                    /> */}
+                                    <DatePicker
+                                        selected={travellers[index].dob ? new Date(travellers[index].dob) : null}
+                                        onChange={(date) => handleChange(index, "dob", date ? date.toISOString().split("T")[0] : "")}
+                                        placeholderText="Date of Birth"
+                                        className="mat-input-fordob w-100"
+                                        dateFormat="yyyy-MM-dd"
+                                        portalId="root-portal" // Ensure this ID matches your app's root
+                                    />
+                                </div>
+                                <div class="col mat-input">
+                                    <label className="ps-3">Address</label>
+                                    <input type="text" className='w-100'
+                                        placeholder='Address' value={travellers[index].address}
+                                        onChange={(e) => handleChange(index, 'address', e.target.value)} />
+                                </div>
+                            </div>
+
+                            <div className='row mt-2'>
+                                <div class="col mat-input">
+                                    <label className="ps-3">Postal code</label>
+                                    <input type="text" className='w-100'
+                                        placeholder='Postal code' value={travellers[index].postalcode}
+                                        onChange={(e) => handleChange(index, 'postalcode', e.target.value)} />
+                                </div>
+                                <div class="col mat-input">
+                                    <label className="ps-3">City</label>
+                                    <input type="text" className='w-100'
+                                        placeholder='City' value={travellers[index].city}
+                                        onChange={(e) => handleChange(index, 'city', e.target.value)} />
                                 </div>
                             </div>
 
@@ -330,28 +345,21 @@ const Userinfo = () => {
                                         <option value='Zimbabwe'>Zimbabwe</option>
                                     </select>
                                 </div>
-                                <div class="col mat-input">
-                                    <label className="ps-3">Address</label>
-                                    <input type="text" className='w-100'
-                                        placeholder='Address' value={travellers[index].address}
-                                        onChange={(e) => handleChange(index, 'address', e.target.value)} />
+                                <div className="col mat-input">
+                                    <select
+                                        className='w-100'
+                                        value={travellers[index].size}
+                                        onChange={(e) => handleChange(index, 'size', e.target.value)}>
+                                        <option value=''>Select Size</option>
+                                        <option value='S'>S</option>
+                                        <option value='M'>M</option>
+                                        <option value='L'>L</option>
+                                        <option value='XL'>XL</option>
+                                        <option value='XXL'>XXL</option>
+                                    </select>
                                 </div>
                             </div>
 
-                            <div className='row mt-2'>
-                                <div class="col mat-input">
-                                    <label className="ps-3">City</label>
-                                    <input type="text" className='w-100'
-                                        placeholder='City' value={travellers[index].city}
-                                        onChange={(e) => handleChange(index, 'city', e.target.value)} />
-                                </div>
-                                <div class="col mat-input">
-                                    <label className="ps-3">Postal code</label>
-                                    <input type="text" className='w-100'
-                                        placeholder='Postal code' value={travellers[index].postalcode}
-                                        onChange={(e) => handleChange(index, 'postalcode', e.target.value)} />
-                                </div>
-                            </div>
                         </div>
                     </div>
 

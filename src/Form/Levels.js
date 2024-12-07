@@ -198,7 +198,7 @@ const Levels = () => {
                           >
                             {index === 0
                               ? 'Shared Rental – Always Included (€60 x person x days)'
-                              : `Shared Rental for this level (€60 x  person x days)`}
+                              : `Rental Of Complete kiteset for this level (€60 x  person x days)`}
                           </label>
                         </div>
                       </div>

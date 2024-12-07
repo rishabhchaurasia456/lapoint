@@ -141,7 +141,14 @@ const Checkout = () => {
                         <div>
                             <h2 className='level_heading'>Selected Levels</h2>
                             <div className="checkout_data">
-                                Total Kitset Rental Price: € {carRentalPrice}
+                            <div className="row">
+                                <div className="col-lg-9 col">
+                                    Total Kiteset Rental Price:
+                                </div>
+                                <div className="col-lg-3 col d-flex align-items-center justify-content-center">
+                                    € {carRentalPrice}
+                                </div>
+                            </div>
                             </div>
                             {levels.map((item, index) => (
                                 counts[index] > 0 && (
@@ -149,7 +156,16 @@ const Checkout = () => {
                                         <div className="col-lg-9 col">
                                             <div className='checkout_data'>
                                                 {item.item_name}: {counts[index]}
-                                                <div className="col mt-1" key={index}>
+                                                
+                                            </div>
+                                        </div>
+                                        <div className="col-lg-3 col d-flex align-items-center justify-content-center">
+                                            <div className='checkout_data'>
+                                                € {counts[index] * item.rate}
+                                            </div>
+                                        </div>
+                                        <div classname="row">
+                                        <div className="col mt-1" key={index}>
                                                     <details className="styled-dropdown">
                                                         <summary className="summary-header text-dark">What's included</summary>
                                                         <div className="dropdown-content fs-5 mb-2">
@@ -161,12 +177,6 @@ const Checkout = () => {
                                                         </div>
                                                     </details>
                                                 </div>
-                                            </div>
-                                        </div>
-                                        <div className="col-lg-3 col d-flex align-items-center justify-content-center">
-                                            <div className='checkout_data'>
-                                                € {counts[index] * item.rate}
-                                            </div>
                                         </div>
                                     </div>
                                 )

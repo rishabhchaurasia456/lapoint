@@ -192,7 +192,7 @@ const Datepicker = () => {
 
                 {startDate && endDate && (
                   <div className="fw-bold cal_head">
-                    <span> {startDate.toLocaleDateString()} - </span>
+                    <span> {startDate.toLocaleDateString()} to </span>
                     <span> {endDate.toLocaleDateString()}</span>
                   </div>
                 )}

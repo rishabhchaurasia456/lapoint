@@ -442,6 +442,30 @@
 
 
 /* From input field css */
+.mat-input-fordob {
+    border-width: 0 0 1px;
+    outline: none;
+    background-color: #0000000a;
+    border-radius: 4px 4px 0 0;
+    padding: 1.5em 0.70em 0.70em;
+    border-color: #393838;
+    border-style: solid;
+    font-size: inherit;
+    width: 100% !important;
+}
+
+.react-datepicker-wrapper{
+  width:100%;
+}
+
+#root-portal .react-datepicker-popper {
+    position: fixed !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    z-index: 1050; /* Ensure it appears above other elements */
+}
+
 .mat-input {
     -webkit-appearance: none !important;
     appearance: none !important;
