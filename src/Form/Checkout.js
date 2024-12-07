@@ -102,7 +102,7 @@ const Checkout = () => {
                         <span className='me-3'>{startDate ? new Date(startDate).toLocaleDateString() : "Start Date"}</span>
                         to
                         <span className='mx-3'>{endDate ? new Date(endDate).toLocaleDateString() : "End Date"}</span>
-                        <span className=' level_heading'> | Total Price: € {discountedPrice}</span> {/* Use discounted price here */}
+                            {/* <span className=' level_heading'> | Total Price: € {discountedPrice}</span>  */}
                     </div>
                 </div>
             </div>
@@ -114,8 +114,8 @@ const Checkout = () => {
                     <div>
                         {/* Selected Duration and Total Person */}
                         <div className='text-center checkout_data'>
-                            <p>Selected Duration: {selectedDuration}</p>
-                            <p>Total Persons: {totalCount}</p>
+                            <p className='fw-bold fs-5'>Selected Duration : {selectedDuration}</p>
+                            <p>Total Persons : {totalCount}</p>
                         </div>
 
                         {/* Room Details */}
@@ -123,12 +123,12 @@ const Checkout = () => {
                             <h2 className='level_heading'>Room Details</h2>
                             {selectedRooms.map((room, index) => (
                                 <div className='row' key={index}>
-                                    <div className="col-lg-9">
+                                    <div className="col-lg-9 col">
                                         <div className='checkout_data'>
                                             {room.room}: {room.count}
                                         </div>
                                     </div>
-                                    <div className="col-lg-3">
+                                    <div className="col-lg-3 col d-flex align-items-center justify-content-center">
                                         <div className='checkout_data'>
                                             € {room.price}
                                         </div>
@@ -146,7 +146,7 @@ const Checkout = () => {
                             {levels.map((item, index) => (
                                 counts[index] > 0 && (
                                     <div className='row' key={index}>
-                                        <div className="col-lg-9">
+                                        <div className="col-lg-9 col">
                                             <div className='checkout_data'>
                                                 {item.item_name}: {counts[index]}
                                                 <div className="col mt-1" key={index}>
@@ -163,7 +163,7 @@ const Checkout = () => {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="col-lg-3">
+                                        <div className="col-lg-3 col d-flex align-items-center justify-content-center">
                                             <div className='checkout_data'>
                                                 € {counts[index] * item.rate}
                                             </div>
@@ -179,12 +179,12 @@ const Checkout = () => {
                                 <h2 className='level_heading'>Selected Add Ons</h2>
                                 {activityDetails.map((activity, index) => (
                                     <div className='row' key={index}>
-                                        <div className="col-lg-9">
+                                        <div className="col-lg-9 col">
                                             <div className='checkout_data'>
                                                 {activity.name}: {activity.count}
                                             </div>
                                         </div>
-                                        <div className="col-lg-3">
+                                        <div className="col-lg-3 col d-flex align-items-center justify-content-center">
                                             <div className='checkout_data'>
                                                 € {activity.price}
                                             </div>
@@ -201,7 +201,7 @@ const Checkout = () => {
                                         onChange={(e) => setCouponCode(e.target.value)}>
                                     </input>
                                 </div>
-                                <div className="col">
+                                <div className="col mx-0 px-0">
                                     <button className='coupon_btn' onClick={handleApplyCoupon}>Apply Coupon
                                     </button>
                                 </div>

@@ -226,7 +226,7 @@ const Userinfo = () => {
                                 <div className="col mat-input">
                                     <input
                                         type='date'
-                                        className=' w-100'
+                                        className=' w-100 forDob'
                                         placeholder='Date of Birth'
                                         value={travellers[index].dob}
                                         onChange={(e) => handleChange(index, 'dob', e.target.value)}
