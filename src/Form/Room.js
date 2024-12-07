@@ -85,7 +85,7 @@ const Room = () => {
       }))
       .filter(room => room.count > 0);
 
-    navigate('/activity', {
+    navigate('/checkout/activity', {
       state: {
         tripName,
         selectedDuration,
@@ -114,17 +114,51 @@ const Room = () => {
         <div className="col-lg-2"></div>
         <div className="col-lg-8">
           <div className="container-fluid">
-            <p className="level_heading text-center">
+            <p className="level_heading text-center mt-5">
               Choose your room type | Price add-on per room for the duration
             </p>
 
             <div className="row mt-4">
-              {roomtype.map((item, index) => (
+              {/* {roomtype.map((item, index) => (
                 <div className="col-lg-4 col-md-6 col-sm-12" key={item._id}>
-                  <div className="card h-100 rounded-5">
+                  <div className="card h-100 rounded-2">
                     <img
                       src={`${config.API_BASE_URL}/${item.images[0]}`}
-                      className="card-img-top rounded-top-5"
+                      className="card-img-top rounded-top-2"
+                      alt={item.roomName}
+                      onError={e => {
+                        e.target.onerror = null;
+                        e.target.src = require('../Images/flexbanner.jpg');
+                      }}
+                    />
+                    <div className="card-body">
+                      <div className="row">
+                        <div className="col-7 ">
+                          <h5 className="card-title">{item.roomName}</h5>
+                          <p className="card-text">€ {item.price} / per night</p>
+                        </div>
+                        <div className="col-5 d-flex align-items-center justify-content-center">
+                          <i className="fa fa-minus-circle P_M_icon" onClick={() => decrement(index)}></i>
+                          <span>{countsbed[index]}</span>
+                          <i className="fa fa-plus-circle P_M_icon" onClick={() => increment(index)}></i>
+                        </div>
+                      </div>
+                      <button
+                        className="level_btn fs-6 mt-3"
+                        onClick={() => toggleDetails(index)}
+                      >
+                        {activeCardIndex === index ? 'Hide Details' : 'View Details'}
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              ))} */}
+              {roomtype.map((item, index) => (
+                <div className="col-lg-4 col-md-6 col-sm-12 mt-4" key={item._id}>
+                  <div className="card h-100 rounded-2">
+                    <img
+                      src={`${config.API_BASE_URL}/${item.images[0]}`}
+                      className="card-img-top rounded-top-2"
                       alt={item.roomName}
                       onError={e => {
                         e.target.onerror = null;
@@ -144,36 +178,69 @@ const Room = () => {
                         </div>
                       </div>
                       <button
-                        className="btn btn-warning"
+                        className="level_btn fs-6 mt-3"
                         onClick={() => toggleDetails(index)}
                       >
                         {activeCardIndex === index ? 'Hide Details' : 'View Details'}
                       </button>
+
+                      {activeCardIndex === index && (
+                        <div className="room-details mt-3">
+                          <h5 className="level_heading">{item.roomName} Details</h5>
+                          <div className="row">
+                            {item.images.map((img, imgIndex) => (
+                              <div className="col-6" key={imgIndex}>
+                                <img
+                                  src={`${config.API_BASE_URL}/${img}`}
+                                  className="img-fluid w-100"
+                                  alt="Room"
+                                  onError={e => {
+                                    e.target.onerror = null;
+                                    e.target.src = require('../Images/flexbanner.jpg');
+                                  }}
+                                />
+                              </div>
+                            ))}
+                          </div>
+                          <p className="level_para mt-2">{item.description}</p>
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>
               ))}
+
             </div>
 
             {activeCardIndex !== null && (
-              <div className="row mt-3">
+              <div className="row mt-3 room_container_desktop">
                 <div className="col-12">
-                  <div className="details-container">
-                    <h5>{roomtype[activeCardIndex]?.roomName} Details</h5>
-                    <div className="row">
-                      {roomtype[activeCardIndex]?.images.map((img, imgIndex) => (
-                        <div className="col-md-3" key={imgIndex}>
-                          <img
-                            src={`${config.API_BASE_URL}/${img}`}
-                            className="img-fluid"
-                            alt="Room"
-                            onError={e => {
-                              e.target.onerror = null;
-                              e.target.src = require('../Images/flexbanner.jpg');
-                            }}
-                          />
+                  <div className="level_container">
+                    <div className="col-lg-12 card p-4 ">
+                      <div className="row">
+                        <h5 className='level_heading'>{roomtype[activeCardIndex]?.roomName} Details</h5>
+                        {roomtype[activeCardIndex]?.images.map((img, imgIndex) => (
+                          <div className="col-md-4 " key={imgIndex}>
+                            <div className=''>
+                              <img
+                                src={`${config.API_BASE_URL}/${img}`}
+                                className="img-fluid w-100"
+                                alt="Room"
+                                onError={e => {
+                                  e.target.onerror = null;
+                                  e.target.src = require('../Images/flexbanner.jpg');
+                                }}
+                              />
+                            </div>
+                          </div>
+                        ))}
+                        <div>
+                          <p className='level_para mt-2'>
+                            {roomtype[activeCardIndex].description}
+                          </p>
+
                         </div>
-                      ))}
+                      </div>
                     </div>
                   </div>
                 </div>

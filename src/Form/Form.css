@@ -320,9 +320,56 @@
     border: 2px solid grey;
 }
 
+
 .room_cont {
-    height: 100vh;
+    height: 100% !important;
 }
+
+
+
+/* .level_down_cont {
+    overflow-x: scroll;
+    overflow-y: hidden; 
+    height: 400px; 
+  }
+
+
+
+  .level_down_cont::-webkit-scrollbar {
+    height: 8px;
+  }
+
+
+  .level_down_cont > div {
+    scroll-snap-align: start;
+  }
+
+  .level_down_cont::-webkit-scrollbar-thumb {
+    background: gray;
+    border-radius: 4px;
+  } */
+
+  .room-details {
+    display: none;
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  @media (max-width: 768px) {
+    .room-details {
+        display: block;
+        background-color: #f8f9fa;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+    .room_container_desktop{
+        display: none !important;
+    }
+  }
 
 
 .coupon_btn {

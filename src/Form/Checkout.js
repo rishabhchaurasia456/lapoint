@@ -68,7 +68,7 @@ const Checkout = () => {
     };
 
     const handleUserinfo = () => {
-        navigate('/userinfo', {
+        navigate('/checkout/userinfo', {
             state: {
                 tripName,
                 selectedDuration,

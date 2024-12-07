@@ -280,38 +280,38 @@ function App() {
             </Route>
 
 
-            <Route path='/form' element={
+            <Route path='checkout/form' element={
               <Formlayout>
                 <Levels />
               </Formlayout>
             } />
-            <Route path="/datepicker" element={
+            <Route path="checkout/datepicker" element={
               <Formlayout>
                 <Datepicker />
               </Formlayout>
             } />
-            <Route path="/room" element={
+            <Route path="checkout/room" element={
               <>
                 <Formlayout>
                   <Room />
                 </Formlayout>
               </>
             } />
-            <Route path="/activity" element={
+            <Route path="checkout/activity" element={
               <>
                 <Formlayout>
                   <Activity />
                 </Formlayout>
               </>
             } />
-            <Route path="/checkout" element={
+            <Route path="checkout/checkout" element={
               <>
                 <Formlayout>
                   <Checkout />
                 </Formlayout>
               </>
             } />
-            <Route path="/userinfo" element={
+            <Route path="checkout/userinfo" element={
               <>
                 <Formlayout>
                   <Userinfo />

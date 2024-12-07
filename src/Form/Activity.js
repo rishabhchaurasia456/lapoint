@@ -121,7 +121,7 @@ const Activity = () => {
       })),
     ].filter((activity) => activity.count > 0); // Filter out activities with count 0
 
-    navigate('/checkout', {
+    navigate('/checkout/checkout', {
       state: {
         tripName,
         selectedDuration,

@@ -93,7 +93,7 @@ const Datepicker = () => {
   // Function to navigate to the final page with all data
   const handleNextPage = () => {
     if (startDate && endDate) {
-      navigate("/room", {
+      navigate("/checkout/room", {
         state: {
           tripName,
           selectedDuration,

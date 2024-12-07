@@ -113,7 +113,7 @@ const Levels = () => {
     }).filter(item => item !== null); // Filter out null values
 
     // Navigate to the next page with all required data
-    navigate('/datepicker', {
+    navigate('/checkout/datepicker', {
       state: {
         tripName, // Selected trip name
         selectedDuration, // Selected duration
