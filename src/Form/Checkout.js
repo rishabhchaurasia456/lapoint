@@ -102,7 +102,7 @@ const Checkout = () => {
                         <span className='me-3'>{startDate ? new Date(startDate).toLocaleDateString() : "Start Date"}</span>
                         to
                         <span className='mx-3'>{endDate ? new Date(endDate).toLocaleDateString() : "End Date"}</span>
-                            {/* <span className=' level_heading'> | Total Price: € {discountedPrice}</span>  */}
+                        {/* <span className=' level_heading'> | Total Price: € {discountedPrice}</span>  */}
                     </div>
                 </div>
             </div>
@@ -140,23 +140,25 @@ const Checkout = () => {
                         {/* Selected Levels */}
                         <div>
                             <h2 className='level_heading'>Selected Levels</h2>
-                            <div className="checkout_data">
-                            <div className="row">
-                                <div className="col-lg-9 col">
-                                    Total Kiteset Rental Price:
+                            {carRentalPrice > 0 && (
+                                <div className="checkout_data">
+                                    <div className="row">
+                                        <div className="col-lg-9 col">
+                                            Total Kiteset Rental:
+                                        </div>
+                                        <div className="col-lg-3 col d-flex align-items-center justify-content-center">
+                                            € {carRentalPrice}
+                                        </div>
+                                    </div>
                                 </div>
-                                <div className="col-lg-3 col d-flex align-items-center justify-content-center">
-                                    € {carRentalPrice}
-                                </div>
-                            </div>
-                            </div>
+                            )}
                             {levels.map((item, index) => (
                                 counts[index] > 0 && (
                                     <div className='row' key={index}>
                                         <div className="col-lg-9 col">
                                             <div className='checkout_data'>
                                                 {item.item_name}: {counts[index]}
-                                                
+
                                             </div>
                                         </div>
                                         <div className="col-lg-3 col d-flex align-items-center justify-content-center">
@@ -165,18 +167,18 @@ const Checkout = () => {
                                             </div>
                                         </div>
                                         <div classname="row">
-                                        <div className="col mt-1" key={index}>
-                                                    <details className="styled-dropdown">
-                                                        <summary className="summary-header text-dark">What's included</summary>
-                                                        <div className="dropdown-content fs-5 mb-2">
-                                                            {item.description.split("\n").map((line, lineIndex) => (
-                                                                <p key={lineIndex} className="fs-6 text-dark">
-                                                                    <i className="fa fa-check-circle text-warning mx-2"></i>{line}
-                                                                </p>
-                                                            ))}
-                                                        </div>
-                                                    </details>
-                                                </div>
+                                            <div className="col mt-1" key={index}>
+                                                <details className="styled-dropdown">
+                                                    <summary className="summary-header text-dark">What's the Deal</summary>
+                                                    <div className="dropdown-content fs-5 mb-2">
+                                                        {item.description.split("\n").map((line, lineIndex) => (
+                                                            <p key={lineIndex} className="fs-6 text-dark">
+                                                                <i className="fa fa-check-circle text-warning mx-2"></i>{line}
+                                                            </p>
+                                                        ))}
+                                                    </div>
+                                                </details>
+                                            </div>
                                         </div>
                                     </div>
                                 )

@@ -5084,7 +5084,7 @@ const trips = [
 
     // EndlessSummerParty trip data Egy  ............................................
     {
-        name: 'EndlessSummerParty',
+        name: 'Egypt',
         vedio: EndlessSummerParty_vedio,
         backcover: endlesscoover,
         alltabs: {

@@ -61,12 +61,12 @@ export const cardData = [
         }
     },
     { 
-        id: 6, img: img6, path: "/trip/EndlessSummerParty",
+        id: 6, img: img6, path: "/trip/Egypt",
         data: {
             trip_name:{
-                en:"EndlessSummerParty", 
-                gr:"EndloseSommerParty", 
-                du:"EindeloosZomerFeest", 
+                en:"Egypt", 
+                gr:"Ägypten", 
+                du:"Egypte", 
             },
         }
     },
