@@ -76,6 +76,8 @@ const Room = () => {
     });
   };
 
+
+
   const handleNext = () => {
     const selectedRooms = roomtype
       .map((room, index) => ({
@@ -107,6 +109,11 @@ const Room = () => {
   const toggleDetails = index => {
     setActiveCardIndex(prevIndex => (prevIndex === index ? null : index)); // Toggle active card
   };
+
+
+  // button disbale 
+  const isButtonDisabled = countsbed.every((count) => count === 0);
+
 
   return (
     <div className="container-fluid level_container room_cont pb-5">
@@ -213,13 +220,22 @@ const Room = () => {
               </div>
             )}
 
-            {canProceed && (
-              <div className="btn_container">
-                <button className="level_btn" onClick={handleNext}>
-                  Next
-                </button>
-              </div>
-            )}
+
+            <div className="btn_container">
+              <button
+                className="level_btn"
+                onClick={handleNext}
+                disabled={isButtonDisabled}
+                style={{
+                  backgroundColor: isButtonDisabled ? "gray" : "#ffc800",
+                  cursor: isButtonDisabled ? "not-allowed" : "pointer",
+                  color: isButtonDisabled ? "darkgray" : "white",
+                }}
+              > Next
+              </button>
+            </div>
+
+
           </div>
         </div>
         <div className="col-lg-2"></div>

@@ -128,6 +128,12 @@ const Levels = () => {
     });
   };
 
+
+// button disable 
+
+  const isButtonDisabled = !(selectedDuration && counts.some(count => count > 0));
+
+
   return (
     <div className="container-fluid level_container bg_cont">
       <div className="row pb-3">
@@ -204,9 +210,7 @@ const Levels = () => {
                       </div>
                     </div>
 
-                    {/* Row for Additional Actions */}
-                    {/* <div className="row"> */}
-                    {/* Dropdown Content */}
+           
                     <div className="col-lg-8 col-8">
                       <div className="mx-3">
                         <div className="col" key={index}>
@@ -245,17 +249,28 @@ const Levels = () => {
 
 
 
+              {/* <div className="btn_container">
+                <button className="level_btn" type="submit">
+                  Continue
+                </button>
+             
+              </div> */}
+
               <div className="btn_container">
-                {selectedDuration && counts.some(count => count > 0) && (
-                  <button className="level_btn" type="submit">
-                    Continue
-                  </button>
-                )}
+                <button
+                  className="level_btn"
+                  type="submit"
+                  disabled={isButtonDisabled}
+                  style={{
+                    backgroundColor: isButtonDisabled ? "gray" : "#ffc800",
+                    cursor: isButtonDisabled ? "not-allowed" : "pointer",
+                    color: isButtonDisabled ? "darkgray" : "white",
+                  }}
+                >
+                  Continue
+                </button>
               </div>
-
-
             </div>
-
           </form>
         </div>
         <div className="col-md-2"></div>

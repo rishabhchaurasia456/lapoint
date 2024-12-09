@@ -174,6 +174,8 @@ const Userinfo = () => {
         }
     };
 
+    const isButtonDisabled = (isTermsAccepted == false)
+
 
     const renderTravellerForms = () => {
         return travellers.map((traveller, index) => (
@@ -497,18 +499,25 @@ const Userinfo = () => {
                     </div>
                     <div className="col-md-2"></div>
                 </div>
+
                 <div className="row">
                     <div className="col-lg-2"></div>
                     <div className="col-lg-8">
-                        <div className='btn_container mb-5'>
-                            {/* Conditionally render the button based on isTermsAccepted */}
-                            {isTermsAccepted ? (
-                                <button className="level_btn" onClick={handleSubmit}>
-                                    Make Reservation
-                                </button>
-                            ) : null} {/* Button is not rendered if isTermsAccepted is false */}
+                        <div className="btn_container mb-5">
+                            <button
+                                className="level_btn"
+                                onClick={handleSubmit}
+                                disabled={isButtonDisabled}
+                                style={{
+                                    backgroundColor: isButtonDisabled ? "gray" : "#ffc800",
+                                    cursor: isButtonDisabled ? "not-allowed" : "pointer",
+                                    color: isButtonDisabled ? "darkgray" : "white",
+                                }}
+                            > Make Reservation
+                            </button>
                         </div>
                     </div>
+
                     <div className="col-lg-2"></div>
                 </div>
             </div>

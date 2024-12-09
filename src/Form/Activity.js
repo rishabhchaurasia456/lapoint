@@ -143,6 +143,12 @@ const Activity = () => {
     });
   };
 
+
+  // button disbale 
+  const isButtonDisabled = recommendedCounts.every((count) => count === 0) && addOnCounts.every((count) => count === 0);
+
+
+
   return (
     <div className="container-fluid level_container  bg_cont pb-5">
       <div className="row">
@@ -219,11 +225,27 @@ const Activity = () => {
             ))}
           </div>
 
-          <div className="btn_container">
+          {/* <div className="btn_container">
             <button className="level_btn" onClick={handleCheckout}>
               Proceed to Checkout
             </button>
+          </div> */}
+
+
+          <div className="btn_container">
+            <button
+              className="level_btn"
+              onClick={handleCheckout}
+              disabled={isButtonDisabled}
+              style={{
+                backgroundColor: isButtonDisabled ? "gray" : "#ffc800",
+                cursor: isButtonDisabled ? "not-allowed" : "pointer",
+                color: isButtonDisabled ? "darkgray" : "white",
+              }}
+            > Proceed to Checkout
+            </button>
           </div>
+
         </div>
         <div className="col-lg-2"></div>
       </div>

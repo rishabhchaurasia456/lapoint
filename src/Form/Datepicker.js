@@ -140,6 +140,12 @@ const Datepicker = () => {
     return ""; // Default class
   };
 
+  // button disable 
+  const isButtonDisabled = !(startDate && endDate);
+
+  
+
+
   return (
     <div>
       {loading ? (
@@ -198,11 +204,28 @@ const Datepicker = () => {
                 )}
 
               </div>
-              <div className="btn_container">
+              {/* <div className="btn_container">
                 <button className="date_pick_btn mb-3" onClick={handleNextPage}>
                   Next
                 </button>
+              </div> */}
+
+
+              <div className="btn_container">
+                <button
+                onClick={handleNextPage}
+                  className="date_pick_btn"
+                  disabled={isButtonDisabled}
+                  style={{
+                    backgroundColor: isButtonDisabled ? "gray" : "#ffc800",
+                    cursor: isButtonDisabled ? "not-allowed" : "pointer",
+                    color: isButtonDisabled ? "darkgray" : "white",
+                  }}
+                >
+                  Next
+                </button>
               </div>
+
             </div>
 
             <div className="col-lg-2"></div>

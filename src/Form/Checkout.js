@@ -94,6 +94,11 @@ const Checkout = () => {
         return <div>Error: Missing checkout data</div>;
     }
 
+
+
+
+
+
     return (
         <div className="container-fluid level_container ">
             <div className="row">
