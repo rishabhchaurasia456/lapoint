@@ -121,6 +121,7 @@ const Room = () => {
         <div className="col-lg-2"></div>
         <div className="col-lg-8">
           <div className="container-fluid">
+            <div className="datepick_border mt-5"></div>
             <p className="level_heading text-center mt-5">
               Choose your room type
             </p>
@@ -160,13 +161,14 @@ const Room = () => {
                       {activeCardIndex === index && (
                         <div className="room-details mt-3">
                           <h5 className="level_heading">{item.roomName} Details</h5>
-                          <div className="row">
+                          <div className="image-container" style={{ overflowX: 'auto', whiteSpace: 'nowrap' }}>
                             {item.images.map((img, imgIndex) => (
-                              <div className="col-6" key={imgIndex}>
+                              <div className="image-wrapper" key={imgIndex} style={{ display: 'inline-block', flexShrink: 0 }}>
                                 <img
                                   src={`${config.API_BASE_URL}/${img}`}
-                                  className="img-fluid w-100"
+                                  className="img-fluid"
                                   alt="Room"
+                                  style={{ width: '100%', height: 'auto' }}
                                   onError={e => {
                                     e.target.onerror = null;
                                     e.target.src = require('../Images/flexbanner.jpg');
@@ -189,12 +191,12 @@ const Room = () => {
               <div className="row mt-3 room_container_desktop">
                 <div className="col-12">
                   <div className="level_container">
-                    <div className="col-lg-12 card p-4 ">
+                    <div className="col-lg-12 card p-4">
                       <div className="row">
                         <h5 className='level_heading'>{roomtype[activeCardIndex]?.roomName} Details</h5>
-                        {roomtype[activeCardIndex]?.images.map((img, imgIndex) => (
-                          <div className="col-md-4 " key={imgIndex}>
-                            <div className=''>
+                        <div className="image-container" style={{ display: 'flex', overflowX: 'auto', whiteSpace: 'nowrap' }}>
+                          {roomtype[activeCardIndex]?.images.map((img, imgIndex) => (
+                            <div className="col-md-4" key={imgIndex} style={{ flexShrink: 0 }}>
                               <img
                                 src={`${config.API_BASE_URL}/${img}`}
                                 className="img-fluid w-100"
@@ -205,13 +207,12 @@ const Room = () => {
                                 }}
                               />
                             </div>
-                          </div>
-                        ))}
+                          ))}
+                        </div>
                         <div>
                           <p className='level_para mt-2'>
                             {roomtype[activeCardIndex].description}
                           </p>
-
                         </div>
                       </div>
                     </div>
