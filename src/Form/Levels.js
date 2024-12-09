@@ -6,8 +6,8 @@ import config from '../config/config';
 
 const Levels = () => {
   const [selectedDuration, setSelectedDuration] = useState('');
-  const [counts, setCounts] = useState([0, 0, 0]);
-  const [carRentalSelections, setCarRentalSelections] = useState([true, false, false]);
+  const [counts, setCounts] = useState([0, 0, 0, 0, 0]);
+  const [carRentalSelections, setCarRentalSelections] = useState([]);
   const [zohoItems, setZohoItems] = useState([]);
   const [availableDurations, setAvailableDurations] = useState([]);
   const location = useLocation();
@@ -39,7 +39,7 @@ const Levels = () => {
 
     const fetchZohoItems = async () => {
       try {
-        const { data } = await axios.get("https://api.kiteactiveventures.com/api/user/get-data-to-zoho");
+        const { data } = await axios.get(`${config.API_BASE_URL}/api/user/get-data-to-zoho`);
         if (data && data.data) {
           const items = data.data.items || [];
           const filteredItems = items.filter(item => {
@@ -59,6 +59,13 @@ const Levels = () => {
     fetchZohoItems();
   }, [tripName, selectedDuration]);
 
+  useEffect(() => {
+    if (zohoItems.length > 0) {
+      // Initialize car rental selections to false for all items
+      setCarRentalSelections(zohoItems.map(() => false));
+    }
+  }, [zohoItems]);
+
   const navigate = useNavigate();
 
   const handleDurationChange = (event) => setSelectedDuration(event.target.value);
@@ -67,9 +74,9 @@ const Levels = () => {
   const decrement = (index) => setCounts(prev => prev.map((c, i) => (i === index && c > 0 ? c - 1 : c)));
 
   const toggleCarRental = (index) => {
-    if (index !== 0) {
-      setCarRentalSelections(prev => prev.map((val, i) => (i === index ? !val : val)));
-    }
+    setCarRentalSelections((prev) =>
+      prev.map((val, i) => (i === index ? !val : val))
+    );
   };
 
   const totalCount = counts.reduce((acc, count) => acc + count, 0);
@@ -85,7 +92,15 @@ const Levels = () => {
   const totalPrice = counts.reduce((total, count, index) => {
     if (zohoItems[index]) {
       const rate = count * zohoItems[index].rate;
-      const carRental = carRentalSelections[index] && count > 0 ? count * 60 * numericValue : 0;
+      const itemName = zohoItems[index].name?.toLowerCase() || '';
+
+      // For Level 1 (identified by the item name), set the car rental price to 0
+      const carRental = itemName.includes('level 1')
+        ? 0
+        : (carRentalSelections[index] && count > 0)
+          ? count * 60 * numericValue
+          : 0;
+
       return total + rate + carRental;
     }
     return total;
@@ -93,7 +108,15 @@ const Levels = () => {
 
 
   const carRentalPrice = counts.reduce((total, count, index) => {
-    const carRental = carRentalSelections[index] && count > 0 ? count * 60 * numericValue : 0;
+    const itemName = zohoItems[index]?.name?.toLowerCase() || '';
+
+    // For Level 1, do not include the kite rental price
+    const carRental = itemName.includes('level 1')
+      ? 0
+      : (carRentalSelections[index] && count > 0)
+        ? count * 60 * numericValue
+        : 0;
+
     return total + carRental;
   }, 0);
 
@@ -129,8 +152,7 @@ const Levels = () => {
   };
 
 
-// button disable 
-
+  // button disable 
   const isButtonDisabled = !(selectedDuration && counts.some(count => count > 0));
 
 
@@ -183,7 +205,7 @@ const Levels = () => {
                           <div className="row">
                             <span className='col-sm-12'>
                               <b>{item.name}</b>
-                            </span>{' '}
+                            </span>
                             <span className='col-sm-12 level_crd_price'> | From: €{item.rate}</span>
                           </div>
                         </p>
@@ -194,23 +216,33 @@ const Levels = () => {
                             type="checkbox"
                             className="form-check-input"
                             id={`carRental-${index}`}
-                            checked={carRentalSelections[index]}
-                            onChange={() => toggleCarRental(index)}
-                            disabled={index === 0}
+                            checked={
+                              // Always checked for "Level 1" items
+                              item.name.toLowerCase().includes('level 1')
+                                ? true
+                                : carRentalSelections[index] // Use state for other items
+                            }
+                            onChange={() => {
+                              // Allow toggling only for non-Level 1 items
+                              if (!item.name.toLowerCase().includes('level 1')) {
+                                toggleCarRental(index);
+                              }
+                            }}
+                            disabled={item.name.toLowerCase().includes('level 1')} // Disable for "Level 1"
                           />
                           <label
                             className="form-check-label check_box_text"
                             htmlFor={`carRental-${index}`}
                           >
-                            {index === 0
+                            {item.name.toLowerCase().includes('level 1')
                               ? 'Shared Kite Rental – Always Included (€60 x person x days)'
-                              : `Rental Of Complete kiteset (€60 x  person x days)`}
+                              : `Rental Of Complete kiteset (€60 x person x days)`}
                           </label>
                         </div>
                       </div>
                     </div>
 
-           
+                    {/* Row for Additional Actions */}
                     <div className="col-lg-8 col-8">
                       <div className="mx-3">
                         <div className="col" key={index}>
@@ -229,7 +261,7 @@ const Levels = () => {
                     </div>
                     {/* Increment and Decrement Section */}
                     <div className="col-lg-2 col-4 p_m_col mt-0 pt-0">
-                      <div className="p_m_col d-flex  align-items-center">
+                      <div className="p_m_col d-flex align-items-center">
                         <i
                           className="fa fa-minus-circle P_M_icon"
                           onClick={() => decrement(index)}
@@ -240,21 +272,11 @@ const Levels = () => {
                         ></i>
                       </div>
                     </div>
-                    {/* </div> */}
                   </div>
                 ))
               ) : (
                 <p className='background_black'>No items available for the selected duration.</p>
               )}
-
-
-
-              {/* <div className="btn_container">
-                <button className="level_btn" type="submit">
-                  Continue
-                </button>
-             
-              </div> */}
 
               <div className="btn_container">
                 <button

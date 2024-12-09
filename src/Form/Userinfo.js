@@ -228,7 +228,7 @@ const Userinfo = () => {
 
                                 <div className="col mat-input">
                                     <select
-                                        className='100'
+                                        className='100 form-select'
                                         value={travellers[index].gender}
                                         onChange={(e) => handleChange(index, 'gender', e.target.value)}>
                                         <option value=''>Select Gender</option>
@@ -283,7 +283,7 @@ const Userinfo = () => {
 
                             <div className='row mt-2'>
                                 <div className="col mat-input">
-                                    <select className='w-100'
+                                    <select className='w-100 form-select'
                                         value={travellers[index].country}
                                         onChange={(e) => handleChange(index, 'country', e.target.value)}>
                                         <option value=''>Select Country</option>
@@ -349,7 +349,7 @@ const Userinfo = () => {
                                 </div>
                                 <div className="col mat-input">
                                     <select
-                                        className='w-100'
+                                        className='w-100 form-select'
                                         value={travellers[index].size}
                                         onChange={(e) => handleChange(index, 'size', e.target.value)}>
                                         <option value=''>Select Size</option>
@@ -467,7 +467,7 @@ const Userinfo = () => {
                     <div className="col-lg-8 card">
                         <div className='row mb-2 mt-2'>
                             <div className="col mat-input">
-                                <select className='w-100'>
+                                <select className='w-100 form-select'>
                                     <option>How did you find us</option>
                                     <option>Kiteschool</option>
                                     <option>Advertisement</option>
@@ -495,7 +495,7 @@ const Userinfo = () => {
                             checked={isTermsAccepted}
                             onChange={handleTermsChange}
                         />
-                        <span className="ms-2 text-light">I agree to the <a href="/Term_Condition" className='text-warning' target="_blank">Terms and Conditions</a></span>
+                        <span className="ms-2 text-light fs-6">I agree to the <a href="/Term_Condition" className='text-warning' target="_blank">Terms and Conditions</a></span>
                     </div>
                     <div className="col-md-2"></div>
                 </div>
