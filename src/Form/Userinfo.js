@@ -63,6 +63,11 @@ const Userinfo = () => {
         lastName: '',
         email: '',
         phone: '',
+        findus : '',
+        tripName: tripName,
+        selectedDuration: selectedDuration,
+        startDate: startDate,
+        endDate: endDate
     });
 
     const [useSameDetails, setUseSameDetails] = useState(false);
@@ -114,10 +119,14 @@ const Userinfo = () => {
 
     const googleSubmit = async () => {
 
+        const levelNames = levels.map(level => level.name);
+
         // Bundle them into one object
         let data = {
             userDetails: userDetails,
-            travellers: travellers
+            travellers: travellers,
+            room: selectedRooms,
+            // levels: levelNames
         };
         console.log("ddddddddddddddd", data)
         try {
@@ -467,12 +476,12 @@ const Userinfo = () => {
                     <div className="col-lg-8 card">
                         <div className='row mb-2 mt-2'>
                             <div className="col mat-input">
-                                <select className='w-100 form-select'>
-                                    <option>How did you find us</option>
-                                    <option>Kiteschool</option>
-                                    <option>Advertisement</option>
-                                    <option>Socials</option>
-                                    <option>From a friend</option>
+                                <select className='w-100 form-select' value={userDetails.findus} onChange={(e) => handleUserChange('findus', e.target.value)}>
+                                    <option value="">How did you find us</option>
+                                    <option value="Kiteschool">Kiteschool</option>
+                                    <option value="Advertisement">Advertisement</option>
+                                    <option value="Socials">Socials</option>
+                                    <option value="From a friend">From a friend</option>
                                 </select>
                             </div>
                         </div>
