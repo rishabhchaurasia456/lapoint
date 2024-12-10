@@ -128,7 +128,7 @@ const Room = () => {
 
             <div className="row mt-4">
               {roomtype.map((item, index) => (
-                <div className="col-lg-4 col-md-6 col-sm-12 mt-4 mb-5" key={item._id}>
+                <div className="col-lg-4 col-md-6 col-sm-12 mt-5 mb-5 pb-5" key={item._id}>
                   <div className="card h-100 rounded-2">
                     <img
                       src={`${config.API_BASE_URL}/${item.images[0]}`}

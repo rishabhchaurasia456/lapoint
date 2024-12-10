@@ -126,7 +126,7 @@ const Userinfo = () => {
             userDetails: userDetails,
             travellers: travellers,
             room: selectedRooms,
-            // levels: levelNames
+            levels: levelNames
         };
         console.log("ddddddddddddddd", data)
         try {
