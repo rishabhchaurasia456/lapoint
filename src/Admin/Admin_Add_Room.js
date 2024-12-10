@@ -43,42 +43,6 @@ const Admin_Add_Room = () => {
     setRoomDetails(roomDetails.filter((_, i) => i !== index));
   };
 
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-
-  //   const formData = new FormData();
-  //   formData.append('tripName', tripName);
-
-  //   roomDetails.forEach((room, roomIndex) => {
-  //     formData.append(`roomdetails[${roomIndex}][roomName]`, room.roomName);
-  //     formData.append(`roomdetails[${roomIndex}][price]`, parseFloat(room.price));
-  //     formData.append(`roomdetails[${roomIndex}][description]`, room.description);
-
-  //     room.images.forEach((image, imgIndex) => {
-  //       if (image) {
-  //         formData.append(`roomdetails[${roomIndex}][images][${imgIndex}]`, image);
-  //       }
-  //     });
-  //   });
-
-  //   try {
-  //     const response = await axios.post(`${config.API_BASE_URL}/api/admin/create_room`, formData, {
-  //       headers: {
-  //         'Content-Type': 'multipart/form-data',
-  //       },
-  //     });
-
-  //     if (response.status === 201) {
-  //       alert('Room entry created successfully!');
-  //       setTripName('');
-  //       setRoomDetails([{ roomName: '', price: '', images: [], description: '' }]);
-  //     }
-  //   } catch (error) {
-  //     console.error('Error creating room entry:', error);
-  //     alert('Failed to create room entry. Please try again.');
-  //   }
-  // };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
 

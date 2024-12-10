@@ -117,7 +117,7 @@
     color: black;
     font-size: 25px;
     margin: auto;
-    width: 100%;
+    width: 65%;
     padding: 5px;
     border: 0;
     text-decoration: none;
@@ -135,7 +135,7 @@
 /* Constrain the width of the dropdown content */
 .styled-dropdown {
     position: relative;
-    width: 100%;
+    width: 60% !important;
     /* overflow: hidden; */
 }
 

@@ -247,33 +247,34 @@ const Levels = () => {
                     </div>
 
                     {/* Row for Additional Actions */}
-                    <div className="col-lg-8 col-8">
+                    <div className="col-lg-12 col-12">
                       <div className="mx-3">
                         <div className="col" key={index}>
-                          <details className="styled-dropdown">
-                            <summary className="summary-header text-dark">What's the Deal</summary>
-                            <div className="dropdown-content fs-5 mb-2">
-                              {item.description.split("\n").map((line, lineIndex) => (
-                                <p key={lineIndex} className="fs-6 text-dark">
-                                  <i className="fa fa-check-circle text-warning mx-2"></i>{line}
-                                </p>
-                              ))}
+                          <div className="col-lg-2 col-4 p_m_col mt-0 pt-0">
+                            <div className="p_m_col d-flex align-items-center">
+                              <i
+                                className="fa fa-minus-circle P_M_icon"
+                                onClick={() => decrement(index)}
+                              ></i>
+                              <span className="add_num mx-2">{counts[index]}</span>
+                              <i className="fa fa-plus-circle P_M_icon"
+                                onClick={() => increment(index)}
+                              ></i>
+                            </div>
+                          </div>
+                          <details className="">
+                            <summary className="styled-dropdown summary-header text-dark">What's the Deal</summary>
+                            <div class="row">
+                              <div className="dropdown-content fs-5 mb-2">
+                                {item.description.split("\n").map((line, lineIndex) => (
+                                  <p key={lineIndex} className="fs-6 text-dark">
+                                    <i className="fa fa-check-circle text-warning mx-2"></i>{line}
+                                  </p>
+                                ))}
+                              </div>
                             </div>
                           </details>
                         </div>
-                      </div>
-                    </div>
-                    {/* Increment and Decrement Section */}
-                    <div className="col-lg-2 col-4 p_m_col mt-0 pt-0">
-                      <div className="p_m_col d-flex align-items-center">
-                        <i
-                          className="fa fa-minus-circle P_M_icon"
-                          onClick={() => decrement(index)}
-                        ></i>
-                        <span className="add_num mx-2">{counts[index]}</span>
-                        <i className="fa fa-plus-circle P_M_icon"
-                          onClick={() => increment(index)}
-                        ></i>
                       </div>
                     </div>
                   </div>

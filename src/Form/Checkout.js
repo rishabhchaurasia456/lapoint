@@ -211,7 +211,7 @@ const Checkout = () => {
                             </div>
                         ) : ("")}
 
-                        <div className='text-center mt-4'>
+                        <div className='text-center mt-5'>
                             <div className="row">
                                 <div className="col col_input">
                                     <input placeholder='Coupon code' type="text" name="text" class="input" value={couponCode}
@@ -228,7 +228,7 @@ const Checkout = () => {
 
                         {/* Updated Total Price */}
                         <div className='text-center mt-5'>
-                            <h3 className='level_heading fs-3'>Updated Total Price: € {discountedPrice}</h3> {/* Use discounted price */}
+                            <h3 className='level_heading fs-3 pb-5 mb-5'>Updated Total Price: € {discountedPrice}</h3> {/* Use discounted price */}
                         </div>
 
                         {/* Confirm and Pay Button */}
