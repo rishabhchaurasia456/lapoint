@@ -280,38 +280,38 @@ function App() {
             </Route>
 
 
-            <Route path='checkout/form' element={
+            <Route path='/:trip_name/checkout/form' element={
               <Formlayout>
                 <Levels />
               </Formlayout>
             } />
-            <Route path="checkout/datepicker" element={
+            <Route path="/:tripName/checkout/datepicker" element={
               <Formlayout>
                 <Datepicker />
               </Formlayout>
             } />
-            <Route path="checkout/room" element={
+            <Route path="/:tripName/checkout/room" element={
               <>
                 <Formlayout>
                   <Room />
                 </Formlayout>
               </>
             } />
-            <Route path="checkout/activity" element={
+            <Route path="/:tripName/checkout/activity" element={
               <>
                 <Formlayout>
                   <Activity />
                 </Formlayout>
               </>
             } />
-            <Route path="checkout/checkout" element={
+            <Route path="/:tripName/checkout/checkout" element={
               <>
                 <Formlayout>
                   <Checkout />
                 </Formlayout>
               </>
             } />
-            <Route path="checkout/userinfo" element={
+            <Route path="/:tripName/checkout/userinfo" element={
               <>
                 <Formlayout>
                   <Userinfo />

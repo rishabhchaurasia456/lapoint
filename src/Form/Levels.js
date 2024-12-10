@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate, useLocation, useParams } from 'react-router-dom';
 import "./Form.css"
 import axios from 'axios';
 import config from '../config/config';
@@ -11,7 +11,11 @@ const Levels = () => {
   const [zohoItems, setZohoItems] = useState([]);
   const [availableDurations, setAvailableDurations] = useState([]);
   const location = useLocation();
-  const { tripName } = location.state || {};
+  // const { tripName } = location.state || {};
+
+  const { trip_name } = useParams();
+  const tripName = trip_name
+  console.log("level strip name", trip_name)
 
   // Fetch trip data and set available durations
   useEffect(() => {
@@ -136,7 +140,7 @@ const Levels = () => {
     }).filter(item => item !== null); // Filter out null values
 
     // Navigate to the next page with all required data
-    navigate('/checkout/datepicker', {
+    navigate(`/${tripName}/checkout/datepicker`, {
       state: {
         tripName, // Selected trip name
         selectedDuration, // Selected duration
@@ -280,7 +284,7 @@ const Levels = () => {
 
               <div className="btn_container">
                 <button
-                  className="level_btn"
+                  className="level_btn fixed-bottom"
                   type="submit"
                   disabled={isButtonDisabled}
                   style={{

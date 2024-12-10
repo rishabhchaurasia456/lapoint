@@ -121,7 +121,7 @@ const Activity = () => {
       })),
     ].filter((activity) => activity.count > 0); // Filter out activities with count 0
 
-    navigate('/checkout/checkout', {
+    navigate(`/${tripName}/checkout/checkout`, {
       state: {
         tripName,
         selectedDuration,
@@ -142,10 +142,6 @@ const Activity = () => {
       },
     });
   };
-
-
-  // button disbale 
-  const isButtonDisabled = recommendedCounts.every((count) => count === 0) && addOnCounts.every((count) => count === 0);
 
 
 
@@ -225,23 +221,9 @@ const Activity = () => {
             ))}
           </div>
 
-          {/* <div className="btn_container">
-            <button className="level_btn" onClick={handleCheckout}>
-              Proceed to Checkout
-            </button>
-          </div> */}
-
-
           <div className="btn_container">
             <button
-              className="level_btn"
-              onClick={handleCheckout}
-              disabled={isButtonDisabled}
-              style={{
-                backgroundColor: isButtonDisabled ? "gray" : "#ffc800",
-                cursor: isButtonDisabled ? "not-allowed" : "pointer",
-                color: isButtonDisabled ? "darkgray" : "white",
-              }}
+              className="level_btn fixed-bottom" onClick={handleCheckout}
             > Proceed to Checkout
             </button>
           </div>

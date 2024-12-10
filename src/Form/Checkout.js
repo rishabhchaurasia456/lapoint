@@ -68,7 +68,7 @@ const Checkout = () => {
     };
 
     const handleUserinfo = () => {
-        navigate('/checkout/userinfo', {
+        navigate(`/${tripName}/checkout/userinfo`, {
             state: {
                 tripName,
                 selectedDuration,
@@ -233,7 +233,7 @@ const Checkout = () => {
 
                         {/* Confirm and Pay Button */}
                         <div className='btn_container'>
-                            <button className="level_btn mb-4" onClick={handleUserinfo}>
+                            <button className="level_btn fixed-bottom" onClick={handleUserinfo}>
                                 Confirm
                             </button>
                         </div>

@@ -505,7 +505,7 @@ const Userinfo = () => {
                     <div className="col-lg-8">
                         <div className="btn_container mb-5">
                             <button
-                                className="level_btn"
+                                className="level_btn fixed-bottom"
                                 onClick={handleSubmit}
                                 disabled={isButtonDisabled}
                                 style={{

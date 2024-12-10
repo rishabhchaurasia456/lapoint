@@ -36,7 +36,7 @@ const Booking = ({ tripName }) => {
                                 / Week
                             </span>
                             <span className="booking_item_span">
-                                <NavLink to="/checkout/form" state={{ tripName }} className="Booking_btn">
+                                <NavLink to={`/${tripName}/checkout/form`} state={{ tripName }} className="Booking_btn">
                                     Book
                                 </NavLink>
                             </span>

@@ -273,11 +273,6 @@
 }
 
 
-
-
-
-
-
 /* checkout component css  */
 
 .checkout_data {
@@ -285,8 +280,6 @@
     margin: 5px;
     color: #fff;
 }
-
-
 
 
 /* From Uiverse.io by ErzenXz */
@@ -326,28 +319,6 @@
 }
 
 
-
-/* .level_down_cont {
-    overflow-x: scroll;
-    overflow-y: hidden; 
-    height: 400px; 
-  }
-
-
-
-  .level_down_cont::-webkit-scrollbar {
-    height: 8px;
-  }
-
-
-  .level_down_cont > div {
-    scroll-snap-align: start;
-  }
-
-  .level_down_cont::-webkit-scrollbar-thumb {
-    background: gray;
-    border-radius: 4px;
-  } */
 
   .room-details {
     display: none;
@@ -412,20 +383,6 @@
         border-radius: 8px;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -793,35 +750,3 @@ input:checked+.slider:before {
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* user info css for safarii Browser  */

@@ -87,7 +87,7 @@ const Room = () => {
       }))
       .filter(room => room.count > 0);
 
-    navigate('/checkout/activity', {
+    navigate(`/${tripName}/checkout/activity`, {
       state: {
         tripName,
         selectedDuration,
@@ -224,7 +224,7 @@ const Room = () => {
 
             <div className="btn_container">
               <button
-                className="level_btn"
+                className="level_btn fixed-bottom"
                 onClick={handleNext}
                 disabled={isButtonDisabled}
                 style={{

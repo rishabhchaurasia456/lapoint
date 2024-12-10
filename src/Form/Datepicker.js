@@ -93,7 +93,7 @@ const Datepicker = () => {
   // Function to navigate to the final page with all data
   const handleNextPage = () => {
     if (startDate && endDate) {
-      navigate("/checkout/room", {
+      navigate(`/${tripName}/checkout/room`, {
         state: {
           tripName,
           selectedDuration,
@@ -143,7 +143,14 @@ const Datepicker = () => {
   // button disable 
   const isButtonDisabled = !(startDate && endDate);
 
-  
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 768);
+    handleResize(); // Check on initial render
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
 
   return (
@@ -151,7 +158,7 @@ const Datepicker = () => {
       {loading ? (
         <div>Loading date ranges...</div>
       ) : (
-        <div className="container-fluid level_container">
+        <div className="container-fluid date_container">
           <div className="row">
             <div className="col-lg-2"></div>
             <div className="col-lg-8 m-0 p-0">
@@ -187,7 +194,7 @@ const Datepicker = () => {
                       selected={startDate}
                       onChange={handleDateChange}
                       inline
-                      monthsShown={2}
+                      monthsShown={isMobile ? 1 : 2} // Show 1 month on mobile, 2 on desktop
                       dateFormat="yyyy/MM/dd"
                       placeholderText="Select Start Date"
                       dayClassName={highlightStartDate}
@@ -204,17 +211,12 @@ const Datepicker = () => {
                 )}
 
               </div>
-              {/* <div className="btn_container">
-                <button className="date_pick_btn mb-3" onClick={handleNextPage}>
-                  Next
-                </button>
-              </div> */}
 
 
               <div className="btn_container">
                 <button
-                onClick={handleNextPage}
-                  className="date_pick_btn"
+                  onClick={handleNextPage}
+                  className="date_pick_btn fixed-bottom"
                   disabled={isButtonDisabled}
                   style={{
                     backgroundColor: isButtonDisabled ? "gray" : "#ffc800",
