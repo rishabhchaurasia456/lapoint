@@ -57,6 +57,8 @@ const Userinfo = () => {
         }
     };
 
+    const standard_startdate = startDate.toLocaleDateString()
+    const standard_endDate = endDate.toLocaleDateString()
 
     const [userDetails, setUserDetails] = useState({
         firstName: '',
@@ -66,8 +68,8 @@ const Userinfo = () => {
         findus : '',
         tripName: tripName,
         selectedDuration: selectedDuration,
-        startDate: startDate,
-        endDate: endDate
+        startDate: standard_startdate,
+        endDate: standard_endDate
     });
 
     const [useSameDetails, setUseSameDetails] = useState(false);
@@ -126,7 +128,8 @@ const Userinfo = () => {
             userDetails: userDetails,
             travellers: travellers,
             room: selectedRooms,
-            levels: levelNames
+            levels: levelNames,
+            totalprice: updatedTotalPrice,
         };
         console.log("ddddddddddddddd", data)
         try {
@@ -136,7 +139,7 @@ const Userinfo = () => {
 
             if (gresponse.status === 200) {
                 console.log('Listing added successfully:', gresponse.data);
-                navigate('/thankyou');
+                // navigate('/thankyou');
             }
 
         } catch (error) {
@@ -151,6 +154,7 @@ const Userinfo = () => {
         const customerData = {
             contact_name: `${userDetails.firstName} ${userDetails.lastName}`,
             company_name: 'Your Company Name',  // Replace with actual company name
+            // start_date: startDate,
             contact_persons: [
                 {
                     first_name: userDetails.firstName,
@@ -171,6 +175,7 @@ const Userinfo = () => {
             carRentalPrice,
             totalCount,
             discountAmount,
+            standard_startdate
         };
 
         try {

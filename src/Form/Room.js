@@ -126,7 +126,7 @@ const Room = () => {
               Choose your room type
             </p>
 
-            <div className="row mt-4">
+            <div className="row mt-4 justify-content-center">
               {roomtype.map((item, index) => (
                 <div className="col-lg-4 col-md-6 col-sm-12 mt-5 mb-5 pb-5" key={item._id}>
                   <div className="card h-100 rounded-2">

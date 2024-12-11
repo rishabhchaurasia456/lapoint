@@ -62,6 +62,8 @@ const Datepicker = () => {
     }
   }, [tripName, selectedDuration]);
 
+  const availableStartDates = validDates.map((date) => date.startDate);
+
   // Handle start date selection (only for available dates)
   const handleDateChange = (date) => {
     const selected = validDates.find(({ startDate }) => isSameDay(startDate, date));
@@ -199,6 +201,7 @@ const Datepicker = () => {
                       placeholderText="Select Start Date"
                       dayClassName={highlightStartDate}
                       className="custom-datepicker"
+                      includeDates={availableStartDates}
                     />
                   </div>
                 </div>
