@@ -51,12 +51,12 @@ export const cardData = [
         }
     },
     { 
-        id: 5, img: img5, path: "/trip/KitemeccaTraifa",
+        id: 5, img: img5, path: "/trip/Tarifa",
         data: {
             trip_name:{
-                en:"KitemeccaTraifa", 
-                gr:"KitemekkaTarifa", 
-                du:"KitemekkaTarifa", 
+                en:"Tarifa", 
+                gr:"Tarifa", 
+                du:"Tarifa", 
             },
         }
     },

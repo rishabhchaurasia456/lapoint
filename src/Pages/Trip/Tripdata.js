@@ -4210,7 +4210,7 @@ const trips = [
     // KitemeccaTraifa trip data ......................................... 
 
     {
-        name: 'KitemeccaTraifa',
+        name: 'Tarifa',
         vedio: KitemeccaTraifa_vedio,
         backcover: kitemeacacover,
         alltabs: {

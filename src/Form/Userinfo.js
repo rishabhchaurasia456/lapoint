@@ -139,7 +139,7 @@ const Userinfo = () => {
 
             if (gresponse.status === 200) {
                 console.log('Listing added successfully:', gresponse.data);
-                // navigate('/thankyou');
+                navigate('/thankyou');
             }
 
         } catch (error) {
@@ -179,10 +179,21 @@ const Userinfo = () => {
         };
 
         try {
-            const response = await axios.post(`${config.API_BASE_URL}/api/user/send-to-zoho`, customerData);
-            console.log("Data sent to Zoho successfully", response.data);
-            googleSubmit();
-            handleBooking();
+            // const response = await axios.post(`${config.API_BASE_URL}/api/user/send-to-zoho`, customerData);
+            // console.log("Data sent to Zoho successfully", response.data);
+            // googleSubmit();
+            // handleBooking();
+            const [zohoResponse, googleResponse, bookingResponse] = await Promise.all([
+                axios.post(`${config.API_BASE_URL}/api/user/send-to-zoho`, customerData),
+                googleSubmit(),
+                handleBooking()
+            ]);
+    
+            console.log("Data sent to Zoho successfully", zohoResponse.data);
+            console.log("Data sent to Google Sheet successfully", googleResponse.data);
+            console.log("Booking updated successfully", bookingResponse.data);
+    
+            // navigate('/thankyou'); // Redirect after all are done
         } catch (error) {
             console.error("Error sending data to Zoho:", error);
         }

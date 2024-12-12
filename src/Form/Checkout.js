@@ -172,8 +172,8 @@ const Checkout = () => {
                                             </div>
                                         </div>
                                         <div classname="row">
-                                            <div className="col mt-1" key={index}>
-                                                <details className="styled-dropdown">
+                                            <div className="col-12 mt-1" key={index}>
+                                                <details className="styled-dropdown w-100">
                                                     <summary className="summary-header text-dark">What's the Deal</summary>
                                                     <div className="dropdown-content fs-5 mb-2">
                                                         {item.description.split("\n").map((line, lineIndex) => (
@@ -210,6 +210,23 @@ const Checkout = () => {
                                 ))}
                             </div>
                         ) : ("")}
+
+                        {discountAmount > 0 ? (
+                                <div>
+                                    <div className='row mt-4'>
+                                        <div className="col-lg-9 col">
+                                            <div className='checkout_data'>
+                                                <b>Discount Amount:</b>
+                                            </div>
+                                        </div>
+                                        <div className="col-lg-3 col d-flex align-items-center justify-content-center">
+                                            <div className='checkout_data'>
+                                               - € {discountAmount}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            ) : ("")}
 
                         <div className='text-center mt-5'>
                             <div className="row">
