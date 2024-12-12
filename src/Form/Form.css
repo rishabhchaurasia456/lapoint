@@ -4,7 +4,7 @@
 
 .level_container {
     background-color: black;
-    height: 100%;
+    min-height: 100vh;
 }
 
 .background_black {
@@ -320,27 +320,27 @@
 
 
 
-  .room-details {
+.room-details {
     display: none;
     background-color: #f8f9fa;
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  @media (max-width: 768px) {
+}
+
+@media (max-width: 768px) {
     .room-details {
         display: block;
         background-color: #f8f9fa;
         padding: 10px;
         border-radius: 5px;
         box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-      }
+    }
 
-    .room_container_desktop{
+    .room_container_desktop {
         display: none !important;
     }
-  }
+}
 
 
 .coupon_btn {
@@ -411,8 +411,8 @@
     width: 100% !important;
 }
 
-.react-datepicker-wrapper{
-  width:100%;
+.react-datepicker-wrapper {
+    width: 100%;
 }
 
 #root-portal .react-datepicker-popper {
@@ -420,7 +420,8 @@
     top: 50% !important;
     left: 50% !important;
     transform: translate(-50%, -50%) !important;
-    z-index: 1050; /* Ensure it appears above other elements */
+    z-index: 1050;
+    /* Ensure it appears above other elements */
 }
 
 .mat-input {
