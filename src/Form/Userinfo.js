@@ -29,11 +29,6 @@ const Userinfo = () => {
         discountAmount
     } = location.state;
 
-    console.log("updatedTotalPriceeeeeeeeeeeeeeeeeeeeeeeeee", updatedTotalPrice)
-    console.log("discountAmounttttttttttttttttttttttttttttt", discountAmount)
-    console.log("line itemssssssssss", lineItems)
-    console.log("roomtypeeeeeeeeeeeeeeeeeeeee", selectedRooms)
-    console.log("zoho_senttttttttttttttttttttttttttt", carRentalPrice)
     const datestatus = {
         tripName,
         startDate,
@@ -65,7 +60,7 @@ const Userinfo = () => {
         lastName: '',
         email: '',
         phone: '',
-        findus : '',
+        findus: '',
         tripName: tripName,
         selectedDuration: selectedDuration,
         startDate: standard_startdate,
@@ -175,7 +170,8 @@ const Userinfo = () => {
             carRentalPrice,
             totalCount,
             discountAmount,
-            standard_startdate
+            standard_startdate,
+            standard_endDate
         };
 
         try {
@@ -188,11 +184,11 @@ const Userinfo = () => {
                 googleSubmit(),
                 handleBooking()
             ]);
-    
+
             console.log("Data sent to Zoho successfully", zohoResponse.data);
             console.log("Data sent to Google Sheet successfully", googleResponse.data);
             console.log("Booking updated successfully", bookingResponse.data);
-    
+
             // navigate('/thankyou'); // Redirect after all are done
         } catch (error) {
             console.error("Error sending data to Zoho:", error);
@@ -200,7 +196,6 @@ const Userinfo = () => {
     };
 
     const isButtonDisabled = (isTermsAccepted == false)
-
 
     const renderTravellerForms = () => {
         return travellers.map((traveller, index) => (
@@ -405,7 +400,6 @@ const Userinfo = () => {
         <div>
 
             {/* show selected trip data by user   */}
-
             <div className="container-fluid level_container">
                 <div className="row">
                     <div className="col text-center">
@@ -436,8 +430,6 @@ const Userinfo = () => {
                     </div>
                 </div>
             </div>
-
-
 
 
             {/* user information form  */}
@@ -483,9 +475,6 @@ const Userinfo = () => {
             {renderTravellerForms()}
 
 
-
-
-
             <div className="container-fluid level_container">
                 <div className="row">
                     <div className="col-lg-2"></div>
@@ -505,9 +494,6 @@ const Userinfo = () => {
                     <div className="col-lg-2"></div>
                 </div>
             </div>
-
-
-
 
 
             {/* Make reservation btn  */}
@@ -542,14 +528,9 @@ const Userinfo = () => {
                             </button>
                         </div>
                     </div>
-
                     <div className="col-lg-2"></div>
                 </div>
             </div>
-
-
-
-
         </div>
     );
 };
