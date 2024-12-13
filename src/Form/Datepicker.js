@@ -22,12 +22,11 @@ const Datepicker = () => {
     lineItems,
   } = location.state;
 
-  console.log("levelssssssssssssssssssss", levels)
-
   const [startDate, setStartDate] = useState(null);
   const [endDate, setEndDate] = useState(null);
   const [validDates, setValidDates] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [earliestValidDate, setEarliestValidDate] = useState(null); // Track the earliest valid date
 
   // Fetch all date ranges using Axios and filter based on tripName and selectedDuration
   const fetchDateRanges = async () => {
@@ -37,9 +36,7 @@ const Datepicker = () => {
 
       // Filter for the selected tripName and duration
       const filteredDates = data.getAllTripDateRange
-        .filter(
-          (trip) => trip.tripName === tripName && trip.days === selectedDuration
-        )
+        .filter((trip) => trip.tripName === tripName && trip.days === selectedDuration)
         .flatMap((trip) =>
           trip.dateRanges.map((range) => ({
             startDate: parseISO(range.startDate),
@@ -49,6 +46,14 @@ const Datepicker = () => {
         );
 
       setValidDates(filteredDates);
+
+      // Find the earliest available start date
+      const earliestDate = filteredDates.reduce((earliest, current) => {
+        return !earliest || current.startDate < earliest ? current.startDate : earliest;
+      }, null);
+
+      setEarliestValidDate(earliestDate);
+      setStartDate(earliestDate); // Set the initial start date to the earliest valid date
     } catch (error) {
       console.error("Error fetching date ranges:", error);
     } finally {
@@ -68,15 +73,11 @@ const Datepicker = () => {
   const handleDateChange = (date) => {
     const selected = validDates.find(({ startDate }) => isSameDay(startDate, date));
 
-    // Check if the selected date has an availability status
     if (selected) {
-      // If the status is less than totalCount, show a message indicating availability
       if (selected.status < totalCount) {
         alert(`Only ${selected.status} are available for this date.`);
-        return; // Prevent selecting the date
+        return;
       }
-
-      // If the status is sufficient, set the start date and calculate the end date
       setStartDate(date);
       const calculatedEndDate = addDays(date, getDurationInDays(selectedDuration));
       setEndDate(calculatedEndDate);
@@ -87,7 +88,6 @@ const Datepicker = () => {
 
   // Duration in days based on the selectedDuration directly
   const getDurationInDays = (selectedDuration) => {
-    // Manually parsing the duration from the string (e.g., "7 days" -> 7)
     const durationInDays = parseInt(selectedDuration.split(' ')[0], 10);
     return durationInDays - 1; // Assuming the duration includes the start day
   };
@@ -117,17 +117,15 @@ const Datepicker = () => {
 
   // Add a custom CSS class to highlight start dates and set the status text
   const highlightStartDate = (date) => {
-    const foundDate = validDates.find(({ startDate }) =>
-      isSameDay(startDate, date)
-    );
+    const foundDate = validDates.find(({ startDate }) => isSameDay(startDate, date));
 
     if (foundDate) {
       if (foundDate.status === 0) {
-        return "booked-date"; // Class for Booked
+        return "booked-date";
       } else if (foundDate.status >= 1 && foundDate.status <= 3) {
-        return "few-left-date"; // Class for Few Left
+        return "few-left-date";
       } else if (foundDate.status > 3) {
-        return "available-date"; // Class for Available
+        return "available-date";
       }
     }
 
@@ -139,7 +137,7 @@ const Datepicker = () => {
       return "selected-range-date";
     }
 
-    return ""; // Default class
+    return "";
   };
 
   // button disable 
@@ -196,12 +194,15 @@ const Datepicker = () => {
                       selected={startDate}
                       onChange={handleDateChange}
                       inline
-                      monthsShown={isMobile ? 1 : 2} // Show 1 month on mobile, 2 on desktop
+                      monthsShown={isMobile ? 1 : 2}
                       dateFormat="yyyy/MM/dd"
                       placeholderText="Select Start Date"
                       dayClassName={highlightStartDate}
                       className="custom-datepicker"
                       includeDates={availableStartDates}
+                      minDate={earliestValidDate || new Date()} // Ensure the calendar starts from the earliest valid date
+                      openToDate={earliestValidDate} // Ensure the calendar starts from the first available date
+                      shouldCloseOnSelect={false} // Keep the calendar open after selecting a date
                     />
                   </div>
                 </div>
@@ -214,7 +215,6 @@ const Datepicker = () => {
                 )}
 
               </div>
-
 
               <div className="btn_container">
                 <button
@@ -232,7 +232,6 @@ const Datepicker = () => {
               </div>
 
             </div>
-
             <div className="col-lg-2"></div>
           </div>
         </div>
