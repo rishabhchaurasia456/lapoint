@@ -199,7 +199,7 @@ const Userinfo = () => {
 
     const renderTravellerForms = () => {
         return travellers.map((traveller, index) => (
-            <div className="container-fluid level_container">
+            <div className="container-fluid " style={{ backgroundColor: '#000000' }}>
                 <div className="row">
                     <div className="col-lg-2"></div>
                     <div className="col-lg-8 card mb-3 p-4">
@@ -400,7 +400,7 @@ const Userinfo = () => {
         <div>
 
             {/* show selected trip data by user   */}
-            <div className="container-fluid level_container">
+            <div className="container-fluid " style={{ backgroundColor: '#000000' }}>
                 <div className="row">
                     <div className="col text-center">
                         <div className=" person_week">
@@ -433,7 +433,7 @@ const Userinfo = () => {
 
 
             {/* user information form  */}
-            <div className="container-fluid level_container">
+            <div className="container-fluid " style={{ backgroundColor: '#000000' }}>
                 <div className="row">
                     <div className="col-lg-2"></div>
                     <div className="col-lg-8 card mb-3 p-3 mt-3">
@@ -475,7 +475,7 @@ const Userinfo = () => {
             {renderTravellerForms()}
 
 
-            <div className="container-fluid level_container">
+            <div className="container-fluid " style={{ backgroundColor: '#000000' }}>
                 <div className="row">
                     <div className="col-lg-2"></div>
                     <div className="col-lg-8 card">
@@ -497,7 +497,7 @@ const Userinfo = () => {
 
 
             {/* Make reservation btn  */}
-            <div className="container-fluid level_container">
+            <div className="container-fluid " style={{ backgroundColor: '#000000' }}>
                 <div className="row">
                     <div className="col-md-2"></div>
                     <div className="col-md-8 mt-3">
