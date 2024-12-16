@@ -50,8 +50,15 @@ const Room = () => {
     setCanProceed(currentTotalCount === totalCount);
   }, [currentTotalCount, totalCount]);
 
+  const getNumericDuration = (duration) => {
+    const number = parseInt(duration.replace(/\D/g, '')); // Remove non-numeric characters and parse
+    return number;
+  };
+
+  const numericValue = getNumericDuration(selectedDuration);
+
   useEffect(() => {
-    const newRoomPrices = roomtype.map((room, index) => countsbed[index] * room.price);
+    const newRoomPrices = roomtype.map((room, index) => countsbed[index] * room.price * numericValue);
     setRoomPrices(newRoomPrices);
 
     const totalRoomPrice = newRoomPrices.reduce((acc, price) => acc + price, 0);

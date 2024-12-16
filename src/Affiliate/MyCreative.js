@@ -102,13 +102,13 @@ const MyCreative = () => {
                         {selectedOption === 'image' && (
                             <div className="row mt-5" id="image_container">
                                 <div className="row mt-5">
-                                    <div className="col-4">Image Link</div>
+                                    <div className="col-4">Landing Page Link</div>
                                     <div className="col-8">
                                         <input type="text" className="form-control" />
                                     </div>
                                 </div>
                                 <div className="row mt-5">
-                                    <div className="col-4">Alt text</div>
+                                    <div className="col-4">Image Link</div>
                                     <div className="col-8">
                                         <input type="text" className="form-control" />
                                     </div>

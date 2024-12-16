@@ -21,6 +21,24 @@ const MyAffiliate = () => {
             });
     }, []);
 
+    const handleDelete = async (id) => {
+        if (window.confirm("Are you sure you want to delete this AffiliateUser?")) {
+          try {
+            const response = await axios.delete(
+              `${config.API_BASE_URL}/api/affiliate/delete_affiliate/${id}`
+            );
+            if (response.status === 200) {
+              alert(response.data.message);
+              // Update the state to remove the deleted trip
+              setAffiliates((prevData) => prevData.filter((aff) => aff._id !== id));
+            }
+          } catch (error) {
+            console.error("Error deleting AffiliateUser:", error);
+            alert("Failed to delete the AffiliateUser. Please try again.");
+          }
+        }
+      };
+
     // Display loading spinner or error message
     if (loading) {
         return <div>Loading...</div>;
@@ -53,6 +71,7 @@ const MyAffiliate = () => {
                             <th>Country</th>
                             <th>Company</th>
                             <th>Website</th>
+                            <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -66,6 +85,10 @@ const MyAffiliate = () => {
                                 <td>{affiliate.country}</td>
                                 <td>{affiliate.company}</td>
                                 <td>{affiliate.website}</td>
+                                <td>
+                                    <Link className='btn btn-success' to={`/edit_affiliate/${affiliate._id}`}>Edit</Link>&nbsp;&nbsp;
+                                    <Link className='btn btn-danger' onClick={() => handleDelete(affiliate._id)}>Delete</Link>
+                                </td>
                             </tr>
                         ))}
                     </tbody>

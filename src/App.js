@@ -63,6 +63,7 @@ import Admin_Edit_Activity from './Admin/Admin_Edit_Activity';
 import Admin_Coupon from './Admin/Admin_Coupon';
 import Admin_Add_Coupon from './Admin/Admin_Add_Coupon';
 import Admin_Edit_Coupon from './Admin/Admin_Edit_Coupon';
+import EditAffiliate from './Affiliate/EditAffiliate';
 
 function App() {
 
@@ -334,6 +335,12 @@ function App() {
             <Route path="/new_affiliate" element={
               <Aff_Layout>
                 <NewAffiliate />
+              </Aff_Layout>
+            } />
+
+            <Route path="/edit_affiliate/:id" element={
+              <Aff_Layout>
+                <EditAffiliate />
               </Aff_Layout>
             } />
 

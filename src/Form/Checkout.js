@@ -130,7 +130,7 @@ const Checkout = () => {
                                 <div className='row' key={index}>
                                     <div className="col-lg-9 col">
                                         <div className='checkout_data'>
-                                            {room.room}: {room.count}
+                                            {room.room}: {room.count} x {selectedDuration}
                                         </div>
                                     </div>
                                     <div className="col-lg-3 col d-flex align-items-center justify-content-center">
