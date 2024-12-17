@@ -1,6 +1,6 @@
 .date_container{
   background-color: black;
-  height: 110vh;
+  min-height: 100vh;
 }
 
 .person_week {

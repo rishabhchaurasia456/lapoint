@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate, useLocation, useParams } from 'react-router-dom';
 import "./Form.css"
 import axios from 'axios';
+import { Helmet } from 'react-helmet';
 import config from '../config/config';
 
 const Levels = () => {
@@ -161,6 +162,12 @@ const Levels = () => {
 
 
   return (
+    <>
+      <Helmet>
+          <title>KiteActive Checkout</title>
+          <meta name="description" content="This is the home page of your website where you can find information about surfcamps, lifestyle, and more." />
+          <meta name="keywords" content="surfcamp, lifestyle, adventure, activities, reviews" />
+      </Helmet>
     <div className="container-fluid level_container bg_cont">
       <div className="row pb-3">
         <div className="col-md-2"></div>
@@ -303,6 +310,7 @@ const Levels = () => {
         <div className="col-md-2"></div>
       </div>
     </div>
+    </>
   );
 };
 
