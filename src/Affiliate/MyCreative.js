@@ -7,6 +7,7 @@ const MyCreative = () => {
     const [affiliates, setAffiliates] = useState([]); // Store affiliates data
     const [selectedAffiliate, setSelectedAffiliate] = useState(""); // Track selected affiliate
     const [landingPageLink, setLandingPageLink] = useState(""); // Track Landing Page Link
+    const [imageLink, setImageLink] = useState(""); // Track Image URL for "image" option
     const [generatedLink, setGeneratedLink] = useState(""); // Store the generated link
 
     // Fetch affiliate users data from the backend API when the component mounts
@@ -38,11 +39,24 @@ const MyCreative = () => {
         setLandingPageLink(event.target.value); // Update landing page link in state
     };
 
-    // Function to generate new link using selected affiliate ID and Landing Page Link
+    const handleImageLinkChange = (event) => {
+        setImageLink(event.target.value); // Update image link in state for "image" option
+    };
+
+    // Function to generate new link using selected affiliate ID, Landing Page Link, and Image URL
     const generateNewLink = () => {
         if (selectedAffiliate && landingPageLink) {
-            const newLink = `${landingPageLink}?id=${selectedAffiliate}`; // Generate link
-            setGeneratedLink(newLink); // Set the generated link
+            if (selectedOption === "image" && imageLink) {
+                // Generate the link with image URL for the "image" option
+                const newLink = `<a href="${landingPageLink}?id=${selectedAffiliate}"><img src="${(imageLink)}"></img></a>`;
+                setGeneratedLink(newLink); // Set the generated link
+            } else if (selectedOption === "text_link") {
+                // Generate the link with only affiliate ID for the "text_link" option
+                const newLink = `${landingPageLink}?id=${selectedAffiliate}`;
+                setGeneratedLink(newLink); // Set the generated link
+            } else {
+                alert("Please provide all required fields!");
+            }
         } else {
             alert("Please select an affiliate and provide a Landing Page Link!");
         }
@@ -104,13 +118,23 @@ const MyCreative = () => {
                                 <div className="row mt-5">
                                     <div className="col-4">Landing Page Link</div>
                                     <div className="col-8">
-                                        <input type="text" className="form-control" />
+                                        <input
+                                            type="text"
+                                            className="form-control"
+                                            value={landingPageLink}
+                                            onChange={handleLandingPageChange} // Capture Landing Page Link
+                                        />
                                     </div>
                                 </div>
                                 <div className="row mt-5">
                                     <div className="col-4">Image Link</div>
                                     <div className="col-8">
-                                        <input type="text" className="form-control" />
+                                        <input
+                                            type="text"
+                                            className="form-control"
+                                            value={imageLink}
+                                            onChange={handleImageLinkChange} // Capture Image Link
+                                        />
                                     </div>
                                 </div>
                             </div>

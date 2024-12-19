@@ -14,6 +14,8 @@ const Levels = () => {
   const location = useLocation();
   // const { tripName } = location.state || {};
 
+  const isCheckoutPage = location.pathname === '/checkout/form';
+
   const { trip_name } = useParams();
   const tripName = trip_name
   console.log("level strip name", trip_name)
@@ -167,6 +169,9 @@ const Levels = () => {
           <title>KiteActive Checkout</title>
           <meta name="description" content="This is the home page of your website where you can find information about surfcamps, lifestyle, and more." />
           <meta name="keywords" content="surfcamp, lifestyle, adventure, activities, reviews" />
+          <meta property="og:image" href="/logo192.png" />
+          <link rel="apple-touch-icon" href="/logo192.png" />
+          <link rel="icon" href={isCheckoutPage ? '/logo192.png' : '/logo192.png'} />
       </Helmet>
     <div className="container-fluid level_container bg_cont">
       <div className="row pb-3">

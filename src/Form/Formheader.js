@@ -26,9 +26,9 @@ const Formheader = () => {
                             </div>
                             {/* Logo col */}
                             <div className="col-4">
-                                <NavLink to="/" className="navbar-brand">
+                                <a href="https://www.kiteactive.com/" className="navbar-brand">
                                     <img src={logo} alt="logo" className="header_img" />
-                                </NavLink>
+                                </a>
                             </div>
 
                             {/* question mark popup btn */}

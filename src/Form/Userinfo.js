@@ -184,6 +184,7 @@ const Userinfo = () => {
                 googleSubmit(),
                 handleBooking()
             ]);
+            setIsTermsAccepted(false); 
 
             console.log("Data sent to Zoho successfully", zohoResponse.data);
             console.log("Data sent to Google Sheet successfully", googleResponse.data);
