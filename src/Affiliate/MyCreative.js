@@ -1,178 +1,103 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 import config from '../config/config';
 
 const MyCreative = () => {
-    const [selectedOption, setSelectedOption] = useState(""); // Track selected option (image/text_link)
-    const [affiliates, setAffiliates] = useState([]); // Store affiliates data
-    const [selectedAffiliate, setSelectedAffiliate] = useState(""); // Track selected affiliate
-    const [landingPageLink, setLandingPageLink] = useState(""); // Track Landing Page Link
-    const [imageLink, setImageLink] = useState(""); // Track Image URL for "image" option
-    const [generatedLink, setGeneratedLink] = useState(""); // Store the generated link
+    const [affiliatesLink, setAffiliatesLink] = useState([]); // State to store the affiliate data
+    const [loading, setLoading] = useState(true); // Loading state to show a spinner or message while data is being fetched
+    const [error, setError] = useState(null); // Error state for handling API errors
 
-    // Fetch affiliate users data from the backend API when the component mounts
     useEffect(() => {
-        axios.post(`${config.API_BASE_URL}/api/affiliate/affiliate_user_list`) // Adjust to the correct API URL
-            .then(response => {
-                console.log('Fetched affiliates:', response.data); // Log the actual data returned from the API
-                if (response.data) {
-                    setAffiliates(response.data); // Set affiliates data
-                }
+        axios
+            .post(`${config.API_BASE_URL}/api/affiliate/get_all_link`) // Use your backend endpoint for fetching affiliate data
+            .then((response) => {
+                setAffiliatesLink(response.data); // Store affiliate data in state
+                console.log("Fetched affiliate links:", response.data);
+                setLoading(false); // Stop loading once data is fetched
             })
-            .catch(error => {
-                console.error('Error fetching affiliates:', error); // Log any error in case the fetch fails
+            .catch((err) => {
+                setError("Failed to load affiliates. Please try again later."); // Set error message if the request fails
+                setLoading(false); // Stop loading
             });
     }, []);
 
-    const changebox = (event) => {
-        const value = event.target.value;
-        setSelectedOption(value); // Update the selected option in state
-    };
-
-    const handleAffiliateChange = (event) => {
-        const selectedId = event.target.value;
-        setSelectedAffiliate(selectedId); // Update selected affiliate ID in state
-        console.log("Selected affiliate ID:", selectedId); // Log the selected affiliate ID
-    };
-
-    const handleLandingPageChange = (event) => {
-        setLandingPageLink(event.target.value); // Update landing page link in state
-    };
-
-    const handleImageLinkChange = (event) => {
-        setImageLink(event.target.value); // Update image link in state for "image" option
-    };
-
-    // Function to generate new link using selected affiliate ID, Landing Page Link, and Image URL
-    const generateNewLink = () => {
-        if (selectedAffiliate && landingPageLink) {
-            if (selectedOption === "image" && imageLink) {
-                // Generate the link with image URL for the "image" option
-                const newLink = `<a href="${landingPageLink}?id=${selectedAffiliate}"><img src="${(imageLink)}"></img></a>`;
-                setGeneratedLink(newLink); // Set the generated link
-            } else if (selectedOption === "text_link") {
-                // Generate the link with only affiliate ID for the "text_link" option
-                const newLink = `${landingPageLink}?id=${selectedAffiliate}`;
-                setGeneratedLink(newLink); // Set the generated link
-            } else {
-                alert("Please provide all required fields!");
+    const handleDelete = async (id) => {
+        if (window.confirm("Are you sure you want to delete this AffiliateUser?")) {
+            try {
+                const response = await axios.delete(
+                    `${config.API_BASE_URL}/api/affiliate/delete_affiliatelink/${id}`
+                );
+                if (response.status === 200) {
+                    alert(response.data.message);
+                    // Update the state to remove the deleted trip
+                    setAffiliatesLink((prevData) => prevData.filter((aff) => aff._id !== id));
+                }
+            } catch (error) {
+                console.error("Error deleting AffiliateUser:", error);
+                alert("Failed to delete the AffiliateUser. Please try again.");
             }
-        } else {
-            alert("Please select an affiliate and provide a Landing Page Link!");
         }
     };
+
+    if (loading) {
+        return <div>Loading...</div>; // Show loading message while data is being fetched
+    }
+
+    if (error) {
+        return <div>{error}</div>; // Show error message if there was an issue fetching data
+    }
 
     return (
         <div>
             <div className="container">
-                <div className="row">
-                    <div className="col-md-3"></div>
-                    <div className="col-md-6">
-                        <div className="row mt-5">
-                            <div className="col-4">Affiliate</div>
-                            <div className="col-8">
-                                <select
-                                    className="form-control"
-                                    value={selectedAffiliate}
-                                    onChange={handleAffiliateChange}
-                                >
-                                    <option value="">Select Affiliate</option>
-                                    {affiliates.length > 0 ? (
-                                        affiliates.map((affiliate) => (
-                                            <option key={affiliate._id} value={affiliate._id}>
-                                                {affiliate.first_name} {affiliate.last_name}
-                                            </option>
-                                        ))
-                                    ) : (
-                                        <option disabled>Loading...</option>
-                                    )}
-                                </select>
-                            </div>
-                        </div>
-
-                        <div className="row mt-5">
-                            <div className="col-4">Name</div>
-                            <div className="col-8">
-                                <input type="text" className="form-control" />
-                            </div>
-                        </div>
-
-                        <div className="row mt-5">
-                            <div className="col-4">Type</div>
-                            <div className="col-8">
-                                <select
-                                    className="form-control"
-                                    onChange={changebox}
-                                    value={selectedOption}
-                                >
-                                    <option value="">Select Type</option>
-                                    <option value="image">Image</option>
-                                    <option value="text_link">Text Link</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        {/* Image container - only shown when 'image' is selected */}
-                        {selectedOption === 'image' && (
-                            <div className="row mt-5" id="image_container">
-                                <div className="row mt-5">
-                                    <div className="col-4">Landing Page Link</div>
-                                    <div className="col-8">
-                                        <input
-                                            type="text"
-                                            className="form-control"
-                                            value={landingPageLink}
-                                            onChange={handleLandingPageChange} // Capture Landing Page Link
-                                        />
-                                    </div>
-                                </div>
-                                <div className="row mt-5">
-                                    <div className="col-4">Image Link</div>
-                                    <div className="col-8">
-                                        <input
-                                            type="text"
-                                            className="form-control"
-                                            value={imageLink}
-                                            onChange={handleImageLinkChange} // Capture Image Link
-                                        />
-                                    </div>
-                                </div>
-                            </div>
-                        )}
-
-                        {/* Text link container - only shown when 'text_link' is selected */}
-                        {selectedOption === 'text_link' && (
-                            <div className="row mt-5">
-                                <div className="col-4">Landing Page Link</div>
-                                <div className="col-8">
-                                    <input
-                                        type="text"
-                                        className="form-control"
-                                        value={landingPageLink}
-                                        onChange={handleLandingPageChange} // Capture Landing Page Link
-                                    />
-                                </div>
-                            </div>
-                        )}
-
-                        <div className="row mt-5">
-                            <div className="col-8">
-                                <button className="btn btn-primary" onClick={generateNewLink}>
-                                    Generate New Link
-                                </button>
-                            </div>
-                        </div>
-
-                        {generatedLink && (
-                            <div className="row mt-5">
-                                <div className="col-4">Generated Link</div>
-                                <div className="col-8">
-                                    <p>{generatedLink}</p> {/* Display the generated link */}
-                                </div>
-                            </div>
-                        )}
+                <div className="row my-3">
+                    <div className="col">
+                        <h1>My Creative</h1>
                     </div>
-                    <div className="col-md-3"></div>
+                    <div className="col">
+                        <Link to="/newCreative" className="btn btn-success float-end">
+                            Add New Creative
+                        </Link>
+                    </div>
+                </div>
+                <div className="row">
+                    <table className="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Affiliate Person</th>
+                                <th>Name</th>
+                                <th>Type</th>
+                                <th>Link</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {affiliatesLink.map((link) => (
+                                <tr key={link._id}>
+                                    <td>{link.affiliate_name}</td>
+                                    <td>{link.name}</td>
+                                    <td>{link.type}</td>
+                                    <td>
+                                        {/* <a href={link.genrated_link} target="_blank" rel="noopener noreferrer"> */}
+                                        {link.genrated_link}
+                                        {/* </a> */}
+                                    </td>
+                                    <td>
+                                        <Link to={`/edit/${link._id}`} className="btn btn-primary btn-sm me-2">
+                                            Edit
+                                        </Link>
+                                        <button
+                                            className="btn btn-danger btn-sm"
+                                            onClick={() => handleDelete(link._id)}
+                                        >
+                                            Delete
+                                        </button>
+                                    </td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>

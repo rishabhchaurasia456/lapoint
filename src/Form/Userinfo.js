@@ -68,6 +68,7 @@ const Userinfo = () => {
     });
 
     const [useSameDetails, setUseSameDetails] = useState(false);
+    const [invoiceDetails, setInvoiceDetails] = useState("");
     const [isTermsAccepted, setIsTermsAccepted] = useState(false);
 
     const [travellers, setTravellers] = useState(
@@ -114,7 +115,11 @@ const Userinfo = () => {
     };
 
 
-    const googleSubmit = async () => {
+    const googleSubmit = async (invoiceDetails) => {
+        if (!invoiceDetails) {
+            console.error("No invoice details provided to googleSubmit.");
+            return;
+        }
 
         const levelNames = levels.map(level => level.name);
 
@@ -125,6 +130,18 @@ const Userinfo = () => {
             room: selectedRooms,
             levels: levelNames,
             totalprice: updatedTotalPrice,
+            invoiceDetails: {
+                invoiceNumber: invoiceDetails.invoice_number,
+                invoiceId: invoiceDetails.invoice_id,
+                customer_name: userDetails.firstName + " " + userDetails.lastName,
+                totalAmount: invoiceDetails.total,
+                balance: invoiceDetails.balance,
+                status: invoiceDetails.status,
+                date: invoiceDetails.date,
+                dueDate: invoiceDetails.due_date,
+                checkInDate: invoiceDetails.custom_field_hash?.cf_check_in_date_trip,
+                checkOutDate: invoiceDetails.custom_field_hash?.cf_check_out_date_trip
+            }
         };
         console.log("ddddddddddddddd", data)
         try {
@@ -175,20 +192,36 @@ const Userinfo = () => {
         };
 
         try {
-            // const response = await axios.post(`${config.API_BASE_URL}/api/user/send-to-zoho`, customerData);
-            // console.log("Data sent to Zoho successfully", response.data);
-            // googleSubmit();
-            // handleBooking();
-            const [zohoResponse, googleResponse, bookingResponse] = await Promise.all([
-                axios.post(`${config.API_BASE_URL}/api/user/send-to-zoho`, customerData),
-                googleSubmit(),
-                handleBooking()
-            ]);
+            const response = await axios.post(`${config.API_BASE_URL}/api/user/send-to-zoho`, customerData);
+            console.log("Full API Response:", response.data)
+            const newInvoiceDetails = response.data.data.invoice;
+
+            if (!newInvoiceDetails) {
+                console.error("Failed to retrieve new invoice details from the response.");
+                return;
+            }
+
+            console.log("New Invoice Details:", newInvoiceDetails);
+
+            // Update the state with the new invoice details
+            setInvoiceDetails(newInvoiceDetails);
+
+            // Wait for the state to update and then call `googleSubmit`
+            await googleSubmit(newInvoiceDetails); // Pass newInvoiceDetails directly
+
+            console.log("Google Sheet submission completed.");
+            handleBooking();
+            console.log("Booking updated successfully.");
+            // const [zohoResponse, googleResponse, bookingResponse] = await Promise.all([
+            //     axios.post(`${config.API_BASE_URL}/api/user/send-to-zoho`, customerData),
+            //     googleSubmit(),
+            //     handleBooking()
+            // ]);
             setIsTermsAccepted(false); 
 
-            console.log("Data sent to Zoho successfully", zohoResponse.data);
-            console.log("Data sent to Google Sheet successfully", googleResponse.data);
-            console.log("Booking updated successfully", bookingResponse.data);
+            // console.log("Data sent to Zoho successfully", zohoResponse.data);
+            // console.log("Data sent to Google Sheet successfully", googleResponse.data);
+            // console.log("Booking updated successfully", bookingResponse.data);
 
             // navigate('/thankyou'); // Redirect after all are done
         } catch (error) {
