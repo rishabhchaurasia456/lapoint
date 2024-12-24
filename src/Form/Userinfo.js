@@ -162,11 +162,11 @@ const Userinfo = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
+    
+        // Prepare customer data
         const customerData = {
             contact_name: `${userDetails.firstName} ${userDetails.lastName}`,
             company_name: 'Your Company Name',  // Replace with actual company name
-            // start_date: startDate,
             contact_persons: [
                 {
                     first_name: userDetails.firstName,
@@ -175,13 +175,11 @@ const Userinfo = () => {
                     phone: userDetails.phone
                 }
             ],
-
             line_items: lineItems.map(item => ({
-                item_id: item.item_id, // Use the item ID from lineItems
-                quantity: item.quantity,  // Use the quantity from lineItems
-                rate: item.rate,  // Use the rate from lineItems
+                item_id: item.item_id,
+                quantity: item.quantity,
+                rate: item.rate,
             })),
-
             activityDetails,
             selectedRooms,
             carRentalPrice,
@@ -190,42 +188,32 @@ const Userinfo = () => {
             standard_startdate,
             standard_endDate
         };
-
+    
+        // Redirect to "Thank You" page immediately
+        navigate('/thankyou');
+    
         try {
+            // API call to Zoho
             const response = await axios.post(`${config.API_BASE_URL}/api/user/send-to-zoho`, customerData);
-            console.log("Full API Response:", response.data)
             const newInvoiceDetails = response.data.data.invoice;
-
+    
             if (!newInvoiceDetails) {
                 console.error("Failed to retrieve new invoice details from the response.");
                 return;
             }
-
+    
             console.log("New Invoice Details:", newInvoiceDetails);
-
-            // Update the state with the new invoice details
             setInvoiceDetails(newInvoiceDetails);
-
-            // Wait for the state to update and then call `googleSubmit`
-            await googleSubmit(newInvoiceDetails); // Pass newInvoiceDetails directly
-
+    
+            // Send data to Google Sheets
+            await googleSubmit(newInvoiceDetails);
             console.log("Google Sheet submission completed.");
+    
+            // Update booking details
             handleBooking();
             console.log("Booking updated successfully.");
-            // const [zohoResponse, googleResponse, bookingResponse] = await Promise.all([
-            //     axios.post(`${config.API_BASE_URL}/api/user/send-to-zoho`, customerData),
-            //     googleSubmit(),
-            //     handleBooking()
-            // ]);
-            setIsTermsAccepted(false); 
-
-            // console.log("Data sent to Zoho successfully", zohoResponse.data);
-            // console.log("Data sent to Google Sheet successfully", googleResponse.data);
-            // console.log("Booking updated successfully", bookingResponse.data);
-
-            // navigate('/thankyou'); // Redirect after all are done
         } catch (error) {
-            console.error("Error sending data to Zoho:", error);
+            console.error("Error during API submission:", error.response?.data || error.message);
         }
     };
 
