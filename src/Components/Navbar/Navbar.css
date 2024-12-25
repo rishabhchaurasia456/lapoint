@@ -1,5 +1,3 @@
-
-
 .nav_pos {
     position: fixed;
     background: transparent;
@@ -10,7 +8,7 @@
 
 #navbarManage {
     background-color: transparent;
-    position: static;    
+    position: static;
     transition: 1s;
 
 }
@@ -37,22 +35,32 @@
 }
 
 
-.language_div{
-    text-align: right;
-    margin-right: 80px;
-    padding: 0;
+.language_div {
+    /* text-align: right; */
+    padding: 0 2rem 1rem 0;
     /* margin-top: 10px; */
-    position: relative;
+    /* position: relative; */
     z-index: 100;
 }
 
-.LNG_text{
-    color: black !important;
-}
+.LNG_select_dropdown {
+    background-color: transparent;
+    color: white !important; 
+    border: 1px solid #ccc; 
+    padding: 5px; 
+    font-size: 16px;
+  }
+  
+  /* Style the dropdown options */
+  .LNG_select_option {
+    background-color: transparent; 
+    color: black; 
+  }
+
 
 
 .navbar {
-    background-color: transparent;
+    background-color: #000;
     height: 80px;
     display: flex;
     justify-content: center;
@@ -105,15 +113,16 @@
     display: flex;
     list-style: none;
     text-align: center;
-    margin-right: 2rem;
+    margin-right: 13rem;
 }
 
 .nav-links {
-    color: black;
+    color: white;
     text-decoration: none;
     padding: 0.5rem 1rem;
-    font-weight: bold;
+    font-weight: bold !important;
     height: 100%;
+    text-transform: uppercase;
     border-bottom: 3px solid transparent;
 }
 
@@ -186,7 +195,7 @@
     display: none;
 }
 
-.fa_icon_sidebar{
+.fa_icon_sidebar {
     color: #ffc800;
 }
 
@@ -212,7 +221,7 @@
 
 
     .nav-container {
-        background-color: #fdfaec;
+        background-color: black;
         margin: 0 !important;
         padding: 0 !important;
     }
@@ -230,7 +239,7 @@
     }
 
     .nav-menu.active {
-        background: #fdfaec;
+        background: black;
         left: 0px;
         opacity: 1;
         transition: all 0.5s ease;
@@ -243,7 +252,7 @@
     }
 
     .nav-links {
-        color: #000;
+        color: #fff;
         padding: 2px;
         width: 100%;
         display: table;
@@ -272,7 +281,7 @@
         color: #ffdd40;
     }
 
-    .language_div{
-       display: none;
+    .language_div {
+        display: none;
     }
 }

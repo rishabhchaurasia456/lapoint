@@ -5,16 +5,19 @@ import { Helmet } from 'react-helmet'
 import HeroSection from '../../Components/HeroSection/HeroSection'
 
 
-import Surfcamp from '../../Components/Surfcamp/Surfcamp'
+// import Surfcamp from '../../Components/Surfcamp/Surfcamp'
 import LIfeStyle from '../../Components/Lifestyle/LIfeStyle'
 import Surfcampslider from '../../Components/Surfcampslider/Surfcampslider'
 import CampReview from '../../Components/CampReview/CampReview'
-import Faq from '../../Components/Faq/Faq'
-import Textcontainer from '../../Components/Textcontainer/Textcontainer'
-import Bgimage from '../../Components/Bgimage/Bgimage'
-import Activity from '../../Components/Activity/Activity'
+// import Faq from '../../Components/Faq/Faq'
+// import Textcontainer from '../../Components/Textcontainer/Textcontainer'
+// import Bgimage from '../../Components/Bgimage/Bgimage'
+// import Activity from '../../Components/Activity/Activity'
 import Elementcomp from '../../Components/Elementcomp/Elementcomp'
 import Level from '../../Components/Level/Level'
+import Fourcard from '../../Components/fourcardsec/Fourcard';
+import Bgdark from '../../Components/Bgdarksec/Bgdark';
+import Whykiteactive from '../../Components/Whykiteactive/Whykiteactive';
 
 // import LIfeStyle2 from '../../Components/Lifestyle/LIfeStyle2'
 // import European from '../../Components/European/European'
@@ -26,7 +29,7 @@ const Home = ({ selectedLanguage }) => {
   return (
     <div>
       {/* for home page seo  */}
-     
+
 
       <Helmet>
         <title>Kitesurf Holidays - Adventurous Kitesurf Trips | KiteActive </title>
@@ -38,7 +41,7 @@ const Home = ({ selectedLanguage }) => {
         <link rel="icon" href="./logo512.png" />
         <link rel="canonical" href="https://kiteactiveventures.com/" />
       </Helmet>
-     
+
 
 
       {/* all home page Components section import here  */}
@@ -49,21 +52,24 @@ const Home = ({ selectedLanguage }) => {
         <HeroSection selectedLanguage={selectedLanguage} />
       </Suspense> */}
       </div>
-      
+
       <HeroSection selectedLanguage={selectedLanguage} />
-      <Surfcamp selectedLanguage={selectedLanguage} />
+      <Fourcard selectedLanguage={selectedLanguage} />
+      {/* <Surfcamp selectedLanguage={selectedLanguage} /> */}
       <Surfcampslider selectedLanguage={selectedLanguage} />
+      <Bgdark />
       <CampReview selectedLanguage={selectedLanguage} />
+      <Whykiteactive />
       <Level selectedLanguage={selectedLanguage} />
-      <LIfeStyle selectedLanguage={selectedLanguage} />
       <Elementcomp selectedLanguage={selectedLanguage} />
+      <LIfeStyle selectedLanguage={selectedLanguage} />
       {/* <European /> */}
       {/* <LIfeStyle2 /> */}
-      <Faq selectedLanguage={selectedLanguage} />
-      <Activity selectedLanguage={selectedLanguage} />
+      {/* <Faq selectedLanguage={selectedLanguage} /> */}
+      {/* <Activity selectedLanguage={selectedLanguage} /> */}
       {/* <Adventure selectedLanguage={ selectedLanguage }/> */}
-      <Textcontainer selectedLanguage={selectedLanguage} />
-      <Bgimage selectedLanguage={selectedLanguage} />
+      {/* <Textcontainer selectedLanguage={selectedLanguage} /> */}
+      {/* <Bgimage selectedLanguage={selectedLanguage} /> */}
       {/* <Footer selectedLanguage={ selectedLanguage }/> */}
     </div>
   )

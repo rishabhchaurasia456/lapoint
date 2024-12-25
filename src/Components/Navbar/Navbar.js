@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { Link, NavLink } from 'react-router-dom';
 import { navItems } from '../Navbar/Navdata';
 import "./Navbar.css"
-import img from '../../Images/logo-zwart-geel-geel.png'
+import Logo_img from '../../Images/logo-kiteactive.svg'
 
 const Navbar = ({ selectedLanguage, setSelectedLanguage }) => {
 
@@ -40,21 +40,8 @@ const Navbar = ({ selectedLanguage, setSelectedLanguage }) => {
   return (
     <>
       <div id="navbarManage" className="nav_pos container-fluid m-0 p-0">
-      {/* Language Selection Dropdown */}
-      <div className="language_div">
-        <div className="dropdown ">
-          <i className="fa fa-globe my-3 text-dark" />&nbsp;
-          <b className="LNG_text">Select Language
-            <select className='btn text-dark' value={selectedLanguage} onChange={handleChange}>
-              {languages.map((item) => (
-                <option className='text-dark' key={item.value} value={item.value}>
-                  {item.text}
-                </option>
-              ))}
-            </select>
-          </b>
-        </div>
-      </div>
+        {/* Language Selection Dropdown */}
+
 
 
         {/* Main Navbar */}
@@ -63,7 +50,7 @@ const Navbar = ({ selectedLanguage, setSelectedLanguage }) => {
             {/* Logo */}
             <NavLink exact to="/" className="nav-logo">
               <span className="icon">
-                <img src={img} alt="Logo" className="logo" />
+                <img src={Logo_img} alt="Logo" className="logo" />
               </span>
             </NavLink>
 
@@ -107,17 +94,17 @@ const Navbar = ({ selectedLanguage, setSelectedLanguage }) => {
 
 
               <div className='Only_mobile'>
-                <div className=" ">
+                {/* <div className=" ">
                   <Link to="" className="nav-link border-bottom border-2">
                     <p className=''> <i className='fa fa-user-o me-3 text_span'></i>Sign in</p>
                   </Link>
-                </div>
+                </div> */}
 
                 {/* for language in mobile mode  */}
                 <div className="">
-                  <Link to="" className="nav-link border-bottom border-2">
-                    <p className=''> <i className='fa fa-globe text_span me-3'></i>Select Language
-                      <select className='btn border text-dark' value={selectedLanguage} onChange={handleChange}>
+                  <Link to="" className="nav-link ">
+                    <p className=''> <i className='fa fa-globe text_span me-3'></i>
+                      <select className='btn border text-light' value={selectedLanguage} onChange={handleChange}>
                         {languages.map((item) => (
                           <option className='text-dark' key={item.value} value={item.value}>
                             {item.text}
@@ -144,8 +131,24 @@ const Navbar = ({ selectedLanguage, setSelectedLanguage }) => {
               </div>
             </ul>
 
+            {/* only for desktop view  */}
+            <div className="language_div">
+              <div className="dropdown text-light">
+                {/* <i className="fa fa-globe my-3 text-light " />&nbsp; */}
+                <b className="LNG_text">
+                  <select className='btn LNG_select_dropdown' value={selectedLanguage} onChange={handleChange}>
+                    {languages.map((item) => (
+                      <option className='LNG_select_option' key={item.value} value={item.value}>
+                        {item.text}
+                      </option>
+                    ))}
+                  </select>
+                </b>
+              </div>
+            </div>
 
-            {/* Mobile Icon */}
+
+            {/* Mobile Icon------------- */}
             <div className="nav-icon" onClick={handleClick}>
               {click ? (
                 <span className="icon">
