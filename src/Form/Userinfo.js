@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import axios from 'axios';
-import DatePicker from "react-datepicker";
+// import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import config from '../config/config';
 
@@ -70,6 +70,7 @@ const Userinfo = () => {
     const [useSameDetails, setUseSameDetails] = useState(false);
     const [invoiceDetails, setInvoiceDetails] = useState("");
     const [isTermsAccepted, setIsTermsAccepted] = useState(false);
+    const [loading, setLoading] = useState(false);
 
     const [travellers, setTravellers] = useState(
         Array.from({ length: totalCount }).map(() => ({
@@ -151,7 +152,7 @@ const Userinfo = () => {
 
             if (gresponse.status === 200) {
                 console.log('Listing added successfully:', gresponse.data);
-                navigate('/thankyou');
+                // navigate('/thankyou');
             }
 
         } catch (error) {
@@ -162,7 +163,8 @@ const Userinfo = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-    
+
+        setLoading(true);
         // Prepare customer data
         const customerData = {
             contact_name: `${userDetails.firstName} ${userDetails.lastName}`,
@@ -190,7 +192,7 @@ const Userinfo = () => {
         };
     
         // Redirect to "Thank You" page immediately
-        navigate('/thankyou');
+        // navigate('/thankyou');
     
         try {
             // API call to Zoho
@@ -212,6 +214,8 @@ const Userinfo = () => {
             // Update booking details
             handleBooking();
             console.log("Booking updated successfully.");
+
+            window.location.href = "https://www.kiteactive.com/thank-you";
         } catch (error) {
             console.error("Error during API submission:", error.response?.data || error.message);
         }
@@ -284,21 +288,24 @@ const Userinfo = () => {
                             <hr className='mt-4' />
                             <div className='row mt-2'>
                                 <div className="col">
-                                    {/* <input
-                                        type='date'
-                                        className=' w-100 forDob'
-                                        placeholder='Date of Birth'
+                                <div class="col mat-input">
+                                    <label className="ps-1">Date of Birth</label>
+                                    <input
+                                        type='text'
+                                        className=' w-100'
+                                        placeholder='dd/mm/yyyy'
                                         value={travellers[index].dob}
                                         onChange={(e) => handleChange(index, 'dob', e.target.value)}
-                                    /> */}
-                                    <DatePicker
+                                    />
+                                </div>
+                                    {/* <DatePicker
                                         selected={travellers[index].dob ? new Date(travellers[index].dob) : null}
                                         onChange={(date) => handleChange(index, "dob", date ? date.toISOString().split("T")[0] : "")}
                                         placeholderText="Date of Birth"
                                         className="mat-input-fordob w-100"
                                         dateFormat="yyyy-MM-dd"
                                         portalId="root-portal" // Ensure this ID matches your app's root
-                                    />
+                                    /> */}
                                 </div>
                                 <div class="col mat-input">
                                     <label className="ps-3">Address</label>
@@ -406,12 +413,7 @@ const Userinfo = () => {
 
                         </div>
                     </div>
-
-
-
                     <div className="col-lg-2"></div>
-
-
                 </div>
             </div>
 
@@ -546,13 +548,20 @@ const Userinfo = () => {
                                     cursor: isButtonDisabled ? "not-allowed" : "pointer",
                                     color: isButtonDisabled ? "darkgray" : "white",
                                 }}
-                            > Make Reservation
+                            > {loading ? "Processing..." : "Make Reservation"}
                             </button>
                         </div>
                     </div>
                     <div className="col-lg-2"></div>
                 </div>
             </div>
+            {loading && (
+                <div className='loader-overlay'>
+                    <div className='loader'>
+                        Processing your request...
+                    </div>
+                </div>
+            )}
         </div>
     );
 };

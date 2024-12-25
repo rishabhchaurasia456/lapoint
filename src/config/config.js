@@ -1,5 +1,5 @@
 const config = {
-    API_BASE_URL: "http://192.168.1.6:5500",
+    API_BASE_URL: "https://api.kiteactiveventures.com",
 };
 
 export default config;
