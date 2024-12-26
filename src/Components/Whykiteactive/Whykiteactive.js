@@ -12,7 +12,7 @@ const Whykiteactive = () => {
         <div>
 
             <div className="container">
-            <h2 className='text-center surf_text text_span mt-5'>Why kiteactive?</h2>
+                <h2 className='text-center surf_text text_span mt-5'>Why kiteactive?</h2>
 
                 <div className="row">
                     <div className="col-lg-7">
@@ -38,7 +38,7 @@ const Whykiteactive = () => {
                         <div>
                             <div className="row why_K_right_div">
                                 <div className="col-3">
-                                    <img src={img2} alt="" className='w-75 whykite_sm_img' />
+                                    <img src={img2} alt="" className=' whykite_sm_img' />
                                 </div>
                                 <div className="col-9">
                                     <h3 className='why_k_heading'>Read the adventures of our travellers</h3>
@@ -50,7 +50,7 @@ const Whykiteactive = () => {
                         <div>
                             <div className="row why_K_right_div">
                                 <div className="col-3">
-                                    <img src={img3} alt="" className='w-75 whykite_sm_img' />
+                                    <img src={img3} alt="" className=' whykite_sm_img' />
                                 </div>
                                 <div className="col-9">
                                     <h3 className='why_k_heading'>Make new kite friends!</h3>
@@ -61,7 +61,7 @@ const Whykiteactive = () => {
                         <div>
                             <div className="row why_K_right_div">
                                 <div className="col-3">
-                                    <img src={img4} alt="" className='w-75 whykite_sm_img' />
+                                    <img src={img4} alt="" className='whykite_sm_img' />
                                 </div>
                                 <div className="col-9">
                                     <h3 className='why_k_heading'>A selection of the best kitespots in the world</h3>

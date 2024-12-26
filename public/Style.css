@@ -49,10 +49,6 @@
   /* height: 50%; */
 }
 
-
-
-
-
 .why_K_right_div {
   margin-top: 2rem !important;
 }
@@ -78,6 +74,15 @@
 }
 
 
+/* Medium devices (tablets, 768px and up)---------------- */
+
+@media only screen and (max-width: 600px) {
+  .whykite_sm_img {
+    width: 4.5rem !important;
+    margin: 20px 1rem 0 0 !important;
+  }
+
+}
 
 
 
@@ -344,7 +349,7 @@
 .custom-prev,
 .custom-next {
   position: absolute;
-  margin-top: -15%;
+  margin-top: -16%;
   transform: translateY(-50%);
   background-color: #000000;
   border: none;
@@ -486,7 +491,7 @@
 
 .element_btn {
   margin: auto;
-  margin-top: 30%;
+  margin-top: 20%;
   margin-left: 30%;
   width: 50%;
   background-color: #000;
@@ -818,70 +823,6 @@ details>summary::-webkit-details-marker {
   }
 }
 
-
-/* TEXT Container  Css  */
-
-.text_small {
-  margin-bottom: 15% !important;
-  color: black;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 53px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  text-transform: uppercase;
-
-}
-
-.text_head {
-  margin-top: 5%;
-  color: black;
-  font-weight: 800;
-  font-size: 60px;
-  line-height: 45px;
-  font-weight: 800;
-  font-family: "Amatic SC", sans-serif;
-  text-transform: uppercase;
-
-}
-
-.text_para {
-  padding: 2px;
-  color: black;
-  font-family: sans-serif;
-  margin-top: 5%;
-  font-size: 18px;
-  line-height: 23px;
-  font-weight: 400;
-  letter-spacing: 1PX;
-
-
-}
-
-
-
-
-
-@media only screen and (max-width: 600px) {
-  .text_container {
-    max-width: 500px;
-  }
-
-  .text_para {
-    font-size: 15px;
-    line-height: 18px;
-    text-align: justify;
-
-  }
-
-  .text_head {
-    font-weight: 800;
-    font-size: 35px;
-    line-height: 40px;
-
-  }
-}
-
-
 /* ----------------------------------- */
 /* Activity component css  */
 /* -------------------------------------- */
@@ -1013,85 +954,6 @@ details>summary::-webkit-details-marker {
 
 
 
-/* -------------------------------------- */
-/* BG- Image css  */
-/* -------------------------------------- */
-
-.bg_image2 {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100vh;
-}
-
-
-.bg_text {
-  margin-top: 20%;
-  color: white;
-  font-weight: 500;
-  font-size: 20px;
-  text-transform: uppercase;
-
-}
-
-.bg_heading {
-  margin-top: 5%;
-  color: #fdc016;
-  font-family: "Amatic SC", sans-serif;
-  font-weight: 800;
-  font-size: 60px;
-  line-height: 55px;
-  text-transform: uppercase;
-
-}
-
-.bg_para {
-  padding: 2px;
-  color: white;
-  font-family: sans-serif;
-  margin-top: 5%;
-  text-align: justify;
-  font-size: 18px;
-  line-height: 23px;
-  font-weight: 400;
-  letter-spacing: 1PX;
-}
-
-
-
-
-
-
-@media only screen and (max-width: 600px) {
-  .bg_image2 {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100vh;
-  }
-
-  .bg_heading {
-    font-weight: 800;
-    font-size: 35px;
-    line-height: 40px;
-  }
-
-  .bg_para {
-    font-size: 15px;
-    margin-top: 4%;
-    margin-bottom: 5%;
-    line-height: 20px;
-  }
-
-  .bg_text {
-    margin-top: 10%;
-  }
-}
-
-
-
 /* footer CSS ------------------------ */
 /* footer CSS ------------------------ */
 
@@ -1099,32 +961,21 @@ details>summary::-webkit-details-marker {
   background-color: #fdc016;
 }
 
-.footer_headcontainer_text {
+
+.f_h_t {
   color: #000;
-  margin-top: 5%;
-  padding: 0 50px 0 50px !important;
+  padding: 0 0 0 50px !important;
   font-family: "Amatic SC", sans-serif;
-
-  
-}
-
-.f_h_p{
-  color: #000;
-  margin-top: 5%;
-  padding: 0 50px 0 50px !important;
-  font-family: "Amatic SC", sans-serif;
-  font-size: 40px; 
-  font-weight: normal;
-
+  font-size: 40px;
+  font-weight: 900;
 }
 
 .f_h_p {
   color: #000;
-  margin-top: 5%;
-  padding: 0 50px 0 50px !important;
+  padding: 0 0 0 50px !important;
   font-family: "Amatic SC", sans-serif;
-  font-size: 40px; 
-  font-weight: 900;
+  font-size: 30px;
+  font-weight: normal;
 }
 
 .input-group {
@@ -1167,9 +1018,15 @@ details>summary::-webkit-details-marker {
 .fa_icon_footer {
   color: #fdc016;
   font-size: 30px !important;
-
 }
 
+.Social_icon_main a {
+  text-decoration: none;
+}
+.social_icon {
+  width: 10%;
+ 
+}
 
 @media only screen and (max-width: 600px) {
   .footer_headcontainer_text {

@@ -10,11 +10,11 @@ const responsive = {
     superLargeDesktop: {
         // the naming can be any, depends on you.
         breakpoint: { max: 4000, min: 3000 },
-        items: 5
+        items: 4
     },
     desktop: {
         breakpoint: { max: 3000, min: 1024 },
-        items: 5
+        items: 4
     },
     tablet: {
         breakpoint: { max: 1024, min: 464 },
@@ -65,7 +65,6 @@ const Surfcampslider = ({ selectedLanguage }) => {
             <div className='container-fluid'>
                 <div className='row'>
                     <div className="col">
-
                         <Carousel ref={carouselRef} responsive={responsive} arrows={false}>
 
                             {/* card data in card.js  */}
@@ -86,7 +85,6 @@ const Surfcampslider = ({ selectedLanguage }) => {
                         </Carousel>
                         <button className="fa fa-angle-left custom-prev" onClick={handlePrev} aria-label="Previous">  </button>
                         <button className=" fa fa-angle-right custom-next" onClick={handleNext} aria-label="Next">   </button>
-
                     </div>
                 </div>
 

@@ -3,7 +3,9 @@ import { Link } from 'react-router-dom'
 
 import footerlogo from '../../Images/logo-kiteactive.svg'
 
-
+import social_icon from '../../Images/instagram_icon.png'
+import social_icon2 from '../../Images/facebook_icon.png'
+import social_icon3 from '../../Images/spotify_icon.png'
 
 const sections = [
   {
@@ -131,16 +133,19 @@ const Footer = ({ selectedLanguage }) => {
     <div>
       <div className='container-fluid'>
         <div className='row footer_headcontainer pt-4'>
-          <div className='col-md-7 footer_headcontainer_text'>
-            <h1 className='f_h_t'>Get Updates & DEALS</h1>
-            <p className='f_h_p'>Huge kitedeals and travel inspiration</p>
+          <div className='col-md-7 '>
+            <h1 className='f_h_t mb-0'>Get Updates & DEALS</h1>
+            <p className='f_h_p'> Huge kitedeals and travel inspiration</p>
           </div>
 
           <div className='col-md-5'>
-            <div class="input-group mb-3">
-              <input type="text" class="form-control p-2" placeholder="Your Email" aria-label="Recipient's username" aria-describedby="basic-addon2" />
-              <div class="input-group-append">
-                <button class="btn btn-outline-secondary emailbtn" type="button">subscribe</button>
+
+            <div className='mt-3'>
+              <div class="input-group ">
+                <input type="text" class="form-control p-2" placeholder="Your Email" aria-label="Recipient's username" aria-describedby="basic-addon2" />
+                <div class="input-group-append">
+                  <button class="btn btn-outline-secondary emailbtn" type="button">subscribe</button>
+                </div>
               </div>
             </div>
           </div>
@@ -164,7 +169,19 @@ const Footer = ({ selectedLanguage }) => {
                     <div className='text-light '>
                       <p className='mt-4'>{footerdata.maindesc[selectedLanguage]}</p>
                     </div>
+
+                    {/* socila icons  */}
+                    <p className='text-light'>Let's be friends!</p>
+                    <div className='Social_icon_main'>
+                      <a href='https://www.instagram.com/accounts/login/' className="">
+                        <img src={social_icon} alt="" className='social_icon' /></a>
+                      <a href='https://www.facebook.com/' className=""> <img src={social_icon2} alt="" className='social_icon ' /></a>
+                      <a href='https://open.spotify.com/' className=""> <img src={social_icon3} alt="" className='social_icon' /></a>
+                    </div>
                   </div>
+
+
+
 
                   {sections.map((section, index) => (
                     <div class="col-12 col-md-4 col-lg-2 col-xl-2 text-light p-0 m-0">
@@ -193,13 +210,7 @@ const Footer = ({ selectedLanguage }) => {
                     </div>
 
                     <div className="navbar-nav TNB mt-3">
-                      {/* socila icons  */}
-                      {/* <div className='d-flex'>
-                                                <Link to="/" className="nav-link me-5"> <i className='fa fa-facebook fa_icon_footer'></i></Link>
-                                                <Link to="/" className="nav-link me-5"> <i className='fa fa-instagram  fa_icon_footer'></i></Link>
-                                                <Link to="/" className="nav-link me-5"> <i className='fa fa-youtube fa_icon_footer '></i></Link>
-                                                <Link to="/" className="nav-link me-5"> <i className='fa fa-twitter fa_icon_footer '></i></Link>
-                                            </div> */}
+
                     </div>
                   </div>
 
