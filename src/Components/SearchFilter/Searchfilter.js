@@ -1,9 +1,10 @@
 import React from 'react'
 import '../HeroSection/HeroSection.css'
+import { Link } from 'react-router-dom'
 const Searchfilter = () => {
     return (
         <div>
-            <div className="container">
+            <div className="container search_filter_cont">
                 <div className="row">
                     <div className="col">
                         <div className="select_box_div">
@@ -35,7 +36,7 @@ const Searchfilter = () => {
                                         <option value="Featured">Featured</option>
                                     </select>
                                 </div>
-                                <button className="searchbtn">Search</button>
+                                <Link to="/kitecamp" className="searchbtn">Search</Link>
                             </div>
                         </div>
                     </div>

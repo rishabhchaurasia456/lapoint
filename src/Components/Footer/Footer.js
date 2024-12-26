@@ -3,13 +3,7 @@ import { Link } from 'react-router-dom'
 
 import footerlogo from '../../Images/logo-kiteactive.svg'
 
-const footerhead = {
-  headtitle: {
-    en: "Unlock Your Surfing Adventure: Join Our Membership for 30€ Off",
-    du: "Ontgrendel je surfavontuur: Word lid van onze community en ontvang 30€ korting op je volgende surftrip!",
-    gr: "Entfesseln Sie Ihr Surf-Abenteuer: Treten Sie unserer Mitgliedschaft bei und erhalten Sie 30€ Rabatt!",
-  }
-};
+
 
 const sections = [
   {
@@ -138,7 +132,8 @@ const Footer = ({ selectedLanguage }) => {
       <div className='container-fluid'>
         <div className='row footer_headcontainer pt-4'>
           <div className='col-md-7 footer_headcontainer_text'>
-            <p>{footerhead.headtitle[selectedLanguage]}</p>
+            <h1 className='f_h_t'>Get Updates & DEALS</h1>
+            <p className='f_h_p'>Huge kitedeals and travel inspiration</p>
           </div>
 
           <div className='col-md-5'>
