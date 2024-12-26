@@ -1,13 +1,22 @@
-
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
+import { cardData } from './Kitecampdata';
 import headerbackimg from '../../Images/kitecampbg.webp';
 import map from '../../Images/map.webp';
-import { cardData } from './Kitecampdata'; // Importing card data
 import Searchfilter from '../../Components/SearchFilter/Searchfilter';
 
-
 const Kitecamp = () => {
+    const location = useLocation();
+    const queryParams = new URLSearchParams(location.search);
+    const anyTime = queryParams.get('anyTime');
+    const chooseStyle = queryParams.get('chooseStyle');
+
+    // Filter the cardData based on query parameters
+    const filteredData = cardData.filter((card) => {
+        const matchesAnyTime = !anyTime || card.anyTime.includes(anyTime);
+        const matchesChooseStyle = !chooseStyle || card.chooseStyle === chooseStyle;
+        return matchesAnyTime && matchesChooseStyle;
+    });
 
     return (
         <div>
@@ -18,8 +27,7 @@ const Kitecamp = () => {
 
             {/* Kitecamp page content */}
             <div className="container-fluid mt-5">
-
-                <h3 className='kite_text'>Find your kite adventure</h3>
+                <h3 className="kite_text">Find your kite adventure</h3>
                 <div className="row">
                     <div className="col-lg-4">
                         <div className="video-container">
@@ -30,22 +38,20 @@ const Kitecamp = () => {
                         <Searchfilter />
                         <div className="trip_main_card mt-4">
                             <div className="row">
-                                {cardData.map((card) => (
+                                {filteredData.map((card) => (
                                     <div key={card.id} className="col-lg-4 mb-3">
-                                        <Link to={card.path} state={{ trip_data: card.data }}>
-                                            <div className="card card-bg mb-3"
-                                                style={{
-                                                    backgroundImage: `url(${card.img})`,
-                                                    backgroundSize: 'cover',
-                                                    backgroundPosition: 'center',
-                                                    height: '250px',
-                                                    borderRadius: '10px',
-                                                }}>
-                                                <div className="card-body crdbody mb-3">
-                                                    {/* You can add more card-specific content here */}
-                                                </div>
-                                            </div>
-                                        </Link>
+                                        <div
+                                            className="card card-bg mb-3"
+                                            style={{
+                                                backgroundImage: `url(${card.img})`,
+                                                backgroundSize: 'cover',
+                                                backgroundPosition: 'center',
+                                                height: '250px',
+                                                borderRadius: '10px',
+                                            }}
+                                        >
+                                            <div className="card-body crdbody mb-3"></div>
+                                        </div>
                                     </div>
                                 ))}
                             </div>
@@ -53,8 +59,6 @@ const Kitecamp = () => {
                     </div>
                 </div>
             </div>
-
-
         </div>
     );
 };
