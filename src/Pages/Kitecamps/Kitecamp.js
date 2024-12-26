@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import headerbackimg from '../../Images/kitecampbg.webp';
 import map from '../../Images/map.webp';
 import { cardData } from './Kitecampdata'; // Importing card data
+import Searchfilter from '../../Components/SearchFilter/Searchfilter';
 
 
 const Kitecamp = () => {
@@ -26,7 +27,8 @@ const Kitecamp = () => {
                         </div>
                     </div>
                     <div className="col-lg-8">
-                        <div className="trip_main_card">
+                        <Searchfilter />
+                        <div className="trip_main_card mt-4">
                             <div className="row">
                                 {cardData.map((card) => (
                                     <div key={card.id} className="col-lg-4 mb-3">
