@@ -5,6 +5,7 @@
   overflow: hidden;
   margin-top: -13%;
 }
+
 .background-video {
   position: absolute;
   top: 50%;
@@ -14,6 +15,7 @@
   object-fit: cover;
   transform: translate(-50%, -50%);
   z-index: -1;
+  /* margin-top: 10rem; */
 }
 
 .content {
@@ -47,6 +49,57 @@
 }
 
 
+/* select boxes search box  */
+.select_box_div {
+  max-width: 800px;
+  justify-content: center !important;
+  text-align: center !important;
+  margin: auto !important;
+}
+
+.inputbox_row .form-select {
+  border-radius: 5px;
+  border: 1px solid #fdc016 !important;
+  padding: 0.5rem;
+  width: 70% !important;
+  color: black;
+  font-weight: 500;
+  background-color: white !important;
+}
+
+
+.searchbtn {
+  display: inline-block;
+  width: fit-content;
+  min-width: 120px;
+  height: 55px;
+  padding: 10px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  user-select: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+.searchbtn:hover {
+  background-color: #fdc016;
+  color: black;
+  font-size: 16px;
+  border: 0;
+  
+}
+
+.searchbtn:active {
+  transform: scale(0.95);
+ 
+}
+
 @media only screen and (max-width: 600px) {
   .video-container {
     position: relative;
@@ -55,7 +108,7 @@
     overflow: hidden;
     margin-top: -31% !important;
   }
-  
+
 
   .background-video {
     position: absolute;
@@ -133,6 +186,6 @@
     height: 100vh;
     overflow: hidden;
   }
-    
+
 
 }

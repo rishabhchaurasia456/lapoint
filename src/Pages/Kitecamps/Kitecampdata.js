@@ -19,96 +19,118 @@ export const cardData = [
                 du: 'Vanleven'
             },
         },
+        anyTime: "September",
+        chooseStyle: "Advanced"
     },
-    { 
-        id: 2, img: img2, path: "/trip/zanzibar", 
+    {
+        id: 2, img: img2, path: "/trip/zanzibar",
         data: {
-            trip_name:{
-                en:"zanzibar", 
-                gr:"Sansibar", 
-                du:" Zanzibar ", 
+            trip_name: {
+                en: "zanzibar",
+                gr: "Sansibar",
+                du: " Zanzibar ",
             },
         },
+        anyTime: ["January", "August", "September", "December","February"],
+        chooseStyle: "Beginner paradise",
+
     },
-    { 
-        id: 3, img: img3, path: "/trip/Snowkite", 
+    {
+        id: 3, img: img3, path: "/trip/Snowkite",
         data: {
-            trip_name:{
-                en:"Snowkite", 
-                gr:"Schneekite", 
-                du:"Sneeuwkite", 
+            trip_name: {
+                en: "Snowkite",
+                gr: "Schneekite",
+                du: "Sneeuwkite",
             },
-        }
+        },
+        anyTime:  ["January", "February", "September"],
+        chooseStyle: "Advanced"
     },
-    { 
+    {
         id: 4, img: img4, path: "/trip/skyCapTown",
         data: {
-            trip_name:{
-                en:"skyCapTown", 
-                gr:"SkyKapstadt", 
-                du:"SkyKaapstad", 
+            trip_name: {
+                en: "skyCapTown",
+                gr: "SkyKapstadt",
+                du: "SkyKaapstad",
             },
-        }
+        },
+        anyTime: "September",
+        chooseStyle: "Beginner paradise"
     },
-    { 
+    {
         id: 5, img: img5, path: "/trip/Tarifa",
         data: {
-            trip_name:{
-                en:"Tarifa", 
-                gr:"Tarifa", 
-                du:"Tarifa", 
+            trip_name: {
+                en: "Tarifa",
+                gr: "Tarifa",
+                du: "Tarifa",
             },
-        }
+        },
+        anyTime: "January",
+        chooseStyle: "Adventure"
     },
-    { 
+    {
         id: 6, img: img6, path: "/trip/Egypt",
         data: {
-            trip_name:{
-                en:"Egypt", 
-                gr:"Ägypten", 
-                du:"Egypte", 
+            trip_name: {
+                en: "Egypt",
+                gr: "Ägypten",
+                du: "Egypte",
             },
-        }
+        },
+        anyTime: ["March", "August", "December"],
+        chooseStyle: "Advacned"
     },
-    { 
-        id: 7, img: img7, path: "/trip/Brazil", 
+    {
+        id: 7, img: img7, path: "/trip/Brazil",
         data: {
-            trip_name:{
-                en:"Brazil", 
-                gr:"Brasilien", 
-                du:"Brazilië", 
+            trip_name: {
+                en: "Brazil",
+                gr: "Brasilien",
+                du: "Brazilië",
             },
-        }
+        },
+        anyTime: ["October", "August", "November"],
+        chooseStyle: ["Adventure", "Adventure"]
     },
-    { 
-        id: 8, img: img8, path: "/trip/Dakhla", 
+    {
+        id: 8, img: img8, path: "/trip/Dakhla",
         data: {
-            trip_name:{
-                en:"Dakhla", 
-                gr:"Dakhla", 
-                du:"Dakhla", 
+            trip_name: {
+                en: "Dakhla",
+                gr: "Dakhla",
+                du: "Dakhla",
             },
-        }
+        },
+        anyTime: ["May", "August", "July"],
+        chooseStyle: ["Adventure", "Adventure"]
+
     },
-    { 
+    {
         id: 9, img: img9, path: "/trip/Sail&kite",
         data: {
-            trip_name:{
-                en:"Sail&kite", 
-                gr:"Kiten", 
-                du:"Zeil&kite", 
+            trip_name: {
+                en: "Sail&kite",
+                gr: "Kiten",
+                du: "Zeil&kite",
             },
-        }
+        },
+        anyTime: ["may", "August", "September"],
+        chooseStyle: ["Adventure", "Adventure"]
     },
-    { 
+    {
         id: 10, img: img10, path: "/trip/Sicily",
         data: {
-            trip_name:{
-                en:"Sicily", 
-                gr:"Sizilien", 
-                du:"Sicilië", 
+            trip_name: {
+                en: "Sicily",
+                gr: "Sizilien",
+                du: "Sicilië",
             },
-        }
+        },
+        anyTime: ["july", "August"],
+        chooseStyle: "Adventure"
     },
 ];
 

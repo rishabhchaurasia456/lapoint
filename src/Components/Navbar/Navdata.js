@@ -28,15 +28,15 @@ export const navItems = [
             // submenu: kiteCampsSubmenu
             submenu: kiteCampsSubmenu
         },
-        {
-            id: "2",
-            name: {
-                en: "About",
-                du: "Over",  // Dutch (DU)
-                gr: "Über uns",  
-            },
-            path: '/about',
-        },
+        // {
+        //     id: "2",
+        //     name: {
+        //         en: "About",
+        //         du: "Over",  // Dutch (DU)
+        //         gr: "Über uns",  
+        //     },
+        //     path: '/about',
+        // },
 
         { 
             id: "2",
@@ -55,15 +55,26 @@ export const navItems = [
             },
             path: '/stories'
         },
+        // { 
+        //     id: "5",
+        //     name: {
+        //         en: "Contact",
+        //         du: "Contact",  // Dutch (DU)
+        //         gr: "Kontakt",  // Netherlands Dutch (NL)
+        //     },
+        //     path: '/contact'
+        // }  
+        
         { 
-            id: "5",
+            id: "4",
             name: {
-                en: "Contact",
-                du: "Contact",  // Dutch (DU)
-                gr: "Kontakt",  // Netherlands Dutch (NL)
+                en: "Shop",
+                du: "Verhalen",  // Dutch (DU)
+                gr: "Geschichten",  // Netherlands Dutch (NL)
             },
-            path: '/contact'
-        }       
+            path: 'https://www.kiteactive.com/shop/'
+        },
+
 ];
 
 

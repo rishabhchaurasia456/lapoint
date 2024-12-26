@@ -41,9 +41,6 @@ const Navbar = ({ selectedLanguage, setSelectedLanguage }) => {
     <>
       <div id="navbarManage" className="nav_pos container-fluid m-0 p-0">
         {/* Language Selection Dropdown */}
-
-
-
         {/* Main Navbar */}
         <nav className="navbar">
           <div className="nav-container">

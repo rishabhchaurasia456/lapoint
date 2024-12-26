@@ -112,8 +112,8 @@
 .nav-menu {
     display: flex;
     list-style: none;
-    text-align: center;
-    margin-right: 13rem;
+    /* text-align: start !important; */
+    margin-right: 25rem;
 }
 
 .nav-links {
