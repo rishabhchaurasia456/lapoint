@@ -124,10 +124,13 @@ const Userinfo = () => {
 
         const levelNames = levels.map(level => level.name);
 
+        const currentDate = new Date().toISOString().split('T')[0]; // This will give you 'YYYY-MM-DD'
+
         // Bundle them into one object
         let data = {
             userDetails: userDetails,
             travellers: travellers,
+            booking_date: currentDate,
             room: selectedRooms,
             levels: levelNames,
             totalprice: updatedTotalPrice,
