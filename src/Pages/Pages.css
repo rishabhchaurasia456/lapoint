@@ -174,10 +174,10 @@
   border-radius: 10px;
 }
 
-.card:hover {
+/* .card:hover {
   transform: scale(1.05);
   transition: transform 0.3s ease-in-out;
-}
+} */
 
 .trip_main_card {
   overflow-y: scroll;

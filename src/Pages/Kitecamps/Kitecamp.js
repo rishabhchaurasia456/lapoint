@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { cardData } from './Kitecampdata';
 // import headerbackimg from '../../Images/kitecampbg.webp';
 import Searchfilter from '../../Components/SearchFilter/Searchfilter';
@@ -15,7 +15,7 @@ import img8 from '../../Images/kc8.webp';
 // import img9 from '../../Images/kc9.webp';
 // import img10 from '../../Images/kc10.webp';
 
-import markerimg from '../../Images/map_marker.png'
+import markerimg from '../../Images/map_markerss.png'
 
 const Kitecamp = () => {
     const location = useLocation();
@@ -100,22 +100,22 @@ const Kitecamp = () => {
         loadGoogleMapsScript();
     }, []);
 
-    // useEffect(() => {
-    //     // Show InfoWindow for activeTrip
-    //     if (activeTrip !== null && infoWindowRef.current && markersRef.current.length) {
-    //         const activeMarker = markersRef.current.find((marker) => marker.id === activeTrip);
-    //         if (activeMarker) {
-    //             infoWindowRef.current.setContent(activeMarker.title);
-    //             infoWindowRef.current.setPosition({
-    //                 lat: activeMarker.lat,
-    //                 lng: activeMarker.lng,
-    //             });
-    //             infoWindowRef.current.open(activeMarker.marker.getMap(), activeMarker.marker);
-    //         }
-    //     } else if (infoWindowRef.current) {
-    //         // infoWindowRef.current.close();
-    //     }
-    // }, [activeTrip]);
+    useEffect(() => {
+        // Show InfoWindow for activeTrip
+        if (activeTrip !== null && infoWindowRef.current && markersRef.current.length) {
+            const activeMarker = markersRef.current.find((marker) => marker.id === activeTrip);
+            if (activeMarker) {
+                infoWindowRef.current.setContent(activeMarker.title);
+                infoWindowRef.current.setPosition({
+                    lat: activeMarker.lat,
+                    lng: activeMarker.lng,
+                });
+                infoWindowRef.current.open(activeMarker.marker.getMap(), activeMarker.marker);
+            }
+        } else if (infoWindowRef.current) {
+            // infoWindowRef.current.close();
+        }
+    }, [activeTrip]);
 
 
     useEffect(() => {
@@ -164,6 +164,7 @@ const Kitecamp = () => {
                                         onMouseEnter={() => setActiveTrip(card.id)}
                                         onMouseLeave={() => setActiveTrip(null)}
                                     >
+                                    <Link to={card.path}>
                                         <div
                                             className="card card-bg mb-3"
                                             style={{
@@ -177,6 +178,7 @@ const Kitecamp = () => {
                                             <div className="card-body crdbody mb-3">
                                             </div>
                                         </div>
+                                    </Link>
                                     </div>
                                 ))}
                             </div>
