@@ -21,7 +21,7 @@ const Reviewdata = [
         id: "1",
         img: img1,
         start: "5",
-        name: "Michael Thompson",
+        name: "A.M. Gorter",
         date: "April 17",
         title: {
             en: "WE had the best time!",
@@ -29,7 +29,7 @@ const Reviewdata = [
             du: "We hadden de beste tijd!"
         },
         para: {
-            en: "I can’t thank Kiteactive enough for the amazing memories I've made! The lessons are thorough, and the locations are breathtaking. A must-try for anyone!",
+            en: "In May 2024 we participated in Sailing & Kitesurfing on the Wadden Sea. Had booked alone and was certainly not the only one.",
             gr: "Ich kann Kiteactive nicht genug für die wunderbaren Erinnerungen danken, die ich gemacht habe! Die Lektionen sind gründlich und die Orte atemberaubend. Ein Muss für jeden!",
             du: "Het was weer Wad N Party afgelopen weekend! Goed georganiseerd, lekker eten, gezellige avonden en natuurlijk kiten!"
         }
@@ -38,7 +38,7 @@ const Reviewdata = [
         id: "2",
         img: img1,
         start: "5",
-        name: "Jessica Parker",
+        name: "marc van der drift",
         date: "July 21",
         title: {
             en: "An unforgettable adventure!",
@@ -46,7 +46,7 @@ const Reviewdata = [
             du: "Een onvergetelijk avontuur!"
         },
         para: {
-            en: "Kiteactive changed my perspective on outdoor sports. The thrill of kitesurfing is incredible, and the support from the team made it an unforgettable experience.",
+            en: "Amazing weekend, awesome crew, wicked people!!!",
             gr: "Kiteactive hat meine Perspektive auf Outdoorsportarten verändert. Der Nervenkitzel des Kitesurfens ist unglaublich, und die Unterstützung des Teams machte es zu einem unvergesslichen Erlebnis.",
             du: "Afgelopen weekend ben ik met KiteActive naar de Wadden gegaan voor de Sail & Kite trip. Het was een heerlijk weekend weg."
         }
@@ -55,7 +55,7 @@ const Reviewdata = [
         id: "3",
         img: img1,
         start: "5",
-        name: "Daniel Ramirez",
+        name: "Mikesurft",
         date: "March 6",
         title: {
             en: "Adventure at its best!",
@@ -72,7 +72,7 @@ const Reviewdata = [
         id: "4",
         img: img1,
         start: "5",
-        name: "Sophia Chen",
+        name: "Rens Appels",
         date: "June 5",
         title: {
             en: "A learning experience!",
@@ -80,7 +80,7 @@ const Reviewdata = [
             du: "Een leerervaring!"
         },
         para: {
-            en: "The instructors at Kiteactive are amazing! They provide personalized tips that really helped me improve my skills. I can't wait to go back for more lessons!",
+            en: "It was Wad N Party again last weekend! Well organised, good food, fun evenings and of course kiting!",
             gr: "Die Trainer bei Kiteactive sind fantastisch! Sie geben individuelle Tipps, die mir wirklich geholfen haben, meine Fähigkeiten zu verbessern. Ich kann es kaum erwarten, zurückzukommen!",
             du: "Geweldig weekend, geweldig team, geweldige mensen!!!"
         }
@@ -89,7 +89,7 @@ const Reviewdata = [
         id: "5",
         img: img1,
         start: "4",
-        name: "James Patel",
+        name: "FirstMate Appie",
         date: "July 19",
         title: {
             en: "Thrilling and fun!",
@@ -97,7 +97,7 @@ const Reviewdata = [
             du: "Spannend en leuk!"
         },
         para: {
-            en: "Joining Kiteactive was the best decision I made this year. I learned so much and made incredible friends. Plus, the thrill of kitesurfing is unmatched!",
+            en: "It was Wad N Party again last weekend! Well organised, good food, fun evenings and of course great kiting!",
             gr: "Kiteactive beizutreten war die beste Entscheidung, die ich dieses Jahr getroffen habe. Ich habe so viel gelernt und unglaubliche Freunde gefunden. Außerdem ist der Nervenkitzel des Kitesurfens unübertroffen!",
             du: "Een geweldige tijd gehad in Brazilië, goed georganiseerd, super aardige gidsen. Tot de volgende keer."
         }
@@ -106,7 +106,7 @@ const Reviewdata = [
         id: "6",
         img: img1,
         start: "5",
-        name: "Emma Wilson",
+        name: "Cobie Harkema",
         date: "August 20",
         title: {
             en: "Unbelievable experience!",
@@ -114,7 +114,7 @@ const Reviewdata = [
             du: "Ongelooflijke ervaring!"
         },
         para: {
-            en: "Kiteactive offers the ultimate kitesurfing experience! The equipment is top-notch, and the stunning locations make every session unforgettable. It truly is the greatest sport of all time!",
+            en: "Incredible restaurant, the food is absolutely amazing and great value! Both the waiter and the chef were really welcoming and entertaining. ",
             gr: "Kiteactive bietet das ultimative Kitesurf-Erlebnis! Die Ausrüstung ist erstklassig, und die atemberaubenden Orte machen jede Sitzung unvergesslich. Es ist wirklich die größte Sportart aller Zeiten!",
             du: "Geweldige reiservaringen met Kiteactive! Leer grote trucs in Tarifa, zeil en kite tijdens het Waddenweekend en tweemaal downwind."
         }
@@ -123,7 +123,7 @@ const Reviewdata = [
         id: "7",
         img: img1,
         start: "2",
-        name: "David Lee",
+        name: "Nick De Bruijn",
         date: "July 5",
         title: {
             en: "A perfect getaway!",
@@ -131,7 +131,7 @@ const Reviewdata = [
             du: "Een perfecte vakantie!"
         },
         para: {
-            en: "I had the best time with Kiteactive! The community is welcoming, and the trips are well-organized. I can't wait to book my next adventure!",
+            en: "Our team has followed several training courses at Spraakwater for presentations during meetups and customer conversations.",
             gr: "Ich hatte die beste Zeit mit Kiteactive! Die Gemeinschaft ist einladend, und die Reisen sind gut organisiert. Ich kann es kaum erwarten, mein nächstes Abenteuer zu buchen!",
             du: "Onze eerste reis met KiteActive was direct een succes. Goed georganiseerd en een onvergetelijke ervaring."
         }
@@ -140,7 +140,7 @@ const Reviewdata = [
         id: "8",
         img: img1,
         start: "1",
-        name: "Olivia Johnson",
+        name: "Emma Rietveld",
         date: "August 3",
         title: {
             en: "Fantastic fun on the water!",
@@ -148,7 +148,7 @@ const Reviewdata = [
             du: "Fantastisch plezier op het water!"
         },
         para: {
-            en: "Kiteactive has completely transformed my experience with kitesurfing! The instructors are incredibly knowledgeable and supportive. I felt safe and empowered every step of the way. Highly recommend!",
+            en: "Last weekend I went to the Wadden with Kite Active for the Sail & Kite trip. It was a wonderful weekend away. ",
             gr: "Kiteactive hat mein Kitesurfen-Erlebnis völlig verändert! Die Trainer sind unglaublich kompetent und unterstützend. Ich fühlte mich die ganze Zeit sicher und gestärkt. Sehr zu empfehlen!",
             du: "Net terug van een week in Tarifa met de KiteActive-bende - wat een geweldige week, we hadden vrijwel elke dag wind."
         }

@@ -159,13 +159,14 @@
   z-index: -1;
 }
 
-.Map_container{
+.Map_container {
   position: relative;
   width: 100%;
   height: 130vh;
   overflow: hidden;
   margin-top: -13%;
 }
+
 .map {
   /* width: 100%; */
   /* height: 100vh; */
@@ -173,6 +174,10 @@
   border-radius: 10px;
 }
 
+.card:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
 
 .trip_main_card {
   overflow-y: scroll;
@@ -208,6 +213,43 @@
   margin: 5%;
 }
 
+.map_hover_card {
+  max-width: 200px;
+  display: flex;
+  padding: 0;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.map_hover_card .map_card_img {
+  width: 50%;
+  height: auto;
+  margin: 10px 0 0 0 !important;
+  border-radius: 5px;
+}
+
+.map_hover_card h5 {
+  margin: 30px 0 0 15px;
+  font-size: 22px;
+  font-family: "Amatic SC", sans-serif;
+  font-weight: 900;
+}
+
+.gm-style-iw-d {
+  padding: 0;
+  margin: 0;
+}
+/* .gm-style .gm-style-iw-c{
+  margin: 0 !important;
+  padding: 0 !important;
+  margin-bottom: 0 !important;
+  padding-bottom: 0;
+} */
+
+.gm-style-iw-chr {
+  display: none;
+}
 
 @media only screen and (max-width: 600px) {
   .map {
@@ -404,14 +446,14 @@
 
 }
 
-.w_K_img{
+.w_K_img {
   width: 60%;
   border-radius: 10px;
   margin-top: 5%;
 }
 
 
-.t_M_img{
+.t_M_img {
   width: 12%;
   margin: 10px;
 }
@@ -424,16 +466,16 @@
 
 @media only screen and (max-width: 600px) {
 
-  .w_K_img{
+  .w_K_img {
     width: 100%;
     border-radius: 10px;
     margin-top: 5%;
   }
 
-  .t_M_img{
+  .t_M_img {
     width: 70%;
   }
-  
+
   .storiesbtn {
     width: 80%;
   }
@@ -484,7 +526,7 @@
   text-decoration: none;
 }
 
-.booking_item_span{
+.booking_item_span {
   margin-left: 20px;
 }
 
@@ -498,23 +540,25 @@
   font-weight: 500;
 }
 
-.wp_icon{
+.wp_icon {
   /* float: right !important; */
   font-size: 30px;
-   }
+}
 
 
 @media only screen and (max-width: 600px) {
-  .booking_item_span{
+  .booking_item_span {
     margin-left: 20px !important;
     font-size: 15px !important;
     text-align: center;
   }
+
   .booking_cont {
-    margin: 0;    
+    margin: 0;
     max-width: 500px;
     padding: 5px !important;
   }
+
   .booking_logo {
     width: 38%;
     margin-right: 0;
@@ -527,23 +571,23 @@
     padding: 0;
   }
 
-  .right_div{
+  .right_div {
     margin: 2px;
     justify-content: center;
     float: left;
   }
-  
-  .wp_icon{
+
+  .wp_icon {
     float: right !important;
   }
-  
-  .wp_icon{
- float: right !important;
- font-size: 25px;
+
+  .wp_icon {
+    float: right !important;
+    font-size: 25px;
   }
 
 
-  
+
   .Booking_btn {
     margin: 0px !important;
     margin-left: 0px !important;
@@ -558,10 +602,11 @@
 /* Medium devices (tablets, 768px and up) */
 @media (max-width: 1024px) and (min-width: 500px) {
 
-  .left_div{
+  .left_div {
     margin-left: 200px;
   }
-  .right_div{
+
+  .right_div {
     margin-right: 60px;
   }
 }
