@@ -3,7 +3,7 @@
   width: 100%;
   height: 117vh;
   overflow: hidden;
-  margin-top: -13%;
+  margin-top: -10%;
 }
 
 .background-video {
@@ -50,13 +50,13 @@
 
 
 /* select boxes search box  */
-
-.search_filter_cont{
-  margin-top: 3rem;
+.search_filter_herosection{
+  margin-top: 4rem;
 }
+
 .select_box_div {
   max-width: 800px;
-   padding: 0 5px 0 0;
+  padding: 0 5px 0 0;
   justify-content: center !important;
   text-align: center !important;
   margin: auto !important;
@@ -72,7 +72,7 @@
   width: 70% !important;
   color: black;
   font-weight: 500;
-  background-color: transparent;
+  background-color: transparent !important;
 }
 
 
@@ -114,7 +114,7 @@
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    margin-top: -31% !important;
+    /* margin-top: -10% !important; */
   }
 
 
@@ -129,7 +129,7 @@
     transform: translate(-50%, -50%);
     z-index: -1;
     overflow: hidden;
-    margin-top: -20%;
+    /* margin-top: -20%; */
   }
 
   .logo_for_phone_mode {
@@ -143,7 +143,7 @@
     z-index: 1;
     color: white;
     text-align: center;
-    margin-top: 40%;
+    margin-top: 30%;
   }
 
   .hero_heading1 {
@@ -159,14 +159,39 @@
   .hero_heading2 {
     color: white;
     font-weight: 900;
-    font-size: 40px !important;
+    font-size: 30px !important;
     text-transform: uppercase;
 
   }
 
-  .search_filter_cont{
+  .search_filter_herosection{
     margin-top: 0;
   }
+
+  .inputbox_row .form-select{
+    font-size: 11px !important;
+  }
+
+  
+.searchbtn {
+  display: inline-block;
+  width: fit-content;
+  min-width: 70px;
+  height: 35px;
+  padding: 0 0 0 0 ;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  font-weight: 600;
+  font-size: 12px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  user-select: none;
+  font-family: 'Poppins', sans-serif;
+}
+
 }
 
 

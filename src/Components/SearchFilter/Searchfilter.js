@@ -11,7 +11,11 @@ const Searchfilter = () => {
     };
 
     return (
-        <div className="container search_filter_cont">
+
+        // filter css in herosection.css 
+
+
+        <div className="container">
             <div className="row">
                 <div className="col">
                     <div className="select_box_div">

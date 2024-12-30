@@ -66,8 +66,9 @@ const HeroSection = ({ selectedLanguage }) => {
       </div>
 
 
-    
-      <Searchfilter/>
+      <div className='search_filter_herosection'>
+        <Searchfilter />
+      </div>
 
 
 

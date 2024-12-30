@@ -8,15 +8,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
 /* ----------------------------------- */
 /* background dark css  */
 /* --------------------------------------- */
@@ -27,6 +18,14 @@
   padding: 8rem !important;
 }
 
+.bg_main_head{
+  font-weight: 900;
+  font-size: 60px;
+  line-height: 53px;
+  font-family: "Amatic SC", sans-serif;
+  text-transform: uppercase;
+
+}
 
 /* Small devices (phones, 576px and up)------------------ */
 
@@ -35,6 +34,15 @@
     background-color: #000;
     padding: 2rem !important;
   }
+  
+.bg_main_head{
+  font-weight: 900;
+  font-size: 35px;
+  line-height: 53px;
+  font-family: "Amatic SC", sans-serif;
+  text-transform: uppercase;
+
+}
 
 }
 

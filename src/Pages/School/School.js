@@ -1,8 +1,7 @@
 import React from 'react'
-import {  NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import '../../Pages/Pages.css';
-import headerbackimg from '../../Images/schoolbanner.png'
 import whykiteimg from '../../Images/schoolimg2.png'
 import whykiteimg2 from '../../Images/schoolimg3.png'
 
@@ -22,10 +21,6 @@ import Level from '../../Components/Level/Level';
 const School = ({ selectedLanguage }) => {
     return (
         <div>
-            {/* banner div  */}
-            <div className="page_cont">
-                <img src={headerbackimg} className='headerbackimg' alt="" />
-            </div>
 
             {/* text_div  */}
             <div className="container d-flex flex-column align-items-center justify-content-center surf_container">
@@ -96,29 +91,29 @@ const School = ({ selectedLanguage }) => {
             </div>
 
 
-                <div className="container-fluid w_K_sec">
-                    <div className="row" >
-                        {/* img col  */}
-                        <div className="col-lg-6">
-                            <div className='text-center'>
-                                <img src={whykiteimg2} alt="" className='w_K_img ' />
-                            </div>
+            <div className="container-fluid w_K_sec">
+                <div className="row" >
+                    {/* img col  */}
+                    <div className="col-lg-6">
+                        <div className='text-center'>
+                            <img src={whykiteimg2} alt="" className='w_K_img ' />
                         </div>
+                    </div>
 
-                        {/* content div  */}
-                        <div className="col-lg-6 p-4">
+                    {/* content div  */}
+                    <div className="col-lg-6 p-4">
+                        <div className='mt-4'>
+                            <h5 className="school_heading">When we say we are professional we mean it</h5>
                             <div className='mt-4'>
-                                <h5 className="school_heading">When we say we are professional we mean it</h5>
-                                <div className='mt-4'>
-                                    <p className='school_para'>We bring years of expertise from our team into an engaging and comprehensive online learning environment. Here, you'll discover a complete course tailored to your level, with clear guidance on the steps to follow for effective progress. Our platform includes slow-motion videos of exercises, detailed explanations, interactive quizzes, and practical assignments to solidify your understanding. Additionally, you'll gain access to bonus tips, downloadable resources, and a community forum where you can connect with peers and instructors for support and feedback. </p>
-                                </div>
-
-                                <NavLink to="/kitecamp" className=' mx-0 storiesbtn' >Join the kiteactive  community</NavLink>
-
+                                <p className='school_para'>We bring years of expertise from our team into an engaging and comprehensive online learning environment. Here, you'll discover a complete course tailored to your level, with clear guidance on the steps to follow for effective progress. Our platform includes slow-motion videos of exercises, detailed explanations, interactive quizzes, and practical assignments to solidify your understanding. Additionally, you'll gain access to bonus tips, downloadable resources, and a community forum where you can connect with peers and instructors for support and feedback. </p>
                             </div>
+
+                            <NavLink to="/kitecamp" className=' mx-0 storiesbtn' >Join the kiteactive  community</NavLink>
+
                         </div>
                     </div>
                 </div>
+            </div>
 
 
 

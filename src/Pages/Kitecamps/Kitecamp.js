@@ -12,7 +12,7 @@ import img5 from '../../Images/kc5.webp';
 // import img6 from '../../Images/kc6.png';
 import img7 from '../../Images/kc7.webp';
 import img8 from '../../Images/kc8.webp';
-// import img9 from '../../Images/kc9.webp';
+import img9 from '../../Images/kc10.webp';
 // import img10 from '../../Images/kc10.webp';
 
 import markerimg from '../../Images/map_markerss.png'
@@ -62,6 +62,7 @@ const Kitecamp = () => {
                 { id: 5, lat: 25.6568547, lng: 37.4548587, title: "Endless Summer Party", img: img5 },
                 { id: 7, lat: 55.4585874, lng: 90.5485874, title: "Brazil", img: img7 },
                 { id: 8, lat: 60.8958785, lng: 12.8547858, title: "Dakhla", img: img8 },
+                { id: 10, lat: 45.8958785, lng: 15.8547858, title: "Sicily", img: img9 },
 
             ];
 
@@ -95,7 +96,6 @@ const Kitecamp = () => {
 
             markersRef.current = markers;
         };
-
 
         loadGoogleMapsScript();
     }, []);
@@ -142,43 +142,41 @@ const Kitecamp = () => {
 
     return (
         <div>
-            {/* <div className="page_cont">
-                <img src={headerbackimg} className='headerbackimg' alt="Background" />
-            </div> */}
-
-            <div className="container-fluid mt-5">
-                <h3 className="kite_text">Find your kite adventure</h3>
+            <div className="container-fluid">
                 <div className="row">
                     <div className="col-lg-4">
                         <div className="Map_container">
-                            <div ref={mapRef} style={{ width: "100%", height: "700px" }} className='map'></div>
+                            <div ref={mapRef} style={{ width: "100%", height: "800px" }} className='map'></div>
                         </div>
                     </div>
 
-                    <div className="col-lg-8">
-                        <Searchfilter />
-                        <div className="trip_main_card mt-4">
-                            <div className="row">
+                    <div className="col-lg-8 m-0 p-0">
+                        <div className="trip_main_card">
+                            <div className="row mb-0 pb-0">
+                                <div className='search_filter_kitecamp'>
+                                    <h3 className="kite_text">Find your kite adventure</h3>
+                                    <Searchfilter />
+                                </div>
                                 {filteredData.map((card) => (
                                     <div key={card.id} className="col-lg-4 mb-3"
                                         onMouseEnter={() => setActiveTrip(card.id)}
                                         onMouseLeave={() => setActiveTrip(null)}
                                     >
-                                    <Link to={card.path}>
-                                        <div
-                                            className="card card-bg mb-3"
-                                            style={{
-                                                backgroundImage: `url(${card.img})`,
-                                                backgroundSize: 'cover',
-                                                backgroundPosition: 'center',
-                                                height: '250px',
-                                                borderRadius: '10px',
-                                            }}
-                                        >
-                                            <div className="card-body crdbody mb-3">
+                                        <Link to={card.path}>
+                                            <div
+                                                className="card card-bg mb-3"
+                                                style={{
+                                                    backgroundImage: `url(${card.img})`,
+                                                    backgroundSize: 'cover',
+                                                    backgroundPosition: 'center',
+                                                    height: '250px',
+                                                    borderRadius: '10px',
+                                                }}
+                                            >
+                                                <div className="card-body crdbody mb-3">
+                                                </div>
                                             </div>
-                                        </div>
-                                    </Link>
+                                        </Link>
                                     </div>
                                 ))}
                             </div>
