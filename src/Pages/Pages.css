@@ -66,7 +66,7 @@
 .trip_main_card {
   overflow-y: scroll;
   overflow-x: hidden;
-  height: 630px;
+  height: 830px;
 }
 
 .kite_text {
@@ -82,7 +82,7 @@
 
 
 .search_filter_kitecamp {
-  margin: 3rem 0 3rem 0 !important;
+  margin: 2rem 0 1rem 0 !important;
   padding: 0 !important;
 }
 
@@ -152,7 +152,8 @@
   .search_filter_kitecamp {
     margin-top: 3rem !important;
   }
-  .Map_container{
+
+  .Map_container {
     margin-left: 0;
     margin-right: 0;
     padding-left: 0;
