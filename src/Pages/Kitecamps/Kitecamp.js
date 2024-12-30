@@ -150,7 +150,7 @@ const Kitecamp = () => {
                         </div>
                     </div>
 
-                    <div className="col-lg-8 m-0 p-0">
+                    <div className="col-lg-8">
                         <div className="trip_main_card">
                             <div className="row mb-0 pb-0">
                                 <div className='search_filter_kitecamp'>

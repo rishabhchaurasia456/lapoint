@@ -9,7 +9,6 @@ const Searchfilter = () => {
     const handleSearch = () => {
         navigate(`/kitecamp?anyTime=${anyTime}&chooseStyle=${chooseStyle}`);
     };
-
     return (
 
         // filter css in herosection.css 
