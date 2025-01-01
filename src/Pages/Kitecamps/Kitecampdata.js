@@ -31,7 +31,7 @@ export const cardData = [
                 du: " Zanzibar ",
             },
         },
-        anyTime: ["January", "August", "September", "December","February"],
+        anyTime: ["January", "August", "September", "December", "February"],
         chooseStyle: "Beginner paradise",
 
     },
@@ -44,7 +44,7 @@ export const cardData = [
                 du: "Sneeuwkite",
             },
         },
-        anyTime:  ["January", "February", "September"],
+        anyTime: ["January", "February", "September"],
         chooseStyle: "Advanced"
     },
     {

@@ -157,6 +157,11 @@ const Kitecamp = () => {
                                     <h3 className="kite_text">Find your kite adventure</h3>
                                     <Searchfilter />
                                 </div>
+
+                                <div className='calendar_div'>
+                                    <Link to="/calendar" className='nav-link calendar_text'> <i class="fa fa-calendar me-2"></i>Kiteholiday Year Calendar <i className='fa fa-angle-double-right'></i></Link>
+
+                                </div>
                                 {filteredData.map((card) => (
                                     <div key={card.id} className="col-lg-4 mb-3"
                                         onMouseEnter={() => setActiveTrip(card.id)}

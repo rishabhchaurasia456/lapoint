@@ -65,6 +65,7 @@ import Admin_Add_Coupon from './Admin/Admin_Add_Coupon';
 import Admin_Edit_Coupon from './Admin/Admin_Edit_Coupon';
 import EditAffiliate from './Affiliate/EditAffiliate';
 import NewCreative from './Affiliate/NewCreative';
+import Calendar from './Pages/Calendar/Calendar';
 
 function App() {
 
@@ -154,6 +155,13 @@ function App() {
             <Route path='/kitecamp' element={
               <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
                 <Kitecamp />
+              </KiteLayout>
+            }>
+            </Route>
+
+            <Route path='/calendar' element={
+              <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
+                <Calendar />
               </KiteLayout>
             }>
             </Route>

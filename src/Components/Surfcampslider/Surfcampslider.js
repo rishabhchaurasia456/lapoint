@@ -52,7 +52,7 @@ const Surfcampslider = ({ selectedLanguage }) => {
                         </p><br />
                     </div>
                 </div>
-                <div className="row ">
+                <div className="row">
                     <div className="col text-center">
                         <div className='Surf_slider_div'>
                             <h1 className="surf_slider_text">

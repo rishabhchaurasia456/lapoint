@@ -3,7 +3,7 @@ import './HeroSection.css';
 
 import vedio from '../../Images/Kiteactive-video1-1.mp4';
 import bgcover from '../../Images/tripvedios/homecover.webp';
-import Searchfilter from '../SearchFilter/Searchfilter';
+// import Searchfilter from '../SearchFilter/Searchfilter';
 
 const HeroSection = ({ selectedLanguage }) => {
   const content = {
@@ -64,14 +64,6 @@ const HeroSection = ({ selectedLanguage }) => {
         <p className="hero_heading1">{content[selectedLanguage].title}</p>
         <h1 className="hero_heading2">{content[selectedLanguage].subtitle}</h1>
       </div>
-
-
-      <div className='search_filter_herosection'>
-        <Searchfilter />
-      </div>
-
-
-
 
     </div>
   );
