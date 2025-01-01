@@ -65,7 +65,9 @@ import Admin_Add_Coupon from './Admin/Admin_Add_Coupon';
 import Admin_Edit_Coupon from './Admin/Admin_Edit_Coupon';
 import EditAffiliate from './Affiliate/EditAffiliate';
 import NewCreative from './Affiliate/NewCreative';
+import Admin_TripLink from './Admin/Admin_TripLink';
 import Calendar from './Pages/Calendar/Calendar';
+import Admin_Add_TripLink from './Admin/Admin_Add_TripLink';
 
 function App() {
 
@@ -370,6 +372,18 @@ function App() {
               <>
                 <AdminLogin />
               </>
+            } />
+
+            <Route path="/admin/triplink" element={
+              <Admin_Layout>
+                <Admin_TripLink />
+              </Admin_Layout>
+            } />
+
+            <Route path="/admin/add/triplink" element={
+              <Admin_Layout>
+                <Admin_Add_TripLink />
+              </Admin_Layout>
             } />
 
             <Route path="/admin/dashboard" element={
