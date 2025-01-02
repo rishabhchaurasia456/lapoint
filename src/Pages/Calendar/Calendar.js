@@ -13,7 +13,6 @@ const Calendar = () => {
                 </div>
             </div>
 
-
             {/* january section container / */}
             <h3 className='cal_title '>January</h3>
             <div className="container-fluid calbg_cont">
