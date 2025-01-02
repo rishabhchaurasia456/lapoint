@@ -32,6 +32,9 @@ const Admin_Navbar = () => {
                                             <li><Link class="dropdown-item" to="/admin/coupon">Coupon</Link></li>
                                         </ul>
                                     </li>
+                                    <li className="nav-item">
+                                        <Link className="nav-link" aria-current="page" to="/admin/triplink">Trip Link</Link>
+                                    </li>
                                 </ul>
                                 <form className="d-flex" role="search">
                                     <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
