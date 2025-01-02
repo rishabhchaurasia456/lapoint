@@ -75,6 +75,7 @@
   text-transform: uppercase;
 }
 
+
 .search_filter_kitecamp {
   margin: 2rem 0 1rem 0 !important;
   padding: 0 !important;
@@ -86,12 +87,15 @@
   padding: 15px;
 }
 
-.calendar_text {
-  margin-left: 5px;
+.month_title {
+  text-align: center;
+  color: black;
   font-weight: 900;
-  font-weight: bold;
+  font-size: 30px;
+  line-height: 53px;
   font-family: "Amatic SC", sans-serif;
-  font-size: 22px !important;
+  text-transform: uppercase;
+
 }
 
 .crdbody {
@@ -449,14 +453,131 @@
 /* calendar CSS  */
 /* ------------------------------------- */
 
-.calendar_cont {
-  background-color: #fff5dd;
+
+.calbg_cont {
+  position: relative;
+  background-image: url('../Images/Calbanimg6.png');
+  width: 100%;
+  height: 50vh;
+  background-size: auto;
+  background-repeat: no-repeat;
   margin-top: 2rem;
 }
 
-.calendar_cont2 {
+.calbg_cont2 {
+  position: relative;
+  background-image: url('../Images/Calbanimg7.png');
+  width: 100%;
+  height: 50vh;
+  background-size: auto;
+  background-repeat: no-repeat;
   margin-top: 2rem;
+
 }
+
+.calbg_cont3 {
+  position: relative;
+  background-image: url('../Images/Calbanimg8.png');
+  width: 100%;
+  height: 50vh;
+  background-size: auto;
+  background-repeat: no-repeat;
+  margin-top: 2rem;
+
+}
+
+.calbg_cont4 {
+  position: relative;
+  background-image: url('../Images/Calbanimg4.png');
+  width: 100%;
+  height: 50vh;
+  background-size: auto;
+  background-repeat: no-repeat;
+  margin-top: 2rem;
+
+}
+
+
+.calbg_cont5 {
+  position: relative;
+  background-image: url('../Images/Calbanimg2.png');
+  width: 100%;
+  height: 50vh;
+  background-size: auto;
+  background-repeat: no-repeat;
+  margin-top: 2rem;
+
+}
+
+.calbg_cont6 {
+  position: relative;
+  background-image: url('../Images/Calbanimg3.png');
+  width: 100%;
+  height: 50vh;
+  background-size: auto;
+  background-repeat: no-repeat;
+  margin-top: 2rem;
+
+}
+
+.calbg_cont7 {
+  position: relative;
+  background-image: url('../Images/Calbanimg4.png');
+  width: 100%;
+  height: 50vh;
+  background-size: auto;
+  background-repeat: no-repeat;
+  margin-top: 2rem;
+
+}
+
+.cal_title {
+  color: #fdc016;
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 53px;
+  text-align: center;
+  font-family: "Amatic SC", sans-serif;
+  text-transform: uppercase;
+  margin-top: 2rem;
+
+}
+
+.cal_card {
+  margin-top: 2rem;
+  background-color: transparent !important;
+  color: #fff !important;
+  border: 3px solid #fdc016 !important;
+  transition: all 0.3s ease-in-out;
+  /* border: 1px solid #fdc016 !important; */
+}
+
+.cal_card:hover {
+  background-color: #0000005c !important;
+  color: #fff !important;
+  border: 4px solid #ffffff00 !important;
+  cursor: pointer;
+
+}
+
+.calendar_text {
+  margin-left: 5px;
+  font-weight: 900;
+  font-weight: bold;
+  font-family: "Amatic SC", sans-serif;
+  font-size: 22px !important;
+}
+
+
+.cal_card_head {
+  color: #fff;
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 53px;
+  font-family: "Amatic SC", sans-serif;
+  text-transform: uppercase;
+}
+
 
 .col_main_heading {
   font-family: "Amatic SC", sans-serif;
@@ -466,55 +587,13 @@
   margin: 15px;
 }
 
-.strip_one {
-  background-color: #fdc016;
-  padding: 5px;
-  color: white;
-  margin-top: 2rem;
-}
-
-.strip_one span {
-  margin-left: 20px;
-  font-size: 20px;
-}
-
-.strip_two {
-  background-color: #000;
-  padding: 5px;
-  color: #ffffff;
-  margin-top: 2rem;
-}
-
-.strip_two span {
-  margin-left: 31px;
-  font-size: 20px;
-}
-
-.cal_searchbtn {
-  display: inline-block;
-  width: fit-content;
-  min-width: 120px;
-  height: 45px;
-  padding: 10px 16px;
-  border-radius: 5px;
-  cursor: pointer;
-  background-color: #000;
-  color: #fdc016;
-  font-weight: 600;
-  font-size: 16px;
-  text-align: center;
-  text-decoration: none;
-  transition: all 0.3s ease-in-out;
-  user-select: none;
-  font-family: 'Poppins', sans-serif;
-}
-
 .cal_searchbtn2 {
   display: inline-block;
   width: fit-content;
   min-width: 120px;
   height: 45px;
   padding: 10px 16px;
+  margin: 0 0 8px 0;
   border-radius: 5px;
   cursor: pointer;
   background-color: #fdc016;
@@ -526,4 +605,57 @@
   transition: all 0.3s ease-in-out;
   user-select: none;
   font-family: 'Poppins', sans-serif;
+}
+
+.cal_searchbtn2:hover {
+  background-color: #f3c23a;
+  color: white;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+  .col_main_heading {
+    font-family: "Amatic SC", sans-serif;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 900;
+    margin: 1rem 0 0 0;
+  }
+
+  .calbg_cont,
+  .calbg_cont2,
+  .calbg_cont3,
+  .calbg_cont4,
+  .calbg_cont5,
+  .calbg_cont6,
+  .calbg_cont7 {
+    background-image: url('../Images/Calbanimg6.png');
+    width: 100%;
+    height: auto !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 2rem;
+    padding-bottom: 1rem;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 500px) {
+  .calbg_cont,
+  .calbg_cont2,
+  .calbg_cont3,
+  .calbg_cont4,
+  .calbg_cont5,
+  .calbg_cont6,
+  .calbg_cont7 {
+    background-image: url('../Images/Calbanimg6.png');
+    width: 100%;
+    height: auto !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 2rem;
+    padding-bottom: 1rem;
+  }
+
+
 }

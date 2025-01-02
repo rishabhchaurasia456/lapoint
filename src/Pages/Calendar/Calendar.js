@@ -1,18 +1,12 @@
 import React from 'react'
-import calimg1 from '../../Images/CAL1.jpg'
-import calimg2 from '../../Images/CAL2.jpg'
-import calimg3 from '../../Images/CAL3.jpg'
-import calimg4 from '../../Images/CAL4.jpg'
-import calimg5 from '../../Images/CAL5.jpg'
-import calimg6 from '../../Images/CAL6.jpg'
-import calimg7 from '../../Images/CAL7.jpg'
+
 import { Link } from 'react-router-dom'
 
 const Calendar = () => {
     return (
         <div>
             <div className="container">
-                <div className="row">
+                <div className="row m-0 p-0">
                     <div className="col">
                         <h2 className='col_main_heading '> The ultimate kitesurf holiday calendar!</h2>
                     </div>
@@ -20,288 +14,252 @@ const Calendar = () => {
             </div>
 
 
-            {/* first container  */}
-            <div className="container-fluid calendar_cont">
-                <div className="row">
+            {/* january section container / */}
+            <h3 className='cal_title '>January</h3>
+            <div className="container-fluid calbg_cont">
+                <div className="row justify-content-center">
                     <div className="col-lg-4">
-                        <div>
-                            <img src={calimg1} alt="" className='w-100 m-2 rounded-3' />
-                        </div>
-                    </div>
-                    <div className="col-lg-8">
-                        <h3 className='month_title'>January</h3>
-
-                        <div className="strip_one">
-                            <span>Zanzibar paradise camp</span>
-                            <span>January</span>
-                            <span>€ 499</span>
-                            <span>Available</span>
-                            <span>
-                                <Link to="/trip/zanzibar" className='cal_searchbtn'>Book Now</Link>
-                            </span>
-                        </div>
-
-                        <div className="strip_two">
-                            <span>Tarifa</span>
-                            <span>25.01. – 01.02.2025</span>
-                            <span>€ 399</span>
-                            <span>Last Spots</span>
-                            <span>
-                                <Link to="/trip/Tarifa" className='cal_searchbtn2'>Book Now</Link>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-
-            {/* second feb container */}
-            <div className="container-fluid calendar_cont2">
-                <div className="row">
-                    <div className="col-lg-8">
-                        <h3 className='month_title'>February</h3>
-                        <div className="strip_two">
-                            <span>Zanzibar paradise camp</span>
-                            <span>February</span>
-                            <span>€ 399</span>
-                            <span>available</span>
-                            <span>
+                        <div className="card  cal_card text-center">
+                            <h3 className='cal_card_head'>Zanzibar paradise camp</h3>
+                            <p>January</p>
+                            <p>€ 499</p>
+                            <p>Available</p>
+                            <div>
                                 <Link to="/trip/zanzibar" className='cal_searchbtn2'>Book Now</Link>
-                            </span>
+                            </div>
                         </div>
                     </div>
                     <div className="col-lg-4">
-                        <div>
-                            <img src={calimg2} alt="" className='w-100 rounded-3' />
+                        <div className="card  cal_card text-center">
+                            <h3 className='cal_card_head'>Tarifa</h3>
+                            <p>25.01. – 01.02.2025</p>
+                            <p>€ 399</p>
+                            <p>Last Spots</p>
+                            <div>
+                                <Link to="/trip/Tarifa" className='cal_searchbtn2'>Book Now</Link>
+                            </div>
                         </div>
                     </div>
+
                 </div>
             </div>
 
 
-
-
-            {/* third  MArch container */}
-            <div className="container-fluid calendar_cont">
-                <div className="row">
+            {/* February section container  */}
+            <h3 className='cal_title '>February</h3>
+            <div className="container-fluid calbg_cont2">
+                <div className="row m-auto">
+                    <div className="col-lg-4"> </div>
                     <div className="col-lg-4">
-                        <div>
-                            <img src={calimg3} alt="" className='w-100 m-2 rounded-3' />
+                        <div className="card cal_card text-center">
+                            <h3 className='cal_card_head'>Zanzibar paradise camp</h3>
+                            <p>February</p>
+                            <p>€ 499</p>
+                            <p>Available</p>
+                            <div>
+                                <Link to="/trip/zanzibar" className='cal_searchbtn2'>Book Now</Link>
+                            </div>
                         </div>
                     </div>
-                    <div className="col-lg-8">
-                        <h3 className='month_title'>March</h3>
+                    <div className="col-lg-4"></div>
+                </div>
+            </div>
 
-                        <div className="strip_one">
-                            <span>Zanzibar paradise camp</span>
-                            <span>March</span>
-                            <span>€ 499</span>
-                            <span>Available</span>
-                            <span>
-                                <Link to="/trip/zanzibar" className='cal_searchbtn'>Book Now</Link>
-                            </span>
+            {/* March section container */}
+            <h3 className='cal_title '>March</h3>
+            <div className="container-fluid calbg_cont3">
+                <div className="row m-auto">
+                    <div className="col-lg-4">
+                        <div className="card cal_card text-center">
+                            <h3 className='cal_card_head'>Zanzibar paradise camp</h3>
+                            <p>March</p>
+                            <p>€ 499</p>
+                            <p>Available</p>
+                            <div>
+                                <Link to="/trip/zanzibar" className='cal_searchbtn2'>Book Now</Link>
+                            </div>
                         </div>
+                    </div>
 
-                        <div className="strip_two">
-                            <span>Egypt ALL INN</span>
-                            <span>223.03 – 30.03.2025</span>
-                            <span>€ 699</span>
-                            <span>Last Spots</span>
-                            <span>
+                    <div className="col-lg-4">
+                        <div className="card cal_card text-center">
+                            <h3 className='cal_card_head'>Egypt ALL INN</h3>
+                            <p>23.03 – 30.03.2025   </p>
+                            <p>€ 699</p>
+                            <p>Last Spots</p>
+                            <div>
                                 <Link to="/trip/Egypt" className='cal_searchbtn2'>Book Now</Link>
-                            </span>
-                        </div>
-
-                        <div className="strip_one">
-                            <span>Egypt ALL INN</span>
-                            <span>30.03 – 06.04.2025</span>
-                            <span>€ 699</span>
-                            <span>Available</span>
-                            <span>
-                                <Link to="/trip/Egypt" className='cal_searchbtn'>Book Now</Link>
-                            </span>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
 
-
-
-            {/* four April Container  */}
-            <div className="container-fluid calendar_cont2">
-                <div className="row">
-                    <div className="col-lg-8">
-                        <h3 className='month_title'>April</h3>
-                        <div className="strip_two">
-                            <span>Egypt ALL INN</span>
-                            <span>06.04 – 13.04.2025</span>
-                            <span>€ 699</span>
-                            <span>available</span>
-                            <span>
+                    <div className="col-lg-4">
+                        <div className="card cal_card text-center">
+                            <h3 className='cal_card_head'>Egypt ALL INN</h3>
+                            <p>30.03 – 06.04.2025</p>
+                            <p>€ 699</p>
+                            <p>Available</p>
+                            <div>
                                 <Link to="/trip/Egypt" className='cal_searchbtn2'>Book Now</Link>
-                            </span>
-                        </div>
-                    </div>
-
-                    <div className="col-lg-4">
-                        <div>
-                            <img src={calimg4} alt="" className='w-100 rounded-3' />
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-
-            {/*five july container    */}
-
-            <div className="container-fluid calendar_cont">
-                <div className="row">
+            {/* April section container */}
+            <h3 className='cal_title '>April</h3>
+            <div className="container-fluid calbg_cont4">
+                <div className="row m-auto">
+                    <div className="col-lg-4"></div>
                     <div className="col-lg-4">
-                        <div>
-                            <img src={calimg5} alt="" className='w-100 m-2 rounded-3' />
+                        <div className="card cal_card text-center">
+                            <h3 className='cal_card_head'>Egypt ALL INN</h3>
+                            <p>06.04 – 13.04.2025</p>
+                            <p>€ 699</p>
+                            <p>Available</p>
+                            <div>
+                                <Link to="/trip/Egypt" className='cal_searchbtn2'>Book Now</Link>
+                            </div>
                         </div>
                     </div>
-                    <div className="col-lg-8">
-                        <h3 className='month_title'>july</h3>
+                    <div className="col-lg-4"></div>
 
-                        <div className="strip_one">
-                            <span>Sicilian kite dream</span>
-                            <span>19.07 – 26.07.2024</span>
-                            <span>€ 649 </span>
-                            <span>Fully booked</span>
-                            <span>
-                                <Link to="/trip/Sail&kite" className='cal_searchbtn'>Request</Link>
-                            </span>
-                        </div>
-
-                        <div className="strip_two">
-                            <span>Sicilian kite dream</span>
-                            <span>26.07 – 02.08.2024</span>
-                            <span>€ 649</span>
-                            <span>Fully booked</span>
-                            <span>
-                                <Link to="/trip/Sail&kite" className='cal_searchbtn2'>Request</Link>
-
-                            </span>
-                        </div>
-                    </div>
                 </div>
             </div>
 
 
-            {/* six August Container  */}
-            <div className="container-fluid calendar_cont">
-                <div className="row">
-                    <div className="col-lg-8">
-                        <h3 className='month_title'>August</h3>
-                        <div className="strip_one">
-                            <span> Sicilian kite dream</span>
-                            <span>02.08-09.08.2024</span>
-                            <span>€ 649</span>
-                            <span>Last Spots</span>
-                            <span>
-                                <Link to="/trip/Sail&kite" className='cal_searchbtn'>Book Now</Link>
-                            </span>
+            {/* july container  section  */}
+            <h3 className='cal_title '>July</h3>
+            <div className="container-fluid calbg_cont5">
+                <div className="row justify-content-center">
+                    <div className="col-lg-4">
+                        <div className="card cal_card text-center">
+                            <h3 className='cal_card_head'>Sicilian kite dream</h3>
+                            <p>19.07 – 26.07.2024</p>
+                            <p>€ 649</p>
+                            <p>Fully booked</p>
+                            <div>
+                                <Link to="/" className='cal_searchbtn2'>Request</Link>
+                            </div>
                         </div>
+                    </div>
+                    <div className="col-lg-4">
+                        <div className="card cal_card text-center">
+                            <h3 className='cal_card_head'>Sicilian kite dream</h3>
+                            <p>26.07 – 02.08.2024   </p>
+                            <p>€ 649</p>
+                            <p>Fully booked </p>
+                            <div>
+                                <Link to="/" className='cal_searchbtn2'>Request</Link>
+                            </div>
+                        </div>
+                    </div>
 
-                        <div className="strip_two">
-                            <span>Sicilian kite dream</span>
-                            <span>09.08.-16.08.2024</span>
-                            <span>€ 649</span>
-                            <span>Last Spots</span>
-                            <span>
+                </div>
+            </div>
+
+
+
+            {/* August container section  */}
+            <h3 className='cal_title '>August</h3>
+            <div className="container-fluid calbg_cont6">
+                <div className="row m-auto">
+                    <div className="col-lg-3">
+                        <div className="card cal_card text-center">
+                            <h3 className='cal_card_head'>Sicilian kite dream</h3>
+                            <p>02.08-09.08.2024</p>
+                            <p>€ 649</p>
+                            <p>Last Spots</p>
+                            <div>
                                 <Link to="/trip/Sail&kite" className='cal_searchbtn2'>Book Now</Link>
-                            </span>
+                            </div>
                         </div>
-
-                        <div className="strip_one">
-                            <span>Sicilian kite dream</span>
-                            <span>16.08.-2308.2024</span>
-                            <span>€ 649</span>
-                            <span>Last Spots</span>
-                            <span>
-                                <Link to="/trip/Sail&kite" className='cal_searchbtn'>Book Now</Link>
-                            </span>
-                        </div>
-
-                        <div className="strip_two">
-                            <span>Sicilian kite dream</span>
-                            <span>23.08.-30.08.2024</span>
-                            <span>€ 649 </span>
-                            <span>Last Spots</span>
-                            <span>
+                    </div>
+                    <div className="col-lg-3">
+                        <div className="card cal_card text-center">
+                            <h3 className='cal_card_head'>Sicilian kite dream</h3>
+                            <p>09.08.-16.08.2024</p>
+                            <p>€ 649</p>
+                            <p>Last Spots</p>
+                            <div>
                                 <Link to="/trip/Sail&kite" className='cal_searchbtn2'>Book Now</Link>
-
-                            </span>
-                        </div>
-
-
-                    </div>
-
-                    <div className="col-lg-4">
-                        <div>
-                            <img src={calimg6} alt="" className='w-100 rounded-3' />
+                            </div>
                         </div>
                     </div>
+
+                    <div className="col-lg-3">
+                        <div className="card cal_card text-center">
+                            <h3 className='cal_card_head'>Sicilian kite dream</h3>
+                            <p>16.08.-2308.2024</p>
+                            <p>€ 649</p>
+                            <p>Last Spots</p>
+                            <div>
+                                <Link to="/trip/Sail&kite" className='cal_searchbtn2'>Book Now</Link>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="col-lg-3">
+                        <div className="card cal_card text-center">
+                            <h3 className='cal_card_head'>Sicilian kite dream</h3>
+                            <p>23.08.-30.08.2024</p>
+                            <p>€ 649</p>
+                            <p>Last Spots</p>
+                            <div>
+                                <Link to="/trip/Sail&kite" className='cal_searchbtn2'>Book Now</Link>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
 
 
 
-
-
-            {/*  seven September  container */}
-
-            <div className="container-fluid calendar_cont">
-                <div className="row">
+            {/* September container section  */}
+            <h3 className='cal_title '>September</h3>
+            <div className="container-fluid mb-4 calbg_cont7">
+                <div className="row m-auto">
                     <div className="col-lg-4">
-                        <div>
-                            <img src={calimg7} alt="" className='w-100 m-2 rounded-3' />
-                        </div>
-                    </div>
-                    <div className="col-lg-8">
-                        <h3 className='month_title'>September</h3>
-
-                        <div className="strip_one">
-                            <span>Endless summer party</span>
-                            <span>07.09.2024</span>
-                            <span>€ 18</span>
-                            <span>Available</span>
-                            <span>
-                                <Link to="/trip/vanlife" className='cal_searchbtn'>Book Now</Link>
-                            </span>
-                        </div>
-
-                        <div className="strip_two">
-                            <span>Wad n Feest</span>
-                            <span>26.09.-29.09.2024 </span>
-                            <span>€ 399</span>
-                            <span>Last Spots</span>
-                            <span>
+                        <div className="card cal_card text-center">
+                            <h3 className='cal_card_head'>Endless summer party</h3>
+                            <p>07.09.2024</p>
+                            <p>€ 18</p>
+                            <p>Available</p>
+                            <div>
                                 <Link to="/trip/vanlife" className='cal_searchbtn2'>Book Now</Link>
-                            </span>
-                        </div>
-
-                        <div className="strip_one">
-                            <span>Camper roadtrip</span>
-                            <span>20.09.-30.09.2024</span>
-                            <span>€ 379</span>
-                            <span>Available</span>
-                            <span>
-                                <Link to="/trip/vanlife" className='cal_searchbtn'>Book Now</Link>
-                            </span>
+                            </div>
                         </div>
                     </div>
+                    <div className="col-lg-4">
+                        <div className="card cal_card text-center">
+                            <h3 className='cal_card_head'>Wad n Feest</h3>
+                            <p>26.09.-29.09.2024</p>
+                            <p>€ 399</p>
+                            <p>Last Spots</p>
+                            <div>
+                                <Link to="/trip/vanlife" className='cal_searchbtn2'>Book Now</Link>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="col-lg-4">
+                        <div className="card cal_card text-center">
+                            <h3 className='cal_card_head'>Camper roadtrip</h3>
+                            <p>20.09.-30.09.2024</p>
+                            <p>€ 379</p>
+                            <p>Available</p>
+                            <div>
+                                <Link to="/trip/vanlife" className='cal_searchbtn2'>Book Now</Link>
+                            </div>
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
-
-
-
-
-
-
         </div>
     )
 }
