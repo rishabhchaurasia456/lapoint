@@ -1,7 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { useParams } from 'react-router-dom';
+import config from '../config/config';
 
-const Admin_Add_TripLink = () => {
+const Admin_Edit_TripLink = () => {
+    const { id } = useParams();
     const [formData, setFormData] = useState({
         tripName: '',
         path: '',
@@ -12,54 +15,68 @@ const Admin_Add_TripLink = () => {
     });
     const [file, setFile] = useState(null);
     const [message, setMessage] = useState('');
+    const [existingImage, setExistingImage] = useState(''); // To hold the existing image URL
 
-    // Handle input changes
+    useEffect(() => {
+        const fetchTripLink = async () => {
+            try {
+                const response = await axios.post(`${config.API_BASE_URL}/api/admin/get_one_tripLink/${id}`);
+                const data = response.data;
+                setFormData({
+                    tripName: data.tripName,
+                    path: data.path,
+                    anytime: Array.isArray(data.anytime) ? data.anytime.join(',') : '', // Ensure it's a string
+                    choosestyle: Array.isArray(data.choosestyle) ? data.choosestyle.join(',') : '', // Ensure it's a string
+                    lat: data.lat,
+                    lng: data.lng,
+                });
+                setExistingImage(data.img); // Set the existing image URL
+            } catch (error) {
+                setMessage(error.response?.data?.error || 'Failed to fetch trip link.');
+            }
+        };
+
+        fetchTripLink();
+    }, [id]);
+
+
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({ ...formData, [name]: value });
     };
 
-    // Handle file selection
     const handleFileChange = (e) => {
         setFile(e.target.files[0]);
     };
 
-    // Handle form submission
     const handleSubmit = async (e) => {
         e.preventDefault();
-
-        // Ensure all fields are filled
-        if (!file || !formData.tripName || !formData.path || !formData.anytime || !formData.choosestyle || !formData.lat || !formData.lng) {
-            setMessage('All fields are required.');
-            return;
-        }
-
-        // Prepare FormData object
+    
         const data = new FormData();
-        data.append('img', file);
+        if (file) data.append('img', file); // The key 'img' matches the backend logic
         data.append('tripName', formData.tripName);
         data.append('path', formData.path);
-        data.append('anytime', JSON.stringify(formData.anytime.split(','))); // Convert comma-separated values to an array
-        data.append('choosestyle', JSON.stringify(formData.choosestyle.split(',')));
+        data.append('anytime', JSON.stringify(formData.anytime.split(',').map(item => item.trim())));
+        data.append('choosestyle', JSON.stringify(formData.choosestyle.split(',').map(item => item.trim())));
         data.append('lat', formData.lat);
         data.append('lng', formData.lng);
-
+    
         try {
-            const response = await axios.post('http://localhost:5500/api/admin/create_tripLink', data, {
+            const response = await axios.post(`${config.API_BASE_URL}/api/admin/update_tripLink/${id}`, data, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                 },
             });
-            setMessage('Trip link created successfully!');
-            console.log(response.data);
+            setMessage('Trip link updated successfully!');
         } catch (error) {
             setMessage(error.response?.data?.error || 'Something went wrong.');
         }
     };
+    
 
     return (
         <div className='container'>
-            <h2>Create New Trip Link</h2>
+            <h2>Edit Trip Link</h2>
             <form onSubmit={handleSubmit} className="row mt-4">
                 <div className="mb-3">
                     <label className='form-label'>Trip Name</label>
@@ -73,7 +90,19 @@ const Admin_Add_TripLink = () => {
                     />
                 </div>
                 <div className="mb-3">
-                    <label className='form-label'>Image for the card slider</label>
+                    <label className='form-label'>Existing Image</label>
+                    {existingImage && (
+                        <div>
+                            <img
+                                src={`${config.API_BASE_URL}/${existingImage.replace(/\\/g, '/')}`}
+                                alt="Existing Trip"
+                                style={{ width: '200px', height: 'auto', marginBottom: '10px' }}
+                            />
+                        </div>
+                    )}
+                </div>
+                <div className="mb-3">
+                    <label className='form-label'>Update Image for the card slider</label>
                     <input
                         type="file"
                         className="form-control"
@@ -136,11 +165,11 @@ const Admin_Add_TripLink = () => {
                         onChange={handleChange}
                     />
                 </div>
-                <button type="submit" className="btn btn-primary">Submit</button>
+                <button type="submit" className="btn btn-primary">Update</button>
                 {message && <p className="mt-3">{message}</p>}
             </form>
         </div>
     );
 };
 
-export default Admin_Add_TripLink;
+export default Admin_Edit_TripLink;

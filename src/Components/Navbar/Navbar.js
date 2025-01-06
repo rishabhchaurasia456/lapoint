@@ -1,9 +1,11 @@
 
 import React, { useState, useEffect } from "react";
 import { Link, NavLink } from 'react-router-dom';
-import { navItems } from '../Navbar/Navdata';
+// import { navItems } from '../Navbar/Navdata';
 import "./Navbar.css"
 import Logo_img from '../../Images/logo-kiteactive.svg'
+import config from "../../config/config";
+import axios from "axios";
 
 const Navbar = ({ selectedLanguage, setSelectedLanguage }) => {
 
@@ -18,9 +20,72 @@ const Navbar = ({ selectedLanguage, setSelectedLanguage }) => {
   ];
 
   const handleChange = (event) => {
-    setSelectedLanguage(event.target.value);
+    setSelectedLanguage("event.target.value");
   };
 
+
+  const [kiteCampsSubmenu, setKiteCampsSubmenu] = useState([]);
+
+    useEffect(() => {
+        const fetchKiteCampsData = async () => {
+            try {
+                const response = await axios.post(`${config.API_BASE_URL}/api/user/get_triplink`);
+                console.log("response", response.getallTripLink)
+                const data = response.data.getallTripLink; // No need to use `.json()` with axios
+                const submenu = data.map(item => ({
+                    id: `${item.id}`,
+                    path: item.path || '/', // Default to '/' if no path provided
+                    trip_name: item.tripName, // Safeguard against missing data
+                }));
+
+                setKiteCampsSubmenu(submenu);
+            } catch (error) {
+                console.error('Error fetching kite camps data:', error);
+            }
+        };
+
+        fetchKiteCampsData();
+    }, []);
+
+    const navItems = [
+        {
+            id: "1",
+            name: {
+                en: "kitecamp",
+                du: "Kitekampen", // Dutch (DU)
+                gr: "Kitecamp",  
+            },
+            path: '/kitecamp',
+            submenu: kiteCampsSubmenu,
+        },
+        { 
+            id: "2",
+            name: {
+                en: "School",
+                du: "School",  // Dutch (DU)
+                gr: "Schule",  
+            },
+            path: '/School',
+        },
+        { 
+            id: "4",
+            name: {
+                en: "Stories",
+                du: "Verhalen",  // Dutch (DU)
+                gr: "Geschichten",  // Netherlands Dutch (NL)
+            },
+            path: '/stories',
+        },
+        { 
+            id: "4",
+            name: {
+                en: "Shop",
+                du: "Verhalen",  // Dutch (DU)
+                gr: "Geschichten",  // Netherlands Dutch (NL)
+            },
+            path: 'https://www.kiteactive.com/shop/',
+        },
+    ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -78,7 +143,7 @@ const Navbar = ({ selectedLanguage, setSelectedLanguage }) => {
                               onClick={handleClick}
                               state={{ trip_data: submenuItem }}
                             >
-                              {submenuItem?.trip_name?.[selectedLanguage] || submenuItem?.trip_name?.en || 'Unnamed Trip'}
+                              {submenuItem?.trip_name?.[selectedLanguage] || submenuItem?.trip_name}
                             </NavLink>
                           </li>
                         );

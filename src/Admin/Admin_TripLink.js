@@ -23,6 +23,24 @@ const Admin_TripLink = () => {
         fetchTripData();
     }, []);
 
+    const handleDelete = async (id) => {
+        if (window.confirm("Are you sure you want to delete this trip Link?")) {
+          try {
+            const response = await axios.delete(
+              `${config.API_BASE_URL}/api/admin/delete_triplink/${id}`
+            );
+            if (response.status === 200) {
+              alert(response.data.message);
+              // Update the state to remove the deleted trip
+              setTripLink((prevData) => prevData.filter((trip) => trip._id !== id));
+            }
+          } catch (error) {
+            console.error("Error deleting trip Link:", error);
+            alert("Failed to delete the trip Link. Please try again.");
+          }
+        }
+      };
+
     return (
         <div>
             <div className="container-fluid">
@@ -54,7 +72,7 @@ const Admin_TripLink = () => {
                                     <td>{trip.choosestyle && trip.choosestyle[0]}</td>
                                     <td>
                                         <Link className="btn btn-primary btn-sm me-2" to={`/admin/edit/triplink/${trip._id}`}>Edit</Link>
-                                        {/* <button className="btn btn-danger btn-sm" onClick={() => handleDelete(trip._id)}>Delete</button> */}
+                                        <button className="btn btn-danger btn-sm" onClick={() => handleDelete(trip._id)}>Delete</button>
                                     </td>
                                 </tr>
                             ))}

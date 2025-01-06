@@ -1,10 +1,12 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 // import { NavLink } from 'react-bootstrap';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import { Carddata_head_section } from './Carddata';
 import { Link } from 'react-router-dom';
-import { cardData } from '../../Pages/Kitecamps/Kitecampdata'
+// import { cardData } from '../../Pages/Kitecamps/Kitecampdata'
+import axios from 'axios';
+import config from '../../config/config';
 
 const responsive = {
     superLargeDesktop: {
@@ -29,6 +31,8 @@ const responsive = {
 
 const Surfcampslider = ({ selectedLanguage }) => {
 
+    const [cardData, setcardData] = useState([]);
+
     const carouselRef = useRef(null);
     const handleNext = () => {
         if (carouselRef.current) {
@@ -42,6 +46,18 @@ const Surfcampslider = ({ selectedLanguage }) => {
         }
     };
 
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await axios.post(`${config.API_BASE_URL}/api/user/get_triplink`);
+                setcardData(response.data.getallTripLink || []);
+            } catch (error) {
+                console.error("Error fetching data", error);
+            }
+        };
+
+        fetchData();
+    }, []);
     return (
         <div>
             <div className='container-fluid'>
@@ -72,8 +88,8 @@ const Surfcampslider = ({ selectedLanguage }) => {
                                 <div className="border w-100 px-2 my-5 border-0">
                                     <div>
                                         {/* <img src={img} className="slid_card_backimg rounded-4" alt="..." /> */}
-                                        <Link to={card.path} state={{ trip_data: card.data }} className='nav-link'>
-                                            <div className="slid_card_backimg rounded-4" style={{ backgroundImage: `url(${card.img})`, backgroundSize: 'cover', backgroundPosition: 'center', }}>
+                                        <Link to={card.path} className='nav-link'>
+                                            <div className="slid_card_backimg rounded-4" style={{ backgroundImage: `url(${config.API_BASE_URL}/${card.img.replace(/\\/g, '/')})`, backgroundSize: 'cover', backgroundPosition: 'center', }}>
                                                 {/* <div class="slid_card_text">
                                                 <p class="card_d_text">{title[selectedLanguage]}</p>
                                             </div> */}

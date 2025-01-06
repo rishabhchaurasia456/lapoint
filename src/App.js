@@ -68,6 +68,7 @@ import NewCreative from './Affiliate/NewCreative';
 import Admin_TripLink from './Admin/Admin_TripLink';
 import Calendar from './Pages/Calendar/Calendar';
 import Admin_Add_TripLink from './Admin/Admin_Add_TripLink';
+import Admin_Edit_TripLink from './Admin/Admin_Edit_TripLink';
 
 function App() {
 
@@ -383,6 +384,12 @@ function App() {
             <Route path="/admin/add/triplink" element={
               <Admin_Layout>
                 <Admin_Add_TripLink />
+              </Admin_Layout>
+            } />
+
+            <Route path="/admin/edit/triplink/:id" element={
+              <Admin_Layout>
+                <Admin_Edit_TripLink />
               </Admin_Layout>
             } />
 
