@@ -45,17 +45,17 @@
 
 .LNG_select_dropdown {
     background-color: transparent;
-    color: white !important; 
-    border: 1px solid #ccc; 
-    padding: 5px; 
+    color: white !important;
+    border: 1px solid #ccc;
+    padding: 5px;
     font-size: 16px;
-  }
-  
-  /* Style the dropdown options */
-  .LNG_select_option {
-    background-color: transparent; 
-    color: black; 
-  }
+}
+
+/* Style the dropdown options */
+.LNG_select_option {
+    background-color: transparent;
+    color: black;
+}
 
 
 

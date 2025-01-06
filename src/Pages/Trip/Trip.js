@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 import Kitespots from './TripComponent/Kitespots';
 import Packages from './TripComponent/Packages';
 import Accomodation from './TripComponent/Accomodation';
-import Included from './TripComponent/Included';
+// import Included from './TripComponent/Included';
 import Review from './TripComponent/Review';
 import Hosted from './TripComponent/Hosted';
 import Activites from './TripComponent/Activites';
@@ -15,26 +15,11 @@ import config from '../../config/config';
 import Booking from '../Kitecamps/Booking';
 import Surfcampslider from '../../Components/Surfcampslider/Surfcampslider';
 
-import checkicon from '../../Images/check-mark.png'
 
 
-// see all images here 
-
-
-import popimg1 from '../../Images/popupimg.png'
-import popimg3 from '../../Images/popupimg13.png'
-import popimg4 from '../../Images/popupimg3.png'
-import popimg5 from '../../Images/popupimg4.png'
-import popimg6 from '../../Images/popupimg5.png'
-import popimg7 from '../../Images/popupimg6.png'
-import popimg8 from '../../Images/popupimg7.png'
-import popimg9 from '../../Images/popupimg8.png'
-import popimg10 from '../../Images/popupimg9.png'
-import popimg11 from '../../Images/popupimg10.png'
-import popimg12 from '../../Images/popupimg11.png'
-import popimg13 from '../../Images/popupimg12.png'
-
+// see all images here  
 const Trip = ({ selectedLanguage }) => {
+
     const { trip_name } = useParams();
     const trip = trips.find(t => t.name.toLowerCase() === trip_name.toLowerCase());
 
@@ -44,31 +29,12 @@ const Trip = ({ selectedLanguage }) => {
         setActiveTab('OVERVIEW');
     }, [trip_name])
 
-    const handleButtonClick = (tabName) => {
-        setActiveTab(tabName);
-    };
+    // const handleButtonClick = (tabName) => {
+    //     setActiveTab(tabName);
+    // };
 
     const [videoLoaded, setVideoLoaded] = useState(false);
 
-
-
-    // text popup code here 
-    const [showPopup, setShowPopup] = useState(false);
-
-    // Function to toggle popup visibility
-    const togglePopup = () => {
-        setShowPopup(!showPopup);
-    };
-
-
-
-    // See all images popup 
-    const [showimgpopup, setShowimgPopup] = useState(false);
-
-    // Function to toggle popup visibility
-    const togglePopupimg = () => {
-        setShowimgPopup(!showimgpopup);
-    };
 
     // ----------------------------------------
 
@@ -101,15 +67,46 @@ const Trip = ({ selectedLanguage }) => {
             },
             body: JSON.stringify({ id: userId, page: page })
         })
-        .then(response => response.json())
-        .then(data => {
-            console.log("Visit tracked:", data);
-        })
-        .catch(error => {
-            console.error("Error tracking visit:", error);
-        });
+            .then(response => response.json())
+            .then(data => {
+                console.log("Visit tracked:", data);
+            })
+            .catch(error => {
+                console.error("Error tracking visit:", error);
+            });
     };
     // ----------------------------------------
+
+
+    const handleButtonClick = (tabName) => {
+        setActiveTab(tabName);
+        document.getElementById(tabName)?.scrollIntoView({ behavior: 'smooth' });
+    };
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const sectionOffsets = {
+                OVERVIEW: document.getElementById('OVERVIEW')?.offsetTop || 0,
+                KITESPOTS: document.getElementById('KITESPOTS')?.offsetTop || 0,
+                PACKAGES: document.getElementById('PACKAGES')?.offsetTop || 0,
+                ACCOMMODATION: document.getElementById('ACCOMMODATION')?.offsetTop || 0,
+                INCLUDED: document.getElementById('INCLUDED')?.offsetTop || 0,
+                REVIEWS: document.getElementById('REVIEWS')?.offsetTop || 0,
+                HOSTED_BY: document.getElementById('HOSTED_BY')?.offsetTop || 0,
+                ACTIVITIES: document.getElementById('ACTIVITIES')?.offsetTop || 0,
+            };
+            const scrollPosition = window.scrollY + window.innerHeight / 2;
+
+            for (const [tab, offset] of Object.entries(sectionOffsets)) {
+                if (scrollPosition >= offset) {
+                    setActiveTab(tab);
+                }
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
 
     return (
@@ -155,224 +152,121 @@ const Trip = ({ selectedLanguage }) => {
 
 
 
-            {/* Conditionally render the tab buttons based on the available data */}
-            <div className="container">
-                <div class="row">
-                    <div class="col ">{/* tab_scroll class for scroll bar */}
-                        <div className=" mb-2 my-3 text-center ">
-                            {trip?.overview && (
+            <div>
+                <Helmet>
+                    <title>KiteActive</title>
+                    {/* Helmet content */}
+                </Helmet>
+
+                {/* Tab Buttons */}
+                <div className="container">
+                    <div className="row">
+                        <div className="col">
+
+                            {/* this is all tabs in this container  */}
+
+                            <div className="mb-2 my-3 text-center">
+                                {/* {trip?.overview && (
                                 <button className="trip_tabs" onClick={() => handleButtonClick('OVERVIEW')}>
                                     <p>OVERVIEW</p>
                                 </button>
                             )}
-                            {trip?.kitespot && (
-                                <button className="trip_tabs" onClick={() => handleButtonClick('KITESPOTS')}>
-                                    <p>KITESPOTS</p>
-                                </button>
-                            )}
-                            {trip?.packages && (
-                                <button className="trip_tabs" onClick={() => handleButtonClick('PACKAGES')}>
-                                    <p>PACKAGES</p>
-                                </button>
-                            )}
-                            {trip?.accommodation && (
-                                <button className="trip_tabs" onClick={() => handleButtonClick('ACCOMMODATION')}>
-                                    <p>ACCOMMODATION</p>
-                                </button>
-                            )}
-                            {trip?.included && (
-                                <button className="trip_tabs" onClick={() => handleButtonClick('INCLUDED')}>
-                                    <p>INCLUDED</p>
-                                </button>
-                            )}
-                            {trip?.reviews && (
-                                <button className="trip_tabs" onClick={() => handleButtonClick('REVIEWS')}>
-                                    <p>REVIEWS</p>
-                                </button>
-                            )}
-                            {trip?.hosted && (
-                                <button className="trip_tabs" onClick={() => handleButtonClick('HOSTED_BY')}>
-                                    <p>HOSTED BY</p>
-                                </button>
-                            )}
-                            {trip?.activities && (
-                                <button className="trip_tabs" onClick={() => handleButtonClick('ACTIVITIES')}>
-                                    <p>ACTIVITIES</p>
-                                </button>
-                            )}
+                             */}
+                                {trip?.kitespot && (
+                                    <button className="trip_tabs" onClick={() => handleButtonClick('KITESPOTS')}>
+                                        <p>KITESPOTS</p>
+                                    </button>
+                                )}
+
+                                {trip?.packages && (
+                                    <button className="trip_tabs" onClick={() => handleButtonClick('PACKAGES')}>
+                                        <p>PACKAGES</p>
+                                    </button>
+                                )}
+
+
+                                {trip?.accommodation && (
+                                    <button className="trip_tabs" onClick={() => handleButtonClick('ACCOMMODATION')}>
+                                        <p>ACCOMMODATION</p>
+                                    </button>
+                                )}
+
+                                {trip?.reviews && (
+                                    <button className="trip_tabs" onClick={() => handleButtonClick('REVIEWS')}>
+                                        <p>REVIEWS</p>
+                                    </button>
+                                )}
+
+
+                                {trip?.hosted && (
+                                    <button className="trip_tabs" onClick={() => handleButtonClick('HOSTED_BY')}>
+                                        <p>HOSTED BY</p>
+                                    </button>
+                                )}
+
+                                {trip?.activities && (
+                                    <button className="trip_tabs" onClick={() => handleButtonClick('ACTIVITIES')}>
+                                        <p>ACTIVITIES</p>
+                                    </button>
+                                )}
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div className="container-fluid">
-                <div className="output-container">
-                    {activeTab === 'OVERVIEW' && trip?.overview && (
-                        <Overview overviewData={trip.overview} selectedLanguage={selectedLanguage} />
-                    )}
-                    {activeTab === 'KITESPOTS' && trip?.kitespot && (
-                        <Kitespots kitespotData={trip.kitespot} selectedLanguage={selectedLanguage} />
-                    )}
-                    {activeTab === 'PACKAGES' && trip?.packages && (
-                        <Packages packagesData={trip.packages} selectedLanguage={selectedLanguage} />
-                    )}
-                    {activeTab === 'ACCOMMODATION' && trip?.accommodation && (
-                        <Accomodation accommodationData={trip.accommodation} selectedLanguage={selectedLanguage} />
-                    )}
-                    {activeTab === 'INCLUDED' && trip?.included && <Included />}
-                    {activeTab === 'REVIEWS' && trip?.reviews && (
-                        <Review />
-                    )}
-                    {activeTab === 'HOSTED_BY' && trip?.hosted && (
-                        <Hosted hostedData={trip.hosted} selectedLanguage={selectedLanguage} />
-                    )}
-                    {activeTab === 'ACTIVITIES' && trip?.activities && (
-                        <Activites activitiesData={trip.activities} selectedLanguage={selectedLanguage} />
-                    )}
-                </div>
-                <div>
+                {/* Sections with IDs */}
+
+                {/* and this is all tabs data here  */}
+                <div className="container-fluid">
+
+                    <div id="OVERVIEW" className="output-container">
+                        {trip?.overview && <Overview overviewData={trip.overview} selectedLanguage={selectedLanguage} />}
+                    </div>
 
 
+                    <div id="KITESPOTS" className="output-container">
+                        {trip?.kitespot && <Kitespots kitespotData={trip.kitespot} selectedLanguage={selectedLanguage} />}
+                    </div>
+
+                    <details>
+                        <summary>View Packages</summary>
+                        <div id="PACKAGES" className="output-container">
+                            {trip?.packages && <Packages packagesData={trip.packages} selectedLanguage={selectedLanguage} />}
+                        </div>
+                    </details>
 
 
-
-                    {/* See all photo section  */}
-
-
-                    <div>
-                        {/* Link to trigger popup */}
-                        <Link className="nav-link" onClick={togglePopupimg}>
-                            <p className="text-danger fw-bold m-3 fs-5 text-center">SEE ALL PHOTOS & VIDEOS</p>
-                        </Link>
-
-                        {/* Popup Component */}
-                        {showimgpopup && (
-                            <div className="popup-overlay scroll-1" onClick={togglePopupimg}>
-                                <div className="popup-content" onClick={(e) => e.stopPropagation()}>
-                                    <i className="fa fa-close  popupclose" onClick={togglePopupimg}></i>
-                                    {/* <h2>Shop Popup</h2> */}
-                                    <div className="popimgs_div">
-                                        <img src={popimg1} alt="" className='popimg' />
-                                        <img src={popimg3} alt="" className='popimg' />
-                                        <img src={popimg4} alt="" className='popimg' />
-                                        <img src={popimg5} alt="" className='popimg' />
-                                        <img src={popimg6} alt="" className='popimg' />
-                                        <img src={popimg7} alt="" className='popimg' />
-                                        <img src={popimg8} alt="" className='popimg' />
-                                        <img src={popimg9} alt="" className='popimg' />
-                                        <img src={popimg10} alt="" className='popimg' />
-                                        <img src={popimg11} alt="" className='popimg' />
-                                        <img src={popimg12} alt="" className='popimg' />
-                                        <img src={popimg13} alt="" className='popimg' />
-                                    </div>
-                                </div>
-                            </div>
+                    <div id="ACCOMMODATION" className="output-container">
+                        {trip?.accommodation && (
+                            <Accomodation accommodationData={trip.accommodation} selectedLanguage={selectedLanguage} />
                         )}
                     </div>
 
-
-
-
-
-                    {/* Free rebooking Strip container  with popup  */}
-
-                    <div className="container-fluid m-0 p-0">
-                        <div className="row">
-                            <div className="col">
-                                <div className="strip">
-                                    <div>
-                                        <h5 className="strip_text">
-                                            Free Rebooking up to 14 days prior to Arrival
-                                            <span>
-                                                <Link to="#" className="strip_link" onClick={togglePopup}> Read more</Link>
-                                            </span>
-                                        </h5>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        {showPopup && <div className="Strip_overlay" />}
-
-                        {/* Popup Component */}
-                        {showPopup && (
-                            <div className="container">
-                                <div className="row">
-                                    <div className="col">
-                                        <div className="bottom-popup m-auto">
-                                            <div className="strip_popup_content">
-                                                <i className='fa fa-close clsbtn' onClick={togglePopup}></i>
-                                                <h5 className='popup_head'>Free rebooking up to 14 days prior to arrival</h5>
-                                                <p className='popup_content'>Kiteactive for Veventures provides an exceptional experience for adventure seekers and kitesurfing enthusiasts, with the flexibility to plan confidently. Book your stay more than three weeks in advance and enjoy a 14-day window to rebook or cancel without fees. For last-minute plans, bookings made within three weeks come with a 72-hour adjustment period. Cancelations up to 35 days prior receive 75% of your payment back. We also offer a free rebooking or gift card option up to 14 days before arrival, ensuring peace of mind as you prepare to experience world-class kitesurfing and explore breathtaking destinations. Add optional cancellation insurance for extra reassurance.
-
-                                                </p>
-                                                {/* <button onClick={togglePopup} className="btn btn-danger">Close</button> */}
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                    <div id="REVIEWS" className="output-container">
+                        {trip?.reviews && (
+                            <Review reviewsData={trip.reviews} selectedLanguage={selectedLanguage} />
                         )}
                     </div>
 
-
-
-
-
-                    {/* HighLight component start here  */}
-                    <div className="container-fluid">
-                        <div className="row">
-                            {trip?.alltabs && (
-
-                                <div className="container-fluid">
-                                    <div className="row">
-                                        {/* Highlights/Inclusions Section */}
-                                        {trip.alltabs.highlight && (
-                                            <>
-                                                <h2 className='text-center surf_text mt-5'>Highlights/Inclusions</h2>
-                                                {trip.alltabs.highlight.map((items, index) => (
-                                                    <div className='d-flex '>
-                                                        <img src={checkicon} alt="icon" className='check_icon' />
-
-                                                        <p className='mx-2 high_text' key={index}>{items.text[selectedLanguage] || 'No translation available'}</p>
-                                                    </div>
-                                                ))}
-                                            </>
-                                        )}
-
-                                        {/* Questions Section */}
-                                        {/* Questions Section */}
-                                        {trip.alltabs.question && (
-                                            <>
-                                                <h2 className='text-center surf_text mt-4 mb-5'>Do you have questions? We have answers!</h2>
-                                                <div className="container">
-                                                    <div className="row">
-                                                        {trip.alltabs.question.map((items, index) => (
-                                                            <div className="col-md-6" key={index}> {/* This creates two columns in a single row */}
-                                                                <details className=''>
-                                                                    <summary className='p_faq'>{items.title[selectedLanguage] || 'No translation available'}</summary>
-                                                                    <div className="p_faq__content fs-5 mb-2">
-                                                                        <p>{items.para[selectedLanguage] || 'No translation available'}</p>
-                                                                    </div>
-                                                                </details>
-                                                            </div>
-                                                        ))}
-                                                    </div>
-                                                </div>
-                                            </>
-                                        )}
-
-
-                                    </div>
-                                </div>
-                            )}
-                        </div>
+                    <div id="HOSTED_BY" className="output-container">
+                        {trip?.hosted && (
+                            <Hosted hostedData={trip.hosted} selectedLanguage={selectedLanguage} />
+                        )}
                     </div>
-                    <Surfcampslider selectedLanguage={selectedLanguage} />
-                    <Booking tripName={trip_name} />
 
+                    <div id="ACTIVITIES" className="output-container">
+                        {trip?.activities && (
+                            <Activites activitiesData={trip.activities} selectedLanguage={selectedLanguage} />
+                        )}
+                    </div>
+
+                    {/* Repeat for other sections with corresponding IDs */}
                 </div>
 
+                {/* {/ See all photo section  /} */}
+
+                <Surfcampslider selectedLanguage={selectedLanguage} />
+                <Booking tripName={trip_name} />
 
             </div>
         </div>

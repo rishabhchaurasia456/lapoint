@@ -3,13 +3,11 @@ import React from 'react'
 import discoveimg from '../../Images/img3.webp'
 import whykiteimg2 from '../../Images/Footerimg/footer1.webp'
 import philosophyimg from '../../Images/Footerimg/footer2.jpg'
+import { Link } from 'react-router-dom'
 
 const Discoverkiteactive = () => {
     return (
         <div>
-
-
-
             <div className="container-fluid w_K_sec mt-0 pt-0">
                 <div className="row" >
                     {/* content div  */}
@@ -97,6 +95,9 @@ const Discoverkiteactive = () => {
                                         Kiteactive for Veventures! Immerse yourself in a realm of excitement and discovery with Kiteactive. Whether you're looking for exhilarating surf camps, peaceful yoga retreats, or unforgettable travel experiences, we provide the ideal mix of adventure and tranquility. Our thoughtfully designed itineraries enable you to connect with nature, tackle new challenges, and forge lasting memories. Join us to uncover the extraordinary adventures that await, as you ride the waves and explore stunning landscapes. Your next unforgettable journey starts here!
                                     </p>
                                 </h1>
+                            </div>
+                            <div>
+                                <Link to="/Kiteactive_Team" className=' lifestyle_btn'>Meet Our Team</Link>
                             </div>
                         </div>
                     </div>
