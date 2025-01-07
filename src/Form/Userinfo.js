@@ -52,14 +52,15 @@ const Userinfo = () => {
         }
     };
 
-    const standard_startdate = startDate.toLocaleDateString()
-    const standard_endDate = endDate.toLocaleDateString()
+    const standard_startdate = startDate.toLocaleDateString('en-GB')
+    const standard_endDate = endDate.toLocaleDateString('en-GB')
 
     const [userDetails, setUserDetails] = useState({
         firstName: '',
         lastName: '',
         email: '',
         phone: '',
+        note: '',
         findus: '',
         tripName: tripName,
         selectedDuration: selectedDuration,
@@ -124,14 +125,29 @@ const Userinfo = () => {
 
         const levelNames = levels.map(level => level.name);
 
-        const currentDate = new Date().toISOString().split('T')[0]; // This will give you 'YYYY-MM-DD'
+        // const currentDate = new Date().toISOString().split('T')[0]; // This will give you 'YYYY-MM-DD'
+        const currentDate = new Date();
+
+        const day = String(currentDate.getDate()).padStart(2, '0'); // Pad day with 0 if it's a single digit
+        const month = String(currentDate.getMonth() + 1).padStart(2, '0'); // Get month and pad with 0 if needed (getMonth() returns 0-11)
+        const year = currentDate.getFullYear();
+        const formattedDate = `${day}-${month}-${year}`;
+
+        if (carRentalPrice > 0){ 
+            var kite_rental = "true"
+            console.log("kite_rentallllll" , kite_rental)
+        } else{
+            var kite_rental = "false"
+            console.log("kite_rentallllll" , kite_rental)
+        }
 
         // Bundle them into one object
         let data = {
             userDetails: userDetails,
             travellers: travellers,
-            booking_date: currentDate,
+            booking_date: formattedDate,
             room: selectedRooms,
+            kite_rental: kite_rental,
             levels: levelNames,
             totalprice: updatedTotalPrice,
             invoiceDetails: {
@@ -193,27 +209,27 @@ const Userinfo = () => {
             standard_startdate,
             standard_endDate
         };
-    
+
         // Redirect to "Thank You" page immediately
         // navigate('/thankyou');
-    
+
         try {
             // API call to Zoho
             const response = await axios.post(`${config.API_BASE_URL}/api/user/send-to-zoho`, customerData);
             const newInvoiceDetails = response.data.data.invoice;
-    
+
             if (!newInvoiceDetails) {
                 console.error("Failed to retrieve new invoice details from the response.");
                 return;
             }
-    
+
             console.log("New Invoice Details:", newInvoiceDetails);
             setInvoiceDetails(newInvoiceDetails);
-    
+
             // Send data to Google Sheets
             await googleSubmit(newInvoiceDetails);
             console.log("Google Sheet submission completed.");
-    
+
             // Update booking details
             handleBooking();
             console.log("Booking updated successfully.");
@@ -291,16 +307,16 @@ const Userinfo = () => {
                             <hr className='mt-4' />
                             <div className='row mt-2'>
                                 <div className="col">
-                                <div class="col mat-input">
-                                    <label className="ps-1">Date of Birth</label>
-                                    <input
-                                        type='text'
-                                        className=' w-100'
-                                        placeholder='dd/mm/yyyy'
-                                        value={travellers[index].dob}
-                                        onChange={(e) => handleChange(index, 'dob', e.target.value)}
-                                    />
-                                </div>
+                                    <div class="col mat-input">
+                                        <label className="ps-1">Date of Birth</label>
+                                        <input
+                                            type='text'
+                                            className=' w-100'
+                                            placeholder='dd/mm/yyyy'
+                                            value={travellers[index].dob}
+                                            onChange={(e) => handleChange(index, 'dob', e.target.value)}
+                                        />
+                                    </div>
                                     {/* <DatePicker
                                         selected={travellers[index].dob ? new Date(travellers[index].dob) : null}
                                         onChange={(date) => handleChange(index, "dob", date ? date.toISOString().split("T")[0] : "")}
@@ -506,6 +522,12 @@ const Userinfo = () => {
                 <div className="row">
                     <div className="col-lg-2"></div>
                     <div className="col-lg-8 card">
+                        <div className='row mb-2 mt-2'>
+                            <div className="col mat-input">
+                                <label className="ps-3">Leave Note</label>
+                                <input type="desc" className='w-100' placeholder='Leave Note' value={userDetails.note} onChange={(e) => handleUserChange('note', e.target.value)} />
+                            </div>
+                        </div>
                         <div className='row mb-2 mt-2'>
                             <div className="col mat-input">
                                 <select className='w-100 form-select' value={userDetails.findus} onChange={(e) => handleUserChange('findus', e.target.value)}>

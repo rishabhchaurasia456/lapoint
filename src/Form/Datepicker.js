@@ -195,7 +195,7 @@ const Datepicker = () => {
                       onChange={handleDateChange}
                       inline
                       monthsShown={isMobile ? 1 : 2}
-                      dateFormat="yyyy/MM/dd"
+                      dateFormat="dd/MM/yyyy"
                       placeholderText="Select Start Date"
                       dayClassName={highlightStartDate}
                       className="custom-datepicker"
@@ -209,8 +209,8 @@ const Datepicker = () => {
 
                 {startDate && endDate && (
                   <div className="fw-bold cal_head">
-                    <span> {startDate.toLocaleDateString()} to </span>
-                    <span> {endDate.toLocaleDateString()}</span>
+                    <span> {startDate.toLocaleDateString('en-GB')} to </span>
+                    <span> {endDate.toLocaleDateString('en-GB')}</span>
                   </div>
                 )}
 
