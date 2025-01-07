@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import config from '../config/config';
+import { useNavigate } from 'react-router-dom';
 
 const Admin_Add_TripLink = () => {
+    const navigate = useNavigate()
     const [formData, setFormData] = useState({
         tripName: '',
         path: '',
@@ -45,11 +48,15 @@ const Admin_Add_TripLink = () => {
         data.append('lng', formData.lng);
 
         try {
-            const response = await axios.post('http://localhost:5500/api/admin/create_tripLink', data, {
+            const response = await axios.post(`${config.API_BASE_URL}/api/admin/create_tripLink`, data, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                 },
             });
+            if (response.status === 201) {
+                alert('Trip link created successfully!');
+                navigate('/admin/triplink')
+            }
             setMessage('Trip link created successfully!');
             console.log(response.data);
         } catch (error) {
