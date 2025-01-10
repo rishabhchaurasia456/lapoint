@@ -69,6 +69,8 @@ import Admin_TripLink from './Admin/Admin_TripLink';
 import Calendar from './Pages/Calendar/Calendar';
 import Admin_Add_TripLink from './Admin/Admin_Add_TripLink';
 import Admin_Edit_TripLink from './Admin/Admin_Edit_TripLink';
+import Admin_Overview from './Admin/Admin_Overview';
+import Admin_Edit_Overview from './Admin/Admin_Edit_Overview';
 
 function App() {
 
@@ -258,7 +260,7 @@ function App() {
               </KiteLayout>
             }>
             </Route>
-            
+
 
             {/* ------------------------------------------ */}
 
@@ -358,13 +360,13 @@ function App() {
 
             <Route path="/myCreative" element={
               <Aff_Layout>
-                <MyCreative/>
+                <MyCreative />
               </Aff_Layout>
             } />
 
             <Route path="/newCreative" element={
               <Aff_Layout>
-                <NewCreative/>
+                <NewCreative />
               </Aff_Layout>
             } />
 
@@ -390,6 +392,18 @@ function App() {
             <Route path="/admin/edit/triplink/:id" element={
               <Admin_Layout>
                 <Admin_Edit_TripLink />
+              </Admin_Layout>
+            } />
+
+            <Route path="/admin/overview" element={
+              <Admin_Layout>
+                <Admin_Overview />
+              </Admin_Layout>
+            } />
+
+            <Route path="/admin/edit/overview/:id" element={
+              <Admin_Layout>
+                <Admin_Edit_Overview />
               </Admin_Layout>
             } />
 

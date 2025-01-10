@@ -17,9 +17,6 @@ const Admin_Navbar = () => {
                                     <li className="nav-item">
                                         <Link className="nav-link" aria-current="page" to="/admin/dashboard">Home</Link>
                                     </li>
-                                    {/* <li className="nav-item">
-                                        <Link className="nav-link" to="">Form</Link>
-                                    </li> */}
                                     <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         Form
@@ -34,6 +31,14 @@ const Admin_Navbar = () => {
                                     </li>
                                     <li className="nav-item">
                                         <Link className="nav-link" aria-current="page" to="/admin/triplink">Trip Link</Link>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Trip page
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li><Link class="dropdown-item" to="/admin/overview">Overview</Link></li>
+                                        </ul>
                                     </li>
                                 </ul>
                                 <form className="d-flex" role="search">
