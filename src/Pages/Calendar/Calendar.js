@@ -173,7 +173,7 @@ const Calendar = () => {
                             <p>€ 649</p>
                             <p>Last Spots</p>
                             <div>
-                                <Link to="/trip/Sail&kite" className='cal_searchbtn2'>Book Now</Link>
+                                <Link to="/trip/Egypt" className='cal_searchbtn2'>Book Now</Link>
                             </div>
                         </div>
                     </div>

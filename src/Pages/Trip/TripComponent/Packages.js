@@ -5,17 +5,21 @@ const Packages = ({ packagesData, selectedLanguage }) => {
 
   return (
     <>
-      <div className="container">
-        <div className="text-center mb-2 my-3">
-          {packagesData.levelsData.map((level, index) => (
-            <button
-              className="package_btn"
-              key={index}
-              onClick={() => setActiveTab(index)} // Use onClick to update the activeTab
-            >
-              <p>{level.levelName}</p>
-            </button>
-          ))}
+      <div className="container pack_cont ">
+        <div className="row">
+          <div className="col text-center m-auto">
+            <div className="text-center justify-center m-auto ">
+              {packagesData.levelsData.map((level, index) => (
+                <button
+                  className="package_btn"
+                  key={index}
+                  onClick={() => setActiveTab(index)} // Use onClick to update the activeTab
+                >
+                  <p>{level.levelName}</p>
+                </button>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
 

@@ -10,7 +10,7 @@ import Activites from './TripComponent/Activites';
 import Overview from './TripComponent/Overview';
 import trips from './Tripdata';
 import './TripComponent/Trips.css'
-import { Link, useLocation, useParams } from 'react-router-dom';
+import { useLocation, useParams } from 'react-router-dom';
 import config from '../../config/config';
 import Booking from '../Kitecamps/Booking';
 import Surfcampslider from '../../Components/Surfcampslider/Surfcampslider';
@@ -109,8 +109,36 @@ const Trip = ({ selectedLanguage }) => {
     }, []);
 
 
+    const [isFixed, setIsFixed] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const videoContainer = document.querySelector('.video-container');
+            const videoBottom = videoContainer.getBoundingClientRect().bottom;
+
+            if (videoBottom <= 0) {
+                setIsFixed(true);
+            } else {
+                setIsFixed(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
+
+    const [openSection, setOpenSection] = useState(null);
+
+    const toggleSection = (section) => {
+        setOpenSection(openSection === section ? null : section);
+    };
+
     return (
         <div>
+        
             <Helmet>
                 <title>KiteActive</title>
                 <meta name="description" content="This is the home page of your website where you can find information about surfcamps, lifestyle, and more." />
@@ -153,25 +181,20 @@ const Trip = ({ selectedLanguage }) => {
 
 
             <div>
-                <Helmet>
-                    <title>KiteActive</title>
-                    {/* Helmet content */}
-                </Helmet>
-
                 {/* Tab Buttons */}
-                <div className="container">
+                <div className={`container-fluid tab_container ${isFixed ? 'fixed' : ''}`}>
                     <div className="row">
                         <div className="col">
 
                             {/* this is all tabs in this container  */}
 
-                            <div className="mb-2 my-3 text-center">
+                            <div className="text-center">
                                 {/* {trip?.overview && (
-                                <button className="trip_tabs" onClick={() => handleButtonClick('OVERVIEW')}>
-                                    <p>OVERVIEW</p>
-                                </button>
-                            )}
-                             */}
+                                    <button className="trip_tabs" onClick={() => handleButtonClick('OVERVIEW')}>
+                                        <p>OVERVIEW</p>
+                                    </button>
+                                )} */}
+
                                 {trip?.kitespot && (
                                     <button className="trip_tabs" onClick={() => handleButtonClick('KITESPOTS')}>
                                         <p>KITESPOTS</p>
@@ -215,51 +238,96 @@ const Trip = ({ selectedLanguage }) => {
                 </div>
 
                 {/* Sections with IDs */}
-
-                {/* and this is all tabs data here  */}
-                <div className="container-fluid">
-
-                    <div id="OVERVIEW" className="output-container">
-                        {trip?.overview && <Overview overviewData={trip.overview} selectedLanguage={selectedLanguage} />}
-                    </div>
+                <div className="container Accordion_tab_cont">
+                    {activeTab === 'OVERVIEW' && <div> </div>}
+                    <Overview overviewData={trip.overview} selectedLanguage={selectedLanguage} />
 
 
-                    <div id="KITESPOTS" className="output-container">
-                        {trip?.kitespot && <Kitespots kitespotData={trip.kitespot} selectedLanguage={selectedLanguage} />}
-                    </div>
 
-                    <details>
-                        <summary>View Packages</summary>
-                        <div id="PACKAGES" className="output-container">
-                            {trip?.packages && <Packages packagesData={trip.packages} selectedLanguage={selectedLanguage} />}
-                        </div>
-                    </details>
-
-
-                    <div id="ACCOMMODATION" className="output-container">
-                        {trip?.accommodation && (
-                            <Accomodation accommodationData={trip.accommodation} selectedLanguage={selectedLanguage} />
+                    <div className="Accordion" id="KITESPOTS">
+                        <button onClick={() => toggleSection('KITESPOTS')}>
+                            KITESPOTS
+                            <span className="accor_arrow">
+                                <i className={`fa ${openSection === 'KITESPOTS' ? 'fa-chevron-up' : 'fa-chevron-down'}`} aria-hidden="true"></i>
+                            </span>
+                        </button>
+                        {openSection === 'KITESPOTS' && (
+                            <div className="output-container">
+                                {trip?.kitespot && <Kitespots kitespotData={trip.kitespot} selectedLanguage={selectedLanguage} />}
+                            </div>
                         )}
                     </div>
 
-                    <div id="REVIEWS" className="output-container">
-                        {trip?.reviews && (
-                            <Review reviewsData={trip.reviews} selectedLanguage={selectedLanguage} />
+
+                    <div className="Accordion" id="PACKAGES">
+                        <button onClick={() => toggleSection('PACKAGES')}>
+                            PACKAGES
+                            <span className="accor_arrow">
+                                <i className={`fa ${openSection === 'KITESPOTS' ? 'fa-chevron-up' : 'fa-chevron-down'}`} aria-hidden="true"></i>
+                            </span>
+                        </button>
+                        {openSection === 'PACKAGES' && (
+                            <div className="output-container">
+                                {trip?.packages && <Packages packagesData={trip.packages} selectedLanguage={selectedLanguage} />}
+                            </div>
                         )}
                     </div>
 
-                    <div id="HOSTED_BY" className="output-container">
-                        {trip?.hosted && (
-                            <Hosted hostedData={trip.hosted} selectedLanguage={selectedLanguage} />
+                    <div className="Accordion" id="ACCOMMODATION">
+                        <button onClick={() => toggleSection('ACCOMMODATION')}>
+                            ACCOMMODATION
+                            <span className="accor_arrow">
+                                <i className={`fa ${openSection === 'KITESPOTS' ? 'fa-chevron-up' : 'fa-chevron-down'}`} aria-hidden="true"></i>
+                            </span>
+                        </button>
+                        {openSection === 'ACCOMMODATION' && (
+                            <div className="output-container">
+                                {trip?.accommodation && <Accomodation accommodationData={trip.accommodation} selectedLanguage={selectedLanguage} />}
+                            </div>
                         )}
                     </div>
 
-                    <div id="ACTIVITIES" className="output-container">
-                        {trip?.activities && (
-                            <Activites activitiesData={trip.activities} selectedLanguage={selectedLanguage} />
+                    <div className="Accordion" id="REVIEWS">
+                        <button onClick={() => toggleSection('REVIEWS')}>
+                            REVIEWS
+                            <span className="accor_arrow">
+                                <i className={`fa ${openSection === 'KITESPOTS' ? 'fa-chevron-up' : 'fa-chevron-down'}`} aria-hidden="true"></i>
+                            </span>
+                        </button>
+                        {openSection === 'REVIEWS' && (
+                            <div className="output-container">
+                                {trip?.reviews && <Review reviewsData={trip.reviews} selectedLanguage={selectedLanguage} />}
+                            </div>
                         )}
                     </div>
 
+                    <div className="Accordion" id="HOSTED_BY">
+                        <button onClick={() => toggleSection('HOSTED_BY')}>
+                            HOSTED BY
+                            <span className="accor_arrow">
+                                <i className={`fa ${openSection === 'KITESPOTS' ? 'fa-chevron-up' : 'fa-chevron-down'}`} aria-hidden="true"></i>
+                            </span>
+                        </button>
+                        {openSection === 'HOSTED_BY' && (
+                            <div className="output-container">
+                                {trip?.hosted && <Hosted hostedData={trip.hosted} selectedLanguage={selectedLanguage} />}
+                            </div>
+                        )}
+                    </div>
+
+                    <div className="Accordion" id="ACTIVITIES">
+                        <button onClick={() => toggleSection('ACTIVITIES')}>
+                            ACTIVITIES
+                            <span className="accor_arrow">
+                                <i className={`fa ${openSection === 'KITESPOTS' ? 'fa-chevron-up' : 'fa-chevron-down'}`} aria-hidden="true"></i>
+                            </span>
+                        </button>
+                        {openSection === 'ACTIVITIES' && (
+                            <div className="output-container">
+                                {trip?.activities && <Activites activitiesData={trip.activities} selectedLanguage={selectedLanguage} />}
+                            </div>
+                        )}
+                    </div>
                     {/* Repeat for other sections with corresponding IDs */}
                 </div>
 

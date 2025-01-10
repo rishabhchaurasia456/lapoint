@@ -1,6 +1,28 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
+
+
+import popimg1 from '../../../Images/popupimg1.png'
+import popimg2 from '../../../Images/popupimg9.png'
+import popimg3 from '../../../Images/popupimg3.png'
+import popimg4 from '../../../Images/popupimg4.png'
+import popimg5 from '../../../Images/popupimg5.png'
+import popimg6 from '../../../Images/popupimg6.png'
+import popimg7 from '../../../Images/popupimg7.png'
+import popimg8 from '../../../Images/popupimg8.png'
 
 const Overview = ({ overviewData, selectedLanguage }) => {
+
+
+
+    // jsx for popup box ................
+    const [showPopup, setShowPopup] = useState(false);
+
+    // Function to toggle popup visibility
+    const togglePopup = () => {
+        setShowPopup(!showPopup);
+    };
+
     return (
         <div>
             <div className="container d-flex flex-column align-items-center justify-content-center surf_container">
@@ -10,9 +32,6 @@ const Overview = ({ overviewData, selectedLanguage }) => {
                         <p className='surf_para'>{overviewData.trip_para[selectedLanguage]}</p>
                     </div>
                 </div>
-
-               
-
 
                 <div className="row">
                     <div class="container">
@@ -83,6 +102,37 @@ const Overview = ({ overviewData, selectedLanguage }) => {
                         </div>
                     </div>
                 </div>
+
+
+
+                {/*  See all photo section POP up Container  */}
+                {/* this is popup show for images  */}
+                <div>
+                    <Link className="nav-link" onClick={togglePopup}>
+                        <p className="photo_title text-center">SEE ALL PHOTOS & VIDEOS</p>
+                    </Link>
+
+                    {/* Popup Component */}
+                    {showPopup && (
+                        <div className="popup-overlay scroll-1" onClick={togglePopup}>
+                            <div className="popup-content" onClick={(e) => e.stopPropagation()}>
+                                <i className="fa fa-close  popupclose" onClick={togglePopup}></i>
+                                {/* <h2>Shop Popup</h2> */}
+                                <div className="popimgs_div">
+                                    <img src={popimg1} alt="" className='popimg' />
+                                    <img src={popimg2} alt="" className='popimg' />
+                                    <img src={popimg3} alt="" className='popimg' />
+                                    <img src={popimg4} alt="" className='popimg' />
+                                    <img src={popimg5} alt="" className='popimg' />
+                                    <img src={popimg6} alt="" className='popimg' />
+                                    <img src={popimg7} alt="" className='popimg' />
+                                    <img src={popimg8} alt="" className='popimg' />
+                                </div>
+                            </div>
+                        </div>
+                    )}
+                </div>
+                {/* photo container div end  */}
             </div>
         </div>
     )

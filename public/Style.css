@@ -18,7 +18,7 @@
   padding: 8rem !important;
 }
 
-.bg_main_head{
+.bg_main_head {
   font-weight: 900;
   font-size: 60px;
   line-height: 53px;
@@ -34,15 +34,15 @@
     background-color: #000;
     padding: 2rem !important;
   }
-  
-.bg_main_head{
-  font-weight: 900;
-  font-size: 35px;
-  line-height: 53px;
-  font-family: "Amatic SC", sans-serif;
-  text-transform: uppercase;
 
-}
+  .bg_main_head {
+    font-weight: 900;
+    font-size: 35px;
+    line-height: 53px;
+    font-family: "Amatic SC", sans-serif;
+    text-transform: uppercase;
+
+  }
 
 }
 
@@ -158,71 +158,6 @@
 
 
 
-
-/* Popup box css for more images section   */
-
-
-/* Dark background overlay */
-
-.scroll-1::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-
-.scroll-1::-webkit-scrollbar-thumb {
-  border-radius: 20px;
-  background: #888;
-}
-
-.popup-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-  display: flex;
-  flex-direction: column;
-  overflow-y: scroll;
-  /* padding: 24px;   */
-  scroll-snap-type: y mandatory;
-  scroll-padding-top: 24px;
-  gap: 30px;
-}
-
-.popup-content {
-  border-radius: 8px;
-  padding: 8px;
-  width: 500px;
-  height: 600px;
-  text-align: center;
-}
-
-.popupclose {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  background-color: rgba(0, 0, 0, 0.7);
-  color: white;
-  font-size: 16px;
-  padding: 10px;
-  border-radius: 50%;
-  cursor: pointer;
-  position: fixed;
-  border: 2px solid #fdc016;
-
-}
-
-.popimg {
-  margin-bottom: 15px;
-  width: 90%;
-  border-radius: 15px;
-
-}
 
 
 
@@ -720,6 +655,8 @@
 /* =---------------------------------- */
 /* FAQ css  */
 /* ------------------------------------ */
+
+
 .faq_container {
   background-color: black;
   margin-bottom: 5%;
@@ -830,86 +767,6 @@ details>summary::-webkit-details-marker {
     display: none;
   }
 }
-
-/* ----------------------------------- */
-/* Activity component css  */
-/* -------------------------------------- */
-
-.Activity_head {
-  color: black;
-  font-family: sans-serif;
-  margin-top: 7%;
-  font-size: 22px;
-  line-height: 23px;
-  font-weight: 600;
-  text-transform: uppercase;
-}
-
-.Activity_head_text {
-  color: black;
-  font-weight: 900;
-  font-size: 60px;
-  line-height: 53px;
-  font-family: "Amatic SC", sans-serif;
-  text-transform: uppercase;
-}
-
-.activity_backimg {
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 15px;
-  /* Adjust as needed */
-  overflow: hidden;
-  filter: brightness(150%);
-}
-
-.activity_backimg:hover {
-  filter: brightness(200%);
-  transition: 0.5 ease;
-}
-
-.activity_text {
-  position: relative;
-  z-index: 2;
-  color: white;
-  text-align: center;
-  margin-top: 120%;
-}
-
-
-
-
-@media only screen and (max-width: 600px) {
-  .activity_backimg {
-    height: 65vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 15px;
-    /* Adjust as needed */
-    overflow: hidden;
-    filter: brightness(150%);
-  }
-
-  .Activity_head {
-    font-size: 15px;
-  }
-
-  .Activity_head_text {
-    font-weight: 800;
-    font-size: 35px;
-    line-height: 40px;
-  }
-
-  .card_d_text {
-    margin-bottom: 100px;
-  }
-}
-
 
 
 /* ----------------------------------- */
@@ -1031,9 +888,10 @@ details>summary::-webkit-details-marker {
 .Social_icon_main a {
   text-decoration: none;
 }
+
 .social_icon {
   width: 10%;
- 
+
 }
 
 @media only screen and (max-width: 600px) {

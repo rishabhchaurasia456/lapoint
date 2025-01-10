@@ -54,7 +54,7 @@ const Reviewdata = [
 ];
 
 const responsive = {
-  superLargeDesktop: { 
+  superLargeDesktop: {
     breakpoint: { max: 4000, min: 3000 },
     items: 5
   },
@@ -86,31 +86,31 @@ const ReviewCarousel = () => {
       {Reviewdata.map(({ img, name, date, para }, index) => (
         <div key={index} >
           <div className="card p-3 h-100">
-          <div className="row">
-            <div className="review_image-container">
-            <div class="row">
-              <div className='col-4'>
-                <img src={img} alt="" width="100%" className='review_rounded-circle' />
+            <div className="row">
+              <div className="review_image-container">
+                <div class="row">
+                  <div className='col-4'>
+                    <img src={img} alt="" width="100%" className='review_rounded-circle' />
+                  </div>
+                  <div className='col-8'>
+                    <div className='col review_name'><b>{name}</b></div>
+                    <div className='col review_date'>{date}</div>
+                  </div>
+                </div>
               </div>
-              <div className='col-8'>
-                <div className='col review_name'><b>{name}</b></div>
-                <div className='col review_date'>{date}</div>
-              </div>
-            </div>
-            </div>
-            <div className="review_card-body">
-              {/* <h3 className="name">{name}</h3>
+              <div className="review_card-body">
+                {/* <h3 className="name">{name}</h3>
               <p className="date">{date}</p> */}
-              <div>
-                <i className='fa fa-star mt-3 ms-1 mb-2 text-warning'></i>
-                <i className='fa fa-star mt-3 ms-1 mb-2 text-warning'></i>
-                <i className='fa fa-star mt-3 ms-1 mb-2 text-warning'></i>
-                <i className='fa fa-star mt-3 ms-1 mb-2 text-warning'></i>
-                <i className='fa fa-star mt-3 ms-1 mb-2 text-warning'></i>
+                <div>
+                  <i className='fa fa-star mt-3 ms-1 mb-2 text-warning'></i>
+                  <i className='fa fa-star mt-3 ms-1 mb-2 text-warning'></i>
+                  <i className='fa fa-star mt-3 ms-1 mb-2 text-warning'></i>
+                  <i className='fa fa-star mt-3 ms-1 mb-2 text-warning'></i>
+                  <i className='fa fa-star mt-3 ms-1 mb-2 text-warning'></i>
+                </div>
+                <p className="review_para">{para}</p>
               </div>
-              <p className="review_para">{para}</p>
             </div>
-          </div>
           </div>
         </div>
       ))}

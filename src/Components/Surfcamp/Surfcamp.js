@@ -36,6 +36,8 @@ const Surfcamp = ({ selectedLanguage }) => {
     }
   };
 
+
+  // jsx for popup box ................
   const [showPopup, setShowPopup] = useState(false);
 
   // Function to toggle popup visibility
@@ -98,8 +100,8 @@ const Surfcamp = ({ selectedLanguage }) => {
 
 
         {/*  See all photo section POP up Container  */}
-        <div>
-          {/* Link to trigger popup */}
+        {/* this is popup show for images  */}
+        <div>     
           <Link className="nav-link" onClick={togglePopup}>
             <p className="text-danger fw-bold m-3 fs-5 text-center">SEE ALL PHOTOS & VIDEOS</p>
           </Link>
@@ -124,11 +126,8 @@ const Surfcamp = ({ selectedLanguage }) => {
             </div>
           )}
         </div>
-
-
-
+      {/* photo container div end  */}
       </div>
-      {/* photo container end  */}
 
 
     </div>

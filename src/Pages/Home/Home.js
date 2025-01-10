@@ -3,8 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet'
 
 import HeroSection from '../../Components/HeroSection/HeroSection'
-
-
 // import Surfcamp from '../../Components/Surfcamp/Surfcamp'
 import LIfeStyle from '../../Components/Lifestyle/LIfeStyle'
 import Surfcampslider from '../../Components/Surfcampslider/Surfcampslider'
