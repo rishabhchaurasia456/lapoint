@@ -37,48 +37,48 @@ const Admin_Overview = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
+
     const formData = new FormData(); // Recreate FormData to avoid duplicates
-  
+
     // Append text fields
     formData.append("tripName", e.target.tripName.value);
     formData.append("trip_heading", e.target.trip_heading.value);
     formData.append("trip_para", e.target.trip_para.value);
-  
+
     // Append individual images from the file inputs
     formData.append("img1", e.target.img1.files[0]);
     formData.append("img_head1", e.target.img_head1.value);
     formData.append("img_para1", e.target.img_para1.value);
-  
+
     formData.append("img2", e.target.img2.files[0]);
     formData.append("img_head2", e.target.img_head2.value);
     formData.append("img_para2", e.target.img_para2.value);
-  
+
     formData.append("img3", e.target.img3.files[0]);
     formData.append("img_head3", e.target.img_head3.value);
     formData.append("img_para3", e.target.img_para3.value);
-  
+
     formData.append("img4", e.target.img4.files[0]);
     formData.append("img_head4", e.target.img_head4.value);
     formData.append("img_para4", e.target.img_para4.value);
-  
+
     // Append gallery images
     imgGall.forEach((image, index) => {
       formData.append(`img_gall_${index}`, image);
     });
-  
+
     // Debug FormData content
     for (let pair of formData.entries()) {
       console.log(pair[0], pair[1]);
     }
-  
+
     try {
       const url = `${config.API_BASE_URL}/api/admin/create_overview`;
-  
+
       await axios.post(url, formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
-  
+
       fetchOverviewTabs();
       resetForm();
       handleCloseModal();
@@ -86,8 +86,6 @@ const Admin_Overview = () => {
       console.error("Error submitting form:", error.response?.data || error.message);
     }
   };
-  
-  
 
   const fetchOverviewTabs = async () => {
     try {

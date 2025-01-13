@@ -91,35 +91,6 @@ const Admin_Edit_Overview = () => {
     setGalleryImages(updatedGalleryImages);
   };
 
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-
-  //   const formData = new FormData();
-  //   formData.append('tripName', tripName);
-  //   formData.append('trip_heading', tripHeading);
-  //   formData.append('trip_para', tripPara);
-
-  //   // Append new images
-  //   galleryImages.forEach((image, index) => {
-  //     if (image.file) {
-  //       formData.append(`gall_${index}`, image.file);
-  //     }
-  //   });
-
-  //   // Append removed images
-  //   formData.append('removeGall', JSON.stringify(removedImages));
-
-  //   try {
-  //     const response = await axios.post(`${config.API_BASE_URL}/api/admin/update_overview/${id}`, formData, {
-  //       headers: { 'Content-Type': 'multipart/form-data' },
-  //     });
-  //     alert(response.data.message);
-  //   } catch (error) {
-  //     console.error('Error updating overview:', error.message);
-  //     alert('Failed to update details. Please try again.');
-  //   }
-  // };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
 

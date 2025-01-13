@@ -34,10 +34,11 @@ const Admin_Navbar = () => {
                                     </li>
                                     <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Trip page
+                                        Trip Tabs
                                         </a>
                                         <ul class="dropdown-menu">
-                                            <li><Link class="dropdown-item" to="/admin/overview">Overview</Link></li>
+                                            <li><Link className="dropdown-item" to="/admin/overview">Overview</Link></li>
+                                            <li><Link className="dropdown-item" to="/admin/kitespot">Kitespot</Link></li>
                                         </ul>
                                     </li>
                                 </ul>

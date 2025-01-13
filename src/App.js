@@ -71,6 +71,8 @@ import Admin_Add_TripLink from './Admin/Admin_Add_TripLink';
 import Admin_Edit_TripLink from './Admin/Admin_Edit_TripLink';
 import Admin_Overview from './Admin/Admin_Overview';
 import Admin_Edit_Overview from './Admin/Admin_Edit_Overview';
+import Admin_Kitespot from './Admin/Admin_Kitespot';
+import Admin_Edit_Kitespots from './Admin/Admin_Edit_Kitespots';
 
 function App() {
 
@@ -404,6 +406,18 @@ function App() {
             <Route path="/admin/edit/overview/:id" element={
               <Admin_Layout>
                 <Admin_Edit_Overview />
+              </Admin_Layout>
+            } />
+
+            <Route path="/admin/kitespot" element={
+              <Admin_Layout>
+                <Admin_Kitespot />
+              </Admin_Layout>
+            } />
+
+            <Route path="/admin/edit/kitespot/:id" element={
+              <Admin_Layout>
+                <Admin_Edit_Kitespots/>
               </Admin_Layout>
             } />
 

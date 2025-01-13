@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import config from '../config/config';
 
 const Admin_Edit_TripLink = () => {
     const { id } = useParams();
+    const navigate = useNavigate();
     const [formData, setFormData] = useState({
         tripName: '',
         path: '',
@@ -67,6 +68,8 @@ const Admin_Edit_TripLink = () => {
                     'Content-Type': 'multipart/form-data',
                 },
             });
+            alert(response.data.message);
+            navigate('/admin/triplink'); 
             setMessage('Trip link updated successfully!');
         } catch (error) {
             setMessage(error.response?.data?.error || 'Something went wrong.');
