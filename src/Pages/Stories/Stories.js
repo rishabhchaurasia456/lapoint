@@ -126,7 +126,7 @@ const Stories = () => {
 
             <div className="container stories_card">
                 <div>
-                    <h1 className='surf_text text-center'>Popular stories</h1>
+                    <h1 className='surf_text m-5 text-center'>Popular stories</h1>
                 </div>
                 <div className="row mb-5">
                     {cardData.map((card) => (

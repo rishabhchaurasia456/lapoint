@@ -133,20 +133,15 @@ const Footer = ({ selectedLanguage }) => {
     <div>
       <div className='container-fluid'>
         <div className='row footer_headcontainer pt-4'>
-          <div className='col-md-7 '>
+          <div className='col-lg-6'>
             <h1 className='f_h_t mb-0'>Get Updates & DEALS</h1>
             <p className='f_h_p'> Huge kitedeals and travel inspiration</p>
           </div>
 
-          <div className='col-md-5'>
-
-            <div className='mt-3'>
-              <div class="input-group ">
-                <input type="text" class="form-control p-2" placeholder="Your Email" aria-label="Recipient's username" aria-describedby="basic-addon2" />
-                <div class="input-group-append">
-                  <button class="btn btn-outline-secondary emailbtn" type="button">subscribe</button>
-                </div>
-              </div>
+          <div className='col-lg-6'>
+            <div class="input-group">
+              <input type="email" class="footer_input" id="Email" name="Email" placeholder="Email" autocomplete="off" />
+              <input class="button--submit" value="Subscribe" type="submit" />
             </div>
           </div>
         </div>

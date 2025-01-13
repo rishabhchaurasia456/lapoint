@@ -138,7 +138,7 @@ const Trip = ({ selectedLanguage }) => {
 
     return (
         <div>
-        
+
             <Helmet>
                 <title>KiteActive</title>
                 <meta name="description" content="This is the home page of your website where you can find information about surfcamps, lifestyle, and more." />
@@ -245,7 +245,7 @@ const Trip = ({ selectedLanguage }) => {
 
 
                     <div className="Accordion" id="KITESPOTS">
-                        <button onClick={() => toggleSection('KITESPOTS')}>
+                        <button onClick={() => toggleSection('KITESPOTS')} className='accor_btn'>
                             KITESPOTS
                             <span className="accor_arrow">
                                 <i className={`fa ${openSection === 'KITESPOTS' ? 'fa-chevron-up' : 'fa-chevron-down'}`} aria-hidden="true"></i>
@@ -260,7 +260,7 @@ const Trip = ({ selectedLanguage }) => {
 
 
                     <div className="Accordion" id="PACKAGES">
-                        <button onClick={() => toggleSection('PACKAGES')}>
+                        <button onClick={() => toggleSection('PACKAGES')} className='accor_btn'>
                             PACKAGES
                             <span className="accor_arrow">
                                 <i className={`fa ${openSection === 'KITESPOTS' ? 'fa-chevron-up' : 'fa-chevron-down'}`} aria-hidden="true"></i>
@@ -274,7 +274,7 @@ const Trip = ({ selectedLanguage }) => {
                     </div>
 
                     <div className="Accordion" id="ACCOMMODATION">
-                        <button onClick={() => toggleSection('ACCOMMODATION')}>
+                        <button onClick={() => toggleSection('ACCOMMODATION')} className='accor_btn'>
                             ACCOMMODATION
                             <span className="accor_arrow">
                                 <i className={`fa ${openSection === 'KITESPOTS' ? 'fa-chevron-up' : 'fa-chevron-down'}`} aria-hidden="true"></i>
@@ -288,7 +288,7 @@ const Trip = ({ selectedLanguage }) => {
                     </div>
 
                     <div className="Accordion" id="REVIEWS">
-                        <button onClick={() => toggleSection('REVIEWS')}>
+                        <button onClick={() => toggleSection('REVIEWS')} className='accor_btn'>
                             REVIEWS
                             <span className="accor_arrow">
                                 <i className={`fa ${openSection === 'KITESPOTS' ? 'fa-chevron-up' : 'fa-chevron-down'}`} aria-hidden="true"></i>
@@ -302,7 +302,7 @@ const Trip = ({ selectedLanguage }) => {
                     </div>
 
                     <div className="Accordion" id="HOSTED_BY">
-                        <button onClick={() => toggleSection('HOSTED_BY')}>
+                        <button onClick={() => toggleSection('HOSTED_BY')} className='accor_btn'>
                             HOSTED BY
                             <span className="accor_arrow">
                                 <i className={`fa ${openSection === 'KITESPOTS' ? 'fa-chevron-up' : 'fa-chevron-down'}`} aria-hidden="true"></i>
@@ -316,7 +316,7 @@ const Trip = ({ selectedLanguage }) => {
                     </div>
 
                     <div className="Accordion" id="ACTIVITIES">
-                        <button onClick={() => toggleSection('ACTIVITIES')}>
+                        <button onClick={() => toggleSection('ACTIVITIES')} className='accor_btn'>
                             ACTIVITIES
                             <span className="accor_arrow">
                                 <i className={`fa ${openSection === 'KITESPOTS' ? 'fa-chevron-up' : 'fa-chevron-down'}`} aria-hidden="true"></i>

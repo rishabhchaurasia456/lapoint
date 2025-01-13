@@ -58,7 +58,7 @@ const responsive = {
   }
 };
 
-const Activites = ({activitiesData, selectedLanguage}) => {
+const Activites = ({ activitiesData, selectedLanguage }) => {
 
   const carouselRef = useRef(null);
   const handleNext = () => {
@@ -87,7 +87,7 @@ const Activites = ({activitiesData, selectedLanguage}) => {
                   <div>
                     {/* <img src={img} className="slid_card_backimg rounded-4" alt="..." /> */}
                     <Link to="#" className='nav-link'>
-                      <div className="slid_card_backimg rounded-4" style={{ backgroundImage: `url(${item.img})` , backgroundSize: 'cover', backgroundPosition: 'center', }}>
+                      <div className="slid_card_backimg rounded-4" style={{ backgroundImage: `url(${item.img})`, backgroundSize: 'cover', backgroundPosition: 'center', }}>
                         <div class="slid_card_text">
                           <p class="card_d_text">{item.title[selectedLanguage]}</p>
                         </div>

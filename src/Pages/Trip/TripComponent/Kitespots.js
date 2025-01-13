@@ -8,7 +8,7 @@ import React from 'react'
 const Kitespots = ({ kitespotData, selectedLanguage }) => {
     return (
         <div>
-            <div className='container mt-5 pt-5 pb-5'>
+            <div className='container pb-5'>
                 {kitespotData.map((item, index) => (
                     <div className='row mt-5' key={index}>
                         {item.imgPosition === 'left' && (

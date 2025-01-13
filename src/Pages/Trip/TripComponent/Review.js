@@ -85,7 +85,7 @@ const ReviewCarousel = () => {
     >
       {Reviewdata.map(({ img, name, date, para }, index) => (
         <div key={index} >
-          <div className="card p-3 h-100">
+          <div className="card p-4 review_crd">
             <div className="row">
               <div className="review_image-container">
                 <div class="row">

@@ -13,7 +13,7 @@ Trip CSS
 /* open close Accordation  */
 
 
-.Accordion button {
+.Accordion .accor_btn {
   cursor: pointer;
   padding: 10px;
   margin: 3rem 0 0 0;
@@ -35,13 +35,13 @@ Trip CSS
   margin-right: 20px;
 }
 
-.Accordion button:hover {
+.Accordion .accor_btn:hover {
   background-color: #ffffff;
 }
 
 .output-container {
   padding: 15px;
-  background-color: #ffffff;
+  background-color: #fdfaec;
   display: none;
 }
 
@@ -249,17 +249,19 @@ Trip CSS
   border: 0.5px solid rgba(0, 0, 0, 0.282) !important;
   background-color: white !important;
   color: #fdc016;
-  font-size: 25px !important;
-  width: 20% !important;
+  font-size: 28px !important;
+  width: 25% !important;
   text-align: center !important;
   font-weight: bold !important;
-  padding: 1rem 0 0 0 !important;
-  margin: 1rem 5rem 2rem 0 !important;
+  padding: 10px 0 0 0 !important;
+  margin: 1rem 1rem 2rem 0 !important;
+  font-family: "Amatic SC", sans-serif;
 
 }
 
 .package_btn:hover {
   color: black !important;
+  transition: 0.8s;
 }
 
 
@@ -480,7 +482,9 @@ details>.sum2::-webkit-details-marker {
 /* -----------------------------
   Review Card 
   ----------------------------- */
-
+.review_crd{
+  height: 45vh !important;
+}
 .review_carousel-container {
   margin: auto;
   padding: 0 15px;
