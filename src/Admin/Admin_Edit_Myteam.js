@@ -12,6 +12,7 @@ const Admin_Edit_Myteam = () => {
     const [position, setPosition] = useState('');
     const [totalExp, setTotalExp] = useState('');
     const [shortIntro, setShortIntro] = useState('');
+    const [fullIntro, setFullIntro] = useState('');
     const [destination, setDestination] = useState('');
     const [kiteactiveExp, setKiteactiveExp] = useState('');
     const [dob, setDob] = useState('');
@@ -35,6 +36,7 @@ const Admin_Edit_Myteam = () => {
                     position,
                     totalExp,
                     shortIntro,
+                    fullIntro,
                     destination,
                     kiteactiveExp,
                     dob,
@@ -52,6 +54,7 @@ const Admin_Edit_Myteam = () => {
                 setPosition(position);
                 setTotalExp(totalExp);
                 setShortIntro(shortIntro);
+                setFullIntro(fullIntro);
                 setDestination(destination);
                 setKiteactiveExp(kiteactiveExp);
                 setDob(dob);
@@ -82,6 +85,7 @@ const Admin_Edit_Myteam = () => {
         formData.append('position', position);
         formData.append('totalExp', totalExp);
         formData.append('shortIntro', shortIntro);
+        formData.append('fullIntro', fullIntro);
         formData.append('destination', destination);
         formData.append('kiteactiveExp', kiteactiveExp);
         formData.append('dob', dob);
@@ -145,7 +149,7 @@ const Admin_Edit_Myteam = () => {
                 <div className="mb-3">
                     <label className="form-label">Total Experience</label>
                     <input
-                        type="number"
+                        type="text"
                         className="form-control"
                         value={totalExp}
                         onChange={(e) => setTotalExp(e.target.value)}
@@ -160,6 +164,14 @@ const Admin_Edit_Myteam = () => {
                     />
                 </div>
                 <div className="mb-3">
+                    <label className="form-label">Full Introduction</label>
+                    <textarea
+                        className="form-control"
+                        value={fullIntro}
+                        onChange={(e) => setFullIntro(e.target.value)}
+                    />
+                </div>
+                <div className="mb-3">
                     <label className="form-label">Destination</label>
                     <input
                         type="text"
@@ -171,7 +183,7 @@ const Admin_Edit_Myteam = () => {
                 <div className="mb-3">
                     <label className="form-label">Kiteactive Experience</label>
                     <input
-                        type="number"
+                        type="text"
                         className="form-control"
                         value={kiteactiveExp}
                         onChange={(e) => setKiteactiveExp(e.target.value)}

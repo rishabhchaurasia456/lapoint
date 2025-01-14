@@ -14,6 +14,7 @@ const Admin_Myteam = () => {
         position: "",
         totalExp: "",
         shortIntro: "",
+        fullIntro: "",
         destination: "",
         kiteactiveExp: "",
         dob: "",
@@ -47,6 +48,7 @@ const Admin_Myteam = () => {
             position: "",
             totalExp: "",
             shortIntro: "",
+            fullIntro: "",
             destination: "",
             kiteactiveExp: "",
             dob: "",
@@ -98,7 +100,7 @@ const Admin_Myteam = () => {
     const handleDelete = async (id) => {
         if (window.confirm("Are you sure you want to delete this team member?")) {
             try {
-                const response = await axios.delete(`${config.API_BASE_URL}/api/admin/delete_team_member/${id}`);
+                const response = await axios.delete(`${config.API_BASE_URL}/api/admin/delete_myteam/${id}`);
                 if (response.status === 200) {
                     alert(response.data.message);
                     setTeamMembers((prevData) => prevData.filter((member) => member._id !== id));
@@ -188,6 +190,14 @@ const Admin_Myteam = () => {
                             value={formData.shortIntro}
                             onChange={handleInputChange}
                             placeholder="Short Introduction"
+                            className="form-control mb-3"
+                            required
+                        ></textarea>
+                        <textarea
+                            name="fullIntro"
+                            value={formData.fullIntro}
+                            onChange={handleInputChange}
+                            placeholder="Full Introduction"
                             className="form-control mb-3"
                             required
                         ></textarea>
