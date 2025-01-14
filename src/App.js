@@ -73,6 +73,10 @@ import Admin_Overview from './Admin/Admin_Overview';
 import Admin_Edit_Overview from './Admin/Admin_Edit_Overview';
 import Admin_Kitespot from './Admin/Admin_Kitespot';
 import Admin_Edit_Kitespots from './Admin/Admin_Edit_Kitespots';
+import Admin_Accommodation from './Admin/Admin_Accommodation';
+import Admin_Edit_Accommodation from './Admin/Admin_Edit_Accommodation';
+import Admin_Myteam from './Admin/Admin_Myteam';
+import Admin_Edit_Myteam from './Admin/Admin_Edit_Myteam';
 
 function App() {
 
@@ -397,6 +401,18 @@ function App() {
               </Admin_Layout>
             } />
 
+            <Route path="/admin/myteam" element={
+              <Admin_Layout>
+                <Admin_Myteam />
+              </Admin_Layout>
+            } />
+
+            <Route path="/admin/edit/myteam/:id" element={
+              <Admin_Layout>
+                <Admin_Edit_Myteam />
+              </Admin_Layout>
+            } />
+
             <Route path="/admin/overview" element={
               <Admin_Layout>
                 <Admin_Overview />
@@ -418,6 +434,18 @@ function App() {
             <Route path="/admin/edit/kitespot/:id" element={
               <Admin_Layout>
                 <Admin_Edit_Kitespots/>
+              </Admin_Layout>
+            } />
+
+            <Route path="/admin/accommodation" element={
+              <Admin_Layout>
+                <Admin_Accommodation />
+              </Admin_Layout>
+            } />
+
+            <Route path="/admin/edit/accommodation/:id" element={
+              <Admin_Layout>
+                <Admin_Edit_Accommodation />
               </Admin_Layout>
             } />
 

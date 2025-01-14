@@ -32,6 +32,9 @@ const Admin_Navbar = () => {
                                     <li className="nav-item">
                                         <Link className="nav-link" aria-current="page" to="/admin/triplink">Trip Link</Link>
                                     </li>
+                                    <li className="nav-item">
+                                        <Link className="nav-link" aria-current="page" to="/admin/myteam">My Team</Link>
+                                    </li>
                                     <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         Trip Tabs
@@ -39,6 +42,7 @@ const Admin_Navbar = () => {
                                         <ul class="dropdown-menu">
                                             <li><Link className="dropdown-item" to="/admin/overview">Overview</Link></li>
                                             <li><Link className="dropdown-item" to="/admin/kitespot">Kitespot</Link></li>
+                                            <li><Link className="dropdown-item" to="/admin/accommodation">Accommodation</Link></li>
                                         </ul>
                                     </li>
                                 </ul>

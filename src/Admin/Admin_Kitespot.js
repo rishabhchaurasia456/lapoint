@@ -117,11 +117,18 @@ const Admin_Kitespot = () => {
 
 
     const handleDelete = async (id) => {
+        if (window.confirm("Are you sure you want to delete this trip Kitespot?")) {
         try {
-            await axios.delete(`${config.API_BASE_URL}/api/admin/delete_Kitespot/${id}`);
+            const response = await axios.delete(`${config.API_BASE_URL}/api/admin/delete_Kitespot/${id}`);
             fetchTabs();
+            if (response.status === 200) {
+                alert(response.data.message);
+                // Update the state to remove the deleted trip
+                setTabs((prevData) => prevData.filter((trip) => trip._id !== id));
+              }
         } catch (error) {
             console.error('Error deleting tab:', error);
+        }
         }
     };
 
