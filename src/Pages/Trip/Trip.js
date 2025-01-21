@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import Kitespots from './TripComponent/Kitespots';
 import Packages from './TripComponent/Packages';
@@ -14,6 +14,9 @@ import { useLocation, useParams } from 'react-router-dom';
 import config from '../../config/config';
 import Booking from '../Kitecamps/Booking';
 import Surfcampslider from '../../Components/Surfcampslider/Surfcampslider';
+import axios from 'axios';
+import Included from './TripComponent/Included';
+import zanzibarcover from "../../Images/tripvedios/zanzibar.webp"
 
 
 
@@ -21,7 +24,122 @@ import Surfcampslider from '../../Components/Surfcampslider/Surfcampslider';
 const Trip = ({ selectedLanguage }) => {
 
     const { trip_name } = useParams();
+    console.log("trip_name", trip_name)
     const trip = trips.find(t => t.name.toLowerCase() === trip_name.toLowerCase());
+
+    const [video, setVideo] = useState(null)
+
+    const [kitespot, setkitespot] = useState(null)
+    const [accommodation, setAccommodation] = useState(null)
+    const [included, setIncluded] = useState(null)
+    const [hosted, setHosted] = useState(null)
+    const [packages, setPackages] = useState(null)
+    const [activity, setActivity] = useState(null)
+
+
+    useEffect(() => {
+        const fetchvideo = async () => {
+            try {
+                const response = await axios.post(`${config.API_BASE_URL}/api/user/get_trip_video/${trip_name}`);
+                console.log("video", response.data.videoid);
+                setVideo(response.data.videoid);
+            } catch (error) {
+                console.error('Error fetching trip levels:', error);
+            }
+        };
+
+        fetchvideo();
+    }, [trip_name]);
+
+    useEffect(() => {
+        const fetchkitespot = async () => {
+            try {
+                const response = await axios.post(`${config.API_BASE_URL}/api/user/get_trip_kitespot/${trip_name}`);
+                console.log("kitespot", response.data);
+                setkitespot(response.data);
+            } catch (error) {
+                console.error('Error fetching trip levels:', error);
+            }
+        };
+
+        fetchkitespot();
+    }, [trip_name]);
+
+    useEffect(() => {
+        const fetchAccommodation = async () => {
+            try {
+                const response = await axios.post(`${config.API_BASE_URL}/api/user/get_trip_accommodation/${trip_name}`);
+                console.log("Accommodation", response.data);
+                setAccommodation(response.data);
+            } catch (error) {
+                console.error('Error fetching trip levels:', error);
+            }
+        };
+
+        fetchAccommodation();
+    }, [trip_name]);
+
+    useEffect(() => {
+        const fetchHosted = async () => {
+            try {
+                const response = await axios.post(`${config.API_BASE_URL}/api/user/get_trip_hosted/${trip_name}`);
+                console.log("Hosted", response.data);
+                setHosted(response.data);
+            } catch (error) {
+                console.error('Error fetching trip levels:', error);
+            }
+        };
+
+        fetchHosted();
+    }, [trip_name]);
+
+    useEffect(() => {
+        const fetchPackages = async () => {
+            try {
+                const response = await axios.post(`${config.API_BASE_URL}/api/user/get_trip_packages/${trip_name}`);
+                console.log("Packages", response.data);
+                setPackages(response.data);
+            } catch (error) {
+                console.error('Error fetching trip levels:', error);
+            }
+        };
+
+        fetchPackages();
+    }, [trip_name]);
+
+    useEffect(() => {
+        const fetchIncluded = async () => {
+            try {
+                const response = await axios.post(`${config.API_BASE_URL}/api/user/get_trip_included/${trip_name}`);
+                console.log("Included", response.data);
+                setIncluded(response.data);
+            } catch (error) {
+                console.error('Error fetching trip levels:', error);
+            }
+        };
+
+        fetchIncluded();
+    }, [trip_name]);
+
+    useEffect(() => {
+        const fetchActivity = async () => {
+            try {
+                const response = await axios.post(`${config.API_BASE_URL}/api/user/get_trip_activitytab/${trip_name}`);
+                console.log("Activity", response.data);
+                setActivity(response.data);
+            } catch (error) {
+                console.error('Error fetching trip levels:', error);
+            }
+        };
+
+        fetchActivity();
+    }, [trip_name]);
+
+    console.log("kitespottttttttttttttt", kitespot)
+    console.log("accommodationnnnnnnnnnnnnnnnn", accommodation)
+    console.log("hosteddddddddddddddddddd", hosted)
+    console.log("includedeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee", included)
+    console.log("Activityyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy", activity)
 
     const [activeTab, setActiveTab] = useState('OVERVIEW');
 
@@ -113,7 +231,7 @@ const Trip = ({ selectedLanguage }) => {
 
     useEffect(() => {
         const handleScroll = () => {
-            const videoContainer = document.querySelector('.video-container');
+            const videoContainer = document.querySelector('.video-containers');
             const videoBottom = videoContainer.getBoundingClientRect().bottom;
 
             if (videoBottom <= 0) {
@@ -148,10 +266,9 @@ const Trip = ({ selectedLanguage }) => {
             </Helmet>
 
             {/* Video section */}
-            <div className="video-container">
+            {/* <div className="video-container">
                 {trip?.vedio && (
                     <>
-                        {/* Ensure the image loads instantly */}
                         {!videoLoaded && (
                             <img
                                 src={trip.backcover}
@@ -176,7 +293,64 @@ const Trip = ({ selectedLanguage }) => {
                         </video>
                     </>
                 )}
+            </div> */}
+
+            <div className="video-containers">
+                {/* Show a placeholder while the video is loading */}
+                {!videoLoaded && (
+                    <img
+                        // src="https://via.placeholder.com/1920x1080"
+                        src={zanzibarcover}
+                        alt="Loading video..."
+                        // style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'absolute', top: 0, left: 0 }}
+                        style={{
+                            width: '100%',
+                            height: '100%',
+                            objectFit: 'cover',
+                            position: 'absolute',
+                            top: 0,
+                            left: 0,
+                            transition: 'opacity 0.5s ease-in-out',
+                            opacity: videoLoaded ? 0 : 1, // Fade out when video is ready
+                            zIndex: 1, // Keep above the video until loaded
+                        }}
+                    />
+                )}
+
+                {/* Load the video iframe when the video ID is available */}
+                {video && (
+                    <iframe
+                        src={`https://player.vimeo.com/video/${video}?autoplay=1&loop=1&muted=1&background=1`}
+                        width="100%"
+                        height="100%"
+                        style={{
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              opacity: videoLoaded ? 1 : 0, // Fade in when loaded
+              zIndex: 0, // Move below the placeholder when loaded
+              transition: 'opacity 0.5s ease-in-out',
+            }}
+                        // style={{ position: 'absolute', top: 0, left: 0 }}
+                        frameBorder="0"
+                        allow="autoplay; fullscreen"
+                        allowFullScreen
+                        onLoad={() => setVideoLoaded(true)} // Marks video as loaded
+                    ></iframe>
+                )}
             </div>
+            {/* <div className="video-container">
+            <iframe
+                src={`https://player.vimeo.com/video/${video}?autoplay=1&loop=1&muted=1&background=1`}
+                width="100%"
+                height="100%"
+                style={{position: 'absolute', top: 0, left: 0}}
+                frameBorder="0"
+                allow="autoplay; fullscreen"
+                allowFullScreen
+            ></iframe>
+            </div> */}
+            
 
 
 
@@ -195,20 +369,26 @@ const Trip = ({ selectedLanguage }) => {
                                     </button>
                                 )} */}
 
-                                {trip?.kitespot && (
+                                {kitespot?.data?.length > 0 && (
                                     <button className="trip_tabs" onClick={() => handleButtonClick('KITESPOTS')}>
                                         <p>KITESPOTS</p>
                                     </button>
                                 )}
 
-                                {trip?.packages && (
+                                {packages?.levelData?.length > 0 && (
                                     <button className="trip_tabs" onClick={() => handleButtonClick('PACKAGES')}>
                                         <p>PACKAGES</p>
                                     </button>
                                 )}
 
+                                {included?.cardData?.length && (
+                                    <button className="trip_tabs" onClick={() => handleButtonClick('PACKAGES')}>
+                                        <p>INCLUDED</p>
+                                    </button>
+                                )}
 
-                                {trip?.accommodation && (
+
+                                {accommodation?.cardData?.length > 0 && (
                                     <button className="trip_tabs" onClick={() => handleButtonClick('ACCOMMODATION')}>
                                         <p>ACCOMMODATION</p>
                                     </button>
@@ -221,13 +401,13 @@ const Trip = ({ selectedLanguage }) => {
                                 )}
 
 
-                                {trip?.hosted && (
+                                {hosted?.members?.length > 0 && (
                                     <button className="trip_tabs" onClick={() => handleButtonClick('HOSTED_BY')}>
                                         <p>HOSTED BY</p>
                                     </button>
                                 )}
 
-                                {trip?.activities && (
+                                {activity?.activityCard?.length > 0 && (
                                     <button className="trip_tabs" onClick={() => handleButtonClick('ACTIVITIES')}>
                                         <p>ACTIVITIES</p>
                                     </button>
@@ -240,10 +420,10 @@ const Trip = ({ selectedLanguage }) => {
                 {/* Sections with IDs */}
                 <div className="container Accordion_tab_cont">
                     {activeTab === 'OVERVIEW' && <div> </div>}
-                    <Overview overviewData={trip.overview} selectedLanguage={selectedLanguage} />
+                    <Overview overviewData={trip.overview} tripname={trip_name} selectedLanguage={selectedLanguage} />
 
 
-
+                    {kitespot?.data?.length > 0 && 
                     <div className="Accordion" id="KITESPOTS">
                         <button onClick={() => toggleSection('KITESPOTS')} className='accor_btn'>
                             KITESPOTS
@@ -253,12 +433,13 @@ const Trip = ({ selectedLanguage }) => {
                         </button>
                         {openSection === 'KITESPOTS' && (
                             <div className="output-container">
-                                {trip?.kitespot && <Kitespots kitespotData={trip.kitespot} selectedLanguage={selectedLanguage} />}
+                                {kitespot?.data?.length > 0 && <Kitespots kitespotData={kitespot} selectedLanguage={selectedLanguage} />}
                             </div>
                         )}
                     </div>
+                    }
 
-
+                    {packages?.levelData?.length > 0 &&
                     <div className="Accordion" id="PACKAGES">
                         <button onClick={() => toggleSection('PACKAGES')} className='accor_btn'>
                             PACKAGES
@@ -268,11 +449,30 @@ const Trip = ({ selectedLanguage }) => {
                         </button>
                         {openSection === 'PACKAGES' && (
                             <div className="output-container">
-                                {trip?.packages && <Packages packagesData={trip.packages} selectedLanguage={selectedLanguage} />}
+                                {packages?.levelData?.length > 0 && <Packages packagesData={packages} selectedLanguage={selectedLanguage} />}
                             </div>
                         )}
                     </div>
+                    }
 
+                    {/* <Included/> */}
+                    {included?.cardData?.length > 0 &&
+                    <div className="Accordion" id="INCLUDED">
+                        <button onClick={() => toggleSection('INCLUDED')} className='accor_btn'>
+                            INCLUDED
+                            <span className="accor_arrow">
+                                <i className={`fa ${openSection === 'INCLUDED' ? 'fa-chevron-up' : 'fa-chevron-down'}`} aria-hidden="true"></i>
+                            </span>
+                        </button>
+                        {openSection === 'INCLUDED' && (
+                            <div className="output-container">
+                                {included?.cardData?.length && <Included data={included} selectedLanguage={selectedLanguage} />}
+                            </div>
+                        )}
+                    </div>
+                    }
+
+                    {accommodation?.cardData?.length > 0 && 
                     <div className="Accordion" id="ACCOMMODATION">
                         <button onClick={() => toggleSection('ACCOMMODATION')} className='accor_btn'>
                             ACCOMMODATION
@@ -282,10 +482,11 @@ const Trip = ({ selectedLanguage }) => {
                         </button>
                         {openSection === 'ACCOMMODATION' && (
                             <div className="output-container">
-                                {trip?.accommodation && <Accomodation accommodationData={trip.accommodation} selectedLanguage={selectedLanguage} />}
+                                {accommodation?.cardData?.length > 0 && <Accomodation accommodationData={accommodation} selectedLanguage={selectedLanguage} />}
                             </div>
                         )}
                     </div>
+                    }
 
                     <div className="Accordion" id="REVIEWS">
                         <button onClick={() => toggleSection('REVIEWS')} className='accor_btn'>
@@ -300,7 +501,8 @@ const Trip = ({ selectedLanguage }) => {
                             </div>
                         )}
                     </div>
-
+                    
+                    {hosted?.members?.length > 0 &&
                     <div className="Accordion" id="HOSTED_BY">
                         <button onClick={() => toggleSection('HOSTED_BY')} className='accor_btn'>
                             HOSTED BY
@@ -310,11 +512,13 @@ const Trip = ({ selectedLanguage }) => {
                         </button>
                         {openSection === 'HOSTED_BY' && (
                             <div className="output-container">
-                                {trip?.hosted && <Hosted hostedData={trip.hosted} selectedLanguage={selectedLanguage} />}
+                                {hosted?.members?.length > 0 && <Hosted hostedData={hosted} selectedLanguage={selectedLanguage} />}
                             </div>
                         )}
                     </div>
+                    }
 
+                    {activity?.activityCard?.length > 0 &&
                     <div className="Accordion" id="ACTIVITIES">
                         <button onClick={() => toggleSection('ACTIVITIES')} className='accor_btn'>
                             ACTIVITIES
@@ -324,10 +528,11 @@ const Trip = ({ selectedLanguage }) => {
                         </button>
                         {openSection === 'ACTIVITIES' && (
                             <div className="output-container">
-                                {trip?.activities && <Activites activitiesData={trip.activities} selectedLanguage={selectedLanguage} />}
+                                {activity?.activityCard?.length > 0 && <Activites activitiesData={activity} selectedLanguage={selectedLanguage} />}
                             </div>
                         )}
                     </div>
+                    }
                     {/* Repeat for other sections with corresponding IDs */}
                 </div>
 

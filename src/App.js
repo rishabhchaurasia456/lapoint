@@ -77,6 +77,17 @@ import Admin_Accommodation from './Admin/Admin_Accommodation';
 import Admin_Edit_Accommodation from './Admin/Admin_Edit_Accommodation';
 import Admin_Myteam from './Admin/Admin_Myteam';
 import Admin_Edit_Myteam from './Admin/Admin_Edit_Myteam';
+import Kitemember from './Pages/Kiteactiveteam/Kitemember';
+import Admin_Hosted from './Admin/Admin_Hosted';
+import Admin_Package from './Admin/Admin_Package';
+import Admin_Add_Package from './Admin/Admin_Add_Package';
+import Admin_Edit_Package from './Admin/Admin_Edit_Package';
+import Admin_Included from './Admin/Admin_Included';
+import Admin_Add_Included from './Admin/Admin_Add_Included';
+import Admin_Edit_Included from './Admin/Admin_Edit_Included';
+import Admin_ActivityTab from './Admin/Admin_ActivityTab';
+import Admin_Add_ActivityTab from './Admin/Admin_Add_ActivityTab';
+import Admin_Videosection from './Admin/Admin_Videosection';
 
 function App() {
 
@@ -199,6 +210,14 @@ function App() {
             <Route path='/Kiteactive_Team' element={
               <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
                 <Kiteactiveteam />
+              </KiteLayout>
+            }>
+            </Route>
+
+            <Route path='/Kiteactive_Team/:id' element={
+              <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
+                {/* <Kiteactiveteam /> */}
+                <Kitemember />
               </KiteLayout>
             }>
             </Route>
@@ -419,6 +438,12 @@ function App() {
               </Admin_Layout>
             } />
 
+            <Route path="/admin/videosection" element={
+              <Admin_Layout>
+                <Admin_Videosection />
+              </Admin_Layout>
+            } />
+
             <Route path="/admin/edit/overview/:id" element={
               <Admin_Layout>
                 <Admin_Edit_Overview />
@@ -446,6 +471,60 @@ function App() {
             <Route path="/admin/edit/accommodation/:id" element={
               <Admin_Layout>
                 <Admin_Edit_Accommodation />
+              </Admin_Layout>
+            } />
+
+            <Route path="/admin/hosted" element={
+              <Admin_Layout>
+                <Admin_Hosted />
+              </Admin_Layout>
+            } />
+
+            <Route path="/admin/packages" element={
+              <Admin_Layout>
+                <Admin_Package />
+              </Admin_Layout>
+            } />
+
+            <Route path="/admin/add/packages" element={
+              <Admin_Layout>
+                <Admin_Add_Package />
+              </Admin_Layout>
+            } />
+
+            <Route path="/admin/edit/packages/:id" element={
+              <Admin_Layout>
+                <Admin_Edit_Package />
+              </Admin_Layout>
+            } />
+
+            <Route path="/admin/included" element={
+              <Admin_Layout>
+                <Admin_Included />
+              </Admin_Layout>
+            } />
+
+            <Route path="/admin/add/included" element={
+              <Admin_Layout>
+                <Admin_Add_Included />
+              </Admin_Layout>
+            } />
+
+            <Route path="/admin/edit/included/:id" element={
+              <Admin_Layout>
+                <Admin_Edit_Included />
+              </Admin_Layout>
+            } />
+
+            <Route path="/admin/activitytab" element={
+              <Admin_Layout>
+                <Admin_ActivityTab />
+              </Admin_Layout>
+            } />
+
+            <Route path="/admin/add/activitytab" element={
+              <Admin_Layout>
+                <Admin_Add_ActivityTab />
               </Admin_Layout>
             } />
 

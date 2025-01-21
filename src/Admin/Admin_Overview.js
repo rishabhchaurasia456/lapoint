@@ -123,24 +123,40 @@ const Admin_Overview = () => {
 
   return (
     <div className="container">
-      <h1>Admin Overview</h1>
-      <Button onClick={handleOpenModal}>Create New Overview</Button>
 
-      <h2>Overview Tabs</h2>
-      <ul>
-        {overviewTabs.map((tab) => (
-          <li key={tab._id}>
-            <h3>{tab.tripName}</h3>
-            <Link className="btn btn-primary me-2" to={`/admin/edit/overview/${tab._id}`}>Edit</Link>&nbsp;
-            <Button
-              variant="danger"
-              onClick={() => axios.delete(`${config.API_BASE_URL}/api/admin/delete_overview/${tab._id}`).then(fetchOverviewTabs)}
-            >
-              Delete
-            </Button>
-          </li>
-        ))}
-      </ul>
+      <div className="row mt-3">
+        <div className="col-sm-6">
+          <h1>Admin Overview</h1>
+        </div>
+        <div className="col-sm-6">
+          <Button className='float-end' onClick={handleOpenModal}>Create New Overview</Button>
+        </div>
+      </div>
+
+      <div className="row p-3">
+        <table className="table table-striped">
+          <thead>
+            <tr>
+              <th>Trip Name</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            {overviewTabs.map((tab) => (
+              <tr key={tab._id}>
+                <td>{tab.tripName}</td>
+                <td>
+                  <Link className="btn btn-primary me-2" to={`/admin/edit/overview/${tab._id}`}>Edit</Link>&nbsp;
+                  <Button
+                    variant="danger"
+                    onClick={() => axios.delete(`${config.API_BASE_URL}/api/admin/delete_overview/${tab._id}`).then(fetchOverviewTabs)}
+                  >Delete</Button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
 
       {/* Modal */}
       <Modal show={showModal} onHide={handleCloseModal}>

@@ -118,39 +118,57 @@ const Admin_Kitespot = () => {
 
     const handleDelete = async (id) => {
         if (window.confirm("Are you sure you want to delete this trip Kitespot?")) {
-        try {
-            const response = await axios.delete(`${config.API_BASE_URL}/api/admin/delete_Kitespot/${id}`);
-            fetchTabs();
-            if (response.status === 200) {
-                alert(response.data.message);
-                // Update the state to remove the deleted trip
-                setTabs((prevData) => prevData.filter((trip) => trip._id !== id));
-              }
-        } catch (error) {
-            console.error('Error deleting tab:', error);
-        }
+            try {
+                const response = await axios.delete(`${config.API_BASE_URL}/api/admin/delete_Kitespot/${id}`);
+                fetchTabs();
+                if (response.status === 200) {
+                    alert(response.data.message);
+                    // Update the state to remove the deleted trip
+                    setTabs((prevData) => prevData.filter((trip) => trip._id !== id));
+                }
+            } catch (error) {
+                console.error('Error deleting tab:', error);
+            }
         }
     };
 
     return (
         <div className="container">
-            <h1>Admin Kitespot</h1>
-            <Button onClick={handleOpenModal}>Create New Kitespot Tab</Button>
 
-            <h2>Kitespot Tabs</h2>
-            <ul>
-                {Array.isArray(tabs) && tabs.length > 0 ? (
-                    tabs.map((tab) => (
-                        <li key={tab._id}>
-                            <h3>{tab.tripName}</h3>
-                            <Link className="btn btn-primary me-2" to={`/admin/edit/kitespot/${tab._id}`}>Edit</Link>&nbsp;
-                            <Button variant="danger" onClick={() => handleDelete(tab._id)}>Delete</Button>
-                        </li>
-                    ))
-                ) : (
-                    <p>Loading or no data available.</p>
-                )}
-            </ul>
+            <div className="row mt-3">
+                <div class="col-sm-6">
+                    <h1>Admin Kitespot</h1>
+                </div>
+                <div class="col-sm-6">
+                    <Button className='float-end' onClick={handleOpenModal}>Create New Kitespot Tab</Button>
+                </div>
+            </div>
+
+            <div className="row p-3">
+                <table className="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Trip Name</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {Array.isArray(tabs) && tabs.length > 0 ? (
+                            tabs.map((tab) => (
+                                <tr key={tab._id}>
+                                    <td>{tab.tripName}</td>
+                                    <td>
+                                        <Link className="btn btn-primary me-2" to={`/admin/edit/kitespot/${tab._id}`}>Edit</Link>&nbsp;
+                                        <Button variant="danger" onClick={() => handleDelete(tab._id)}>Delete</Button>
+                                    </td>
+                                </tr>
+                            ))
+                        ) : (
+                            <p>Loading or no data available.</p>
+                        )}
+                    </tbody>
+                </table>
+            </div>
 
 
             {/* Modal */}

@@ -24,7 +24,7 @@ const Admin_Edit_Overview = () => {
   ]);
 
   useEffect(() => {
-    const fetchRoomDetails = async () => {
+    const fetchoverview = async () => {
       try {
         const response = await axios.post(`${config.API_BASE_URL}/api/admin/get_single_overview/${id}`);
         const trip = response.data;
@@ -53,7 +53,7 @@ const Admin_Edit_Overview = () => {
         console.error('Error fetching trip details:', error);
       }
     };
-    fetchRoomDetails();
+    fetchoverview();
   }, [id]);
 
   const handleImageChange = (index, file) => {

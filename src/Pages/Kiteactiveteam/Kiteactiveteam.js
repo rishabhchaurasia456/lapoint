@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import hosted_earth from "../../Images/earth.webp";
 import hosted_at from "../../Images/at.webp";
@@ -14,6 +14,8 @@ import team8 from "../../Images/Footerimg/Emiel_Rense.webp";
 import team9 from "../../Images/Boaz.png";
 import team10 from "../../Images/jurret.webp";
 import { Link } from 'react-router-dom';
+import axios from 'axios';
+import config from '../../config/config';
 
 
 const hostedData = [
@@ -163,6 +165,19 @@ const hostedData = [
 
 
 const Kiteactiveteam = () => {
+
+  const [hostedData, setHostedData] = useState([])
+
+  useEffect(() => async () => {
+    try {
+      const response = await axios.post(`${config.API_BASE_URL}/api/admin/get_myteam`);
+      console.log("response", response)
+      setHostedData(response.data)
+    } catch (error) {
+      console.error("Error fetching team members:", error);
+    }
+  }, []);
+
   return (
     <>
       <div className="container d-flex flex-column align-items-center justify-content-center surf_container">
@@ -180,42 +195,42 @@ const Kiteactiveteam = () => {
         <div className="row p-4">
           {hostedData.map((item, index) => (
             <div className="col-md-3 col-sm-6 mb-4" key={index}>
-                <div className="hosted_card h-100 shadow text-center">
-              <Link to={item.link} className="nav-link">
+              <div className="hosted_card h-100 shadow text-center">
+                <Link to={item._id} className="nav-link">
                   <img
-                    src={item.hosted_img}
+                    src={`${config.API_BASE_URL}/${item.img.replace(/\\/g, '/')}`}
                     className="hosted_card_img rounded-3"
                     alt={`Image of ${item.hosted_name}`}
                     width="100%"
                   />
                   <div className="hosted_card_body">
-                    <p className="hosted_card_title fw-bold">{item.hosted_name}</p>
-                    <p>{item.hosted_position}</p>
-                    <p className="hosted_card_year">{item.kite_exp}</p>
-                    <p>{item.hosted_para}</p>
+                    <p className="hosted_card_title fw-bold">{item.name}</p>
+                    <p>{item.position}</p>
+                    <p className="hosted_card_year">{item.totalExp}</p>
+                    <p>{item.shortIntro}</p>
                     <p className="hosted_card_last">
                       <img
                         className="me-2"
-                        src={item.hosted_msg_img}
+                        src={hosted_earth}
                         alt="Message icon"
                         style={{ maxWidth: "25px" }}
                       />
-                      <b>{item.hosted_msg_head}</b>
+                      <b>Top Destination</b>
                     </p>
-                    <p className="hosted_card_last2">{item.hosted_msg}</p>
+                    <p className="hosted_card_last2">{item.destination}</p>
                     <p className="hosted_card_last">
                       <img
                         className="me-2"
-                        src={item.hosted_year_img}
+                        src={hosted_at}
                         alt="Year icon"
                         style={{ maxWidth: "25px" }}
                       />
-                      <b>{item.hosted_year_head}</b>
+                      <b>KiteActive</b>
                     </p>
-                    <p className="hosted_card_last2">{item.hosted_year}</p>
+                    <p className="hosted_card_last2">{item.kiteactiveExp}</p>
                   </div>
-              </Link>
-                </div>
+                </Link>
+              </div>
             </div>
           ))}
         </div>

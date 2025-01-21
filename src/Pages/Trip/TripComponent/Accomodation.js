@@ -1,26 +1,26 @@
 import React from 'react'
+import config from '../../../config/config';
 
 const Accomodation = ({ accommodationData, selectedLanguage }) => {
-
 
   return (
     <div>
       <div className="container-fluid">
         <div className="row">
           <div className="col">
-            <p className='surf_text text-center fs-1'>{accommodationData.main_title[selectedLanguage]}</p>
-            <p className='surf_para fs-6 text-center'>{accommodationData.main_desc[selectedLanguage]}</p>
+            <p className='surf_text text-center fs-1'>{accommodationData.mainTitle}</p>
+            <p className='surf_para fs-6 text-center'>{accommodationData.mainDesc}</p>
           </div>
         </div>
       </div>
       <div className="container">
         <div className="row">
-          {accommodationData.card_details.map((item, index) => (
+          {accommodationData.cardData.map((item, index) => (
             <div className="col-md-4 mb-4" key={index}>
               <div className="box-accom-custom m-auto">
-                <img src={item.imgSrc} className='over-img-accomodation ' alt="acc_image" />
-                <div className="box-accom-title">{item.title[selectedLanguage]}</div>
-                <div className="box-accom-des">{item.description[selectedLanguage]}</div>
+                <img src={`${config.API_BASE_URL}/${item.img}`} className='over-img-accomodation ' alt="acc_image" />
+                <div className="box-accom-title">{item.title}</div>
+                <div className="box-accom-des">{item.desc}</div>
               </div>
             </div>
           ))}
@@ -28,9 +28,9 @@ const Accomodation = ({ accommodationData, selectedLanguage }) => {
       </div>
       <div className="container-fluid">
         <div className="row">
-          <p className='surf_text text-center fs-1'>{accommodationData.location_title[selectedLanguage]}</p>
-          <p className='surf_text text-center fs-1'>{accommodationData.location_subtitle[selectedLanguage]}</p>
-          <p className='surf_para fs-6 text-center'>{accommodationData.location_desc[selectedLanguage]}</p>
+          <p className='surf_text text-center fs-1'>{accommodationData.locationTitle}</p>
+          <p className='surf_text text-center fs-1'>{accommodationData.locationSubtitle}</p>
+          <p className='surf_para fs-6 text-center'>{accommodationData.locationDesc}</p>
         </div>
 
         <div className="row">

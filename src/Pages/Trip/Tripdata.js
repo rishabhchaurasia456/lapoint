@@ -1330,6 +1330,8 @@ const trips = [
             ]
         },
 
+        included :{},
+
 
         overview: {
             trip_heading: {

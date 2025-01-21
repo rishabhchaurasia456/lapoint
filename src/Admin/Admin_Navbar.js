@@ -40,16 +40,17 @@ const Admin_Navbar = () => {
                                         Trip Tabs
                                         </a>
                                         <ul class="dropdown-menu">
+                                            <li><Link className="dropdown-item" to="/admin/videosection">Video section</Link></li>
                                             <li><Link className="dropdown-item" to="/admin/overview">Overview</Link></li>
+                                            <li><Link className="dropdown-item" to="/admin/packages">Packages</Link></li>
+                                            <li><Link className="dropdown-item" to="/admin/included">Included</Link></li>
                                             <li><Link className="dropdown-item" to="/admin/kitespot">Kitespot</Link></li>
                                             <li><Link className="dropdown-item" to="/admin/accommodation">Accommodation</Link></li>
+                                            <li><Link className="dropdown-item" to="/admin/hosted">Hosted By</Link></li>
+                                            <li><Link className="dropdown-item" to="/admin/activitytab">Activity Tab</Link></li>
                                         </ul>
                                     </li>
                                 </ul>
-                                <form className="d-flex" role="search">
-                                    <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                                    <button className="btn btn-outline-success" type="submit">Search</button>
-                                </form>
                             </div>
                         </div>
                     </nav>

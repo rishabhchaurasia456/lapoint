@@ -1,6 +1,33 @@
 /* --------------------------------------
 Trip CSS
 -------------------------------------- */
+.video-containers {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  background-color: black; /* Fallback to prevent white flashes */
+}
+
+.video-containers img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-containers iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 175%;
+  object-fit: 'cover',
+}
+
+
 
 
 .tab_container {
