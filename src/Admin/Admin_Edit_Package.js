@@ -31,49 +31,6 @@ const Admin_Edit_Package = () => {
         fetchPackage();
     }, [id]);
 
-
-    // const handleInputChange = (e, field, levelIndex = null, subfield = null, subIndex = null) => {
-    //     const value = e.target.value;
-    //     setFormData(prevFormData => {
-    //         const updatedData = { ...prevFormData };
-    //         if (levelIndex !== null) {
-    //             if (subfield) {
-    //                 if (subIndex !== null) {
-    //                     updatedData.levelData[levelIndex][field][subIndex][subfield] = value;
-    //                 } else {
-    //                     updatedData.levelData[levelIndex][subfield] = value;
-    //                 }
-    //             } else {
-    //                 updatedData.levelData[levelIndex][field] = value;
-    //             }
-    //         } else {
-    //             updatedData[field] = value;
-    //         }
-    //         return updatedData;
-    //     });
-    // };
-
-    // const handleImageChange = (e, field, levelIndex = null) => {
-    //     setFormData(prevFormData => {
-    //         const updatedData = { ...prevFormData };
-    //         if (levelIndex !== null) {
-    //             if(e.target.files && e.target.files[0]){
-    //                 updatedData.levelData[levelIndex][field] = e.target.files[0];
-    //             }else{
-    //                 updatedData.levelData[levelIndex][field] = prevFormData.levelData[levelIndex][field];
-    //             }
-    //         } else {
-    //             if(e.target.files && e.target.files[0]){
-    //                 updatedData[field] = e.target.files[0];
-    //             }else{
-    //                 updatedData[field] = prevFormData[field];
-    //             }
-    //         }
-    //         return updatedData;
-    //     });
-    // };
-
-
     const handleInputChange = (e, field, levelIndex = null, subfield = null) => {
         setFormData(prevFormData => {
             const updatedFormData = { ...prevFormData };
@@ -101,24 +58,6 @@ const Admin_Edit_Package = () => {
         });
     };
 
-
-    // const handleImageChange = (e, field, levelIndex = null) => {
-    //     setFormData(prevFormData => {
-    //         const updatedFormData = { ...prevFormData };
-    //         if (levelIndex !== null) {
-    //             updatedFormData.levelData = updatedFormData.levelData.map((level, index) => {
-    //                 if (index === levelIndex) {
-    //                     return { ...level, [field]: e.target.files[0] || level[field] };
-    //                 }
-    //                 return level;
-    //             });
-    //         } else {
-    //             updatedFormData[field] = e.target.files[0] || updatedFormData[field];
-    //         }
-    //         return updatedFormData;
-    //     });
-    // };
-
     const handleImageChange = (e, field, levelIndex) => {
         setFormData(prevFormData => {
             const updatedFormData = { ...prevFormData };
@@ -131,9 +70,6 @@ const Admin_Edit_Package = () => {
             return updatedFormData;
         });
     };
-
-
-
 
 
     const handleAddLevel = () => {
@@ -199,96 +135,11 @@ const Admin_Edit_Package = () => {
         return true;
     };
 
-
-
-    // const handleSubmit = async (e) => {
-    //     e.preventDefault();
-    //     setLoading(true);
-    //     setSuccess(null);
-
-    //     const formDataToSend = new FormData();
-    //     for (const key in formData) {
-    //         if (key === 'levelData') {
-    //         formDataToSend.append(key, JSON.stringify(formData[key]));
-    //         } else if (formData[key] instanceof File) {
-    //         formDataToSend.append(key, formData[key]); // Append image files
-    //         } else if (typeof formData[key] === 'string' || typeof formData[key] === 'number') {
-    //         formDataToSend.append(key, formData[key]);
-    //         }
-    //     }
-
-    //     try {
-    //         const response = await axios.post(`${config.API_BASE_URL}/api/admin/update_package/${id}`, formDataToSend, {
-    //             headers: {
-    //                 'Content-Type': 'multipart/form-data'
-    //             }
-    //         });
-    //         setSuccess('Package updated successfully!');
-    //         navigate('/admin/packages');
-    //     } catch (error) {
-    //         console.error('Error updating package:', error);
-    //         setSuccess('Error updating package.');
-    //     } finally {
-    //         setLoading(false);
-    //     }
-    // };
-
-    // const handleSubmit = async (e) => {
-    //     e.preventDefault();
-    //     setLoading(true);
-    //     setSuccess(null);
-
-    //     const formDataToSend = new FormData();
-
-    //     for (const key in formData) {
-    //         if (key === 'levelData') {
-    //             formDataToSend.append(key, JSON.stringify(formData[key]));
-    //         } else if (formData[key] instanceof File) {
-    //             formDataToSend.append(key, formData[key], formData[key].name); // Add filename here
-    //         } else {
-    //             formDataToSend.append(key, formData[key]);
-    //         }
-    //     }
-
-    //     try {
-    //         const response = await axios.post(`${config.API_BASE_URL}/api/admin/update_package/${id}`, formDataToSend, {
-    //             headers: {
-    //                 'Content-Type': 'multipart/form-data',
-    //             },
-    //         });
-    //         setSuccess('Package updated successfully!');
-    //         navigate('/admin/packages');
-    //     } catch (error) {
-    //         console.error('Error updating package:', error);
-    //         setSuccess('Error updating package.');
-    //     } finally {
-    //         setLoading(false);
-    //     }
-    // };
-
     const handleSubmit = async (e) => {
         e.preventDefault();
         setLoading(true);
         setSuccess(null);
-
         const formDataToSend = new FormData();
-
-        // for (const key in formData) {
-        //     if (key === 'levelData') {
-        //         formData.levelData.forEach((level, levelIndex) => {
-        //             for (const levelKey in level) {
-        //                 if (level[levelKey] instanceof File) {
-        //                     formDataToSend.append(`levelData[${levelIndex}][${levelKey}]`, level[levelKey], level[levelKey].name);
-        //                 } else {
-        //                     formDataToSend.append(`levelData[${levelIndex}][${levelKey}]`, level[levelKey]);
-        //                 }
-        //             }
-        //         });
-        //     } else {
-        //         formDataToSend.append(key, formData[key]);
-        //     }
-        // }
-
         for (const key in formData) {
             if (key === 'levelData') {
                 formData.levelData.forEach((level, levelIndex) => {
@@ -307,7 +158,6 @@ const Admin_Edit_Package = () => {
                 formDataToSend.append(key, formData[key]);
             }
         }
-
         try {
             const response = await axios.post(`${config.API_BASE_URL}/api/admin/update_package/${id}`, formDataToSend, {
                 headers: { 'Content-Type': 'multipart/form-data' },
