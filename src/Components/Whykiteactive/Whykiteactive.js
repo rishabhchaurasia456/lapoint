@@ -14,7 +14,7 @@ const Whykiteactive = ({data}) => {
         <div>
 
             <div className="container">
-                <h2 className='text-center surf_text text_span mt-5'>Why kiteactive?</h2>
+                <h2 className='text-center surf_text text_span mt-5'>{data?.whySectionHeading}</h2>
 
                 <div className="row">
                     <div className="col-lg-7">
