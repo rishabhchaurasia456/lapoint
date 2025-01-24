@@ -80,6 +80,10 @@ const Admin_Home = () => {
 
         const formData = new FormData();
 
+        // Append all fields to FormData
+        // Object.keys(homeData).forEach((key) => {
+        //     formData.append(key, homeData[key]);
+        // });
         Object.keys(homeData).forEach((key) => {
             if (homeData[key] instanceof File) {
                 // Handle file inputs
