@@ -2,6 +2,7 @@ import React from 'react'
 
 import lifestyleimg1 from '../../Images/img3.webp'
 import { Link } from 'react-router-dom';
+import config from '../../config/config';
 
 const lifestyleData = [
     {
@@ -29,7 +30,7 @@ const lifestyleData = [
 
 
 
-const LIfeStyle = ({ selectedLanguage }) => {
+const LIfeStyle = ({ data, selectedLanguage }) => {
     return (
         <div>
             <div className='container-fluid mt-5 pt-5 mb-5'>
@@ -38,7 +39,7 @@ const LIfeStyle = ({ selectedLanguage }) => {
                         {item.imgPosition === 'left' && (
                             <div className='col-md-6'>
                                 <div className='lifestyle_div'>
-                                    <img src={item.imgSrc} className='lifestyle' alt="lifestyle" />
+                                    <img src={`${config.API_BASE_URL}${data?.teamimg}`} className='lifestyle' alt="lifestyle" />
                                 </div>
                             </div>
                         )}
@@ -46,17 +47,17 @@ const LIfeStyle = ({ selectedLanguage }) => {
                             <div className="life_style_div">
                                 <div className="">
                                     <p className='lifestyle_text'>
-                                        {item.text[selectedLanguage]}
+                                        {data?.teamSubHeading}
                                     </p>
                                 </div>
                                 <div className="">
                                     <h1 className="lifestyle_heading">
-                                        {item.heading[selectedLanguage]}
+                                        {data?.teamHeading}
                                     </h1>
                                 </div>
                                 <div className="">
                                     <h1 className="lifestyle_para">
-                                        <p>{item.para[selectedLanguage]}</p>
+                                        <p>{data?.teamPara}</p>
                                     </h1>
                                 </div>
 

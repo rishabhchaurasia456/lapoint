@@ -88,6 +88,7 @@ import Admin_Edit_Included from './Admin/Admin_Edit_Included';
 import Admin_ActivityTab from './Admin/Admin_ActivityTab';
 import Admin_Add_ActivityTab from './Admin/Admin_Add_ActivityTab';
 import Admin_Videosection from './Admin/Admin_Videosection';
+import Admin_Home from './Admin/Admin_Home';
 
 function App() {
 
@@ -423,6 +424,12 @@ function App() {
             <Route path="/admin/myteam" element={
               <Admin_Layout>
                 <Admin_Myteam />
+              </Admin_Layout>
+            } />
+
+            <Route path="/admin/home" element={
+              <Admin_Layout>
+                <Admin_Home />
               </Admin_Layout>
             } />
 

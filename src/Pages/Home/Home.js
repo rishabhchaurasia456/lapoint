@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { Helmet } from 'react-helmet'
 
@@ -16,6 +16,8 @@ import Level from '../../Components/Level/Level'
 import Fourcard from '../../Components/fourcardsec/Fourcard';
 import Bgdark from '../../Components/Bgdarksec/Bgdark';
 import Whykiteactive from '../../Components/Whykiteactive/Whykiteactive';
+import config from '../../config/config';
+import axios from 'axios';
 
 // import LIfeStyle2 from '../../Components/Lifestyle/LIfeStyle2'
 // import European from '../../Components/European/European'
@@ -24,6 +26,18 @@ import Whykiteactive from '../../Components/Whykiteactive/Whykiteactive';
 
 const Home = ({ selectedLanguage }) => {
   // const HeroSection = React.lazy(() => import('../../Components/HeroSection/HeroSection'));
+
+  const [homeData, setHomeData] = useState(null)
+  useEffect(() => {
+    axios
+      .post(`${config.API_BASE_URL}/api/admin/get_home`)
+      .then((response) => {
+        setHomeData(response.data);
+      })
+      .catch((err) => console.error("Error fetching data:", err));
+  }, []);
+
+  // console.log("homeData", homeData)
   return (
     <div>
       {/* for home page seo  */}
@@ -52,15 +66,15 @@ const Home = ({ selectedLanguage }) => {
       </div>
 
       <HeroSection selectedLanguage={selectedLanguage} />
-      <Fourcard selectedLanguage={selectedLanguage} />
+      <Fourcard data={homeData} selectedLanguage={selectedLanguage} />
       {/* <Surfcamp selectedLanguage={selectedLanguage} /> */}
-      <Surfcampslider selectedLanguage={selectedLanguage} />
-      <Bgdark />
+      <Surfcampslider data={homeData}  selectedLanguage={selectedLanguage} />
+      <Bgdark data={homeData}  />
       <CampReview selectedLanguage={selectedLanguage} />
-      <Whykiteactive />
-      <Level selectedLanguage={selectedLanguage} />
-      <Elementcomp selectedLanguage={selectedLanguage} />
-      <LIfeStyle selectedLanguage={selectedLanguage} />
+      <Whykiteactive data={homeData}  />
+      <Level data={homeData}  selectedLanguage={selectedLanguage} />
+      <Elementcomp data={homeData} selectedLanguage={selectedLanguage} />
+      <LIfeStyle data={homeData} selectedLanguage={selectedLanguage} />
       {/* <European /> */}
       {/* <LIfeStyle2 /> */}
       {/* <Faq selectedLanguage={selectedLanguage} /> */}

@@ -29,7 +29,7 @@ const responsive = {
 };
 
 
-const Surfcampslider = ({ selectedLanguage }) => {
+const Surfcampslider = ({ data, selectedLanguage }) => {
 
     const [cardData, setcardData] = useState([]);
 
@@ -64,7 +64,7 @@ const Surfcampslider = ({ selectedLanguage }) => {
                 <div className='row'>
                     <div className="col text-center">
                         <p className='surf_slider'>
-                            {Carddata_head_section[0].title[selectedLanguage]}
+                            {data?.sliderHeading}
                         </p><br />
                     </div>
                 </div>
@@ -72,7 +72,7 @@ const Surfcampslider = ({ selectedLanguage }) => {
                     <div className="col text-center">
                         <div className='Surf_slider_div'>
                             <h1 className="surf_slider_text">
-                                <span className='text_span'> {Carddata_head_section[0].subtitle[selectedLanguage]} </span> {Carddata_head_section[0].subtitle1[selectedLanguage]}
+                                <span className='text_span'> {data?.sliderHeading}</span>
                             </h1>
                         </div>
                     </div>

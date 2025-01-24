@@ -17,7 +17,7 @@ const content = [
 ];
 
 
-const Elementcomp = ({ selectedLanguage }) => {
+const Elementcomp = ({ data, selectedLanguage }) => {
     return (
         <div>
             <div className="container-fluid ">
@@ -30,9 +30,9 @@ const Elementcomp = ({ selectedLanguage }) => {
                     </div>
                     <div className="col-12 col-md-6">
                         <div>
-                            <h1 className="element_text">{content[0].title[selectedLanguage]}</h1>
+                            <h1 className="element_text">{data?.diggimgHeading}</h1>
                             <p className="element_para">
-                                {content[0].subtitle[selectedLanguage]}
+                            {data?.diggimgpara}
                             </p>
                         </div>
                     </div>
