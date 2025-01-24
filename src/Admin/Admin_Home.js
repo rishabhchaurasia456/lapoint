@@ -80,10 +80,6 @@ const Admin_Home = () => {
 
         const formData = new FormData();
 
-        // Append all fields to FormData
-        // Object.keys(homeData).forEach((key) => {
-        //     formData.append(key, homeData[key]);
-        // });
         Object.keys(homeData).forEach((key) => {
             if (homeData[key] instanceof File) {
                 // Handle file inputs
@@ -156,14 +152,6 @@ const Admin_Home = () => {
                             value={homeData.sliderHeading}
                             onChange={handleChange}
                         />
-                        <label>Why Section Heading:</label>
-                        <input
-                            type="text"
-                            className="form-control"
-                            name="whySectionHeading"
-                            value={homeData.whySectionHeading}
-                            onChange={handleChange}
-                        />
                     </div>
 
                     <div className="row">
@@ -208,6 +196,14 @@ const Admin_Home = () => {
                         )}
                     </div>
                     <div className="row">
+                        <label>Why Section Heading:</label>
+                        <input
+                            type="text"
+                            className="form-control"
+                            name="whySectionHeading"
+                            value={homeData.whySectionHeading}
+                            onChange={handleChange}
+                        />
                         {["whyimg1", "whyimg2", "whyimg3", "whyimg4"].map((key, index) => (
                             <div className="col-md-3" key={key}>
                                 <label>{key}:</label>
@@ -311,7 +307,7 @@ const Admin_Home = () => {
                         <input
                             type="text"
                             className="form-control"
-                            name="diggimgHeading"
+                            name="diggimgpara"
                             value={homeData.diggimgpara}
                             onChange={handleChange}
                         />
