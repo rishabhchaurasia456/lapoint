@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 import Kitespots from './TripComponent/Kitespots';
 import Packages from './TripComponent/Packages';
 import Accomodation from './TripComponent/Accomodation';
-// import Included from './TripComponent/Included';
+import Included from './TripComponent/Included';
 import Review from './TripComponent/Review';
 import Hosted from './TripComponent/Hosted';
 import Activites from './TripComponent/Activites';
@@ -15,7 +15,6 @@ import config from '../../config/config';
 import Booking from '../Kitecamps/Booking';
 import Surfcampslider from '../../Components/Surfcampslider/Surfcampslider';
 import axios from 'axios';
-import Included from './TripComponent/Included';
 import zanzibarcover from "../../Images/tripvedios/zanzibar.webp"
 
 
@@ -140,6 +139,7 @@ const Trip = ({ selectedLanguage }) => {
     console.log("hosteddddddddddddddddddd", hosted)
     console.log("includedeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee", included)
     console.log("Activityyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy", activity)
+    console.log("videooooooooooooooo", video)
 
     const [activeTab, setActiveTab] = useState('OVERVIEW');
 
@@ -147,12 +147,12 @@ const Trip = ({ selectedLanguage }) => {
         setActiveTab('OVERVIEW');
     }, [trip_name])
 
-    // const handleButtonClick = (tabName) => {
-    //     setActiveTab(tabName);
-    // };
 
     const [videoLoaded, setVideoLoaded] = useState(false);
 
+    const handleVideoLoad = () => {
+        setVideoLoaded(true);
+    };
 
     // ----------------------------------------
 
@@ -232,6 +232,11 @@ const Trip = ({ selectedLanguage }) => {
     useEffect(() => {
         const handleScroll = () => {
             const videoContainer = document.querySelector('.video-containers');
+            if (!videoContainer) {
+                setIsFixed(false); // Ensure the state is updated if the container is not found
+                return;
+            }
+
             const videoBottom = videoContainer.getBoundingClientRect().bottom;
 
             if (videoBottom <= 0) {
@@ -266,92 +271,25 @@ const Trip = ({ selectedLanguage }) => {
             </Helmet>
 
             {/* Video section */}
-            {/* <div className="video-container">
-                {trip?.vedio && (
-                    <>
-                        {!videoLoaded && (
-                            <img
-                                src={trip.backcover}
-                                alt="Loading..."
-                                className="placeholder-image"
-                                loading="eager" // Prioritize image loading
-                                style={{ display: videoLoaded ? 'none' : 'block' }} // Hide image once the video loads
-                            />
-                        )}
 
-                        <video key={trip.vedio}
-                            autoPlay
-                            loop
-                            muted
-                            className="background-video"
-                            style={{ display: videoLoaded ? 'block' : 'none' }} // Only display video when it is ready
-                            onCanPlayThrough={() => setVideoLoaded(true)} // Trigger video load completion
-                            loading="lazy" // Lazy load the video for better performance
-                        >
-                            <source src={trip.vedio} type="video/mp4" />
-                            Your browser does not support the video tag.
-                        </video>
-                    </>
-                )}
-            </div> */}
-
-            <div className="video-containers">
-                {/* Show a placeholder while the video is loading */}
-                {!videoLoaded && (
-                    <img
-                        // src="https://via.placeholder.com/1920x1080"
-                        src={zanzibarcover}
-                        alt="Loading video..."
-                        // style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'absolute', top: 0, left: 0 }}
-                        style={{
-                            width: '100%',
-                            height: '100%',
-                            objectFit: 'cover',
-                            position: 'absolute',
-                            top: 0,
-                            left: 0,
-                            transition: 'opacity 0.5s ease-in-out',
-                            opacity: videoLoaded ? 0 : 1, // Fade out when video is ready
-                            zIndex: 1, // Keep above the video until loaded
-                        }}
-                    />
-                )}
-
-                {/* Load the video iframe when the video ID is available */}
-                {video && (
-                    <iframe
-                        src={`https://player.vimeo.com/video/${video}?autoplay=1&loop=1&muted=1&background=1`}
-                        width="100%"
-                        height="100%"
-                        style={{
-              position: 'absolute',
-              top: 0,
-              left: 0,
-              opacity: videoLoaded ? 1 : 0, // Fade in when loaded
-              zIndex: 0, // Move below the placeholder when loaded
-              transition: 'opacity 0.5s ease-in-out',
-            }}
-                        // style={{ position: 'absolute', top: 0, left: 0 }}
-                        frameBorder="0"
-                        allow="autoplay; fullscreen"
-                        allowFullScreen
-                        onLoad={() => setVideoLoaded(true)} // Marks video as loaded
-                    ></iframe>
+            <div className="video-container">
+                {video ? (
+                    <video
+                        autoPlay
+                        loop
+                        muted
+                        className="background-video"
+                        onLoadedData={handleVideoLoad}
+                        loading="lazy"
+                        style={{ display: videoLoaded ? 'block' : 'none' }}
+                    >
+                        <source src={video} type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                ) : (
+                    <img src={zanzibarcover} alt="Loading..." className="placeholder-image" />
                 )}
             </div>
-            {/* <div className="video-container">
-            <iframe
-                src={`https://player.vimeo.com/video/${video}?autoplay=1&loop=1&muted=1&background=1`}
-                width="100%"
-                height="100%"
-                style={{position: 'absolute', top: 0, left: 0}}
-                frameBorder="0"
-                allow="autoplay; fullscreen"
-                allowFullScreen
-            ></iframe>
-            </div> */}
-            
-
 
 
             <div>
@@ -423,69 +361,69 @@ const Trip = ({ selectedLanguage }) => {
                     <Overview overviewData={trip.overview} tripname={trip_name} selectedLanguage={selectedLanguage} />
 
 
-                    {kitespot?.data?.length > 0 && 
-                    <div className="Accordion" id="KITESPOTS">
-                        <button onClick={() => toggleSection('KITESPOTS')} className='accor_btn'>
-                            KITESPOTS
-                            <span className="accor_arrow">
-                                <i className={`fa ${openSection === 'KITESPOTS' ? 'fa-chevron-up' : 'fa-chevron-down'}`} aria-hidden="true"></i>
-                            </span>
-                        </button>
-                        {openSection === 'KITESPOTS' && (
-                            <div className="output-container">
-                                {kitespot?.data?.length > 0 && <Kitespots kitespotData={kitespot} selectedLanguage={selectedLanguage} />}
-                            </div>
-                        )}
-                    </div>
+                    {kitespot?.data?.length > 0 &&
+                        <div className="Accordion" id="KITESPOTS">
+                            <button onClick={() => toggleSection('KITESPOTS')} className='accor_btn'>
+                                KITESPOTS
+                                <span className="accor_arrow">
+                                    <i className={`fa ${openSection === 'KITESPOTS' ? 'fa-chevron-up' : 'fa-chevron-down'}`} aria-hidden="true"></i>
+                                </span>
+                            </button>
+                            {openSection === 'KITESPOTS' && (
+                                <div className="output-container">
+                                    {kitespot?.data?.length > 0 && <Kitespots kitespotData={kitespot} selectedLanguage={selectedLanguage} />}
+                                </div>
+                            )}
+                        </div>
                     }
 
                     {packages?.levelData?.length > 0 &&
-                    <div className="Accordion" id="PACKAGES">
-                        <button onClick={() => toggleSection('PACKAGES')} className='accor_btn'>
-                            PACKAGES
-                            <span className="accor_arrow">
-                                <i className={`fa ${openSection === 'KITESPOTS' ? 'fa-chevron-up' : 'fa-chevron-down'}`} aria-hidden="true"></i>
-                            </span>
-                        </button>
-                        {openSection === 'PACKAGES' && (
-                            <div className="output-container">
-                                {packages?.levelData?.length > 0 && <Packages packagesData={packages} selectedLanguage={selectedLanguage} />}
-                            </div>
-                        )}
-                    </div>
+                        <div className="Accordion" id="PACKAGES">
+                            <button onClick={() => toggleSection('PACKAGES')} className='accor_btn'>
+                                PACKAGES
+                                <span className="accor_arrow">
+                                    <i className={`fa ${openSection === 'KITESPOTS' ? 'fa-chevron-up' : 'fa-chevron-down'}`} aria-hidden="true"></i>
+                                </span>
+                            </button>
+                            {openSection === 'PACKAGES' && (
+                                <div className="output-container">
+                                    {packages?.levelData?.length > 0 && <Packages packagesData={packages} selectedLanguage={selectedLanguage} />}
+                                </div>
+                            )}
+                        </div>
                     }
 
                     {/* <Included/> */}
                     {included?.cardData?.length > 0 &&
-                    <div className="Accordion" id="INCLUDED">
-                        <button onClick={() => toggleSection('INCLUDED')} className='accor_btn'>
-                            INCLUDED
-                            <span className="accor_arrow">
-                                <i className={`fa ${openSection === 'INCLUDED' ? 'fa-chevron-up' : 'fa-chevron-down'}`} aria-hidden="true"></i>
-                            </span>
-                        </button>
-                        {openSection === 'INCLUDED' && (
-                            <div className="output-container">
-                                {included?.cardData?.length && <Included data={included} selectedLanguage={selectedLanguage} />}
-                            </div>
-                        )}
-                    </div>
+                        <div className="Accordion" id="INCLUDED">
+                            <button onClick={() => toggleSection('INCLUDED')} className='accor_btn'>
+                                INCLUDED
+                                <span className="accor_arrow">
+                                    <i className={`fa ${openSection === 'INCLUDED' ? 'fa-chevron-up' : 'fa-chevron-down'}`} aria-hidden="true"></i>
+                                </span>
+                            </button>
+                            {openSection === 'INCLUDED' && (
+                                <div className="output-container">
+                                    {included?.cardData?.length && <Included data={included} selectedLanguage={selectedLanguage} />}
+                                </div>
+                            )}
+                        </div>
                     }
 
-                    {accommodation?.cardData?.length > 0 && 
-                    <div className="Accordion" id="ACCOMMODATION">
-                        <button onClick={() => toggleSection('ACCOMMODATION')} className='accor_btn'>
-                            ACCOMMODATION
-                            <span className="accor_arrow">
-                                <i className={`fa ${openSection === 'KITESPOTS' ? 'fa-chevron-up' : 'fa-chevron-down'}`} aria-hidden="true"></i>
-                            </span>
-                        </button>
-                        {openSection === 'ACCOMMODATION' && (
-                            <div className="output-container">
-                                {accommodation?.cardData?.length > 0 && <Accomodation accommodationData={accommodation} selectedLanguage={selectedLanguage} />}
-                            </div>
-                        )}
-                    </div>
+                    {accommodation?.cardData?.length > 0 &&
+                        <div className="Accordion" id="ACCOMMODATION">
+                            <button onClick={() => toggleSection('ACCOMMODATION')} className='accor_btn'>
+                                ACCOMMODATION
+                                <span className="accor_arrow">
+                                    <i className={`fa ${openSection === 'KITESPOTS' ? 'fa-chevron-up' : 'fa-chevron-down'}`} aria-hidden="true"></i>
+                                </span>
+                            </button>
+                            {openSection === 'ACCOMMODATION' && (
+                                <div className="output-container">
+                                    {accommodation?.cardData?.length > 0 && <Accomodation accommodationData={accommodation} selectedLanguage={selectedLanguage} />}
+                                </div>
+                            )}
+                        </div>
                     }
 
                     <div className="Accordion" id="REVIEWS">
@@ -501,37 +439,37 @@ const Trip = ({ selectedLanguage }) => {
                             </div>
                         )}
                     </div>
-                    
+
                     {hosted?.members?.length > 0 &&
-                    <div className="Accordion" id="HOSTED_BY">
-                        <button onClick={() => toggleSection('HOSTED_BY')} className='accor_btn'>
-                            HOSTED BY
-                            <span className="accor_arrow">
-                                <i className={`fa ${openSection === 'KITESPOTS' ? 'fa-chevron-up' : 'fa-chevron-down'}`} aria-hidden="true"></i>
-                            </span>
-                        </button>
-                        {openSection === 'HOSTED_BY' && (
-                            <div className="output-container">
-                                {hosted?.members?.length > 0 && <Hosted hostedData={hosted} selectedLanguage={selectedLanguage} />}
-                            </div>
-                        )}
-                    </div>
+                        <div className="Accordion" id="HOSTED_BY">
+                            <button onClick={() => toggleSection('HOSTED_BY')} className='accor_btn'>
+                                HOSTED BY
+                                <span className="accor_arrow">
+                                    <i className={`fa ${openSection === 'KITESPOTS' ? 'fa-chevron-up' : 'fa-chevron-down'}`} aria-hidden="true"></i>
+                                </span>
+                            </button>
+                            {openSection === 'HOSTED_BY' && (
+                                <div className="output-container">
+                                    {hosted?.members?.length > 0 && <Hosted hostedData={hosted} selectedLanguage={selectedLanguage} />}
+                                </div>
+                            )}
+                        </div>
                     }
 
                     {activity?.activityCard?.length > 0 &&
-                    <div className="Accordion" id="ACTIVITIES">
-                        <button onClick={() => toggleSection('ACTIVITIES')} className='accor_btn'>
-                            ACTIVITIES
-                            <span className="accor_arrow">
-                                <i className={`fa ${openSection === 'KITESPOTS' ? 'fa-chevron-up' : 'fa-chevron-down'}`} aria-hidden="true"></i>
-                            </span>
-                        </button>
-                        {openSection === 'ACTIVITIES' && (
-                            <div className="output-container">
-                                {activity?.activityCard?.length > 0 && <Activites activitiesData={activity} selectedLanguage={selectedLanguage} />}
-                            </div>
-                        )}
-                    </div>
+                        <div className="Accordion" id="ACTIVITIES">
+                            <button onClick={() => toggleSection('ACTIVITIES')} className='accor_btn'>
+                                ACTIVITIES
+                                <span className="accor_arrow">
+                                    <i className={`fa ${openSection === 'KITESPOTS' ? 'fa-chevron-up' : 'fa-chevron-down'}`} aria-hidden="true"></i>
+                                </span>
+                            </button>
+                            {openSection === 'ACTIVITIES' && (
+                                <div className="output-container">
+                                    {activity?.activityCard?.length > 0 && <Activites activitiesData={activity} selectedLanguage={selectedLanguage} />}
+                                </div>
+                            )}
+                        </div>
                     }
                     {/* Repeat for other sections with corresponding IDs */}
                 </div>

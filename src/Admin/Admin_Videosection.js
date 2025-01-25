@@ -136,7 +136,7 @@ const Admin_Videosection = () => {
                             />
                         </div>
                         <div className="mb-3">
-                            <label>Video ID</label>
+                            <label>Video Link</label>
                             <input
                                 type="text"
                                 name="videoid"

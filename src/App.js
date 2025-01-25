@@ -89,6 +89,7 @@ import Admin_ActivityTab from './Admin/Admin_ActivityTab';
 import Admin_Add_ActivityTab from './Admin/Admin_Add_ActivityTab';
 import Admin_Videosection from './Admin/Admin_Videosection';
 import Admin_Home from './Admin/Admin_Home';
+import Admin_VideoUpload from './Admin/Admin_VideoUpload';
 
 function App() {
 
@@ -217,7 +218,6 @@ function App() {
 
             <Route path='/kiteactive_team/:id' element={
               <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
-                {/* <Kiteactiveteam /> */}
                 <Kitemember />
               </KiteLayout>
             }>
@@ -622,6 +622,12 @@ function App() {
             <Route path="/admin/edit/coupon/:id" element={
               <Admin_Layout>
                 <Admin_Edit_Coupon />
+              </Admin_Layout>
+            } />
+
+            <Route path="/admin/video" element={
+              <Admin_Layout>
+                <Admin_VideoUpload />
               </Admin_Layout>
             } />
 

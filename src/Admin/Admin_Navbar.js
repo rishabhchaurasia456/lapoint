@@ -58,7 +58,13 @@ const Admin_Navbar = () => {
                                             <li><Link className="dropdown-item" to="/admin/activitytab">Activity Tab</Link></li>
                                         </ul>
                                     </li>
+                                    <li className="nav-item float-end">
+                                        
+                                    </li>
                                 </ul>
+                                    <form class="d-flex" role="search">
+                                        <Link className="nav-link me-5" aria-current="page" to="/admin/video">Video</Link>
+                                    </form>
                             </div>
                         </div>
                     </nav>
