@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useState } from 'react';
+import config from '../config/config';
 
 const Admin_Add_Package = () => {
   const [formData, setFormData] = useState({
@@ -137,7 +138,7 @@ const Admin_Add_Package = () => {
     });
   
     try {
-      const response = await axios.post('http://localhost:5500/api/admin/create_package', formDataToSend, {
+      const response = await axios.post(`${config.API_BASE_URL}/api/admin/create_package`, formDataToSend, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -145,6 +146,7 @@ const Admin_Add_Package = () => {
   
       if (response.data.success) {
         console.log('Form submitted successfully:', response.data);
+        alert('Data submitted successfully!');
       } else {
         console.error('Submission failed:', response.data.message);
       }
