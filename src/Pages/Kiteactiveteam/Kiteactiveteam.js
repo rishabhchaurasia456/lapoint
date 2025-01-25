@@ -165,28 +165,33 @@ const hostedData = [
 
 
 const Kiteactiveteam = () => {
+  const [hostedData, setHostedData] = useState([]);
 
-  const [hostedData, setHostedData] = useState([])
+  useEffect(() => {
+    // Define the async function
+    const fetchTeamMembers = async () => {
+      try {
+        const response = await axios.post(`${config.API_BASE_URL}/api/admin/get_myteam`);
+        console.log("my team response", response);
+        setHostedData(response.data);
+      } catch (error) {
+        console.error("Error fetching team members:", error);
+      }
+    };
 
-  useEffect(() => async () => {
-    try {
-      const response = await axios.post(`${config.API_BASE_URL}/api/admin/get_myteam`);
-      console.log("my team response", response)
-      setHostedData(response.data)
-    } catch (error) {
-      console.error("Error fetching team members:", error);
-    }
-  }, []);
+    // Call the async function
+    fetchTeamMembers();
+  }, []); // Dependency array ensures this runs only once when the component mounts
 
   return (
     <>
       <div className="container d-flex flex-column align-items-center justify-content-center surf_container">
         <div className="row">
           <div className="col">
-            <h1 className=" surf_text text-center"> <span className='text_span'>meet our team</span></h1>
-            <p className='surf_para mt-3 '>
-              A group of Social and professional kiters
-            </p>
+            <h1 className="surf_text text-center">
+              <span className="text_span">meet our team</span>
+            </h1>
+            <p className="surf_para mt-3">A group of Social and professional kiters</p>
           </div>
         </div>
       </div>
@@ -213,7 +218,7 @@ const Kiteactiveteam = () => {
                         className="me-2"
                         src={hosted_earth}
                         alt="Message icon"
-                        style={{ maxWidth: "25px" }}
+                        style={{ maxWidth: '25px' }}
                       />
                       <b>Top Destination</b>
                     </p>
@@ -223,7 +228,7 @@ const Kiteactiveteam = () => {
                         className="me-2"
                         src={hosted_at}
                         alt="Year icon"
-                        style={{ maxWidth: "25px" }}
+                        style={{ maxWidth: '25px' }}
                       />
                       <b>KiteActive</b>
                     </p>
@@ -235,8 +240,6 @@ const Kiteactiveteam = () => {
           ))}
         </div>
       </div>
-
-
     </>
   );
 };

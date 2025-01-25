@@ -62,7 +62,7 @@ const LIfeStyle = ({ data, selectedLanguage }) => {
                                 </div>
 
                                 <div>
-                                    <Link to="/Kiteactive_Team" className=' lifestyle_btn'>Meet Our Team</Link>
+                                    <Link to="/kiteactive_team" className=' lifestyle_btn'>Meet Our Team</Link>
                                 </div>
                             </div>
                         </div>

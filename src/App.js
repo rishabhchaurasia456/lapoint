@@ -208,14 +208,14 @@ function App() {
             </Route>
 
 
-            <Route path='/Kiteactive_Team' element={
+            <Route path='/kiteactive_team' element={
               <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
                 <Kiteactiveteam />
               </KiteLayout>
             }>
             </Route>
 
-            <Route path='/Kiteactive_Team/:id' element={
+            <Route path='/kiteactive_team/:id' element={
               <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
                 {/* <Kiteactiveteam /> */}
                 <Kitemember />
