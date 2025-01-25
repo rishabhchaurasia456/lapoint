@@ -60,6 +60,7 @@
 
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import config from '../config/config';
 
 const Admin_VideoUpload = () => {
   const [selectedFile, setSelectedFile] = useState(null);
@@ -70,7 +71,7 @@ const Admin_VideoUpload = () => {
   useEffect(() => {
     const fetchVideos = async () => {
       try {
-        const response = await axios.get('http://localhost:5500/api/videos/getvedio');
+        const response = await axios.get(`${config.API_BASE_URL}/api/videos/getvedio`);
         setVideoList(response.data); // Set the list of videos from the database
       } catch (error) {
         console.error('Error fetching videos:', error);
@@ -96,7 +97,7 @@ const Admin_VideoUpload = () => {
     formData.append('video', selectedFile);
 
     try {
-      const response = await axios.post('http://localhost:5500/api/videos/upload-video', formData, {
+      const response = await axios.post(`${config.API_BASE_URL}/api/videos/upload-video`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
