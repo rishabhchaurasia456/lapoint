@@ -1,63 +1,3 @@
-// import React, { useState } from 'react';
-// import axios from 'axios';
-
-// const Admin_VideoUpload = () => {
-//   const [selectedFile, setSelectedFile] = useState(null);
-//   const [videoLink, setVideoLink] = useState('');
-
-//   const handleFileChange = (event) => {
-//     setSelectedFile(event.target.files[0]);
-//   };
-
-//   const handleUpload = async () => {
-//     if (!selectedFile) {
-//       alert('Please select a video to upload');
-//       return;
-//     }
-
-//     const formData = new FormData();
-//     formData.append('video', selectedFile);
-
-//     try {
-//       const response = await axios.post('http://localhost:5500/api/videos/upload-video', formData, {
-//         headers: {
-//           'Content-Type': 'multipart/form-data',
-//         },
-//       });
-
-//       setVideoLink(response.data.videoUrl);
-//     } catch (error) {
-//       console.error('Error uploading video:', error);
-//       alert('Failed to upload video');
-//     }
-//   };
-
-//   return (
-//     <div className="video-upload">
-//       <h2>Upload a Video</h2>
-//       <input type="file" accept="video/*" onChange={handleFileChange} />
-//       <button onClick={handleUpload}>Upload Video</button>
-
-//       {videoLink && (
-//         <div>
-//           <h3>Video Uploaded Successfully!</h3>
-//           <p>
-//             <a href={videoLink} target="_blank" rel="noopener noreferrer">
-//               {videoLink}
-//             </a>
-//           </p>
-//         </div>
-//       )}
-//     </div>
-//   );
-// };
-
-// export default Admin_VideoUpload;
-
-
-
-
-
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import config from '../config/config';
@@ -66,6 +6,7 @@ const Admin_VideoUpload = () => {
   const [selectedFile, setSelectedFile] = useState(null);
   const [videoLink, setVideoLink] = useState('');
   const [videoList, setVideoList] = useState([]); // To store all saved links
+  const [isUploading, setIsUploading] = useState(false); // Track upload progress
 
   // Fetch all video links from the database
   useEffect(() => {
@@ -97,6 +38,8 @@ const Admin_VideoUpload = () => {
     formData.append('video', selectedFile);
 
     try {
+      setIsUploading(true); // Start uploading
+
       const response = await axios.post(`${config.API_BASE_URL}/api/videos/upload-video`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
@@ -108,44 +51,59 @@ const Admin_VideoUpload = () => {
 
       // Update the list of videos after upload
       setVideoList((prevList) => [...prevList, response.data.video]);
+
     } catch (error) {
       console.error('Error uploading video:', error);
       alert('Failed to upload video');
+    } finally {
+      setIsUploading(false); // End uploading
     }
   };
 
   return (
-    <div className="video-upload">
-      <h2>Upload a Video</h2>
-      <input type="file" accept="video/*" onChange={handleFileChange} />
-      <button onClick={handleUpload}>Upload Video</button>
+    <div className="container">
+      <div className="row">
+        <div className="video-upload">
+          <h2>Upload a Video</h2>
+          <div className="row">
+            <div className="col-6">
+              <input type="file" className='form-control' accept="video/*" onChange={handleFileChange} />
+            </div>
+            <div className="col-6">
+              <button onClick={handleUpload} className='btn btn-success' disabled={isUploading}>Upload Video</button>
+            </div>
+          </div>
 
-      {videoLink && (
-        <div>
-          <h3>Video Uploaded Successfully!</h3>
-          <p>
-            <a href={videoLink} target="_blank" rel="noopener noreferrer">
-              {videoLink}
-            </a>
-          </p>
-        </div>
-      )}
+          {isUploading && <p className='p-3 text-success-emphasis bg-success-subtle border border-success-subtle rounded-3'>Uploading...</p>} {/* Show uploading message */}
 
-      <div className="video-list">
-        <h3>Saved Videos</h3>
-        {videoList.length > 0 ? (
-          <ul>
-            {videoList.map((video) => (
-              <li key={video._id}>
-                <a href={video.videoUrl} target="_blank" rel="noopener noreferrer">
-                  {video.videoUrl}
+          {videoLink && (
+            <div>
+              <h3>Video Uploaded Successfully!</h3>
+              <p>
+                <a href={videoLink} target="_blank" rel="noopener noreferrer">
+                  {videoLink}
                 </a>
-              </li>
-            ))}
-          </ul>
-        ) : (
-          <p>No videos found</p>
-        )}
+              </p>
+            </div>
+          )}
+
+          <div className="video-list">
+            <h3>Saved Videos</h3>
+            {videoList.length > 0 ? (
+              <ul>
+                {videoList.map((video) => (
+                  <li key={video._id}>
+                    <a href={video.videoUrl} target="_blank" rel="noopener noreferrer">
+                      {video.videoUrl}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p>No videos found</p>
+            )}
+          </div>
+        </div>
       </div>
     </div>
   );
