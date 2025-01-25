@@ -171,7 +171,7 @@ const Kiteactiveteam = () => {
   useEffect(() => async () => {
     try {
       const response = await axios.post(`${config.API_BASE_URL}/api/admin/get_myteam`);
-      console.log("response", response)
+      console.log("my team response", response)
       setHostedData(response.data)
     } catch (error) {
       console.error("Error fetching team members:", error);
