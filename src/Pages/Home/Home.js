@@ -65,7 +65,7 @@ const Home = ({ selectedLanguage }) => {
       </Suspense> */}
       </div>
 
-      <HeroSection selectedLanguage={selectedLanguage} />
+      <HeroSection data={homeData} selectedLanguage={selectedLanguage} />
       <Fourcard data={homeData} selectedLanguage={selectedLanguage} />
       {/* <Surfcamp selectedLanguage={selectedLanguage} /> */}
       <Surfcampslider data={homeData}  selectedLanguage={selectedLanguage} />

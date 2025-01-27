@@ -4,6 +4,9 @@ import config from "../config/config";
 
 const Admin_Home = () => {
     const [homeData, setHomeData] = useState({
+        videoLink: "",
+        subHeading: "",
+        heading: "",
         text1: "",
         text2: "",
         text3: "",
@@ -109,6 +112,34 @@ const Admin_Home = () => {
         <div>
             <div className="container">
                 <form onSubmit={handleSubmit} encType="multipart/form-data">
+
+                    <div className="row">
+                        <label>Home page Video link:</label>
+                        <input
+                            type="text"
+                            className="form-control"
+                            name="videoLink"
+                            value={homeData.videoLink}
+                            onChange={handleChange}
+                        />
+                        <label>Hero section sub heading:</label>
+                        <input
+                            type="text"
+                            className="form-control"
+                            name="subHeading"
+                            value={homeData.subHeading}
+                            onChange={handleChange}
+                        />
+                        <label>Hero section heading:</label>
+                        <input
+                            type="text"
+                            className="form-control"
+                            name="heading"
+                            value={homeData.heading}
+                            onChange={handleChange}
+                        />
+                    </div>
+
                     {/* Image Inputs */}
                     <div className="row">
                         {["img1", "img2", "img3", "img4"].map((key, index) => (
