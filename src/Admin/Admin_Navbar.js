@@ -41,6 +41,7 @@ const Admin_Navbar = () => {
                                         </a>
                                         <ul class="dropdown-menu">
                                             <li><Link className="dropdown-item" to="/admin/home">Home</Link></li>
+                                            <li><Link className="dropdown-item" to="/admin/add_on_activity">Add on activity</Link></li>
                                         </ul>
                                     </li>
                                     <li class="nav-item dropdown">

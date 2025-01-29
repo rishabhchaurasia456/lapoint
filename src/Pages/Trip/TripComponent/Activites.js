@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import { Link } from 'react-router-dom';
+import config from '../../../config/config';
 
 const responsive = {
   superLargeDesktop: {
@@ -77,14 +78,14 @@ const Activites = ({ activitiesData, selectedLanguage }) => {
           <div className="col">
             <Carousel ref={carouselRef} responsive={responsive} arrows={false}>
               {/* Map activityCard array */}
-              {activitiesData.activityCard.map((card, index) => (
+              {activitiesData.activities.map((card, index) => (
                 <div className="border w-100 px-2 my-5 border-0" key={card._id || index}>
                   <div>
-                    <Link to="#" className="nav-link">
+                    <Link to={`/activites/${card._id}`} className="nav-link">
                       <div
                         className="slid_card_backimg rounded-4"
                         style={{
-                          backgroundImage: `url(${card.cardimg})`,
+                          backgroundImage: `url(${config.API_BASE_URL}/${card.cardimg})`,
                           backgroundSize: 'cover',
                           backgroundPosition: 'center',
                         }}

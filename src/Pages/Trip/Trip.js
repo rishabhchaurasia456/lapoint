@@ -345,7 +345,7 @@ const Trip = ({ selectedLanguage }) => {
                                     </button>
                                 )}
 
-                                {activity?.activityCard?.length > 0 && (
+                                {activity?.activities?.length > 0 && (
                                     <button className="trip_tabs" onClick={() => handleButtonClick('ACTIVITIES')}>
                                         <p>ACTIVITIES</p>
                                     </button>
@@ -456,7 +456,7 @@ const Trip = ({ selectedLanguage }) => {
                         </div>
                     }
 
-                    {activity?.activityCard?.length > 0 &&
+                    {activity?.activities?.length > 0 &&
                         <div className="Accordion" id="ACTIVITIES">
                             <button onClick={() => toggleSection('ACTIVITIES')} className='accor_btn'>
                                 ACTIVITIES
@@ -466,7 +466,7 @@ const Trip = ({ selectedLanguage }) => {
                             </button>
                             {openSection === 'ACTIVITIES' && (
                                 <div className="output-container">
-                                    {activity?.activityCard?.length > 0 && <Activites activitiesData={activity} selectedLanguage={selectedLanguage} />}
+                                    {activity?.activities?.length > 0 && <Activites activitiesData={activity} selectedLanguage={selectedLanguage} />}
                                 </div>
                             )}
                         </div>

@@ -90,6 +90,10 @@ import Admin_Add_ActivityTab from './Admin/Admin_Add_ActivityTab';
 import Admin_Videosection from './Admin/Admin_Videosection';
 import Admin_Home from './Admin/Admin_Home';
 import Admin_VideoUpload from './Admin/Admin_VideoUpload';
+import Admin_Add_ActivityPage from './Admin/Admin_Add_ActivitesPage';
+import Admin_ActivityPage from './Admin/Admin_ActivityPage';
+import Admin_Edit_ActivityPage from './Admin/Admin_Edit_ActivityPage';
+import ActivityPage from './Pages/ActivityPage';
 
 function App() {
 
@@ -291,6 +295,13 @@ function App() {
             {/* ------------------------------------------ */}
 
 
+            <Route path='/activites/:id' element={
+              <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
+                <ActivityPage />
+              </KiteLayout>
+            }>
+            </Route>
+
             <Route path='/Become_Partner' element={
               <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
                 <Becomepartner />
@@ -430,6 +441,25 @@ function App() {
             <Route path="/admin/home" element={
               <Admin_Layout>
                 <Admin_Home />
+              </Admin_Layout>
+            } />
+
+
+            <Route path="/admin/add_on_activity" element={
+              <Admin_Layout>
+                <Admin_ActivityPage />
+              </Admin_Layout>
+            } />
+
+            <Route path="/admin/add/add_on_activity" element={
+              <Admin_Layout>
+                <Admin_Add_ActivityPage/>
+              </Admin_Layout>
+            } />
+
+            <Route path="/admin/edit/add_on_activity/:id" element={
+              <Admin_Layout>
+                <Admin_Edit_ActivityPage />
               </Admin_Layout>
             } />
 
