@@ -72,7 +72,7 @@ const Home = ({ selectedLanguage }) => {
       <Bgdark data={homeData}  />
       <CampReview selectedLanguage={selectedLanguage} />
       <Whykiteactive data={homeData}  />
-      <Level data={homeData}  selectedLanguage={selectedLanguage} />
+      <Level selectedLanguage={selectedLanguage} />
       <Elementcomp data={homeData} selectedLanguage={selectedLanguage} />
       <LIfeStyle data={homeData} selectedLanguage={selectedLanguage} />
       {/* <European /> */}
