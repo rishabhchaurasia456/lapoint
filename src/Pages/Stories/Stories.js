@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import '../../Pages/Pages.css';
 import headerbackimg from '../../Images/storiesban.png'
 
@@ -10,6 +10,8 @@ import img5 from '../../Images/stroyimg5.webp'
 import img6 from '../../Images/stroyimg6.webp'
 import img7 from '../../Images/stroyimg7webp.webp'
 import img8 from '../../Images/stroyimg8webp.webp'
+import config from '../../config/config';
+import axios from 'axios';
 
 const cardData = [
     {
@@ -79,6 +81,22 @@ const cardData = [
 
 
 const Stories = () => {
+
+    const [cardData, setcardData] = useState([]);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await axios.post(`${config.API_BASE_URL}/api/user/getall_storiespage`);
+                setcardData(response.data);
+                console.log(response.data);
+            } catch (error) {
+                console.error("Error fetching data", error);
+            }
+        };
+
+        fetchData();
+    }, []);
     return (
         <div>
             {/* Top banner  */}
@@ -129,14 +147,14 @@ const Stories = () => {
                     <h1 className='surf_text m-5 text-center'>Popular stories</h1>
                 </div>
                 <div className="row mb-5">
-                    {cardData.map((card) => (
-                        <div className="col-lg-3 mb-3" key={card.id}>
-                            <a href={card.link} className="text-decoration-none">
+                    {cardData?.map((card) => (
+                        <div className="col-lg-3 mb-3" key={card._id}>
+                            <a href={`storie/${card?._id}`} className="text-decoration-none">
                                 <div className="card text-center border-0 h-100 bg-transparent">
-                                    <img src={card.imageSrc} alt={card.title} className="rounded-3" />
+                                    <img src={`${config.API_BASE_URL}/${card?.cardimg}`} alt={card?.title} className="rounded-3" />
                                     <div className="mt-3">
-                                        <h5>{card.title}</h5>
-                                        <p>{card.description}</p>
+                                        <h5>{card?.storiesName}</h5>
+                                        <p>{card?.subheading}</p>
                                     </div>
                                 </div>
                             </a>

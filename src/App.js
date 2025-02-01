@@ -94,6 +94,10 @@ import Admin_Add_ActivityPage from './Admin/Admin_Add_ActivitesPage';
 import Admin_ActivityPage from './Admin/Admin_ActivityPage';
 import Admin_Edit_ActivityPage from './Admin/Admin_Edit_ActivityPage';
 import ActivityPage from './Pages/ActivityPage';
+import Admin_StoriesPage from './Admin/Admin_StoriesPage';
+import Admin_Add_StoriesPage from './Admin/Admin_Add_StoriesPage';
+import Admin_Edit_StoriesPage from './Admin/Admin_Edit_StoriesPage';
+import Storiespage from './Pages/Stories/Storiespage';
 
 function App() {
 
@@ -142,6 +146,12 @@ function App() {
 
 
             {/* stories inner pages ------------------------------------ */}
+
+            <Route path='storie/:id' element={
+              <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
+                <Storiespage />
+              </KiteLayout>
+            } />
 
             <Route path='/den-tv-tas' element={
               <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
@@ -466,6 +476,24 @@ function App() {
             <Route path="/admin/edit/myteam/:id" element={
               <Admin_Layout>
                 <Admin_Edit_Myteam />
+              </Admin_Layout>
+            } />
+
+            <Route path="/admin/stories" element={
+              <Admin_Layout>
+                <Admin_StoriesPage/>
+              </Admin_Layout>
+            } />
+
+            <Route path="/admin/add/stories" element={
+              <Admin_Layout>
+                <Admin_Add_StoriesPage/>
+              </Admin_Layout>
+            } />
+
+            <Route path="/admin/edit/stories/:id" element={
+              <Admin_Layout>
+                <Admin_Edit_StoriesPage />
               </Admin_Layout>
             } />
 
