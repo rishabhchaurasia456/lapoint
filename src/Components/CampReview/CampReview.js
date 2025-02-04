@@ -1,6 +1,12 @@
 import React from 'react'
 // import Reviewdata from './ReviewData'
 import img1 from "../../Images/default-avatar-2020-44.jpg"
+import img2 from "../../Images/reviewimg.jpg"
+import img3 from "../../Images/reviewimg2.jpg"
+import img4 from "../../Images/reviewimg3.jpg"
+import img5 from "../../Images/reviewimg4.jpg"
+
+
 const Carddata_head_section = [
     {
         title: {
@@ -36,7 +42,7 @@ const Reviewdata = [
     },
     {
         id: "2",
-        img: img1,
+        img: img2,
         start: "5",
         name: "marc van der drift",
         date: "July 21",
@@ -53,7 +59,7 @@ const Reviewdata = [
     },
     {
         id: "3",
-        img: img1,
+        img: img3,
         start: "5",
         name: "Mikesurft",
         date: "March 6",
@@ -70,7 +76,7 @@ const Reviewdata = [
     },
     {
         id: "4",
-        img: img1,
+        img: img4,
         start: "5",
         name: "Rens Appels",
         date: "June 5",
@@ -87,7 +93,7 @@ const Reviewdata = [
     },
     {
         id: "5",
-        img: img1,
+        img: img5,
         start: "4",
         name: "FirstMate Appie",
         date: "July 19",
@@ -104,7 +110,7 @@ const Reviewdata = [
     },
     {
         id: "6",
-        img: img1,
+        img: img3,
         start: "5",
         name: "Cobie Harkema",
         date: "August 20",
@@ -121,7 +127,7 @@ const Reviewdata = [
     },
     {
         id: "7",
-        img: img1,
+        img: img4,
         start: "2",
         name: "Nick De Bruijn",
         date: "July 5",
@@ -138,7 +144,7 @@ const Reviewdata = [
     },
     {
         id: "8",
-        img: img1,
+        img: img2,
         start: "1",
         name: "Emma Rietveld",
         date: "August 3",
