@@ -64,7 +64,7 @@ const Surfcampslider = ({ data, selectedLanguage }) => {
                 <div className='row'>
                     <div className="col text-center">
                         <p className='surf_slider'>
-                            {data?.sliderHeading}
+                            {data?.sliderSubHeading}
                         </p><br />
                     </div>
                 </div>
