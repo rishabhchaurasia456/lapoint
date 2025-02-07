@@ -1,8 +1,10 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import config from '../config/config';
+import { useNavigate } from 'react-router-dom';
 
 const Admin_Add_Package = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     tripName: '',
     levelData: [
@@ -146,7 +148,10 @@ const Admin_Add_Package = () => {
   
       if (response.data.success) {
         console.log('Form submitted successfully:', response.data);
-        alert('Data submitted successfully!');
+        if (response.status === 201) {
+          alert('Data submitted successfully!');
+          navigate('/admin/packages');
+      }
       } else {
         console.error('Submission failed:', response.data.message);
       }
