@@ -52,11 +52,13 @@ const Overview = ({ overviewData, tripname, selectedLanguage }) => {
                         <h1 className="surf_text text_span fs-1 mt-0 pt-0">
                             {overviewdata?.trip_heading || 'No Heading Available'}
                         </h1>
-                        <p className="surf_para fs-5">
+                        <p className="para_overview">
                             {overviewdata?.trip_para || 'No Description Available'}
                         </p>
                     </div>
                 </div>
+
+
 
                 <div className="row">
                     <div class="container">

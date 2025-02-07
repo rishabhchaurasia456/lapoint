@@ -297,9 +297,7 @@ const Trip = ({ selectedLanguage }) => {
                 <div className={`container-fluid tab_container ${isFixed ? 'fixed' : ''}`}>
                     <div className="row">
                         <div className="col">
-
                             {/* this is all tabs in this container  */}
-
                             <div className="text-center">
                                 {/* {trip?.overview && (
                                     <button className="trip_tabs" onClick={() => handleButtonClick('OVERVIEW')}>
