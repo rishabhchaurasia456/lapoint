@@ -1,16 +1,11 @@
 import React, { useEffect, useState } from 'react';
 
 import { Helmet } from 'react-helmet'
-
 import HeroSection from '../../Components/HeroSection/HeroSection'
-// import Surfcamp from '../../Components/Surfcamp/Surfcamp'
 import LIfeStyle from '../../Components/Lifestyle/LIfeStyle'
 import Surfcampslider from '../../Components/Surfcampslider/Surfcampslider'
 import CampReview from '../../Components/CampReview/CampReview'
 // import Faq from '../../Components/Faq/Faq'
-// import Textcontainer from '../../Components/Textcontainer/Textcontainer'
-// import Bgimage from '../../Components/Bgimage/Bgimage'
-// import Activity from '../../Components/Activity/Activity'
 import Elementcomp from '../../Components/Elementcomp/Elementcomp'
 import Level from '../../Components/Level/Level'
 import Fourcard from '../../Components/fourcardsec/Fourcard';
@@ -19,10 +14,7 @@ import Whykiteactive from '../../Components/Whykiteactive/Whykiteactive';
 import config from '../../config/config';
 import axios from 'axios';
 
-// import LIfeStyle2 from '../../Components/Lifestyle/LIfeStyle2'
-// import European from '../../Components/European/European'
-// import Adventure from '../../Components/Adventure/Adventure'
-// import Footer from '../../Components/Footer/Footer'
+
 
 const Home = ({ selectedLanguage }) => {
   // const HeroSection = React.lazy(() => import('../../Components/HeroSection/HeroSection'));
@@ -68,21 +60,15 @@ const Home = ({ selectedLanguage }) => {
       <HeroSection data={homeData} selectedLanguage={selectedLanguage} />
       <Fourcard data={homeData} selectedLanguage={selectedLanguage} />
       {/* <Surfcamp selectedLanguage={selectedLanguage} /> */}
-      <Surfcampslider data={homeData}  selectedLanguage={selectedLanguage} />
-      <Bgdark data={homeData}  />
+      <Surfcampslider data={homeData} selectedLanguage={selectedLanguage} />
+      <Bgdark data={homeData} />
       <CampReview selectedLanguage={selectedLanguage} />
-      <Whykiteactive data={homeData}  />
+      <Whykiteactive data={homeData} />
       <Level selectedLanguage={selectedLanguage} />
       <Elementcomp data={homeData} selectedLanguage={selectedLanguage} />
       <LIfeStyle data={homeData} selectedLanguage={selectedLanguage} />
-      {/* <European /> */}
-      {/* <LIfeStyle2 /> */}
       {/* <Faq selectedLanguage={selectedLanguage} /> */}
-      {/* <Activity selectedLanguage={selectedLanguage} /> */}
-      {/* <Adventure selectedLanguage={ selectedLanguage }/> */}
-      {/* <Textcontainer selectedLanguage={selectedLanguage} /> */}
-      {/* <Bgimage selectedLanguage={selectedLanguage} /> */}
-      {/* <Footer selectedLanguage={ selectedLanguage }/> */}
+
     </div>
   )
 }

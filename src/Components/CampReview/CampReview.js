@@ -1,10 +1,11 @@
 import React from 'react'
 // import Reviewdata from './ReviewData'
 import img1 from "../../Images/default-avatar-2020-44.jpg"
-import img2 from "../../Images/reviewimg.jpg"
-import img3 from "../../Images/reviewimg2.jpg"
-import img4 from "../../Images/reviewimg3.jpg"
-import img5 from "../../Images/reviewimg4.jpg"
+import img2 from "../../Images/rew1.jpg"
+import img3 from "../../Images/rew2.jpg"
+import img4 from "../../Images/rew3.jpg"
+import img5 from "../../Images/rew4.jpg"
+import img6 from "../../Images/rew5.jpg"
 
 
 const Carddata_head_section = [
@@ -110,7 +111,7 @@ const Reviewdata = [
     },
     {
         id: "6",
-        img: img3,
+        img: img6,
         start: "5",
         name: "Cobie Harkema",
         date: "August 20",

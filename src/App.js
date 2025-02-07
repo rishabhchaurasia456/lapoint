@@ -4,7 +4,6 @@ import React from 'react';
 import Home from './Pages/Home/Home';
 import { useState } from 'react';
 import Trip from './Pages/Trip/Trip';
-import Aboutus from './Pages/About/Aboutus';
 import Kitecamp from './Pages/Kitecamps/Kitecamp';
 import Contactus from './Pages/Contactus/Contactus';
 import ScrollToTop from './Components/ScrollToTop';
@@ -115,11 +114,7 @@ function App() {
               </KiteLayout>
             } />
 
-            <Route path='/about' element={
-              <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
-                <Aboutus selectedLanguage={selectedLanguage} />
-              </KiteLayout>
-            } />
+
 
             <Route exact path="/trip/:trip_name" element={
               <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
@@ -463,7 +458,7 @@ function App() {
 
             <Route path="/admin/add/add_on_activity" element={
               <Admin_Layout>
-                <Admin_Add_ActivityPage/>
+                <Admin_Add_ActivityPage />
               </Admin_Layout>
             } />
 
@@ -481,13 +476,13 @@ function App() {
 
             <Route path="/admin/stories" element={
               <Admin_Layout>
-                <Admin_StoriesPage/>
+                <Admin_StoriesPage />
               </Admin_Layout>
             } />
 
             <Route path="/admin/add/stories" element={
               <Admin_Layout>
-                <Admin_Add_StoriesPage/>
+                <Admin_Add_StoriesPage />
               </Admin_Layout>
             } />
 
@@ -523,7 +518,7 @@ function App() {
 
             <Route path="/admin/edit/kitespot/:id" element={
               <Admin_Layout>
-                <Admin_Edit_Kitespots/>
+                <Admin_Edit_Kitespots />
               </Admin_Layout>
             } />
 

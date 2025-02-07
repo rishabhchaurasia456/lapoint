@@ -4,6 +4,10 @@ import React from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import img1 from "../../../Images/default-avatar-2020-44.jpg";
+import img2 from '../../../Images/rew1.jpg'
+import img3 from '../../../Images/rew2.jpg'
+import img4 from '../../../Images/rew3.jpg'
+import img5 from '../../../Images/rew4.jpg'
 
 const Reviewdata = [
   {
@@ -17,7 +21,7 @@ const Reviewdata = [
   },
   {
     id: "2",
-    img: img1,
+    img: img2,
     name: "FirstMate Appie",
     date: "July 21",
     start: "5",
@@ -26,7 +30,7 @@ const Reviewdata = [
   },
   {
     id: "3",
-    img: img1,
+    img: img3,
     name: "Sietse",
     date: "March 6",
     start: "5",
@@ -35,7 +39,7 @@ const Reviewdata = [
   },
   {
     id: "4",
-    img: img1,
+    img: img4,
     name: "Marc van der Drift",
     date: "June 5",
     start: "5",
@@ -44,7 +48,7 @@ const Reviewdata = [
   },
   {
     id: "5",
-    img: img1,
+    img: img5,
     name: "Willem Schinkelshoek",
     date: "July 19",
     start: "5",

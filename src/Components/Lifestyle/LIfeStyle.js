@@ -56,7 +56,7 @@ const LIfeStyle = ({ data, selectedLanguage }) => {
                                     </h1>
                                 </div>
                                 <div className="">
-                                    <h1 className="lifestyle_para">
+                                    <h1 className="surf_para">
                                         <p>{data?.teamPara}</p>
                                     </h1>
                                 </div>
