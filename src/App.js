@@ -181,7 +181,6 @@ function App() {
 
 
 
-
             {/* kite camp  all pages routes here  */}
             <Route path='/kitecamp' element={
               <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
