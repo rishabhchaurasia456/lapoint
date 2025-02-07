@@ -144,8 +144,8 @@ const Packages = ({ packagesData }) => {
     <>
       <div className="container pack_cont">
         <div className="row">
-          <div className="col text-center m-auto">
-            <div className="text-center justify-center m-auto">
+          <div className="col text-center m-auto m-0 p-0 ">
+            <div className="package_btn_div m-0 p-0 ">
               {packagesData.levelData.map((level, index) => (
                 <button
                   className="package_btn"

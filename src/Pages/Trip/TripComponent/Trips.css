@@ -6,7 +6,8 @@ Trip CSS
   width: 100%;
   height: 500px;
   overflow: hidden;
-  background-color: black; /* Fallback to prevent white flashes */
+  background-color: black;
+  /* Fallback to prevent white flashes */
 }
 
 .video-containers img {
@@ -26,16 +27,9 @@ Trip CSS
   height: 175%;
   object-fit: 'cover',
 }
-
-
-
-
 .tab_container {
   transition: all 0.3s ease-in-out;
 }
-
-
-
 
 /* open close Accordation  */
 
@@ -67,7 +61,7 @@ Trip CSS
 }
 
 .output-container {
-  padding: 15px;
+  padding: 10px;
   background-color: #fdfaec;
   display: none;
 }
@@ -148,13 +142,17 @@ Trip CSS
 
 
 
-
-
-
-
 /* Small devices (phones, 576px and up)------------------ */
 
 @media only screen and (max-width: 600px) {
+  .output-container {
+    padding: 0 !important;
+  }
+
+  .surf_para {
+    text-align: justify;
+  }
+
   .img_spacing {
     padding: 15%;
   }
@@ -166,6 +164,35 @@ Trip CSS
     top: 15%;
     overflow: auto;
 
+  }
+
+
+
+  .img_spacing {
+    padding: 5%;
+  }
+
+  .img_head {
+    font-family: "Amatic SC", sans-serif;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    font-size: 22px;
+  }
+
+  .img_para {
+    text-align: center;
+    color: black;
+    font-size: 14px;
+  }
+
+  .check_icon {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .high_text {
+    font-weight: 500;
   }
 
 
@@ -189,6 +216,16 @@ Trip CSS
 
 /* Popup box css for more images section   */
 
+.surf_para_overview {
+  color: black;
+  font-family: sans-serif;
+  font-size: 20px;
+  line-height: 25px;
+  font-weight: 400;
+  letter-spacing: 2PX;
+}
+
+
 .scroll-1::-webkit-scrollbar {
   width: 8px;
   height: 8px;
@@ -205,7 +242,7 @@ Trip CSS
   font-family: "Amatic SC", sans-serif;
   font-size: 35px;
   font-weight: bolder;
-  margin: 1rem 0 0 0; 
+  margin: 1rem 0 0 0;
 
 }
 
@@ -260,6 +297,20 @@ Trip CSS
 }
 
 
+@media only screen and (max-width: 600px) {
+  .para_overview {
+    color: black;
+    font-family: sans-serif;
+    font-size: 15px;
+    line-height: 25px;
+    font-weight: 400;
+    letter-spacing: 2PX;
+    text-align: justify;
+  }
+
+
+}
+
 
 /* --------------------------------
   Package tabs css 
@@ -273,24 +324,43 @@ Trip CSS
 }
 
 .package_btn {
-  border: 0.5px solid rgba(0, 0, 0, 0.282) !important;
-  background-color: white !important;
+  background-color: #ffffff;
+  border: 1px solid rgb(105, 105, 105);
+  border-radius: 0.5rem;
   color: #fdc016;
-  font-size: 28px !important;
-  width: 25% !important;
-  text-align: center !important;
-  font-weight: bold !important;
-  padding: 10px 0 0 0 !important;
-  margin: 1rem 1rem 2rem 0 !important;
   font-family: "Amatic SC", sans-serif;
-
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.25rem;
+  padding: 1rem 1rem;
+  margin: 5px;
+  width: 25% !important;
+  text-align: center;
+  -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  cursor: pointer;
 }
+
+
 
 .package_btn:hover {
   color: black !important;
   transition: 0.8s;
 }
 
+
+@media only screen and (max-width: 550px) {
+  .package_btn_div {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .package_btn {
+    font-size: 20px !important;
+    padding: 10px 3px 0 3px;
+    width: auto !important;
+  }
+}
 
 
 
@@ -509,9 +579,10 @@ details>.sum2::-webkit-details-marker {
 /* -----------------------------
   Review Card 
   ----------------------------- */
-.review_crd{
+.review_crd {
   height: 45vh !important;
 }
+
 .review_carousel-container {
   margin: auto;
   padding: 0 15px;
