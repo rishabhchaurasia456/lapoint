@@ -34,15 +34,7 @@ import Thankyou from './Form/Thankyou'
 import BookingPayment from './Pages/Bookingpayment/BookingPayment';
 import PrivacyPolicy from './Pages/Privacypolicy/PrivacyPolicy';
 import Termcondition from './Pages/Termcondition/Termcondition';
-import Annemaj from './Pages/Kiteactiveteam/Teammembers/Annemaj';
-import Felix from './Pages/Kiteactiveteam/Teammembers/Felix';
 import Roderick from './Pages/Kiteactiveteam/Teammembers/Roderick';
-import Aj from './Pages/Kiteactiveteam/Teammembers/Aj';
-import Arnaud from './Pages/Kiteactiveteam/Teammembers/Arnaud';
-import Boaz from './Pages/Kiteactiveteam/Teammembers/Boaz';
-import Basboode from './Pages/Kiteactiveteam/Teammembers/Basboode';
-import Emielrense from './Pages/Kiteactiveteam/Teammembers/Emielrense';
-import Jurretvan from './Pages/Kiteactiveteam/Teammembers/Jurretvan';
 import PageTracker from './Components/PageTracker';
 import MyAffiliate from './Affiliate/MyAffiliate';
 import AdminLogin from './Admin/AdminLogin';
@@ -225,6 +217,7 @@ function App() {
             }>
             </Route>
 
+            {/* ----------------------ALL TEAM MEMBERS pages------------------------------  */}
 
             <Route path='/kiteactive_team' element={
               <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
@@ -240,70 +233,12 @@ function App() {
             }>
             </Route>
 
-            {/* ----------------------ALL TEAM MEMBERS pages------------------------------  */}
-
-            <Route path='/Annemaj' element={
-              <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
-                <Annemaj />
-              </KiteLayout>
-            }>
-            </Route>
-
-
-            <Route path='/Felix_Maks' element={
-              <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
-                <Felix />
-              </KiteLayout>
-            }>
-            </Route>
-
-
             <Route path='/Roderickje_Pijls' element={
               <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
                 <Roderick />
               </KiteLayout>
             }>
             </Route>
-
-            <Route path='/aj' element={
-              <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
-                <Aj />
-              </KiteLayout>
-            }>
-
-            </Route>
-            <Route path='/Arnaud_Plas' element={
-              <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
-                <Arnaud />
-              </KiteLayout>
-            }>
-            </Route>
-            <Route path='/Boaz_Oketch' element={
-              <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
-                <Boaz />
-              </KiteLayout>
-            }>
-            </Route>
-            <Route path='/Bas_Boode' element={
-              <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
-                <Basboode />
-              </KiteLayout>
-            }>
-            </Route>
-
-            <Route path='/EmielRense' element={
-              <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
-                <Emielrense />
-              </KiteLayout>
-            }>
-            </Route>
-            <Route path='/Jurret_Van' element={
-              <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
-                <Jurretvan />
-              </KiteLayout>
-            }>
-            </Route>
-
 
             {/* ------------------------------------------ */}
 
