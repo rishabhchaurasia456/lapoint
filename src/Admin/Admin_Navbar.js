@@ -61,7 +61,15 @@ const Admin_Navbar = () => {
                                         </ul>
                                     </li>
                                     <li className="nav-item float-end">
-                                        
+                                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Affiliate
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li><Link className="dropdown-item" to="/admin/affiliate">Home</Link></li>
+                                            <li><Link className="dropdown-item" to="/admin/my_affiliate">My Affiliate</Link></li>
+                                            <li><Link className="dropdown-item" to="/admin/myCreative">Creative</Link></li>
+                                            
+                                        </ul>
                                     </li>
                                 </ul>
                                     <form class="d-flex" role="search">

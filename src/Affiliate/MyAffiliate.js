@@ -56,7 +56,7 @@ const MyAffiliate = () => {
                         <h1>My Affiliate</h1>
                     </div>
                     <div className="col">
-                        <Link to="/new_affiliate" className='btn btn-success float-end'>Add Affiliate</Link>
+                        <Link to="/admin/new_affiliate" className='btn btn-success float-end'>Add Affiliate</Link>
                     </div>
                 </div>
 
@@ -86,7 +86,7 @@ const MyAffiliate = () => {
                                 <td>{affiliate.company}</td>
                                 <td>{affiliate.website}</td>
                                 <td>
-                                    <Link className='btn btn-success' to={`/edit_affiliate/${affiliate._id}`}>Edit</Link>&nbsp;&nbsp;
+                                    <Link className='btn btn-success' to={`/admin/edit_affiliate/${affiliate._id}`}>Edit</Link>&nbsp;&nbsp;
                                     <Link className='btn btn-danger' onClick={() => handleDelete(affiliate._id)}>Delete</Link>
                                 </td>
                             </tr>

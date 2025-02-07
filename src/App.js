@@ -97,6 +97,14 @@ import Admin_StoriesPage from './Admin/Admin_StoriesPage';
 import Admin_Add_StoriesPage from './Admin/Admin_Add_StoriesPage';
 import Admin_Edit_StoriesPage from './Admin/Admin_Edit_StoriesPage';
 import Storiespage from './Pages/Stories/Storiespage';
+import User_Dashboard from './Affiliate/User_Dashboard';
+import User_Creative from './Affiliate/User_Creative';
+import AffiliateLogin from './Affiliate/AffiliateLogin';
+import ProtectedRoute from './Components/ProtectedRoute';
+import User_NewCreative from './Affiliate/User_NewCreative';
+import AffiliateRegister from './Affiliate/AffiliateRegister';
+import EditCreative from './Affiliate/EditCreative';
+import User_EditCreative from './Affiliate/User_EditCreative';
 
 function App() {
 
@@ -376,40 +384,82 @@ function App() {
               </>
             } />
 
-            <Route path="/affiliate_admin" element={
-              <Aff_Layout>
+            <Route path="/admin/affiliate" element={
+              <Admin_Layout>
                 <Aff_Dashboard />
-              </Aff_Layout>
+              </Admin_Layout>
             } />
 
-            <Route path="/my_affiliate" element={
-              <Aff_Layout>
+            <Route path="/admin/my_affiliate" element={
+              <Admin_Layout>
                 <MyAffiliate />
-              </Aff_Layout>
+              </Admin_Layout>
             } />
 
-            <Route path="/new_affiliate" element={
-              <Aff_Layout>
+            <Route path="/admin/new_affiliate" element={
+              <Admin_Layout>
                 <NewAffiliate />
-              </Aff_Layout>
+              </Admin_Layout>
             } />
 
-            <Route path="/edit_affiliate/:id" element={
-              <Aff_Layout>
+            <Route path="/admin/edit_affiliate/:id" element={
+              <Admin_Layout>
                 <EditAffiliate />
-              </Aff_Layout>
+              </Admin_Layout>
             } />
 
-            <Route path="/myCreative" element={
-              <Aff_Layout>
+            <Route path="/admin/myCreative" element={
+              <Admin_Layout>
                 <MyCreative />
-              </Aff_Layout>
+              </Admin_Layout>
             } />
 
-            <Route path="/newCreative" element={
-              <Aff_Layout>
+            <Route path="/admin/newCreative" element={
+              <Admin_Layout>
                 <NewCreative />
-              </Aff_Layout>
+              </Admin_Layout>
+            } />
+
+            <Route path="/admin/editCreative/:id" element={
+              <Admin_Layout>
+                <EditCreative />
+              </Admin_Layout>
+            } />
+            
+            <Route path="/affiliate" element={
+              <>
+                <AffiliateLogin />
+              </>
+            } />
+
+            <Route path="/register-affiliate" element={
+              <>
+                <AffiliateRegister/>
+              </>
+            } />
+
+            <Route path='/affiliate/home' element={
+              <ProtectedRoute><Aff_Layout>
+                  <User_Dashboard />
+                </Aff_Layout></ProtectedRoute>
+            } />
+
+            <Route path='/affiliate/creative' element={
+              <ProtectedRoute><Aff_Layout>
+                <User_Creative />
+              </Aff_Layout></ProtectedRoute>
+            } />
+
+            <Route path='/affiliate/add/creative' element={
+              <ProtectedRoute><Aff_Layout>
+                <User_NewCreative />
+              </Aff_Layout></ProtectedRoute>
+            } />
+
+            <Route path='/affiliate/edit/creative/:id' element={
+              <ProtectedRoute><Aff_Layout>
+                <User_EditCreative />
+              </Aff_Layout></ProtectedRoute>
             } />
 
 

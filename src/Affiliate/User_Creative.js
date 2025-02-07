@@ -3,17 +3,21 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import config from '../config/config';
 
-const MyCreative = () => {
+const User_Creative = () => {
     const [affiliatesLink, setAffiliatesLink] = useState([]); // State to store the affiliate data
     const [loading, setLoading] = useState(true); // Loading state to show a spinner or message while data is being fetched
     const [error, setError] = useState(null); // Error state for handling API errors
+    // const [affiliateUserId, setAffiliateUserId] = useState("");
+
+    const AffiliateId = localStorage.getItem("AffiliateuserId");
+    const AffiliateuserId = AffiliateId.replace(/"/g, '');
 
     useEffect(() => {
         axios
-            .post(`${config.API_BASE_URL}/api/affiliate/get_all_link`) // Use your backend endpoint for fetching affiliate data
+            .post(`${config.API_BASE_URL}/api/affiliate/get_singleaff_link/${AffiliateuserId}`) // Use your backend endpoint for fetching affiliate data
             .then((response) => {
                 setAffiliatesLink(response.data); // Store affiliate data in state
-                console.log("Fetched affiliate links:", response.data);
+                console.log("Fetched single affiliate links:", response);
                 setLoading(false); // Stop loading once data is fetched
             })
             .catch((err) => {
@@ -40,14 +44,6 @@ const MyCreative = () => {
         }
     };
 
-    if (loading) {
-        return <div>Loading...</div>; // Show loading message while data is being fetched
-    }
-
-    if (error) {
-        return <div>{error}</div>; // Show error message if there was an issue fetching data
-    }
-
     return (
         <div>
             <div className="container">
@@ -56,7 +52,7 @@ const MyCreative = () => {
                         <h1>My Creative</h1>
                     </div>
                     <div className="col">
-                        <Link to="/admin/newCreative" className="btn btn-success float-end">
+                        <Link to="/affiliate/add/creative" className="btn btn-success float-end">
                             Add New Creative
                         </Link>
                     </div>
@@ -72,31 +68,31 @@ const MyCreative = () => {
                                 <th>Action</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            {affiliatesLink.map((link) => (
-                                <tr key={link._id}>
-                                    <td>{link.affiliate_name}</td>
-                                    <td>{link.name}</td>
-                                    <td>{link.type}</td>
-                                    <td>
-                                        {/* <a href={link.genrated_link} target="_blank" rel="noopener noreferrer"> */}
-                                        {link.genrated_link}
-                                        {/* </a> */}
-                                    </td>
-                                    <td>
-                                        <Link to={`/admin/editCreative/${link._id}`} className="btn btn-primary btn-sm me-2">
-                                            Edit
-                                        </Link>
-                                        <button
-                                            className="btn btn-danger btn-sm"
-                                            onClick={() => handleDelete(link._id)}
-                                        >
-                                            Delete
-                                        </button>
-                                    </td>
-                                </tr>
-                            ))}
-                        </tbody>
+                            <tbody>
+                                {affiliatesLink.map((link) => (
+                                    <tr key={link._id}>
+                                        <td>{link.affiliate_name}</td>
+                                        <td>{link.name}</td>
+                                        <td>{link.type}</td>
+                                        <td>
+                                            {/* <a href={link.genrated_link} target="_blank" rel="noopener noreferrer"> */}
+                                            {link.genrated_link}
+                                            {/* </a> */}
+                                        </td>
+                                        <td>
+                                            <Link to={`/affiliate/edit/creative/${link._id}`} className="btn btn-primary btn-sm me-2">
+                                                Edit
+                                            </Link>
+                                            <button
+                                                className="btn btn-danger btn-sm"
+                                                onClick={() => handleDelete(link._id)}
+                                            >
+                                                Delete
+                                            </button>
+                                        </td>
+                                    </tr>
+                                ))}
+                            </tbody>
                     </table>
                 </div>
             </div>
@@ -104,4 +100,4 @@ const MyCreative = () => {
     );
 };
 
-export default MyCreative;
+export default User_Creative;

@@ -62,7 +62,8 @@ const NewCreative = () => {
 
             try {
                 const response = await axios.post(`${config.API_BASE_URL}/api/affiliate/create_link`, {
-                    affiliate_name: affiliates.find((aff) => aff._id === selectedAffiliate)?.first_name || 'Unknown',
+                    affiliate_id: selectedAffiliate,
+                    affiliate_name: affiliates.find((aff) => aff._id === selectedAffiliate)?.first_name + " " + affiliates.find((aff) => aff._id === selectedAffiliate)?.last_name || 'Unknown',
                     name, // Include the captured name
                     type: selectedOption,
                     Landing_page_link: landingPageLink,
@@ -73,7 +74,7 @@ const NewCreative = () => {
                 if (response.status === 201) {
                     alert('Link saved successfully!');
                     console.log('Saved link:', response.data.data);
-                    navigate("/myCreative")
+                    navigate("/admin/myCreative")
                 } else {
                     alert('Failed to save the link.');
                 }

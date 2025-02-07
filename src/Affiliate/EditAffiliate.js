@@ -56,7 +56,7 @@ const EditAffiliateUser = () => {
             const response = await axios.post(`${config.API_BASE_URL}/api/affiliate/affiliate_edit/${id}`, affiliate);
             if (response.status === 200) {
                 alert('Affiliate details updated successfully!');
-                navigate('/my_affiliate');
+                navigate('admin/my_affiliate');
             }
             else {
                 alert('Failed to update data');

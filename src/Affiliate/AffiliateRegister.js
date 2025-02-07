@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import config from '../config/config';
 
-const NewAffiliate = () => {
+const AffiliateRegister = () => {
     const navigate = useNavigate();
     const [formData, setFormData] = useState({
         first_name: '',
@@ -37,7 +37,7 @@ const NewAffiliate = () => {
             });
 
             if (response.status === 201) {
-                alert('Data saved successfully!');
+                alert('Register successfully!');
                 // Clear the form after submission
                 setFormData({
                     first_name: '',
@@ -52,7 +52,7 @@ const NewAffiliate = () => {
                     company: '',
                     website: ''
                 });
-                navigate('/admin/my_affiliate');
+                navigate('/affiliate');
 
             } else {
                 alert('Failed to save data');
@@ -134,4 +134,4 @@ const NewAffiliate = () => {
     );
 };
 
-export default NewAffiliate;
+export default AffiliateRegister;
