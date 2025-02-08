@@ -356,7 +356,7 @@ const Trip = ({ selectedLanguage }) => {
                 {/* Sections with IDs */}
                 <div className="container Accordion_tab_cont">
                     {activeTab === 'OVERVIEW' && <div> </div>}
-                    <Overview overviewData={trip.overview} tripname={trip_name} selectedLanguage={selectedLanguage} />
+                    <Overview overviewData={trip?.overview} tripname={trip_name} selectedLanguage={selectedLanguage} />
 
 
                     {kitespot?.data?.length > 0 &&
