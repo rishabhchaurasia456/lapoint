@@ -58,8 +58,6 @@ const Overview = ({ overviewData, tripname, selectedLanguage }) => {
                     </div>
                 </div>
 
-
-
                 <div className="row">
                     <div class="container">
                         <div class="row">
@@ -79,7 +77,7 @@ const Overview = ({ overviewData, tripname, selectedLanguage }) => {
                                             <p className='img_para'>{overviewdata?.img_para2 || 'No Heading Available'}</p>
                                         </div>
 
-                                    </div>
+                                    </div> 
                                 </div>
                             </div>
                             <div class="col-md-6">

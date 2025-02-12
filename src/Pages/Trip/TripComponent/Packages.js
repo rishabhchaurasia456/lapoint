@@ -282,10 +282,12 @@ const Packages = ({ packagesData }) => {
                   <p className="text-center surf_para fs-5">
                     {packagesData.kitegearPara1}
                   </p>
-                  <p className="text-center surf_para fs-5">
+                  <p className="text-center">
                     {packagesData.kitegearPara2}
                   </p>
                 </div>
+
+                {/* second div  */}
                 <div>
                   <h2 className="text-center surf_text mt-5 pt-5">
                     {packagesData.disclaimerHeading}
