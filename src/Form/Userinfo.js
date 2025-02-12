@@ -9,6 +9,7 @@ import config from '../config/config';
 const Userinfo = () => {
     const navigate = useNavigate();
     const location = useLocation();
+    const AffiliateUserId = localStorage.getItem("userId");
 
     const {
         tripName,
@@ -28,6 +29,20 @@ const Userinfo = () => {
         carRentalPrice,
         discountAmount
     } = location.state;
+
+    const sendAffiliateBookingData = async () => {
+        try {
+            if (AffiliateUserId && tripName && updatedTotalPrice) {
+                await axios.post(`${config.API_BASE_URL}/api/affiliate/bookingByAffiliate`, {
+                    affiliateId: AffiliateUserId,
+                    tripName,
+                    totalPrice: updatedTotalPrice,
+                });
+            }
+        } catch (error) {
+            console.error("Error sending affiliate data:", error);
+        }
+    };
 
     const datestatus = {
         tripName,
@@ -133,12 +148,12 @@ const Userinfo = () => {
         const year = currentDate.getFullYear();
         const formattedDate = `${day}-${month}-${year}`;
 
-        if (carRentalPrice > 0){ 
+        if (carRentalPrice > 0) {
             var kite_rental = "true"
-            console.log("kite_rentallllll" , kite_rental)
-        } else{
+            console.log("kite_rentallllll", kite_rental)
+        } else {
             var kite_rental = "false"
-            console.log("kite_rentallllll" , kite_rental)
+            console.log("kite_rentallllll", kite_rental)
         }
 
         // Bundle them into one object
@@ -232,6 +247,7 @@ const Userinfo = () => {
 
             // Update booking details
             handleBooking();
+            sendAffiliateBookingData();
             console.log("Booking updated successfully.");
 
             window.location.href = "https://www.kiteactive.com/thank-you";

@@ -24,6 +24,14 @@ const sections = [
         },
       },
       {
+        to: '/blog',
+        text: {
+          en: 'Blog',
+          du: 'Blog', // Dutch translation
+          gr: 'Bolg', // German translation
+        },
+      },
+      {
         to: '/Discover_Kiteactive',
         text: {
           en: 'Discover KiteActive',

@@ -43,6 +43,7 @@ const Admin_Navbar = () => {
                                             <li><Link className="dropdown-item" to="/admin/home">Home</Link></li>
                                             <li><Link className="dropdown-item" to="/admin/add_on_activity">Add on activity</Link></li>
                                             <li><Link className="dropdown-item"to="/admin/stories">Stories Page</Link></li>
+                                            <li><Link className="dropdown-item"to="/admin/blog">Blog Page</Link></li>
                                         </ul>
                                     </li>
                                     <li class="nav-item dropdown">

@@ -97,6 +97,11 @@ import User_NewCreative from './Affiliate/User_NewCreative';
 import AffiliateRegister from './Affiliate/AffiliateRegister';
 import EditCreative from './Affiliate/EditCreative';
 import User_EditCreative from './Affiliate/User_EditCreative';
+import Admin_Blog from './Admin/Admin_Blog';
+import Admin_Add_Blog from './Admin/Admin_Add_Blog';
+import Admin_Edit_Blog from './Admin/Admin_Edit_Blog';
+import Blog from './Pages/Blog/Blog';
+import BlogPage from './Pages/Blog/BlogPage';
 
 function App() {
 
@@ -239,6 +244,19 @@ function App() {
 
             {/* ------------------------------------------ */}
 
+            <Route path='/blog' element={
+              <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
+                <Blog />
+              </KiteLayout>
+            }>
+            </Route>
+
+            <Route path='/blog/:id' element={
+              <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
+                <BlogPage />
+              </KiteLayout>
+            }>
+            </Route>
 
             <Route path='/activites/:id' element={
               <KiteLayout selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage}>
@@ -471,6 +489,24 @@ function App() {
             <Route path="/admin/edit/stories/:id" element={
               <Admin_Layout>
                 <Admin_Edit_StoriesPage />
+              </Admin_Layout>
+            } />
+
+            <Route path="/admin/blog" element={
+              <Admin_Layout>
+                <Admin_Blog />
+              </Admin_Layout>
+            } />
+
+            <Route path="/admin/add/blog" element={
+              <Admin_Layout>
+                <Admin_Add_Blog />
+              </Admin_Layout>
+            } />
+
+            <Route path="/admin/edit/blog/:id" element={
+              <Admin_Layout>
+                <Admin_Edit_Blog />
               </Admin_Layout>
             } />
 
