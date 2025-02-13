@@ -501,6 +501,10 @@ const Admin_Add_Package = () => {
           </div>
         ))}
 
+        <button type="button" className="btn btn-secondary mb-3" onClick={handleAddLevel}>
+          Add Level
+        </button>
+
         <div className="mb-3">
           <label htmlFor="kitegearHeading" className="form-label">
             Kitegear Heading
@@ -575,9 +579,6 @@ const Admin_Add_Package = () => {
           />
         </div>
 
-        <button type="button" className="btn btn-secondary mb-3" onClick={handleAddLevel}>
-          Add Level
-        </button>
 
         <button type="submit" className="btn btn-primary">
           Submit

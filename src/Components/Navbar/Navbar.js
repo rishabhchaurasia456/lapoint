@@ -136,15 +136,15 @@ const Navbar = ({ selectedLanguage, setSelectedLanguage }) => {
 
                         return (
                           <li key={subIndex} className="submenu-item">
-                            <NavLink
-                              exact to={submenuItem?.path}
+                            <a
+                              href={submenuItem?.path}
                               activeClassName="active"
                               className="nav-links"
                               onClick={handleClick}
                               state={{ trip_data: submenuItem }}
                             >
                               {submenuItem?.trip_name?.[selectedLanguage] || submenuItem?.trip_name}
-                            </NavLink>
+                            </a>
                           </li>
                         );
                       })}
