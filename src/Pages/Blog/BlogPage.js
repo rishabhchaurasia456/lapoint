@@ -81,7 +81,11 @@ const BlogPage = () => {
                             <b>By: </b>{author}  <span className='ms-5'>{new Date().toLocaleDateString()}</span>
                         </div>
                         {/* Display only the first paragraph (index 0) */}
-                        {data.length > 0 && <div>{data[0].para}</div>}
+                        {data?.length > 0 && data?.map((item, index) => (
+                            <div key={index}>
+                                <p>{item.para}</p>
+                            </div>
+                        ))}
                     </div>
                 </div>
                 {/* Comments Section */}
